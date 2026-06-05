@@ -1,0 +1,8 @@
+exp_id: exp001_baseline
+seed: 42
+
+base: src/neurogolf/config/default.yaml
+
+model:
+  name: simple_rule_or_tiny_nn_baseline
+  params: {}

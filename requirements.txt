@@ -1,0 +1,17 @@
+kaggle
+kagglehub
+python-dotenv
+numpy
+pandas
+pyarrow
+scikit-learn
+matplotlib
+IPython
+seaborn
+pyyaml
+tqdm
+networkx
+onnx
+onnxruntime
+onnx-tool
+torch

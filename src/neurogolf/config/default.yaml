@@ -1,0 +1,22 @@
+exp_id: exp000_default
+seed: 42
+
+competition:
+  slug: neurogolf-2026
+  task_type: arc_grid_transformation
+
+data:
+  raw_dir: data/raw
+  task_dir: data/raw
+  fold_path: data/folds/folds_v001.csv
+
+model:
+  name: baseline
+  params: {}
+
+training:
+  max_train_minutes: 20
+
+output:
+  save_validation_predictions: true
+  save_submission: true

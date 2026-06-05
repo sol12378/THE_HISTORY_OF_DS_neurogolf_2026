@@ -1,0 +1,54 @@
+{
+  "exp_id": "exp001_baseline",
+  "status": "local_validation_passed",
+  "date": "2026-06-05",
+  "purpose": "初回提出パイプラインを一周させるため、ローカルONNX検証環境とKaggleデータ取得可否を確認する。",
+  "hypothesis": "まず1タスクを手書きONNXグラフで完全一致させ、CPUで正しさとコストを検証すれば、提出フォーマットと評価構造を安全に理解できる。",
+  "environment": {
+    "gpu_driver_visible": true,
+    "gpu_note": "nvidia-smiでRTX 2080系 8GB VRAMを確認。CUDA driver reports 13.1。",
+    "python_env": ".venv",
+    "onnxruntime_providers": [
+      "AzureExecutionProvider",
+      "CPUExecutionProvider"
+    ],
+    "torch_cuda_ready": false,
+    "torch_cuda_note": "初回計画はCPU ONNX検証想定。PyTorch/CUDA学習環境は未構築。"
+  },
+  "official_spec": {
+    "score_formula": "正解したtaskごとに max(1, 25 - ln(cost))。",
+    "cost": "params + memory bytes。2026-05-04 updateでMACsはobjectiveから除外。",
+    "input_tensor": "[1, 10, 30, 30] float one-hot。grid外はzero-hot。",
+    "submission_format": "submission.zipに最大1 task 1 ONNX。例: task001.onnx ... task400.onnx。",
+    "constraints": "static shape必須。Loop, Scan, NonZero, Unique, Script, Function, Compressは禁止。各ONNXは1.44MB以下。"
+  },
+  "data": {
+    "data_raw_present": false,
+    "kaggle_api_authenticated": true,
+    "download_path": "data/external/neurogolf-2026",
+    "blocker": null
+  },
+  "local_validation": {
+    "task_id": "task087",
+    "transform": "fixed 3x3 rot180",
+    "arc_agi_pass": 5,
+    "arc_agi_fail": 0,
+    "arc_gen_pass": 261,
+    "arc_gen_fail": 0,
+    "memory_bytes": 36000,
+    "params": 60,
+    "estimated_points": 14.507060503242691,
+    "onnx_path": "experiments/exp001_baseline/task087.onnx",
+    "submission_path": "experiments/exp001_baseline/submission.zip"
+  },
+  "cv": "task087 local public examples all pass",
+  "lb": null,
+  "submission_status": "submission.zip作成済み。Kaggle submitは未実施。",
+  "leakage_risk": "低: public train/test/arc-genに対する既知taskの手書きONNX。private validationで同一変換かは未保証。",
+  "overfitting_risk": "中: task087に固定した3x3 rot180であり、多数taskやprivate例への汎化検証ではない。",
+  "next_actions": [
+    "submission.zipを提出するか判断する。",
+    "task087より低costな実装にできるか検討する。",
+    "次の単純変換taskを同じ手順で追加する。"
+  ]
+}

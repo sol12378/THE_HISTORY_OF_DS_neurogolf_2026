@@ -1,0 +1,16 @@
+{
+  "task_id": "task087",
+  "transform": "rot180 over fixed 3x3 grids",
+  "onnx_path": "experiments\\exp001_baseline\\task087.onnx",
+  "submission_path": "experiments\\exp001_baseline\\submission.zip",
+  "arc_agi_pass": 5,
+  "arc_agi_fail": 0,
+  "arc_gen_pass": 261,
+  "arc_gen_fail": 0,
+  "memory_bytes": 36000,
+  "params": 60,
+  "estimated_points": 14.507060503242691,
+  "filesize_bytes": 299,
+  "leakage_risk": "低: public train/test/arc-genに対する固定3x3 rot180の手書きONNX。private validationで同一変換かは未保証。",
+  "overfitting_risk": "中: task087の全公開例に一致する固定変換であり、汎化検証ではない。"
+}
