@@ -2,11 +2,11 @@
 
 ---
 tags: [experiment]
-status: local_validation_passed
+status: submitted_complete
 exp_id: exp001_baseline
 model: baseline
 cv: task087 local all pass
-lb:
+lb: 14.50
 ---
 
 ## Hypothesis
@@ -21,13 +21,14 @@ A minimal solver establishes the data loading, validation, and submission pipeli
 - 2026-06-05: Kaggle API認証通過。`data/raw` は触らず `data/external/neurogolf-2026` にデータ取得。
 - 2026-06-05: 公式Evaluation/Data/Constraints/May 4 updateを確認。MACsはcost対象外。
 - 2026-06-05: `task087` を選び、3x3 180度回転を `Gather` 2段の手書きONNXで実装。
+- 2026-06-05: Kaggle APIで `submission.zip` を提出。ref `53383536`。
 
 ## Results
 
 | Metric | Value |
 |---|---:|
 | CV | task087 local all pass |
-| LB | |
+| LB | 14.50 |
 | ONNX env | OK |
 | Kaggle API | OK |
 | ARC-AGI pass/fail | 5 / 0 |
@@ -39,7 +40,7 @@ A minimal solver establishes the data loading, validation, and submission pipeli
 
 ## Decision
 
-local_validation_passed
+submitted_complete
 
 ## Notes
 
@@ -50,7 +51,7 @@ local_validation_passed
 - `experiments/exp001_baseline/submission.zip`
 - `experiments/exp001_baseline/task087_result.json`
 
-Kaggle submitは未実施。提出上限を消費する前に、この単一task提出で良いか判断する。
+Kaggle submit済み。ref `53383536`、status `COMPLETE`、publicScore `14.50`。
 
 Leakage risk: public examplesに対する既知taskの手書きONNXのため低いが、private benchmarkで同じ規則が成立する保証はない。
 

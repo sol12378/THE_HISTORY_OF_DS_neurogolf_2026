@@ -37,7 +37,10 @@
 - ローカル検証: ARC-AGI `5 pass / 0 fail`、ARC-GEN `261 pass / 0 fail`。
 - 推定cost: memory `36000` bytes + params `60`。
 - 推定点: `14.507060503242691`。
-- 提出物: `experiments/exp001_baseline/submission.zip` を作成。Kaggle submitは未実施。
+- 提出物: `experiments/exp001_baseline/submission.zip` をKaggle APIで提出。
+- Submission ref: `53383536`。
+- Submission status: `COMPLETE`。
+- Public LB: `14.50`。
 
 ## GPU判断
 
@@ -53,8 +56,12 @@ public train/test/arc-genに対する既知taskの手書きONNXであり、リ�
 
 task087に固定した3x3 rot180であり、汎化性能を競う実験ではない。Public LBだけを見て多数taskへ場当たり的に広げると過適合的な運用になるため、公式utilityでのローカル検証と仕様理解を優先する。
 
+## Submission
+
+- 2026-06-05: `kaggle competitions submit -c neurogolf-2026 -f experiments/exp001_baseline/submission.zip -m "exp001 task087 rot180 single-task ONNX"` を実行。
+- Kaggle APIのsubmission一覧では `SubmissionStatus.COMPLETE`、`publicScore=14.50`。
+
 ## 次アクション
 
-- この単一taskの `submission.zip` を提出するか判断する。
 - task087のcostをさらに下げられるか検討する。
 - 同じ手順で `task140`, `task150`, `task155`, `task380` などの単純変換taskを追加する。

@@ -1,6 +1,6 @@
 {
   "exp_id": "exp001_baseline",
-  "status": "local_validation_passed",
+  "status": "submitted_complete",
   "date": "2026-06-05",
   "purpose": "初回提出パイプラインを一周させるため、ローカルONNX検証環境とKaggleデータ取得可否を確認する。",
   "hypothesis": "まず1タスクを手書きONNXグラフで完全一致させ、CPUで正しさとコストを検証すれば、提出フォーマットと評価構造を安全に理解できる。",
@@ -42,12 +42,20 @@
     "submission_path": "experiments/exp001_baseline/submission.zip"
   },
   "cv": "task087 local public examples all pass",
-  "lb": null,
-  "submission_status": "submission.zip作成済み。Kaggle submitは未実施。",
+  "lb": 14.50,
+  "submission": {
+    "submitted": true,
+    "ref": "53383536",
+    "date_utc": "2026-06-05 06:35:32.590000",
+    "message": "exp001 task087 rot180 single-task ONNX",
+    "status": "COMPLETE",
+    "public_score": 14.50,
+    "private_score": null
+  },
+  "submission_status": "Kaggle APIで提出済み。status COMPLETE、publicScore 14.50。",
   "leakage_risk": "低: public train/test/arc-genに対する既知taskの手書きONNX。private validationで同一変換かは未保証。",
   "overfitting_risk": "中: task087に固定した3x3 rot180であり、多数taskやprivate例への汎化検証ではない。",
   "next_actions": [
-    "submission.zipを提出するか判断する。",
     "task087より低costな実装にできるか検討する。",
     "次の単純変換taskを同じ手順で追加する。"
   ]
