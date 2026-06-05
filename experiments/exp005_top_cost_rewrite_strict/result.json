@@ -1,0 +1,60 @@
+{
+  "exp_id": "exp005_top_cost_rewrite_strict",
+  "status": "full_validation_pass_below_target",
+  "date": "2026-06-05",
+  "input_exp": "exp004_public_blend_relaxed_static",
+  "rewrite": "remove unused initializers from selected strict-valid ONNX models",
+  "baseline_local_estimate": 6282.075718068686,
+  "new_local_estimate": 6282.230228092811,
+  "delta": 0.15451002412464732,
+  "changed_task_count": 7,
+  "changed_tasks": [
+    92,
+    138,
+    149,
+    182,
+    286,
+    349,
+    370
+  ],
+  "submission_zip": "experiments\\exp005_top_cost_rewrite_strict\\submission.zip",
+  "submission_zip_bytes": 824070,
+  "top_rewrite_candidates": [
+    {
+      "task_id": 366,
+      "priority": 1,
+      "reason": "突出したcost。mask cascade/template rewrite候補。"
+    },
+    {
+      "task_id": 173,
+      "priority": 2,
+      "reason": "memory支配。broadcast/Tile/Where削減候補。"
+    },
+    {
+      "task_id": 54,
+      "priority": 3,
+      "reason": "Compress reject候補をstrict互換に置換する余地。"
+    },
+    {
+      "task_id": 77,
+      "priority": 4,
+      "reason": "memory支配かつCompress reject候補が多い。"
+    },
+    {
+      "task_id": 286,
+      "priority": 5,
+      "reason": "Min/MaxPool chain短縮候補。"
+    }
+  ],
+  "hash": "b85d7a19c48fb82f42df353a7eb9aff199157974d3d9bd39157c5b64f68d4716",
+  "full_arc_gen_validation": {
+    "status": "pass",
+    "task_count": 400,
+    "pass_task_count": 400,
+    "fail_task_count": 0,
+    "failed_tasks": [],
+    "total_examples": 101347,
+    "total_failed_examples": 0,
+    "detail": "experiments\\exp005_top_cost_rewrite_strict\\full_validation_manifest.csv"
+  }
+}

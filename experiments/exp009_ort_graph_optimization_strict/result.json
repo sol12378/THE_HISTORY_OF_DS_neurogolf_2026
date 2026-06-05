@@ -1,0 +1,14 @@
+{
+  "exp_id": "exp009_ort_graph_optimization_strict",
+  "date": "2026-06-05",
+  "input_exp": "exp005_top_cost_rewrite_strict",
+  "baseline_local_estimate": 6282.230228092811,
+  "new_local_estimate": 6282.230228092811,
+  "delta": 0.0,
+  "changed_task_count": 0,
+  "changed_tasks": [],
+  "status": "no_optimization_gain",
+  "submission_zip": "experiments\\exp009_ort_graph_optimization_strict\\submission.zip",
+  "submission_zip_bytes": 824070,
+  "hash": "08b586a4ff5511b8eea016a1971f04038b2e976ed21ea11165dd1e23864e0893"
+}

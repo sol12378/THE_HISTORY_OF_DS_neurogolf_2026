@@ -1,0 +1,95 @@
+{
+  "exp_id": "exp011_gpu_route_classifier",
+  "date": "2026-06-05",
+  "status": "trained",
+  "device": "cuda",
+  "torch_version": "2.12.0+cu126",
+  "cuda_available": true,
+  "cuda_version": "12.6",
+  "device_name": "NVIDIA GeForce RTX 2080 SUPER",
+  "routes": [
+    "crop_or_resize",
+    "same_shape_global_transform",
+    "sparse_edit_or_object_completion"
+  ],
+  "arc_gen_sample": 20,
+  "seed": 20260605,
+  "sample_count": 9646,
+  "train_sample_count": 7716,
+  "valid_sample_count": 1930,
+  "teacher_route_counts": {
+    "crop_or_resize": 138,
+    "sparse_edit_or_object_completion": 234,
+    "same_shape_global_transform": 28
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.8978013186457245,
+      "train_accuracy": 0.5813893208916537,
+      "valid_loss": 0.7815265445511576,
+      "valid_accuracy": 0.5974093264248704
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7023879151198454,
+      "train_accuracy": 0.736132711249352,
+      "valid_loss": 0.5773459198561357,
+      "valid_accuracy": 0.8808290155440415
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5539104595525454,
+      "train_accuracy": 0.8821928460342147,
+      "valid_loss": 0.423904627530686,
+      "valid_accuracy": 0.9212435233160622
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.417922884241295,
+      "train_accuracy": 0.9200362882322447,
+      "valid_loss": 0.306599868903506,
+      "valid_accuracy": 0.9290155440414508
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.3077610323254836,
+      "train_accuracy": 0.935329186106791,
+      "valid_loss": 0.2315328936811556,
+      "valid_accuracy": 0.9326424870466321
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.235959601555234,
+      "train_accuracy": 0.949585277345775,
+      "valid_loss": 0.1763831931074666,
+      "valid_accuracy": 0.9476683937823834
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.19859980873303934,
+      "train_accuracy": 0.9526956972524624,
+      "valid_loss": 0.1572296073361073,
+      "valid_accuracy": 0.9528497409326425
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.165852835352647,
+      "train_accuracy": 0.9586573354069466,
+      "valid_loss": 0.16281264907646673,
+      "valid_accuracy": 0.9487046632124352
+    }
+  ],
+  "final_valid_accuracy": 0.9487046632124352,
+  "macro_f1": 0.8551113303585444,
+  "runtime_seconds": 7.629213094711304,
+  "model_ignored_by_git": true,
+  "leakage_risk": "中: teacher labelはrule-based taxonomy由来で、classifier出力は候補生成順のみに使う。",
+  "overfitting_risk": "中: task数400のためtask_id group splitで監視する。採用判定はONNX validationとcostで行う。",
+  "artifacts": {
+    "model": "experiments\\exp011_gpu_route_classifier\\model.pt",
+    "route_predictions": "experiments\\exp011_gpu_route_classifier\\route_predictions.csv",
+    "metrics_by_class": "experiments\\exp011_gpu_route_classifier\\metrics_by_class.csv",
+    "split_manifest": "experiments\\exp011_gpu_route_classifier\\split_manifest.csv"
+  }
+}

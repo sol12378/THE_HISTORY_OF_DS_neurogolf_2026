@@ -1,0 +1,4 @@
+route,support,true_positive,false_positive,false_negative,precision,recall,f1
+crop_or_resize,138,138,1,0,0.9928057553956835,1.0,0.996389891696751
+same_shape_global_transform,28,12,0,16,1.0,0.42857142857142855,0.6
+sparse_edit_or_object_completion,234,234,15,0,0.9397590361445783,1.0,0.9689440993788819

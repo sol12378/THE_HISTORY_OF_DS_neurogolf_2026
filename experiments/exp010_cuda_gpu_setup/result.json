@@ -1,0 +1,30 @@
+{
+  "exp_id": "exp010_cuda_gpu_setup",
+  "date": "2026-06-05",
+  "status": "cuda_ready",
+  "python": "3.12.10",
+  "packages": {
+    "torch": "2.12.0+cu126",
+    "torchvision": "0.27.0+cu126"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 2080 SUPER",
+    "driver": "591.86",
+    "torch_cuda_version": "12.6",
+    "cuda_available": true,
+    "device_count": 1,
+    "capability": [7, 5],
+    "memory_total_mib": 8192,
+    "memory_free_after_smoke_mib": 7172
+  },
+  "smoke_test": {
+    "matmul": "pass",
+    "cnn_forward_backward": "pass",
+    "max_allocated_mb": 29.85
+  },
+  "next_actions": [
+    "Use GPU for route classifier and template candidate ranking.",
+    "Keep final ONNX candidates strict-static and CPU-official validated.",
+    "Avoid committing model.pt or generated submission.zip."
+  ]
+}

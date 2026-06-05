@@ -1,0 +1,74 @@
+{
+  "exp_id": "exp007_gpu_task_taxonomy_and_rewrite_router",
+  "date": "2026-06-05",
+  "gpu_status": "nvidia-smi ok, PyTorch CUDA not installed in .venv, VRAM mostly occupied by other processes",
+  "top_cost_tasks": [
+    366,
+    133,
+    158,
+    173,
+    286,
+    77,
+    285,
+    54,
+    396,
+    71
+  ],
+  "route_counts": {
+    "crop_or_resize": 9,
+    "same_shape_global_transform": 9,
+    "sparse_edit_or_object_completion": 22
+  },
+  "best_next_tasks": [
+    {
+      "task_id": 366,
+      "route": "crop_or_resize",
+      "gain_if_cost_900": 6.835
+    },
+    {
+      "task_id": 133,
+      "route": "same_shape_global_transform",
+      "gain_if_cost_900": 5.373
+    },
+    {
+      "task_id": 158,
+      "route": "sparse_edit_or_object_completion",
+      "gain_if_cost_900": 5.314
+    },
+    {
+      "task_id": 173,
+      "route": "sparse_edit_or_object_completion",
+      "gain_if_cost_900": 5.272
+    },
+    {
+      "task_id": 286,
+      "route": "sparse_edit_or_object_completion",
+      "gain_if_cost_900": 5.194
+    },
+    {
+      "task_id": 77,
+      "route": "sparse_edit_or_object_completion",
+      "gain_if_cost_900": 5.167
+    },
+    {
+      "task_id": 285,
+      "route": "sparse_edit_or_object_completion",
+      "gain_if_cost_900": 5.129
+    },
+    {
+      "task_id": 54,
+      "route": "same_shape_global_transform",
+      "gain_if_cost_900": 5.12
+    },
+    {
+      "task_id": 396,
+      "route": "crop_or_resize",
+      "gain_if_cost_900": 5.071
+    },
+    {
+      "task_id": 71,
+      "route": "sparse_edit_or_object_completion",
+      "gain_if_cost_900": 4.971
+    }
+  ]
+}

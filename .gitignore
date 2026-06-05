@@ -23,6 +23,7 @@ experiments/*/oof.csv
 experiments/*/submission.csv
 experiments/*/*.pkl
 experiments/*/*.model
+experiments/*/*.pt
 experiments/*/*.joblib
 experiments/*/*.parquet
 experiments/*/score_cache.jsonl
