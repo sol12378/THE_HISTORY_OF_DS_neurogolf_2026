@@ -25,6 +25,7 @@ experiments/*/*.pkl
 experiments/*/*.model
 experiments/*/*.joblib
 experiments/*/*.parquet
+experiments/*/score_cache.jsonl
 experiments/*/*_2026-*.json
 *.log
 

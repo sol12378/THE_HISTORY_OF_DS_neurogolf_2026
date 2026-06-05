@@ -1,0 +1,299 @@
+[
+  {
+    "label": "massimilianoghiotto_6254",
+    "kind": "dataset",
+    "ref": "massimilianoghiotto/neurogolf2026-6254",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\massimilianoghiotto_6254",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "afr1ste_5689_artifact",
+    "kind": "dataset",
+    "ref": "afr1ste/neurogolf-5689-51-current-rules-open-artifact",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\afr1ste_5689_artifact",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "jonathanchan_v3",
+    "kind": "dataset",
+    "ref": "jonathanchan/ngc26-public-v3",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\jonathanchan_v3",
+    "message": "",
+    "task_files": 1105
+  },
+  {
+    "label": "konbu17_v117",
+    "kind": "dataset",
+    "ref": "konbu17/neurogolf-2026-blended-401-v117",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\konbu17_v117",
+    "message": "",
+    "task_files": 401
+  },
+  {
+    "label": "sigmaborov_test_golf",
+    "kind": "dataset",
+    "ref": "sigmaborov/test-golf",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\sigmaborov_test_golf",
+    "message": "",
+    "task_files": 1863
+  },
+  {
+    "label": "needless090_4250_output",
+    "kind": "kernel_output",
+    "ref": "needless090/neurogolf-4250",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\needless090_4250_output",
+    "message": "",
+    "task_files": 0
+  },
+  {
+    "label": "vyanktesh_multi_source_output",
+    "kind": "kernel_output",
+    "ref": "vyankteshdwivedi/neurogolf-multi-source-onnx-solver",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\vyanktesh_multi_source_output",
+    "message": "",
+    "task_files": 0
+  },
+  {
+    "label": "magmacot_new_blending_output",
+    "kind": "kernel_output",
+    "ref": "magmacot/neurogolf-new-blending",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\magmacot_new_blending_output",
+    "message": "",
+    "task_files": 0
+  },
+  {
+    "label": "beicicc_6645_artifact",
+    "kind": "dataset",
+    "ref": "beicicc/neurogolf-6645-39-open-submission-artifact",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\beicicc_6645_artifact",
+    "message": "",
+    "task_files": 401
+  },
+  {
+    "label": "afr1ste_6335_artifact",
+    "kind": "dataset",
+    "ref": "afr1ste/neurogolf-6335-19-controlled-public-artifact",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\afr1ste_6335_artifact",
+    "message": "",
+    "task_files": 401
+  },
+  {
+    "label": "afr1ste_6323_artifact",
+    "kind": "dataset",
+    "ref": "afr1ste/neurogolf-6323-15-controlled-public-artifact",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\afr1ste_6323_artifact",
+    "message": "",
+    "task_files": 401
+  },
+  {
+    "label": "agentzz_6284_zip",
+    "kind": "dataset",
+    "ref": "agentzz/neurogolf-6284-zip",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\agentzz_6284_zip",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "afr1ste_6285_artifact",
+    "kind": "dataset",
+    "ref": "afr1ste/neurogolf-6285-95-open-submission-artifact",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\afr1ste_6285_artifact",
+    "message": "",
+    "task_files": 401
+  },
+  {
+    "label": "massimilianoghiotto_6208",
+    "kind": "dataset",
+    "ref": "massimilianoghiotto/neurogolf2026-6208",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\massimilianoghiotto_6208",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "octaviograu_manual_v205",
+    "kind": "dataset",
+    "ref": "octaviograu/neurogolf-manual-rewrites-v205",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\octaviograu_manual_v205",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "biohack44_6113_bundle",
+    "kind": "dataset",
+    "ref": "biohack44/neurogolf-6113-bundle",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\biohack44_6113_bundle",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "massimilianoghiotto_6112",
+    "kind": "dataset",
+    "ref": "massimilianoghiotto/neurogolf2026-6112",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\massimilianoghiotto_6112",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "jsrdcht_6029_bundle",
+    "kind": "dataset",
+    "ref": "jsrdcht/neurogolf-6029-submission-bundle",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\jsrdcht_6029_bundle",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "franksunp_blended_best",
+    "kind": "dataset",
+    "ref": "franksunp/neurogolf-blended-best-models",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\franksunp_blended_best",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "konbu17_blend_source_v360",
+    "kind": "dataset",
+    "ref": "konbu17/neurogolf-2026-blend-source-v3-6-0",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\konbu17_blend_source_v360",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "kojimar_5800_minimal_blend",
+    "kind": "dataset",
+    "ref": "kojimar/neurogolf-5800-55-minimal-onnx-blend-assets",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\kojimar_5800_minimal_blend",
+    "message": "",
+    "task_files": 413
+  },
+  {
+    "label": "scottweeden_trace_dfa_output",
+    "kind": "kernel_output",
+    "ref": "scottweeden/neurogolf-trace-language-dfa-solvers",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\scottweeden_trace_dfa_output",
+    "message": "",
+    "task_files": 0
+  },
+  {
+    "label": "nadeem_6252_baseline_output",
+    "kind": "kernel_output",
+    "ref": "nadeembinshajahan/6252-lb-neurogolf-6252-baseline",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\nadeem_6252_baseline_output",
+    "message": "",
+    "task_files": 0
+  },
+  {
+    "label": "biohack44_superior_blend_output",
+    "kind": "kernel_output",
+    "ref": "biohack44/neurogolf-superior-blend-notebook",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\biohack44_superior_blend_output",
+    "message": "",
+    "task_files": 500
+  },
+  {
+    "label": "biohack44_super_best_output",
+    "kind": "kernel_output",
+    "ref": "biohack44/neurogolf-super-blend-best-public-score",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\biohack44_super_best_output",
+    "message": "",
+    "task_files": 500
+  },
+  {
+    "label": "nadeem_6151_surgery_output",
+    "kind": "kernel_output",
+    "ref": "nadeembinshajahan/6151-lb-neurogolf-2026-stable-fp16-surgery",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\nadeem_6151_surgery_output",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "octaviograu_6154_rewrites_output",
+    "kind": "kernel_output",
+    "ref": "octaviograu/6154-71-onnx-rewrites-hand-built-solvers",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\octaviograu_6154_rewrites_output",
+    "message": "",
+    "task_files": 3
+  },
+  {
+    "label": "biohack44_6115_prune_output",
+    "kind": "kernel_output",
+    "ref": "biohack44/neurogolf-2026-fp16-surgery-prune-blend-6115",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\biohack44_6115_prune_output",
+    "message": "",
+    "task_files": 400
+  },
+  {
+    "label": "nadeem_6130_prune_output",
+    "kind": "kernel_output",
+    "ref": "nadeembinshajahan/neurogolf-2026-fp16-surgery-prune-blend-6130",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\nadeem_6130_prune_output",
+    "message": "",
+    "task_files": 378
+  },
+  {
+    "label": "biohack44_6080_output",
+    "kind": "kernel_output",
+    "ref": "biohack44/neurogolf-new-best-public-v2-6080-ish",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\biohack44_6080_output",
+    "message": "",
+    "task_files": 0
+  },
+  {
+    "label": "biohack44_6078_output",
+    "kind": "kernel_output",
+    "ref": "biohack44/neurogolf-new-best-public-6078-ish",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\biohack44_6078_output",
+    "message": "",
+    "task_files": 0
+  },
+  {
+    "label": "haoranran_6100_output",
+    "kind": "kernel_output",
+    "ref": "haoranran/fp16-graph-surgery-v2-highest-public-6100",
+    "status": "blocked",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\haoranran_6100_output",
+    "message": "TimeoutExpired(['E:\\\\kaggle\\\\neurogolf-2026\\\\.venv\\\\Scripts\\\\kaggle.exe', 'kernels', 'output', 'haoranran/fp16-graph-surgery-v2-highest-public-6100', '-p', 'E:\\\\kaggle\\\\neurogolf-2026\\\\data\\\\cache\\\\public_artifacts\\\\haoranran_6100_output', '-o'], 45)",
+    "task_files": 0
+  },
+  {
+    "label": "franksunp_super_blend_v2_output",
+    "kind": "kernel_output",
+    "ref": "franksunp/neurogolf-super-blend-v2",
+    "status": "cached",
+    "path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\franksunp_super_blend_v2_output",
+    "message": "",
+    "task_files": 0
+  }
+]
