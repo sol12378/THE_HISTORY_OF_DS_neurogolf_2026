@@ -1,0 +1,49 @@
+{
+  "exp_id": "exp102_one_node_conv_kernel_mining",
+  "date": "2026-06-07",
+  "status": "conv_kernel_catalog_ready",
+  "campaign_index": 4,
+  "base_local_estimate": 6282.812218,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.812218,
+  "conv_artifact_count": 23,
+  "conv_class_counts": {
+    "general_conv_kernel": 6,
+    "depthwise_local_filter": 1,
+    "sparse_local_pattern_detector": 16
+  },
+  "rules": [
+    {
+      "name": "single_conv_before_slice_mul_chain",
+      "applies_to": [
+        "task185_homogeneous_2x2",
+        "local_mask_patterns"
+      ],
+      "rule": "Prefer one Conv pattern detector plus minimal threshold over shifted Slice/Mul chains.",
+      "evidence": "exp089 Conv proxy 1147 beat exp090 Mul proxies 2200/2848; exp102 confirms many low-cost artifacts rely on one Conv."
+    },
+    {
+      "name": "conv_to_gather_when_sparse_1x1_injective",
+      "applies_to": [
+        "color_map",
+        "channel_recolor"
+      ],
+      "rule": "Replace sparse injective 1x1 Conv with Gather(axis=1).",
+      "evidence": "Existing channel Gather artifacts cost 10-30; Conv artifacts are usually 160+."
+    },
+    {
+      "name": "depthwise_conv_visibility_guardrail",
+      "applies_to": [
+        "ray_visibility",
+        "connectivity"
+      ],
+      "rule": "Do not emit large full-grid depthwise visibility Conv unless estimated cost beats current artifact.",
+      "evidence": "exp_b011 task037 depthwise Conv cost 441976 despite correct rule."
+    }
+  ],
+  "decision": "Use one-Conv local detector as the next lowering primitive, but only with strict cost estimation and shape limits. Start with task185-like tiny lattice/local-mask tasks rather than connectivity/ray visibility.",
+  "submission_decision": "no_submit: mining only",
+  "leakage_risk": "low: mines current submitted-safe artifacts.",
+  "overfitting_risk": "low for catalog; generated Conv rules still require full validation.",
+  "runtime_seconds": 0.05206418037414551
+}

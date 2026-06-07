@@ -1,0 +1,27 @@
+{
+  "exp_id": "exp078_task366_axis_halving_probe",
+  "date": "2026-06-07",
+  "task_id": 366,
+  "status": "no_simple_axis_halving_rule",
+  "hypothesis": "task366は片軸が半分になるため、2-row/2-col pair reductionで説明できる可能性がある。",
+  "best_candidate": {
+    "candidate": "rows_min",
+    "status": "partial",
+    "train_pass": 0,
+    "train_total": 3,
+    "test_pass": 0,
+    "test_total": 1,
+    "arc_pass": 0,
+    "arc_total": 262,
+    "total_pass": 0,
+    "total": 266,
+    "mean_cell_accuracy": 0.23357853430068118,
+    "fail_examples": "[{\"idx\": 0, \"split\": \"train\", \"input\": [30, 17], \"output\": [15, 17]}, {\"idx\": 1, \"split\": \"train\", \"input\": [11, 20], \"output\": [11, 10]}, {\"idx\": 2, \"split\": \"train\", \"input\": [10, 16], \"output\": [10, 8]}, {\"idx\": 3, \"split\": \"test\", \"input\": [24, 12], \"output\": [12, 12]}, {\"idx\": 4, \"split\": \"arc-gen\", \"input\": [14, 24], \"output\": [14, 12]}, {\"idx\": 5, \"split\": \"arc-gen\", \"input\": [20, 10], \"output\": [10, 10]}, {\"idx\": 6, \"split\": \"arc-gen\", \"input\": [20, 11], \"output\": [10, 11]}, {\"idx\": 7, \"split\": \"arc-gen\", \"input\": [24, 11], \"output\": [12, 11]}, {\"idx\": 8, \"split\": \"arc-gen\", \"input\": [15, 32], \"output\": [15, 16]}, {\"idx\": 9, \"split\": \"arc-gen\", \"input\": [12, 26], \"output\": [12, 13]}, {\"idx\": 10, \"split\": \"arc-gen\", \"input\": [15, 28], \"output\": [15, 14]}, {\"idx\": 11, \"split\": \"arc-gen\", \"input\": [20, 12], \"output\": [10, 12]}, {\"idx\": 12, \"split\": \"arc-gen\", \"input\": [13, 24], \"output\": [13, 12]}, {\"idx\": 13, \"split\": \"arc-gen\", \"input\": [20, 10], \"output\": [10, 10]}, {\"idx\": 14, \"split\": \"arc-gen\", \"input\": [24, 11], \"output\": [12, 11]}, {\"idx\": 15, \"split\": \"arc-gen\", \"input\": [20, 12], \"output\": [10, 12]}, {\"idx\": 16, \"split\": \"arc-gen\", \"input\": [24, 14], \"output\": [12, 14]}, {\"idx\": 17, \"split\": \"arc-gen\", \"input\": [20, 11], \"output\": [10, 11]}, {\"idx\": 18, \"split\": \"arc-gen\", \"input\": [15, 34], \"output\": [15, 17]}, {\"idx\": 19, \"split\": \"arc-gen\", \"input\": [13, 30], \"output\": [13, 15]}]"
+  },
+  "candidate_count": 36,
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: no ONNX emitted",
+  "decision": "full-pass候補がなければ、axis halving単体では不足。次はpair reductionにobject mask/source copyを加える。",
+  "leakage_risk": "low: hand-written pair reductions only.",
+  "overfitting_risk": "low for rejected candidates; medium if partial candidates are extended."
+}

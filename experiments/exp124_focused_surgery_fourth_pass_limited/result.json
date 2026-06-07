@@ -1,0 +1,156 @@
+{
+  "exp_id": "exp124_focused_surgery_fourth_pass_limited",
+  "date": "2026-06-07",
+  "status": "improved_bundle_candidate",
+  "campaign_index": 26,
+  "base_local_estimate": 6282.950209678613,
+  "local_estimate_delta": 0.004776050173576962,
+  "new_local_estimate": 6282.954985728787,
+  "target_count": 7,
+  "targets": [
+    48,
+    184,
+    187,
+    207,
+    263,
+    316,
+    394
+  ],
+  "previous_accepted_ids": [
+    48,
+    184,
+    187,
+    207,
+    263,
+    316,
+    394
+  ],
+  "generated_by_task": {
+    "48": 67,
+    "184": 75,
+    "187": 94,
+    "207": 15,
+    "263": 170,
+    "316": 63,
+    "394": 55
+  },
+  "generated_candidate_count": 539,
+  "status_counts": {
+    "rejected": 510,
+    "improved": 29
+  },
+  "validation_counts": {
+    "not_run": 279,
+    "0_pass_1_fail": 121,
+    "1_pass_1_fail": 25,
+    "0_pass_0_fail": 3,
+    "3_pass_1_fail": 18,
+    "2_pass_1_fail": 23,
+    "6_pass_1_fail": 1,
+    "169_pass_0_fail": 1,
+    "263_pass_1_fail": 1,
+    "5_pass_1_fail": 4,
+    "10_pass_1_fail": 6,
+    "22_pass_1_fail": 4,
+    "4_pass_1_fail": 3,
+    "27_pass_1_fail": 3,
+    "267_pass_0_fail": 20,
+    "14_pass_1_fail": 2,
+    "7_pass_1_fail": 2,
+    "30_pass_1_fail": 2,
+    "17_pass_1_fail": 3,
+    "8_pass_1_fail": 2,
+    "11_pass_1_fail": 2,
+    "19_pass_1_fail": 2,
+    "25_pass_1_fail": 2,
+    "266_pass_0_fail": 8,
+    "78_pass_1_fail": 1,
+    "18_pass_1_fail": 1
+  },
+  "accepted_tasks": [
+    184,
+    263,
+    316,
+    394
+  ],
+  "accepted_count": 4,
+  "accepted": [
+    {
+      "task_id": 184,
+      "route": "crop_or_resize",
+      "template_name": "fourth_bypass_Greater_063_in0",
+      "baseline_cost": 37895,
+      "candidate_cost": 37886,
+      "baseline_points": 14.457425543753871,
+      "candidate_points": 14.457663070311776,
+      "file_bytes": 43848,
+      "validation_status": "169_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "c5071db7f5344f199ae009321b278d9c9ee1564fd6f8d0178fadb3eb99e74bc6"
+    },
+    {
+      "task_id": 263,
+      "route": "crop_or_resize",
+      "template_name": "fourth_bypass_Mul_086_in0",
+      "baseline_cost": 8048,
+      "candidate_cost": 8046,
+      "baseline_points": 16.00682110766048,
+      "candidate_points": 16.00706964749027,
+      "file_bytes": 12350,
+      "validation_status": "267_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "dc90111ed58dba8b46e0f1f8fa5cc650ef5744ed7f056d71df82e216c60b9cc6"
+    },
+    {
+      "task_id": 316,
+      "route": "crop_or_resize",
+      "template_name": "fourth_bypass_And_015_in0",
+      "baseline_cost": 3873,
+      "candidate_cost": 3863,
+      "baseline_points": 16.738215320485246,
+      "candidate_points": 16.74080063733372,
+      "file_bytes": 4468,
+      "validation_status": "266_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "9c39f8dbdcfed58d4e12d067777ae707974bbd723f6717f44d8243e756598ffc"
+    },
+    {
+      "task_id": 394,
+      "route": "crop_or_resize",
+      "template_name": "fourth_bypass_Mul_039_in1",
+      "baseline_cost": 4697,
+      "candidate_cost": 4689,
+      "baseline_points": 16.545320713973005,
+      "candidate_points": 16.547025380910412,
+      "file_bytes": 5956,
+      "validation_status": "266_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "f2ef29c77b8d94aee69ed2856158fd6262838f1302e9eb549cab0173f904da0a"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820550,
+    "sha256": "012f18d1e1351390a1d0e407ec58a84b68ddbffb4bd4432083376a84f00a95b6"
+  },
+  "runtime_seconds": 10.050082206726074,
+  "submission_decision": "submit_candidate_after_review",
+  "decision": "Fourth focused-surgery pass measures the remaining score-producing tail of the safe post-pass lane.",
+  "leakage_risk": "low: graph surgery only and full-validation gated.",
+  "overfitting_risk": "low-to-medium: repeated same-task surgery requires LB micro-calibration."
+}

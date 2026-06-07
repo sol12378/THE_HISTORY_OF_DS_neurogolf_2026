@@ -1,0 +1,5 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+150,sparse_edit_or_object_completion,flip_lr,1014,,18.078341815848873,,394,0_pass_1_fail,rejected,mismatch example 0,84a207d9d70d952cc833efb6b9f8b6d080c175aede85ef41ef3e4360b688563a
+155,sparse_edit_or_object_completion,flip_ud,1014,,18.078341815848873,,394,0_pass_1_fail,rejected,mismatch example 0,978823dbe6ad628aa20029495252ccaec01a3c3fc3622404942ac33c8fd51726
+87,sparse_edit_or_object_completion,rot180,368,,19.09191706183107,,424,0_pass_1_fail,rejected,mismatch example 0,d0b514fdc76dc7c359e18b5e4b93d3340e67da327a01f7c6abcfe1adf6bc95cc
+140,sparse_edit_or_object_completion,rot180,368,,19.09191706183107,,424,0_pass_1_fail,rejected,mismatch example 0,bed7b13d47f383c104be54dfe8aa698226624289b06aa03074f4199352d60d46

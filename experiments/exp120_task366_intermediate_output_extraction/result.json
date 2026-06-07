@@ -1,0 +1,100 @@
+{
+  "exp_id": "exp120_task366_intermediate_output_extraction",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 22,
+  "task_id": 366,
+  "hypothesis": "Task366 current high-cost artifact may contain a correct final-shape intermediate tensor before expensive suffix logic.",
+  "baseline_cost": 99849,
+  "baseline_points": 13.488585676228723,
+  "candidate_tensor_count": 6,
+  "evaluated_candidate_count": 6,
+  "all_intermediate_tensor_count": 722,
+  "top_shape_counts": [
+    {
+      "shape": "1x1x30x30",
+      "count": 311
+    },
+    {
+      "shape": "1x1x1x1",
+      "count": 229
+    },
+    {
+      "shape": "1x1x1x30",
+      "count": 41
+    },
+    {
+      "shape": "1x1x30x1",
+      "count": 41
+    },
+    {
+      "shape": "1x1x59x59",
+      "count": 39
+    },
+    {
+      "shape": "",
+      "count": 25
+    },
+    {
+      "shape": "30",
+      "count": 12
+    },
+    {
+      "shape": "1x10x30x30",
+      "count": 6
+    },
+    {
+      "shape": "1x9x1x1",
+      "count": 6
+    },
+    {
+      "shape": "1000",
+      "count": 5
+    },
+    {
+      "shape": "3481",
+      "count": 3
+    },
+    {
+      "shape": "1x10x1x1",
+      "count": 2
+    },
+    {
+      "shape": "1x1x30x30x1",
+      "count": 2
+    }
+  ],
+  "status_counts": {
+    "rejected": 6
+  },
+  "validation_counts": {
+    "not_run": 6
+  },
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "best_eval": null,
+  "base_local_estimate": 6282.93615685804,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.93615685804,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820631,
+    "sha256": "384624252d1f4b3a40f16d417756739671626edec10b72021fc2f0f39230919c"
+  },
+  "runtime_seconds": 1.0100123882293701,
+  "submission_decision": "no_submit",
+  "decision": "If no extraction improves, task366 requires a new low-cost representation; existing artifact suffix cannot be harvested.",
+  "leakage_risk": "low: graph-only extraction, full-validation gated.",
+  "overfitting_risk": "low-to-medium: accepted extraction would still need LB calibration."
+}

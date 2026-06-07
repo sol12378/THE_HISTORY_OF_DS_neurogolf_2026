@@ -1,0 +1,6 @@
+task_id,variant,n_examples,input_shapes,output_shapes,fixed_input_shape,fixed_output_shape,python_exact
+150,flip_lr,266,3x3;4x4;5x5;6x6;7x7;8x8;9x9,3x3;4x4;5x5;6x6;7x7;8x8;9x9,False,False,266
+155,flip_ud,266,4x4;5x5;6x6;7x7;8x8,4x4;5x5;6x6;7x7;8x8,False,False,266
+87,rot180,266,3x3,3x3,True,True,266
+140,rot180,265,3x3,3x3,True,True,265
+380,rot90_ccw,267,3x3,3x3,True,True,267

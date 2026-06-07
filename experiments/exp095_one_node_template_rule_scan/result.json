@@ -1,0 +1,210 @@
+{
+  "exp_id": "exp095_one_node_template_rule_scan",
+  "date": "2026-06-07",
+  "status": "scan_ready",
+  "hypothesis": "zip-derived official one-node templates can find full-pass tasks that can be replaced by near-zero-cost ONNX.",
+  "task_count": 400,
+  "candidate_rows": 2812,
+  "hit_count": 19,
+  "hit_kind_counts": {
+    "geometry": 7,
+    "geometry_recolor": 12
+  },
+  "top_hits": [
+    {
+      "task_id": 150,
+      "variant": "flip_lr",
+      "kind": "geometry",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 1014,
+      "baseline_points": 18.078341815848873,
+      "mapping": ""
+    },
+    {
+      "task_id": 150,
+      "variant": "flip_lr_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 1014,
+      "baseline_points": 18.078341815848873,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 5, \"6\": 6, \"7\": 7, \"8\": 8, \"9\": 9}"
+    },
+    {
+      "task_id": 155,
+      "variant": "flip_ud",
+      "kind": "geometry",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 1014,
+      "baseline_points": 18.078341815848873,
+      "mapping": ""
+    },
+    {
+      "task_id": 155,
+      "variant": "flip_ud_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 1014,
+      "baseline_points": 18.078341815848873,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 5, \"6\": 6, \"7\": 7, \"8\": 8, \"9\": 9}"
+    },
+    {
+      "task_id": 380,
+      "variant": "rot90_ccw_py",
+      "kind": "geometry",
+      "passed": 267,
+      "failed": 0,
+      "baseline_cost": 728,
+      "baseline_points": 18.409698951803314,
+      "mapping": ""
+    },
+    {
+      "task_id": 380,
+      "variant": "rot90_ccw_py_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 267,
+      "failed": 0,
+      "baseline_cost": 728,
+      "baseline_points": 18.409698951803314,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 5, \"6\": 6, \"7\": 7, \"8\": 8, \"9\": 9}"
+    },
+    {
+      "task_id": 87,
+      "variant": "rot180",
+      "kind": "geometry",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 368,
+      "baseline_points": 19.09191706183107,
+      "mapping": ""
+    },
+    {
+      "task_id": 87,
+      "variant": "rot180_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 368,
+      "baseline_points": 19.09191706183107,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 5, \"6\": 6, \"7\": 7, \"8\": 8, \"9\": 9}"
+    },
+    {
+      "task_id": 140,
+      "variant": "rot180",
+      "kind": "geometry",
+      "passed": 265,
+      "failed": 0,
+      "baseline_cost": 368,
+      "baseline_points": 19.09191706183107,
+      "mapping": ""
+    },
+    {
+      "task_id": 140,
+      "variant": "rot180_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 265,
+      "failed": 0,
+      "baseline_cost": 368,
+      "baseline_points": 19.09191706183107,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 5, \"6\": 6, \"7\": 7, \"8\": 8, \"9\": 9}"
+    },
+    {
+      "task_id": 16,
+      "variant": "flip_ud_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 267,
+      "failed": 0,
+      "baseline_cost": 10,
+      "baseline_points": 22.697414907005953,
+      "mapping": "{\"0\": 0, \"1\": 5, \"2\": 6, \"3\": 4, \"4\": 3, \"5\": 1, \"6\": 2, \"7\": 7, \"8\": 9, \"9\": 8}"
+    },
+    {
+      "task_id": 16,
+      "variant": "identity_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 267,
+      "failed": 0,
+      "baseline_cost": 10,
+      "baseline_points": 22.697414907005953,
+      "mapping": "{\"0\": 0, \"1\": 5, \"2\": 6, \"3\": 4, \"4\": 3, \"5\": 1, \"6\": 2, \"7\": 7, \"8\": 9, \"9\": 8}"
+    },
+    {
+      "task_id": 276,
+      "variant": "identity_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 10,
+      "baseline_points": 22.697414907005953,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 5, \"6\": 2, \"7\": 7, \"8\": 8, \"9\": 9}"
+    },
+    {
+      "task_id": 309,
+      "variant": "identity_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 265,
+      "failed": 0,
+      "baseline_cost": 10,
+      "baseline_points": 22.697414907005953,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 5, \"6\": 6, \"7\": 5, \"8\": 8, \"9\": 9}"
+    },
+    {
+      "task_id": 337,
+      "variant": "identity_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 10,
+      "baseline_points": 22.697414907005953,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 8, \"6\": 6, \"7\": 7, \"8\": 5, \"9\": 9}"
+    },
+    {
+      "task_id": 179,
+      "variant": "transpose",
+      "kind": "geometry",
+      "passed": 267,
+      "failed": 0,
+      "baseline_cost": 0,
+      "baseline_points": 25.0,
+      "mapping": ""
+    },
+    {
+      "task_id": 179,
+      "variant": "transpose_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 267,
+      "failed": 0,
+      "baseline_cost": 0,
+      "baseline_points": 25.0,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 5, \"6\": 6, \"7\": 7, \"8\": 8, \"9\": 9}"
+    },
+    {
+      "task_id": 241,
+      "variant": "transpose",
+      "kind": "geometry",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 0,
+      "baseline_points": 25.0,
+      "mapping": ""
+    },
+    {
+      "task_id": 241,
+      "variant": "transpose_channel_recolor",
+      "kind": "geometry_recolor",
+      "passed": 266,
+      "failed": 0,
+      "baseline_cost": 0,
+      "baseline_points": 25.0,
+      "mapping": "{\"0\": 0, \"1\": 1, \"2\": 2, \"3\": 3, \"4\": 4, \"5\": 5, \"6\": 6, \"7\": 7, \"8\": 8, \"9\": 9}"
+    }
+  ],
+  "decision": "For full hits with baseline cost > one-node official cost, emit official one-node ONNX replacements and validate as a submit-safe delta.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: scan only",
+  "leakage_risk": "low: uses exact deterministic transforms; no hidden labels.",
+  "overfitting_risk": "low for pure geometry; medium for color map if train/test/arc-gen all pass but color mapping is task-specific."
+}

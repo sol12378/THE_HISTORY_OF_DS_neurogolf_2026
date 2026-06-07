@@ -1,0 +1,7 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,notes
+official_identity,scored,1,0,0,0,233,2ab98ebcdc6ae5396f54f04bf27ae6483c348e85fe4a7a1596a743013ffb8be3,ok,ok,ok,Official one-hot Identity equivalent.
+official_flip_lr,scored,1,0,4,4,346,4e5fb8a5030d211beccacb80bcf87f85216b49e2fdcbb63f8ee7dece7ba82429,ok,ok,ok,Official one-hot Slice flip over width axis.
+official_rot180,scored,1,0,8,8,376,260ec0c769f9f951e2cae8ef7fad34d4e39bcf27d1f7b0c0c8c2b8d48bd747d4,ok,ok,ok,Official one-hot Slice flip over H/W axes.
+official_transpose_hw,scored,1,0,0,0,261,5e494c050f1c8ed9f656b491aa14a71af678d3ee69dcfc1b55e22894898f49f8,ok,ok,ok,Official one-hot H/W Transpose.
+official_rot90_ccw,scored,2,36000,4,36004,388,43112fde4ad91fe41d38608ef79a8cc40c3f9e5a47272e5d99e7c3de1fafa34a,ok,ok,ok,Official one-hot Transpose + Slice.
+official_channel_gather_recolor,scored,1,0,10,10,370,5df9607fa8a77418e9856b28af5971bc6f29e1a5d4c739206ced80f8e030b957,ok,ok,ok,Official one-hot channel Gather recolor.

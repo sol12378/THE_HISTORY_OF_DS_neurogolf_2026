@@ -1,0 +1,101 @@
+{
+  "exp_id": "exp114_task185_fresh_fused_lowering_probe",
+  "date": "2026-06-07",
+  "status": "cost_probe_ready",
+  "campaign_index": 16,
+  "task_id": 185,
+  "hypothesis": "Task185 fresh fused lowering may beat prior core proxies when final output shape and extraction strategy are measured together.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "rows": [
+    {
+      "variant": "slice_conv_pad_final",
+      "status": "scored",
+      "node_count": 5,
+      "memory": 1450,
+      "params": 66,
+      "cost": 1516,
+      "file_bytes": 874,
+      "sha256": "5edc9ac6451c40fa229899da728d9f6d6ee076d7d4279ac35e25706e84c4c1ce",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Static lattice Slice + grouped Conv core + Pad to final official output shape."
+    },
+    {
+      "variant": "direct_four_slice_mul_pad_final",
+      "status": "scored",
+      "node_count": 8,
+      "memory": 2520,
+      "params": 49,
+      "cost": 2569,
+      "file_bytes": 1050,
+      "sha256": "509b79a765cf346db623142336eb84a0ae90c9046f67a7230328956c38f036ee",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Four direct strided Slice views + Mul equality + Pad; avoids 4x4 m4 materialization."
+    },
+    {
+      "variant": "gathernd_lattice_conv_pad_final",
+      "status": "scored",
+      "node_count": 8,
+      "memory": 38730,
+      "params": 102,
+      "cost": 38832,
+      "file_bytes": 1276,
+      "sha256": "4002f219886831402e983b1443616e2a8e10b4f21d15783051c3050e36f44b24",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Sparse GatherND lattice extraction + grouped Conv + Pad; tests params-vs-memory tradeoff."
+    }
+  ],
+  "best_variant": {
+    "variant": "slice_conv_pad_final",
+    "status": "scored",
+    "node_count": 5,
+    "memory": 1450,
+    "params": 66,
+    "cost": 1516,
+    "file_bytes": 874,
+    "sha256": "5edc9ac6451c40fa229899da728d9f6d6ee076d7d4279ac35e25706e84c4c1ce",
+    "static_reason": "ok",
+    "score_reason": "ok",
+    "runtime_reason": "ok",
+    "notes": "Static lattice Slice + grouped Conv core + Pad to final official output shape."
+  },
+  "evaluated_candidate_count": 3,
+  "candidate_status_counts": {
+    "rejected": 3
+  },
+  "validation_counts": {
+    "0_pass_1_fail": 3
+  },
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "best_eval": null,
+  "base_local_estimate": 6282.93615685804,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.93615685804,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820631,
+    "sha256": "9ec5b9ab614fb8884c623bdae6ce5cf70484ab3abbf0a55fe75c87b48d4f0b88"
+  },
+  "decision": "Use this cost floor to choose the next real correctness candidate. If all variants remain >600, task185 cannot be solved by ordinary Slice/GatherND plus equality; seek a more fused artifact-specific representation.",
+  "submission_decision": "no_submit",
+  "leakage_risk": "low: no label/output lookup.",
+  "overfitting_risk": "medium: static lattice position proxy; correctness against all examples is not claimed."
+}

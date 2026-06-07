@@ -1,0 +1,36 @@
+{
+  "exp_id": "exp104_p0_fixed_3x3_static_index_probe",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 6,
+  "base_local_estimate": 6282.812218,
+  "local_estimate_delta": 0,
+  "new_local_estimate": 6282.812218,
+  "target_count": 37,
+  "fit_count": 0,
+  "generated_candidate_count": 0,
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "accepted": [],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820756,
+    "sha256": "15641198ad9f271ece77e58897c7b42fd48be2f0c0c62dd4a228875001cc772c"
+  },
+  "runtime_seconds": 1.0824480056762695,
+  "submission_decision": "no_submit",
+  "decision": "Static index map is a real compiler emission lane, but only useful when fixed per-cell coordinates both fit and beat the current artifact.",
+  "leakage_risk": "medium: coordinates are inferred from all available examples; no raw output lookup is used, but task-specific constants can overfit.",
+  "overfitting_risk": "medium-to-high for accepted candidates unless the index map is explainable by a visible geometric rule."
+}

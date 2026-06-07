@@ -1,0 +1,44 @@
+{
+  "exp_id": "exp089_task185_homogeneous2x2_onnx_cost_probe",
+  "date": "2026-06-07",
+  "task_id": 185,
+  "status": "cost_probe_ready",
+  "hypothesis": "task185 2x2 homogeneous block compression can be <=600 if 4x4 lattice extraction is cheap.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "rows": [
+    {
+      "variant": "static_slice_4x4_to_3x3_shape_probe",
+      "status": "rejected",
+      "node_count": 1,
+      "memory": "",
+      "params": "",
+      "cost": "",
+      "file_bytes": 452,
+      "sha256": "d645422fb1b90e9414a567b6bb0fcf83e761396fce2e507913aae888050a823e",
+      "static_reason": "shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Slice): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (4) vs (3)\n",
+      "score_reason": "",
+      "runtime_reason": "bad shape (1, 10, 4, 4)",
+      "notes": "static strided Slice cost floor; not correct shape semantics beyond output rank."
+    },
+    {
+      "variant": "homogeneous2x2_conv_proxy",
+      "status": "scored",
+      "node_count": 4,
+      "memory": 1090,
+      "params": 57,
+      "cost": 1147,
+      "file_bytes": 742,
+      "sha256": "ab1b218a14af68916d14fbd97f8af957c7ccbb07fb98b7f92125f9be1949b79f",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "static strided Slice + grouped 2x2 Conv + Equal + Cast core rule proxy."
+    }
+  ],
+  "decision": "If homogeneous2x2 proxy is <=600, focus on dynamic 4x4 lattice extraction; otherwise seek graph surgery or alternative non-Conv equality encoding.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: cost proxy only",
+  "leakage_risk": "low: no output lookup.",
+  "overfitting_risk": "medium: static slice start/step is proxy-only; full lowering must infer lattice location."
+}

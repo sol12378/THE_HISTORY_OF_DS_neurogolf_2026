@@ -1,0 +1,4 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,notes
+static_slice_4x4_to_3x3_shape_probe,rejected,1,,,,452,d645422fb1b90e9414a567b6bb0fcf83e761396fce2e507913aae888050a823e,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Slice): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (4) vs (3)
+",,"bad shape (1, 10, 4, 4)",static strided Slice cost floor; not correct shape semantics beyond output rank.
+homogeneous2x2_conv_proxy,scored,4,1090,57,1147,742,ab1b218a14af68916d14fbd97f8af957c7ccbb07fb98b7f92125f9be1949b79f,ok,ok,ok,static strided Slice + grouped 2x2 Conv + Equal + Cast core rule proxy.

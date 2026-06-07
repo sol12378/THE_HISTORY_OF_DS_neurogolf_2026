@@ -1,0 +1,12 @@
+primitive,updates,status,memory,params,cost,file_bytes,sha256,static_reason,score_reason,notes
+constantofshape_scatternd,7,scored,36000,39,36039,646,aba91e3fc768d140a804145c6965fd4d860d3e06560970dcd6edf8dc7918bf3f,ok,ok,zero grid via ConstantOfShape + sparse ScatterND
+input_zero_scatternd,7,scored,36000,36,36036,599,0959331797f218ab721c8d6e694cd019f50a52674b88bbb5942282cc01f0de8d,ok,ok,zero grid via input*0 + sparse ScatterND
+small_gather_tile_proxy,7,scored,10400,18,10418,556,ba684d8d38db022145cb23521c9b10ac524c5944b92a3fe7b56bf0efb20a6ef9,ok,ok,small Gather then Tile to fixed output; cost proxy only
+constantofshape_scatternd,16,scored,36000,84,36084,972,71073c4e37b8518f87ec95d4ca73914d3a033d98d05a1bd35eca5fd5b271d8c2,ok,ok,zero grid via ConstantOfShape + sparse ScatterND
+input_zero_scatternd,16,scored,36000,81,36081,925,21065e7fb5fe690627af3101b9001d788f6df39daaf9e7ee86556d0ba808985c,ok,ok,zero grid via input*0 + sparse ScatterND
+small_gather_tile_proxy,16,scored,29480,36,29516,706,9ff5c0ca3278ecfa8b5cfebabc3e32f9b14da0dfc39d8dd90cae6f66ead05706,ok,ok,small Gather then Tile to fixed output; cost proxy only
+constantofshape_scatternd,49,scored,36000,249,36249,2162,487b4beb4134fb597185bc822184df2d0f74d7499d66b65efd6ea776bf6f970d,ok,ok,zero grid via ConstantOfShape + sparse ScatterND
+input_zero_scatternd,49,scored,36000,246,36246,2115,f6ea6a714eb1c7d1ec078401ad457b8b9e261e2979d44235874004f57c408baf,ok,ok,zero grid via input*0 + sparse ScatterND
+small_gather_tile_proxy,49,scored,72040,64,72104,930,7b69aa8af4c20cc55135a4669d48b3ccd7da744bc1803cfe29f7d2d7dedef143,ok,ok,small Gather then Tile to fixed output; cost proxy only
+constantofshape_scatternd,100,scored,36000,504,36504,4000,dad67db83e6f5b94d280f8165a501290d626f0ff9013bbfb273ffdb9ad6d8f9a,ok,ok,zero grid via ConstantOfShape + sparse ScatterND
+input_zero_scatternd,100,scored,36000,501,36501,3953,62edcefba10bafbac15c04accbb63eafbf718950bf7eda4cfb376bd5c716203d,ok,ok,zero grid via input*0 + sparse ScatterND

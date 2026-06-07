@@ -1,0 +1,82 @@
+{
+  "exp_id": "exp108_compiler_campaign_10_review",
+  "date": "2026-06-07",
+  "status": "review_complete",
+  "campaign_index": 10,
+  "base_local_estimate": 6282.812218,
+  "new_local_estimate": 6282.812218,
+  "local_estimate_delta_1_to_10": 0.0,
+  "local_estimate_delta_6_to_10": 0.0,
+  "accepted_task_count_1_to_10": 0,
+  "submission_decision": "no_submit: review and measurement only",
+  "experiments": [
+    {
+      "campaign_index": 1,
+      "exp": "exp099_oss_optimizer_stack_probe",
+      "local_delta": 0.0,
+      "role": "rejected generic OSS/ORT optimizer route"
+    },
+    {
+      "campaign_index": 2,
+      "exp": "exp100_low_cost_artifact_rule_mining",
+      "local_delta": 0.0,
+      "role": "mined low-cost compiler archetypes"
+    },
+    {
+      "campaign_index": 3,
+      "exp": "exp101_archetype_compiler_v1",
+      "local_delta": 0.0,
+      "role": "rejected simple channel_gather/static_slice_pad rollout"
+    },
+    {
+      "campaign_index": 4,
+      "exp": "exp102_one_node_conv_kernel_mining",
+      "local_delta": 0.0,
+      "role": "mined one-node Conv guardrails"
+    },
+    {
+      "campaign_index": 5,
+      "exp": "exp103_task185_conv_guided_surgery_review",
+      "local_delta": 0.0,
+      "role": "task185 inventory and first 5-experiment review"
+    },
+    {
+      "campaign_index": 6,
+      "exp": "exp104_p0_fixed_3x3_static_index_probe",
+      "local_delta": 0.0,
+      "role": "rejected absolute static index maps on P0 small-output tasks"
+    },
+    {
+      "campaign_index": 7,
+      "exp": "exp105_bbox_anchor_onecell_slice_probe",
+      "local_delta": 0.0,
+      "role": "rejected all-nonzero bbox-min onecell anchor"
+    },
+    {
+      "campaign_index": 8,
+      "exp": "exp106_color_anchor_onecell_slice_probe",
+      "local_delta": 0.0,
+      "role": "rejected color-bbox-min onecell anchor"
+    },
+    {
+      "campaign_index": 9,
+      "exp": "exp107_task185_logic_bypass_surgery",
+      "local_delta": 0.0,
+      "role": "rejected local logic bypass as task185 cost reducer"
+    },
+    {
+      "campaign_index": 10,
+      "exp": "exp108_compiler_campaign_10_review",
+      "local_delta": 0.0,
+      "role": "mandatory 10-experiment local estimate measurement and strategy reset"
+    }
+  ],
+  "review_after_10": {
+    "verdict": "not_lb_effective_yet_but_useful_for_strategy_reset",
+    "local_delta": 0.0,
+    "analysis": "The first 10 campaign experiments did not improve local estimate at all. Their value is negative evidence: generic OSS optimization, simple archetype rollout, absolute/static index maps, naive bbox/color anchors, and local task185 guard bypass are not sufficient. Continuing the same broad scans would be poor LB strategy.",
+    "next_policy": "For #11-#15, require task-specific fused compiler work. Each experiment should target a solved or nearly-solved high-gain task and either emit a fused low-cost candidate or measure a concrete fused/subgraph cost floor. Priority lanes: task185 lattice homogeneous-2x2 fused lowering, task048 closed-form bridge feature/surgery, and low-cost artifact subgraph extraction. Avoid new broad anchor scans unless they are tied to a specific visual rule."
+  },
+  "leakage_risk": "low for review; future fused task-specific compilers must avoid raw output lookup and require full validation.",
+  "overfitting_risk": "medium for future task-specific compilers; mitigate with visual-rule explanations, full arc-gen validation, and small-delta LB calibration."
+}

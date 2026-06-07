@@ -1,0 +1,3 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,notes
+mul4_static_lattice,scored,8,2800,48,2848,999,78d1b4de4da98bf7a17cdefb12e3e5ccda7f1494fb20ec84e7a136136a3dabbf,ok,ok,ok,"Slice 4x4 lattice, four shifted Slice views, three Mul nodes."
+mul4_direct_shifted_slices,scored,7,2160,40,2200,864,e25da058e0e75814cea0aa34f50ef95f9046f498ee0a529a4bb3cab75470a3a5,ok,ok,ok,"Four direct shifted strided Slice views, three Mul nodes; avoids m4 intermediate."

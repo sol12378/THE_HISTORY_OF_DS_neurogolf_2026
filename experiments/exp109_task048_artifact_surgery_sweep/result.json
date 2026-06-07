@@ -1,0 +1,85 @@
+{
+  "exp_id": "exp109_task048_artifact_surgery_sweep",
+  "date": "2026-06-07",
+  "status": "improved_bundle_candidate",
+  "campaign_index": 11,
+  "task_id": 48,
+  "baseline_cost": 5609,
+  "baseline_points": 16.367872270491663,
+  "inventory": {
+    "node_count": 52,
+    "initializer_count": 15,
+    "file_bytes": 4683,
+    "op_counts": {
+      "ArgMax": 1,
+      "Cast": 4,
+      "Conv": 12,
+      "Gather": 1,
+      "Greater": 13,
+      "Mul": 1,
+      "OneHot": 1,
+      "Pad": 1,
+      "ReduceSum": 1,
+      "Reshape": 2,
+      "Slice": 2,
+      "Sum": 1,
+      "Where": 12
+    },
+    "duplicate_initializer_group_count": 0
+  },
+  "generated_candidate_count": 68,
+  "evaluated_candidate_count": 68,
+  "status_counts": {
+    "rejected": 67,
+    "improved": 1
+  },
+  "validation_counts": {
+    "not_run": 50,
+    "270_pass_0_fail": 1,
+    "0_pass_1_fail": 15,
+    "1_pass_1_fail": 1,
+    "0_pass_0_fail": 1
+  },
+  "accepted_tasks": [
+    48
+  ],
+  "accepted_count": 1,
+  "best_eval": {
+    "task_id": 48,
+    "route": "crop_or_resize",
+    "template_name": "bypass_Cast_006_in0",
+    "baseline_cost": 5609,
+    "candidate_cost": 5481,
+    "baseline_points": 16.367872270491663,
+    "candidate_points": 16.39095715495388,
+    "file_bytes": 4622,
+    "validation_status": "270_pass_0_fail",
+    "status": "improved",
+    "reason": "ok",
+    "sha256": "cdaea9e4877b55461453d1bdf88dcf1c5e4da07be25d27bec951d36e992ce319"
+  },
+  "base_local_estimate": 6282.812218,
+  "local_estimate_delta": 0.023084884462218014,
+  "new_local_estimate": 6282.835302884462,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820740,
+    "sha256": "e8404801fb16a6e44c6c6cd4c43d6cf74db781eecba073a8bf495b12412a8f77"
+  },
+  "runtime_seconds": 1.302755355834961,
+  "submission_decision": "submit_candidate_after_review",
+  "decision": "Task048 existing artifact surgery is tested because naive connectivity lowering is above baseline.",
+  "leakage_risk": "low: graph surgery only, full validation gated.",
+  "overfitting_risk": "low-to-medium: accepted surgery would still need LB calibration."
+}

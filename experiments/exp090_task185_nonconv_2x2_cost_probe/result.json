@@ -1,0 +1,44 @@
+{
+  "exp_id": "exp090_task185_nonconv_2x2_cost_probe",
+  "date": "2026-06-07",
+  "task_id": 185,
+  "status": "cost_probe_ready",
+  "hypothesis": "Non-Conv Mul-of-four one-hot equality may reduce task185 core 2x2 compression below exp089 cost 1147.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "rows": [
+    {
+      "variant": "mul4_static_lattice",
+      "status": "scored",
+      "node_count": 8,
+      "memory": 2800,
+      "params": 48,
+      "cost": 2848,
+      "file_bytes": 999,
+      "sha256": "78d1b4de4da98bf7a17cdefb12e3e5ccda7f1494fb20ec84e7a136136a3dabbf",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Slice 4x4 lattice, four shifted Slice views, three Mul nodes."
+    },
+    {
+      "variant": "mul4_direct_shifted_slices",
+      "status": "scored",
+      "node_count": 7,
+      "memory": 2160,
+      "params": 40,
+      "cost": 2200,
+      "file_bytes": 864,
+      "sha256": "e25da058e0e75814cea0aa34f50ef95f9046f498ee0a529a4bb3cab75470a3a5",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Four direct shifted strided Slice views, three Mul nodes; avoids m4 intermediate."
+    }
+  ],
+  "decision": "If non-Conv proxy is still >600, task185 needs artifact surgery or a more fused Slice/Mul representation before full dynamic lowering.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: cost proxy only",
+  "leakage_risk": "low: no labels/output lookup.",
+  "overfitting_risk": "medium: static lattice coordinate proxy only."
+}

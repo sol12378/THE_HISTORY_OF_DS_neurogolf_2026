@@ -1,0 +1,35 @@
+{
+  "exp_id": "exp101_archetype_compiler_v1",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 3,
+  "base_local_estimate": 6282.812218,
+  "local_estimate_delta": 0,
+  "new_local_estimate": 6282.812218,
+  "generated_candidate_count": 9,
+  "tasks_with_candidates": 6,
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "accepted": [],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820756,
+    "sha256": "63409ab463e1dd6c9a4611bb163c35422ec2847fd72e4fd6cb56e65180839444"
+  },
+  "runtime_seconds": 6.5911736488342285,
+  "submission_decision": "no_submit",
+  "decision": "Static archetype compiler v1 either contributes accepted low-risk deltas or proves that current best already covers simple channel/crop archetypes.",
+  "leakage_risk": "low-to-medium: generated from simple global/crop relations fit on all available examples; avoid raw lookup and require full validation.",
+  "overfitting_risk": "medium: all-example fitting may still overfit task-specific constants; LB calibration required for any accepted bundle."
+}

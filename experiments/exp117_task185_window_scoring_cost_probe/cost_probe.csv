@@ -1,0 +1,4 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,notes
+line_mask_conv_proxy,scored,6,4080,124,4204,1104,b2b02299ab8dcc97cbbc3520ec6dd6defbbbcee0ea442e1d45e125c468a4ee86,ok,ok,ok,Cost proxy for row/col line detection with large Conv kernels.
+window_score_static_positions_proxy,scored,7,73836,2358,76194,19565,93d6c7a60174939640e06838d9ce51f934dbfbf9819dc20e2f2fc143f80d0a65,ok,ok,ok,Cost proxy for scoring all static 4x4 window pairs with GatherND/ArgMax.
+three_branch_core_stack_proxy,scored,15,5070,90,5160,1652,b515138ca914d00b5a3b35faa324b18c4737eac37c4abbc4f6523db91ed94fdb,ok,ok,ok,Cost proxy for branchless spacing 3/4/5 core computation before selection.

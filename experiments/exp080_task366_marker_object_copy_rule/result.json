@@ -1,0 +1,26 @@
+{
+  "exp_id": "exp080_task366_marker_object_copy_rule",
+  "date": "2026-06-07",
+  "task_id": 366,
+  "status": "rule_found",
+  "hypothesis": "task366はsource panelのobjectをtarget panelのmarker色/marker形状に合わせて展開するcopy ruleで説明できる。",
+  "candidate_eval": {
+    "candidate": "object_marker_copy_by_color_shape",
+    "status": "full_pass",
+    "train_pass": 3,
+    "train_total": 3,
+    "test_pass": 1,
+    "test_total": 1,
+    "arc_pass": 262,
+    "arc_total": 262,
+    "total_pass": 266,
+    "total": 266,
+    "mean_cell_accuracy": 1.0,
+    "fail_examples": "[]"
+  },
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: reference rule only; ONNX lowering pending",
+  "decision": "full pass。次はobject-marker copy ruleをcost-aware ONNX compilerへ落とす。dynamic connected componentは高costになりやすいため、panel splitとmarker/object shape matchingを小さな Slice/Gather/Where 表現に分解する。",
+  "leakage_risk": "low-to-medium: explanatory object/marker rule, no raw example lookup.",
+  "overfitting_risk": "medium: task-specific object matching must be lowered and full-arc validated before adoption."
+}

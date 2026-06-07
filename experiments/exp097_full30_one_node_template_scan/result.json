@@ -1,0 +1,20 @@
+{
+  "exp_id": "exp097_full30_one_node_template_scan",
+  "date": "2026-06-07",
+  "status": "scan_ready",
+  "full30_task_count": 3,
+  "full30_tasks": [
+    54,
+    74,
+    255
+  ],
+  "candidate_rows": 21,
+  "hit_count": 0,
+  "hit_kind_counts": {},
+  "top_hits": [],
+  "decision": "Only full30 hits can safely use full-grid one-node Slice/Transpose without padding mismatch. Emit replacements for any hit with baseline cost above official one-node cost.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: scan only",
+  "leakage_risk": "low.",
+  "overfitting_risk": "low for geometry; medium for color maps."
+}

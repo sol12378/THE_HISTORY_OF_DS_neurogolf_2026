@@ -1,0 +1,6 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+150,sparse_edit_or_object_completion,flip_lr,1014,,18.078341815848873,,,not_run,skipped,"variable shapes: in=['3x3', '4x4', '5x5', '6x6', '7x7', '8x8', '9x9'] out=['3x3', '4x4', '5x5', '6x6', '7x7', '8x8', '9x9']",
+155,sparse_edit_or_object_completion,flip_ud,1014,,18.078341815848873,,,not_run,skipped,"variable shapes: in=['4x4', '5x5', '6x6', '7x7', '8x8'] out=['4x4', '5x5', '6x6', '7x7', '8x8']",
+87,sparse_edit_or_object_completion,shape_aware_rot180,368,740,19.09191706183107,18.393349813801784,787,266_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,1567c68d857fdaf23305ee9927675ba3030b27e963414dbf2b72fad4c3363b71
+140,sparse_edit_or_object_completion,shape_aware_rot180,368,740,19.09191706183107,18.393349813801784,787,265_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,865664fe6e7e5d081c085133a79e318f875cde0e26b3e5465f3c7b423dfe829c
+380,sparse_edit_or_object_completion,shape_aware_rot90_ccw,728,,18.409698951803314,,832,0_pass_1_fail,rejected,mismatch example 0,a192b0c5092a8a6b9f6770ac955ef4b986ed11a855a758d01293a629e0d9f835

@@ -1,0 +1,8 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+365,crop_or_resize,extract_output_000_Cast_out0,58814,,14.01786479921536,,8526,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Identity, node name: output): [TypeInferenceError] Inferred elem type differs from existing elem type: (2) vs (10)
+",00d24f911b1be0ddc45bf7c66bba49b524be34c8c6412019ba9e955cded11ab2
+365,crop_or_resize,extract_output_228_Gather_out0,58814,,14.01786479921536,,22977,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Identity, node name: output): [TypeInferenceError] Inferred elem type differs from existing elem type: (2) vs (10)
+",5acd585ebaa146b5adf2bc1a3d8ad1e00027d4a2a571e3572050a7d19deab984
+365,crop_or_resize,extract_output_231_Gather_out0,58814,,14.01786479921536,,23665,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Identity, node name: output): [TypeInferenceError] Inferred elem type differs from existing elem type: (2) vs (10)
+",d414c287d0d92ecb08892e5ab00d427a5dde041737f4815a91621eb490d2224a
+365,crop_or_resize,extract_output_232_Cast_out0,58814,,14.01786479921536,,23729,0_pass_1_fail,rejected,mismatch example 0,d9dad17a746b8586ee194dc3c5167e167d3d45fce9d5a394625e0b854cf93c4b

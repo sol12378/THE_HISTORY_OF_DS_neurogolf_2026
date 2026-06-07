@@ -1,0 +1,7 @@
+node_idx,op_type,output_idx,tensor,dtype,suffix,node_count,initializer_count,file_bytes,sha256
+0,Cast,0,safe_name_42,10,cast_output_dtype,2,0,28211,6243402ebd97e8aa35d31aab4ce9fb8c716d399f9ec94c132e989291f03c5b54
+24,Gather,0,safe_name_66,10,cast_output_dtype,16,10,29770,8e1a8886df10c5c405845acb6aa642419fa6c9d846d59db7207b1e58db280855
+25,Gather,0,safe_name_67,10,cast_output_dtype,16,10,29770,034a00d02d07344674839083c2179760487c30d2608609d71894a2c80df0839b
+40,Where,0,safe_name_82,10,cast_output_dtype,28,9,30425,25d60b220e5790b91db9564f1b51eeb811396ac3fcedd15b53bb3f8124bf3d20
+41,Where,0,safe_name_83,10,cast_output_dtype,28,11,30683,bb17406560338c1505256d311bf066c8a67af6b72c9d09d15584b939b3353f57
+42,Where,0,safe_name_84,10,cast_output_dtype,43,13,31812,3907064c476fff6162d685cfdbd1d85ae5d5a02953085e7fd3abe98e4d816d75

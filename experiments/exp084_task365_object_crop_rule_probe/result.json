@@ -1,0 +1,26 @@
+{
+  "exp_id": "exp084_task365_object_crop_rule_probe",
+  "date": "2026-06-07",
+  "task_id": 365,
+  "status": "rule_found",
+  "hypothesis": "task365は複数objectから色2を持つ対象objectを選び、bbox cropを返す低cost Slice/Gather候補である。",
+  "best_candidate": {
+    "candidate": "max_count2",
+    "status": "full_pass",
+    "train_pass": 3,
+    "train_total": 3,
+    "test_pass": 1,
+    "test_total": 1,
+    "arc_pass": 262,
+    "arc_total": 262,
+    "total_pass": 266,
+    "total": 266,
+    "fail_examples": "[]"
+  },
+  "candidate_count": 9,
+  "decision": "full-passならstatic/dynamic bbox crop loweringへ進む。partialならobject selection featureを追加する。",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: reference/profile only",
+  "leakage_risk": "low: simple object-selection rules only.",
+  "overfitting_risk": "medium if selection rule is task-specific; require all-arc full pass."
+}

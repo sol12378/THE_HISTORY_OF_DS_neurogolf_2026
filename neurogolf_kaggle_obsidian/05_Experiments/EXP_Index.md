@@ -107,3 +107,57 @@
 | exp_b031_task085_horizontal_bar_alternate_erase_rule | rule_found | task085 rule 265/265 | - | horizontal bar alternate erase rule found; lowering pending |
 | exp_b032_task085_artifact_surgery_probe | no_gain | 0 valid / 2 candidates | - | task085 Cast bypass invalid; artifact compact |
 | exp_b033_low_cost_artifact_profile | profile_ready | cost<=250 19; cost<=600 27 | - | low-cost Gather/Slice/Pad/small Conv patterns profiled for compiler templates |
+| exp075_task071_erase_rule_probe | no_simple_erase_rule | best 1/265 | - | task071 is not task085-style erase; route to recolor/copy/component branch-tree compiler |
+| exp076_task071_recolor_copy_profile | profile_ready | out_color purity 0.9192; zero-mask purity 0.9399 | - | local features are informative but too many-key/lookup-like; split mask and copy direction before lowering |
+| exp077_task366_object_anchor_crop_profile | profile_ready | exact crop 0/266 | - | task366 is not exact crop/object bbox/color-remap crop; move to panel/marker rule |
+| exp078_task366_axis_halving_probe | no_simple_axis_halving_rule | best 0/266 | - | adjacent row/col pair reduction is not enough |
+| exp079_task366_panel_overlay_probe | no_simple_panel_overlay_rule | best 0/266 | - | simple two-panel overlay is not enough |
+| exp080_task366_marker_object_copy_rule | rule_found | 266/266 | - | source object panel + target marker panel copy rule solved; ONNX lowering pending |
+| exp081_task366_lowering_inventory | inventory_ready | 695 templates; max used objects 3 | - | template enumeration too broad; lower structurally by small object/marker count |
+| exp082_task366_onnx_primitive_cost_probe | cost_probe_ready | Slice+Pad 18021; marker mask 8115; Where 18001 | - | full-grid primitives too expensive for 600級; require sparse/small-patch lowering |
+| exp083_sparse_update_primitive_cost_probe | cost_probe_ready | min sparse cost 10418; ScatterND 36036+ | - | small ScatterND/Gather still too expensive; task366 600級 lowering unresolved |
+| exp084_task365_object_crop_rule_probe | rule_found | 266/266 | - | task365 solved by max color-2-count object crop |
+| exp085_task365_lowering_inventory | inventory_ready | dense rectangles 266/266; max objects 3 | - | task365 is promising rectangle-window selector lowering candidate |
+| exp086_task365_cost_minimization_html_probe | cost_probe_ready | padless cost 12; 3x3 Slice+Pad 381; 6x6 Slice+Pad 1461 | - | HTML FREE-op minimization helps, but task365 full single-model cost<=600 is unlikely with 6x6 padded output |
+| exp087_small_output_crop_candidate_scan | candidate_scan_ready | P0 cropish 43 | - | max output area<=14 gives a stronger 600級 crop lane; top target task185 |
+| exp088_task185_grid_2x2_compress_rule | rule_found | 267/267 | - | task185 solved by colored 4x4 lattice -> homogeneous 2x2 block compression |
+| exp089_task185_homogeneous2x2_onnx_cost_probe | cost_probe_ready | core proxy cost 1147 | - | grouped Conv equality is above 600; try non-Conv equality or artifact surgery |
+| exp090_task185_nonconv_2x2_cost_probe | cost_probe_ready | direct Mul proxy 2200; static lattice Mul proxy 2848 | - | non-Conv equality is worse; pivot task185 to artifact surgery/fused representation |
+| exp091_task048_bridge_connectivity_rule | rule_found | 270/270 | - | task048 solved by color-8 component bridging both color-2 components |
+| exp092_task048_small_connectivity_cost_probe | cost_probe_ready | onecell floor 52; 4step 7214; 8step 10542 | - | naive 8x8 connectivity unroll too expensive for 600級 |
+| exp093_template_zip_official_compatibility | compatibility_audit_ready | official-compatible 0/7 | - | zip templates are uint8/int-grid dynamic-shape code, not drop-in official submissions |
+| exp094_template_zip_official_reimplementation_cost | cost_probe_ready | one-node official ops cost 0-10; rot90 two-node 36004 | - | use zip as taxonomy for fused/one-node transforms only |
+| exp095_one_node_template_rule_scan | scan_ready | 19 full hits | - | Python-grid one-node hits found, but padding semantics need official validation |
+| exp096_one_node_template_replacements | no_gain | 0 accepted / 4 evaluated | - | full-grid one-node flips fail on padded one-hot; shape-aware transform needed |
+| exp097_full30_one_node_template_scan | scan_ready | full30 tasks 3; hits 0 | - | full-grid one-node templates are not a broad score lane |
+| exp098_shape_aware_template_replacements | no_gain | accepted 0/5; local delta 0.0 | - | shape-aware fixed 3x3 rot180 validates but costs 740 vs current 368; variable-shape flips need branches |
+| exp099_oss_optimizer_stack_probe | tooling_probe_ready | local delta 0.0 | - | generic optimizer route not main lane; proceed to NeuroGolf-specific compiler |
+| exp100_low_cost_artifact_rule_mining | compiler_catalog_ready | local delta 0.0 | - | low-cost artifacts converted into compiler archetypes/rewrite candidates |
+| exp101_archetype_compiler_v1 | no_gain | 0 accepted / 9 generated | - | simple channel_gather/static_slice_pad already covered or loses cost |
+| exp102_one_node_conv_kernel_mining | conv_kernel_catalog_ready | local delta 0.0 | - | one-node Conv local detector is promising for tiny local-mask tasks; ray visibility guarded |
+| exp103_task185_conv_guided_surgery_review | no_gain | task185 cost 59584 unchanged; #1-#5 delta 0.0 | - | 5-experiment review: useful directionally, but next block must emit candidates |
+| exp104_p0_fixed_3x3_static_index_probe | no_gain | fit 0 / 37 targets; local delta 0.0 | - | fixed absolute static index map does not fit P0 small-output tasks; move to anchor/shape-index compiler |
+| exp105_bbox_anchor_onecell_slice_probe | no_gain | fit 0 / 4 onecell targets; local delta 0.0 | - | nonzero bbox-min anchor is too coarse for 1x1 P0 tasks |
+| exp106_color_anchor_onecell_slice_probe | no_gain | fit 0 / 4 onecell targets; local delta 0.0 | - | color bbox-min anchor also fails; route 1x1 tasks to rule-specific diagnostics |
+| exp107_task185_logic_bypass_surgery | no_gain | 39 full-pass / 240 candidates; local delta 0.0 | - | task185 local logic bypass validates but does not reduce official cost |
+| exp108_compiler_campaign_10_review | review_complete | #1-#10 local delta 0.0 | - | not LB-effective yet; switch #11-#15 to task-specific fused compiler |
+| exp109_task048_artifact_surgery_sweep | improved_bundle_candidate | local +0.023085; task048 cost 5609->5481 | - | first campaign local improvement after #10 reset; focused Cast bypass surgery |
+| exp110_focused_surgery_rulehit_cropish_sweep | improved_bundle_candidate | local +0.086887; accepted 6 tasks | - | focused surgery generalizes; submit-safe post-pass/calibration lane |
+| exp111_focused_surgery_second_pass | improved_bundle_candidate | local +0.013967; accepted 5 tasks | - | focused surgery compounds but sharply diminishes; keep as post-pass, pivot back to fused lowering |
+| exp112_task185_intermediate_output_extraction | no_gain | output-shape intermediates 0; local delta 0.0 | - | task185 cannot be reduced by suffix/intermediate output extraction |
+| exp113_compiler_campaign_15_review | review_complete | #11-#15 local +0.123939 | - | focused surgery useful for LB calibration but insufficient; next fresh fused lowering |
+| exp114_task185_fresh_fused_lowering_probe | cost_probe_ready | best proxy cost 1516; validation 0_pass_1_fail | - | task185 core can be cheap-ish, but fixed lattice positions are wrong |
+| exp115_task185_lattice_position_inventory | inventory_ready | 46 position patterns; 3 spacing patterns | - | task185 needs dynamic grid-line spacing/offset compiler, not raw position table |
+| exp116_task185_window_selector_rule | rule_found | 267/267 | - | task185 lattice selector solved by 4-consecutive grid-line window scoring |
+| exp117_task185_window_scoring_cost_probe | cost_probe_ready | selector proxies cost 4204 / 5160 / 76194 | - | direct ONNX window scoring is too expensive; review/pivot at #20 |
+| exp118_compiler_campaign_20_review | review_complete | #1-#20 local +0.123939; #16-#20 local 0.0 | - | task185 diagnostics useful but no local gain; pivot #21-#25 to task366/task365 |
+| exp119_task365_intermediate_output_extraction | no_gain | final-shape candidates 4; local delta 0.0 | - | task365 cannot be improved by simple suffix extraction |
+| exp120_task366_intermediate_output_extraction | no_gain | final-shape candidates 6; local delta 0.0 | - | task366 final-shape candidates are mask/type tensors, not direct outputs |
+| exp121_task366_cast_suffix_extraction | no_gain | 6 candidates; all 0_pass_1_fail | - | task366 final-shape masks are not semantically direct outputs |
+| exp122_focused_surgery_third_pass_limited | improved_bundle_candidate | local +0.014053; accepted 5 tasks | - | focused surgery remains useful as post-pass, not main 7500 lane |
+| exp123_compiler_campaign_25_review | review_complete | #21-#25 local +0.014053 | - | artifact harvesting failed; pivot #26-#30 to low-cost primitive compiler |
+| exp124_focused_surgery_fourth_pass_limited | improved_bundle_candidate | local +0.004776; accepted 4 tasks | - | focused surgery tail continues but diminishes |
+| exp125_focused_surgery_fifth_pass_limited | improved_bundle_candidate | local +0.004548; accepted 3 tasks | - | post-pass tail only |
+| exp126_focused_surgery_sixth_pass_limited | improved_bundle_candidate | local +0.002847; accepted 2 tasks | - | tail converges to task263/316 |
+| exp127_focused_surgery_seventh_pass_limited | improved_bundle_candidate | local +0.002854; accepted 2 tasks | - | final micro bundle candidate |
+| exp128_compiler_campaign_30_final_review | final_review_complete | final local 6282.965236; total +0.153018 | - | LB7500 not reached; campaign stopped at #30 |

@@ -1,0 +1,45 @@
+{
+  "exp_id": "exp121_task366_cast_suffix_extraction",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 23,
+  "task_id": 366,
+  "hypothesis": "Task366 final-shape mask/type intermediates may become valid cheaper outputs with only a Cast-to-float suffix.",
+  "baseline_cost": 99849,
+  "baseline_points": 13.488585676228723,
+  "candidate_count": 6,
+  "evaluated_candidate_count": 6,
+  "status_counts": {
+    "rejected": 6
+  },
+  "validation_counts": {
+    "0_pass_1_fail": 6
+  },
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "best_eval": null,
+  "base_local_estimate": 6282.93615685804,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.93615685804,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820631,
+    "sha256": "043365431dd43aa7c8da9593df72bcf2c86923c934dcec8df683b03efdafa2e6"
+  },
+  "runtime_seconds": 1.1955628395080566,
+  "submission_decision": "no_submit",
+  "decision": "If Cast suffix fails, task366 artifact masks are not directly output-compatible and this lane should pivot.",
+  "leakage_risk": "low: graph-only extraction, full-validation gated.",
+  "overfitting_risk": "low-to-medium: accepted extraction would still need LB calibration."
+}

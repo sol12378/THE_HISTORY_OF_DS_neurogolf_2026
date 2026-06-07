@@ -1,0 +1,98 @@
+{
+  "exp_id": "exp112_task185_intermediate_output_extraction",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 14,
+  "task_id": 185,
+  "hypothesis": "A task185 intermediate tensor may already equal the final padded one-hot output; extracting it can prune a large suffix.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "candidate_tensor_count": 0,
+  "target_output_shape": "1x10x30x30",
+  "output_shape_tensor_count": 0,
+  "all_intermediate_tensor_count": 241,
+  "top_shape_counts": [
+    {
+      "shape": "",
+      "count": 135
+    },
+    {
+      "shape": "30",
+      "count": 40
+    },
+    {
+      "shape": "1",
+      "count": 26
+    },
+    {
+      "shape": "30x30",
+      "count": 25
+    },
+    {
+      "shape": "4",
+      "count": 6
+    },
+    {
+      "shape": "9",
+      "count": 2
+    },
+    {
+      "shape": "10x3x3",
+      "count": 1
+    },
+    {
+      "shape": "1x10x3x3",
+      "count": 1
+    },
+    {
+      "shape": "1x30x30",
+      "count": 1
+    },
+    {
+      "shape": "3x3x10",
+      "count": 1
+    },
+    {
+      "shape": "4x30",
+      "count": 1
+    },
+    {
+      "shape": "4x4",
+      "count": 1
+    },
+    {
+      "shape": "9x10",
+      "count": 1
+    }
+  ],
+  "evaluated_candidate_count": 0,
+  "status_counts": {},
+  "validation_counts": {},
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "best_eval": null,
+  "base_local_estimate": 6282.93615685804,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.93615685804,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820631,
+    "sha256": "c642bed95b0b0ea0b01fd1824e536ddaf62bb9c1da2e0df11fd2cdc5110314e1"
+  },
+  "runtime_seconds": 1.0214693546295166,
+  "submission_decision": "no_submit",
+  "decision": "If no intermediate output validates with lower cost, task185 needs a fresh fused lowering rather than suffix extraction.",
+  "leakage_risk": "low: graph-only subgraph extraction, full-validation gated.",
+  "overfitting_risk": "low-to-medium: accepted extraction would still need LB calibration."
+}

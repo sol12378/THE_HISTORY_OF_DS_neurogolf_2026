@@ -1,0 +1,56 @@
+{
+  "exp_id": "exp107_task185_logic_bypass_surgery",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 9,
+  "task_id": 185,
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "generated_candidate_count": 240,
+  "evaluated_candidate_count": 240,
+  "status_counts": {
+    "rejected": 201,
+    "no_cost_gain": 39
+  },
+  "validation_counts": {
+    "0_pass_1_fail": 62,
+    "not_run": 111,
+    "1_pass_1_fail": 10,
+    "267_pass_0_fail": 39,
+    "22_pass_1_fail": 2,
+    "28_pass_1_fail": 2,
+    "27_pass_1_fail": 2,
+    "2_pass_1_fail": 2,
+    "9_pass_1_fail": 1,
+    "7_pass_1_fail": 4,
+    "3_pass_1_fail": 3,
+    "6_pass_1_fail": 2
+  },
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "best_eval": null,
+  "base_local_estimate": 6282.812218,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.812218,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820756,
+    "sha256": "9b082e25c60ead85964b14f1db671741e634f0729936dcceca5c31379cdb3319"
+  },
+  "runtime_seconds": 18.933236360549927,
+  "submission_decision": "no_submit",
+  "decision": "Task185 logic bypass surgery is kept only if a full-validation candidate beats current cost.",
+  "leakage_risk": "low: graph surgery uses no output lookup and is full-validation gated.",
+  "overfitting_risk": "low-to-medium: bypass can exploit current artifact redundancy; accepted candidate still needs LB calibration."
+}

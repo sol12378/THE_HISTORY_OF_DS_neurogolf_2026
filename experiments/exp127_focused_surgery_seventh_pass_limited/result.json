@@ -1,0 +1,124 @@
+{
+  "exp_id": "exp127_focused_surgery_seventh_pass_limited",
+  "date": "2026-06-07",
+  "status": "improved_bundle_candidate",
+  "campaign_index": 29,
+  "base_local_estimate": 6282.96238134373,
+  "local_estimate_delta": 0.002854250468491415,
+  "new_local_estimate": 6282.965235594199,
+  "target_count": 7,
+  "targets": [
+    48,
+    184,
+    187,
+    207,
+    263,
+    316,
+    394
+  ],
+  "previous_accepted_ids": [
+    48,
+    184,
+    187,
+    207,
+    263,
+    316,
+    394
+  ],
+  "generated_by_task": {
+    "48": 67,
+    "184": 73,
+    "187": 94,
+    "207": 15,
+    "263": 164,
+    "316": 57,
+    "394": 51
+  },
+  "generated_candidate_count": 521,
+  "status_counts": {
+    "rejected": 503,
+    "improved": 18
+  },
+  "validation_counts": {
+    "not_run": 279,
+    "0_pass_1_fail": 117,
+    "1_pass_1_fail": 25,
+    "0_pass_0_fail": 3,
+    "3_pass_1_fail": 17,
+    "2_pass_1_fail": 23,
+    "6_pass_1_fail": 1,
+    "263_pass_1_fail": 1,
+    "5_pass_1_fail": 4,
+    "10_pass_1_fail": 5,
+    "4_pass_1_fail": 6,
+    "27_pass_1_fail": 3,
+    "14_pass_1_fail": 2,
+    "17_pass_1_fail": 3,
+    "8_pass_1_fail": 2,
+    "19_pass_1_fail": 3,
+    "11_pass_1_fail": 2,
+    "267_pass_0_fail": 15,
+    "25_pass_1_fail": 2,
+    "22_pass_1_fail": 2,
+    "266_pass_0_fail": 3,
+    "7_pass_1_fail": 1,
+    "78_pass_1_fail": 1,
+    "18_pass_1_fail": 1
+  },
+  "accepted_tasks": [
+    263,
+    316
+  ],
+  "accepted_count": 2,
+  "accepted": [
+    {
+      "task_id": 263,
+      "route": "crop_or_resize",
+      "template_name": "fourth_bypass_Where_114_in2",
+      "baseline_cost": 8042,
+      "candidate_cost": 8040,
+      "baseline_points": 16.00756691254278,
+      "candidate_points": 16.007815637826987,
+      "file_bytes": 12130,
+      "validation_status": "267_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "24d18cd4388c70305d5ce68b45d8d77cce27cb60cca6e31e8c19e24b03804eba"
+    },
+    {
+      "task_id": 316,
+      "route": "crop_or_resize",
+      "template_name": "fourth_bypass_And_024_in0",
+      "baseline_cost": 3843,
+      "candidate_cost": 3833,
+      "baseline_points": 16.745991409435156,
+      "candidate_points": 16.748596934619442,
+      "file_bytes": 4279,
+      "validation_status": "266_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "7f012558e68185122b49fa58b670ab24fc06eec6650b998ed5a253f19bb7f9c8"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820460,
+    "sha256": "6f49df20a6ca1888f13ab4ffa68356587ced69d00c60166dfc7babf156e0718c"
+  },
+  "runtime_seconds": 8.843634843826294,
+  "submission_decision": "submit_candidate_after_review",
+  "decision": "Fourth focused-surgery pass measures the remaining score-producing tail of the safe post-pass lane.",
+  "leakage_risk": "low: graph surgery only and full-validation gated.",
+  "overfitting_risk": "low-to-medium: repeated same-task surgery requires LB micro-calibration."
+}

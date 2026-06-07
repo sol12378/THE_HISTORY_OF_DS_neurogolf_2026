@@ -1,0 +1,4 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+185,crop_or_resize,slice_conv_pad_final,59584,,14.00485763936326,,1112,0_pass_1_fail,rejected,mismatch example 0,311fa0b7346eec13e1c55ad48f056b632fd18b3f9e05bebd4d181782fdb61a89
+185,crop_or_resize,direct_four_slice_mul_pad_final,59584,,14.00485763936326,,1523,0_pass_1_fail,rejected,mismatch example 0,60e5768d79dd90bb19fbeee589d4c3d206a7594fd8413393effe1484403eb8bc
+185,crop_or_resize,gathernd_lattice_conv_pad_final,59584,,14.00485763936326,,1556,0_pass_1_fail,rejected,mismatch example 0,3797bcabb6d43fdabca1e012f458b0971a1f6645094a557c400f2d87083cf362

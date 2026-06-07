@@ -1,0 +1,29 @@
+[
+  {
+    "name": "single_conv_before_slice_mul_chain",
+    "applies_to": [
+      "task185_homogeneous_2x2",
+      "local_mask_patterns"
+    ],
+    "rule": "Prefer one Conv pattern detector plus minimal threshold over shifted Slice/Mul chains.",
+    "evidence": "exp089 Conv proxy 1147 beat exp090 Mul proxies 2200/2848; exp102 confirms many low-cost artifacts rely on one Conv."
+  },
+  {
+    "name": "conv_to_gather_when_sparse_1x1_injective",
+    "applies_to": [
+      "color_map",
+      "channel_recolor"
+    ],
+    "rule": "Replace sparse injective 1x1 Conv with Gather(axis=1).",
+    "evidence": "Existing channel Gather artifacts cost 10-30; Conv artifacts are usually 160+."
+  },
+  {
+    "name": "depthwise_conv_visibility_guardrail",
+    "applies_to": [
+      "ray_visibility",
+      "connectivity"
+    ],
+    "rule": "Do not emit large full-grid depthwise visibility Conv unless estimated cost beats current artifact.",
+    "evidence": "exp_b011 task037 depthwise Conv cost 441976 despite correct rule."
+  }
+]

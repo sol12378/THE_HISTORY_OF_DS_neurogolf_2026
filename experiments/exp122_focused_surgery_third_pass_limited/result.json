@@ -1,0 +1,171 @@
+{
+  "exp_id": "exp122_focused_surgery_third_pass_limited",
+  "date": "2026-06-07",
+  "status": "improved_bundle_candidate",
+  "campaign_index": 24,
+  "base_local_estimate": 6282.93615685804,
+  "local_estimate_delta": 0.014052820572537428,
+  "new_local_estimate": 6282.950209678613,
+  "target_count": 7,
+  "targets": [
+    48,
+    184,
+    187,
+    207,
+    263,
+    316,
+    394
+  ],
+  "previous_accepted_ids": [
+    48,
+    184,
+    187,
+    207,
+    263,
+    316,
+    394
+  ],
+  "generated_by_task": {
+    "48": 67,
+    "184": 79,
+    "187": 98,
+    "207": 15,
+    "263": 160,
+    "316": 65,
+    "394": 57
+  },
+  "generated_candidate_count": 541,
+  "status_counts": {
+    "rejected": 511,
+    "improved": 30
+  },
+  "validation_counts": {
+    "not_run": 280,
+    "0_pass_1_fail": 125,
+    "1_pass_1_fail": 25,
+    "0_pass_0_fail": 3,
+    "169_pass_0_fail": 2,
+    "3_pass_1_fail": 19,
+    "2_pass_1_fail": 19,
+    "6_pass_1_fail": 1,
+    "263_pass_1_fail": 1,
+    "5_pass_1_fail": 2,
+    "266_pass_0_fail": 11,
+    "10_pass_1_fail": 6,
+    "22_pass_1_fail": 4,
+    "4_pass_1_fail": 2,
+    "27_pass_1_fail": 1,
+    "7_pass_1_fail": 4,
+    "267_pass_0_fail": 17,
+    "30_pass_1_fail": 4,
+    "14_pass_1_fail": 2,
+    "17_pass_1_fail": 3,
+    "8_pass_1_fail": 2,
+    "11_pass_1_fail": 2,
+    "19_pass_1_fail": 2,
+    "25_pass_1_fail": 2,
+    "78_pass_1_fail": 1,
+    "18_pass_1_fail": 1
+  },
+  "accepted_tasks": [
+    184,
+    187,
+    263,
+    316,
+    394
+  ],
+  "accepted_count": 5,
+  "accepted": [
+    {
+      "task_id": 184,
+      "route": "crop_or_resize",
+      "template_name": "third_bypass_And_016_in1",
+      "baseline_cost": 37925,
+      "candidate_cost": 37895,
+      "baseline_points": 14.456634195783266,
+      "candidate_points": 14.457425543753871,
+      "file_bytes": 43914,
+      "validation_status": "169_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "3caf6c775673d0c15609c1ba49468226b38e183bd54ae7c2c648f7a686a8f57a"
+    },
+    {
+      "task_id": 187,
+      "route": "same_shape_global_transform",
+      "template_name": "third_bypass_Or_071_in1",
+      "baseline_cost": 103513,
+      "candidate_cost": 102613,
+      "baseline_points": 13.45254751233521,
+      "candidate_points": 13.461280090654656,
+      "file_bytes": 7729,
+      "validation_status": "266_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "1f34b2871649d7afca50a1fe1a0b255c6f63e303f8b41839cbb09f9d5487e6cd"
+    },
+    {
+      "task_id": 263,
+      "route": "crop_or_resize",
+      "template_name": "third_bypass_Sub_086_in0",
+      "baseline_cost": 8050,
+      "candidate_cost": 8048,
+      "baseline_points": 16.00657262958739,
+      "candidate_points": 16.00682110766048,
+      "file_bytes": 12418,
+      "validation_status": "267_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "e8d0ebc30c429730221335fdf80b1740dacafe06ca9abfec9ea4058ee8b77130"
+    },
+    {
+      "task_id": 316,
+      "route": "crop_or_resize",
+      "template_name": "third_bypass_And_012_in0",
+      "baseline_cost": 3883,
+      "candidate_cost": 3873,
+      "baseline_points": 16.735636670268335,
+      "candidate_points": 16.738215320485246,
+      "file_bytes": 4531,
+      "validation_status": "266_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "92580481646bacb5725974f531c5c949a5de8f32bc42075b972569e8577891b8"
+    },
+    {
+      "task_id": 394,
+      "route": "crop_or_resize",
+      "template_name": "third_bypass_Add_034_in0",
+      "baseline_cost": 4705,
+      "candidate_cost": 4697,
+      "baseline_points": 16.54361894798052,
+      "candidate_points": 16.545320713973005,
+      "file_bytes": 6019,
+      "validation_status": "266_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "0d248f2316c818d6a4d40caa3cee2949e2b9834e375e851c1ca1cc95a68319bc"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820576,
+    "sha256": "32d3c98d22547fb94d297d20df72d8359a78c02299c1714848730953614918ad"
+  },
+  "runtime_seconds": 10.710914134979248,
+  "submission_decision": "submit_candidate_after_review",
+  "decision": "Limited third-pass focused bypass surgery tests whether accepted-task compounding remains score-positive after exp111.",
+  "leakage_risk": "low: graph surgery only and full-validation gated.",
+  "overfitting_risk": "low-to-medium: repeated edits on the same public-valid tasks should be LB-calibrated before trusting the gain."
+}

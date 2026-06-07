@@ -1,0 +1,36 @@
+{
+  "exp_id": "exp105_bbox_anchor_onecell_slice_probe",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 7,
+  "base_local_estimate": 6282.812218,
+  "local_estimate_delta": 0,
+  "new_local_estimate": 6282.812218,
+  "target_count": 4,
+  "fit_count": 0,
+  "generated_candidate_count": 0,
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "accepted": [],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820756,
+    "sha256": "568b4f7af2627e6be9be98dfcb5a1866a6b01ddc0090ca15cf32f4f1bff498a3"
+  },
+  "runtime_seconds": 0.9920895099639893,
+  "submission_decision": "no_submit",
+  "decision": "Bbox-anchor one-cell dynamic Slice is useful only if the ArgMax/Slice cost beats already golfed artifacts.",
+  "leakage_risk": "medium: offset is fit from all examples but uses a simple bbox-min anchor rule, not raw output lookup.",
+  "overfitting_risk": "medium: bbox-min offset can be task-specific; accepted tasks need visual rule inspection before submit."
+}

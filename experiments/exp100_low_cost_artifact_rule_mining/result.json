@@ -1,0 +1,85 @@
+{
+  "exp_id": "exp100_low_cost_artifact_rule_mining",
+  "date": "2026-06-07",
+  "status": "compiler_catalog_ready",
+  "campaign_index": 2,
+  "base_local_estimate": 6282.812218,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.812218,
+  "selected_cost_threshold": 2000,
+  "selected_count": 83,
+  "archetype_counts": {
+    "one_node_transpose": 2,
+    "channel_gather_colormap": 4,
+    "one_node_gather_index_map": 8,
+    "one_node_conv_kernel": 20,
+    "static_slice_pad": 4,
+    "computed_slice_pad": 20,
+    "small_conv_where_mask": 1,
+    "misc_under_600": 2,
+    "tiny_dynamic_shape_index": 2,
+    "misc_under_2000": 11,
+    "one_node_gridsample": 9
+  },
+  "compiler_family_counts": {
+    "free_geom": 2,
+    "free_colormap": 4,
+    "static_index_map": 8,
+    "local_mask_or_colormap": 20,
+    "fixed_crop_or_fixed_transform": 4,
+    "object_anchor_crop": 20,
+    "local_mask": 1,
+    "unknown_low_cost": 2,
+    "shape_index_crop": 2,
+    "unknown_near_low_cost": 11,
+    "resize_transform": 9
+  },
+  "top_archetypes": [
+    [
+      "one_node_conv_kernel",
+      20
+    ],
+    [
+      "computed_slice_pad",
+      20
+    ],
+    [
+      "misc_under_2000",
+      11
+    ],
+    [
+      "one_node_gridsample",
+      9
+    ],
+    [
+      "one_node_gather_index_map",
+      8
+    ],
+    [
+      "channel_gather_colormap",
+      4
+    ],
+    [
+      "static_slice_pad",
+      4
+    ],
+    [
+      "one_node_transpose",
+      2
+    ],
+    [
+      "misc_under_600",
+      2
+    ],
+    [
+      "tiny_dynamic_shape_index",
+      2
+    ]
+  ],
+  "rewrite_rule_candidate_count": 11,
+  "decision": "Use these archetypes as the first NeuroGolf-specific compiler grammar. Next experiment should instantiate static_slice_pad/channel_gather/one_node_conv candidates on unsolved small-output tasks rather than expanding generic rules.",
+  "submission_decision": "no_submit: catalog only",
+  "leakage_risk": "low: mines current submitted-safe artifacts, not labels.",
+  "overfitting_risk": "low for catalog; future generated rules require full validation and LB calibration.",
+  "runtime_seconds": 0.06415820121765137
+}

@@ -1,0 +1,21 @@
+{
+  "exp_id": "exp116_task185_window_selector_rule",
+  "date": "2026-06-07",
+  "status": "rule_found",
+  "campaign_index": 18,
+  "task_id": 185,
+  "hypothesis": "Task185 lattice positions can be selected by scoring 4-consecutive grid-line windows, avoiding a raw position table.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "example_count": 267,
+  "pass_count": 267,
+  "fail_count": 0,
+  "fail_examples": [],
+  "base_local_estimate": 6282.93615685804,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.93615685804,
+  "decision": "If full pass, next ONNX probe should implement low-cost window scoring or approximate it with shape/spacing branches.",
+  "submission_decision": "no_submit: Python selector rule only",
+  "leakage_risk": "low: input-only geometry selector.",
+  "overfitting_risk": "medium-low if implemented as window scoring; high if converted to raw position table."
+}

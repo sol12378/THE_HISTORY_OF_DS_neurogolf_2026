@@ -1,0 +1,110 @@
+{
+  "exp_id": "exp103_task185_conv_guided_surgery_review",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 5,
+  "task_id": 185,
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "inventory": {
+    "node_count": 242,
+    "initializer_count": 19,
+    "file_bytes": 23762,
+    "op_counts": {
+      "And": 45,
+      "ArgMax": 2,
+      "Cast": 20,
+      "Concat": 4,
+      "CumSum": 2,
+      "Equal": 64,
+      "Gather": 23,
+      "Greater": 2,
+      "Mul": 8,
+      "Not": 20,
+      "OneHot": 1,
+      "Pad": 1,
+      "ReduceSum": 19,
+      "Reshape": 1,
+      "Squeeze": 1,
+      "Transpose": 1,
+      "Unsqueeze": 19,
+      "Where": 9
+    },
+    "unused_node_count": 0,
+    "unused_nodes": [],
+    "duplicate_initializer_groups": [],
+    "duplicate_initializer_group_count": 0,
+    "produced_value_count": 242,
+    "consumed_value_count": 261
+  },
+  "candidate_eval": [
+    {
+      "task_id": 185,
+      "route": "crop_or_resize",
+      "template_name": "sanitize_current_task185",
+      "baseline_cost": 59584,
+      "candidate_cost": 59584,
+      "baseline_points": 14.00485763936326,
+      "candidate_points": 14.00485763936326,
+      "file_bytes": 23762,
+      "validation_status": "267_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "sha256": "4b2e94698954985298780d91862b39976514533d04e0c2a9c65018472bf9ffcc"
+    },
+    {
+      "task_id": 185,
+      "route": "crop_or_resize",
+      "template_name": "dedupe_initializers_task185",
+      "baseline_cost": 59584,
+      "candidate_cost": 59584,
+      "baseline_points": 14.00485763936326,
+      "candidate_points": 14.00485763936326,
+      "file_bytes": 23762,
+      "validation_status": "267_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "sha256": "4b2e94698954985298780d91862b39976514533d04e0c2a9c65018472bf9ffcc"
+    }
+  ],
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "base_local_estimate": 6282.812218,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.812218,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820756,
+    "sha256": "8d46fcf6497496f69db684380df27ff55260820b5baf36e23b4b948607ed417a"
+  },
+  "five_experiment_review": {
+    "window": "compiler_campaign_30 experiments #1-#5",
+    "experiments": [
+      "exp099",
+      "exp100",
+      "exp101",
+      "exp102",
+      "exp103"
+    ],
+    "local_delta_sum": 0.0,
+    "lb_usefulness": "mixed_but_directionally_useful",
+    "verdict": "No local/LB improvement yet, but the five experiments moved from generic optimizer hopes to a NeuroGolf-specific compiler grammar and ruled out simple archetype scans. This is useful only if the next block emits candidates from computed_slice_pad/one-Conv patterns rather than continuing catalogs.",
+    "next_policy": "The next 5 experiments must include at least two score-producing candidate emissions, not only mining. Prioritize computed_slice_pad/tiny_dynamic_shape_index and task185/task087-style cost floor reductions."
+  },
+  "runtime_seconds": 1.7339050769805908,
+  "submission_decision": "no_submit",
+  "decision": "task185 has 46 lattice-position patterns; static Conv proxy is not directly submit-safe. Simple sanitize/dedupe surgery is tested here; if no gain, move to computed position/index compiler rather than more task185 micro-surgery.",
+  "leakage_risk": "low: graph surgery/diagnostic only.",
+  "overfitting_risk": "low for surgery; medium for future task185 position compiler."
+}

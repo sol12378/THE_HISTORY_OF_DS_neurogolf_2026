@@ -1,0 +1,4 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,notes
+slice_conv_pad_final,scored,5,1450,66,1516,874,5edc9ac6451c40fa229899da728d9f6d6ee076d7d4279ac35e25706e84c4c1ce,ok,ok,ok,Static lattice Slice + grouped Conv core + Pad to final official output shape.
+direct_four_slice_mul_pad_final,scored,8,2520,49,2569,1050,509b79a765cf346db623142336eb84a0ae90c9046f67a7230328956c38f036ee,ok,ok,ok,Four direct strided Slice views + Mul equality + Pad; avoids 4x4 m4 materialization.
+gathernd_lattice_conv_pad_final,scored,8,38730,102,38832,1276,4002f219886831402e983b1443616e2a8e10b4f21d15783051c3050e36f44b24,ok,ok,ok,Sparse GatherND lattice extraction + grouped Conv + Pad; tests params-vs-memory tradeoff.

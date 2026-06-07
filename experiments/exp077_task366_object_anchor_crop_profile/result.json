@@ -1,0 +1,83 @@
+{
+  "exp_id": "exp077_task366_object_anchor_crop_profile",
+  "date": "2026-06-07",
+  "task_id": 366,
+  "status": "profile_ready",
+  "hypothesis": "task366は巨大なcrop/resize lane候補であり、object-anchor cropまたは色remap付きcropとして低cost Slice/Gatherへ落とせる可能性がある。",
+  "examples": 266,
+  "signal_counts": {
+    "no_crop_signal": 266
+  },
+  "shape_pair_count": 60,
+  "top_shape_pairs": [
+    {
+      "input": "(22, 13)",
+      "output": "(11, 13)",
+      "n": 10
+    },
+    {
+      "input": "(30, 17)",
+      "output": "(15, 17)",
+      "n": 9
+    },
+    {
+      "input": "(12, 28)",
+      "output": "(12, 14)",
+      "n": 9
+    },
+    {
+      "input": "(24, 14)",
+      "output": "(12, 14)",
+      "n": 8
+    },
+    {
+      "input": "(22, 11)",
+      "output": "(11, 11)",
+      "n": 8
+    },
+    {
+      "input": "(20, 10)",
+      "output": "(10, 10)",
+      "n": 7
+    },
+    {
+      "input": "(13, 30)",
+      "output": "(13, 15)",
+      "n": 7
+    },
+    {
+      "input": "(14, 28)",
+      "output": "(14, 14)",
+      "n": 7
+    },
+    {
+      "input": "(14, 24)",
+      "output": "(14, 12)",
+      "n": 6
+    },
+    {
+      "input": "(20, 11)",
+      "output": "(10, 11)",
+      "n": 6
+    }
+  ],
+  "train_exact_table": {},
+  "train_exact_table_eval": {
+    "candidate": "train_exact_crop_position_table",
+    "status": "no_table",
+    "train_pass": 0,
+    "train_total": 3,
+    "test_pass": 0,
+    "test_total": 1,
+    "arc_pass": 0,
+    "arc_total": 262,
+    "total_pass": 0,
+    "total": 266,
+    "fail_examples": "[]"
+  },
+  "decision": "exact crop tableがfull passならstatic Slice lowering候補。そうでなければremap/component/object-anchor featureを追加する。",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: profile only; no ONNX emitted",
+  "leakage_risk": "low-to-medium: train-derived crop table is evaluated on all arc-gen; do not submit unless tiny/full-pass and nonlookup.",
+  "overfitting_risk": "medium: shape-position tables can overfit generated shapes; require all-arc full pass and branch compression."
+}

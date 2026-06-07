@@ -1,0 +1,20 @@
+{
+  "exp_id": "exp081_task366_lowering_inventory",
+  "date": "2026-06-07",
+  "task_id": 366,
+  "status": "inventory_ready",
+  "hypothesis": "task366 full-pass rule can be lowered if source object templates and marker placements are few enough for static Conv/Slice/Where templates.",
+  "examples": 266,
+  "unique_source_templates": 695,
+  "common_used_templates": 511,
+  "max_source_objects_per_example": 3,
+  "max_used_objects_per_example": 3,
+  "max_marker_cells": 7,
+  "max_patch_cells": 49,
+  "estimated_total_used_kernel_params": 7014,
+  "decision": "If used template count and kernel proxy are modest, next emit a correctness-first static template detector; otherwise continue rule compression before ONNX.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: inventory only; no ONNX emitted",
+  "leakage_risk": "low-to-medium: uses all arc-gen to size compiler templates, but does not emit raw lookup.",
+  "overfitting_risk": "medium: template inventory must be compressed to structural rules before hidden-safe submission."
+}

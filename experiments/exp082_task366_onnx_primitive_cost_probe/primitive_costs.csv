@@ -1,0 +1,6 @@
+primitive,status,memory,params,cost,file_bytes,sha256,static_reason,score_reason,notes
+identity,scored,0,0,0,213,02ee8a2c14301b65fedec43f862c69bd14dd19a6c5394aa9b26120bdbe02d3d6,ok,ok,primitive cost only; not a valid task solution
+static_vertical_bottom_slice_pad,scored,18000,21,18021,534,5bc28cd204d8cf8d81c3e041f4cc87305e56f90e25d33c9d71178b81316b34e1,ok,ok,primitive cost only; not a valid task solution
+static_horizontal_right_slice_pad,scored,18000,21,18021,536,8cd1ccf2c1627ed3c08104bb3b69df285b221884c4214085ded5955fae6d9779,ok,ok,primitive cost only; not a valid task solution
+marker_mask_conv_tile,scored,8100,15,8115,439,9bf450d7014193c9f89dd3bd4ebe149ce6f3b9aa4d2408b81fa033b09e4b0c1c,ok,ok,primitive cost only; not a valid task solution
+where_overlay_proxy,scored,9000,9001,18001,36307,78fb2dad63e9d9fa1a78f9883ad0b306652d90f5fce977443ba200cb50164af3,ok,ok,primitive cost only; not a valid task solution

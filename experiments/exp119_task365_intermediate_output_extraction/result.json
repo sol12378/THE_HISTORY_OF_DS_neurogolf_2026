@@ -1,0 +1,113 @@
+{
+  "exp_id": "exp119_task365_intermediate_output_extraction",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 21,
+  "task_id": 365,
+  "hypothesis": "Task365 existing artifact may expose a correct final-shape intermediate tensor before an expensive suffix.",
+  "baseline_cost": 58814,
+  "baseline_points": 14.01786479921536,
+  "candidate_tensor_count": 4,
+  "evaluated_candidate_count": 4,
+  "all_intermediate_tensor_count": 235,
+  "top_shape_counts": [
+    {
+      "shape": "1x10",
+      "count": 77
+    },
+    {
+      "shape": "1x1x1x1",
+      "count": 26
+    },
+    {
+      "shape": "1",
+      "count": 24
+    },
+    {
+      "shape": "1x1x10x10",
+      "count": 19
+    },
+    {
+      "shape": "1x1x10x1",
+      "count": 18
+    },
+    {
+      "shape": "1x1x1x10",
+      "count": 18
+    },
+    {
+      "shape": "1x1x10",
+      "count": 11
+    },
+    {
+      "shape": "10",
+      "count": 8
+    },
+    {
+      "shape": "1x19",
+      "count": 8
+    },
+    {
+      "shape": "30",
+      "count": 8
+    },
+    {
+      "shape": "1x10x30x30",
+      "count": 4
+    },
+    {
+      "shape": "1x1x30x30",
+      "count": 4
+    },
+    {
+      "shape": "1x1x10x30",
+      "count": 3
+    },
+    {
+      "shape": "1x3x1x1",
+      "count": 3
+    },
+    {
+      "shape": "1x1x1x30",
+      "count": 2
+    },
+    {
+      "shape": "1x1x30x1",
+      "count": 2
+    }
+  ],
+  "status_counts": {
+    "rejected": 4
+  },
+  "validation_counts": {
+    "not_run": 3,
+    "0_pass_1_fail": 1
+  },
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "best_eval": null,
+  "base_local_estimate": 6282.93615685804,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.93615685804,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820631,
+    "sha256": "2dc528261660659d9cc39c68d8162d2ca6469724f40f3ed5ffb30f398cceea39"
+  },
+  "runtime_seconds": 1.0519568920135498,
+  "submission_decision": "no_submit",
+  "decision": "If no final-shape intermediate improves, task365 needs fresh selector lowering or a different task pivot.",
+  "leakage_risk": "low: graph-only extraction, full-validation gated.",
+  "overfitting_risk": "low-to-medium: accepted extraction would still need LB calibration."
+}

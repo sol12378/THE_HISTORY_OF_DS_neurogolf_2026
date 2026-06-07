@@ -1,0 +1,19 @@
+{
+  "exp_id": "exp113_compiler_campaign_15_review",
+  "date": "2026-06-07",
+  "status": "review_complete",
+  "campaign_index": 15,
+  "review_window": [11, 12, 13, 14, 15],
+  "base_local_estimate_before_window": 6282.812218,
+  "base_local_estimate_after_window": 6282.93615685804,
+  "local_estimate_delta_window": 0.1239388580395987,
+  "local_estimate_delta_campaign": 0.1239388580395987,
+  "accepted_unique_tasks": [48, 184, 187, 207, 263, 316, 394],
+  "accepted_unique_task_count": 7,
+  "verdict": "lb_useful_but_not_sufficient",
+  "analysis": "Focused artifact surgery produced submit-safe local gains in #11-#13 and should transfer better than lookup-heavy bundles, but the gains are micro-deltas and sharply diminish. #14 found no task185 intermediate output suitable for suffix extraction, so high-gain rule-hit tasks need fresh fused lowering rather than more local bypasses.",
+  "next_policy": "For #16-#20, require fresh fused lowering or a concrete low-cost floor for solved high-gain rules. Prioritize task185 lattice homogeneous-2x2, task366 object-marker copy, and task365 rectangle selector. Keep focused surgery as a post-pass/LB calibration lane, not the main path.",
+  "submission_decision": "prepare_bundle_after_next_positive_fused_delta_or_submit_for_calibration_if_needed",
+  "leakage_risk": "low for accepted graph surgery; medium for future fused rule compilers until hidden-style generalization is checked.",
+  "overfitting_risk": "low-to-medium: full-arc gated surgery is robust, but local/LB calibration is still needed for the exp109-112 bundle."
+}

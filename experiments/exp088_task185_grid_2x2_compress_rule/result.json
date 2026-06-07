@@ -1,0 +1,18 @@
+{
+  "exp_id": "exp088_task185_grid_2x2_compress_rule",
+  "date": "2026-06-07",
+  "task_id": 185,
+  "status": "rule_found",
+  "hypothesis": "task185 is solved by extracting the colored 4x4 lattice matrix and emitting the color of each homogeneous nonzero 2x2 block as a 3x3 output.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "examples": 267,
+  "pass_count": 267,
+  "fail_count": 0,
+  "fail_examples": [],
+  "decision": "If full pass, next lower to ONNX using grid-line index extraction or a cheaper task-specific existing artifact surgery route; target cost<=600 because output is fixed 3x3.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: Python rule only",
+  "leakage_risk": "low: rule uses lattice geometry and homogeneous 2x2 blocks, not per-example lookup.",
+  "overfitting_risk": "medium-low: task-specific but validated on all arc-gen; ONNX lowering must avoid hidden-specific absolute periods."
+}

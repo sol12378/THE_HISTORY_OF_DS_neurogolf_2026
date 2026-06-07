@@ -1,0 +1,3 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+185,crop_or_resize,sanitize_current_task185,59584,59584,14.00485763936326,14.00485763936326,23762,267_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,4b2e94698954985298780d91862b39976514533d04e0c2a9c65018472bf9ffcc
+185,crop_or_resize,dedupe_initializers_task185,59584,59584,14.00485763936326,14.00485763936326,23762,267_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,4b2e94698954985298780d91862b39976514533d04e0c2a9c65018472bf9ffcc

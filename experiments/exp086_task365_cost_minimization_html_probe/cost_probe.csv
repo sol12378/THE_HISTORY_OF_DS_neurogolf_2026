@@ -1,0 +1,8 @@
+variant,status,output_shape,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,notes
+identity_30x30_floor,scored,1x10x30x30,1,0,0,0,219,83d08763c2dcc55e5b52bbd2fa6158d3304f4f7b9ca20dcb000393c1c49222e8,ok,ok,ok,公式30x30出力のゼロノード級memory floor。
+slice_3x3_small_output,scored,1x10x3x3,1,0,12,12,378,6a4f90e340ce1d14e1c27721c7446426b6fda7d9045b8f0ee47390e2c8a8b0dc,ok,ok,ok,Padなし小出力が採点可能かを見る。
+slice_6x6_small_output,scored,1x10x6x6,1,0,12,12,378,87ed07d214350162cffd0ea1051050256b2dd4c5b302f8d4432abae870d45765,ok,ok,ok,task365最大shape相当のPadなし小出力。
+slice_3x3_pad30,scored,1x10x30x30,2,360,21,381,534,92bd904ef2d1d3a40f7429b23aed450be79ccb4eea419274f41f4fee3213f01f,ok,ok,ok,FREE Slice後に公式30x30へPadする最小proxy。
+slice_6x6_pad30,scored,1x10x30x30,2,1440,21,1461,534,36b6d1b3104379ccea385cf6c5842d56d7d6c0d0a06a6df1501ef89ba2f1211e,ok,ok,ok,task365最大shape cropをPadで戻すproxy。
+gather_6x6_pad30,scored,1x10x30x30,3,8640,21,8661,563,affebddcbec16b445bfb07fa5c1fd9c114f436a0ddc5f353b42b2cabf06f71d5,ok,ok,ok,選択済みrow/colをGatherしてPadするproxy。
+small_equal_6x6_pad30,scored,1x10x30x30,4,3240,22,3262,598,197ce548ec793220a371db71ad9a8a780640a578f54daa7f7bf47f4f0605b5f6,ok,ok,ok,小領域CHEAP op + Pad のproxy。

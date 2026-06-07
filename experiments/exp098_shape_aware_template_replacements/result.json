@@ -1,0 +1,218 @@
+{
+  "exp_id": "exp098_shape_aware_template_replacements",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "targets": [
+    [
+      150,
+      "flip_lr"
+    ],
+    [
+      155,
+      "flip_ud"
+    ],
+    [
+      87,
+      "rot180"
+    ],
+    [
+      140,
+      "rot180"
+    ],
+    [
+      380,
+      "rot90_ccw"
+    ]
+  ],
+  "evaluated_candidates": 5,
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "accepted_delta": 0,
+  "base_local_estimate": 6282.812218,
+  "new_local_estimate": 6282.812218,
+  "candidate_eval": [
+    {
+      "task_id": 150,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "flip_lr",
+      "baseline_cost": 1014,
+      "candidate_cost": "",
+      "baseline_points": 18.078341815848873,
+      "candidate_points": "",
+      "file_bytes": "",
+      "validation_status": "not_run",
+      "status": "skipped",
+      "reason": "variable shapes: in=['3x3', '4x4', '5x5', '6x6', '7x7', '8x8', '9x9'] out=['3x3', '4x4', '5x5', '6x6', '7x7', '8x8', '9x9']",
+      "sha256": ""
+    },
+    {
+      "task_id": 155,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "flip_ud",
+      "baseline_cost": 1014,
+      "candidate_cost": "",
+      "baseline_points": 18.078341815848873,
+      "candidate_points": "",
+      "file_bytes": "",
+      "validation_status": "not_run",
+      "status": "skipped",
+      "reason": "variable shapes: in=['4x4', '5x5', '6x6', '7x7', '8x8'] out=['4x4', '5x5', '6x6', '7x7', '8x8']",
+      "sha256": ""
+    },
+    {
+      "task_id": 87,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "shape_aware_rot180",
+      "baseline_cost": 368,
+      "candidate_cost": 740,
+      "baseline_points": 19.09191706183107,
+      "candidate_points": 18.393349813801784,
+      "file_bytes": 787,
+      "validation_status": "266_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "sha256": "1567c68d857fdaf23305ee9927675ba3030b27e963414dbf2b72fad4c3363b71"
+    },
+    {
+      "task_id": 140,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "shape_aware_rot180",
+      "baseline_cost": 368,
+      "candidate_cost": 740,
+      "baseline_points": 19.09191706183107,
+      "candidate_points": 18.393349813801784,
+      "file_bytes": 787,
+      "validation_status": "265_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "sha256": "865664fe6e7e5d081c085133a79e318f875cde0e26b3e5465f3c7b423dfe829c"
+    },
+    {
+      "task_id": 380,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "shape_aware_rot90_ccw",
+      "baseline_cost": 728,
+      "candidate_cost": "",
+      "baseline_points": 18.409698951803314,
+      "candidate_points": "",
+      "file_bytes": 832,
+      "validation_status": "0_pass_1_fail",
+      "status": "rejected",
+      "reason": "mismatch example 0",
+      "sha256": "a192b0c5092a8a6b9f6770ac955ef4b986ed11a855a758d01293a629e0d9f835"
+    }
+  ],
+  "shape_inventory": [
+    {
+      "task_id": 150,
+      "variant": "flip_lr",
+      "n_examples": 266,
+      "input_shapes": [
+        "3x3",
+        "4x4",
+        "5x5",
+        "6x6",
+        "7x7",
+        "8x8",
+        "9x9"
+      ],
+      "output_shapes": [
+        "3x3",
+        "4x4",
+        "5x5",
+        "6x6",
+        "7x7",
+        "8x8",
+        "9x9"
+      ],
+      "fixed_input_shape": false,
+      "fixed_output_shape": false,
+      "python_exact": 266
+    },
+    {
+      "task_id": 155,
+      "variant": "flip_ud",
+      "n_examples": 266,
+      "input_shapes": [
+        "4x4",
+        "5x5",
+        "6x6",
+        "7x7",
+        "8x8"
+      ],
+      "output_shapes": [
+        "4x4",
+        "5x5",
+        "6x6",
+        "7x7",
+        "8x8"
+      ],
+      "fixed_input_shape": false,
+      "fixed_output_shape": false,
+      "python_exact": 266
+    },
+    {
+      "task_id": 87,
+      "variant": "rot180",
+      "n_examples": 266,
+      "input_shapes": [
+        "3x3"
+      ],
+      "output_shapes": [
+        "3x3"
+      ],
+      "fixed_input_shape": true,
+      "fixed_output_shape": true,
+      "python_exact": 266
+    },
+    {
+      "task_id": 140,
+      "variant": "rot180",
+      "n_examples": 265,
+      "input_shapes": [
+        "3x3"
+      ],
+      "output_shapes": [
+        "3x3"
+      ],
+      "fixed_input_shape": true,
+      "fixed_output_shape": true,
+      "python_exact": 265
+    },
+    {
+      "task_id": 380,
+      "variant": "rot90_ccw",
+      "n_examples": 267,
+      "input_shapes": [
+        "3x3"
+      ],
+      "output_shapes": [
+        "3x3"
+      ],
+      "fixed_input_shape": true,
+      "fixed_output_shape": true,
+      "python_exact": 267
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820756,
+    "sha256": "1a77c33f6208e74684b101b6f00286c7b6abad17f760165ac9e403abc7609e40"
+  },
+  "local_estimate_delta": 0,
+  "submission_decision": "no_submit",
+  "leakage_risk": "low: deterministic geometry transform validated on all available examples.",
+  "overfitting_risk": "low for fixed-shape pure geometry; medium if shape constancy is arc-gen-specific.",
+  "decision": "Use shape-aware crop/transform/pad only when it beats current submit-safe artifact and remains full-validation exact."
+}

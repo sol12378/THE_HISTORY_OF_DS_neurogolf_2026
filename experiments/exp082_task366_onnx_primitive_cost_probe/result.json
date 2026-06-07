@@ -1,0 +1,76 @@
+{
+  "exp_id": "exp082_task366_onnx_primitive_cost_probe",
+  "date": "2026-06-07",
+  "task_id": 366,
+  "status": "cost_probe_ready",
+  "hypothesis": "task366 structural lowering can stay small only if Slice/Pad/Where/Conv primitives are cheap enough when composed a few times.",
+  "primitive_count": 5,
+  "scored_count": 5,
+  "rows": [
+    {
+      "primitive": "identity",
+      "status": "scored",
+      "memory": 0,
+      "params": 0,
+      "cost": 0,
+      "file_bytes": 213,
+      "sha256": "02ee8a2c14301b65fedec43f862c69bd14dd19a6c5394aa9b26120bdbe02d3d6",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "notes": "primitive cost only; not a valid task solution"
+    },
+    {
+      "primitive": "static_vertical_bottom_slice_pad",
+      "status": "scored",
+      "memory": 18000,
+      "params": 21,
+      "cost": 18021,
+      "file_bytes": 534,
+      "sha256": "5bc28cd204d8cf8d81c3e041f4cc87305e56f90e25d33c9d71178b81316b34e1",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "notes": "primitive cost only; not a valid task solution"
+    },
+    {
+      "primitive": "static_horizontal_right_slice_pad",
+      "status": "scored",
+      "memory": 18000,
+      "params": 21,
+      "cost": 18021,
+      "file_bytes": 536,
+      "sha256": "8cd1ccf2c1627ed3c08104bb3b69df285b221884c4214085ded5955fae6d9779",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "notes": "primitive cost only; not a valid task solution"
+    },
+    {
+      "primitive": "marker_mask_conv_tile",
+      "status": "scored",
+      "memory": 8100,
+      "params": 15,
+      "cost": 8115,
+      "file_bytes": 439,
+      "sha256": "9bf450d7014193c9f89dd3bd4ebe149ce6f3b9aa4d2408b81fa033b09e4b0c1c",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "notes": "primitive cost only; not a valid task solution"
+    },
+    {
+      "primitive": "where_overlay_proxy",
+      "status": "scored",
+      "memory": 9000,
+      "params": 9001,
+      "cost": 18001,
+      "file_bytes": 36307,
+      "sha256": "78fb2dad63e9d9fa1a78f9883ad0b306652d90f5fce977443ba200cb50164af3",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "notes": "primitive cost only; not a valid task solution"
+    }
+  ],
+  "decision": "Use measured primitive costs to set a pre-emission budget for task366; avoid full-grid Tile/Where repetition if it pushes cost above 600.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: primitive cost probe only; no valid task solution",
+  "leakage_risk": "low: no task labels encoded.",
+  "overfitting_risk": "low: cost-only primitive probe."
+}

@@ -1,0 +1,154 @@
+[
+  {
+    "archetype": "static_slice_pad",
+    "compiler_family": "fixed_crop_or_fixed_transform",
+    "example_task_id": 326,
+    "example_cost": 160,
+    "op_sequence": [
+      "Slice",
+      "Pad"
+    ],
+    "lesson": "Best static crop archetype; cost scales with active output area.",
+    "rewrite_direction": "For fixed crop/flip/rot on small active shape, emit one Slice with negative steps where possible plus Pad; avoid extra Gather."
+  },
+  {
+    "archetype": "channel_gather_colormap",
+    "compiler_family": "free_colormap",
+    "example_task_id": 16,
+    "example_cost": 10,
+    "op_sequence": [
+      "Gather"
+    ],
+    "lesson": "Use Gather(axis=1) for injective one-hot channel recolor.",
+    "rewrite_direction": "Replace injective 1x1 one-hot color Conv or color-map table with Gather(axis=1)."
+  },
+  {
+    "archetype": "one_node_transpose",
+    "compiler_family": "free_geom",
+    "example_task_id": 179,
+    "example_cost": 0,
+    "op_sequence": [
+      "Transpose"
+    ],
+    "lesson": "Prefer one-node Transpose only when padded semantics match exactly.",
+    "rewrite_direction": "Use one Transpose only for full padded-safe transpose tasks; otherwise crop first but cost may exceed current artifact."
+  },
+  {
+    "archetype": "small_conv_where_mask",
+    "compiler_family": "local_mask",
+    "example_task_id": 67,
+    "example_cost": 315,
+    "op_sequence": [
+      "ReduceMax",
+      "Conv",
+      "ReduceSum",
+      "Div",
+      "Sum",
+      "Greater",
+      "Where"
+    ],
+    "lesson": "Small Conv + scalar reductions can be viable; avoid full-grid repeated Where.",
+    "rewrite_direction": ""
+  },
+  {
+    "archetype": "one_node_conv_kernel",
+    "compiler_family": "local_mask_or_colormap",
+    "example_task_id": 258,
+    "example_cost": 160,
+    "op_sequence": [
+      "Conv"
+    ],
+    "lesson": "Mine weights; one Conv can encode local mask/color-role patterns under 250-1000.",
+    "rewrite_direction": "Try single Conv for local color-role masks before multi-node equality/Where chains."
+  },
+  {
+    "archetype": "computed_slice_pad",
+    "compiler_family": "object_anchor_crop",
+    "example_task_id": 103,
+    "example_cost": 193,
+    "op_sequence": [
+      "Slice",
+      "Cast",
+      "Slice",
+      "Sub",
+      "Abs",
+      "ReduceSum",
+      "Greater",
+      "Cast",
+      "Gather",
+      "Unsqueeze",
+      "Pad"
+    ],
+    "lesson": "Small arithmetic around Slice/Pad is viable for object-anchor crop.",
+    "rewrite_direction": ""
+  },
+  {
+    "archetype": "one_node_gridsample",
+    "compiler_family": "resize_transform",
+    "example_task_id": 83,
+    "example_cost": 1800,
+    "op_sequence": [
+      "GridSample"
+    ],
+    "lesson": "GridSample is compact but verify official allow/static behavior before reuse.",
+    "rewrite_direction": ""
+  },
+  {
+    "archetype": "tiny_dynamic_shape_index",
+    "compiler_family": "shape_index_crop",
+    "example_task_id": 334,
+    "example_cost": 609,
+    "op_sequence": [
+      "Slice",
+      "ReduceSum",
+      "ArgMax",
+      "Gather",
+      "Unsqueeze",
+      "Sub",
+      "Sub",
+      "Concat",
+      "Pad"
+    ],
+    "lesson": "Use ReduceSum/ArgMax/Gather to select small shape/offset without full-grid masks.",
+    "rewrite_direction": ""
+  },
+  {
+    "archetype": "one_node_gather_index_map",
+    "compiler_family": "static_index_map",
+    "example_task_id": 53,
+    "example_cost": 30,
+    "op_sequence": [
+      "Gather"
+    ],
+    "lesson": "Use only if index initializer is tiny and semantics are full-padded safe.",
+    "rewrite_direction": ""
+  },
+  {
+    "archetype": "misc_under_600",
+    "compiler_family": "unknown_low_cost",
+    "example_task_id": 149,
+    "example_cost": 437,
+    "op_sequence": [
+      "Conv",
+      "Slice",
+      "Neg",
+      "Concat",
+      "Pad"
+    ],
+    "lesson": "Inspect manually; under-600 pattern may be reusable.",
+    "rewrite_direction": ""
+  },
+  {
+    "archetype": "misc_under_2000",
+    "compiler_family": "unknown_near_low_cost",
+    "example_task_id": 380,
+    "example_cost": 728,
+    "op_sequence": [
+      "Slice",
+      "Transpose",
+      "Pad"
+    ],
+    "lesson": "Potentially useful but not first compiler archetype.",
+    "rewrite_direction": ""
+  }
+]

@@ -1,0 +1,13 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+366,crop_or_resize,extract_output_000_Cast_out0,99849,,13.488585676228723,,28204,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Identity, node name: output): [TypeInferenceError] Inferred elem type differs from existing elem type: (10) vs (9)
+",1babdab9ec300f6339afcc1d6bb67e425f36154b06da1d16dc37fc125c7a0437
+366,crop_or_resize,extract_output_024_Gather_out0,99849,,13.488585676228723,,29763,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Identity, node name: output): [TypeInferenceError] Inferred elem type differs from existing elem type: (10) vs (9)
+",a2ba04a0e967d54f60c2e5a99a1ef344b5ad055296c7d508cfdc7299712cb80f
+366,crop_or_resize,extract_output_025_Gather_out0,99849,,13.488585676228723,,29763,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Identity, node name: output): [TypeInferenceError] Inferred elem type differs from existing elem type: (10) vs (9)
+",b733237c03b6359e0f00c4a7626694766c36f070acf6c9278b9acf643bbd94cf
+366,crop_or_resize,extract_output_040_Where_out0,99849,,13.488585676228723,,30418,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Identity, node name: output): [TypeInferenceError] Inferred elem type differs from existing elem type: (10) vs (9)
+",f01c43a8207d9faba509bb965798d06662176964a3712e26a58a2139f3352cda
+366,crop_or_resize,extract_output_041_Where_out0,99849,,13.488585676228723,,30676,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Identity, node name: output): [TypeInferenceError] Inferred elem type differs from existing elem type: (10) vs (9)
+",fddf971f7076f4e2682d8fe67c1a153da1ec7f4005a3b78e11052dc7c47bc303
+366,crop_or_resize,extract_output_042_Where_out0,99849,,13.488585676228723,,31805,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Identity, node name: output): [TypeInferenceError] Inferred elem type differs from existing elem type: (10) vs (9)
+",1ee79b817d159d23af12b9d4544094d70d56759b427bf263f79793117d0841f5

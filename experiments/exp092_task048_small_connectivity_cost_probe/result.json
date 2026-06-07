@@ -1,0 +1,58 @@
+{
+  "exp_id": "exp092_task048_small_connectivity_cost_probe",
+  "date": "2026-06-07",
+  "task_id": 48,
+  "status": "cost_probe_ready",
+  "hypothesis": "Because task048 input is at most 8x8 and output is 1x1, bounded connectivity may be low enough for cost<=600.",
+  "baseline_cost": 5609,
+  "baseline_points": 16.367872270491663,
+  "rows": [
+    {
+      "variant": "onecell_output_floor",
+      "status": "scored",
+      "node_count": 2,
+      "memory": 40,
+      "params": 12,
+      "cost": 52,
+      "file_bytes": 414,
+      "sha256": "eb494e1d766eedddf99159874c7cdec2f4b1cc8bfd68a6e0b659ed134e7aa93a",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "1x1 output one-hot slice floor."
+    },
+    {
+      "variant": "reachability_4step_8x8",
+      "status": "scored",
+      "node_count": 19,
+      "memory": 7184,
+      "params": 30,
+      "cost": 7214,
+      "file_bytes": 1304,
+      "sha256": "5ea6a9d0637e59d265566b22a86b991c3276d29e150365bbf22ba0e985d547e7",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "4-step 8x8 Conv dilation proxy."
+    },
+    {
+      "variant": "reachability_8step_8x8",
+      "status": "scored",
+      "node_count": 35,
+      "memory": 10512,
+      "params": 30,
+      "cost": 10542,
+      "file_bytes": 1960,
+      "sha256": "41130bb4458f16f937790b12833ece2fe3efefa4df0ba30893ea8bb05f3dd101",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "8-step 8x8 Conv dilation proxy."
+    }
+  ],
+  "decision": "If 8-step proxy is far above 600, avoid naive connectivity unroll and look for graph surgery or closed-form path features.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: cost proxy only",
+  "leakage_risk": "low: no labels encoded.",
+  "overfitting_risk": "medium: proxy only; not a full correctness model."
+}

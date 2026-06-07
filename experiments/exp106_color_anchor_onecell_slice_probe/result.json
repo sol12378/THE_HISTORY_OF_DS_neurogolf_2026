@@ -1,0 +1,36 @@
+{
+  "exp_id": "exp106_color_anchor_onecell_slice_probe",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "campaign_index": 8,
+  "base_local_estimate": 6282.812218,
+  "local_estimate_delta": 0,
+  "new_local_estimate": 6282.812218,
+  "target_count": 4,
+  "fit_count": 0,
+  "generated_candidate_count": 0,
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "accepted": [],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820756,
+    "sha256": "df0951f781b77ab09c2180c9cac00a0e0dec77fe6e17620a54a6d8f277d7c5ff"
+  },
+  "runtime_seconds": 1.0659618377685547,
+  "submission_decision": "no_submit",
+  "decision": "Color-specific anchor is a tighter tiny_dynamic_shape_index probe than all-nonzero bbox-min.",
+  "leakage_risk": "medium: color and offset are fit from all examples but the rule is small and input-derived.",
+  "overfitting_risk": "medium: accepted candidates still require visual rule inspection before submit."
+}

@@ -1,0 +1,44 @@
+{
+  "exp_id": "exp085_task365_lowering_inventory",
+  "date": "2026-06-07",
+  "task_id": 365,
+  "status": "inventory_ready",
+  "hypothesis": "task365 full-pass object crop rule may be lowerable with small rectangle/window selection because all objects are dense rectangles and input is 10x10.",
+  "examples": 266,
+  "object_count_hist": {
+    "3": 185,
+    "2": 81
+  },
+  "selected_shape_count": 16,
+  "selected_shape_hist": {
+    "(3, 3)": 47,
+    "(4, 3)": 34,
+    "(3, 4)": 27,
+    "(5, 3)": 25,
+    "(4, 4)": 21,
+    "(5, 4)": 19,
+    "(3, 6)": 19,
+    "(3, 5)": 17,
+    "(6, 3)": 13,
+    "(4, 6)": 12,
+    "(5, 5)": 9,
+    "(4, 5)": 8,
+    "(6, 4)": 7,
+    "(6, 5)": 4,
+    "(5, 6)": 3,
+    "(6, 6)": 1
+  },
+  "max_count2_hist": {
+    "3": 79,
+    "5": 1,
+    "4": 173,
+    "2": 13
+  },
+  "dense_rectangle_examples": 266,
+  "max_objects": 3,
+  "decision": "If all objects are dense rectangles and shape branch count is modest, next try rectangle-window selector ONNX; otherwise avoid dynamic component lowering.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: inventory only",
+  "leakage_risk": "low: structural inventory over all arc-gen, no raw lookup emitted.",
+  "overfitting_risk": "medium: selected shape branches must be compressed before hidden-safe submission."
+}

@@ -1,0 +1,18 @@
+{
+  "exp_id": "exp091_task048_bridge_connectivity_rule",
+  "date": "2026-06-07",
+  "task_id": 48,
+  "status": "rule_found",
+  "hypothesis": "task048 outputs 8 iff a 4-connected component of color 8 touches both color-2 components; otherwise it outputs 0.",
+  "baseline_cost": 5609,
+  "baseline_points": 16.367872270491663,
+  "examples": 270,
+  "pass_count": 270,
+  "fail_count": 0,
+  "fail_examples": [],
+  "decision": "If full pass, probe small 8x8 connectivity lowering. Because output is 1x1 and max input is 8x8, this is a stronger <=600 candidate than task185.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: Python rule only",
+  "leakage_risk": "low: explicit connectivity rule over colors 2 and 8.",
+  "overfitting_risk": "medium-low: task-specific colors but all arc-gen pass."
+}

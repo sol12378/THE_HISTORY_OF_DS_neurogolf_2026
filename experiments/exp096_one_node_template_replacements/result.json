@@ -1,0 +1,33 @@
+{
+  "exp_id": "exp096_one_node_template_replacements",
+  "date": "2026-06-07",
+  "status": "no_gain",
+  "input_hits": 4,
+  "evaluated_candidates": 4,
+  "accepted_tasks": [],
+  "accepted_count": 0,
+  "accepted_delta": 0.0,
+  "base_local_estimate": 6282.812218,
+  "new_local_estimate": 6282.812218,
+  "accepted": [],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 736301,
+    "sha256": "3fb30c9be812b0e2e2e49ff7d9cbd65608352963468e0e996900cdc6e26a2bc0"
+  },
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit",
+  "leakage_risk": "low: deterministic one-node transforms validated on all arc-gen.",
+  "overfitting_risk": "low for pure geometry; color Gather only accepted if full validation passes."
+}

@@ -1,0 +1,173 @@
+{
+  "exp_id": "exp115_task185_lattice_position_inventory",
+  "date": "2026-06-07",
+  "status": "inventory_ready",
+  "campaign_index": 17,
+  "task_id": 185,
+  "hypothesis": "Task185 fixed lattice lowering failed because lattice positions vary; inventory position patterns before dynamic lowering.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "example_count": 267,
+  "shape_counts": [
+    {
+      "shape": "27x27",
+      "count": 83
+    },
+    {
+      "shape": "29x29",
+      "count": 184
+    }
+  ],
+  "unique_position_pattern_count": 46,
+  "top_position_patterns": [
+    {
+      "shape": "29x29",
+      "rr": "9,14,19,24",
+      "cc": "9,14,19,24",
+      "count": 26
+    },
+    {
+      "shape": "29x29",
+      "rr": "4,9,14,19",
+      "cc": "4,9,14,19",
+      "count": 23
+    },
+    {
+      "shape": "29x29",
+      "rr": "4,9,14,19",
+      "cc": "9,14,19,24",
+      "count": 20
+    },
+    {
+      "shape": "29x29",
+      "rr": "9,14,19,24",
+      "cc": "4,9,14,19",
+      "count": 19
+    },
+    {
+      "shape": "27x27",
+      "rr": "11,15,19,23",
+      "cc": "11,15,19,23",
+      "count": 16
+    },
+    {
+      "shape": "27x27",
+      "rr": "11,15,19,23",
+      "cc": "7,11,15,19",
+      "count": 14
+    },
+    {
+      "shape": "27x27",
+      "rr": "3,7,11,15",
+      "cc": "3,7,11,15",
+      "count": 10
+    },
+    {
+      "shape": "27x27",
+      "rr": "3,7,11,15",
+      "cc": "7,11,15,19",
+      "count": 10
+    },
+    {
+      "shape": "27x27",
+      "rr": "11,15,19,23",
+      "cc": "3,7,11,15",
+      "count": 8
+    },
+    {
+      "shape": "27x27",
+      "rr": "7,11,15,19",
+      "cc": "11,15,19,23",
+      "count": 8
+    },
+    {
+      "shape": "27x27",
+      "rr": "7,11,15,19",
+      "cc": "3,7,11,15",
+      "count": 7
+    },
+    {
+      "shape": "27x27",
+      "rr": "7,11,15,19",
+      "cc": "7,11,15,19",
+      "count": 7
+    },
+    {
+      "shape": "29x29",
+      "rr": "14,17,20,23",
+      "cc": "2,5,8,11",
+      "count": 7
+    },
+    {
+      "shape": "29x29",
+      "rr": "8,11,14,17",
+      "cc": "2,5,8,11",
+      "count": 5
+    },
+    {
+      "shape": "29x29",
+      "rr": "11,14,17,20",
+      "cc": "8,11,14,17",
+      "count": 5
+    },
+    {
+      "shape": "29x29",
+      "rr": "2,5,8,11",
+      "cc": "14,17,20,23",
+      "count": 5
+    },
+    {
+      "shape": "29x29",
+      "rr": "14,17,20,23",
+      "cc": "14,17,20,23",
+      "count": 4
+    },
+    {
+      "shape": "29x29",
+      "rr": "17,20,23,26",
+      "cc": "14,17,20,23",
+      "count": 4
+    },
+    {
+      "shape": "29x29",
+      "rr": "5,8,11,14",
+      "cc": "17,20,23,26",
+      "count": 4
+    },
+    {
+      "shape": "29x29",
+      "rr": "14,17,20,23",
+      "cc": "8,11,14,17",
+      "count": 4
+    }
+  ],
+  "unique_delta_pattern_count": 3,
+  "top_delta_patterns": [
+    {
+      "rr_delta": "3,3,3",
+      "cc_delta": "3,3,3",
+      "count": 96
+    },
+    {
+      "rr_delta": "5,5,5",
+      "cc_delta": "5,5,5",
+      "count": 88
+    },
+    {
+      "rr_delta": "4,4,4",
+      "cc_delta": "4,4,4",
+      "count": 83
+    }
+  ],
+  "position_patterns_by_shape": {
+    "27x27": 9,
+    "29x29": 37
+  },
+  "base_local_estimate": 6282.93615685804,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.93615685804,
+  "decision": "If position patterns are numerous, task185 needs dynamic grid-line detection; if small by shape, shape-branch static Slice lowering may be possible.",
+  "submission_decision": "no_submit: compiler design inventory",
+  "leakage_risk": "low: input geometry inventory only.",
+  "overfitting_risk": "medium: position branching can overfit if encoded as raw table."
+}

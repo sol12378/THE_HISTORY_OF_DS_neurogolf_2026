@@ -1,0 +1,24 @@
+{
+  "exp_id": "exp123_compiler_campaign_25_review",
+  "date": "2026-06-07",
+  "status": "review_complete",
+  "campaign_index": 25,
+  "base_local_estimate": 6282.93615685804,
+  "local_estimate_delta_21_25": 0.014052820572537428,
+  "local_estimate_delta_1_25": 0.13799167861267022,
+  "new_local_estimate": 6282.950209678613,
+  "reviewed_campaign_indices": [21, 22, 23, 24, 25],
+  "reviewed_experiments": [
+    "exp119_task365_intermediate_output_extraction",
+    "exp120_task366_intermediate_output_extraction",
+    "exp121_task366_cast_suffix_extraction",
+    "exp122_focused_surgery_third_pass_limited",
+    "exp123_compiler_campaign_25_review"
+  ],
+  "verdict": "artifact_harvesting_failed_but_postpass_still_useful",
+  "lb_usefulness": "limited: exp122 adds a submit-safe micro-delta, but #21-#23 produced no path toward large cost reduction.",
+  "next_policy": "For #26-#30, stop suffix extraction on task365/task366 and run compiler experiments that import low-cost artifact tricks: one-node/fused data movement, small Slice/Gather/Pad, and safe post-pass surgery. Treat focused surgery as a final post-pass, not the main 7500 lane.",
+  "submission_decision": "submit_candidate_after_review_if_user_wants_lb_calibration",
+  "leakage_risk": "low for exp122 graph surgery; medium for any future imported OSS/compiler trick if it encodes public artifact behavior without rule validation.",
+  "overfitting_risk": "low-to-medium for exp122; high for broad artifact-derived transformations unless full arc-gen validation and small-delta LB calibration are maintained."
+}

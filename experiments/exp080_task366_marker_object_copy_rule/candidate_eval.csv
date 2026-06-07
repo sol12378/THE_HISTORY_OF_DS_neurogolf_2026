@@ -1,0 +1,2 @@
+candidate,status,train_pass,train_total,test_pass,test_total,arc_pass,arc_total,total_pass,total,mean_cell_accuracy,fail_examples
+object_marker_copy_by_color_shape,full_pass,3,3,1,1,262,262,266,266,1.0,[]
