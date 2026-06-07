@@ -1,0 +1,45 @@
+{
+  "exp_id": "exp063_task020_teacher_delta_calibration",
+  "date": "2026-06-06",
+  "status": "rejected_validation_failed",
+  "purpose": "single-task local/LB calibration for task020 teacher delta; not final rule adoption",
+  "strict_exp": "experiments\\exp005_top_cost_rewrite_strict",
+  "teacher_exp": "experiments\\exp023_graph_surgery_exp016",
+  "target_task": 20,
+  "strict_seed_local_estimate": 6282.230228092811,
+  "new_local_estimate": 6282.230228092811,
+  "local_estimate_delta": 0.0,
+  "delta": {
+    "task_id": 20,
+    "strict_cost": 90133,
+    "strict_points": 13.590958363748854,
+    "teacher_cost": 3931,
+    "teacher_points": 16.723350874578138,
+    "local_delta": 0.0,
+    "validation_ok": false,
+    "validation_status": "24_pass_1_fail",
+    "validation_reason": "mismatch example 24",
+    "teacher_sha256": "6875ba09c357054f37d2f6cef4eadcd3c5e88559d7f60d968d63e9eded1c0d4f"
+  },
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 824070,
+    "sha256": "131375d29e8640663ba573309657d29ae24c0f44739dcb4655fea7b66c1f271a"
+  },
+  "runtime_seconds": 1.262047290802002,
+  "submission_decision": "no_submit",
+  "leakage_risk": "high: teacher artifact is signature/public-artifact style; this is a calibration probe only.",
+  "overfitting_risk": "high: use Kaggle LB delta to measure whether task020 teacher behavior generalizes.",
+  "decision": "Submit only because user requested faster local/LB alignment; do not treat as final low-risk rule replacement."
+}

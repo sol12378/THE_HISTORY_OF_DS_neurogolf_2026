@@ -1,0 +1,12 @@
+pattern,observations,validation_pass_observations,improved,no_cost_gain,skipped,max_cost_ratio,min_cost_ratio,avg_cost_ratio,decision
+constant_slice_crop_candidate,282,4,0,4,278,2.700000,1.033333,1.779861,allow_when_validation_and_cost_pass
+dynamic_argmax_scatternd,1,1,0,1,0,2.955217,2.955217,2.955217,pre_reject_unless_static_cost_forecast_beats_baseline
+dynamic_full_grid_colormap,2,2,0,2,0,2.451393,2.451393,2.451393,pre_reject_unless_static_cost_forecast_beats_baseline
+full_grid_tile_plus_mask,1,1,0,1,0,2.524602,2.524602,2.524602,pre_reject_unless_static_cost_forecast_beats_baseline
+full_grid_where_chain,3,1,0,1,2,2.578364,2.578364,2.578364,pre_reject_unless_static_cost_forecast_beats_baseline
+identity_sentinel,405,0,0,0,405,,,,inspect_manually
+large_scatternd_coordinate_initializer,2,1,0,1,1,4.387840,4.387840,4.387840,pre_reject_unless_static_cost_forecast_beats_baseline
+memorized_signature_scatternd,405,404,195,209,1,18684.000000,0.052333,77.813507,allow_only_as_local_upper_bound_or_if_compressed
+other_template_candidate,22786,5,0,5,22780,1192.000000,2.135989,264.420676,inspect_manually
+small_color_or_global_transform_candidate,664,4,0,4,660,10.000000,10.000000,10.000000,allow_when_validation_and_cost_pass
+unrolled_boundary_flood_fill,12,0,0,0,12,,,,pre_reject_unless_static_cost_forecast_beats_baseline

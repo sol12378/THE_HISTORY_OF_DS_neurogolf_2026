@@ -1,0 +1,33 @@
+{
+  "exp_id": "exp_b016_l2_local_predicate_decision_tree_miner",
+  "date": "2026-06-06",
+  "status": "no_full_hit",
+  "target_task_count": 5,
+  "fast_top_k": 5,
+  "target_task_ids": [
+    5,
+    133,
+    173,
+    285,
+    286
+  ],
+  "lane_counts": {
+    "L2_local_predicate_sparse_fill": 5
+  },
+  "predicate_count": 37,
+  "predicate_set_count": 37,
+  "evaluated_candidate_count": 0,
+  "full_pass_hit_count": 0,
+  "train_test_pass_hit_count": 0,
+  "train_fit_hit_count": 0,
+  "full_pass_hits": [],
+  "train_test_hits": [],
+  "train_fit_hits": [],
+  "best_candidates": [],
+  "candidate_status_counts": {},
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: rule discovery only; lower full pass first",
+  "decision": "lower full pass hits; otherwise add color-role target selection and learned small decision trees",
+  "leakage_risk": "low-to-medium: predicates are explanatory; arc-gen used only for evaluation.",
+  "overfitting_risk": "medium: train-derived predicate selection needs full arc-gen and Kaggle delta before adoption."
+}

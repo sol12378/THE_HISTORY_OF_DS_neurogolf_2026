@@ -1,0 +1,90 @@
+{
+  "exp_id": "exp051_task020_orbit_completion_miner",
+  "date": "2026-06-06",
+  "status": "partial",
+  "target_task": 20,
+  "train_template_count": 3,
+  "templates": [
+    {
+      "positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "train_count": 1
+    },
+    {
+      "positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "train_count": 1
+    },
+    {
+      "positions": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "train_count": 1
+    }
+  ],
+  "split_counts": {
+    "train": 3,
+    "test": 1,
+    "arc-gen": 262
+  },
+  "split_pass": {
+    "train": 3,
+    "arc-gen": 93
+  },
+  "total_pass": 96,
+  "total_examples": 266,
+  "decision": "If all pass, implement this orbit completion rule in cost-aware ONNX; otherwise add role inference beyond train templates.",
+  "leakage_risk": "low-to-medium: templates learned from train only, evaluated on test/all arc-gen.",
+  "overfitting_risk": "medium: task-specific orbit templates; needs holdout if generalized."
+}

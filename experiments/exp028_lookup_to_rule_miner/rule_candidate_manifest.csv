@@ -1,0 +1,1177 @@
+task_id,rule_family,fit_status,validation_status,passed,failed,current_cost,expected_cost_upper_bound,projected_gain,priority,proof,lowering_plan,leakage_risk,private_risk
+2,bbox_crop_color_map,skipped,not_run,0,0,33547,,,,no bbox crop fits train,,low: train-only fit,unknown
+2,color_map,skipped,not_run,0,0,33547,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+2,constant_output,skipped,not_run,0,0,33547,,,,train outputs differ,,low: train-only fit,unknown
+2,fixed_crop_color_map,skipped,not_run,0,0,33547,,,,no crop/color map fits train example,,low: train-only fit,unknown
+2,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,33547,4620,0.000000,0.000000,fixed_cells=47; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+2,global_transform_color_map,skipped,not_run,0,0,33547,,,,no transform+color map fits train,,low: train-only fit,unknown
+4,bbox_crop_color_map,skipped,not_run,0,0,13560,,,,no bbox crop fits train,,low: train-only fit,unknown
+4,color_map,skipped,not_run,0,0,13560,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+4,constant_output,skipped,not_run,0,0,13560,,,,train outputs differ,,low: train-only fit,unknown
+4,fixed_crop_color_map,skipped,not_run,0,0,13560,,,,no crop/color map fits train example,,low: train-only fit,unknown
+4,fixed_sparse_edit,skipped,not_run,0,0,13560,,,,edit conflict,,low: train-only fit,unknown
+4,global_transform_color_map,skipped,not_run,0,0,13560,,,,no transform+color map fits train,,low: train-only fit,unknown
+5,bbox_crop_color_map,skipped,not_run,0,0,19387,,,,no bbox crop fits train,,low: train-only fit,unknown
+5,color_map,skipped,not_run,0,0,19387,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+5,constant_output,skipped,not_run,0,0,19387,,,,train outputs differ,,low: train-only fit,unknown
+5,fixed_crop_color_map,skipped,not_run,0,0,19387,,,,no crop/color map fits train example,,low: train-only fit,unknown
+5,fixed_sparse_edit,skipped,not_run,0,0,19387,,,,edit conflict,,low: train-only fit,unknown
+5,global_transform_color_map,skipped,not_run,0,0,19387,,,,no transform+color map fits train,,low: train-only fit,unknown
+8,bbox_crop_color_map,skipped,not_run,0,0,10555,,,,no bbox crop fits train,,low: train-only fit,unknown
+8,color_map,skipped,not_run,0,0,10555,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+8,constant_output,skipped,not_run,0,0,10555,,,,train outputs differ,,low: train-only fit,unknown
+8,fixed_crop_color_map,skipped,not_run,0,0,10555,,,,no crop/color map fits train example,,low: train-only fit,unknown
+8,fixed_sparse_edit,skipped,not_run,0,0,10555,,,,edit conflict,,low: train-only fit,unknown
+8,global_transform_color_map,skipped,not_run,0,0,10555,,,,no transform+color map fits train,,low: train-only fit,unknown
+9,bbox_crop_color_map,skipped,not_run,0,0,23611,,,,no bbox crop fits train,,low: train-only fit,unknown
+9,color_map,skipped,not_run,0,0,23611,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+9,constant_output,skipped,not_run,0,0,23611,,,,train outputs differ,,low: train-only fit,unknown
+9,fixed_crop_color_map,skipped,not_run,0,0,23611,,,,no crop/color map fits train example,,low: train-only fit,unknown
+9,fixed_sparse_edit,skipped,not_run,0,0,23611,,,,edit conflict,,low: train-only fit,unknown
+9,global_transform_color_map,skipped,not_run,0,0,23611,,,,no transform+color map fits train,,low: train-only fit,unknown
+11,bbox_crop_color_map,skipped,not_run,0,0,24184,,,,no bbox crop fits train,,low: train-only fit,unknown
+11,color_map,skipped,not_run,0,0,24184,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+11,constant_output,skipped,not_run,0,0,24184,,,,train outputs differ,,low: train-only fit,unknown
+11,fixed_crop_color_map,skipped,not_run,0,0,24184,,,,no crop/color map fits train example,,low: train-only fit,unknown
+11,fixed_sparse_edit,skipped,not_run,0,0,24184,,,,edit conflict,,low: train-only fit,unknown
+11,global_transform_color_map,skipped,not_run,0,0,24184,,,,no transform+color map fits train,,low: train-only fit,unknown
+12,bbox_crop_color_map,skipped,not_run,0,0,11213,,,,no bbox crop fits train,,low: train-only fit,unknown
+12,color_map,skipped,not_run,0,0,11213,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+12,constant_output,skipped,not_run,0,0,11213,,,,train outputs differ,,low: train-only fit,unknown
+12,fixed_crop_color_map,skipped,not_run,0,0,11213,,,,no crop/color map fits train example,,low: train-only fit,unknown
+12,fixed_sparse_edit,skipped,not_run,0,0,11213,,,,edit conflict,,low: train-only fit,unknown
+12,global_transform_color_map,skipped,not_run,0,0,11213,,,,no transform+color map fits train,,low: train-only fit,unknown
+13,bbox_crop_color_map,skipped,not_run,0,0,54111,,,,no bbox crop fits train,,low: train-only fit,unknown
+13,color_map,skipped,not_run,0,0,54111,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+13,constant_output,skipped,not_run,0,0,54111,,,,train outputs differ,,low: train-only fit,unknown
+13,fixed_crop_color_map,skipped,not_run,0,0,54111,,,,no crop/color map fits train example,,low: train-only fit,unknown
+13,fixed_sparse_edit,skipped,not_run,0,0,54111,,,,edit conflict,,low: train-only fit,unknown
+13,global_transform_color_map,skipped,not_run,0,0,54111,,,,no transform+color map fits train,,low: train-only fit,unknown
+14,bbox_crop_color_map,skipped,not_run,0,0,34851,,,,no bbox crop fits train,,low: train-only fit,unknown
+14,color_map,skipped,not_run,0,0,34851,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+14,constant_output,skipped,not_run,0,0,34851,,,,train outputs differ,,low: train-only fit,unknown
+14,fixed_crop_color_map,skipped,not_run,0,0,34851,,,,no common crop/color map,,low: train-only fit,unknown
+14,fixed_sparse_edit,skipped,not_run,0,0,34851,,,,shape mismatch,,low: train-only fit,unknown
+14,global_transform_color_map,skipped,not_run,0,0,34851,,,,no transform+color map fits train,,low: train-only fit,unknown
+17,bbox_crop_color_map,skipped,not_run,0,0,33755,,,,no bbox crop fits train,,low: train-only fit,unknown
+17,color_map,skipped,not_run,0,0,33755,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+17,constant_output,skipped,not_run,0,0,33755,,,,train outputs differ,,low: train-only fit,unknown
+17,fixed_crop_color_map,skipped,not_run,0,0,33755,,,,no crop/color map fits train example,,low: train-only fit,unknown
+17,fixed_sparse_edit,skipped,not_run,0,0,33755,,,,edit conflict,,low: train-only fit,unknown
+17,global_transform_color_map,skipped,not_run,0,0,33755,,,,no transform+color map fits train,,low: train-only fit,unknown
+18,bbox_crop_color_map,skipped,not_run,0,0,17467,,,,no bbox crop fits train,,low: train-only fit,unknown
+18,color_map,skipped,not_run,0,0,17467,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+18,constant_output,skipped,not_run,0,0,17467,,,,train outputs differ,,low: train-only fit,unknown
+18,fixed_crop_color_map,skipped,not_run,0,0,17467,,,,no crop/color map fits train example,,low: train-only fit,unknown
+18,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,17467,5220,0.000000,0.000000,fixed_cells=57; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+18,global_transform_color_map,skipped,not_run,0,0,17467,,,,no transform+color map fits train,,low: train-only fit,unknown
+19,bbox_crop_color_map,skipped,not_run,0,0,40026,,,,no bbox crop fits train,,low: train-only fit,unknown
+19,color_map,skipped,not_run,0,0,40026,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+19,constant_output,skipped,not_run,0,0,40026,,,,train outputs differ,,low: train-only fit,unknown
+19,fixed_crop_color_map,skipped,not_run,0,0,40026,,,,output larger than input,,low: train-only fit,unknown
+19,fixed_sparse_edit,skipped,not_run,0,0,40026,,,,shape mismatch,,low: train-only fit,unknown
+19,global_transform_color_map,skipped,not_run,0,0,40026,,,,no transform+color map fits train,,low: train-only fit,unknown
+20,bbox_crop_color_map,skipped,not_run,0,0,3931,,,,no bbox crop fits train,,low: train-only fit,unknown
+20,color_map,skipped,not_run,0,0,3931,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+20,constant_output,skipped,not_run,0,0,3931,,,,train outputs differ,,low: train-only fit,unknown
+20,fixed_crop_color_map,skipped,not_run,0,0,3931,,,,no crop/color map fits train example,,low: train-only fit,unknown
+20,fixed_sparse_edit,skipped,not_run,0,0,3931,,,,edit conflict,,low: train-only fit,unknown
+20,global_transform_color_map,skipped,not_run,0,0,3931,,,,no transform+color map fits train,,low: train-only fit,unknown
+21,bbox_crop_color_map,skipped,not_run,0,0,20739,,,,no bbox crop fits train,,low: train-only fit,unknown
+21,color_map,skipped,not_run,0,0,20739,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+21,constant_output,skipped,not_run,0,0,20739,,,,train outputs differ,,low: train-only fit,unknown
+21,fixed_crop_color_map,skipped,not_run,0,0,20739,,,,no common crop/color map,,low: train-only fit,unknown
+21,fixed_sparse_edit,skipped,not_run,0,0,20739,,,,shape mismatch,,low: train-only fit,unknown
+21,global_transform_color_map,skipped,not_run,0,0,20739,,,,no transform+color map fits train,,low: train-only fit,unknown
+22,bbox_crop_color_map,skipped,not_run,0,0,13283,,,,no bbox crop fits train,,low: train-only fit,unknown
+22,color_map,skipped,not_run,0,0,13283,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+22,constant_output,skipped,not_run,0,0,13283,,,,train outputs differ,,low: train-only fit,unknown
+22,fixed_crop_color_map,skipped,not_run,0,0,13283,,,,no crop/color map fits train example,,low: train-only fit,unknown
+22,fixed_sparse_edit,skipped,not_run,0,0,13283,,,,shape mismatch,,low: train-only fit,unknown
+22,global_transform_color_map,skipped,not_run,0,0,13283,,,,no transform+color map fits train,,low: train-only fit,unknown
+23,bbox_crop_color_map,skipped,not_run,0,0,10875,,,,no bbox crop fits train,,low: train-only fit,unknown
+23,color_map,skipped,not_run,0,0,10875,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+23,constant_output,skipped,not_run,0,0,10875,,,,train outputs differ,,low: train-only fit,unknown
+23,fixed_crop_color_map,skipped,not_run,0,0,10875,,,,no crop/color map fits train example,,low: train-only fit,unknown
+23,fixed_sparse_edit,skipped,not_run,0,0,10875,,,,edit conflict,,low: train-only fit,unknown
+23,global_transform_color_map,skipped,not_run,0,0,10875,,,,no transform+color map fits train,,low: train-only fit,unknown
+25,bbox_crop_color_map,skipped,not_run,0,0,10331,,,,no bbox crop fits train,,low: train-only fit,unknown
+25,color_map,skipped,not_run,0,0,10331,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+25,constant_output,skipped,not_run,0,0,10331,,,,train outputs differ,,low: train-only fit,unknown
+25,fixed_crop_color_map,skipped,not_run,0,0,10331,,,,no crop/color map fits train example,,low: train-only fit,unknown
+25,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,10331,3480,0.000000,0.000000,fixed_cells=28; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+25,global_transform_color_map,skipped,not_run,0,0,10331,,,,no transform+color map fits train,,low: train-only fit,unknown
+27,bbox_crop_color_map,skipped,not_run,0,0,6715,,,,no bbox crop fits train,,low: train-only fit,unknown
+27,color_map,skipped,not_run,0,0,6715,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+27,constant_output,skipped,not_run,0,0,6715,,,,train outputs differ,,low: train-only fit,unknown
+27,fixed_crop_color_map,skipped,not_run,0,0,6715,,,,no crop/color map fits train example,,low: train-only fit,unknown
+27,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,6715,2640,0.000000,0.000000,fixed_cells=14; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+27,global_transform_color_map,skipped,not_run,0,0,6715,,,,no transform+color map fits train,,low: train-only fit,unknown
+29,bbox_crop_color_map,skipped,not_run,0,0,71139,,,,no bbox crop fits train,,low: train-only fit,unknown
+29,color_map,skipped,not_run,0,0,71139,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+29,constant_output,skipped,not_run,0,0,71139,,,,train outputs differ,,low: train-only fit,unknown
+29,fixed_crop_color_map,skipped,not_run,0,0,71139,,,,no common crop/color map,,low: train-only fit,unknown
+29,fixed_sparse_edit,skipped,not_run,0,0,71139,,,,shape mismatch,,low: train-only fit,unknown
+29,global_transform_color_map,skipped,not_run,0,0,71139,,,,no transform+color map fits train,,low: train-only fit,unknown
+33,bbox_crop_color_map,skipped,not_run,0,0,26075,,,,no bbox crop fits train,,low: train-only fit,unknown
+33,color_map,skipped,not_run,0,0,26075,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+33,constant_output,skipped,not_run,0,0,26075,,,,train outputs differ,,low: train-only fit,unknown
+33,fixed_crop_color_map,skipped,not_run,0,0,26075,,,,no crop/color map fits train example,,low: train-only fit,unknown
+33,fixed_sparse_edit,skipped,not_run,0,0,26075,,,,edit conflict,,low: train-only fit,unknown
+33,global_transform_color_map,skipped,not_run,0,0,26075,,,,no transform+color map fits train,,low: train-only fit,unknown
+34,bbox_crop_color_map,skipped,not_run,0,0,17058,,,,no bbox crop fits train,,low: train-only fit,unknown
+34,color_map,skipped,not_run,0,0,17058,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+34,constant_output,skipped,not_run,0,0,17058,,,,train outputs differ,,low: train-only fit,unknown
+34,fixed_crop_color_map,skipped,not_run,0,0,17058,,,,no crop/color map fits train example,,low: train-only fit,unknown
+34,fixed_sparse_edit,skipped,not_run,0,0,17058,,,,edit conflict,,low: train-only fit,unknown
+34,global_transform_color_map,skipped,not_run,0,0,17058,,,,no transform+color map fits train,,low: train-only fit,unknown
+35,bbox_crop_color_map,skipped,not_run,0,0,5339,,,,no bbox crop fits train,,low: train-only fit,unknown
+35,color_map,skipped,not_run,0,0,5339,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+35,constant_output,skipped,not_run,0,0,5339,,,,train outputs differ,,low: train-only fit,unknown
+35,fixed_crop_color_map,skipped,not_run,0,0,5339,,,,no crop/color map fits train example,,low: train-only fit,unknown
+35,fixed_sparse_edit,skipped,not_run,0,0,5339,,,,edit conflict,,low: train-only fit,unknown
+35,global_transform_color_map,skipped,not_run,0,0,5339,,,,no transform+color map fits train,,low: train-only fit,unknown
+36,bbox_crop_color_map,skipped,not_run,0,0,15912,,,,no bbox crop fits train,,low: train-only fit,unknown
+36,color_map,skipped,not_run,0,0,15912,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+36,constant_output,skipped,not_run,0,0,15912,,,,train outputs differ,,low: train-only fit,unknown
+36,fixed_crop_color_map,skipped,not_run,0,0,15912,,,,no common crop/color map,,low: train-only fit,unknown
+36,fixed_sparse_edit,skipped,not_run,0,0,15912,,,,shape mismatch,,low: train-only fit,unknown
+36,global_transform_color_map,skipped,not_run,0,0,15912,,,,no transform+color map fits train,,low: train-only fit,unknown
+37,bbox_crop_color_map,skipped,not_run,0,0,8379,,,,no bbox crop fits train,,low: train-only fit,unknown
+37,color_map,skipped,not_run,0,0,8379,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+37,constant_output,skipped,not_run,0,0,8379,,,,train outputs differ,,low: train-only fit,unknown
+37,fixed_crop_color_map,skipped,not_run,0,0,8379,,,,no crop/color map fits train example,,low: train-only fit,unknown
+37,fixed_sparse_edit,skipped,not_run,0,0,8379,,,,edit conflict,,low: train-only fit,unknown
+37,global_transform_color_map,skipped,not_run,0,0,8379,,,,no transform+color map fits train,,low: train-only fit,unknown
+40,bbox_crop_color_map,skipped,not_run,0,0,5947,,,,no bbox crop fits train,,low: train-only fit,unknown
+40,color_map,skipped,not_run,0,0,5947,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+40,constant_output,skipped,not_run,0,0,5947,,,,train outputs differ,,low: train-only fit,unknown
+40,fixed_crop_color_map,skipped,not_run,0,0,5947,,,,no crop/color map fits train example,,low: train-only fit,unknown
+40,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,5947,2640,0.000000,0.000000,fixed_cells=14; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+40,global_transform_color_map,skipped,not_run,0,0,5947,,,,no transform+color map fits train,,low: train-only fit,unknown
+41,bbox_crop_color_map,skipped,not_run,0,0,9243,,,,no bbox crop fits train,,low: train-only fit,unknown
+41,color_map,skipped,not_run,0,0,9243,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+41,constant_output,skipped,not_run,0,0,9243,,,,train outputs differ,,low: train-only fit,unknown
+41,fixed_crop_color_map,skipped,not_run,0,0,9243,,,,no crop/color map fits train example,,low: train-only fit,unknown
+41,fixed_sparse_edit,skipped,not_run,0,0,9243,,,,edit conflict,,low: train-only fit,unknown
+41,global_transform_color_map,skipped,not_run,0,0,9243,,,,no transform+color map fits train,,low: train-only fit,unknown
+42,bbox_crop_color_map,skipped,not_run,0,0,5783,,,,no bbox crop fits train,,low: train-only fit,unknown
+42,color_map,skipped,not_run,0,0,5783,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+42,constant_output,skipped,not_run,0,0,5783,,,,train outputs differ,,low: train-only fit,unknown
+42,fixed_crop_color_map,skipped,not_run,0,0,5783,,,,no crop/color map fits train example,,low: train-only fit,unknown
+42,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,5783,2520,0.000000,0.000000,fixed_cells=12; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+42,global_transform_color_map,skipped,not_run,0,0,5783,,,,no transform+color map fits train,,low: train-only fit,unknown
+44,bbox_crop_color_map,skipped,not_run,0,0,15483,,,,no bbox crop fits train,,low: train-only fit,unknown
+44,color_map,skipped,not_run,0,0,15483,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+44,constant_output,skipped,not_run,0,0,15483,,,,train outputs differ,,low: train-only fit,unknown
+44,fixed_crop_color_map,skipped,not_run,0,0,15483,,,,no crop/color map fits train example,,low: train-only fit,unknown
+44,fixed_sparse_edit,skipped,not_run,0,0,15483,,,,edit conflict,,low: train-only fit,unknown
+44,global_transform_color_map,skipped,not_run,0,0,15483,,,,no transform+color map fits train,,low: train-only fit,unknown
+46,bbox_crop_color_map,skipped,not_run,0,0,19000,,,,no bbox crop fits train,,low: train-only fit,unknown
+46,color_map,skipped,not_run,0,0,19000,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+46,constant_output,skipped,not_run,0,0,19000,,,,train outputs differ,,low: train-only fit,unknown
+46,fixed_crop_color_map,skipped,not_run,0,0,19000,,,,no crop/color map fits train example,,low: train-only fit,unknown
+46,fixed_sparse_edit,skipped,not_run,0,0,19000,,,,shape mismatch,,low: train-only fit,unknown
+46,global_transform_color_map,skipped,not_run,0,0,19000,,,,no transform+color map fits train,,low: train-only fit,unknown
+49,bbox_crop_color_map,skipped,not_run,0,0,21135,,,,no bbox crop fits train,,low: train-only fit,unknown
+49,color_map,skipped,not_run,0,0,21135,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+49,constant_output,skipped,not_run,0,0,21135,,,,train outputs differ,,low: train-only fit,unknown
+49,fixed_crop_color_map,skipped,not_run,0,0,21135,,,,no common crop/color map,,low: train-only fit,unknown
+49,fixed_sparse_edit,skipped,not_run,0,0,21135,,,,shape mismatch,,low: train-only fit,unknown
+49,global_transform_color_map,skipped,not_run,0,0,21135,,,,no transform+color map fits train,,low: train-only fit,unknown
+50,bbox_crop_color_map,skipped,not_run,0,0,9146,,,,no bbox crop fits train,,low: train-only fit,unknown
+50,color_map,skipped,not_run,0,0,9146,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+50,constant_output,skipped,not_run,0,0,9146,,,,train outputs differ,,low: train-only fit,unknown
+50,fixed_crop_color_map,skipped,not_run,0,0,9146,,,,no crop/color map fits train example,,low: train-only fit,unknown
+50,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,9146,3900,0.000000,0.000000,fixed_cells=35; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+50,global_transform_color_map,skipped,not_run,0,0,9146,,,,no transform+color map fits train,,low: train-only fit,unknown
+51,bbox_crop_color_map,skipped,not_run,0,0,7483,,,,no bbox crop fits train,,low: train-only fit,unknown
+51,color_map,skipped,not_run,0,0,7483,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+51,constant_output,skipped,not_run,0,0,7483,,,,train outputs differ,,low: train-only fit,unknown
+51,fixed_crop_color_map,skipped,not_run,0,0,7483,,,,no crop/color map fits train example,,low: train-only fit,unknown
+51,fixed_sparse_edit,skipped,not_run,0,0,7483,,,,edit conflict,,low: train-only fit,unknown
+51,global_transform_color_map,skipped,not_run,0,0,7483,,,,no transform+color map fits train,,low: train-only fit,unknown
+54,bbox_crop_color_map,skipped,not_run,0,0,52411,,,,no bbox crop fits train,,low: train-only fit,unknown
+54,color_map,skipped,not_run,0,0,52411,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+54,constant_output,skipped,not_run,0,0,52411,,,,train outputs differ,,low: train-only fit,unknown
+54,fixed_crop_color_map,skipped,not_run,0,0,52411,,,,no crop/color map fits train example,,low: train-only fit,unknown
+54,fixed_sparse_edit,skipped,not_run,0,0,52411,,,,edit conflict,,low: train-only fit,unknown
+54,global_transform_color_map,skipped,not_run,0,0,52411,,,,no transform+color map fits train,,low: train-only fit,unknown
+57,bbox_crop_color_map,skipped,not_run,0,0,15459,,,,no bbox crop fits train,,low: train-only fit,unknown
+57,color_map,skipped,not_run,0,0,15459,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+57,constant_output,skipped,not_run,0,0,15459,,,,train outputs differ,,low: train-only fit,unknown
+57,fixed_crop_color_map,skipped,not_run,0,0,15459,,,,no crop/color map fits train example,,low: train-only fit,unknown
+57,fixed_sparse_edit,skipped,not_run,0,0,15459,,,,shape mismatch,,low: train-only fit,unknown
+57,global_transform_color_map,skipped,not_run,0,0,15459,,,,no transform+color map fits train,,low: train-only fit,unknown
+59,bbox_crop_color_map,skipped,not_run,0,0,19163,,,,no bbox crop fits train,,low: train-only fit,unknown
+59,color_map,skipped,not_run,0,0,19163,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+59,constant_output,skipped,not_run,0,0,19163,,,,train outputs differ,,low: train-only fit,unknown
+59,fixed_crop_color_map,skipped,not_run,0,0,19163,,,,no crop/color map fits train example,,low: train-only fit,unknown
+59,fixed_sparse_edit,skipped,not_run,0,0,19163,,,,edit conflict,,low: train-only fit,unknown
+59,global_transform_color_map,skipped,not_run,0,0,19163,,,,no transform+color map fits train,,low: train-only fit,unknown
+63,bbox_crop_color_map,skipped,not_run,0,0,26235,,,,no bbox crop fits train,,low: train-only fit,unknown
+63,color_map,skipped,not_run,0,0,26235,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+63,constant_output,skipped,not_run,0,0,26235,,,,train outputs differ,,low: train-only fit,unknown
+63,fixed_crop_color_map,skipped,not_run,0,0,26235,,,,no crop/color map fits train example,,low: train-only fit,unknown
+63,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,26235,6120,0.000000,0.000000,fixed_cells=72; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+63,global_transform_color_map,skipped,not_run,0,0,26235,,,,no transform+color map fits train,,low: train-only fit,unknown
+64,bbox_crop_color_map,skipped,not_run,0,0,10771,,,,no bbox crop fits train,,low: train-only fit,unknown
+64,color_map,skipped,not_run,0,0,10771,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+64,constant_output,skipped,not_run,0,0,10771,,,,train outputs differ,,low: train-only fit,unknown
+64,fixed_crop_color_map,skipped,not_run,0,0,10771,,,,no crop/color map fits train example,,low: train-only fit,unknown
+64,fixed_sparse_edit,skipped,not_run,0,0,10771,,,,edit conflict,,low: train-only fit,unknown
+64,global_transform_color_map,skipped,not_run,0,0,10771,,,,no transform+color map fits train,,low: train-only fit,unknown
+65,bbox_crop_color_map,skipped,not_run,0,0,20963,,,,no bbox crop fits train,,low: train-only fit,unknown
+65,color_map,skipped,not_run,0,0,20963,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+65,constant_output,skipped,not_run,0,0,20963,,,,train outputs differ,,low: train-only fit,unknown
+65,fixed_crop_color_map,skipped,not_run,0,0,20963,,,,no common crop/color map,,low: train-only fit,unknown
+65,fixed_sparse_edit,skipped,not_run,0,0,20963,,,,shape mismatch,,low: train-only fit,unknown
+65,global_transform_color_map,skipped,not_run,0,0,20963,,,,no transform+color map fits train,,low: train-only fit,unknown
+66,bbox_crop_color_map,skipped,not_run,0,0,10875,,,,no bbox crop fits train,,low: train-only fit,unknown
+66,color_map,skipped,not_run,0,0,10875,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+66,constant_output,skipped,not_run,0,0,10875,,,,train outputs differ,,low: train-only fit,unknown
+66,fixed_crop_color_map,skipped,not_run,0,0,10875,,,,no crop/color map fits train example,,low: train-only fit,unknown
+66,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,10875,4260,0.000000,0.000000,fixed_cells=41; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+66,global_transform_color_map,skipped,not_run,0,0,10875,,,,no transform+color map fits train,,low: train-only fit,unknown
+69,bbox_crop_color_map,skipped,not_run,0,0,18263,,,,no bbox crop fits train,,low: train-only fit,unknown
+69,color_map,skipped,not_run,0,0,18263,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+69,constant_output,skipped,not_run,0,0,18263,,,,train outputs differ,,low: train-only fit,unknown
+69,fixed_crop_color_map,skipped,not_run,0,0,18263,,,,no crop/color map fits train example,,low: train-only fit,unknown
+69,fixed_sparse_edit,skipped,not_run,0,0,18263,,,,edit conflict,,low: train-only fit,unknown
+69,global_transform_color_map,skipped,not_run,0,0,18263,,,,no transform+color map fits train,,low: train-only fit,unknown
+70,bbox_crop_color_map,skipped,not_run,0,0,18939,,,,no bbox crop fits train,,low: train-only fit,unknown
+70,color_map,skipped,not_run,0,0,18939,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+70,constant_output,skipped,not_run,0,0,18939,,,,train outputs differ,,low: train-only fit,unknown
+70,fixed_crop_color_map,skipped,not_run,0,0,18939,,,,no crop/color map fits train example,,low: train-only fit,unknown
+70,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,18939,3360,0.000000,0.000000,fixed_cells=26; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+70,global_transform_color_map,skipped,not_run,0,0,18939,,,,no transform+color map fits train,,low: train-only fit,unknown
+71,bbox_crop_color_map,skipped,not_run,0,0,9502,,,,no bbox crop fits train,,low: train-only fit,unknown
+71,color_map,skipped,not_run,0,0,9502,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+71,constant_output,skipped,not_run,0,0,9502,,,,train outputs differ,,low: train-only fit,unknown
+71,fixed_crop_color_map,skipped,not_run,0,0,9502,,,,no crop/color map fits train example,,low: train-only fit,unknown
+71,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,9502,3480,0.000000,0.000000,fixed_cells=28; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+71,global_transform_color_map,skipped,not_run,0,0,9502,,,,no transform+color map fits train,,low: train-only fit,unknown
+75,bbox_crop_color_map,skipped,not_run,0,0,25851,,,,no bbox crop fits train,,low: train-only fit,unknown
+75,color_map,skipped,not_run,0,0,25851,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+75,constant_output,skipped,not_run,0,0,25851,,,,train outputs differ,,low: train-only fit,unknown
+75,fixed_crop_color_map,skipped,not_run,0,0,25851,,,,no crop/color map fits train example,,low: train-only fit,unknown
+75,fixed_sparse_edit,skipped,not_run,0,0,25851,,,,edit conflict,,low: train-only fit,unknown
+75,global_transform_color_map,skipped,not_run,0,0,25851,,,,no transform+color map fits train,,low: train-only fit,unknown
+76,bbox_crop_color_map,skipped,not_run,0,0,7643,,,,no bbox crop fits train,,low: train-only fit,unknown
+76,color_map,skipped,not_run,0,0,7643,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+76,constant_output,skipped,not_run,0,0,7643,,,,train outputs differ,,low: train-only fit,unknown
+76,fixed_crop_color_map,skipped,not_run,0,0,7643,,,,no crop/color map fits train example,,low: train-only fit,unknown
+76,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,7643,3240,0.000000,0.000000,fixed_cells=24; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+76,global_transform_color_map,skipped,not_run,0,0,7643,,,,no transform+color map fits train,,low: train-only fit,unknown
+77,bbox_crop_color_map,skipped,not_run,0,0,10491,,,,no bbox crop fits train,,low: train-only fit,unknown
+77,color_map,skipped,not_run,0,0,10491,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+77,constant_output,skipped,not_run,0,0,10491,,,,train outputs differ,,low: train-only fit,unknown
+77,fixed_crop_color_map,skipped,not_run,0,0,10491,,,,no crop/color map fits train example,,low: train-only fit,unknown
+77,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,10491,3900,0.000000,0.000000,fixed_cells=35; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+77,global_transform_color_map,skipped,not_run,0,0,10491,,,,no transform+color map fits train,,low: train-only fit,unknown
+79,bbox_crop_color_map,skipped,not_run,0,0,12835,,,,no bbox crop fits train,,low: train-only fit,unknown
+79,color_map,skipped,not_run,0,0,12835,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+79,constant_output,skipped,not_run,0,0,12835,,,,train outputs differ,,low: train-only fit,unknown
+79,fixed_crop_color_map,skipped,not_run,0,0,12835,,,,no common crop/color map,,low: train-only fit,unknown
+79,fixed_sparse_edit,skipped,not_run,0,0,12835,,,,shape mismatch,,low: train-only fit,unknown
+79,global_transform_color_map,skipped,not_run,0,0,12835,,,,no transform+color map fits train,,low: train-only fit,unknown
+82,bbox_crop_color_map,skipped,not_run,0,0,14420,,,,no bbox crop fits train,,low: train-only fit,unknown
+82,color_map,skipped,not_run,0,0,14420,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+82,constant_output,skipped,not_run,0,0,14420,,,,train outputs differ,,low: train-only fit,unknown
+82,fixed_crop_color_map,skipped,not_run,0,0,14420,,,,no crop/color map fits train example,,low: train-only fit,unknown
+82,fixed_sparse_edit,skipped,not_run,0,0,14420,,,,edit conflict,,low: train-only fit,unknown
+82,global_transform_color_map,skipped,not_run,0,0,14420,,,,no transform+color map fits train,,low: train-only fit,unknown
+84,bbox_crop_color_map,skipped,not_run,0,0,17595,,,,no bbox crop fits train,,low: train-only fit,unknown
+84,color_map,skipped,not_run,0,0,17595,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+84,constant_output,skipped,not_run,0,0,17595,,,,train outputs differ,,low: train-only fit,unknown
+84,fixed_crop_color_map,skipped,not_run,0,0,17595,,,,no crop/color map fits train example,,low: train-only fit,unknown
+84,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,17595,4440,0.000000,0.000000,fixed_cells=44; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+84,global_transform_color_map,skipped,not_run,0,0,17595,,,,no transform+color map fits train,,low: train-only fit,unknown
+85,bbox_crop_color_map,skipped,not_run,0,0,16926,,,,no bbox crop fits train,,low: train-only fit,unknown
+85,color_map,skipped,not_run,0,0,16926,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+85,constant_output,skipped,not_run,0,0,16926,,,,train outputs differ,,low: train-only fit,unknown
+85,fixed_crop_color_map,skipped,not_run,0,0,16926,,,,no crop/color map fits train example,,low: train-only fit,unknown
+85,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,16926,3540,0.000000,0.000000,fixed_cells=29; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+85,global_transform_color_map,skipped,not_run,0,0,16926,,,,no transform+color map fits train,,low: train-only fit,unknown
+88,bbox_crop_color_map,skipped,not_run,0,0,30659,,,,no bbox crop fits train,,low: train-only fit,unknown
+88,color_map,skipped,not_run,0,0,30659,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+88,constant_output,skipped,not_run,0,0,30659,,,,train outputs differ,,low: train-only fit,unknown
+88,fixed_crop_color_map,skipped,not_run,0,0,30659,,,,no common crop/color map,,low: train-only fit,unknown
+88,fixed_sparse_edit,skipped,not_run,0,0,30659,,,,shape mismatch,,low: train-only fit,unknown
+88,global_transform_color_map,skipped,not_run,0,0,30659,,,,no transform+color map fits train,,low: train-only fit,unknown
+89,bbox_crop_color_map,skipped,not_run,0,0,11703,,,,no bbox crop fits train,,low: train-only fit,unknown
+89,color_map,skipped,not_run,0,0,11703,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+89,constant_output,skipped,not_run,0,0,11703,,,,train outputs differ,,low: train-only fit,unknown
+89,fixed_crop_color_map,skipped,not_run,0,0,11703,,,,no crop/color map fits train example,,low: train-only fit,unknown
+89,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,11703,3720,0.000000,0.000000,fixed_cells=32; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+89,global_transform_color_map,skipped,not_run,0,0,11703,,,,no transform+color map fits train,,low: train-only fit,unknown
+90,bbox_crop_color_map,skipped,not_run,0,0,8030,,,,no bbox crop fits train,,low: train-only fit,unknown
+90,color_map,skipped,not_run,0,0,8030,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+90,constant_output,skipped,not_run,0,0,8030,,,,train outputs differ,,low: train-only fit,unknown
+90,fixed_crop_color_map,skipped,not_run,0,0,8030,,,,no crop/color map fits train example,,low: train-only fit,unknown
+90,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,8030,3420,0.000000,0.000000,fixed_cells=27; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+90,global_transform_color_map,skipped,not_run,0,0,8030,,,,no transform+color map fits train,,low: train-only fit,unknown
+91,bbox_crop_color_map,skipped,not_run,0,0,43107,,,,no bbox crop fits train,,low: train-only fit,unknown
+91,color_map,skipped,not_run,0,0,43107,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+91,constant_output,skipped,not_run,0,0,43107,,,,train outputs differ,,low: train-only fit,unknown
+91,fixed_crop_color_map,skipped,not_run,0,0,43107,,,,no common crop/color map,,low: train-only fit,unknown
+91,fixed_sparse_edit,skipped,not_run,0,0,43107,,,,shape mismatch,,low: train-only fit,unknown
+91,global_transform_color_map,skipped,not_run,0,0,43107,,,,no transform+color map fits train,,low: train-only fit,unknown
+92,bbox_crop_color_map,skipped,not_run,0,0,24574,,,,no bbox crop fits train,,low: train-only fit,unknown
+92,color_map,skipped,not_run,0,0,24574,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+92,constant_output,skipped,not_run,0,0,24574,,,,train outputs differ,,low: train-only fit,unknown
+92,fixed_crop_color_map,skipped,not_run,0,0,24574,,,,no crop/color map fits train example,,low: train-only fit,unknown
+92,fixed_sparse_edit,skipped,not_run,0,0,24574,,,,edit conflict,,low: train-only fit,unknown
+92,global_transform_color_map,skipped,not_run,0,0,24574,,,,no transform+color map fits train,,low: train-only fit,unknown
+93,bbox_crop_color_map,skipped,not_run,0,0,12539,,,,no bbox crop fits train,,low: train-only fit,unknown
+93,color_map,skipped,not_run,0,0,12539,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+93,constant_output,skipped,not_run,0,0,12539,,,,train outputs differ,,low: train-only fit,unknown
+93,fixed_crop_color_map,skipped,not_run,0,0,12539,,,,no crop/color map fits train example,,low: train-only fit,unknown
+93,fixed_sparse_edit,skipped,not_run,0,0,12539,,,,edit conflict,,low: train-only fit,unknown
+93,global_transform_color_map,skipped,not_run,0,0,12539,,,,no transform+color map fits train,,low: train-only fit,unknown
+97,bbox_crop_color_map,skipped,not_run,0,0,8263,,,,no bbox crop fits train,,low: train-only fit,unknown
+97,color_map,skipped,not_run,0,0,8263,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+97,constant_output,skipped,not_run,0,0,8263,,,,train outputs differ,,low: train-only fit,unknown
+97,fixed_crop_color_map,skipped,not_run,0,0,8263,,,,no crop/color map fits train example,,low: train-only fit,unknown
+97,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,8263,4140,0.000000,0.000000,fixed_cells=39; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+97,global_transform_color_map,skipped,not_run,0,0,8263,,,,no transform+color map fits train,,low: train-only fit,unknown
+101,bbox_crop_color_map,skipped,not_run,0,0,29435,,,,no bbox crop fits train,,low: train-only fit,unknown
+101,color_map,skipped,not_run,0,0,29435,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+101,constant_output,skipped,not_run,0,0,29435,,,,train outputs differ,,low: train-only fit,unknown
+101,fixed_crop_color_map,skipped,not_run,0,0,29435,,,,no crop/color map fits train example,,low: train-only fit,unknown
+101,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,29435,4500,0.000000,0.000000,fixed_cells=45; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+101,global_transform_color_map,skipped,not_run,0,0,29435,,,,no transform+color map fits train,,low: train-only fit,unknown
+102,bbox_crop_color_map,skipped,not_run,0,0,10233,,,,no bbox crop fits train,,low: train-only fit,unknown
+102,color_map,skipped,not_run,0,0,10233,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+102,constant_output,skipped,not_run,0,0,10233,,,,train outputs differ,,low: train-only fit,unknown
+102,fixed_crop_color_map,skipped,not_run,0,0,10233,,,,no crop/color map fits train example,,low: train-only fit,unknown
+102,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,10233,3360,0.000000,0.000000,fixed_cells=26; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+102,global_transform_color_map,skipped,not_run,0,0,10233,,,,no transform+color map fits train,,low: train-only fit,unknown
+109,bbox_crop_color_map,skipped,not_run,0,0,38755,,,,no bbox crop fits train,,low: train-only fit,unknown
+109,color_map,skipped,not_run,0,0,38755,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+109,constant_output,skipped,not_run,0,0,38755,,,,train outputs differ,,low: train-only fit,unknown
+109,fixed_crop_color_map,skipped,not_run,0,0,38755,,,,no crop/color map fits train example,,low: train-only fit,unknown
+109,fixed_sparse_edit,skipped,not_run,0,0,38755,,,,shape mismatch,,low: train-only fit,unknown
+109,global_transform_color_map,skipped,not_run,0,0,38755,,,,no transform+color map fits train,,low: train-only fit,unknown
+110,bbox_crop_color_map,skipped,not_run,0,0,42363,,,,no bbox crop fits train,,low: train-only fit,unknown
+110,color_map,skipped,not_run,0,0,42363,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+110,constant_output,skipped,not_run,0,0,42363,,,,train outputs differ,,low: train-only fit,unknown
+110,fixed_crop_color_map,skipped,not_run,0,0,42363,,,,no crop/color map fits train example,,low: train-only fit,unknown
+110,fixed_sparse_edit,skipped,not_run,0,0,42363,,,,edit conflict,,low: train-only fit,unknown
+110,global_transform_color_map,skipped,not_run,0,0,42363,,,,no transform+color map fits train,,low: train-only fit,unknown
+112,bbox_crop_color_map,skipped,not_run,0,0,15003,,,,no bbox crop fits train,,low: train-only fit,unknown
+112,color_map,skipped,not_run,0,0,15003,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+112,constant_output,skipped,not_run,0,0,15003,,,,train outputs differ,,low: train-only fit,unknown
+112,fixed_crop_color_map,skipped,not_run,0,0,15003,,,,no crop/color map fits train example,,low: train-only fit,unknown
+112,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,15003,4680,0.000000,0.000000,fixed_cells=48; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+112,global_transform_color_map,skipped,not_run,0,0,15003,,,,no transform+color map fits train,,low: train-only fit,unknown
+117,bbox_crop_color_map,skipped,not_run,0,0,14075,,,,no bbox crop fits train,,low: train-only fit,unknown
+117,color_map,skipped,not_run,0,0,14075,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+117,constant_output,skipped,not_run,0,0,14075,,,,train outputs differ,,low: train-only fit,unknown
+117,fixed_crop_color_map,skipped,not_run,0,0,14075,,,,no crop/color map fits train example,,low: train-only fit,unknown
+117,fixed_sparse_edit,skipped,not_run,0,0,14075,,,,edit conflict,,low: train-only fit,unknown
+117,global_transform_color_map,skipped,not_run,0,0,14075,,,,no transform+color map fits train,,low: train-only fit,unknown
+118,bbox_crop_color_map,skipped,not_run,0,0,10000,,,,no bbox crop fits train,,low: train-only fit,unknown
+118,color_map,skipped,not_run,0,0,10000,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+118,constant_output,skipped,not_run,0,0,10000,,,,train outputs differ,,low: train-only fit,unknown
+118,fixed_crop_color_map,skipped,not_run,0,0,10000,,,,no crop/color map fits train example,,low: train-only fit,unknown
+118,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,10000,3660,0.000000,0.000000,fixed_cells=31; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+118,global_transform_color_map,skipped,not_run,0,0,10000,,,,no transform+color map fits train,,low: train-only fit,unknown
+119,bbox_crop_color_map,skipped,not_run,0,0,6619,,,,no bbox crop fits train,,low: train-only fit,unknown
+119,color_map,skipped,not_run,0,0,6619,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+119,constant_output,skipped,not_run,0,0,6619,,,,train outputs differ,,low: train-only fit,unknown
+119,fixed_crop_color_map,skipped,not_run,0,0,6619,,,,no crop/color map fits train example,,low: train-only fit,unknown
+119,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,6619,3360,0.000000,0.000000,fixed_cells=26; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+119,global_transform_color_map,skipped,not_run,0,0,6619,,,,no transform+color map fits train,,low: train-only fit,unknown
+126,bbox_crop_color_map,skipped,not_run,0,0,4027,,,,no bbox crop fits train,,low: train-only fit,unknown
+126,color_map,skipped,not_run,0,0,4027,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+126,constant_output,skipped,not_run,0,0,4027,,,,train outputs differ,,low: train-only fit,unknown
+126,fixed_crop_color_map,skipped,not_run,0,0,4027,,,,no crop/color map fits train example,,low: train-only fit,unknown
+126,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,4027,2040,0.000000,0.000000,fixed_cells=4; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+126,global_transform_color_map,skipped,not_run,0,0,4027,,,,no transform+color map fits train,,low: train-only fit,unknown
+128,bbox_crop_color_map,skipped,not_run,0,0,48731,,,,no bbox crop fits train,,low: train-only fit,unknown
+128,color_map,skipped,not_run,0,0,48731,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+128,constant_output,skipped,not_run,0,0,48731,,,,train outputs differ,,low: train-only fit,unknown
+128,fixed_crop_color_map,skipped,not_run,0,0,48731,,,,no crop/color map fits train example,,low: train-only fit,unknown
+128,fixed_sparse_edit,skipped,not_run,0,0,48731,,,,edit conflict,,low: train-only fit,unknown
+128,global_transform_color_map,skipped,not_run,0,0,48731,,,,no transform+color map fits train,,low: train-only fit,unknown
+130,bbox_crop_color_map,skipped,not_run,0,0,12490,,,,no bbox crop fits train,,low: train-only fit,unknown
+130,color_map,skipped,not_run,0,0,12490,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+130,constant_output,skipped,not_run,0,0,12490,,,,train outputs differ,,low: train-only fit,unknown
+130,fixed_crop_color_map,skipped,not_run,0,0,12490,,,,no crop/color map fits train example,,low: train-only fit,unknown
+130,fixed_sparse_edit,skipped,not_run,0,0,12490,,,,shape mismatch,,low: train-only fit,unknown
+130,global_transform_color_map,skipped,not_run,0,0,12490,,,,no transform+color map fits train,,low: train-only fit,unknown
+131,bbox_crop_color_map,skipped,not_run,0,0,11707,,,,no bbox crop fits train,,low: train-only fit,unknown
+131,color_map,skipped,not_run,0,0,11707,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+131,constant_output,skipped,not_run,0,0,11707,,,,train outputs differ,,low: train-only fit,unknown
+131,fixed_crop_color_map,skipped,not_run,0,0,11707,,,,no crop/color map fits train example,,low: train-only fit,unknown
+131,fixed_sparse_edit,skipped,not_run,0,0,11707,,,,edit conflict,,low: train-only fit,unknown
+131,global_transform_color_map,skipped,not_run,0,0,11707,,,,no transform+color map fits train,,low: train-only fit,unknown
+133,bbox_crop_color_map,skipped,not_run,0,0,59322,,,,no bbox crop fits train,,low: train-only fit,unknown
+133,color_map,skipped,not_run,0,0,59322,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+133,constant_output,skipped,not_run,0,0,59322,,,,train outputs differ,,low: train-only fit,unknown
+133,fixed_crop_color_map,skipped,not_run,0,0,59322,,,,no crop/color map fits train example,,low: train-only fit,unknown
+133,fixed_sparse_edit,skipped,not_run,0,0,59322,,,,edit conflict,,low: train-only fit,unknown
+133,global_transform_color_map,skipped,not_run,0,0,59322,,,,no transform+color map fits train,,low: train-only fit,unknown
+141,bbox_crop_color_map,skipped,not_run,0,0,14107,,,,no bbox crop fits train,,low: train-only fit,unknown
+141,color_map,skipped,not_run,0,0,14107,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+141,constant_output,skipped,not_run,0,0,14107,,,,train outputs differ,,low: train-only fit,unknown
+141,fixed_crop_color_map,skipped,not_run,0,0,14107,,,,no crop/color map fits train example,,low: train-only fit,unknown
+141,fixed_sparse_edit,skipped,not_run,0,0,14107,,,,edit conflict,,low: train-only fit,unknown
+141,global_transform_color_map,skipped,not_run,0,0,14107,,,,no transform+color map fits train,,low: train-only fit,unknown
+143,bbox_crop_color_map,skipped,not_run,0,0,3803,,,,no bbox crop fits train,,low: train-only fit,unknown
+143,color_map,skipped,not_run,0,0,3803,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+143,constant_output,skipped,not_run,0,0,3803,,,,train outputs differ,,low: train-only fit,unknown
+143,fixed_crop_color_map,skipped,not_run,0,0,3803,,,,no final crop mapping,,low: train-only fit,unknown
+143,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,3803,2520,0.000000,0.000000,fixed_cells=12; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+143,global_transform_color_map,skipped,not_run,0,0,3803,,,,no transform+color map fits train,,low: train-only fit,unknown
+154,bbox_crop_color_map,skipped,not_run,0,0,17371,,,,no bbox crop fits train,,low: train-only fit,unknown
+154,color_map,skipped,not_run,0,0,17371,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+154,constant_output,skipped,not_run,0,0,17371,,,,train outputs differ,,low: train-only fit,unknown
+154,fixed_crop_color_map,skipped,not_run,0,0,17371,,,,no crop/color map fits train example,,low: train-only fit,unknown
+154,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,17371,4320,0.000000,0.000000,fixed_cells=42; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+154,global_transform_color_map,skipped,not_run,0,0,17371,,,,no transform+color map fits train,,low: train-only fit,unknown
+156,bbox_crop_color_map,skipped,not_run,0,0,9502,,,,no bbox crop fits train,,low: train-only fit,unknown
+156,color_map,skipped,not_run,0,0,9502,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+156,constant_output,skipped,not_run,0,0,9502,,,,train outputs differ,,low: train-only fit,unknown
+156,fixed_crop_color_map,skipped,not_run,0,0,9502,,,,no crop/color map fits train example,,low: train-only fit,unknown
+156,fixed_sparse_edit,skipped,not_run,0,0,9502,,,,edit conflict,,low: train-only fit,unknown
+156,global_transform_color_map,skipped,not_run,0,0,9502,,,,no transform+color map fits train,,low: train-only fit,unknown
+157,bbox_crop_color_map,skipped,not_run,0,0,24780,,,,no bbox crop fits train,,low: train-only fit,unknown
+157,color_map,skipped,not_run,0,0,24780,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+157,constant_output,skipped,not_run,0,0,24780,,,,train outputs differ,,low: train-only fit,unknown
+157,fixed_crop_color_map,skipped,not_run,0,0,24780,,,,no crop/color map fits train example,,low: train-only fit,unknown
+157,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,24780,5340,0.000000,0.000000,fixed_cells=59; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+157,global_transform_color_map,skipped,not_run,0,0,24780,,,,no transform+color map fits train,,low: train-only fit,unknown
+158,bbox_crop_color_map,skipped,not_run,0,0,24283,,,,no bbox crop fits train,,low: train-only fit,unknown
+158,color_map,skipped,not_run,0,0,24283,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+158,constant_output,skipped,not_run,0,0,24283,,,,train outputs differ,,low: train-only fit,unknown
+158,fixed_crop_color_map,skipped,not_run,0,0,24283,,,,no crop/color map fits train example,,low: train-only fit,unknown
+158,fixed_sparse_edit,skipped,not_run,0,0,24283,,,,edit conflict,,low: train-only fit,unknown
+158,global_transform_color_map,skipped,not_run,0,0,24283,,,,no transform+color map fits train,,low: train-only fit,unknown
+159,bbox_crop_color_map,skipped,not_run,0,0,48739,,,,no bbox crop fits train,,low: train-only fit,unknown
+159,color_map,skipped,not_run,0,0,48739,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+159,constant_output,skipped,not_run,0,0,48739,,,,train outputs differ,,low: train-only fit,unknown
+159,fixed_crop_color_map,skipped,not_run,0,0,48739,,,,no crop/color map fits train example,,low: train-only fit,unknown
+159,fixed_sparse_edit,skipped,not_run,0,0,48739,,,,shape mismatch,,low: train-only fit,unknown
+159,global_transform_color_map,skipped,not_run,0,0,48739,,,,no transform+color map fits train,,low: train-only fit,unknown
+161,bbox_crop_color_map,skipped,not_run,0,0,34907,,,,no bbox crop fits train,,low: train-only fit,unknown
+161,color_map,skipped,not_run,0,0,34907,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+161,constant_output,skipped,not_run,0,0,34907,,,,train outputs differ,,low: train-only fit,unknown
+161,fixed_crop_color_map,skipped,not_run,0,0,34907,,,,no crop/color map fits train example,,low: train-only fit,unknown
+161,fixed_sparse_edit,skipped,not_run,0,0,34907,,,,edit conflict,,low: train-only fit,unknown
+161,global_transform_color_map,skipped,not_run,0,0,34907,,,,no transform+color map fits train,,low: train-only fit,unknown
+162,bbox_crop_color_map,skipped,not_run,0,0,12027,,,,no bbox crop fits train,,low: train-only fit,unknown
+162,color_map,skipped,not_run,0,0,12027,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+162,constant_output,skipped,not_run,0,0,12027,,,,train outputs differ,,low: train-only fit,unknown
+162,fixed_crop_color_map,skipped,not_run,0,0,12027,,,,no crop/color map fits train example,,low: train-only fit,unknown
+162,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,12027,3840,0.000000,0.000000,fixed_cells=34; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+162,global_transform_color_map,skipped,not_run,0,0,12027,,,,no transform+color map fits train,,low: train-only fit,unknown
+163,bbox_crop_color_map,skipped,not_run,0,0,17092,,,,no bbox crop fits train,,low: train-only fit,unknown
+163,color_map,skipped,not_run,0,0,17092,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+163,constant_output,skipped,not_run,0,0,17092,,,,train outputs differ,,low: train-only fit,unknown
+163,fixed_crop_color_map,skipped,not_run,0,0,17092,,,,no crop/color map fits train example,,low: train-only fit,unknown
+163,fixed_sparse_edit,skipped,not_run,0,0,17092,,,,edit conflict,,low: train-only fit,unknown
+163,global_transform_color_map,skipped,not_run,0,0,17092,,,,no transform+color map fits train,,low: train-only fit,unknown
+165,bbox_crop_color_map,skipped,not_run,0,0,27835,,,,no bbox crop fits train,,low: train-only fit,unknown
+165,color_map,skipped,not_run,0,0,27835,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+165,constant_output,skipped,not_run,0,0,27835,,,,train outputs differ,,low: train-only fit,unknown
+165,fixed_crop_color_map,skipped,not_run,0,0,27835,,,,no crop/color map fits train example,,low: train-only fit,unknown
+165,fixed_sparse_edit,skipped,not_run,0,0,27835,,,,edit conflict,,low: train-only fit,unknown
+165,global_transform_color_map,skipped,not_run,0,0,27835,,,,no transform+color map fits train,,low: train-only fit,unknown
+166,bbox_crop_color_map,skipped,not_run,0,0,11867,,,,no bbox crop fits train,,low: train-only fit,unknown
+166,color_map,skipped,not_run,0,0,11867,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+166,constant_output,skipped,not_run,0,0,11867,,,,train outputs differ,,low: train-only fit,unknown
+166,fixed_crop_color_map,skipped,not_run,0,0,11867,,,,no crop/color map fits train example,,low: train-only fit,unknown
+166,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,11867,3360,0.000000,0.000000,fixed_cells=26; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+166,global_transform_color_map,skipped,not_run,0,0,11867,,,,no transform+color map fits train,,low: train-only fit,unknown
+168,bbox_crop_color_map,skipped,not_run,0,0,5659,,,,no bbox crop fits train,,low: train-only fit,unknown
+168,color_map,skipped,not_run,0,0,5659,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+168,constant_output,skipped,not_run,0,0,5659,,,,train outputs differ,,low: train-only fit,unknown
+168,fixed_crop_color_map,skipped,not_run,0,0,5659,,,,no crop/color map fits train example,,low: train-only fit,unknown
+168,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,5659,2640,0.000000,0.000000,fixed_cells=14; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+168,global_transform_color_map,skipped,not_run,0,0,5659,,,,no transform+color map fits train,,low: train-only fit,unknown
+169,bbox_crop_color_map,skipped,not_run,0,0,9787,,,,no bbox crop fits train,,low: train-only fit,unknown
+169,color_map,skipped,not_run,0,0,9787,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+169,constant_output,skipped,not_run,0,0,9787,,,,train outputs differ,,low: train-only fit,unknown
+169,fixed_crop_color_map,skipped,not_run,0,0,9787,,,,no crop/color map fits train example,,low: train-only fit,unknown
+169,fixed_sparse_edit,skipped,not_run,0,0,9787,,,,edit conflict,,low: train-only fit,unknown
+169,global_transform_color_map,skipped,not_run,0,0,9787,,,,no transform+color map fits train,,low: train-only fit,unknown
+170,bbox_crop_color_map,skipped,not_run,0,0,13731,,,,no bbox crop fits train,,low: train-only fit,unknown
+170,color_map,skipped,not_run,0,0,13731,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+170,constant_output,skipped,not_run,0,0,13731,,,,train outputs differ,,low: train-only fit,unknown
+170,fixed_crop_color_map,skipped,not_run,0,0,13731,,,,no crop/color map fits train example,,low: train-only fit,unknown
+170,fixed_sparse_edit,skipped,not_run,0,0,13731,,,,shape mismatch,,low: train-only fit,unknown
+170,global_transform_color_map,skipped,not_run,0,0,13731,,,,no transform+color map fits train,,low: train-only fit,unknown
+173,bbox_crop_color_map,skipped,not_run,0,0,8475,,,,no bbox crop fits train,,low: train-only fit,unknown
+173,color_map,skipped,not_run,0,0,8475,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+173,constant_output,skipped,not_run,0,0,8475,,,,train outputs differ,,low: train-only fit,unknown
+173,fixed_crop_color_map,skipped,not_run,0,0,8475,,,,no crop/color map fits train example,,low: train-only fit,unknown
+173,fixed_sparse_edit,skipped,not_run,0,0,8475,,,,edit conflict,,low: train-only fit,unknown
+173,global_transform_color_map,skipped,not_run,0,0,8475,,,,no transform+color map fits train,,low: train-only fit,unknown
+174,bbox_crop_color_map,skipped,not_run,0,0,12963,,,,no bbox crop fits train,,low: train-only fit,unknown
+174,color_map,skipped,not_run,0,0,12963,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+174,constant_output,skipped,not_run,0,0,12963,,,,train outputs differ,,low: train-only fit,unknown
+174,fixed_crop_color_map,skipped,not_run,0,0,12963,,,,no common crop/color map,,low: train-only fit,unknown
+174,fixed_sparse_edit,skipped,not_run,0,0,12963,,,,shape mismatch,,low: train-only fit,unknown
+174,global_transform_color_map,skipped,not_run,0,0,12963,,,,no transform+color map fits train,,low: train-only fit,unknown
+177,bbox_crop_color_map,skipped,not_run,0,0,23171,,,,no bbox crop fits train,,low: train-only fit,unknown
+177,color_map,skipped,not_run,0,0,23171,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+177,constant_output,skipped,not_run,0,0,23171,,,,train outputs differ,,low: train-only fit,unknown
+177,fixed_crop_color_map,skipped,not_run,0,0,23171,,,,no crop/color map fits train example,,low: train-only fit,unknown
+177,fixed_sparse_edit,skipped,not_run,0,0,23171,,,,shape mismatch,,low: train-only fit,unknown
+177,global_transform_color_map,skipped,not_run,0,0,23171,,,,no transform+color map fits train,,low: train-only fit,unknown
+178,bbox_crop_color_map,skipped,not_run,0,0,13497,,,,no bbox crop fits train,,low: train-only fit,unknown
+178,color_map,skipped,not_run,0,0,13497,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+178,constant_output,skipped,not_run,0,0,13497,,,,train outputs differ,,low: train-only fit,unknown
+178,fixed_crop_color_map,skipped,not_run,0,0,13497,,,,no common crop/color map,,low: train-only fit,unknown
+178,fixed_sparse_edit,skipped,not_run,0,0,13497,,,,shape mismatch,,low: train-only fit,unknown
+178,global_transform_color_map,skipped,not_run,0,0,13497,,,,no transform+color map fits train,,low: train-only fit,unknown
+182,bbox_crop_color_map,skipped,not_run,0,0,12364,,,,no bbox crop fits train,,low: train-only fit,unknown
+182,color_map,skipped,not_run,0,0,12364,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+182,constant_output,skipped,not_run,0,0,12364,,,,train outputs differ,,low: train-only fit,unknown
+182,fixed_crop_color_map,skipped,not_run,0,0,12364,,,,no crop/color map fits train example,,low: train-only fit,unknown
+182,fixed_sparse_edit,skipped,not_run,0,0,12364,,,,edit conflict,,low: train-only fit,unknown
+182,global_transform_color_map,skipped,not_run,0,0,12364,,,,no transform+color map fits train,,low: train-only fit,unknown
+183,bbox_crop_color_map,skipped,not_run,0,0,17795,,,,no bbox crop fits train,,low: train-only fit,unknown
+183,color_map,skipped,not_run,0,0,17795,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+183,constant_output,skipped,not_run,0,0,17795,,,,train outputs differ,,low: train-only fit,unknown
+183,fixed_crop_color_map,skipped,not_run,0,0,17795,,,,no crop/color map fits train example,,low: train-only fit,unknown
+183,fixed_sparse_edit,skipped,not_run,0,0,17795,,,,shape mismatch,,low: train-only fit,unknown
+183,global_transform_color_map,skipped,not_run,0,0,17795,,,,no transform+color map fits train,,low: train-only fit,unknown
+184,bbox_crop_color_map,skipped,not_run,0,0,12387,,,,no bbox crop fits train,,low: train-only fit,unknown
+184,color_map,skipped,not_run,0,0,12387,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+184,constant_output,skipped,not_run,0,0,12387,,,,train outputs differ,,low: train-only fit,unknown
+184,fixed_crop_color_map,skipped,not_run,0,0,12387,,,,no crop/color map fits train example,,low: train-only fit,unknown
+184,fixed_sparse_edit,skipped,not_run,0,0,12387,,,,shape mismatch,,low: train-only fit,unknown
+184,global_transform_color_map,skipped,not_run,0,0,12387,,,,no transform+color map fits train,,low: train-only fit,unknown
+185,bbox_crop_color_map,skipped,not_run,0,0,13431,,,,no bbox crop fits train,,low: train-only fit,unknown
+185,color_map,skipped,not_run,0,0,13431,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+185,constant_output,skipped,not_run,0,0,13431,,,,train outputs differ,,low: train-only fit,unknown
+185,fixed_crop_color_map,skipped,not_run,0,0,13431,,,,no crop/color map fits train example,,low: train-only fit,unknown
+185,fixed_sparse_edit,skipped,not_run,0,0,13431,,,,shape mismatch,,low: train-only fit,unknown
+185,global_transform_color_map,skipped,not_run,0,0,13431,,,,no transform+color map fits train,,low: train-only fit,unknown
+189,bbox_crop_color_map,skipped,not_run,0,0,17571,,,,no bbox crop fits train,,low: train-only fit,unknown
+189,color_map,skipped,not_run,0,0,17571,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+189,constant_output,skipped,not_run,0,0,17571,,,,train outputs differ,,low: train-only fit,unknown
+189,fixed_crop_color_map,skipped,not_run,0,0,17571,,,,no crop/color map fits train example,,low: train-only fit,unknown
+189,fixed_sparse_edit,skipped,not_run,0,0,17571,,,,shape mismatch,,low: train-only fit,unknown
+189,global_transform_color_map,skipped,not_run,0,0,17571,,,,no transform+color map fits train,,low: train-only fit,unknown
+190,bbox_crop_color_map,skipped,not_run,0,0,5851,,,,no bbox crop fits train,,low: train-only fit,unknown
+190,color_map,skipped,not_run,0,0,5851,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+190,constant_output,skipped,not_run,0,0,5851,,,,train outputs differ,,low: train-only fit,unknown
+190,fixed_crop_color_map,skipped,not_run,0,0,5851,,,,no crop/color map fits train example,,low: train-only fit,unknown
+190,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,5851,2640,0.000000,0.000000,fixed_cells=14; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+190,global_transform_color_map,skipped,not_run,0,0,5851,,,,no transform+color map fits train,,low: train-only fit,unknown
+191,bbox_crop_color_map,skipped,not_run,0,0,36076,,,,no bbox crop fits train,,low: train-only fit,unknown
+191,color_map,skipped,not_run,0,0,36076,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+191,constant_output,skipped,not_run,0,0,36076,,,,train outputs differ,,low: train-only fit,unknown
+191,fixed_crop_color_map,skipped,not_run,0,0,36076,,,,no crop/color map fits train example,,low: train-only fit,unknown
+191,fixed_sparse_edit,skipped,not_run,0,0,36076,,,,too many fixed edits: 94,,low: train-only fit,unknown
+191,global_transform_color_map,skipped,not_run,0,0,36076,,,,no transform+color map fits train,,low: train-only fit,unknown
+192,bbox_crop_color_map,skipped,not_run,0,0,9231,,,,no bbox crop fits train,,low: train-only fit,unknown
+192,color_map,skipped,not_run,0,0,9231,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+192,constant_output,skipped,not_run,0,0,9231,,,,train outputs differ,,low: train-only fit,unknown
+192,fixed_crop_color_map,skipped,not_run,0,0,9231,,,,no crop/color map fits train example,,low: train-only fit,unknown
+192,fixed_sparse_edit,skipped,not_run,0,0,9231,,,,edit conflict,,low: train-only fit,unknown
+192,global_transform_color_map,skipped,not_run,0,0,9231,,,,no transform+color map fits train,,low: train-only fit,unknown
+193,bbox_crop_color_map,skipped,not_run,0,0,11099,,,,no bbox crop fits train,,low: train-only fit,unknown
+193,color_map,skipped,not_run,0,0,11099,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+193,constant_output,skipped,not_run,0,0,11099,,,,train outputs differ,,low: train-only fit,unknown
+193,fixed_crop_color_map,skipped,not_run,0,0,11099,,,,no crop/color map fits train example,,low: train-only fit,unknown
+193,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,11099,3060,0.000000,0.000000,fixed_cells=21; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+193,global_transform_color_map,skipped,not_run,0,0,11099,,,,no transform+color map fits train,,low: train-only fit,unknown
+196,bbox_crop_color_map,skipped,not_run,0,0,18011,,,,no bbox crop fits train,,low: train-only fit,unknown
+196,color_map,skipped,not_run,0,0,18011,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+196,constant_output,skipped,not_run,0,0,18011,,,,train outputs differ,,low: train-only fit,unknown
+196,fixed_crop_color_map,skipped,not_run,0,0,18011,,,,no crop/color map fits train example,,low: train-only fit,unknown
+196,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,18011,4860,0.000000,0.000000,fixed_cells=51; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+196,global_transform_color_map,skipped,not_run,0,0,18011,,,,no transform+color map fits train,,low: train-only fit,unknown
+197,bbox_crop_color_map,skipped,not_run,0,0,14567,,,,no bbox crop fits train,,low: train-only fit,unknown
+197,color_map,skipped,not_run,0,0,14567,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+197,constant_output,skipped,not_run,0,0,14567,,,,train outputs differ,,low: train-only fit,unknown
+197,fixed_crop_color_map,skipped,not_run,0,0,14567,,,,no crop/color map fits train example,,low: train-only fit,unknown
+197,fixed_sparse_edit,skipped,not_run,0,0,14567,,,,edit conflict,,low: train-only fit,unknown
+197,global_transform_color_map,skipped,not_run,0,0,14567,,,,no transform+color map fits train,,low: train-only fit,unknown
+201,bbox_crop_color_map,skipped,not_run,0,0,22224,,,,no bbox crop fits train,,low: train-only fit,unknown
+201,color_map,skipped,not_run,0,0,22224,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+201,constant_output,skipped,not_run,0,0,22224,,,,train outputs differ,,low: train-only fit,unknown
+201,fixed_crop_color_map,skipped,not_run,0,0,22224,,,,no crop/color map fits train example,,low: train-only fit,unknown
+201,fixed_sparse_edit,skipped,not_run,0,0,22224,,,,shape mismatch,,low: train-only fit,unknown
+201,global_transform_color_map,skipped,not_run,0,0,22224,,,,no transform+color map fits train,,low: train-only fit,unknown
+202,bbox_crop_color_map,skipped,not_run,0,0,19206,,,,no bbox crop fits train,,low: train-only fit,unknown
+202,color_map,skipped,not_run,0,0,19206,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+202,constant_output,skipped,not_run,0,0,19206,,,,train outputs differ,,low: train-only fit,unknown
+202,fixed_crop_color_map,skipped,not_run,0,0,19206,,,,no crop/color map fits train example,,low: train-only fit,unknown
+202,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,19206,4740,0.000000,0.000000,fixed_cells=49; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+202,global_transform_color_map,skipped,not_run,0,0,19206,,,,no transform+color map fits train,,low: train-only fit,unknown
+204,bbox_crop_color_map,skipped,not_run,0,0,56171,,,,no bbox crop fits train,,low: train-only fit,unknown
+204,color_map,skipped,not_run,0,0,56171,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+204,constant_output,skipped,not_run,0,0,56171,,,,train outputs differ,,low: train-only fit,unknown
+204,fixed_crop_color_map,skipped,not_run,0,0,56171,,,,no crop/color map fits train example,,low: train-only fit,unknown
+204,fixed_sparse_edit,skipped,not_run,0,0,56171,,,,edit conflict,,low: train-only fit,unknown
+204,global_transform_color_map,skipped,not_run,0,0,56171,,,,no transform+color map fits train,,low: train-only fit,unknown
+205,bbox_crop_color_map,skipped,not_run,0,0,30083,,,,no bbox crop fits train,,low: train-only fit,unknown
+205,color_map,skipped,not_run,0,0,30083,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+205,constant_output,skipped,not_run,0,0,30083,,,,train outputs differ,,low: train-only fit,unknown
+205,fixed_crop_color_map,skipped,not_run,0,0,30083,,,,no crop/color map fits train example,,low: train-only fit,unknown
+205,fixed_sparse_edit,skipped,not_run,0,0,30083,,,,shape mismatch,,low: train-only fit,unknown
+205,global_transform_color_map,skipped,not_run,0,0,30083,,,,no transform+color map fits train,,low: train-only fit,unknown
+206,bbox_crop_color_map,skipped,not_run,0,0,4795,,,,no bbox crop fits train,,low: train-only fit,unknown
+206,color_map,skipped,not_run,0,0,4795,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+206,constant_output,skipped,not_run,0,0,4795,,,,train outputs differ,,low: train-only fit,unknown
+206,fixed_crop_color_map,skipped,not_run,0,0,4795,,,,no crop/color map fits train example,,low: train-only fit,unknown
+206,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,4795,2940,0.000000,0.000000,fixed_cells=19; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+206,global_transform_color_map,skipped,not_run,0,0,4795,,,,no transform+color map fits train,,low: train-only fit,unknown
+208,bbox_crop_color_map,skipped,not_run,0,0,10875,,,,no bbox crop fits train,,low: train-only fit,unknown
+208,color_map,skipped,not_run,0,0,10875,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+208,constant_output,skipped,not_run,0,0,10875,,,,train outputs differ,,low: train-only fit,unknown
+208,fixed_crop_color_map,skipped,not_run,0,0,10875,,,,no crop/color map fits train example,,low: train-only fit,unknown
+208,fixed_sparse_edit,skipped,not_run,0,0,10875,,,,edit conflict,,low: train-only fit,unknown
+208,global_transform_color_map,skipped,not_run,0,0,10875,,,,no transform+color map fits train,,low: train-only fit,unknown
+209,bbox_crop_color_map,skipped,not_run,0,0,59267,,,,no bbox crop fits train,,low: train-only fit,unknown
+209,color_map,skipped,not_run,0,0,59267,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+209,constant_output,skipped,not_run,0,0,59267,,,,train outputs differ,,low: train-only fit,unknown
+209,fixed_crop_color_map,skipped,not_run,0,0,59267,,,,no crop/color map fits train example,,low: train-only fit,unknown
+209,fixed_sparse_edit,skipped,not_run,0,0,59267,,,,shape mismatch,,low: train-only fit,unknown
+209,global_transform_color_map,skipped,not_run,0,0,59267,,,,no transform+color map fits train,,low: train-only fit,unknown
+213,bbox_crop_color_map,skipped,not_run,0,0,20067,,,,no bbox crop fits train,,low: train-only fit,unknown
+213,color_map,skipped,not_run,0,0,20067,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+213,constant_output,skipped,not_run,0,0,20067,,,,train outputs differ,,low: train-only fit,unknown
+213,fixed_crop_color_map,skipped,not_run,0,0,20067,,,,no crop/color map fits train example,,low: train-only fit,unknown
+213,fixed_sparse_edit,skipped,not_run,0,0,20067,,,,shape mismatch,,low: train-only fit,unknown
+213,global_transform_color_map,skipped,not_run,0,0,20067,,,,no transform+color map fits train,,low: train-only fit,unknown
+216,bbox_crop_color_map,skipped,not_run,0,0,38307,,,,no bbox crop fits train,,low: train-only fit,unknown
+216,color_map,skipped,not_run,0,0,38307,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+216,constant_output,skipped,not_run,0,0,38307,,,,train outputs differ,,low: train-only fit,unknown
+216,fixed_crop_color_map,skipped,not_run,0,0,38307,,,,no common crop/color map,,low: train-only fit,unknown
+216,fixed_sparse_edit,skipped,not_run,0,0,38307,,,,shape mismatch,,low: train-only fit,unknown
+216,global_transform_color_map,skipped,not_run,0,0,38307,,,,no transform+color map fits train,,low: train-only fit,unknown
+217,bbox_crop_color_map,skipped,not_run,0,0,12475,,,,no bbox crop fits train,,low: train-only fit,unknown
+217,color_map,skipped,not_run,0,0,12475,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+217,constant_output,skipped,not_run,0,0,12475,,,,train outputs differ,,low: train-only fit,unknown
+217,fixed_crop_color_map,skipped,not_run,0,0,12475,,,,no crop/color map fits train example,,low: train-only fit,unknown
+217,fixed_sparse_edit,skipped,not_run,0,0,12475,,,,edit conflict,,low: train-only fit,unknown
+217,global_transform_color_map,skipped,not_run,0,0,12475,,,,no transform+color map fits train,,low: train-only fit,unknown
+218,bbox_crop_color_map,skipped,not_run,0,0,12611,,,,no bbox crop fits train,,low: train-only fit,unknown
+218,color_map,skipped,not_run,0,0,12611,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+218,constant_output,skipped,not_run,0,0,12611,,,,train outputs differ,,low: train-only fit,unknown
+218,fixed_crop_color_map,skipped,not_run,0,0,12611,,,,no crop/color map fits train example,,low: train-only fit,unknown
+218,fixed_sparse_edit,skipped,not_run,0,0,12611,,,,shape mismatch,,low: train-only fit,unknown
+218,global_transform_color_map,skipped,not_run,0,0,12611,,,,no transform+color map fits train,,low: train-only fit,unknown
+219,bbox_crop_color_map,skipped,not_run,0,0,18011,,,,no bbox crop fits train,,low: train-only fit,unknown
+219,color_map,skipped,not_run,0,0,18011,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+219,constant_output,skipped,not_run,0,0,18011,,,,train outputs differ,,low: train-only fit,unknown
+219,fixed_crop_color_map,skipped,not_run,0,0,18011,,,,no crop/color map fits train example,,low: train-only fit,unknown
+219,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,18011,4200,0.000000,0.000000,fixed_cells=40; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+219,global_transform_color_map,skipped,not_run,0,0,18011,,,,no transform+color map fits train,,low: train-only fit,unknown
+222,bbox_crop_color_map,skipped,not_run,0,0,52891,,,,no bbox crop fits train,,low: train-only fit,unknown
+222,color_map,skipped,not_run,0,0,52891,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+222,constant_output,skipped,not_run,0,0,52891,,,,train outputs differ,,low: train-only fit,unknown
+222,fixed_crop_color_map,skipped,not_run,0,0,52891,,,,no crop/color map fits train example,,low: train-only fit,unknown
+222,fixed_sparse_edit,skipped,not_run,0,0,52891,,,,too many fixed edits: 176,,low: train-only fit,unknown
+222,global_transform_color_map,skipped,not_run,0,0,52891,,,,no transform+color map fits train,,low: train-only fit,unknown
+224,bbox_crop_color_map,skipped,not_run,0,0,17243,,,,no bbox crop fits train,,low: train-only fit,unknown
+224,color_map,skipped,not_run,0,0,17243,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+224,constant_output,skipped,not_run,0,0,17243,,,,train outputs differ,,low: train-only fit,unknown
+224,fixed_crop_color_map,skipped,not_run,0,0,17243,,,,no crop/color map fits train example,,low: train-only fit,unknown
+224,fixed_sparse_edit,skipped,not_run,0,0,17243,,,,edit conflict,,low: train-only fit,unknown
+224,global_transform_color_map,skipped,not_run,0,0,17243,,,,no transform+color map fits train,,low: train-only fit,unknown
+225,bbox_crop_color_map,skipped,not_run,0,0,9371,,,,no bbox crop fits train,,low: train-only fit,unknown
+225,color_map,skipped,not_run,0,0,9371,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+225,constant_output,skipped,not_run,0,0,9371,,,,train outputs differ,,low: train-only fit,unknown
+225,fixed_crop_color_map,skipped,not_run,0,0,9371,,,,no crop/color map fits train example,,low: train-only fit,unknown
+225,fixed_sparse_edit,skipped,not_run,0,0,9371,,,,edit conflict,,low: train-only fit,unknown
+225,global_transform_color_map,skipped,not_run,0,0,9371,,,,no transform+color map fits train,,low: train-only fit,unknown
+228,bbox_crop_color_map,skipped,not_run,0,0,5179,,,,no bbox crop fits train,,low: train-only fit,unknown
+228,color_map,skipped,not_run,0,0,5179,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+228,constant_output,skipped,not_run,0,0,5179,,,,train outputs differ,,low: train-only fit,unknown
+228,fixed_crop_color_map,skipped,not_run,0,0,5179,,,,no crop/color map fits train example,,low: train-only fit,unknown
+228,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,5179,3240,0.000000,0.000000,fixed_cells=24; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+228,global_transform_color_map,skipped,not_run,0,0,5179,,,,no transform+color map fits train,,low: train-only fit,unknown
+231,bbox_crop_color_map,skipped,not_run,0,0,30755,,,,no bbox crop fits train,,low: train-only fit,unknown
+231,color_map,skipped,not_run,0,0,30755,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+231,constant_output,skipped,not_run,0,0,30755,,,,train outputs differ,,low: train-only fit,unknown
+231,fixed_crop_color_map,skipped,not_run,0,0,30755,,,,output larger than input,,low: train-only fit,unknown
+231,fixed_sparse_edit,skipped,not_run,0,0,30755,,,,shape mismatch,,low: train-only fit,unknown
+231,global_transform_color_map,skipped,not_run,0,0,30755,,,,no transform+color map fits train,,low: train-only fit,unknown
+232,bbox_crop_color_map,skipped,not_run,0,0,16283,,,,no bbox crop fits train,,low: train-only fit,unknown
+232,color_map,skipped,not_run,0,0,16283,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+232,constant_output,skipped,not_run,0,0,16283,,,,train outputs differ,,low: train-only fit,unknown
+232,fixed_crop_color_map,skipped,not_run,0,0,16283,,,,no crop/color map fits train example,,low: train-only fit,unknown
+232,fixed_sparse_edit,skipped,not_run,0,0,16283,,,,edit conflict,,low: train-only fit,unknown
+232,global_transform_color_map,skipped,not_run,0,0,16283,,,,no transform+color map fits train,,low: train-only fit,unknown
+234,bbox_crop_color_map,skipped,not_run,0,0,26619,,,,no bbox crop fits train,,low: train-only fit,unknown
+234,color_map,skipped,not_run,0,0,26619,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+234,constant_output,skipped,not_run,0,0,26619,,,,train outputs differ,,low: train-only fit,unknown
+234,fixed_crop_color_map,skipped,not_run,0,0,26619,,,,no crop/color map fits train example,,low: train-only fit,unknown
+234,fixed_sparse_edit,skipped,not_run,0,0,26619,,,,edit conflict,,low: train-only fit,unknown
+234,global_transform_color_map,skipped,not_run,0,0,26619,,,,no transform+color map fits train,,low: train-only fit,unknown
+237,bbox_crop_color_map,skipped,not_run,0,0,8729,,,,no bbox crop fits train,,low: train-only fit,unknown
+237,color_map,skipped,not_run,0,0,8729,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+237,constant_output,skipped,not_run,0,0,8729,,,,train outputs differ,,low: train-only fit,unknown
+237,fixed_crop_color_map,skipped,not_run,0,0,8729,,,,no crop/color map fits train example,,low: train-only fit,unknown
+237,fixed_sparse_edit,skipped,not_run,0,0,8729,,,,edit conflict,,low: train-only fit,unknown
+237,global_transform_color_map,skipped,not_run,0,0,8729,,,,no transform+color map fits train,,low: train-only fit,unknown
+238,bbox_crop_color_map,skipped,not_run,0,0,20291,,,,no bbox crop fits train,,low: train-only fit,unknown
+238,color_map,skipped,not_run,0,0,20291,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+238,constant_output,skipped,not_run,0,0,20291,,,,train outputs differ,,low: train-only fit,unknown
+238,fixed_crop_color_map,skipped,not_run,0,0,20291,,,,no crop/color map fits train example,,low: train-only fit,unknown
+238,fixed_sparse_edit,skipped,not_run,0,0,20291,,,,shape mismatch,,low: train-only fit,unknown
+238,global_transform_color_map,skipped,not_run,0,0,20291,,,,no transform+color map fits train,,low: train-only fit,unknown
+239,bbox_crop_color_map,skipped,not_run,0,0,17568,,,,no bbox crop fits train,,low: train-only fit,unknown
+239,color_map,skipped,not_run,0,0,17568,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+239,constant_output,skipped,not_run,0,0,17568,,,,train outputs differ,,low: train-only fit,unknown
+239,fixed_crop_color_map,skipped,not_run,0,0,17568,,,,output larger than input,,low: train-only fit,unknown
+239,fixed_sparse_edit,skipped,not_run,0,0,17568,,,,shape mismatch,,low: train-only fit,unknown
+239,global_transform_color_map,skipped,not_run,0,0,17568,,,,no transform+color map fits train,,low: train-only fit,unknown
+240,bbox_crop_color_map,skipped,not_run,0,0,21627,,,,no bbox crop fits train,,low: train-only fit,unknown
+240,color_map,skipped,not_run,0,0,21627,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+240,constant_output,skipped,not_run,0,0,21627,,,,train outputs differ,,low: train-only fit,unknown
+240,fixed_crop_color_map,skipped,not_run,0,0,21627,,,,no crop/color map fits train example,,low: train-only fit,unknown
+240,fixed_sparse_edit,skipped,not_run,0,0,21627,,,,edit conflict,,low: train-only fit,unknown
+240,global_transform_color_map,skipped,not_run,0,0,21627,,,,no transform+color map fits train,,low: train-only fit,unknown
+242,bbox_crop_color_map,skipped,not_run,0,0,12611,,,,no bbox crop fits train,,low: train-only fit,unknown
+242,color_map,skipped,not_run,0,0,12611,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+242,constant_output,skipped,not_run,0,0,12611,,,,train outputs differ,,low: train-only fit,unknown
+242,fixed_crop_color_map,skipped,not_run,0,0,12611,,,,no common crop/color map,,low: train-only fit,unknown
+242,fixed_sparse_edit,skipped,not_run,0,0,12611,,,,shape mismatch,,low: train-only fit,unknown
+242,global_transform_color_map,skipped,not_run,0,0,12611,,,,no transform+color map fits train,,low: train-only fit,unknown
+243,bbox_crop_color_map,skipped,not_run,0,0,51195,,,,no bbox crop fits train,,low: train-only fit,unknown
+243,color_map,skipped,not_run,0,0,51195,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+243,constant_output,skipped,not_run,0,0,51195,,,,train outputs differ,,low: train-only fit,unknown
+243,fixed_crop_color_map,skipped,not_run,0,0,51195,,,,no crop/color map fits train example,,low: train-only fit,unknown
+243,fixed_sparse_edit,skipped,not_run,0,0,51195,,,,too many fixed edits: 175,,low: train-only fit,unknown
+243,global_transform_color_map,skipped,not_run,0,0,51195,,,,no transform+color map fits train,,low: train-only fit,unknown
+244,bbox_crop_color_map,skipped,not_run,0,0,13731,,,,no bbox crop fits train,,low: train-only fit,unknown
+244,color_map,skipped,not_run,0,0,13731,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+244,constant_output,skipped,not_run,0,0,13731,,,,train outputs differ,,low: train-only fit,unknown
+244,fixed_crop_color_map,skipped,not_run,0,0,13731,,,,no crop/color map fits train example,,low: train-only fit,unknown
+244,fixed_sparse_edit,skipped,not_run,0,0,13731,,,,shape mismatch,,low: train-only fit,unknown
+244,global_transform_color_map,skipped,not_run,0,0,13731,,,,no transform+color map fits train,,low: train-only fit,unknown
+245,bbox_crop_color_map,skipped,not_run,0,0,8818,,,,no bbox crop fits train,,low: train-only fit,unknown
+245,color_map,skipped,not_run,0,0,8818,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+245,constant_output,skipped,not_run,0,0,8818,,,,train outputs differ,,low: train-only fit,unknown
+245,fixed_crop_color_map,skipped,not_run,0,0,8818,,,,no crop/color map fits train example,,low: train-only fit,unknown
+245,fixed_sparse_edit,skipped,not_run,0,0,8818,,,,edit conflict,,low: train-only fit,unknown
+245,global_transform_color_map,skipped,not_run,0,0,8818,,,,no transform+color map fits train,,low: train-only fit,unknown
+246,bbox_crop_color_map,skipped,not_run,0,0,9755,,,,no bbox crop fits train,,low: train-only fit,unknown
+246,color_map,skipped,not_run,0,0,9755,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+246,constant_output,skipped,not_run,0,0,9755,,,,train outputs differ,,low: train-only fit,unknown
+246,fixed_crop_color_map,skipped,not_run,0,0,9755,,,,no crop/color map fits train example,,low: train-only fit,unknown
+246,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,9755,4140,0.000000,0.000000,fixed_cells=39; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+246,global_transform_color_map,skipped,not_run,0,0,9755,,,,no transform+color map fits train,,low: train-only fit,unknown
+247,bbox_crop_color_map,skipped,not_run,0,0,15339,,,,no bbox crop fits train,,low: train-only fit,unknown
+247,color_map,skipped,not_run,0,0,15339,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+247,constant_output,skipped,not_run,0,0,15339,,,,train outputs differ,,low: train-only fit,unknown
+247,fixed_crop_color_map,skipped,not_run,0,0,15339,,,,no crop/color map fits train example,,low: train-only fit,unknown
+247,fixed_sparse_edit,skipped,not_run,0,0,15339,,,,shape mismatch,,low: train-only fit,unknown
+247,global_transform_color_map,skipped,not_run,0,0,15339,,,,no transform+color map fits train,,low: train-only fit,unknown
+248,bbox_crop_color_map,skipped,not_run,0,0,2938,,,,no bbox crop fits train,,low: train-only fit,unknown
+248,color_map,skipped,not_run,0,0,2938,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+248,constant_output,skipped,not_run,0,0,2938,,,,train outputs differ,,low: train-only fit,unknown
+248,fixed_crop_color_map,skipped,not_run,0,0,2938,,,,no crop/color map fits train example,,low: train-only fit,unknown
+248,fixed_sparse_edit,fit,fail:1_pass_1_fail,1,1,2938,2700,0.000000,0.000000,fixed_cells=15; validation=train1: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+248,global_transform_color_map,skipped,not_run,0,0,2938,,,,no transform+color map fits train,,low: train-only fit,unknown
+250,bbox_crop_color_map,skipped,not_run,0,0,8969,,,,no bbox crop fits train,,low: train-only fit,unknown
+250,color_map,skipped,not_run,0,0,8969,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+250,constant_output,skipped,not_run,0,0,8969,,,,train outputs differ,,low: train-only fit,unknown
+250,fixed_crop_color_map,skipped,not_run,0,0,8969,,,,no crop/color map fits train example,,low: train-only fit,unknown
+250,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,8969,2640,0.000000,0.000000,fixed_cells=14; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+250,global_transform_color_map,skipped,not_run,0,0,8969,,,,no transform+color map fits train,,low: train-only fit,unknown
+251,bbox_crop_color_map,skipped,not_run,0,0,10875,,,,no bbox crop fits train,,low: train-only fit,unknown
+251,color_map,skipped,not_run,0,0,10875,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+251,constant_output,skipped,not_run,0,0,10875,,,,train outputs differ,,low: train-only fit,unknown
+251,fixed_crop_color_map,skipped,not_run,0,0,10875,,,,no crop/color map fits train example,,low: train-only fit,unknown
+251,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,10875,3720,0.000000,0.000000,fixed_cells=32; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+251,global_transform_color_map,skipped,not_run,0,0,10875,,,,no transform+color map fits train,,low: train-only fit,unknown
+252,bbox_crop_color_map,skipped,not_run,0,0,9531,,,,no bbox crop fits train,,low: train-only fit,unknown
+252,color_map,skipped,not_run,0,0,9531,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+252,constant_output,skipped,not_run,0,0,9531,,,,train outputs differ,,low: train-only fit,unknown
+252,fixed_crop_color_map,skipped,not_run,0,0,9531,,,,no crop/color map fits train example,,low: train-only fit,unknown
+252,fixed_sparse_edit,fit,fail:1_pass_1_fail,1,1,9531,2220,0.000000,0.000000,fixed_cells=7; validation=train1: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+252,global_transform_color_map,skipped,not_run,0,0,9531,,,,no transform+color map fits train,,low: train-only fit,unknown
+253,bbox_crop_color_map,skipped,not_run,0,0,14444,,,,no bbox crop fits train,,low: train-only fit,unknown
+253,color_map,skipped,not_run,0,0,14444,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+253,constant_output,skipped,not_run,0,0,14444,,,,train outputs differ,,low: train-only fit,unknown
+253,fixed_crop_color_map,skipped,not_run,0,0,14444,,,,no crop/color map fits train example,,low: train-only fit,unknown
+253,fixed_sparse_edit,skipped,not_run,0,0,14444,,,,shape mismatch,,low: train-only fit,unknown
+253,global_transform_color_map,skipped,not_run,0,0,14444,,,,no transform+color map fits train,,low: train-only fit,unknown
+256,bbox_crop_color_map,skipped,not_run,0,0,19067,,,,no bbox crop fits train,,low: train-only fit,unknown
+256,color_map,skipped,not_run,0,0,19067,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+256,constant_output,skipped,not_run,0,0,19067,,,,train outputs differ,,low: train-only fit,unknown
+256,fixed_crop_color_map,skipped,not_run,0,0,19067,,,,no crop/color map fits train example,,low: train-only fit,unknown
+256,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,19067,3060,0.000000,0.000000,fixed_cells=21; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+256,global_transform_color_map,skipped,not_run,0,0,19067,,,,no transform+color map fits train,,low: train-only fit,unknown
+262,bbox_crop_color_map,skipped,not_run,0,0,2582,,,,no bbox crop fits train,,low: train-only fit,unknown
+262,color_map,skipped,not_run,0,0,2582,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+262,constant_output,skipped,not_run,0,0,2582,,,,train outputs differ,,low: train-only fit,unknown
+262,fixed_crop_color_map,skipped,not_run,0,0,2582,,,,no crop/color map fits train example,,low: train-only fit,unknown
+262,fixed_sparse_edit,skipped,not_run,0,0,2582,,,,edit conflict,,low: train-only fit,unknown
+262,global_transform_color_map,skipped,not_run,0,0,2582,,,,no transform+color map fits train,,low: train-only fit,unknown
+264,bbox_crop_color_map,skipped,not_run,0,0,25739,,,,no bbox crop fits train,,low: train-only fit,unknown
+264,color_map,skipped,not_run,0,0,25739,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+264,constant_output,skipped,not_run,0,0,25739,,,,train outputs differ,,low: train-only fit,unknown
+264,fixed_crop_color_map,skipped,not_run,0,0,25739,,,,no crop/color map fits train example,,low: train-only fit,unknown
+264,fixed_sparse_edit,skipped,not_run,0,0,25739,,,,shape mismatch,,low: train-only fit,unknown
+264,global_transform_color_map,skipped,not_run,0,0,25739,,,,no transform+color map fits train,,low: train-only fit,unknown
+265,bbox_crop_color_map,skipped,not_run,0,0,12187,,,,no bbox crop fits train,,low: train-only fit,unknown
+265,color_map,skipped,not_run,0,0,12187,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+265,constant_output,skipped,not_run,0,0,12187,,,,train outputs differ,,low: train-only fit,unknown
+265,fixed_crop_color_map,skipped,not_run,0,0,12187,,,,no crop/color map fits train example,,low: train-only fit,unknown
+265,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,12187,5520,0.000000,0.000000,fixed_cells=62; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+265,global_transform_color_map,skipped,not_run,0,0,12187,,,,no transform+color map fits train,,low: train-only fit,unknown
+270,bbox_crop_color_map,skipped,not_run,0,0,9819,,,,no bbox crop fits train,,low: train-only fit,unknown
+270,color_map,skipped,not_run,0,0,9819,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+270,constant_output,skipped,not_run,0,0,9819,,,,train outputs differ,,low: train-only fit,unknown
+270,fixed_crop_color_map,skipped,not_run,0,0,9819,,,,no crop/color map fits train example,,low: train-only fit,unknown
+270,fixed_sparse_edit,skipped,not_run,0,0,9819,,,,edit conflict,,low: train-only fit,unknown
+270,global_transform_color_map,skipped,not_run,0,0,9819,,,,no transform+color map fits train,,low: train-only fit,unknown
+271,bbox_crop_color_map,skipped,not_run,0,0,12732,,,,no bbox crop fits train,,low: train-only fit,unknown
+271,color_map,skipped,not_run,0,0,12732,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+271,constant_output,skipped,not_run,0,0,12732,,,,train outputs differ,,low: train-only fit,unknown
+271,fixed_crop_color_map,skipped,not_run,0,0,12732,,,,no common crop/color map,,low: train-only fit,unknown
+271,fixed_sparse_edit,skipped,not_run,0,0,12732,,,,shape mismatch,,low: train-only fit,unknown
+271,global_transform_color_map,skipped,not_run,0,0,12732,,,,no transform+color map fits train,,low: train-only fit,unknown
+275,bbox_crop_color_map,skipped,not_run,0,0,59811,,,,no bbox crop fits train,,low: train-only fit,unknown
+275,color_map,skipped,not_run,0,0,59811,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+275,constant_output,skipped,not_run,0,0,59811,,,,train outputs differ,,low: train-only fit,unknown
+275,fixed_crop_color_map,skipped,not_run,0,0,59811,,,,output larger than input,,low: train-only fit,unknown
+275,fixed_sparse_edit,skipped,not_run,0,0,59811,,,,shape mismatch,,low: train-only fit,unknown
+275,global_transform_color_map,skipped,not_run,0,0,59811,,,,no transform+color map fits train,,low: train-only fit,unknown
+278,bbox_crop_color_map,skipped,not_run,0,0,27080,,,,no bbox crop fits train,,low: train-only fit,unknown
+278,color_map,skipped,not_run,0,0,27080,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+278,constant_output,skipped,not_run,0,0,27080,,,,train outputs differ,,low: train-only fit,unknown
+278,fixed_crop_color_map,skipped,not_run,0,0,27080,,,,no crop/color map fits train example,,low: train-only fit,unknown
+278,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,27080,3420,0.000000,0.000000,fixed_cells=27; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+278,global_transform_color_map,skipped,not_run,0,0,27080,,,,no transform+color map fits train,,low: train-only fit,unknown
+279,bbox_crop_color_map,skipped,not_run,0,0,20244,,,,no bbox crop fits train,,low: train-only fit,unknown
+279,color_map,skipped,not_run,0,0,20244,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+279,constant_output,skipped,not_run,0,0,20244,,,,train outputs differ,,low: train-only fit,unknown
+279,fixed_crop_color_map,skipped,not_run,0,0,20244,,,,no crop/color map fits train example,,low: train-only fit,unknown
+279,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,20244,5640,0.000000,0.000000,fixed_cells=64; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+279,global_transform_color_map,skipped,not_run,0,0,20244,,,,no transform+color map fits train,,low: train-only fit,unknown
+280,bbox_crop_color_map,skipped,not_run,0,0,70515,,,,no bbox crop fits train,,low: train-only fit,unknown
+280,color_map,skipped,not_run,0,0,70515,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+280,constant_output,skipped,not_run,0,0,70515,,,,train outputs differ,,low: train-only fit,unknown
+280,fixed_crop_color_map,skipped,not_run,0,0,70515,,,,no crop/color map fits train example,,low: train-only fit,unknown
+280,fixed_sparse_edit,skipped,not_run,0,0,70515,,,,edit conflict,,low: train-only fit,unknown
+280,global_transform_color_map,skipped,not_run,0,0,70515,,,,no transform+color map fits train,,low: train-only fit,unknown
+281,bbox_crop_color_map,skipped,not_run,0,0,18843,,,,no bbox crop fits train,,low: train-only fit,unknown
+281,color_map,skipped,not_run,0,0,18843,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+281,constant_output,skipped,not_run,0,0,18843,,,,train outputs differ,,low: train-only fit,unknown
+281,fixed_crop_color_map,skipped,not_run,0,0,18843,,,,no crop/color map fits train example,,low: train-only fit,unknown
+281,fixed_sparse_edit,skipped,not_run,0,0,18843,,,,edit conflict,,low: train-only fit,unknown
+281,global_transform_color_map,skipped,not_run,0,0,18843,,,,no transform+color map fits train,,low: train-only fit,unknown
+284,bbox_crop_color_map,skipped,not_run,0,0,13755,,,,no bbox crop fits train,,low: train-only fit,unknown
+284,color_map,skipped,not_run,0,0,13755,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+284,constant_output,skipped,not_run,0,0,13755,,,,train outputs differ,,low: train-only fit,unknown
+284,fixed_crop_color_map,skipped,not_run,0,0,13755,,,,no crop/color map fits train example,,low: train-only fit,unknown
+284,fixed_sparse_edit,skipped,not_run,0,0,13755,,,,edit conflict,,low: train-only fit,unknown
+284,global_transform_color_map,skipped,not_run,0,0,13755,,,,no transform+color map fits train,,low: train-only fit,unknown
+285,bbox_crop_color_map,skipped,not_run,0,0,23067,,,,no bbox crop fits train,,low: train-only fit,unknown
+285,color_map,skipped,not_run,0,0,23067,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+285,constant_output,skipped,not_run,0,0,23067,,,,train outputs differ,,low: train-only fit,unknown
+285,fixed_crop_color_map,skipped,not_run,0,0,23067,,,,no crop/color map fits train example,,low: train-only fit,unknown
+285,fixed_sparse_edit,skipped,not_run,0,0,23067,,,,edit conflict,,low: train-only fit,unknown
+285,global_transform_color_map,skipped,not_run,0,0,23067,,,,no transform+color map fits train,,low: train-only fit,unknown
+286,bbox_crop_color_map,skipped,not_run,0,0,110902,,,,no bbox crop fits train,,low: train-only fit,unknown
+286,color_map,skipped,not_run,0,0,110902,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+286,constant_output,skipped,not_run,0,0,110902,,,,train outputs differ,,low: train-only fit,unknown
+286,fixed_crop_color_map,skipped,not_run,0,0,110902,,,,no crop/color map fits train example,,low: train-only fit,unknown
+286,fixed_sparse_edit,skipped,not_run,0,0,110902,,,,edit conflict,,low: train-only fit,unknown
+286,global_transform_color_map,skipped,not_run,0,0,110902,,,,no transform+color map fits train,,low: train-only fit,unknown
+287,bbox_crop_color_map,skipped,not_run,0,0,13779,,,,no bbox crop fits train,,low: train-only fit,unknown
+287,color_map,skipped,not_run,0,0,13779,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+287,constant_output,skipped,not_run,0,0,13779,,,,train outputs differ,,low: train-only fit,unknown
+287,fixed_crop_color_map,skipped,not_run,0,0,13779,,,,no crop/color map fits train example,,low: train-only fit,unknown
+287,fixed_sparse_edit,skipped,not_run,0,0,13779,,,,edit conflict,,low: train-only fit,unknown
+287,global_transform_color_map,skipped,not_run,0,0,13779,,,,no transform+color map fits train,,low: train-only fit,unknown
+288,bbox_crop_color_map,skipped,not_run,0,0,6886,,,,no bbox crop fits train,,low: train-only fit,unknown
+288,color_map,skipped,not_run,0,0,6886,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+288,constant_output,skipped,not_run,0,0,6886,,,,train outputs differ,,low: train-only fit,unknown
+288,fixed_crop_color_map,skipped,not_run,0,0,6886,,,,no crop/color map fits train example,,low: train-only fit,unknown
+288,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,6886,2520,0.000000,0.000000,fixed_cells=12; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+288,global_transform_color_map,skipped,not_run,0,0,6886,,,,no transform+color map fits train,,low: train-only fit,unknown
+293,bbox_crop_color_map,skipped,not_run,0,0,4323,,,,no bbox crop fits train,,low: train-only fit,unknown
+293,color_map,skipped,not_run,0,0,4323,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+293,constant_output,skipped,not_run,0,0,4323,,,,train outputs differ,,low: train-only fit,unknown
+293,fixed_crop_color_map,skipped,not_run,0,0,4323,,,,no crop/color map fits train example,,low: train-only fit,unknown
+293,fixed_sparse_edit,skipped,not_run,0,0,4323,,,,edit conflict,,low: train-only fit,unknown
+293,global_transform_color_map,skipped,not_run,0,0,4323,,,,no transform+color map fits train,,low: train-only fit,unknown
+300,bbox_crop_color_map,skipped,not_run,0,0,13323,,,,no bbox crop fits train,,low: train-only fit,unknown
+300,color_map,skipped,not_run,0,0,13323,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+300,constant_output,skipped,not_run,0,0,13323,,,,train outputs differ,,low: train-only fit,unknown
+300,fixed_crop_color_map,skipped,not_run,0,0,13323,,,,no common crop/color map,,low: train-only fit,unknown
+300,fixed_sparse_edit,skipped,not_run,0,0,13323,,,,shape mismatch,,low: train-only fit,unknown
+300,global_transform_color_map,skipped,not_run,0,0,13323,,,,no transform+color map fits train,,low: train-only fit,unknown
+301,bbox_crop_color_map,skipped,not_run,0,0,24155,,,,no bbox crop fits train,,low: train-only fit,unknown
+301,color_map,skipped,not_run,0,0,24155,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+301,constant_output,skipped,not_run,0,0,24155,,,,train outputs differ,,low: train-only fit,unknown
+301,fixed_crop_color_map,skipped,not_run,0,0,24155,,,,no crop/color map fits train example,,low: train-only fit,unknown
+301,fixed_sparse_edit,skipped,not_run,0,0,24155,,,,edit conflict,,low: train-only fit,unknown
+301,global_transform_color_map,skipped,not_run,0,0,24155,,,,no transform+color map fits train,,low: train-only fit,unknown
+302,bbox_crop_color_map,skipped,not_run,0,0,7483,,,,no bbox crop fits train,,low: train-only fit,unknown
+302,color_map,skipped,not_run,0,0,7483,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+302,constant_output,skipped,not_run,0,0,7483,,,,train outputs differ,,low: train-only fit,unknown
+302,fixed_crop_color_map,skipped,not_run,0,0,7483,,,,no crop/color map fits train example,,low: train-only fit,unknown
+302,fixed_sparse_edit,skipped,not_run,0,0,7483,,,,edit conflict,,low: train-only fit,unknown
+302,global_transform_color_map,skipped,not_run,0,0,7483,,,,no transform+color map fits train,,low: train-only fit,unknown
+303,bbox_crop_color_map,skipped,not_run,0,0,52347,,,,no bbox crop fits train,,low: train-only fit,unknown
+303,color_map,skipped,not_run,0,0,52347,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+303,constant_output,skipped,not_run,0,0,52347,,,,train outputs differ,,low: train-only fit,unknown
+303,fixed_crop_color_map,skipped,not_run,0,0,52347,,,,no crop/color map fits train example,,low: train-only fit,unknown
+303,fixed_sparse_edit,skipped,not_run,0,0,52347,,,,too many fixed edits: 93,,low: train-only fit,unknown
+303,global_transform_color_map,skipped,not_run,0,0,52347,,,,no transform+color map fits train,,low: train-only fit,unknown
+306,bbox_crop_color_map,skipped,not_run,0,0,32802,,,,no bbox crop fits train,,low: train-only fit,unknown
+306,color_map,skipped,not_run,0,0,32802,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+306,constant_output,skipped,not_run,0,0,32802,,,,train outputs differ,,low: train-only fit,unknown
+306,fixed_crop_color_map,skipped,not_run,0,0,32802,,,,no crop/color map fits train example,,low: train-only fit,unknown
+306,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,32802,4200,0.000000,0.000000,fixed_cells=40; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+306,global_transform_color_map,skipped,not_run,0,0,32802,,,,no transform+color map fits train,,low: train-only fit,unknown
+308,bbox_crop_color_map,skipped,not_run,0,0,21187,,,,no bbox crop fits train,,low: train-only fit,unknown
+308,color_map,skipped,not_run,0,0,21187,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+308,constant_output,skipped,not_run,0,0,21187,,,,train outputs differ,,low: train-only fit,unknown
+308,fixed_crop_color_map,skipped,not_run,0,0,21187,,,,no crop/color map fits train example,,low: train-only fit,unknown
+308,fixed_sparse_edit,skipped,not_run,0,0,21187,,,,shape mismatch,,low: train-only fit,unknown
+308,global_transform_color_map,skipped,not_run,0,0,21187,,,,no transform+color map fits train,,low: train-only fit,unknown
+310,bbox_crop_color_map,skipped,not_run,0,0,23395,,,,no bbox crop fits train,,low: train-only fit,unknown
+310,color_map,skipped,not_run,0,0,23395,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+310,constant_output,skipped,not_run,0,0,23395,,,,train outputs differ,,low: train-only fit,unknown
+310,fixed_crop_color_map,skipped,not_run,0,0,23395,,,,no common crop/color map,,low: train-only fit,unknown
+310,fixed_sparse_edit,skipped,not_run,0,0,23395,,,,shape mismatch,,low: train-only fit,unknown
+310,global_transform_color_map,skipped,not_run,0,0,23395,,,,no transform+color map fits train,,low: train-only fit,unknown
+314,bbox_crop_color_map,skipped,not_run,0,0,5595,,,,no bbox crop fits train,,low: train-only fit,unknown
+314,color_map,skipped,not_run,0,0,5595,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+314,constant_output,skipped,not_run,0,0,5595,,,,train outputs differ,,low: train-only fit,unknown
+314,fixed_crop_color_map,skipped,not_run,0,0,5595,,,,no crop/color map fits train example,,low: train-only fit,unknown
+314,fixed_sparse_edit,skipped,not_run,0,0,5595,,,,edit conflict,,low: train-only fit,unknown
+314,global_transform_color_map,skipped,not_run,0,0,5595,,,,no transform+color map fits train,,low: train-only fit,unknown
+319,bbox_crop_color_map,skipped,not_run,0,0,16583,,,,no bbox crop fits train,,low: train-only fit,unknown
+319,color_map,skipped,not_run,0,0,16583,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+319,constant_output,skipped,not_run,0,0,16583,,,,train outputs differ,,low: train-only fit,unknown
+319,fixed_crop_color_map,skipped,not_run,0,0,16583,,,,no common crop/color map,,low: train-only fit,unknown
+319,fixed_sparse_edit,skipped,not_run,0,0,16583,,,,shape mismatch,,low: train-only fit,unknown
+319,global_transform_color_map,skipped,not_run,0,0,16583,,,,no transform+color map fits train,,low: train-only fit,unknown
+324,bbox_crop_color_map,skipped,not_run,0,0,28891,,,,no bbox crop fits train,,low: train-only fit,unknown
+324,color_map,skipped,not_run,0,0,28891,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+324,constant_output,skipped,not_run,0,0,28891,,,,train outputs differ,,low: train-only fit,unknown
+324,fixed_crop_color_map,skipped,not_run,0,0,28891,,,,no crop/color map fits train example,,low: train-only fit,unknown
+324,fixed_sparse_edit,skipped,not_run,0,0,28891,,,,edit conflict,,low: train-only fit,unknown
+324,global_transform_color_map,skipped,not_run,0,0,28891,,,,no transform+color map fits train,,low: train-only fit,unknown
+325,bbox_crop_color_map,skipped,not_run,0,0,17795,,,,no bbox crop fits train,,low: train-only fit,unknown
+325,color_map,skipped,not_run,0,0,17795,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+325,constant_output,skipped,not_run,0,0,17795,,,,train outputs differ,,low: train-only fit,unknown
+325,fixed_crop_color_map,skipped,not_run,0,0,17795,,,,no crop/color map fits train example,,low: train-only fit,unknown
+325,fixed_sparse_edit,skipped,not_run,0,0,17795,,,,shape mismatch,,low: train-only fit,unknown
+325,global_transform_color_map,skipped,not_run,0,0,17795,,,,no transform+color map fits train,,low: train-only fit,unknown
+330,bbox_crop_color_map,skipped,not_run,0,0,16635,,,,no bbox crop fits train,,low: train-only fit,unknown
+330,color_map,skipped,not_run,0,0,16635,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+330,constant_output,skipped,not_run,0,0,16635,,,,train outputs differ,,low: train-only fit,unknown
+330,fixed_crop_color_map,skipped,not_run,0,0,16635,,,,no crop/color map fits train example,,low: train-only fit,unknown
+330,fixed_sparse_edit,skipped,not_run,0,0,16635,,,,edit conflict,,low: train-only fit,unknown
+330,global_transform_color_map,skipped,not_run,0,0,16635,,,,no transform+color map fits train,,low: train-only fit,unknown
+332,bbox_crop_color_map,skipped,not_run,0,0,5899,,,,no bbox crop fits train,,low: train-only fit,unknown
+332,color_map,skipped,not_run,0,0,5899,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+332,constant_output,skipped,not_run,0,0,5899,,,,train outputs differ,,low: train-only fit,unknown
+332,fixed_crop_color_map,skipped,not_run,0,0,5899,,,,no crop/color map fits train example,,low: train-only fit,unknown
+332,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,5899,3060,0.000000,0.000000,fixed_cells=21; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+332,global_transform_color_map,skipped,not_run,0,0,5899,,,,no transform+color map fits train,,low: train-only fit,unknown
+333,bbox_crop_color_map,skipped,not_run,0,0,5787,,,,no bbox crop fits train,,low: train-only fit,unknown
+333,color_map,skipped,not_run,0,0,5787,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+333,constant_output,skipped,not_run,0,0,5787,,,,train outputs differ,,low: train-only fit,unknown
+333,fixed_crop_color_map,skipped,not_run,0,0,5787,,,,no crop/color map fits train example,,low: train-only fit,unknown
+333,fixed_sparse_edit,skipped,not_run,0,0,5787,,,,edit conflict,,low: train-only fit,unknown
+333,global_transform_color_map,skipped,not_run,0,0,5787,,,,no transform+color map fits train,,low: train-only fit,unknown
+335,bbox_crop_color_map,skipped,not_run,0,0,9307,,,,no bbox crop fits train,,low: train-only fit,unknown
+335,color_map,skipped,not_run,0,0,9307,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+335,constant_output,skipped,not_run,0,0,9307,,,,train outputs differ,,low: train-only fit,unknown
+335,fixed_crop_color_map,skipped,not_run,0,0,9307,,,,no crop/color map fits train example,,low: train-only fit,unknown
+335,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,9307,3900,0.000000,0.000000,fixed_cells=35; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+335,global_transform_color_map,skipped,not_run,0,0,9307,,,,no transform+color map fits train,,low: train-only fit,unknown
+340,bbox_crop_color_map,skipped,not_run,0,0,10939,,,,no bbox crop fits train,,low: train-only fit,unknown
+340,color_map,skipped,not_run,0,0,10939,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+340,constant_output,skipped,not_run,0,0,10939,,,,train outputs differ,,low: train-only fit,unknown
+340,fixed_crop_color_map,skipped,not_run,0,0,10939,,,,no crop/color map fits train example,,low: train-only fit,unknown
+340,fixed_sparse_edit,skipped,not_run,0,0,10939,,,,edit conflict,,low: train-only fit,unknown
+340,global_transform_color_map,skipped,not_run,0,0,10939,,,,no transform+color map fits train,,low: train-only fit,unknown
+341,bbox_crop_color_map,skipped,not_run,0,0,9787,,,,no bbox crop fits train,,low: train-only fit,unknown
+341,color_map,skipped,not_run,0,0,9787,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+341,constant_output,skipped,not_run,0,0,9787,,,,train outputs differ,,low: train-only fit,unknown
+341,fixed_crop_color_map,skipped,not_run,0,0,9787,,,,no crop/color map fits train example,,low: train-only fit,unknown
+341,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,9787,3360,0.000000,0.000000,fixed_cells=26; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+341,global_transform_color_map,skipped,not_run,0,0,9787,,,,no transform+color map fits train,,low: train-only fit,unknown
+342,bbox_crop_color_map,skipped,not_run,0,0,5627,,,,no bbox crop fits train,,low: train-only fit,unknown
+342,color_map,skipped,not_run,0,0,5627,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+342,constant_output,skipped,not_run,0,0,5627,,,,train outputs differ,,low: train-only fit,unknown
+342,fixed_crop_color_map,skipped,not_run,0,0,5627,,,,no crop/color map fits train example,,low: train-only fit,unknown
+342,fixed_sparse_edit,skipped,not_run,0,0,5627,,,,edit conflict,,low: train-only fit,unknown
+342,global_transform_color_map,skipped,not_run,0,0,5627,,,,no transform+color map fits train,,low: train-only fit,unknown
+343,bbox_crop_color_map,skipped,not_run,0,0,11099,,,,no bbox crop fits train,,low: train-only fit,unknown
+343,color_map,skipped,not_run,0,0,11099,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+343,constant_output,skipped,not_run,0,0,11099,,,,train outputs differ,,low: train-only fit,unknown
+343,fixed_crop_color_map,skipped,not_run,0,0,11099,,,,no crop/color map fits train example,,low: train-only fit,unknown
+343,fixed_sparse_edit,skipped,not_run,0,0,11099,,,,edit conflict,,low: train-only fit,unknown
+343,global_transform_color_map,skipped,not_run,0,0,11099,,,,no transform+color map fits train,,low: train-only fit,unknown
+351,bbox_crop_color_map,skipped,not_run,0,0,15683,,,,no bbox crop fits train,,low: train-only fit,unknown
+351,color_map,skipped,not_run,0,0,15683,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+351,constant_output,skipped,not_run,0,0,15683,,,,train outputs differ,,low: train-only fit,unknown
+351,fixed_crop_color_map,skipped,not_run,0,0,15683,,,,no crop/color map fits train example,,low: train-only fit,unknown
+351,fixed_sparse_edit,skipped,not_run,0,0,15683,,,,shape mismatch,,low: train-only fit,unknown
+351,global_transform_color_map,skipped,not_run,0,0,15683,,,,no transform+color map fits train,,low: train-only fit,unknown
+353,bbox_crop_color_map,skipped,not_run,0,0,5014,,,,no bbox crop fits train,,low: train-only fit,unknown
+353,color_map,skipped,not_run,0,0,5014,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+353,constant_output,skipped,not_run,0,0,5014,,,,train outputs differ,,low: train-only fit,unknown
+353,fixed_crop_color_map,skipped,not_run,0,0,5014,,,,no crop/color map fits train example,,low: train-only fit,unknown
+353,fixed_sparse_edit,skipped,not_run,0,0,5014,,,,edit conflict,,low: train-only fit,unknown
+353,global_transform_color_map,skipped,not_run,0,0,5014,,,,no transform+color map fits train,,low: train-only fit,unknown
+355,bbox_crop_color_map,skipped,not_run,0,0,11622,,,,no bbox crop fits train,,low: train-only fit,unknown
+355,color_map,skipped,not_run,0,0,11622,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+355,constant_output,skipped,not_run,0,0,11622,,,,train outputs differ,,low: train-only fit,unknown
+355,fixed_crop_color_map,fit,fail:4_pass_1_fail,4,1,11622,2081,0.000000,0.000000,"top=0,left=7,height=1,width=1,mapping={4: 8, 2: 2, 5: 6, 8: 4}; validation=test0: mismatch",constant Slice + optional 1x1 Conv,"low: train-only fit, validation uses test/arc-gen sample",medium
+355,fixed_sparse_edit,skipped,not_run,0,0,11622,,,,shape mismatch,,low: train-only fit,unknown
+355,global_transform_color_map,skipped,not_run,0,0,11622,,,,no transform+color map fits train,,low: train-only fit,unknown
+358,bbox_crop_color_map,skipped,not_run,0,0,15757,,,,no bbox crop fits train,,low: train-only fit,unknown
+358,color_map,skipped,not_run,0,0,15757,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+358,constant_output,skipped,not_run,0,0,15757,,,,train outputs differ,,low: train-only fit,unknown
+358,fixed_crop_color_map,skipped,not_run,0,0,15757,,,,no crop/color map fits train example,,low: train-only fit,unknown
+358,fixed_sparse_edit,skipped,not_run,0,0,15757,,,,edit conflict,,low: train-only fit,unknown
+358,global_transform_color_map,skipped,not_run,0,0,15757,,,,no transform+color map fits train,,low: train-only fit,unknown
+359,bbox_crop_color_map,skipped,not_run,0,0,19771,,,,no bbox crop fits train,,low: train-only fit,unknown
+359,color_map,skipped,not_run,0,0,19771,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+359,constant_output,skipped,not_run,0,0,19771,,,,train outputs differ,,low: train-only fit,unknown
+359,fixed_crop_color_map,skipped,not_run,0,0,19771,,,,no crop/color map fits train example,,low: train-only fit,unknown
+359,fixed_sparse_edit,skipped,not_run,0,0,19771,,,,edit conflict,,low: train-only fit,unknown
+359,global_transform_color_map,skipped,not_run,0,0,19771,,,,no transform+color map fits train,,low: train-only fit,unknown
+361,bbox_crop_color_map,skipped,not_run,0,0,8315,,,,no bbox crop fits train,,low: train-only fit,unknown
+361,color_map,skipped,not_run,0,0,8315,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+361,constant_output,skipped,not_run,0,0,8315,,,,train outputs differ,,low: train-only fit,unknown
+361,fixed_crop_color_map,skipped,not_run,0,0,8315,,,,no crop/color map fits train example,,low: train-only fit,unknown
+361,fixed_sparse_edit,skipped,not_run,0,0,8315,,,,edit conflict,,low: train-only fit,unknown
+361,global_transform_color_map,skipped,not_run,0,0,8315,,,,no transform+color map fits train,,low: train-only fit,unknown
+363,bbox_crop_color_map,skipped,not_run,0,0,7579,,,,no bbox crop fits train,,low: train-only fit,unknown
+363,color_map,skipped,not_run,0,0,7579,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+363,constant_output,skipped,not_run,0,0,7579,,,,train outputs differ,,low: train-only fit,unknown
+363,fixed_crop_color_map,skipped,not_run,0,0,7579,,,,no crop/color map fits train example,,low: train-only fit,unknown
+363,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,7579,3660,0.000000,0.000000,fixed_cells=31; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+363,global_transform_color_map,skipped,not_run,0,0,7579,,,,no transform+color map fits train,,low: train-only fit,unknown
+364,bbox_crop_color_map,skipped,not_run,0,0,26075,,,,no bbox crop fits train,,low: train-only fit,unknown
+364,color_map,skipped,not_run,0,0,26075,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+364,constant_output,skipped,not_run,0,0,26075,,,,train outputs differ,,low: train-only fit,unknown
+364,fixed_crop_color_map,skipped,not_run,0,0,26075,,,,no crop/color map fits train example,,low: train-only fit,unknown
+364,fixed_sparse_edit,skipped,not_run,0,0,26075,,,,edit conflict,,low: train-only fit,unknown
+364,global_transform_color_map,skipped,not_run,0,0,26075,,,,no transform+color map fits train,,low: train-only fit,unknown
+365,bbox_crop_color_map,skipped,not_run,0,0,15459,,,,no bbox crop fits train,,low: train-only fit,unknown
+365,color_map,skipped,not_run,0,0,15459,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+365,constant_output,skipped,not_run,0,0,15459,,,,train outputs differ,,low: train-only fit,unknown
+365,fixed_crop_color_map,skipped,not_run,0,0,15459,,,,no common crop/color map,,low: train-only fit,unknown
+365,fixed_sparse_edit,skipped,not_run,0,0,15459,,,,shape mismatch,,low: train-only fit,unknown
+365,global_transform_color_map,skipped,not_run,0,0,15459,,,,no transform+color map fits train,,low: train-only fit,unknown
+366,bbox_crop_color_map,skipped,not_run,0,0,60515,,,,no bbox crop fits train,,low: train-only fit,unknown
+366,color_map,skipped,not_run,0,0,60515,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+366,constant_output,skipped,not_run,0,0,60515,,,,train outputs differ,,low: train-only fit,unknown
+366,fixed_crop_color_map,skipped,not_run,0,0,60515,,,,no crop/color map fits train example,,low: train-only fit,unknown
+366,fixed_sparse_edit,skipped,not_run,0,0,60515,,,,shape mismatch,,low: train-only fit,unknown
+366,global_transform_color_map,skipped,not_run,0,0,60515,,,,no transform+color map fits train,,low: train-only fit,unknown
+367,bbox_crop_color_map,skipped,not_run,0,0,19707,,,,no bbox crop fits train,,low: train-only fit,unknown
+367,color_map,skipped,not_run,0,0,19707,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+367,constant_output,skipped,not_run,0,0,19707,,,,train outputs differ,,low: train-only fit,unknown
+367,fixed_crop_color_map,skipped,not_run,0,0,19707,,,,no crop/color map fits train example,,low: train-only fit,unknown
+367,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,19707,4260,0.000000,0.000000,fixed_cells=41; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+367,global_transform_color_map,skipped,not_run,0,0,19707,,,,no transform+color map fits train,,low: train-only fit,unknown
+368,bbox_crop_color_map,skipped,not_run,0,0,15056,,,,no bbox crop fits train,,low: train-only fit,unknown
+368,color_map,skipped,not_run,0,0,15056,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+368,constant_output,skipped,not_run,0,0,15056,,,,train outputs differ,,low: train-only fit,unknown
+368,fixed_crop_color_map,skipped,not_run,0,0,15056,,,,no crop/color map fits train example,,low: train-only fit,unknown
+368,fixed_sparse_edit,skipped,not_run,0,0,15056,,,,edit conflict,,low: train-only fit,unknown
+368,global_transform_color_map,skipped,not_run,0,0,15056,,,,no transform+color map fits train,,low: train-only fit,unknown
+370,bbox_crop_color_map,skipped,not_run,0,0,11547,,,,no bbox crop fits train,,low: train-only fit,unknown
+370,color_map,skipped,not_run,0,0,11547,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+370,constant_output,skipped,not_run,0,0,11547,,,,train outputs differ,,low: train-only fit,unknown
+370,fixed_crop_color_map,skipped,not_run,0,0,11547,,,,no crop/color map fits train example,,low: train-only fit,unknown
+370,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,11547,4200,0.000000,0.000000,fixed_cells=40; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+370,global_transform_color_map,skipped,not_run,0,0,11547,,,,no transform+color map fits train,,low: train-only fit,unknown
+371,bbox_crop_color_map,skipped,not_run,0,0,4923,,,,no bbox crop fits train,,low: train-only fit,unknown
+371,color_map,skipped,not_run,0,0,4923,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+371,constant_output,skipped,not_run,0,0,4923,,,,train outputs differ,,low: train-only fit,unknown
+371,fixed_crop_color_map,skipped,not_run,0,0,4923,,,,no crop/color map fits train example,,low: train-only fit,unknown
+371,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,4923,2280,0.000000,0.000000,fixed_cells=8; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+371,global_transform_color_map,skipped,not_run,0,0,4923,,,,no transform+color map fits train,,low: train-only fit,unknown
+374,bbox_crop_color_map,skipped,not_run,0,0,11254,,,,no bbox crop fits train,,low: train-only fit,unknown
+374,color_map,skipped,not_run,0,0,11254,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+374,constant_output,skipped,not_run,0,0,11254,,,,train outputs differ,,low: train-only fit,unknown
+374,fixed_crop_color_map,skipped,not_run,0,0,11254,,,,no crop/color map fits train example,,low: train-only fit,unknown
+374,fixed_sparse_edit,skipped,not_run,0,0,11254,,,,edit conflict,,low: train-only fit,unknown
+374,global_transform_color_map,skipped,not_run,0,0,11254,,,,no transform+color map fits train,,low: train-only fit,unknown
+375,bbox_crop_color_map,skipped,not_run,0,0,13531,,,,no bbox crop fits train,,low: train-only fit,unknown
+375,color_map,skipped,not_run,0,0,13531,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+375,constant_output,skipped,not_run,0,0,13531,,,,train outputs differ,,low: train-only fit,unknown
+375,fixed_crop_color_map,skipped,not_run,0,0,13531,,,,no crop/color map fits train example,,low: train-only fit,unknown
+375,fixed_sparse_edit,fit,fail:1_pass_1_fail,1,1,13531,2940,0.000000,0.000000,fixed_cells=19; validation=train1: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+375,global_transform_color_map,skipped,not_run,0,0,13531,,,,no transform+color map fits train,,low: train-only fit,unknown
+377,bbox_crop_color_map,skipped,not_run,0,0,26659,,,,no bbox crop fits train,,low: train-only fit,unknown
+377,color_map,skipped,not_run,0,0,26659,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+377,constant_output,skipped,not_run,0,0,26659,,,,train outputs differ,,low: train-only fit,unknown
+377,fixed_crop_color_map,skipped,not_run,0,0,26659,,,,no crop/color map fits train example,,low: train-only fit,unknown
+377,fixed_sparse_edit,skipped,not_run,0,0,26659,,,,shape mismatch,,low: train-only fit,unknown
+377,global_transform_color_map,skipped,not_run,0,0,26659,,,,no transform+color map fits train,,low: train-only fit,unknown
+378,bbox_crop_color_map,skipped,not_run,0,0,4556,,,,no bbox crop fits train,,low: train-only fit,unknown
+378,color_map,skipped,not_run,0,0,4556,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+378,constant_output,skipped,not_run,0,0,4556,,,,train outputs differ,,low: train-only fit,unknown
+378,fixed_crop_color_map,skipped,not_run,0,0,4556,,,,no crop/color map fits train example,,low: train-only fit,unknown
+378,fixed_sparse_edit,skipped,not_run,0,0,4556,,,,edit conflict,,low: train-only fit,unknown
+378,global_transform_color_map,skipped,not_run,0,0,4556,,,,no transform+color map fits train,,low: train-only fit,unknown
+379,bbox_crop_color_map,skipped,not_run,0,0,18843,,,,no bbox crop fits train,,low: train-only fit,unknown
+379,color_map,skipped,not_run,0,0,18843,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+379,constant_output,skipped,not_run,0,0,18843,,,,train outputs differ,,low: train-only fit,unknown
+379,fixed_crop_color_map,skipped,not_run,0,0,18843,,,,no crop/color map fits train example,,low: train-only fit,unknown
+379,fixed_sparse_edit,skipped,not_run,0,0,18843,,,,edit conflict,,low: train-only fit,unknown
+379,global_transform_color_map,skipped,not_run,0,0,18843,,,,no transform+color map fits train,,low: train-only fit,unknown
+382,bbox_crop_color_map,skipped,not_run,0,0,37115,,,,no bbox crop fits train,,low: train-only fit,unknown
+382,color_map,skipped,not_run,0,0,37115,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+382,constant_output,skipped,not_run,0,0,37115,,,,train outputs differ,,low: train-only fit,unknown
+382,fixed_crop_color_map,skipped,not_run,0,0,37115,,,,no crop/color map fits train example,,low: train-only fit,unknown
+382,fixed_sparse_edit,skipped,not_run,0,0,37115,,,,too many fixed edits: 99,,low: train-only fit,unknown
+382,global_transform_color_map,skipped,not_run,0,0,37115,,,,no transform+color map fits train,,low: train-only fit,unknown
+383,bbox_crop_color_map,skipped,not_run,0,0,22235,,,,no bbox crop fits train,,low: train-only fit,unknown
+383,color_map,skipped,not_run,0,0,22235,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+383,constant_output,skipped,not_run,0,0,22235,,,,train outputs differ,,low: train-only fit,unknown
+383,fixed_crop_color_map,skipped,not_run,0,0,22235,,,,no crop/color map fits train example,,low: train-only fit,unknown
+383,fixed_sparse_edit,skipped,not_run,0,0,22235,,,,edit conflict,,low: train-only fit,unknown
+383,global_transform_color_map,skipped,not_run,0,0,22235,,,,no transform+color map fits train,,low: train-only fit,unknown
+384,bbox_crop_color_map,skipped,not_run,0,0,26243,,,,no bbox crop fits train,,low: train-only fit,unknown
+384,color_map,skipped,not_run,0,0,26243,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+384,constant_output,skipped,not_run,0,0,26243,,,,train outputs differ,,low: train-only fit,unknown
+384,fixed_crop_color_map,skipped,not_run,0,0,26243,,,,no crop/color map fits train example,,low: train-only fit,unknown
+384,fixed_sparse_edit,skipped,not_run,0,0,26243,,,,shape mismatch,,low: train-only fit,unknown
+384,global_transform_color_map,skipped,not_run,0,0,26243,,,,no transform+color map fits train,,low: train-only fit,unknown
+387,bbox_crop_color_map,skipped,not_run,0,0,22269,,,,no bbox crop fits train,,low: train-only fit,unknown
+387,color_map,skipped,not_run,0,0,22269,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+387,constant_output,skipped,not_run,0,0,22269,,,,train outputs differ,,low: train-only fit,unknown
+387,fixed_crop_color_map,skipped,not_run,0,0,22269,,,,no crop/color map fits train example,,low: train-only fit,unknown
+387,fixed_sparse_edit,skipped,not_run,0,0,22269,,,,edit conflict,,low: train-only fit,unknown
+387,global_transform_color_map,skipped,not_run,0,0,22269,,,,no transform+color map fits train,,low: train-only fit,unknown
+390,bbox_crop_color_map,skipped,not_run,0,0,16699,,,,no bbox crop fits train,,low: train-only fit,unknown
+390,color_map,skipped,not_run,0,0,16699,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+390,constant_output,skipped,not_run,0,0,16699,,,,train outputs differ,,low: train-only fit,unknown
+390,fixed_crop_color_map,skipped,not_run,0,0,16699,,,,no crop/color map fits train example,,low: train-only fit,unknown
+390,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,16699,3600,0.000000,0.000000,fixed_cells=30; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+390,global_transform_color_map,skipped,not_run,0,0,16699,,,,no transform+color map fits train,,low: train-only fit,unknown
+396,bbox_crop_color_map,skipped,not_run,0,0,22947,,,,no bbox crop fits train,,low: train-only fit,unknown
+396,color_map,skipped,not_run,0,0,22947,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+396,constant_output,skipped,not_run,0,0,22947,,,,train outputs differ,,low: train-only fit,unknown
+396,fixed_crop_color_map,skipped,not_run,0,0,22947,,,,no common crop/color map,,low: train-only fit,unknown
+396,fixed_sparse_edit,skipped,not_run,0,0,22947,,,,shape mismatch,,low: train-only fit,unknown
+396,global_transform_color_map,skipped,not_run,0,0,22947,,,,no transform+color map fits train,,low: train-only fit,unknown
+397,bbox_crop_color_map,skipped,not_run,0,0,10235,,,,no bbox crop fits train,,low: train-only fit,unknown
+397,color_map,skipped,not_run,0,0,10235,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+397,constant_output,skipped,not_run,0,0,10235,,,,train outputs differ,,low: train-only fit,unknown
+397,fixed_crop_color_map,skipped,not_run,0,0,10235,,,,no crop/color map fits train example,,low: train-only fit,unknown
+397,fixed_sparse_edit,fit,fail:0_pass_1_fail,0,1,10235,3300,0.000000,0.000000,fixed_cells=25; validation=train0: mismatch,small coordinate ScatterND or constant mask Where after cost gate,"low: train-only fit, validation uses test/arc-gen sample",medium
+397,global_transform_color_map,skipped,not_run,0,0,10235,,,,no transform+color map fits train,,low: train-only fit,unknown
+400,bbox_crop_color_map,skipped,not_run,0,0,15459,,,,no bbox crop fits train,,low: train-only fit,unknown
+400,color_map,skipped,not_run,0,0,15459,,,,no nontrivial consistent color map,,low: train-only fit,unknown
+400,constant_output,skipped,not_run,0,0,15459,,,,train outputs differ,,low: train-only fit,unknown
+400,fixed_crop_color_map,skipped,not_run,0,0,15459,,,,no crop/color map fits train example,,low: train-only fit,unknown
+400,fixed_sparse_edit,skipped,not_run,0,0,15459,,,,shape mismatch,,low: train-only fit,unknown
+400,global_transform_color_map,skipped,not_run,0,0,15459,,,,no transform+color map fits train,,low: train-only fit,unknown

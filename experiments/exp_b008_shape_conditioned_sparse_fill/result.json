@@ -1,0 +1,51 @@
+{
+  "exp_id": "exp_b008_shape_conditioned_sparse_fill",
+  "date": "2026-06-06",
+  "status": "no_full_hit",
+  "target_task_count": 9,
+  "target_task_ids": [
+    20,
+    126,
+    173,
+    251,
+    51,
+    378,
+    90,
+    37,
+    284
+  ],
+  "no_candidate_tasks": [
+    20,
+    173,
+    37,
+    284
+  ],
+  "evaluated_candidate_count": 21,
+  "full_pass_hit_count": 0,
+  "train_test_pass_hit_count": 0,
+  "full_pass_hits": [],
+  "train_test_hits": [],
+  "best_partial": {
+    "task_id": 126,
+    "candidate": "bbox_shape:const_4:{\"(2, 3)\": [[4, 1]], \"(3, 6)\": [[3, 1], [3, 4]], \"(4, 7)\": [[7, 1], [7, 5]]}",
+    "status": "partial",
+    "train_pass": 3,
+    "train_examples": 3,
+    "test_pass": 0,
+    "test_examples": 1,
+    "arc_pass": 11,
+    "arc_examples": 262,
+    "total_pass": 14,
+    "total_examples": 266,
+    "branch_count": 3,
+    "avg_cells_per_branch": 1.6666666666666667,
+    "estimated_lowering_cost_class": "target_cost<=250_possible",
+    "fail_reasons": "{\"unseen_key\": 192, \"ok\": 31, \"cell_oob\": 29}",
+    "lowering_plan": "small decision tree over bbox/shape key plus tiny coordinate fill; submit only if full pass and branch table remains tiny"
+  },
+  "decision": "lower full-pass tiny branch rules; otherwise move from shape-conditioned lookup to generative object-role grammar",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: no ONNX candidate generated",
+  "leakage_risk": "medium: shape-conditioned branches are train-derived; must remain tiny and explanatory.",
+  "overfitting_risk": "medium-high unless all arc-gen full pass and Kaggle delta submission confirm."
+}

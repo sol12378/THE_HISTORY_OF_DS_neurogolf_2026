@@ -1,0 +1,11 @@
+task_id,strict_cost,gain_to_250,train_examples,total_examples,input_shape_count,output_shape_count,train_crop_any_pass,train_anchor_rule,train_anchor_pass,train_anchor_total,full_anchor_pass,full_anchor_total,bbox_crop_pass,bbox_crop_total,shape_to_anchor_table,decision
+366,836880,8.115975052155397,3,266,60,30,0,{},0,3,0,266,0,266,{},not_simple_crop_anchor
+158,182776,6.594555720492073,3,266,33,33,0,{},0,3,0,266,0,266,{},not_simple_crop_anchor
+77,157913,6.448338609581491,3,266,18,18,0,{},0,3,0,266,0,266,{},not_simple_crop_anchor
+396,143389,6.351855577835492,3,266,49,24,0,{},0,3,0,266,0,266,{},not_simple_crop_anchor
+64,114153,6.123834014959286,4,267,168,168,0,{},0,4,0,267,0,267,{},not_simple_crop_anchor
+205,112313,6.107583977517978,3,266,165,25,0,{},0,3,0,266,0,266,{},not_simple_crop_anchor
+370,108296,6.071162580003376,3,266,107,107,0,{},0,3,0,266,0,266,{},not_simple_crop_anchor
+216,103572,6.0265613841454115,3,266,1,124,0,{},0,3,0,266,0,266,{},not_simple_crop_anchor
+29,97117,5.962210798332897,3,266,167,182,0,{},0,3,0,266,0,266,{},not_simple_crop_anchor
+109,94878,5.938886216889125,3,266,4,4,0,{},0,3,0,266,0,266,{},not_simple_crop_anchor

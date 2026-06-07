@@ -1,0 +1,68 @@
+exp_id,has_submission_zip,local_score,known_lb,submission_ref,local_lb_gap,risk,submit_value,risk_reason,submit_value_reason
+exp012_template_factory_core,True,6296.297369919829,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp016_top100_rewrite_campaign,True,6479.3830863527055,,,,high,low,same local-upper lineage as exp041; LB collapse already measured by exp041,only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp017_program_synthesis_seed_6500,True,6479.3830863527055,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp019_boundary_flood_fill_campaign,True,6479.3830863527055,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp020_diagonal_periodic_lowmem,True,6479.3830863527055,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp021_diagonal_scatternd_lowmem,True,6479.3830863527055,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp023_graph_surgery_exp016,True,6479.3988246178,,,,high,low,same local-upper lineage as exp041; LB collapse already measured by exp041,only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp024_ring_depth_dynamic_colormap,True,6479.3830863527055,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp025_tile_prefix_blocks_task221,True,6479.3830863527055,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp037_fullarc_filter_exp036,True,6480.095137135056,,,,high,low,same local-upper lineage as exp041; LB collapse already measured by exp041,only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp038_fullarc_gated_noop_bypass,True,6480.171004471673,,,,high,low,same local-upper lineage as exp041; LB collapse already measured by exp041,only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp039_deep_fullarc_safe_bypass,True,6480.235261967659,,,,high,low,same local-upper lineage as exp041; LB collapse already measured by exp041,only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp040_deeper_fullarc_safe_bypass,True,6480.286117524449,,,,high,low,same local-upper lineage as exp041; LB collapse already measured by exp041,only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp043_fixed_dsl_hit_lowering,True,6480.302477938763,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp044_task031_dynamic_bbox_lowering,True,6480.302477938763,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp046_task031_small_bbox_compiler,True,6480.302477938763,,,,high,low,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",only useful as high-risk collapse measurement; avoid spending slots unless needed
+exp004_public_blend_relaxed_static,True,6282.075718068686,,,,low_duplicate,low,strict seed predecessor; exp005 already calibrates the same environment with a tiny prune delta,duplicate strict-seed calibration; lower value than a new single-task delta
+exp002_public_blend_6500_fast,True,6282.075718068686,,,,unknown,low,insufficient metadata,metadata incomplete
+exp003_rule_audit_compress,True,6282.075718068686,,,,unknown,low,insufficient metadata,metadata incomplete
+exp008_extra_public_sources_strict,True,6282.075718068686,,,,unknown,low,insufficient metadata,metadata incomplete
+exp009_ort_graph_optimization_strict,True,6282.230228092811,,,,unknown,low,insufficient metadata,metadata incomplete
+exp032_task187_component_lowering,True,6479.40740729734,,,,unknown,low,insufficient metadata,metadata incomplete
+exp033_redundant_and_surgery_sweep,True,6479.517115834944,,,,unknown,low,insufficient metadata,metadata incomplete
+exp034_redundant_logic_surgery_sweep,True,6479.584508334562,,,,unknown,low,insufficient metadata,metadata incomplete
+exp035_greedy_logic_surgery_composition,True,6479.662741382307,,,,unknown,low,insufficient metadata,metadata incomplete
+exp036_noop_bypass_and_prune,True,6480.195302061119,,,,unknown,low,insufficient metadata,metadata incomplete
+exp041_task145_deeper_mul_chain,True,6480.302477938763,3417.71,53414511,-3062.5924779387633,high,done,same local-upper lineage as exp041; LB collapse already measured by exp041,already submitted ref 53414511 LB 3417.71
+exp001_baseline,True,,14.5,53383536,,low,done,minimal baseline; already submitted,already submitted ref 53383536 LB 14.5
+exp005_top_cost_rewrite_strict,True,6282.230228092811,5929.89,53414978,-352.3402280928103,low,done,strict seed already Kaggle-calibrated,already submitted ref 53414978 LB 5929.89
+exp011_gpu_route_classifier,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp018_neurogolf_dsl_core,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp022_program_synthesis_pipeline_7600,False,6479.3830863527055,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp026_synthesis_orchestrator_core,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp027_cost_aware_lowering_bench,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp042_freeop_dag_search_top200,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp045_rule_searcher_best_practices_7700,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp047_five_experiment_review_041_045,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp048_submit_safe_seed_inventory,False,6479.3988246178,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp049_task020_teacher_profile,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp050_task020_rule_probe,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp053_all_task_cost_250_600_inventory,False,6282.230228092811,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp054_signature_lookup_family_taxonomy,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp055_l1_sparse_fill_rule_miner,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp056_submission_calibration_inventory,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp_b001_rule_replacement_backlog,False,6282.230228092811,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp_b002_p0_explainable_rule_sweep,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp_b003_teacher_gain_p0_rule_sweep,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp_b004_teacher_gain_p0_structural_taxonomy,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+exp_b006_five_experiment_review_b001_b005,False,,,,,high,none,"teacher/signature/local-upper dependence; submit only for calibration, not as trusted progress",no submission.zip
+__pycache__,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp006_private_like_validation,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp007_gpu_task_taxonomy_and_rewrite_router,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp010_cuda_gpu_setup,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp013_node_profile_and_rewrite_targets,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp014_sparse_object_template_bank,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp015_crop_resize_template_bank,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp028_lookup_to_rule_miner,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp029_crop_object_synthesizer,False,6479.3988246178,,,,unknown,none,insufficient metadata,no submission.zip
+exp030_same_shape_transform_sweep,False,6479.3988246178,,,,unknown,none,insufficient metadata,no submission.zip
+exp031_zero_component_fill_miner,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp045_task031_artifact_profile,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp051_task020_orbit_completion_miner,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp052_task020_d4_orbit_rule,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp_b005_sparse_neighborhood_fill_sweep,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp_b007_bbox_local_role_miner,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp_b008_shape_conditioned_sparse_fill,False,,,,,unknown,none,insufficient metadata,no submission.zip
+exp_b009_bbox_affine_formula_miner,False,,,,,unknown,none,insufficient metadata,no submission.zip

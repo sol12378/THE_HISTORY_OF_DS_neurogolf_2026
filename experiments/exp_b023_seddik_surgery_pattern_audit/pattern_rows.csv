@@ -1,0 +1,6 @@
+pattern,evidence_count,useful_interpretation,exp_b_action,risk
+initializer_pruning,53,未使用initializerやinitializer型/shapeの削減は、exp023/b021系の安全なgraph surgeryに近い。,strict seed全taskでunused initializer / duplicate initializer / scalar initializer化を再監査する。,low-to-medium: validationとstatic check必須。
+compress_or_banned_op_awareness,15,公開notebookにはbanned/危険opへの言及があり、strict filterのguardrailとして使える。,candidate emission前にbanned op検出を強化し、Compress系artifactをsubmit candidateから外す。,low: guardrail強化。
+precision_parameter_reduction,56,parameter reductionやdtype削減はcostに効く可能性があるが、公式入力/出力float one-hotとの整合が必要。,strict seedからinitializer dtype/constant size削減候補を生成し、full-arc gateで評価する。,medium: dtype変更は数値/argmax挙動を壊す可能性。
+score_cost_loop,45,score loopの構造はofficial-like profilingの再現に役立つ。,exp_bのcandidate evaluationにprofile/cost failure reasonをより細かく記録する。,low.
+pad_conv_where_patterns,3,Pad/Conv/Where/Slice/Gatherの使用頻度から、cheap loweringとheavy loweringの境界を読む。,massimiliano/vyanktesh notebookと合わせてcheap Slice/Gather/Pad lowering patternを抽出する。,medium: naive full-grid patternsはb011のように高cost化。

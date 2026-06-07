@@ -1,0 +1,52 @@
+{
+  "exp_id": "exp066_task020_correctness_onnx_lowering",
+  "date": "2026-06-06",
+  "status": "improved_submit_candidate",
+  "target_task": 20,
+  "baseline_local_estimate": 6282.230228092811,
+  "new_local_estimate": 6282.43995971857,
+  "delta": 0.20973162575920234,
+  "candidate": {
+    "task_id": 20,
+    "variant": "task020_bbox5_group_fill_rule_v1",
+    "baseline_cost": 90133,
+    "candidate_cost": 73080,
+    "baseline_points": 13.590958363748854,
+    "candidate_points": 13.800689989508056,
+    "file_bytes": 7276,
+    "validation_status": "266_pass_0_fail",
+    "status": "improved",
+    "reason": "ok",
+    "sha256": "34acd10d8450a0e4e55d2abef94f2b4846a593005e3fe39c9134d298c4f80049"
+  },
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 821396,
+    "sha256": "3df951c15cec42ee7df21c68b32348ec5145a85e5844d9f9426e3b685543940d"
+  },
+  "runtime_seconds": 1.8561813831329346,
+  "leakage_risk": "low: explicit nonlookup rule derived from input geometry/color roles.",
+  "overfitting_risk": "medium: task-specific; submit single-task delta if improved to calibrate LB.",
+  "submission_decision": "submitted_complete",
+  "kaggle_submission": {
+    "ref": 53417088,
+    "status": "COMPLETE",
+    "publicScore": 5930.1,
+    "submitted_at": "2026-06-06 09:00:26.080000",
+    "description": "exp066 task020 explicit rule single-task delta",
+    "lb_delta_vs_exp005": 0.21,
+    "gap_vs_local": -352.3399597185705
+  },
+  "decision": "If validation passes but cost is high, optimize bbox/count/writeback. If improved, submit strict-seed single-task delta for LB calibration."
+}

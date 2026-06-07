@@ -1,0 +1,28 @@
+{
+  "exp_id": "exp_b019_five_experiment_review_b014_b018",
+  "date": "2026-06-06",
+  "status": "review_complete",
+  "reviewed_experiments": [
+    "exp_b014_task037_fullarc_graph_surgery",
+    "exp_b015_l1_l2_sparse_fill_rule_bank_sweep",
+    "exp_b016_l2_local_predicate_decision_tree_miner",
+    "exp_b017_l2_changed_cell_feature_profile",
+    "exp_b018_high_precision_island_or_tree_miner"
+  ],
+  "verdict": "meaningful_but_too_narrow_for_score",
+  "positive_evidence": [
+    "task037 strict graph surgery was ruled out with full-arc gate",
+    "L1/L2 single object-role and single local predicates were ruled out",
+    "changed-cell profiling identified high-precision ray islands",
+    "OR-tree mining showed high-precision islands are too low-recall alone"
+  ],
+  "negative_evidence": [
+    "score delta remained 0.0",
+    "no submit candidate was produced",
+    "the L2 route is becoming diagnostic-heavy without lowering candidates"
+  ],
+  "decision": "Pivot the next PDCA away from high-gain L2 sparse fill for a moment. Try a more submit-oriented lane with simpler lowering: L4 shape/crop or known low-cost graph surgery candidates, while preserving L2 feature findings for later pairwise-tree synthesis.",
+  "submission_decision": "no_submit: no full-pass cost-gain candidate in b014-b018",
+  "leakage_risk": "review only",
+  "overfitting_risk": "review only"
+}

@@ -1,0 +1,15 @@
+{
+  "exp_id": "exp015_crop_resize_template_bank",
+  "date": "2026-06-05",
+  "status": "bank_complete",
+  "top_k": 100,
+  "arc_gen_sample": 20,
+  "target_task_count": 29,
+  "improved_task_count": 25,
+  "candidate_status_counts": {
+    "skipped": 145,
+    "improved": 25,
+    "no_cost_gain": 4
+  },
+  "runtime_seconds": 15.15237021446228
+}

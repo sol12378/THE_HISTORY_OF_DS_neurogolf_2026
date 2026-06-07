@@ -1,0 +1,31 @@
+{
+  "exp_id": "exp_b032_task085_artifact_surgery_probe",
+  "date": "2026-06-06",
+  "status": "no_valid_surgery",
+  "base_exp": "experiments\\exp_b025_submit_safe_delta_union",
+  "task_id": 85,
+  "candidate_count": 2,
+  "valid_count": 0,
+  "rows": [
+    {
+      "candidate": "cast_bypass_keep_node",
+      "validation_status": "0_pass_0_fail",
+      "status": "rejected",
+      "reason": "ort load failed: [ONNXRuntimeError] : 1 : FAIL : Type Error: Type (tensor(float16)) of output arg (safe_name_15) of node (safe_name_15) does not match expected type (tensor(float)).",
+      "sha256": "41d6170c3335e393a29798a20b8946d0587286a1734fb77f3b03aaf68f754b1a"
+    },
+    {
+      "candidate": "cast_bypass_remove_node",
+      "validation_status": "0_pass_0_fail",
+      "status": "rejected",
+      "reason": "ort load failed: [ONNXRuntimeError] : 1 : FAIL : Type Error: Type (tensor(float16)) of output arg (safe_name_15) of node (safe_name_15) does not match expected type (tensor(float)).",
+      "sha256": "fabc6e29fef5c02bb76eba10b95a68b7863c17d83c3ec718a0e95dd0b57b529a"
+    }
+  ],
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit",
+  "runtime_seconds": 3.1025867462158203,
+  "leakage_risk": "low: graph surgery validation only.",
+  "overfitting_risk": "low: candidates rejected before scoring/submission.",
+  "decision": "Task085 Cast is required for float16 internal graph; existing artifact is already compact. Continue only with stronger surgery or alternate lane."
+}

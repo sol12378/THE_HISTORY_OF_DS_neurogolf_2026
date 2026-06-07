@@ -1,0 +1,15 @@
+{
+  "exp": "exp_b035_new_source_full_arc_blend",
+  "local_estimate": 6220.006945,
+  "prev_local": 6282.812218,
+  "delta": -62.805273,
+  "n_tasks_updated": 178,
+  "n_tasks_kept": 222,
+  "actual_gain": -62.805273,
+  "source_counts": {
+    "exp_b025_best": 222,
+    "seddik_surgical_output": 146,
+    "konbu17_blended_4_27": 32
+  },
+  "elapsed_s": 25.3
+}

@@ -1,0 +1,38 @@
+{
+  "id": "vyankteshdwivedi/neurogolf-multi-source-onnx-solver",
+  "id_no": 116425359,
+  "title": "NeuroGolf Multi-Source ONNX Solver",
+  "code_file": "neurogolf-multi-source-onnx-solver.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "jonathanchan/ngc26-public-v3",
+    "afr1ste/neurogolf-5501-78-open-submission-artifact",
+    "afr1ste/neurogolf-5689-51-current-rules-open-artifact",
+    "konbu17/neurogolf-2026-blend-source-v3-6-0",
+    "konbu17/neurogolf-2026-blended-401-v117",
+    "massimilianoghiotto/neurogolf2026-6254",
+    "sigmaborov/test-golf"
+  ],
+  "kernel_sources": [
+    "aliafzal9323/neurogolf-2026-tiny-onnx-solver",
+    "foysalemonshanto/the-2026-neurogolf-championship",
+    "beicicc/neurogolf-6233-36-public-score-open-solution",
+    "needless090/neurogolf-4250",
+    "konbu17/neurogolf-2026-blended-till-4-27",
+    "jonathanchan/ngc26-constraint-smart-logic-mix-blending",
+    "konbu17/neurogolf-2026-may-8-updated",
+    "afr1ste/neurogolf-5689-51-current-rules-open-solution"
+  ],
+  "competition_sources": [
+    "neurogolf-2026"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:c370a5ff133d162d17c2dca332b50f3e85c0b0ed1471ee18e98e3009eee80b08",
+  "machine_shape": "None"
+}

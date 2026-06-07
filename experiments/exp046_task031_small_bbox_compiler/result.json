@@ -1,0 +1,47 @@
+{
+  "exp_id": "exp046_task031_small_bbox_compiler",
+  "date": "2026-06-06",
+  "status": "no_gain",
+  "target_task": 31,
+  "baseline_local_estimate": 6480.302477938763,
+  "new_local_estimate": 6480.302477938763,
+  "delta": 0.0,
+  "gap_to_6500": 19.69752206123667,
+  "gap_to_7000": 519.6975220612367,
+  "gap_to_7400": 919.6975220612367,
+  "gap_to_7600": 1119.6975220612367,
+  "gap_to_7700": 1219.6975220612367,
+  "candidate": {
+    "task_id": 31,
+    "variant": "small_bbox_nonzero_7x8",
+    "baseline_cost": 18616,
+    "candidate_cost": 50589,
+    "baseline_points": 15.168223295017873,
+    "candidate_points": 14.168510559661705,
+    "file_bytes": 5395,
+    "validation_status": "266_pass_0_fail",
+    "status": "no_cost_gain",
+    "reason": "candidate cost is not lower than baseline",
+    "sha256": "1c60d7c08c41daa75e7ae10b6ee59e353bef6fbcb3597db14434569a889b09f9"
+  },
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 836892,
+    "sha256": "a83123e098187f6e630270bb04d776fddbffc453b79ec804086f12039deb1759"
+  },
+  "runtime_seconds": 1.5119829177856445,
+  "leakage_risk": "low: explicit bbox rule, no signature lookup.",
+  "overfitting_risk": "low-to-medium: task-specific but all arc-gen validated if accepted.",
+  "decision": "Adopt if improved; otherwise existing artifact already implements this compiler pattern efficiently."
+}

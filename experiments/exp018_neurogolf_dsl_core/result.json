@@ -1,0 +1,281 @@
+{
+  "exp_id": "exp018_neurogolf_dsl_core",
+  "date": "2026-06-06",
+  "status": "inventory_complete",
+  "base_exp": "experiments\\exp016_top100_rewrite_campaign",
+  "task_count": 400,
+  "local_estimate_from_base": 6479.38308,
+  "gap_to_6500": 20.61692000000039,
+  "gap_to_7000": 520.6169200000004,
+  "gap_to_7600": 1120.6169200000004,
+  "family_counts": {
+    "color_map": 4,
+    "crop_resize": 85,
+    "line_grid_fill": 14,
+    "point_to_line_pattern": 28,
+    "region_partition_fill": 15,
+    "same_shape_global_transform": 1,
+    "signature_lookup_current": 196,
+    "sparse_edit_or_object_completion": 57
+  },
+  "source_counts_top": {
+    "exp016_signature_scatternd_lookup": 195,
+    "massimilianoghiotto_6254": 174,
+    "afr1ste_5689_artifact": 23,
+    "kojimar_5800_minimal_blend": 5,
+    "vyanktesh_multi_source_output": 2,
+    "exp012_signature_scatter_lookup": 1
+  },
+  "top_remaining_cost_tasks": [
+    {
+      "task_id": 286,
+      "family": "signature_lookup_current",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 110902,
+      "source": "exp012_signature_scatter_lookup",
+      "template": "signature_scatter_lookup"
+    },
+    {
+      "task_id": 187,
+      "family": "point_to_line_pattern",
+      "route": "same_shape_global_transform",
+      "cost": 105313,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 198,
+      "family": "line_grid_fill",
+      "route": "same_shape_global_transform",
+      "cost": 103821,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 203,
+      "family": "region_partition_fill",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 88402,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 398,
+      "family": "crop_resize",
+      "route": "crop_or_resize",
+      "cost": 84295,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 313,
+      "family": "region_partition_fill",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 83572,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 255,
+      "family": "same_shape_global_transform",
+      "route": "same_shape_global_transform",
+      "cost": 74403,
+      "source": "kojimar_5800_minimal_blend",
+      "template": "baseline"
+    },
+    {
+      "task_id": 107,
+      "family": "crop_resize",
+      "route": "crop_or_resize",
+      "cost": 73131,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 137,
+      "family": "point_to_line_pattern",
+      "route": "same_shape_global_transform",
+      "cost": 72472,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 29,
+      "family": "signature_lookup_current",
+      "route": "crop_or_resize",
+      "cost": 71140,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 280,
+      "family": "signature_lookup_current",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 70516,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 145,
+      "family": "line_grid_fill",
+      "route": "same_shape_global_transform",
+      "cost": 69757,
+      "source": "afr1ste_5689_artifact",
+      "template": "baseline"
+    },
+    {
+      "task_id": 328,
+      "family": "point_to_line_pattern",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 68053,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 233,
+      "family": "crop_resize",
+      "route": "crop_or_resize",
+      "cost": 63540,
+      "source": "kojimar_5800_minimal_blend",
+      "template": "baseline"
+    },
+    {
+      "task_id": 366,
+      "family": "signature_lookup_current",
+      "route": "crop_or_resize",
+      "cost": 60516,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 275,
+      "family": "signature_lookup_current",
+      "route": "crop_or_resize",
+      "cost": 59812,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 133,
+      "family": "signature_lookup_current",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 59323,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 209,
+      "family": "signature_lookup_current",
+      "route": "crop_or_resize",
+      "cost": 59268,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 204,
+      "family": "signature_lookup_current",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 56172,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 221,
+      "family": "crop_resize",
+      "route": "crop_or_resize",
+      "cost": 55869,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 13,
+      "family": "signature_lookup_current",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 54112,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 222,
+      "family": "signature_lookup_current",
+      "route": "crop_or_resize",
+      "cost": 52892,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 54,
+      "family": "signature_lookup_current",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 52412,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 303,
+      "family": "signature_lookup_current",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 52348,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 243,
+      "family": "signature_lookup_current",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 51196,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 349,
+      "family": "point_to_line_pattern",
+      "route": "same_shape_global_transform",
+      "cost": 49480,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 159,
+      "family": "signature_lookup_current",
+      "route": "crop_or_resize",
+      "cost": 48740,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 128,
+      "family": "signature_lookup_current",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 48732,
+      "source": "exp016_signature_scatternd_lookup",
+      "template": "signature_scatternd_lookup"
+    },
+    {
+      "task_id": 138,
+      "family": "crop_resize",
+      "route": "crop_or_resize",
+      "cost": 48467,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    },
+    {
+      "task_id": 338,
+      "family": "sparse_edit_or_object_completion",
+      "route": "sparse_edit_or_object_completion",
+      "cost": 45016,
+      "source": "massimilianoghiotto_6254",
+      "template": "baseline"
+    }
+  ],
+  "primitive_count": 7,
+  "next_required_families": [
+    "boundary_flood_fill",
+    "rectangular_room_fill",
+    "point_to_line_pattern",
+    "crop_resize_with_object_anchor",
+    "static_lookup_compression"
+  ],
+  "leakage_risk": "high: base exp016 includes signature lookup candidates and sample-local validation.",
+  "overfitting_risk": "high until task-family programs pass full arc-gen and private-like holdout."
+}

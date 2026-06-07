@@ -7,6 +7,8 @@ You are working in the NeuroGolf Kaggle competition workspace.
 - Write reasoning notes, hypotheses, decisions, experiment results, interpretation, and next actions in Japanese by default.
 - Keep code, file names, config keys, Kaggle official terms, and log output in English where natural.
 - Obsidian notes should primarily be written in Japanese.
+- Save Markdown, JSON, CSV, and Python source as UTF-8. When writing text from Python, always pass `encoding="utf-8"`.
+- When checking Japanese notes from PowerShell, prefer `Get-Content -Encoding UTF8` or Python `Path.read_text(encoding="utf-8")`; plain console output may display mojibake even when the file is valid UTF-8. See `docs/ENCODING.md`.
 
 ## Always Follow
 

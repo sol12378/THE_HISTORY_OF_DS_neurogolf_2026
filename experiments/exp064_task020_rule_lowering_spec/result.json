@@ -1,0 +1,82 @@
+{
+  "exp_id": "exp064_task020_rule_lowering_spec",
+  "date": "2026-06-06",
+  "status": "lowering_spec_ready",
+  "task_id": 20,
+  "rule_source": "exp062_task020_canon_pos_rule_compressor",
+  "rule": {
+    "rule_name": "greedy_pure_bit_branches",
+    "status": "full_pass",
+    "class_accuracy": 266,
+    "output_pass": 266,
+    "total_examples": 266,
+    "case_accuracy": 24,
+    "total_cases": 24,
+    "fail_reasons": "{}",
+    "rule_spec": "{\"kind\": \"decision\", \"branches\": [[[\"corners_eq1\"], \"corners\"], [[\"edge_mid_eq1\"], \"edge_mid\"], [[\"has_inner\"], \"inner_diag\"]], \"default\": \"corners\"}"
+  },
+  "known_python_validation": "266/266 from exp062",
+  "bbox_reference": {
+    "exp": "exp046_task031_small_bbox_compiler",
+    "validation": "266_pass_0_fail",
+    "candidate_cost": 50589,
+    "interpretation": "dynamic bbox crop can validate but may cost around 50k before task-specific shrinking"
+  },
+  "lowering_blocks": [
+    {
+      "block": "bbox5_crop",
+      "purpose": "Find nonzero bbox and crop/align the task020 5x5 local frame.",
+      "preferred_ops": "ReduceSum, Greater, ArgMax, Gather",
+      "expected_cost_risk": "medium-high; exp046 small bbox crop cost was 50589 for task031",
+      "reject_pattern": "full-grid GatherND, NonZero, Compress",
+      "implementation_note": "Reuse exp046 style dynamic bbox crop first; later replace with task020-specific 10x10/bbox5 shortcuts."
+    },
+    {
+      "block": "target_color_roles",
+      "purpose": "For each nonzero color, compute group counts in corners, edge_mid, inner, center over the 5x5 frame.",
+      "preferred_ops": "Gather/Slice over 5x5, ReduceSum, Add",
+      "expected_cost_risk": "medium if done for all 9 colors; low if target color can be inferred cheaply",
+      "reject_pattern": "MatMul signature over examples, per-example color table",
+      "implementation_note": "Rule must stay color-role based. Do not use absolute target-color table."
+    },
+    {
+      "block": "class_selector",
+      "purpose": "Implement exp062 decision rule: corners_eq1 -> corners, edge_mid_eq1 -> edge_mid, has_inner -> inner_diag, else corners.",
+      "preferred_ops": "Equal, Greater, And/Or/Where",
+      "expected_cost_risk": "low",
+      "reject_pattern": "24-case lookup table",
+      "implementation_note": "This is the core nonlookup rule and should remain tiny."
+    },
+    {
+      "block": "orientation_and_missing",
+      "purpose": "Select the unique D4 variant compatible with current target-color positions and fill exactly the three missing cells.",
+      "preferred_ops": "constant 5x5 masks, And/Or, Where",
+      "expected_cost_risk": "medium; could explode if implemented separately for all colors/classes/variants",
+      "reject_pattern": "large ScatterND coordinate table, MatMul over variants",
+      "implementation_note": "Start with explicit masks for 3 template classes x D4 variants, then prune with compatibility."
+    },
+    {
+      "block": "writeback",
+      "purpose": "Map 5x5 local fill mask back to 30x30 one-hot output.",
+      "preferred_ops": "Pad/Gather or Where on full 30x30 tensor",
+      "expected_cost_risk": "medium-high; full-grid Where may dominate memory",
+      "reject_pattern": "repeated full-grid Where per variant/color",
+      "implementation_note": "First implementation can use full-grid Where for correctness; cost pass will likely need sparse writeback."
+    }
+  ],
+  "first_onnx_target": {
+    "goal": "correctness-first ONNX for task020 explicit rule",
+    "acceptance": "266/266 all arc-gen pass and candidate_cost < 90133 strict task020",
+    "stretch_acceptance": "candidate_cost <= 600",
+    "submit_policy": "submit to Kaggle only if official validation passes and cost improves strict seed"
+  },
+  "decision": "Implement correctness-first ONNX next, then optimize bbox/writeback. Do not use raw 24-case table or teacher artifact.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: spec only",
+  "leakage_risk": "low for the rule, medium for future implementation if masks become lookup-like.",
+  "overfitting_risk": "medium: task-specific rule, but fully explainable and all-arc-gen exact in Python.",
+  "outputs": {
+    "lowering_blocks": "lowering_blocks.csv",
+    "notes": "notes.md"
+  }
+}

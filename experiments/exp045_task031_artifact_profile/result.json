@@ -1,0 +1,100 @@
+{
+  "exp_id": "exp045_task031_artifact_profile",
+  "date": "2026-06-06",
+  "status": "diagnostic_complete",
+  "target_task": 31,
+  "base_exp": "experiments\\exp023_graph_surgery_exp016",
+  "artifact_cost_from_manifest": 18616,
+  "profile_memory": 18558,
+  "profile_params": 58,
+  "profile_cost": 18616,
+  "profile_reason": "ok",
+  "sha256": "bcb1f9183e1f5ef3092345a1bf70a0a723d699e88b1aa4ef61ae7adb21961543",
+  "high_level": {
+    "node_count": 26,
+    "initializer_count": 13,
+    "initializer_elem_total": 58,
+    "largest_initializers": [
+      {
+        "name": "safe_name_7",
+        "dims": "1x12",
+        "elem_count": 12,
+        "data_type": 1
+      },
+      {
+        "name": "safe_name_12",
+        "dims": "8",
+        "elem_count": 8,
+        "data_type": 7
+      },
+      {
+        "name": "safe_name_9",
+        "dims": "8",
+        "elem_count": 8,
+        "data_type": 7
+      },
+      {
+        "name": "safe_name_8",
+        "dims": "7",
+        "elem_count": 7,
+        "data_type": 7
+      },
+      {
+        "name": "safe_name_0",
+        "dims": "3",
+        "elem_count": 3,
+        "data_type": 7
+      },
+      {
+        "name": "safe_name_1",
+        "dims": "3",
+        "elem_count": 3,
+        "data_type": 7
+      },
+      {
+        "name": "safe_name_10",
+        "dims": "3",
+        "elem_count": 3,
+        "data_type": 7
+      },
+      {
+        "name": "safe_name_11",
+        "dims": "3",
+        "elem_count": 3,
+        "data_type": 7
+      },
+      {
+        "name": "safe_name_2",
+        "dims": "3",
+        "elem_count": 3,
+        "data_type": 7
+      },
+      {
+        "name": "safe_name_3",
+        "dims": "3",
+        "elem_count": 3,
+        "data_type": 7
+      }
+    ],
+    "op_counts": {
+      "Slice": 1,
+      "ReduceSum": 2,
+      "Greater": 2,
+      "Cast": 2,
+      "ArgMax": 4,
+      "Where": 3,
+      "Sub": 2,
+      "Add": 2,
+      "Gather": 2,
+      "LessOrEqual": 2,
+      "Unsqueeze": 2,
+      "And": 1,
+      "Pad": 1
+    },
+    "uses_dynamic_index_ops": true,
+    "uses_conv": false,
+    "uses_where": true
+  },
+  "runtime_seconds": 1.2494745254516602,
+  "decision": "Use this artifact profile to design a smaller bbox/object compiler; do not use full-grid GatherND."
+}

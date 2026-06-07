@@ -1,0 +1,42 @@
+{
+  "exp_id": "exp047_five_experiment_review_041_045",
+  "date": "2026-06-06",
+  "status": "review_complete",
+  "reviewed_experiments": [
+    "exp041_task145_deeper_mul_chain",
+    "exp042_freeop_dag_search_top200",
+    "exp043_fixed_dsl_hit_lowering",
+    "exp044_task031_dynamic_bbox_lowering",
+    "exp045_rule_searcher_best_practices_7700"
+  ],
+  "goal": "7700を達成するために、5実験が本当に有意義だったか問い直す。",
+  "verdict": "mixed_but_useful",
+  "summary": {
+    "useful": [
+      "exp041の提出LB 3417.71で、lookup/artifact surgery系local estimateがsubmit-safeでないことを確定した。",
+      "exp042でDSL/DAG探索のproxy upsideを確認したが、proxyと実ONNX costを分離すべきことも明確になった。",
+      "exp043/044でnaive DSL loweringとfull-grid dynamic index loweringを棄却できた。",
+      "exp045で7700をall400 cost<=250のfamily-level targetとして再定義し、探索familyの優先順位を明確化した。"
+    ],
+    "not_useful_enough": [
+      "exp041の追加surgery自体は7700へほぼ寄与しない。提出で不可靠性を暴いた点だけが重要。",
+      "exp043は固定rot/cropの小さいhitに時間を使ったが、既存artifactが既に安く、7700主経路としては弱かった。",
+      "exp044は正しいruleを重いONNXへ落とす失敗を再確認しただけで、改善はゼロ。"
+    ],
+    "course_correction": [
+      "local upper boundの改善を主目標にしない。",
+      "signature lookup bundleはteacher/diagnosticとして扱い、提出候補から外す。",
+      "次の5実験はsubmit-safe seed inventory、family holdout、lookup compression、object/crop compiler、line/region rule searcherに集中する。",
+      "各candidateはONNX emission前にfull-grid GatherND/large ScatterND/Tile/Where-chain guardrailを通す。"
+    ]
+  },
+  "next_pdca": {
+    "exp048": "submit-safe seed inventory: exp005 strict bundleとexp041 local upperを分離し、信頼可能なベースラインと危険task群を定義する。",
+    "exp049": "signature lookup compression miner v2: lookup由来taskをteacherとして明示ruleへ分解する。",
+    "exp050": "family holdout protocol: all arc-genを探索用/監査用に分け、LB collapseを予防する。",
+    "exp051": "object/crop compiler from artifact profiles: small dynamic Gather/Slice patternをfamily化する。",
+    "exp052": "line/region rule searcher: high-gain familiesを低cost閉形式へ落とす。"
+  },
+  "leakage_risk": "review only",
+  "overfitting_risk": "review only"
+}

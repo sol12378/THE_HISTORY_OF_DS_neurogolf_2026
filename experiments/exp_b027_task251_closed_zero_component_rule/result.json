@@ -1,0 +1,65 @@
+{
+  "exp_id": "exp_b027_task251_closed_zero_component_rule",
+  "date": "2026-06-06",
+  "status": "rule_found",
+  "task_id": 251,
+  "rule_summary": "Fill every 0-component that does not touch the grid border and whose 4-neighbor boundary colors are exactly {2}; write color 1.",
+  "evaluated_candidates": 2,
+  "full_pass_hits": [
+    {
+      "candidate": "closed_zero_component_neighbor2_to_1",
+      "status": "full_pass",
+      "train_pass": 3,
+      "train_examples": 3,
+      "test_pass": 1,
+      "test_examples": 1,
+      "arc_pass": 262,
+      "arc_examples": 262,
+      "total_pass": 266,
+      "total_examples": 266,
+      "avg_changed_cells": 10.180451127819548,
+      "max_changed_cells": 28,
+      "fail_examples": "[]",
+      "lowering_plan": "Do not lower by naive flood-fill unroll. Candidate lowering should compute outside-zero reachability from border using closed-form masks, row/column reductions, or small iterative kernels with strict cost gate."
+    }
+  ],
+  "all_rows": [
+    {
+      "candidate": "closed_zero_component_neighbor2_to_1",
+      "status": "full_pass",
+      "train_pass": 3,
+      "train_examples": 3,
+      "test_pass": 1,
+      "test_examples": 1,
+      "arc_pass": 262,
+      "arc_examples": 262,
+      "total_pass": 266,
+      "total_examples": 266,
+      "avg_changed_cells": 10.180451127819548,
+      "max_changed_cells": 28,
+      "fail_examples": "[]",
+      "lowering_plan": "Do not lower by naive flood-fill unroll. Candidate lowering should compute outside-zero reachability from border using closed-form masks, row/column reductions, or small iterative kernels with strict cost gate."
+    },
+    {
+      "candidate": "row_col_nearest2_boundary_to_1",
+      "status": "partial",
+      "train_pass": 2,
+      "train_examples": 3,
+      "test_pass": 1,
+      "test_examples": 1,
+      "arc_pass": 192,
+      "arc_examples": 262,
+      "total_pass": 195,
+      "total_examples": 266,
+      "avg_changed_cells": 10.605263157894736,
+      "max_changed_cells": 28,
+      "fail_examples": "[2, 8, 14, 19, 22, 26, 27, 28, 32, 36, 37, 39, 40, 44, 53, 55, 56, 58, 63, 65, 66, 67, 68, 69, 72, 78, 79, 85, 94, 95]",
+      "lowering_plan": "Cheap row/column reduction approximation; rejected because it misses components that require true connectivity."
+    }
+  ],
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: reference rule only; ONNX lowering pending",
+  "next_lowering": "Build a cost-gated closed-component mask. Avoid full-grid flood-fill unroll; use border reachability or rectangle-specific masks if possible.",
+  "leakage_risk": "low-to-medium: rule is simple and explanatory; verified on all arc-gen examples but not yet hidden LB.",
+  "overfitting_risk": "medium: task-specific component rule needs ONNX validation and LB delta before adoption."
+}

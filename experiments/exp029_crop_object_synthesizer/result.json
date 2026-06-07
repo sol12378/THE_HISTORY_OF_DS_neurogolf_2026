@@ -1,0 +1,21 @@
+{
+  "exp_id": "exp029_crop_object_synthesizer",
+  "date": "2026-06-06",
+  "status": "no_gain",
+  "base_exp": "experiments\\exp023_graph_surgery_exp016",
+  "base_local_estimate": 6479.3988246178,
+  "target_task_count": 85,
+  "candidate_rows": 170,
+  "generated_candidate_count": 7,
+  "skipped_candidate_count": 163,
+  "improved_task_count": 0,
+  "local_estimate_delta": 0,
+  "local_estimate": 6479.3988246178,
+  "gap_to_6500": 20.60117538220038,
+  "submission_decision": "no_submit: below 6500 threshold",
+  "selected_tasks": [],
+  "top_selected": [],
+  "zip_sanity": {},
+  "leakage_risk": "medium: train-fitted crop rules are validated on test and arc-gen sample20; base still includes high-risk lookup artifacts.",
+  "overfitting_risk": "medium: crop rules may be sample-specific; no private-like family holdout yet."
+}

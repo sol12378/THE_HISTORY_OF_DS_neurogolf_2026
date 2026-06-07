@@ -1,0 +1,17 @@
+{
+  "exp_id": "exp013_node_profile_and_rewrite_targets",
+  "date": "2026-06-05",
+  "status": "profile_complete",
+  "top_k": 100,
+  "node_rows": 5966,
+  "route_counts": {
+    "sparse_edit_or_object_completion": 65,
+    "same_shape_global_transform": 6,
+    "crop_or_resize": 29
+  },
+  "runtime_seconds": 4.799075365066528,
+  "artifacts": {
+    "node_profile": "experiments\\exp013_node_profile_and_rewrite_targets\\node_profile.csv",
+    "rewrite_target_manifest": "experiments\\exp013_node_profile_and_rewrite_targets\\rewrite_target_manifest.csv"
+  }
+}

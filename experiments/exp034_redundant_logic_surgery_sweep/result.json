@@ -1,0 +1,128 @@
+{
+  "exp_id": "exp034_redundant_logic_surgery_sweep",
+  "date": "2026-06-06",
+  "status": "improved",
+  "base_exp": "experiments\\exp033_redundant_and_surgery_sweep",
+  "base_local_estimate": 6479.517115834944,
+  "top_k": 160,
+  "arc_gen_sample": 20,
+  "candidate_rows": 1234,
+  "generated_candidate_count": 1234,
+  "improved_task_count": 6,
+  "local_estimate_delta": 0.06739249961802507,
+  "local_estimate": 6479.584508334562,
+  "gap_to_6500": 20.415491665437912,
+  "submission_decision": "no_submit: below 6500 threshold",
+  "selected_tasks": [
+    80,
+    86,
+    138,
+    148,
+    187,
+    289
+  ],
+  "top_selected": [
+    {
+      "task_id": 138,
+      "route": "crop_or_resize",
+      "template_name": "logic_Or_node67_to_input0",
+      "baseline_cost": 48467,
+      "candidate_cost": 47567,
+      "baseline_points": 14.211361567031112,
+      "candidate_points": 14.230105477519256,
+      "file_bytes": 7608,
+      "validation_status": "24_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "faa5d28580487ba6ac7ca9f5fc88f8e9302f0d281dbcb0d3f8619a0201892d60"
+    },
+    {
+      "task_id": 289,
+      "route": "crop_or_resize",
+      "template_name": "logic_Less_node11_to_input1",
+      "baseline_cost": 24972,
+      "candidate_cost": 24509,
+      "baseline_points": 14.874489523818365,
+      "candidate_points": 14.893204323983774,
+      "file_bytes": 2420,
+      "validation_status": "26_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "cd9c96894dd80a6a318f2220c555cc30389244f28a7d405c6abb6d51ccb0741a"
+    },
+    {
+      "task_id": 148,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "logic_Greater_node105_to_input0",
+      "baseline_cost": 22029,
+      "candidate_cost": 21741,
+      "baseline_points": 14.99988495388028,
+      "candidate_points": 15.013044842222609,
+      "file_bytes": 10220,
+      "validation_status": "24_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "b595711b9ea79fa031f591103db0e76a97dfcec924bb2dab9d3362d7902d93d8"
+    },
+    {
+      "task_id": 187,
+      "route": "same_shape_global_transform",
+      "template_name": "logic_Or_node68_to_input1",
+      "baseline_cost": 103513,
+      "candidate_cost": 102613,
+      "baseline_points": 13.45254751233521,
+      "candidate_points": 13.461280090654656,
+      "file_bytes": 7728,
+      "validation_status": "24_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "581948019d2698d39a647dd2b630150c04ba54de4d17d605acd0e84a5c46a24b"
+    },
+    {
+      "task_id": 86,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "logic_Less_node16_to_input0",
+      "baseline_cost": 25713,
+      "candidate_cost": 25569,
+      "baseline_points": 14.845248020433008,
+      "candidate_points": 14.850864040809594,
+      "file_bytes": 4437,
+      "validation_status": "24_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "2049bd6fbae072463ed7e40466eb3ec8fd78c544c526a1b0b0f782b0f01681f6"
+    },
+    {
+      "task_id": 80,
+      "route": "same_shape_global_transform",
+      "template_name": "logic_Equal_node48_to_input0",
+      "baseline_cost": 41282,
+      "candidate_cost": 41182,
+      "baseline_points": 14.371818151405797,
+      "candidate_points": 14.374243453331909,
+      "file_bytes": 12032,
+      "validation_status": "21_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "8913caecd8835556ad24bb752a0129e7783b77884eafbe4480f0d382f4d86548"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 837950,
+    "sha256": "866234db84b34aa63000b79359f961075359849bca4220b54461f2b3dbc8af62"
+  },
+  "leakage_risk": "medium: graph surgery is accepted only after sample20 validation, but base includes high-risk lookup artifacts.",
+  "overfitting_risk": "medium: validation is train/test/arc-gen sample20, not full private-like holdout."
+}

@@ -1,0 +1,74 @@
+{
+  "exp_id": "exp060_task020_orientation_audit",
+  "date": "2026-06-06",
+  "status": "audit_ready",
+  "target_task": 20,
+  "example_count": 266,
+  "ambiguity_counts": {
+    "unique_orientation": 266
+  },
+  "compatible_variant_count_histogram": {
+    "1": 266
+  },
+  "unique_true_full_variants": 14,
+  "top_true_full_variants": {
+    "((1, 1), (1, 3), (3, 1), (3, 3))": 47,
+    "((0, 2), (2, 0), (2, 4), (4, 2))": 45,
+    "((0, 0), (0, 4), (4, 0), (4, 4))": 40,
+    "((0, 0), (0, 2), (0, 4), (2, 0), (2, 4), (4, 0), (4, 2), (4, 4))": 29,
+    "((0, 0), (0, 4), (1, 1), (1, 3), (3, 1), (3, 3), (4, 0), (4, 4))": 28,
+    "((0, 2), (1, 1), (1, 3), (2, 0), (2, 4), (3, 1), (3, 3), (4, 2))": 22,
+    "((0, 2), (2, 0), (2, 2), (2, 4), (4, 2))": 11,
+    "((0, 0), (0, 2), (0, 4), (1, 1), (1, 3), (2, 0), (2, 4), (3, 1), (3, 3), (4, 0), (4, 2), (4, 4))": 10,
+    "((0, 0), (0, 4), (2, 2), (4, 0), (4, 4))": 9,
+    "((1, 1), (1, 3), (2, 2), (3, 1), (3, 3))": 8,
+    "((0, 0), (0, 2), (0, 4), (2, 0), (2, 2), (2, 4), (4, 0), (4, 2), (4, 4))": 6,
+    "((0, 2), (1, 1), (1, 3), (2, 0), (2, 2), (2, 4), (3, 1), (3, 3), (4, 2))": 5,
+    "((0, 0), (0, 2), (0, 4), (1, 1), (1, 3), (2, 0), (2, 2), (2, 4), (3, 1), (3, 3), (4, 0), (4, 2), (4, 4))": 3,
+    "((0, 0), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4))": 3
+  },
+  "selector_results": [
+    {
+      "selector_name": "first_lexicographic",
+      "template_accuracy": 266,
+      "variant_accuracy": 0,
+      "output_pass": 266,
+      "total_examples": 266,
+      "fail_reasons": "{\"wrong_variant\": 266}"
+    },
+    {
+      "selector_name": "min_missing_lexicographic",
+      "template_accuracy": 266,
+      "variant_accuracy": 0,
+      "output_pass": 266,
+      "total_examples": 266,
+      "fail_reasons": "{\"wrong_variant\": 266}"
+    },
+    {
+      "selector_name": "prefer_variant_containing_input",
+      "template_accuracy": 266,
+      "variant_accuracy": 0,
+      "output_pass": 266,
+      "total_examples": 266,
+      "fail_reasons": "{\"wrong_variant\": 266}"
+    },
+    {
+      "selector_name": "oracle_if_unique",
+      "template_accuracy": 266,
+      "variant_accuracy": 0,
+      "output_pass": 266,
+      "total_examples": 266,
+      "fail_reasons": "{\"wrong_variant\": 266}"
+    }
+  ],
+  "decision": "If most examples are ambiguous, add orientation features from input color positions; if unique, fix apply logic.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: diagnostic audit only",
+  "leakage_risk": "medium: all examples used for diagnosis; do not emit full variant table.",
+  "overfitting_risk": "medium-high if true_full variants are used as lookup.",
+  "outputs": {
+    "example_orientation": "example_orientation.csv",
+    "selector_orientation_eval": "selector_orientation_eval.csv",
+    "notes": "notes.md"
+  }
+}

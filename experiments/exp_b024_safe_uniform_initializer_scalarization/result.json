@@ -1,0 +1,52 @@
+{
+  "exp_id": "exp_b024_safe_uniform_initializer_scalarization",
+  "date": "2026-06-06",
+  "status": "improved_submit_candidate",
+  "source_pattern_exp": "exp_b023_seddik_surgery_pattern_audit",
+  "strict_exp": "experiments\\exp005_top_cost_rewrite_strict",
+  "top_k": 80,
+  "screened_task_count": 80,
+  "safe_initializer_rows": 16,
+  "generated_candidate_count": 10,
+  "candidate_status_counts": {
+    "improved": 8,
+    "rejected": 2
+  },
+  "improved_task_count": 8,
+  "improved_tasks": [
+    36,
+    51,
+    77,
+    110,
+    128,
+    284,
+    358,
+    383
+  ],
+  "local_estimate_delta": 0.02748525230556531,
+  "new_local_estimate": 6282.257713252306,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 823962,
+    "sha256": "f298e7945f09f82306ead11382f1d44c049cb22e620208f5e8263b7c95196dc8"
+  },
+  "runtime_seconds": 6.893864631652832,
+  "kaggle_submission_ref": 53417752,
+  "kaggle_public_lb": 5929.92,
+  "kaggle_lb_delta_vs_strict_seed": 0.03,
+  "submission_decision": "submit_micro_delta_if_improved",
+  "leakage_risk": "low-to-medium: public pattern but applied to strict seed with full-arc gate.",
+  "overfitting_risk": "medium: scalarization is semantic only under safe broadcast assumptions; full-arc validation required.",
+  "decision": "submit if improved; otherwise audit duplicate initializers next."
+}

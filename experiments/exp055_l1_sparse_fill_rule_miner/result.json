@@ -1,0 +1,48 @@
+{
+  "exp_id": "exp055_l1_sparse_fill_rule_miner",
+  "date": "2026-06-06",
+  "status": "no_full_hit",
+  "source": "experiments\\exp054_signature_lookup_family_taxonomy\\task_taxonomy.csv",
+  "scanned_task_count": 8,
+  "tasks": [
+    251,
+    20,
+    37,
+    363,
+    335,
+    333,
+    246,
+    50
+  ],
+  "candidate_rule_count": 30,
+  "evaluated_rule_count": 240,
+  "full_pass_hit_count": 0,
+  "train_test_pass_hit_count": 0,
+  "full_pass_hits": [],
+  "train_test_hits": [],
+  "best_partial": {
+    "task_id": 20,
+    "rule_name": "d4_orbit_complete",
+    "status": "partial",
+    "total_pass": 132,
+    "total_examples": 266,
+    "train_pass": 2,
+    "train_examples": 3,
+    "test_pass": 1,
+    "test_examples": 1,
+    "arc_pass": 129,
+    "arc_examples": 262,
+    "fail_reasons": "{\"missing=3;extra=0;wrong=0\": 134}",
+    "estimated_lowering": "Equal color masks + small Reduce/Conv/constant masks + one Where",
+    "target_cost_band": "250-600 if rule is full-pass and emitted without full-grid tables"
+  },
+  "decision": "Lower full-pass hits first; if none, add object-role predicates before ONNX emission.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: symbolic rule mining only",
+  "leakage_risk": "low: generic geometric/local rules only, no teacher label table.",
+  "overfitting_risk": "medium: all arc-gen is used for diagnostics; accepted ONNX candidates need holdout/calibration.",
+  "outputs": {
+    "rule_eval": "rule_eval.csv",
+    "notes": "notes.md"
+  }
+}

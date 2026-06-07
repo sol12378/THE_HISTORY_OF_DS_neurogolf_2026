@@ -1,0 +1,24 @@
+{
+  "exp_id": "exp028_lookup_to_rule_miner",
+  "date": "2026-06-06",
+  "status": "rule_mining_ready",
+  "base_exp": "experiments/exp023_graph_surgery_exp016",
+  "base_local_estimate": 6479.3988246178,
+  "gap_to_6500": 20.60117538220038,
+  "gap_to_7600": 1120.6011753822004,
+  "scanned_task_count": 196,
+  "candidate_rows": 1176,
+  "pass_rule_candidate_count": 0,
+  "tasks_with_pass_rule_count": 0,
+  "positive_projected_candidate_count": 0,
+  "pass_family_counts": {},
+  "top_positive_candidates": [],
+  "outputs": {
+    "rule_candidate_manifest": "rule_candidate_manifest.csv",
+    "task_rule_summary": "task_rule_summary.csv"
+  },
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: miner only, no selected ONNX bundle generated.",
+  "leakage_risk": "medium-low: rules are fit on train only, but candidate ranking uses local validation.",
+  "overfitting_risk": "medium: arc-gen sample validation is not a private guarantee."
+}

@@ -1,0 +1,14 @@
+{
+  "exp": "exp_b036_beicicc_full_arc_blend",
+  "local_estimate": 6276.160646,
+  "prev_local": 6282.812218,
+  "delta": -6.651572,
+  "n_tasks_updated": 1,
+  "n_tasks_kept": 399,
+  "actual_gain": -6.651572,
+  "source_counts": {
+    "exp_b025_best": 399,
+    "beicicc_6645": 1
+  },
+  "elapsed_s": 31.8
+}

@@ -1,0 +1,129 @@
+{
+  "exp_id": "exp_b011_task037_diag_ray_lowering",
+  "date": "2026-06-06",
+  "status": "no_gain",
+  "task_id": 37,
+  "rule_source_exp": "exp_b010_component_object_role_sparse_fill_miner",
+  "rule": "opposite_ray_diag_same_color",
+  "shape_profile": {
+    "input_shapes": {
+      "(10, 10)": 266
+    },
+    "output_shapes": {
+      "(10, 10)": 266
+    }
+  },
+  "baseline_exp": "experiments\\exp005_top_cost_rewrite_strict",
+  "baseline_strict_seed_score": 6282.230228,
+  "baseline_task_cost": 63726,
+  "baseline_task_points": 13.937652078450405,
+  "accepted": null,
+  "new_task_cost": 63726,
+  "new_task_points": 13.937652078450405,
+  "local_estimate_delta": 0.0,
+  "new_strict_seed_local_estimate": 6282.230228,
+  "candidate_status_counts": {
+    "no_cost_gain": 6
+  },
+  "attempts": [
+    {
+      "task_id": 37,
+      "template_name": "task037_diag_ray_k19",
+      "baseline_cost": 63726,
+      "candidate_cost": 441976,
+      "baseline_points": 13.937652078450405,
+      "candidate_points": 12.000989139056923,
+      "validation_status": "266_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "file_bytes": 60317,
+      "sha256": "769cfd3341956dfcd0ad38c6e872d3f0c04e05db81c5ddc25cb9f1b7734eb25b"
+    },
+    {
+      "task_id": 37,
+      "template_name": "task037_diag_ray_k21",
+      "baseline_cost": 63726,
+      "candidate_cost": 445176,
+      "baseline_points": 13.937652078450405,
+      "candidate_points": 11.993775011425376,
+      "validation_status": "266_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "file_bytes": 73125,
+      "sha256": "987211222bfdb50bf8434a47664f62eef38504f22eb7106f14e94f1ae3274aa2"
+    },
+    {
+      "task_id": 37,
+      "template_name": "task037_diag_ray_k23",
+      "baseline_cost": 63726,
+      "candidate_cost": 448696,
+      "baseline_points": 13.937652078450405,
+      "candidate_points": 11.98589912271796,
+      "validation_status": "266_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "file_bytes": 87205,
+      "sha256": "7622ec997ef92f8b7fd9e05639432d2632b31ce09ffad7336caa4b17cd9d238b"
+    },
+    {
+      "task_id": 37,
+      "template_name": "task037_diag_ray_k25",
+      "baseline_cost": 63726,
+      "candidate_cost": 452536,
+      "baseline_points": 13.937652078450405,
+      "candidate_points": 11.977377403031403,
+      "validation_status": "266_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "file_bytes": 102565,
+      "sha256": "cf7c9ca0718f7498a93b3a73cec3d9f5256ab5758403765687278303c56acfbb"
+    },
+    {
+      "task_id": 37,
+      "template_name": "task037_diag_ray_k27",
+      "baseline_cost": 63726,
+      "candidate_cost": 456696,
+      "baseline_points": 13.937652078450405,
+      "candidate_points": 11.968226759350047,
+      "validation_status": "266_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "file_bytes": 119205,
+      "sha256": "28b1f02f6cbd9d870c1c3c3caa5a0b0cba61369e83f85c62630f88236051057e"
+    },
+    {
+      "task_id": 37,
+      "template_name": "task037_diag_ray_k29",
+      "baseline_cost": 63726,
+      "candidate_cost": 461176,
+      "baseline_points": 13.937652078450405,
+      "candidate_points": 11.958464972138309,
+      "validation_status": "266_pass_0_fail",
+      "status": "no_cost_gain",
+      "reason": "candidate cost is not lower than baseline",
+      "file_bytes": 137125,
+      "sha256": "550544c9a2314db271b21493820dcb233fbc2e9d5102acc731f284472c4ddd1d"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 824070,
+    "sha256": "a8660d235645672d49da47d41b8d0e626483fec9e2f91dbd77f50f5e49271b45"
+  },
+  "runtime_seconds": 8.490915298461914,
+  "submission_decision": "no_submit: no cost gain",
+  "leakage_risk": "low: explicit diagonal same-color ray rule, no signature lookup or arc-gen labels in synthesis.",
+  "overfitting_risk": "medium: rule passes all local arc-gen; single-task Kaggle delta is needed to calibrate hidden behavior.",
+  "decision": "submit single-task delta if accepted; otherwise replace Conv visibility with cheaper diagonal reduction lowering."
+}

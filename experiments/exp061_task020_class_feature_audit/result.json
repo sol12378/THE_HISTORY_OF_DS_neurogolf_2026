@@ -1,0 +1,159 @@
+{
+  "exp_id": "exp061_task020_class_feature_audit",
+  "date": "2026-06-06",
+  "status": "audit_ready",
+  "target_task": 20,
+  "example_count": 266,
+  "template_counts": {
+    "corners": 87,
+    "inner_diag": 87,
+    "edge_mid": 92
+  },
+  "best_key": {
+    "feature_key": "pos",
+    "unique_key_count": 71,
+    "pure_key_count": 71,
+    "covered_examples": 266,
+    "majority_correct": 266,
+    "accuracy": 1.0,
+    "top_conflicts": "[]"
+  },
+  "key_summaries": [
+    {
+      "feature_key": "pos",
+      "unique_key_count": 71,
+      "pure_key_count": 71,
+      "covered_examples": 266,
+      "majority_correct": 266,
+      "accuracy": 1.0,
+      "top_conflicts": "[]"
+    },
+    {
+      "feature_key": "row_col_counts",
+      "unique_key_count": 71,
+      "pure_key_count": 71,
+      "covered_examples": 266,
+      "majority_correct": 266,
+      "accuracy": 1.0,
+      "top_conflicts": "[]"
+    },
+    {
+      "feature_key": "canon_pos",
+      "unique_key_count": 24,
+      "pure_key_count": 24,
+      "covered_examples": 266,
+      "majority_correct": 266,
+      "accuracy": 1.0,
+      "top_conflicts": "[]"
+    },
+    {
+      "feature_key": "canon_and_count",
+      "unique_key_count": 24,
+      "pure_key_count": 24,
+      "covered_examples": 266,
+      "majority_correct": 266,
+      "accuracy": 1.0,
+      "top_conflicts": "[]"
+    },
+    {
+      "feature_key": "col_counts",
+      "unique_key_count": 40,
+      "pure_key_count": 34,
+      "covered_examples": 266,
+      "majority_correct": 233,
+      "accuracy": 0.8759398496240601,
+      "top_conflicts": "[[34, \"[0, 0, 0, 0, 1]\", {\"corners\": 23, \"edge_mid\": 11}], [28, \"[1, 0, 0, 0, 0]\", {\"corners\": 17, \"edge_mid\": 11}], [10, \"[0, 2, 0, 2, 1]\", {\"corners\": 5, \"edge_mid\": 5}], [9, \"[1, 2, 0, 2, 0]\", {\"corners\": 8, \"edge_mid\": 1}], [9, \"[0, 0, 1, 0, 1]\", {\"corners\": 5, \"edge_mid\": 4}], [5, \"[1, 0, 1, 0, 0]\", {\"corners\": 4, \"edge_mid\": 1}]]"
+    },
+    {
+      "feature_key": "row_counts",
+      "unique_key_count": 41,
+      "pure_key_count": 35,
+      "covered_examples": 266,
+      "majority_correct": 232,
+      "accuracy": 0.8721804511278195,
+      "top_conflicts": "[[32, \"[1, 0, 0, 0, 0]\", {\"corners\": 21, \"edge_mid\": 11}], [31, \"[0, 0, 0, 0, 1]\", {\"edge_mid\": 12, \"corners\": 19}], [12, \"[0, 2, 0, 2, 1]\", {\"corners\": 9, \"edge_mid\": 3}], [8, \"[1, 2, 0, 2, 0]\", {\"corners\": 4, \"edge_mid\": 4}], [8, \"[0, 0, 1, 0, 1]\", {\"edge_mid\": 5, \"corners\": 3}], [7, \"[1, 0, 1, 0, 0]\", {\"corners\": 6, \"edge_mid\": 1}]]"
+    },
+    {
+      "feature_key": "count_and_touch",
+      "unique_key_count": 14,
+      "pure_key_count": 6,
+      "covered_examples": 266,
+      "majority_correct": 218,
+      "accuracy": 0.8195488721804511,
+      "top_conflicts": "[[29, \"[5, false, true, true]\", {\"edge_mid\": 14, \"corners\": 15}], [28, \"[5, false, true, false]\", {\"inner_diag\": 15, \"corners\": 13}], [22, \"[5, false, false, true]\", {\"inner_diag\": 9, \"edge_mid\": 13}], [10, \"[9, false, true, true]\", {\"corners\": 5, \"edge_mid\": 4, \"inner_diag\": 1}], [6, \"[6, true, true, true]\", {\"edge_mid\": 3, \"corners\": 3}], [5, \"[6, true, false, true]\", {\"inner_diag\": 4, \"edge_mid\": 1}], [3, \"[6, true, true, false]\", {\"inner_diag\": 2, \"corners\": 1}], [3, \"[10, true, true, true]\", {\"edge_mid\": 1, \"inner_diag\": 1, \"corners\": 1}]]"
+    },
+    {
+      "feature_key": "touch_signature",
+      "unique_key_count": 8,
+      "pure_key_count": 2,
+      "covered_examples": 266,
+      "majority_correct": 212,
+      "accuracy": 0.7969924812030075,
+      "top_conflicts": "[[68, \"[false, true, false]\", {\"corners\": 53, \"inner_diag\": 15}], [67, \"[false, false, true]\", {\"edge_mid\": 58, \"inner_diag\": 9}], [39, \"[false, true, true]\", {\"corners\": 20, \"edge_mid\": 18, \"inner_diag\": 1}], [16, \"[true, false, true]\", {\"inner_diag\": 4, \"edge_mid\": 12}], [12, \"[true, true, false]\", {\"corners\": 10, \"inner_diag\": 2}], [9, \"[true, true, true]\", {\"edge_mid\": 4, \"corners\": 4, \"inner_diag\": 1}]]"
+    },
+    {
+      "feature_key": "touches_edge_mid",
+      "unique_key_count": 2,
+      "pure_key_count": 0,
+      "covered_examples": 266,
+      "majority_correct": 164,
+      "accuracy": 0.6165413533834586,
+      "top_conflicts": "[[135, \"false\", {\"corners\": 63, \"inner_diag\": 72}], [131, \"true\", {\"edge_mid\": 92, \"corners\": 24, \"inner_diag\": 15}]]"
+    },
+    {
+      "feature_key": "touches_corner",
+      "unique_key_count": 2,
+      "pure_key_count": 0,
+      "covered_examples": 266,
+      "majority_correct": 157,
+      "accuracy": 0.5902255639097744,
+      "top_conflicts": "[[138, \"false\", {\"inner_diag\": 68, \"edge_mid\": 70}], [128, \"true\", {\"corners\": 87, \"inner_diag\": 19, \"edge_mid\": 22}]]"
+    },
+    {
+      "feature_key": "sorted_col_counts",
+      "unique_key_count": 16,
+      "pure_key_count": 10,
+      "covered_examples": 266,
+      "majority_correct": 130,
+      "accuracy": 0.48872180451127817,
+      "top_conflicts": "[[132, \"[1, 0, 0, 0, 0]\", {\"corners\": 40, \"inner_diag\": 47, \"edge_mid\": 45}], [61, \"[2, 2, 1, 0, 0]\", {\"inner_diag\": 15, \"corners\": 28, \"edge_mid\": 18}], [22, \"[1, 1, 0, 0, 0]\", {\"corners\": 9, \"inner_diag\": 8, \"edge_mid\": 5}], [7, \"[2, 2, 2, 2, 1]\", {\"corners\": 5, \"edge_mid\": 2}], [5, \"[3, 2, 1, 0, 0]\", {\"edge_mid\": 2, \"corners\": 3}], [3, \"[2, 2, 1, 1, 0]\", {\"inner_diag\": 2, \"corners\": 1}]]"
+    },
+    {
+      "feature_key": "sorted_row_counts",
+      "unique_key_count": 15,
+      "pure_key_count": 8,
+      "covered_examples": 266,
+      "majority_correct": 124,
+      "accuracy": 0.46616541353383456,
+      "top_conflicts": "[[132, \"[1, 0, 0, 0, 0]\", {\"corners\": 40, \"inner_diag\": 47, \"edge_mid\": 45}], [65, \"[2, 2, 1, 0, 0]\", {\"inner_diag\": 15, \"corners\": 28, \"edge_mid\": 22}], [23, \"[1, 1, 0, 0, 0]\", {\"corners\": 9, \"inner_diag\": 8, \"edge_mid\": 6}], [7, \"[2, 2, 2, 2, 1]\", {\"corners\": 5, \"edge_mid\": 2}], [4, \"[3, 2, 1, 0, 0]\", {\"corners\": 3, \"edge_mid\": 1}], [4, \"[2, 2, 1, 1, 0]\", {\"inner_diag\": 2, \"edge_mid\": 1, \"corners\": 1}], [2, \"[3, 2, 2, 2, 1]\", {\"edge_mid\": 1, \"corners\": 1}]]"
+    },
+    {
+      "feature_key": "pos_count",
+      "unique_key_count": 6,
+      "pure_key_count": 0,
+      "covered_examples": 266,
+      "majority_correct": 98,
+      "accuracy": 0.3684210526315789,
+      "top_conflicts": "[[132, \"1\", {\"corners\": 40, \"inner_diag\": 47, \"edge_mid\": 45}], [79, \"5\", {\"inner_diag\": 24, \"corners\": 28, \"edge_mid\": 27}], [28, \"2\", {\"corners\": 9, \"inner_diag\": 8, \"edge_mid\": 11}], [14, \"6\", {\"inner_diag\": 6, \"edge_mid\": 4, \"corners\": 4}], [10, \"9\", {\"corners\": 5, \"edge_mid\": 4, \"inner_diag\": 1}], [3, \"10\", {\"edge_mid\": 1, \"inner_diag\": 1, \"corners\": 1}]]"
+    },
+    {
+      "feature_key": "touches_center",
+      "unique_key_count": 2,
+      "pure_key_count": 0,
+      "covered_examples": 266,
+      "majority_correct": 92,
+      "accuracy": 0.3458646616541353,
+      "top_conflicts": "[[221, \"false\", {\"corners\": 73, \"inner_diag\": 72, \"edge_mid\": 76}], [45, \"true\", {\"corners\": 14, \"edge_mid\": 16, \"inner_diag\": 15}]]"
+    }
+  ],
+  "decision": "If a low-cardinality high-accuracy key exists, turn it into a generative selector; avoid high-cardinality lookup selectors.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: diagnostic audit only",
+  "leakage_risk": "medium: all examples used for feature audit.",
+  "overfitting_risk": "high for high-cardinality keys; acceptable only if reduced to simple rule.",
+  "outputs": {
+    "key_summary": "key_summary.csv",
+    "example_features": "example_features.csv",
+    "notes": "notes.md"
+  }
+}

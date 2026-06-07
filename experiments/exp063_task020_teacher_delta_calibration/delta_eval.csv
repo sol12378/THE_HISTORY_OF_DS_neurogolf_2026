@@ -1,0 +1,2 @@
+task_id,strict_cost,strict_points,teacher_cost,teacher_points,local_delta,validation_ok,validation_status,validation_reason,teacher_sha256
+20,90133,13.590958363748854,3931,16.723350874578138,0.0,False,24_pass_1_fail,mismatch example 24,6875ba09c357054f37d2f6cef4eadcd3c5e88559d7f60d968d63e9eded1c0d4f

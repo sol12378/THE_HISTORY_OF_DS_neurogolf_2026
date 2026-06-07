@@ -1,0 +1,8 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+398,crop_or_resize,constant_sparse_output,84295,,13.657922169750098,,,not_run,skipped,non-constant output,
+398,crop_or_resize,global_transform_color_map,84295,,13.657922169750098,,,not_run,skipped,variable shapes,
+398,crop_or_resize,common_fixed_crop,84295,,13.657922169750098,,,not_run,skipped,output larger than input,
+398,crop_or_resize,common_fixed_crop_color_map,84295,,13.657922169750098,,,not_run,skipped,output larger than input,
+398,crop_or_resize,diagonal_shift_tile_scatternd,84295,369873,13.657922169750098,12.179085017544281,238776,26_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,ae44ca4693b1ad0aa0c825c3d5dfc6211e10cfdccc39e155e1b42b321fe283d2
+398,crop_or_resize,signature_scatternd_lookup,84295,138254,13.657922169750098,13.163152147941748,363727,26_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,09e9817372ebe1f0b2fd5a76069b5c6778b6bfdc2be9c91007a535e05e7be288
+398,crop_or_resize,direct_identity,84295,,13.657922169750098,,,not_run,skipped,not identity,

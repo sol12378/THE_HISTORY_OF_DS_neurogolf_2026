@@ -1,0 +1,26 @@
+{
+  "exp_id": "exp_b026_five_experiment_review_b020_b024",
+  "date": "2026-06-06",
+  "status": "review_complete",
+  "reviewed_experiments": [
+    "exp_b020_l4_shape_crop_pattern_profiler",
+    "exp_b021_strict_seed_exp038_micro_delta_submit",
+    "exp_b022_public_notebook_intelligence",
+    "exp_b023_seddik_surgery_pattern_audit",
+    "exp_b024_safe_uniform_initializer_scalarization"
+  ],
+  "score_delta_found": 0.02748525230556531,
+  "lb_delta_found": 0.03,
+  "best_lb_in_window": 5930.02,
+  "meaningful_for_7700": true,
+  "verdict": "useful_but_postpass_limited",
+  "summary": "exp_b020 rejected simple L4 crop assumptions; exp_b021 and exp_b024 produced LB-calibrated submit-safe micro deltas; exp_b022/b023 converted user-provided notebooks into actionable surgery/lowering intelligence.",
+  "next_pdca": [
+    "Keep submitting full-arc-safe small deltas to align local/LB.",
+    "Use Seddik-style post-pass as standard bundle cleanup.",
+    "Return main effort to cost<=250 rule/compiler replacement, especially object-anchor crop and sparse/object rules.",
+    "Use public notebook lowering patterns as priors, not copied artifacts."
+  ],
+  "leakage_risk": "low for reviewed accepted deltas; public notebook information is treated as patterns and still gated by validation.",
+  "overfitting_risk": "medium: graph surgery deltas are small and validated but task-specific; rule compiler work still needs hidden-generation robustness."
+}

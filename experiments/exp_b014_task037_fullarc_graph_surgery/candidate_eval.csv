@@ -1,0 +1,34 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+37,sparse_edit_or_object_completion,task037_bypass_Cast_node0_to_input0,63726,,13.937652078450405,,20445,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Slice, node name: safe_name_14): [TypeInferenceError] Inferred elem type differs from existing elem type: (1) vs (10)
+(op_type:Sl",0d1968d9982cbb4b294f70bb7937fbcbf0627fb904a2f96ea1bccb12a53ce68f
+37,sparse_edit_or_object_completion,task037_bypass_Slice_node1_to_input0,63726,,13.937652078450405,,20312,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:ReduceSum, node name: safe_name_36): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (30) vs (10)
+",d2c78284a50af9acc39922e358522de62acb4a17609c486c7b7cd07c89c8f35a
+37,sparse_edit_or_object_completion,task037_bypass_Slice_node1_to_input1,63726,,13.937652078450405,,20348,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:ReduceSum, node name: safe_name_36): [TypeInferenceError] Inferred elem type differs from existing elem type: (7) vs (10)
+",24408b66f2e9ad0ee3cefe94958d4f4ce6acb59b4522d59f2372d2549f0301e2
+37,sparse_edit_or_object_completion,task037_bypass_Slice_node1_to_input2,63726,,13.937652078450405,,20348,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:ReduceSum, node name: safe_name_36): [TypeInferenceError] Inferred elem type differs from existing elem type: (7) vs (10)
+",8c2683a83b077de923b0e71c72b633f71ac2ede155e7dae7de4d8aab7b7eef7c
+37,sparse_edit_or_object_completion,task037_bypass_Slice_node1_to_input3,63726,,13.937652078450405,,20348,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:ReduceSum, node name: safe_name_36): [TypeInferenceError] Inferred elem type differs from existing elem type: (7) vs (10)
+",74c9b4bb032c445237c8beb09e82017f99362d2898076ed521dafa20636520a1
+37,sparse_edit_or_object_completion,task037_bypass_Slice_node2_to_input0,63726,,13.937652078450405,,20230,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Conv, node name: safe_name_16): [ShapeInferenceError] Inferred shape and existing shape differ in dimension 2: (30) vs (10)
+(op_t",b31abd8f243f17a00d47d9c967532350275c74bc269cd1c1733b801f5fa40620
+37,sparse_edit_or_object_completion,task037_bypass_Slice_node2_to_input1,63726,,13.937652078450405,,20269,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Conv, node name: safe_name_16): [ShapeInferenceError] Input tensor must have at least 2 dimensions
+(op_type:Conv, node name: safe",56c1c0163b1a875f3bba1c7a66ef4cebbfa0d797bcdce56f87e423c5cd9292e9
+37,sparse_edit_or_object_completion,task037_bypass_Slice_node2_to_input2,63726,,13.937652078450405,,20269,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Conv, node name: safe_name_16): [ShapeInferenceError] Input tensor must have at least 2 dimensions
+(op_type:Conv, node name: safe",78b47437268034745c62c6985cf8d95c2ec652295ab50ee0cb83614b454b5009
+37,sparse_edit_or_object_completion,task037_bypass_Slice_node2_to_input3,63726,,13.937652078450405,,20269,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Conv, node name: safe_name_16): [ShapeInferenceError] Input tensor must have at least 2 dimensions
+(op_type:Conv, node name: safe",9e451e50b04329a7e2e51e79bdeec5c0a08f77bd8624f241ba29a878da55248e
+37,sparse_edit_or_object_completion,task037_bypass_Slice_node2_to_input4,63726,,13.937652078450405,,20269,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Conv, node name: safe_name_16): [ShapeInferenceError] Input tensor must have at least 2 dimensions
+(op_type:Conv, node name: safe",9a959676e3548cf6a775daacf0ea783cb43aa34b20d46972f2b15f757e595e3c
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node9_to_input0,63726,,13.937652078450405,,20450,0_pass_1_fail,rejected,mismatch example 0,94c61f3e98b85523f47d5d24ee3b09ca230ad0eb624d09d13e7c90cbbc277f76
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node9_to_input1,63726,,13.937652078450405,,20450,0_pass_1_fail,rejected,mismatch example 0,bf05bf52828b9e238d5bcce1fbc2c25989a85bfdd1abcd62db7015e20c14aa28
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node10_to_input0,63726,63726,13.937652078450405,13.937652078450405,20450,266_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,001502940d9708f3bc15eed149a90945645c6bb148160d123233ef2f3a78c7d9
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node10_to_input1,63726,,13.937652078450405,,20450,0_pass_1_fail,rejected,mismatch example 0,3906aec51a1f8c0b1187f440996bd67733185fbc8cf498b95bd9c7ea0f82a156
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node17_to_input0,63726,,13.937652078450405,,20450,0_pass_1_fail,rejected,mismatch example 0,016a877934df0f414cb131788960238f0ae75f25f03eb267dc08bc1b6694adbc
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node17_to_input1,63726,,13.937652078450405,,20450,0_pass_1_fail,rejected,mismatch example 0,eafdfaac9bb323183a49d8db9d404f4a593110c4d2a12b091711f000d796cf98
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node18_to_input0,63726,63726,13.937652078450405,13.937652078450405,20450,266_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,d9f31f03eca2837dbc218829966196fcbf460a398b2d7d583c74c2f722c13acb
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node18_to_input1,63726,,13.937652078450405,,20450,0_pass_1_fail,rejected,mismatch example 0,a088891b02fbaddddd774be30f6f02fe9464f2fe9dd1c3ad3224eceac76e41cc
+37,sparse_edit_or_object_completion,task037_bypass_Sub_node21_to_input0,63726,,13.937652078450405,,20450,not_run,rejected,"shape/check failed: [ShapeInferenceError] Inference error(s): (op_type:Relu, node name: safe_name_35): [ShapeInferenceError] Inferred shape and existing shape differ in rank: (1) vs (4)
+",a80757cb4c8e8262ee3bafab853ba81d4a53700a3c5d8fc66c7a03572bc496da
+37,sparse_edit_or_object_completion,task037_bypass_Sub_node21_to_input1,63726,,13.937652078450405,,20426,0_pass_1_fail,rejected,mismatch example 0,ad7df3745ff389a2d4c2307421fc53fc8518d6477b959208418b0d0e94315ed5
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node24_to_input0,63726,63726,13.937652078450405,13.937652078450405,20450,266_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,a887cc5878eebb84adeedccfe341c614ed9f605a0ef56fba1ac30c982245011a
+37,sparse_edit_or_object_completion,task037_bypass_Mul_node24_to_input1,63726,,13.937652078450405,,20450,0_pass_1_fail,rejected,mismatch example 0,864acbf01a4cfeceb824ebaa8422ff663bf7c91024003ee75bd2ad06f82f4dbe

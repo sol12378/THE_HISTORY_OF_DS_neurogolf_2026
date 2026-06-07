@@ -1,0 +1,3 @@
+candidate,validation_status,status,reason,sha256
+cast_bypass_keep_node,0_pass_0_fail,rejected,ort load failed: [ONNXRuntimeError] : 1 : FAIL : Type Error: Type (tensor(float16)) of output arg (safe_name_15) of node (safe_name_15) does not match expected type (tensor(float)).,41d6170c3335e393a29798a20b8946d0587286a1734fb77f3b03aaf68f754b1a
+cast_bypass_remove_node,0_pass_0_fail,rejected,ort load failed: [ONNXRuntimeError] : 1 : FAIL : Type Error: Type (tensor(float16)) of output arg (safe_name_15) of node (safe_name_15) does not match expected type (tensor(float)).,fabc6e29fef5c02bb76eba10b95a68b7863c17d83c3ec718a0e95dd0b57b529a

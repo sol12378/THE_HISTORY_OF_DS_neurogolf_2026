@@ -1,0 +1,60 @@
+{
+  "exp_id": "exp056_submission_calibration_inventory",
+  "date": "2026-06-06",
+  "status": "inventory_ready",
+  "purpose": "calibrate local vs Kaggle LB while pursuing all-task cost 250-600 lowering",
+  "candidate_count": 67,
+  "submission_zip_count": 29,
+  "known_lb_count": 3,
+  "known_lb_rows": [
+    {
+      "exp_id": "exp041_task145_deeper_mul_chain",
+      "has_submission_zip": true,
+      "local_score": 6480.302477938763,
+      "known_lb": 3417.71,
+      "submission_ref": "53414511",
+      "local_lb_gap": -3062.5924779387633,
+      "risk": "high",
+      "submit_value": "done",
+      "risk_reason": "same local-upper lineage as exp041; LB collapse already measured by exp041",
+      "submit_value_reason": "already submitted ref 53414511 LB 3417.71"
+    },
+    {
+      "exp_id": "exp001_baseline",
+      "has_submission_zip": true,
+      "local_score": "",
+      "known_lb": 14.5,
+      "submission_ref": "53383536",
+      "local_lb_gap": "",
+      "risk": "low",
+      "submit_value": "done",
+      "risk_reason": "minimal baseline; already submitted",
+      "submit_value_reason": "already submitted ref 53383536 LB 14.5"
+    },
+    {
+      "exp_id": "exp005_top_cost_rewrite_strict",
+      "has_submission_zip": true,
+      "local_score": 6282.230228092811,
+      "known_lb": 5929.89,
+      "submission_ref": "53414978",
+      "local_lb_gap": -352.3402280928103,
+      "risk": "low",
+      "submit_value": "done",
+      "risk_reason": "strict seed already Kaggle-calibrated",
+      "submit_value_reason": "already submitted ref 53414978 LB 5929.89"
+    }
+  ],
+  "submit_ready_count": 0,
+  "submit_ready_rows": [],
+  "decision": "Do not spend submissions on diagnostic/no-hit experiments. Next LB submission should be the first official-valid strict-seed delta from object-role/bbox-local compiler; if none exists, keep exp005 as current calibration baseline.",
+  "calibration_policy": [
+    "submit low-risk strict seed or strict-seed delta bundles first",
+    "record local, LB, ref, and local_lb_gap immediately",
+    "avoid large high-risk teacher/signature bundles except explicit collapse-measurement submissions",
+    "prefer single-task or single-family deltas to identify whether local/LB environments match"
+  ],
+  "outputs": {
+    "inventory": "submission_calibration_inventory.csv",
+    "notes": "notes.md"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "exp_id": "exp043_fixed_dsl_hit_lowering",
+  "date": "2026-06-06",
+  "status": "no_gain",
+  "base_exp": "experiments\\exp023_graph_surgery_exp016",
+  "overlay_exps": [
+    "experiments\\exp040_deeper_fullarc_safe_bypass",
+    "experiments\\exp041_task145_deeper_mul_chain"
+  ],
+  "baseline_local_estimate": 6480.302477938763,
+  "new_local_estimate": 6480.302477938763,
+  "delta": 0.0,
+  "gap_to_6500": 19.69752206123667,
+  "gap_to_7000": 519.6975220612367,
+  "gap_to_7400": 919.6975220612367,
+  "gap_to_7600": 1119.6975220612367,
+  "gap_to_7700": 1219.6975220612367,
+  "candidate_status_counts": {
+    "skipped": 4,
+    "rejected": 1,
+    "no_cost_gain": 4
+  },
+  "improved_task_count": 0,
+  "improved_tasks": [],
+  "top_improvements": [],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 836892,
+    "sha256": "078213da16742e8b168f6ff3c07edd5be6f34727dd67fd41f62dcc1fc6233f4d"
+  },
+  "runtime_seconds": 1.77754807472229,
+  "accounting_note": "Total score uses exp041 authoritative best plus accepted deltas; selected_manifest is a convenience bundle manifest.",
+  "leakage_risk": "low: candidates are explicit DSL transforms and pass train/test/all arc-gen; no signature lookup.",
+  "overfitting_risk": "low-to-medium: fixed-shape transform families are simple, but still ARC train-task specific.",
+  "decision": "adopt if improved; continue with variable-shape/object DSL lowering for exp042 skipped hits."
+}

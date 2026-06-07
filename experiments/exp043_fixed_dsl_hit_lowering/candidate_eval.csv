@@ -1,0 +1,10 @@
+task_id,program,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+31,bbox_nonzero,18616,,15.168223295017873,,,not_run,skipped,requires variable-shape/object lowering,
+150,flip_h,1014,,18.078341815848873,,,not_run,skipped,requires variable-shape/object lowering,
+155,flip_v,1014,,18.078341815848873,,,not_run,skipped,requires variable-shape/object lowering,
+223,nearest_upscale_3,1800,,17.504458056115745,,636,0_pass_1_fail,rejected,mismatch example 0,4d25d1b550046ff5d3fd712899a2125f4649afa0eaded1b3cf8b1822d59c0a5b
+380,rot90_ccw,728,1095,18.409698951803314,18.001490357749397,698,267_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,359ad43a3becf1d4f83f9ccfd82cc86a74ab3b71865e8bb4373f76fb816f8164
+135,crop_tr,360,3624,19.113895968549844,16.80466633283713,749,266_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,410e7ac7f56b4fdbeefc0033b2bc04e9a182d5422012e2bd008b087302188b67
+87,rot180,368,1098,19.09191706183107,17.998754377930524,741,266_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,547cbe4109d15cc753f2a7dd74009f40f44b8527720e1eba71aa56df8675be5f
+140,rot180,368,1098,19.09191706183107,17.998754377930524,741,265_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,547cbe4109d15cc753f2a7dd74009f40f44b8527720e1eba71aa56df8675be5f
+326,crop_tl,160,,19.924826184766175,,,not_run,skipped,"variable shapes input=[(4, 4), (4, 8), (6, 6), (6, 12), (8, 4), (8, 8), (12, 6), (12, 12)] output=[(2, 2)]",

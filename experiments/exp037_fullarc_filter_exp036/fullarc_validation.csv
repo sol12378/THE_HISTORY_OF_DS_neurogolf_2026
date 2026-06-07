@@ -1,0 +1,17 @@
+task_id,full_arc_ok,passed,failed,reason
+55,True,263,0,ok
+58,True,22,0,ok
+62,True,267,0,ok
+74,True,267,0,ok
+80,False,22,1,mismatch example 25
+96,True,266,0,ok
+138,True,266,0,ok
+145,False,30,1,mismatch example 30
+148,True,266,0,ok
+187,False,263,1,mismatch example 263
+233,True,266,0,ok
+255,True,265,0,ok
+268,False,33,1,mismatch example 33
+289,True,268,0,ok
+392,True,266,0,ok
+398,True,268,0,ok

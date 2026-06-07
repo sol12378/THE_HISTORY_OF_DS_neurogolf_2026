@@ -1,0 +1,47 @@
+{
+  "exp_id": "exp_b014_task037_fullarc_graph_surgery",
+  "date": "2026-06-06",
+  "status": "no_gain",
+  "task_id": 37,
+  "baseline_exp": "experiments\\exp005_top_cost_rewrite_strict",
+  "strict_seed_local_estimate": 6282.230228,
+  "baseline_task_cost": 63726,
+  "baseline_task_points": 13.937652078450405,
+  "profile": {
+    "task_id": 37,
+    "node_count": 27,
+    "initializer_count": 13,
+    "file_bytes": 20513,
+    "op_counts": "{\"Relu\": 7, \"Conv\": 6, \"Mul\": 5, \"Slice\": 2, \"Cast\": 1, \"Sum\": 1, \"ReduceMax\": 1, \"Sub\": 1, \"ReduceSum\": 1, \"Concat\": 1, \"Pad\": 1}",
+    "candidate_count": 22
+  },
+  "candidate_status_counts": {
+    "rejected": 19,
+    "no_cost_gain": 3
+  },
+  "candidate_count": 22,
+  "accepted": null,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.230228,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 824070,
+    "sha256": "48df6578fd9f007c3f6fb0bf58611086cb00fb813c16f61485dea428aa3a6870"
+  },
+  "runtime_seconds": 2.2052226066589355,
+  "submission_decision": "no_submit: no cost gain",
+  "leakage_risk": "low-to-medium: graph surgery keeps strict artifact base and full arc-gen gate; no teacher artifact copied.",
+  "overfitting_risk": "medium: full arc-gen passes are required, but hidden generated cases still need Kaggle delta if improved.",
+  "decision": "submit single-task delta if improved; otherwise continue with rule-specific low-cost lowering."
+}

@@ -1,0 +1,10 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+221,crop_or_resize,constant_sparse_output,55869,,14.069235056400384,,,not_run,skipped,non-constant output,
+221,crop_or_resize,global_transform_color_map,55869,,14.069235056400384,,,not_run,skipped,variable shapes,
+221,crop_or_resize,common_fixed_crop,55869,,14.069235056400384,,,not_run,skipped,output larger than input,
+221,crop_or_resize,common_fixed_crop_color_map,55869,,14.069235056400384,,,not_run,skipped,output larger than input,
+221,crop_or_resize,tile_prefix_blocks_sparse_argmax,55869,165105,14.069235056400384,12.985663085874398,45222,25_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,d39d39bbed444f13245586ba7ba166f8bd16e755c5277518fa7561493e309014
+221,crop_or_resize,tile_prefix_blocks,55869,141047,14.069235056400384,13.143151552849574,73975,25_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,29b38f195bddf1f7ac599fbc185e73b9e4b10586da170377c0669f593460eaf6
+221,crop_or_resize,diagonal_shift_tile_scatternd,55869,,14.069235056400384,,,not_run,skipped,input is not 1x5,
+221,crop_or_resize,signature_scatternd_lookup,55869,98535,14.069235056400384,13.501832906005317,259019,25_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,3c0397f120cceb11ccaac2444bacfa422cd54ef884f0717fdfdccb04bfb98160
+221,crop_or_resize,direct_identity,55869,,14.069235056400384,,,not_run,skipped,not identity,

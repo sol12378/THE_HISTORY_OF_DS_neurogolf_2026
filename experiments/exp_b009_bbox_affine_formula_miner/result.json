@@ -1,0 +1,39 @@
+{
+  "exp_id": "exp_b009_bbox_affine_formula_miner",
+  "date": "2026-06-06",
+  "status": "no_full_hit",
+  "target_task_count": 9,
+  "target_task_ids": [
+    20,
+    126,
+    173,
+    251,
+    51,
+    378,
+    90,
+    37,
+    284
+  ],
+  "no_candidate_tasks": [
+    20,
+    126,
+    173,
+    251,
+    51,
+    378,
+    90,
+    37,
+    284
+  ],
+  "evaluated_candidate_count": 0,
+  "full_pass_hit_count": 0,
+  "train_test_pass_hit_count": 0,
+  "full_pass_hits": [],
+  "train_test_hits": [],
+  "best_partial": null,
+  "decision": "lower full pass if any; otherwise target object-role selection instead of coordinate formula only",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: no ONNX candidate generated",
+  "leakage_risk": "low-to-medium: formulas are train-derived but explanatory.",
+  "overfitting_risk": "medium: must pass all arc-gen and Kaggle delta before acceptance."
+}

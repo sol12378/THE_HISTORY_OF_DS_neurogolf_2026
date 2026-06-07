@@ -1,0 +1,6 @@
+task_id,strict_cost,gain_to_250,train_examples,positive_cells,negative_cells,output_color_counts,changed_count_by_example,best_feature,best_value,best_precision,best_recall,interpretation
+173,175243,6.552467943298192,3,23,1850,"{""1"": 6, ""6"": 1, ""8"": 11, ""4"": 4, ""2"": 1}","{""13"": 1, ""5"": 2}",ray_lr,-1:5,1.0,0.043478260869565216,feature is useful but needs branch conjunction
+133,193923,6.653755534178206,4,89,1436,"{""4"": 24, ""3"": 7, ""6"": 4, ""8"": 54}","{""12"": 1, ""8"": 1, ""54"": 1, ""15"": 1}",ray_d1,-4:-3,1.0,0.02247191011235955,feature is useful but needs branch conjunction
+285,151996,6.410148565830427,3,81,6001,"{""1"": 9, ""2"": 14, ""3"": 15, ""4"": 28, ""8"": 11, ""6"": 4}","{""39"": 1, ""24"": 1, ""18"": 1}",ray_d1,-6:1,1.0,0.012345679012345678,feature is useful but needs branch conjunction
+286,162199,6.475118337554084,2,92,330,"{""2"": 30, ""3"": 27, ""1"": 17, ""4"": 18}","{""57"": 1, ""35"": 1}",ray_lr,-1:6,1.0,0.010869565217391304,feature is useful but needs branch conjunction
+5,117225,6.150389526095541,3,92,2488,"{""2"": 34, ""3"": 21, ""4"": 16, ""1"": 13, ""6"": 8}","{""42"": 1, ""29"": 1, ""21"": 1}",ray_lr,2:0,0.6,0.06521739130434782,needs multi-feature tree or different representation

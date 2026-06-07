@@ -1,0 +1,40 @@
+{
+  "exp_id": "exp_b012_task037_teacher_delta_calibration",
+  "date": "2026-06-06",
+  "status": "rejected_validation_failed",
+  "purpose": "single-task LB calibration for local/LB alignment, not a rule-based adoption",
+  "task_id": 37,
+  "strict_exp": "experiments\\exp005_top_cost_rewrite_strict",
+  "teacher_exp": "experiments\\exp023_graph_surgery_exp016",
+  "strict_seed_local_estimate": 6282.230228,
+  "strict_task_cost": 63726,
+  "strict_task_points": 13.937652078450405,
+  "teacher_task_cost": 8379,
+  "teacher_task_points": 15.966516145386713,
+  "local_estimate_delta": 2.0288640669363076,
+  "new_local_estimate": 6284.259092066936,
+  "validation_ok": false,
+  "validation_status": "24_pass_1_fail",
+  "validation_reason": "mismatch example 24",
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 824787,
+    "sha256": "47ca752045a5d80cc69bb67ba775ffd0d65914ab780e605128f72fe3eebdde04"
+  },
+  "runtime_seconds": 1.3690345287322998,
+  "submission_decision": "no_submit",
+  "leakage_risk": "high: teacher artifact is signature/public-artifact style and is not a final strategy.",
+  "overfitting_risk": "high: single-task hidden behavior must be measured by Kaggle LB.",
+  "decision": "submit if validation passes; use LB delta to calibrate task037 teacher/rule gap."
+}

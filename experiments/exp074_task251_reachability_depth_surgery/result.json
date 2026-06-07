@@ -1,0 +1,133 @@
+{
+  "exp_id": "exp074_task251_reachability_depth_surgery",
+  "date": "2026-06-06",
+  "status": "no_gain",
+  "base_exp": "experiments\\exp_b025_submit_safe_delta_union",
+  "task_id": 251,
+  "base_cost": 100580,
+  "base_points": 13.481291290274044,
+  "candidate_rows": [
+    {
+      "task_id": 251,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "reachability_depth0_safe_name_40",
+      "baseline_cost": 100580,
+      "candidate_cost": "",
+      "baseline_points": 13.481291290274044,
+      "candidate_points": "",
+      "file_bytes": 6781,
+      "validation_status": "0_pass_1_fail",
+      "status": "rejected",
+      "reason": "mismatch example 0",
+      "sha256": "7b92d592d1df8896b7630fd2c1e2b039ccd00f586380b8d9044fca69784eea8e"
+    },
+    {
+      "task_id": 251,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "reachability_depth1_safe_name_43",
+      "baseline_cost": 100580,
+      "candidate_cost": "",
+      "baseline_points": 13.481291290274044,
+      "candidate_points": "",
+      "file_bytes": 6781,
+      "validation_status": "1_pass_1_fail",
+      "status": "rejected",
+      "reason": "mismatch example 1",
+      "sha256": "2494e3bc1b3b545ab84e8b4c6e536823b9f96d03a887addce3ca18bcf577da0f"
+    },
+    {
+      "task_id": 251,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "reachability_depth2_safe_name_46",
+      "baseline_cost": 100580,
+      "candidate_cost": "",
+      "baseline_points": 13.481291290274044,
+      "candidate_points": "",
+      "file_bytes": 6781,
+      "validation_status": "2_pass_1_fail",
+      "status": "rejected",
+      "reason": "mismatch example 2",
+      "sha256": "8042dc9472e5539b467458092d28a701c1680a6cc60e2e6ede2527fe1952f931"
+    },
+    {
+      "task_id": 251,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "reachability_depth3_safe_name_49",
+      "baseline_cost": 100580,
+      "candidate_cost": "",
+      "baseline_points": 13.481291290274044,
+      "candidate_points": "",
+      "file_bytes": 6781,
+      "validation_status": "4_pass_1_fail",
+      "status": "rejected",
+      "reason": "mismatch example 4",
+      "sha256": "8e18d2befd68ab8b28a3ac2e774095967c8e503792e5bb75ea00805b79f23a4d"
+    },
+    {
+      "task_id": 251,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "reachability_depth4_safe_name_52",
+      "baseline_cost": 100580,
+      "candidate_cost": "",
+      "baseline_points": 13.481291290274044,
+      "candidate_points": "",
+      "file_bytes": 6781,
+      "validation_status": "4_pass_1_fail",
+      "status": "rejected",
+      "reason": "mismatch example 4",
+      "sha256": "196bd92026264b3ec579124759045218c092e1d3f8991818931d5279ed0091cb"
+    },
+    {
+      "task_id": 251,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "reachability_depth5_safe_name_55",
+      "baseline_cost": 100580,
+      "candidate_cost": "",
+      "baseline_points": 13.481291290274044,
+      "candidate_points": "",
+      "file_bytes": 6781,
+      "validation_status": "88_pass_1_fail",
+      "status": "rejected",
+      "reason": "mismatch example 88",
+      "sha256": "0029b0e1ca88f37e93b21b5a6512fb7f79dbfac0a0bdd87d50fa4a4f8f9834d3"
+    },
+    {
+      "task_id": 251,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "reachability_depth6_safe_name_58",
+      "baseline_cost": 100580,
+      "candidate_cost": "",
+      "baseline_points": 13.481291290274044,
+      "candidate_points": "",
+      "file_bytes": 6781,
+      "validation_status": "259_pass_1_fail",
+      "status": "rejected",
+      "reason": "mismatch example 259",
+      "sha256": "02462be07be28a2b2e1e56d400d72b560d9bbd3daf9d74a8a369805d6ec9fb5e"
+    }
+  ],
+  "best_candidate": null,
+  "local_estimate_delta": 0.0,
+  "new_local_estimate": 6282.812217709089,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820756,
+    "sha256": "78304fb0cfff5ece15e94092f1fab153e1ba6b3a248767775595695cd578321f"
+  },
+  "runtime_seconds": 1.9855613708496094,
+  "submission_decision": "no_submit",
+  "leakage_risk": "low: graph surgery only shortens an existing explicit reachability computation and is full-arc gated.",
+  "overfitting_risk": "medium: task-specific depth reduction may still fail hidden generation; submit if improved to calibrate.",
+  "decision": "If a shallower reachability output full-passes and reduces cost, submit as single-task delta. Otherwise keep existing artifact and seek different closed-form lowering."
+}

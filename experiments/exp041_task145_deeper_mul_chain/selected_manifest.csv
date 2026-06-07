@@ -1,0 +1,2 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+145,same_shape_global_transform,greedy17_Mul_node219_to_input0,62857,61837,13.951382415890725,13.967742830205236,23754,full_arc_pass,improved,deep full-arc safe bypass,ef456cce98b27da01e41dba321972adec87cb731a9b7d1696cf8e0c2db4bd873

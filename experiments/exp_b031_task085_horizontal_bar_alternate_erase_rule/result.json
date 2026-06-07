@@ -1,0 +1,28 @@
+{
+  "exp_id": "exp_b031_task085_horizontal_bar_alternate_erase_rule",
+  "date": "2026-06-06",
+  "status": "rule_found",
+  "task_id": 85,
+  "rule_summary": "For every solid same-color horizontal rectangle with height 3, zero every second cell of its middle row starting at left+1.",
+  "rule_eval": {
+    "candidate": "horizontal_3row_bar_middle_alternate_erase",
+    "status": "full_pass",
+    "train_pass": 2,
+    "train_examples": 2,
+    "test_pass": 1,
+    "test_examples": 1,
+    "arc_pass": 262,
+    "arc_examples": 262,
+    "total_pass": 265,
+    "total_examples": 265,
+    "avg_changed_cells": 19.558490566037737,
+    "max_changed_cells": 55,
+    "fail_examples": "[]",
+    "lowering_plan": "Detect solid same-color 3-row horizontal components, then zero middle-row cells with odd offset from component left edge. ONNX lowering needs run-relative parity; fixed checkerboard parity is insufficient."
+  },
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: reference rule only; ONNX lowering pending",
+  "next_lowering": "Profile existing artifact and try run-left parity lowering or graph surgery; avoid fixed global checkerboard parity.",
+  "leakage_risk": "low-to-medium: explanatory rule verified on all arc-gen examples; no lookup table.",
+  "overfitting_risk": "medium: task-specific rule needs ONNX validation and LB calibration before adoption."
+}

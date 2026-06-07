@@ -1,0 +1,2 @@
+task_id,variant,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+20,task020_bbox5_group_fill_rule_v1,90133,73080,13.590958363748854,13.800689989508056,7276,266_pass_0_fail,improved,ok,34acd10d8450a0e4e55d2abef94f2b4846a593005e3fe39c9134d298c4f80049

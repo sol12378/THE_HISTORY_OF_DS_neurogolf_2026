@@ -1,0 +1,144 @@
+{
+  "exp_id": "exp073_task251_closed_component_shape_audit",
+  "date": "2026-06-06",
+  "status": "audit_ready",
+  "task_id": 251,
+  "hypothesis": "task251 closed zero components may be rectangle-like enough for low-cost closed-form mask lowering.",
+  "summary": {
+    "positive_components": 367,
+    "negative_components": 641,
+    "positive_rectangle": 241,
+    "negative_rectangle": 256,
+    "positive_bbox_shape_hist": [
+      [
+        "2x2",
+        56
+      ],
+      [
+        "3x3",
+        52
+      ],
+      [
+        "2x3",
+        52
+      ],
+      [
+        "3x2",
+        49
+      ],
+      [
+        "2x4",
+        45
+      ],
+      [
+        "4x2",
+        39
+      ],
+      [
+        "4x4",
+        25
+      ],
+      [
+        "3x4",
+        25
+      ],
+      [
+        "4x3",
+        24
+      ]
+    ],
+    "negative_bbox_shape_top": [
+      [
+        "12x12",
+        91
+      ],
+      [
+        "2x2",
+        52
+      ],
+      [
+        "11x11",
+        44
+      ],
+      [
+        "3x2",
+        39
+      ],
+      [
+        "3x3",
+        38
+      ],
+      [
+        "2x4",
+        37
+      ],
+      [
+        "2x3",
+        34
+      ],
+      [
+        "10x10",
+        34
+      ],
+      [
+        "4x2",
+        32
+      ],
+      [
+        "4x3",
+        28
+      ],
+      [
+        "3x4",
+        21
+      ],
+      [
+        "4x4",
+        21
+      ]
+    ],
+    "positive_size_hist": [
+      [
+        8,
+        136
+      ],
+      [
+        6,
+        101
+      ],
+      [
+        4,
+        56
+      ],
+      [
+        10,
+        49
+      ],
+      [
+        12,
+        25
+      ]
+    ],
+    "positive_boundary_colors": [
+      [
+        "[2]",
+        367
+      ]
+    ],
+    "negative_boundary_colors_top": [
+      [
+        "[2]",
+        641
+      ]
+    ],
+    "positive_ray4_all": 367,
+    "positive_adj_any_all": 367,
+    "negative_boundary2_closed": 0
+  },
+  "decision": "Use this audit to decide whether rectangle/bbox mask lowering is plausible before emitting ONNX.",
+  "leakage_risk": "low: structure audit only; no submission artifact.",
+  "overfitting_risk": "medium: component shape regularities may overfit arc-gen; any lowering still needs LB calibration.",
+  "outputs": {
+    "component_shape_audit": "component_shape_audit.csv"
+  }
+}

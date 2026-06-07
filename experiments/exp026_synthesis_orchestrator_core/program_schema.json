@@ -1,0 +1,36 @@
+{
+  "program_candidate": {
+    "task_id": "int",
+    "candidate_id": "stable string",
+    "family": "one synthesis family",
+    "program_steps": [
+      {
+        "primitive": "string",
+        "params": "json object"
+      }
+    ],
+    "lowering_plan": {
+      "onnx_ops": [
+        "static ONNX op names"
+      ],
+      "expected_cost_upper_bound": "int",
+      "expected_file_bytes_upper_bound": "int",
+      "banned_ops": [
+        "must be empty before emission"
+      ]
+    },
+    "validation_plan": {
+      "train": "required",
+      "test": "required",
+      "arc_gen_sample": "default 20, full for submit candidate",
+      "private_like_family_holdout": "required for phase3+"
+    },
+    "proof_log": {
+      "invariant": "human-readable rule invariant",
+      "fit_evidence": "which examples support the rule",
+      "failure_modes": "known cases to reject",
+      "leakage_risk": "low/medium/high",
+      "overfitting_risk": "low/medium/high"
+    }
+  }
+}

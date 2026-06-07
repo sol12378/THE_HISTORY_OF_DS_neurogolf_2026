@@ -1,0 +1,163 @@
+{
+  "exp_id": "exp_b001_rule_replacement_backlog",
+  "date": "2026-06-06",
+  "status": "backlog_ready",
+  "purpose": "start exp_b series for explainable rule replacement and Kaggle calibration",
+  "strict_seed": {
+    "exp": "exp005_top_cost_rewrite_strict",
+    "local_estimate": 6282.230228092811,
+    "role": "submit-safe seed / calibration baseline"
+  },
+  "teacher": {
+    "exp": "exp041_task145_deeper_mul_chain",
+    "local_estimate": 6480.302477938763,
+    "lb": 3417.71,
+    "role": "teacher oracle only; not submit-safe"
+  },
+  "exp045_projection": {
+    "target_cost_all_400": 250,
+    "projected_gain": 1354.4319988997806,
+    "projected_local": 7834.734476838544,
+    "margin_over_7700": 134.73447683854374
+  },
+  "exp048_context": {
+    "status": "inventory_ready",
+    "strict_seed": {},
+    "p0_task_count": ""
+  },
+  "backlog_task_count": 400,
+  "family_summary": [
+    {
+      "family": "signature_lookup_current",
+      "task_count": 196,
+      "priority": "P0",
+      "projected_gain_to_phase_targets": 299.62067699755505,
+      "rule_target": "説明可能な decision tree / affine hash / color-role rule",
+      "lowering_target": "small Gather or pruned branch graph; no per-example label table",
+      "reject_lowering": "arc-gen memorization, large ScatterND, large MatMul hash",
+      "best_practice": "teacher artifactはoracleとしてprofileし、入出力差分から人間可読なinvariantだけを採用する。"
+    },
+    {
+      "family": "crop_resize",
+      "task_count": 85,
+      "priority": "P1",
+      "projected_gain_to_phase_targets": 118.32692750162023,
+      "rule_target": "fixed crop / object-anchor crop / shape rule / bbox crop",
+      "lowering_target": "constant Slice/Gather, small Pad/Concat, static row-column indices",
+      "reject_lowering": "NonZero, Compress, full-grid GatherND bbox, full-grid Tile",
+      "best_practice": "bboxを見つけてもすぐONNX化せず、index table sizeとactivation memoryを先に見積もる。"
+    },
+    {
+      "family": "sparse_edit_or_object_completion",
+      "task_count": 57,
+      "priority": "P1",
+      "projected_gain_to_phase_targets": 73.36288625364519,
+      "rule_target": "changed-cell rule / component completion / object copy with sparse mask",
+      "lowering_target": "tiny coordinate ScatterND, small Conv kernels, Equal plus one Where",
+      "reject_lowering": "large coordinate initializer, repeated full-grid Where, unrolled local propagation",
+      "best_practice": "変更セル数が少ないことを証明してから、全grid処理を避けるloweringだけをemitする。"
+    },
+    {
+      "family": "point_to_line_pattern",
+      "task_count": 28,
+      "priority": "P1",
+      "projected_gain_to_phase_targets": 42.82181909687378,
+      "rule_target": "seed-to-line / ray / periodic pattern with color roles",
+      "lowering_target": "constant affine masks, row-column masks, small Conv line detectors",
+      "reject_lowering": "per-cell ScatterND table, long Where chains over all periods",
+      "best_practice": "seed、方向、period、stop conditionを分けて探索し、絶対色ではなくroleで記述する。"
+    },
+    {
+      "family": "line_grid_fill",
+      "task_count": 14,
+      "priority": "P1",
+      "projected_gain_to_phase_targets": 23.494886691664224,
+      "rule_target": "row-column completion / line extension / grid crossing rule",
+      "lowering_target": "ReduceSum row-column masks, small Conv kernels, constant masks plus Where",
+      "reject_lowering": "full-grid Tile, long Where chain, per-cell ScatterND",
+      "best_practice": "線分単位の閉形式maskを作り、unrollしない。"
+    },
+    {
+      "family": "region_partition_fill",
+      "task_count": 15,
+      "priority": "P1",
+      "projected_gain_to_phase_targets": 19.881218579650962,
+      "rule_target": "room/inside-outside/boundary partition rule",
+      "lowering_target": "static row-column prefix masks, small Conv kernels, bounded room mask",
+      "reject_lowering": "many-step flood fill, dilation unroll, dynamic full-grid colormap",
+      "best_practice": "flood fillの正しさを利用しても、実装は閉形式の部屋maskへ落とす。"
+    },
+    {
+      "family": "same_shape_global_transform",
+      "task_count": 1,
+      "priority": "P2",
+      "projected_gain_to_phase_targets": 2.112271686270539,
+      "rule_target": "flip/rotate/transpose/recolor or graph-surgery proof",
+      "lowering_target": "Transpose, Gather, initializer prune, small color Conv",
+      "reject_lowering": "compact artifactより大きい再実装",
+      "best_practice": "既存artifactが小さい場合はrule ONNXよりsurgeryの方を優先する。"
+    },
+    {
+      "family": "color_map",
+      "task_count": 4,
+      "priority": "P2",
+      "projected_gain_to_phase_targets": 1.6134299337036389,
+      "rule_target": "consistent color role map",
+      "lowering_target": "small Equal/Where chain or 1x1 Conv",
+      "reject_lowering": "large dynamic MatMul colormap",
+      "best_practice": "単独改善より他familyの前処理として使う。"
+    }
+  ],
+  "submission_calibration_plan": [
+    {
+      "stage": "calib_001_strict_seed_resubmit",
+      "source": "exp005_top_cost_rewrite_strict",
+      "purpose": "local/LBの基準線を作る。exp041崩壊後、strict seedがKaggleでどこまで通用するか確認する。",
+      "submit": "yes_when_user_confirms_or_next_submission_slot_available",
+      "expected_lb": "near strict public-safe score if local utility matches Kaggle; otherwise environment gap investigation",
+      "risk": "low"
+    },
+    {
+      "stage": "calib_002_single_family_delta",
+      "source": "first accepted exp_b rule-lowering candidate",
+      "purpose": "1 task or 1 small familyだけ差し替え、local deltaとLB deltaの対応を見る。",
+      "submit": "yes_after_official_validation",
+      "expected_lb": "delta should be small but directionally consistent",
+      "risk": "low-medium"
+    },
+    {
+      "stage": "calib_003_p0_lookup_replacement_bundle",
+      "source": "P0 lookup-compressed rules only",
+      "purpose": "signature lookupを説明可能ruleに置換したbundleがLB collapseを起こさないか確認する。",
+      "submit": "yes_after_family_holdout",
+      "expected_lb": "local/LB gap materially smaller than exp041",
+      "risk": "medium"
+    },
+    {
+      "stage": "calib_004_mixed_family_growth",
+      "source": "trusted calibrated families",
+      "purpose": "crop/sparse/line/regionを段階追加し、7700に向けてLB対応を維持する。",
+      "submit": "cadenced_threshold_submissions",
+      "expected_lb": "monotonic or explainable movement",
+      "risk": "medium"
+    }
+  ],
+  "calib_001_result": {
+    "submission_ref": 53414978,
+    "source_exp": "exp005_top_cost_rewrite_strict",
+    "local_estimate": 6282.230228092811,
+    "public_lb": 5929.89,
+    "local_lb_gap": -352.3402280928106,
+    "interpretation": "strict seed is much healthier than exp041 teacher submission, but still has a nonzero local/LB calibration gap"
+  },
+  "outputs": {
+    "rule_replacement_backlog": "rule_replacement_backlog.csv",
+    "family_best_practices": "family_best_practices.csv",
+    "submission_calibration_plan": "submission_calibration_plan.csv",
+    "notes": "notes.md"
+  },
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: backlog/protocol experiment; next action is strict seed calibration submission",
+  "leakage_risk": "medium: teacher artifacts are used only as diagnostic oracles; backlog requires human-readable rules.",
+  "overfitting_risk": "medium: accepted rules require all-arc-gen plus Kaggle calibration, not local-only acceptance."
+}

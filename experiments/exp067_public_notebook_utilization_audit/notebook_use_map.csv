@@ -1,0 +1,8 @@
+slug,already_in_exp002,local_asset_status,action,role
+massimilianoghiotto/convolution-series-part-3,True,already_blended_or_related_source,do not re-submit; mine accepted ONNX structure and source provenance,convolution-series public solver lineage; outputs already represented by massimilianoghiotto datasets in exp002
+konbu17/neurogolf-2026-blended-till-4-27,True,already_blended_or_related_source,do not re-submit; mine accepted ONNX structure and source provenance,blend source; related konbu17 public outputs already represented in exp002
+vyankteshdwivedi/neurogolf-multi-source-onnx-solver,True,already_blended_or_related_source,do not re-submit; mine accepted ONNX structure and source provenance,multi-source ONNX output; already represented in exp002
+seddiktrk/surgical-onnx-precision-parameter-reduction,False,pulled_ipynb,convert patterns into strict-seed surgery audit,"surgical ONNX compression patterns: unused initializer prune, duplicate initializer dedup, uniform tensor scalarization"
+karnakbaevarthur/all-task-description-analysis,False,pulled_ipynb_and_dataset,join task descriptions to cost target queue,task transformation description library for compiler lane routing
+magmacot/neurogolf-new-blending,True,already_blended_or_related_source,do not re-submit; mine accepted ONNX structure and source provenance,blend output; already represented in exp002
+needless090/neurogolf-4250,True,already_blended_or_related_source,do not re-submit; mine accepted ONNX structure and source provenance,baseline public output; already represented in exp002

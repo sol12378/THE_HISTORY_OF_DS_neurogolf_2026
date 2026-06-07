@@ -1,6 +1,7 @@
 .DS_Store
 .env
 .kaggle/
+.claude/
 .venv/
 .obsidian/
 **/.obsidian/
@@ -18,6 +19,7 @@ data/cache/*
 data/submissions/*
 outputs/*
 experiments/*/*.onnx
+experiments/**/*.onnx
 experiments/*/submission.zip
 experiments/*/oof.csv
 experiments/*/submission.csv

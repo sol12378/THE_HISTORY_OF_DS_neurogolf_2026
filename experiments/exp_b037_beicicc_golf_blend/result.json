@@ -1,0 +1,15 @@
+{
+  "exp": "exp_b037_beicicc_golf_blend",
+  "local_static_estimate": 7115.920621,
+  "prev_local": 6282.812218,
+  "delta_static": 833.108403,
+  "n_beicicc_tasks": 379,
+  "n_fallback_tasks": 21,
+  "source_counts": {
+    "beicicc_6645": 379,
+    "exp_b025_best": 21
+  },
+  "note": "golf domain models - LB cost unknown, local estimate uses static cost only",
+  "beicicc_lb_reference": 6645,
+  "elapsed_s": 18.5
+}

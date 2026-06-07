@@ -1,0 +1,48 @@
+{
+  "exp_id": "exp044_task031_dynamic_bbox_lowering",
+  "date": "2026-06-06",
+  "status": "no_gain",
+  "target_task": 31,
+  "baseline_local_estimate": 6480.302477938763,
+  "new_local_estimate": 6480.302477938763,
+  "delta": 0.0,
+  "gap_to_6500": 19.69752206123667,
+  "gap_to_7000": 519.6975220612367,
+  "gap_to_7400": 919.6975220612367,
+  "gap_to_7600": 1119.6975220612367,
+  "gap_to_7700": 1219.6975220612367,
+  "candidate": {
+    "task_id": 31,
+    "variant": "dynamic_bbox_nonzero_gathernd",
+    "baseline_cost": 18616,
+    "candidate_cost": 1050228,
+    "baseline_points": 15.168223295017873,
+    "candidate_points": 11.13548215858125,
+    "file_bytes": 314798,
+    "validation_status": "266_pass_0_fail",
+    "status": "no_cost_gain",
+    "reason": "candidate cost is not lower than baseline",
+    "sha256": "ae8347e428b8eb32a312acdc276b2872b5b58016540f0012329fa122c9cb3c0b"
+  },
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 836892,
+    "sha256": "bee595d0d9fe1c942c6281f767b7f68b516d47c6f3b803b1bf4ca76bf8583155"
+  },
+  "runtime_seconds": 1.6581521034240723,
+  "accounting_note": "Total score uses exp041 authoritative best plus accepted deltas; selected_manifest is a convenience bundle manifest.",
+  "leakage_risk": "low: explicit bbox rule, no signature lookup.",
+  "overfitting_risk": "low-to-medium: task-specific but validated on all arc-gen.",
+  "decision": "adopt if improved; if no gain, dynamic GatherND bbox is too memory-heavy and needs a smaller object compiler."
+}

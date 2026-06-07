@@ -1,0 +1,181 @@
+{
+  "exp_id": "exp045_rule_searcher_best_practices_7700",
+  "date": "2026-06-06",
+  "status": "proof_plan_ready",
+  "base_exp": "experiments/exp041_task145_deeper_mul_chain",
+  "base_local_estimate": 6480.302477938763,
+  "projection_7700": {
+    "target_cost_all_400": 250,
+    "projected_gain": 1354.4319988997806,
+    "projected_local": 7834.734476838544,
+    "margin_over_7700": 134.73447683854374
+  },
+  "phase_projection": [
+    {
+      "phase": "phase1_6500_bridge",
+      "scope_top_n": 100,
+      "target_cost": 9000,
+      "projected_gain": 133.5622630025353,
+      "projected_local": 6613.864740941299,
+      "gap_to_7700": 1086.1352590587012
+    },
+    {
+      "phase": "phase2_7000_submit_safe",
+      "scope_top_n": 200,
+      "target_cost": 3000,
+      "projected_gain": 396.07270571227934,
+      "projected_local": 6876.375183651043,
+      "gap_to_7700": 823.6248163489572
+    },
+    {
+      "phase": "phase3_7400_private_like",
+      "scope_top_n": 320,
+      "target_cost": 1000,
+      "projected_gain": 829.3048408377784,
+      "projected_local": 7309.607318776541,
+      "gap_to_7700": 390.39268122345857
+    },
+    {
+      "phase": "phase4_7700_proof",
+      "scope_top_n": 400,
+      "target_cost": 250,
+      "projected_gain": 1354.4319988997806,
+      "projected_local": 7834.734476838544,
+      "gap_to_7700": -134.73447683854374
+    }
+  ],
+  "family_plan_count": 8,
+  "top_family_plans": [
+    {
+      "family": "signature_lookup_current",
+      "task_count": 196,
+      "phase1_count": 70,
+      "phase4_count": 0,
+      "gain_to_250": 808.6346261293652,
+      "current_cost_median": 15399.0,
+      "target_cost": 250,
+      "searcher": "lookup compression miner",
+      "best_practice": "signatureを説明変数へ分解し、浅いdecision tree/affine hash/color-role ruleへ置換する。arc-gen labelの丸暗記は禁止。",
+      "preferred_lowering": "small Gather, initializer-pruned decision tree, constant Slice/Gather when crop-like",
+      "reject_lowering": "large ScatterND table, full arc-gen memorization, large MatMul hash",
+      "acceptance": "full train/test/all-arc-gen exact, official utility pass, candidate cost lower than current, leakage/overfitting note, and family holdout before submit"
+    },
+    {
+      "family": "crop_resize",
+      "task_count": 85,
+      "phase1_count": 8,
+      "phase4_count": 35,
+      "gain_to_250": 216.2055650629856,
+      "current_cost_median": 3682.0,
+      "target_cost": 250,
+      "searcher": "object-anchor crop/resize synthesizer",
+      "best_practice": "fixed crop, anchor crop, bbox cropを分けて探索し、ONNX前にshape ruleとindex sizeをcost gateへ通す。",
+      "preferred_lowering": "constant Slice/Gather, small Concat/Pad, static row/column indices",
+      "reject_lowering": "NonZero/Compress, full-grid GatherND bbox, full-grid Tile plus mask",
+      "acceptance": "full train/test/all-arc-gen exact, official utility pass, candidate cost lower than current, leakage/overfitting note, and family holdout before submit"
+    },
+    {
+      "family": "sparse_edit_or_object_completion",
+      "task_count": 57,
+      "phase1_count": 5,
+      "phase4_count": 22,
+      "gain_to_250": 139.4609855115311,
+      "current_cost_median": 3952.0,
+      "target_cost": 250,
+      "searcher": "sparse edit/object completion enumerator",
+      "best_practice": "changed-cell maskを先に説明し、少数座標だけをemitする。広いmaskはConv/Reduceで閉形式化する。",
+      "preferred_lowering": "small Conv kernels, tiny GatherND/ScatterND, Equal plus single Where",
+      "reject_lowering": "large coordinate initializer, repeated full-grid Where, unrolled fill without cost forecast",
+      "acceptance": "full train/test/all-arc-gen exact, official utility pass, candidate cost lower than current, leakage/overfitting note, and family holdout before submit"
+    },
+    {
+      "family": "point_to_line_pattern",
+      "task_count": 28,
+      "phase1_count": 9,
+      "phase4_count": 8,
+      "gain_to_250": 93.61856438130191,
+      "current_cost_median": 8648.0,
+      "target_cost": 250,
+      "searcher": "seed-to-pattern grammar",
+      "best_practice": "seed color, direction, period, stop conditionをroleで推定し、絶対色より構造不変量を優先する。",
+      "preferred_lowering": "constant affine masks, row/column masks, small Conv line detectors",
+      "reject_lowering": "per-cell ScatterND table, long Where chains over all periods",
+      "acceptance": "full train/test/all-arc-gen exact, official utility pass, candidate cost lower than current, leakage/overfitting note, and family holdout before submit"
+    },
+    {
+      "family": "line_grid_fill",
+      "task_count": 14,
+      "phase1_count": 4,
+      "phase4_count": 5,
+      "gain_to_250": 44.76043425108812,
+      "current_cost_median": 7017.0,
+      "target_cost": 250,
+      "searcher": "line/ray/grid grammar",
+      "best_practice": "complete/incomplete row-column、交点、stop blockerを列挙し、線分単位で正しさを証明する。",
+      "preferred_lowering": "ReduceSum row/column masks, small Conv kernels, constant masks plus Where",
+      "reject_lowering": "per-cell ScatterND table, full-grid Tile, long Where chain",
+      "acceptance": "full train/test/all-arc-gen exact, official utility pass, candidate cost lower than current, leakage/overfitting note, and family holdout before submit"
+    },
+    {
+      "family": "region_partition_fill",
+      "task_count": 15,
+      "phase1_count": 3,
+      "phase4_count": 6,
+      "gain_to_250": 44.44260300507918,
+      "current_cost_median": 10453.0,
+      "target_cost": 250,
+      "searcher": "region/room-fill synthesizer",
+      "best_practice": "flood fillを直接unrollせず、境界線・部屋・内外判定をrow/column prefixや小kernelで閉形式化する。",
+      "preferred_lowering": "static row/column ReduceSum masks, small Conv kernels, bounded single-pass room masks",
+      "reject_lowering": "radius-scale dilation, many-step flood-fill unroll, dynamic full-grid color map",
+      "acceptance": "full train/test/all-arc-gen exact, official utility pass, candidate cost lower than current, leakage/overfitting note, and family holdout before submit"
+    },
+    {
+      "family": "same_shape_global_transform",
+      "task_count": 1,
+      "phase1_count": 1,
+      "phase4_count": 0,
+      "gain_to_250": 5.69579062472665,
+      "current_cost_median": 74403.0,
+      "target_cost": 250,
+      "searcher": "global transform and compact surgery",
+      "best_practice": "flip/rotate/transpose/recolorを最小ONNXと既存artifact surgeryの両方で比較する。",
+      "preferred_lowering": "Transpose, Gather, initializer prune, small 1x1 Conv",
+      "reject_lowering": "rewriting an already compact artifact with a larger full-grid graph",
+      "acceptance": "full train/test/all-arc-gen exact, official utility pass, candidate cost lower than current, leakage/overfitting note, and family holdout before submit"
+    },
+    {
+      "family": "color_map",
+      "task_count": 4,
+      "phase1_count": 0,
+      "phase4_count": 4,
+      "gain_to_250": 1.6134299337036389,
+      "current_cost_median": 10.0,
+      "target_cost": 250,
+      "searcher": "color role normalizer",
+      "best_practice": "単独color mapだけでなく他familyの前処理として扱い、consistent role mapのみ採用する。",
+      "preferred_lowering": "1x1 Conv, small Equal/Where chain, color-role constants",
+      "reject_lowering": "large MatMul color map, dynamic full-grid color map",
+      "acceptance": "full train/test/all-arc-gen exact, official utility pass, candidate cost lower than current, leakage/overfitting note, and family holdout before submit"
+    }
+  ],
+  "prior_evidence": {
+    "exp042_hit_count": 9,
+    "exp042_total_proxy_delta": 16.229076233689682,
+    "exp042_vs_surgery_multiple": 319.12100187849006,
+    "exp043_lesson": "naive fixed DSL lowering can lose against golfed artifacts",
+    "exp044_lesson": "dynamic bbox as full-grid GatherND is correct but too expensive"
+  },
+  "acceptance_criteria_for_future_searcher": [
+    "program is a human-readable rule, not per-example label lookup",
+    "full train/test/all-arc-gen exact match",
+    "official static/banned-op/cost validation pass",
+    "candidate cost lower than selected artifact",
+    "family-specific leakage and overfitting note",
+    "reject pattern checked before ONNX emission"
+  ],
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: proof/planning experiment, not a new submission artifact",
+  "leakage_risk": "medium-high: current base still includes lookup-derived artifacts; this experiment reduces risk by defining replacement rules.",
+  "overfitting_risk": "medium: proof uses public arc-gen; future candidates need family holdout and official utility validation."
+}

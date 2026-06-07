@@ -1,0 +1,35 @@
+{
+  "exp_id": "exp065_task020_lowering_reference",
+  "date": "2026-06-06",
+  "status": "reference_pass",
+  "target_task": 20,
+  "total_pass": 266,
+  "total_examples": 266,
+  "split_counts": {
+    "train": 3,
+    "test": 1,
+    "arc-gen": 262
+  },
+  "split_pass": {
+    "train": 3,
+    "test": 1,
+    "arc-gen": 262
+  },
+  "reason_counts": {
+    "ok": 266
+  },
+  "class_counts": {
+    "corners": 87,
+    "inner_diag": 87,
+    "edge_mid": 92
+  },
+  "decision": "Use this reference as the block-level oracle for ONNX lowering. If partial, fix target-color selection before ONNX.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: reference only",
+  "leakage_risk": "low: rule is explicit and nonlookup.",
+  "overfitting_risk": "medium: task-specific; still needs ONNX and Kaggle delta after cost improvement.",
+  "outputs": {
+    "eval_rows": "eval_rows.csv",
+    "notes": "notes.md"
+  }
+}

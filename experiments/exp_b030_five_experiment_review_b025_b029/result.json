@@ -1,0 +1,36 @@
+{
+  "exp_id": "exp_b030_five_experiment_review_b025_b029",
+  "date": "2026-06-06",
+  "status": "review_complete",
+  "reviewed_experiments": [
+    "exp_b025_submit_safe_delta_union",
+    "exp_b026_five_experiment_review_b020_b024",
+    "exp_b027_task251_closed_zero_component_rule",
+    "exp_b028_task251_closed_component_lowering_probe",
+    "exp_b029_task251_reachability_depth_surgery"
+  ],
+  "meaningful_for_goal": true,
+  "verdict": "useful_but_lowering_gap_remains",
+  "score_progress": {
+    "new_best_lb": 5930.40,
+    "source": "exp_b025_submit_safe_delta_union",
+    "lb_delta_vs_previous_best": 0.13
+  },
+  "rule_progress": {
+    "task251_rule_found": true,
+    "validation": "266/266",
+    "lowering_submit_ready": false
+  },
+  "negative_findings": [
+    "task251 boundary_flood_fill unroll validates but costs 138631+ vs base 100580",
+    "task251 existing reachability depth pruning has 0 valid candidates"
+  ],
+  "next_pdca": [
+    "Do not continue naive flood-fill or depth-pruning for task251.",
+    "Try rectangle-specific closed masks only if a cheap static/dynamic formulation is available.",
+    "Return to broader compiler queue for tasks with simpler object move/crop or low-cost artifact profiles.",
+    "Keep submitting only full-arc-safe positive deltas."
+  ],
+  "leakage_risk": "low-to-medium: accepted LB delta is strict-derived; task251 rule uses arc-gen for validation but not as lookup.",
+  "overfitting_risk": "medium: task251 rule needs hidden LB via ONNX lowering before adoption."
+}

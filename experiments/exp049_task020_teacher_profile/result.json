@@ -1,0 +1,182 @@
+{
+  "exp_id": "exp049_task020_teacher_profile",
+  "date": "2026-06-06",
+  "status": "diagnostic_complete",
+  "target_task": 20,
+  "strict": {
+    "label": "strict_exp005",
+    "memory": 89863,
+    "params": 270,
+    "cost": 90133,
+    "sha256": "26f660cb1b4b01cc1306d4c55fc064d5ca00cb67211549249efe4e72e507bd53",
+    "node_count": 245,
+    "initializer_count": 25,
+    "initializer_elem_total": 270,
+    "op_counts": {
+      "Cast": 67,
+      "Gather": 71,
+      "Sum": 7,
+      "ReduceMax": 2,
+      "Reshape": 7,
+      "ArgMax": 3,
+      "Sub": 12,
+      "Add": 24,
+      "Less": 4,
+      "And": 8,
+      "Clip": 8,
+      "Mul": 5,
+      "Greater": 10,
+      "Where": 5,
+      "ReduceSum": 5,
+      "Equal": 5,
+      "Concat": 1,
+      "Pad": 1
+    },
+    "largest_initializers": [
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_0",
+        "dims": "10x10",
+        "elem_count": 100,
+        "data_type": 7
+      },
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_1",
+        "dims": "10x10",
+        "elem_count": 100,
+        "data_type": 7
+      },
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_2",
+        "dims": "30",
+        "elem_count": 30,
+        "data_type": 7
+      },
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_3",
+        "dims": "10",
+        "elem_count": 10,
+        "data_type": 7
+      },
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_13",
+        "dims": "8",
+        "elem_count": 8,
+        "data_type": 7
+      },
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_5",
+        "dims": "3",
+        "elem_count": 3,
+        "data_type": 7
+      },
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_10",
+        "dims": "1x1x1x1",
+        "elem_count": 1,
+        "data_type": 10
+      },
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_11",
+        "dims": "",
+        "elem_count": 1,
+        "data_type": 7
+      },
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_12",
+        "dims": "",
+        "elem_count": 1,
+        "data_type": 7
+      },
+      {
+        "label": "strict_exp005",
+        "name": "safe_name_14",
+        "dims": "",
+        "elem_count": 1,
+        "data_type": 10
+      }
+    ]
+  },
+  "teacher": {
+    "label": "teacher_exp023",
+    "memory": 2900,
+    "params": 1031,
+    "cost": 3931,
+    "sha256": "6875ba09c357054f37d2f6cef4eadcd3c5e88559d7f60d968d63e9eded1c0d4f",
+    "node_count": 13,
+    "initializer_count": 6,
+    "initializer_elem_total": 1031,
+    "op_counts": {
+      "GatherND": 1,
+      "Sub": 1,
+      "Mul": 1,
+      "ReduceSum": 1,
+      "Less": 1,
+      "Cast": 2,
+      "Unsqueeze": 1,
+      "MatMul": 2,
+      "Reshape": 1,
+      "Squeeze": 1,
+      "ScatterND": 1
+    },
+    "largest_initializers": [
+      {
+        "label": "teacher_exp023",
+        "name": "safe_name_3",
+        "dims": "24x24",
+        "elem_count": 576,
+        "data_type": 1
+      },
+      {
+        "label": "teacher_exp023",
+        "name": "safe_name_1",
+        "dims": "24x11",
+        "elem_count": 264,
+        "data_type": 1
+      },
+      {
+        "label": "teacher_exp023",
+        "name": "safe_name_4",
+        "dims": "24x6",
+        "elem_count": 144,
+        "data_type": 1
+      },
+      {
+        "label": "teacher_exp023",
+        "name": "safe_name_0",
+        "dims": "11x4",
+        "elem_count": 44,
+        "data_type": 7
+      },
+      {
+        "label": "teacher_exp023",
+        "name": "safe_name_5",
+        "dims": "2",
+        "elem_count": 2,
+        "data_type": 7
+      },
+      {
+        "label": "teacher_exp023",
+        "name": "safe_name_2",
+        "dims": "1",
+        "elem_count": 1,
+        "data_type": 1
+      }
+    ]
+  },
+  "cost_delta_teacher_vs_strict": -86202,
+  "point_gain_teacher_vs_strict": 3.132392510829284,
+  "interpretation": "Teacher is a compact signature lookup artifact; use it as output oracle/structure hint only, not as submit-safe solution.",
+  "next": "Mine task020 input-output rule from examples and teacher outputs; reject per-signature memorization.",
+  "runtime_seconds": 1.1231160163879395,
+  "leakage_risk": "diagnostic: teacher is high-risk signature lookup.",
+  "overfitting_risk": "diagnostic: no candidate emitted."
+}

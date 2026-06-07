@@ -1,0 +1,67 @@
+{
+  "exp_id": "exp_b034_public6200_notebook_local_estimate",
+  "date": "2026-06-06",
+  "status": "estimate_complete",
+  "purpose": "Estimate local score implications of the user-provided LB 6200+ Kaggle notebooks using existing notebook intelligence and LB calibration.",
+  "notebook_slugs": [
+    "massimilianoghiotto/convolution-series-part-3",
+    "konbu17/neurogolf-2026-blended-till-4-27",
+    "vyankteshdwivedi/neurogolf-multi-source-onnx-solver",
+    "seddiktrk/surgical-onnx-precision-parameter-reduction",
+    "karnakbaevarthur/all-task-description-analysis",
+    "magmacot/neurogolf-new-blending",
+    "needless090/neurogolf-4250"
+  ],
+  "source_experiments": [
+    "exp067_public_notebook_utilization_audit",
+    "exp_b022_public_notebook_intelligence",
+    "exp068_seddik_style_strict_scalarization",
+    "exp_b025_submit_safe_delta_union"
+  ],
+  "observations": {
+    "blend_notebooks_already_represented_in_exp002": [
+      "massimilianoghiotto/convolution-series-part-3",
+      "konbu17/neurogolf-2026-blended-till-4-27",
+      "vyankteshdwivedi/neurogolf-multi-source-onnx-solver",
+      "magmacot/neurogolf-new-blending",
+      "needless090/neurogolf-4250"
+    ],
+    "new_actionable_notebook_information": [
+      "seddik-style initializer / parameter surgery patterns",
+      "karnak all-task description taxonomy for compiler lane routing",
+      "convolution / Slice / Gather / Pad lowering patterns as implementation hints"
+    ],
+    "direct_copy_policy": "Do not treat public blend outputs as submit-safe; use only independently validated explicit rules, lowering patterns, or full-arc-safe graph surgery deltas."
+  },
+  "current_submit_safe_estimate": {
+    "experiment": "exp_b025_submit_safe_delta_union",
+    "local_estimate": 6282.812217709089,
+    "public_lb": 5930.4,
+    "local_minus_lb_gap": 352.4122177090891,
+    "validation": "full-arc-safe overlay; submitted and LB-calibrated"
+  },
+  "public6200_calibration": {
+    "assumed_public_lb_floor": 6200.0,
+    "strict_like_local_needed_if_gap_persists": 6552.412217709089,
+    "local_gap_from_current_submit_safe": 269.60000000000036,
+    "interpretation": "A 6200 public LB solution would correspond to roughly 6552.4 local under the current strict-seed calibration gap, but copied public blend artifacts have much higher leakage/overfitting risk than strict/full-arc-safe deltas."
+  },
+  "risky_upper_bound_context": {
+    "experiment": "exp041_task145_deeper_mul_chain",
+    "local_upper_bound": 6480.302478,
+    "public_lb": 3417.71,
+    "local_minus_lb_gap": 3062.592478,
+    "interpretation": "Lookup-heavy or public-artifact-dependent local upper bounds are not credible local estimates for submit-safe progress."
+  },
+  "estimate_result": {
+    "recommended_local_estimate_for_current_safe_bundle": 6282.812217709089,
+    "calibrated_expected_public_lb_for_current_safe_bundle": 5930.4,
+    "lb6200_equivalent_local_target": 6552.412217709089,
+    "needed_safe_local_delta_to_reach_lb6200_calibrated": 269.60000000000036,
+    "notebook_information_direct_local_delta": 0.0,
+    "notebook_information_realized_safe_delta_vs_strict_seed": 0.5819897090894473
+  },
+  "leakage_risk": "medium-high for direct public blend copying; low-to-medium for independently validated graph surgery and explicit rule deltas.",
+  "overfitting_risk": "medium-high for notebook artifact reuse; medium for task-specific full-arc-safe micro-deltas; lower after Kaggle delta calibration.",
+  "decision": "Use 6282.8122 as the current submit-safe local estimate. Treat LB6200 notebooks as intelligence and teacher signals, not as direct local-score proof. The next target is +269.6 safe local points to make a 6200 public LB plausible under current calibration."
+}

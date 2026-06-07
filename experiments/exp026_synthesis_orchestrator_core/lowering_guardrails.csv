@@ -1,0 +1,6 @@
+pattern,decision,max_cost_ratio,banned_ops,rationale,replacement
+full_grid_where_chain,pre_reject_when_grid_wide_or_repeated,0.85,,Past correct rules became more expensive when every cell passed through repeated Where nodes.,derive a compact mask with Conv/Reduce or use constant Slice/Gather.
+large_scatternd_coordinate_initializer,pre_reject_when_coordinate_count_is_not_tiny,0.75,,ScatterND can be valid but loses if coordinates encode most output cells.,"compress to affine coordinates, constant masks, or a smaller decision tree."
+full_grid_tile_plus_mask,pre_reject_for_crop_resize_unless_tiled_area_is_small,0.7,,Tile inflates activation memory under the official-like score.,Slice/Gather/Concat with static output placement.
+dynamic_full_grid_colormap,pre_reject_when_color_map_depends_on_large_matmul,0.8,,Dynamic MatMul color maps validated but cost more than compact public artifacts.,"small 1x1 Conv, Equal/Where, or color-role constants."
+forbidden_dynamic_shape_ops,always_reject,n/a,"Compress, NonZero, Loop, Scan, Unique, Function, Script, Sequence, subgraph",These are outside the strict submission envelope used by the project.,"static-shape masks, constant indices, and bounded primitive sketches."

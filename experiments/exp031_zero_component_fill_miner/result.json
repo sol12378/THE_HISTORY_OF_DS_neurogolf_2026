@@ -1,0 +1,74 @@
+{
+  "exp_id": "exp031_zero_component_fill_miner",
+  "date": "2026-06-06",
+  "status": "rule_found",
+  "target_tasks": [
+    198,
+    187,
+    203,
+    313
+  ],
+  "arc_gen_sample": 20,
+  "pass_task_count": 1,
+  "pass_tasks": [
+    187
+  ],
+  "rows": [
+    {
+      "task_id": 198,
+      "status": "no_rule",
+      "border_color": "",
+      "enclosed_color": "",
+      "train_pass": 0,
+      "train_fail": 3,
+      "test_pass": 0,
+      "test_fail": 0,
+      "arc_pass": 0,
+      "arc_fail": 0,
+      "reason": "conflicting colors border={3: 433, 4: 758} enclosed={4: 66, 3: 57}"
+    },
+    {
+      "task_id": 187,
+      "status": "pass_sample20",
+      "border_color": 3,
+      "enclosed_color": 2,
+      "train_pass": 3,
+      "train_fail": 0,
+      "test_pass": 1,
+      "test_fail": 0,
+      "arc_pass": 20,
+      "arc_fail": 0,
+      "reason": "ok"
+    },
+    {
+      "task_id": 203,
+      "status": "no_rule",
+      "border_color": "",
+      "enclosed_color": "",
+      "train_pass": 0,
+      "train_fail": 4,
+      "test_pass": 0,
+      "test_fail": 0,
+      "arc_pass": 0,
+      "arc_fail": 0,
+      "reason": "wall cells are not preserved"
+    },
+    {
+      "task_id": 313,
+      "status": "no_rule",
+      "border_color": "",
+      "enclosed_color": "",
+      "train_pass": 0,
+      "train_fail": 3,
+      "test_pass": 0,
+      "test_fail": 0,
+      "arc_pass": 0,
+      "arc_fail": 0,
+      "reason": "wall cells are not preserved"
+    }
+  ],
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: Python rule miner only, no ONNX candidate generated.",
+  "leakage_risk": "low-medium: colors are inferred from train only; validation uses test and arc-gen sample20.",
+  "overfitting_risk": "medium: component-fill rule may still be ARC-family specific and sample20 is not private-like validation."
+}

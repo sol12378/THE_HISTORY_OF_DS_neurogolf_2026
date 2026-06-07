@@ -1,0 +1,70 @@
+{
+  "exp_id": "exp_b022_public_notebook_intelligence",
+  "date": "2026-06-06",
+  "status": "intelligence_ready",
+  "downloaded_notebook_count": 7,
+  "downloaded_file_count": 14,
+  "notebooks": [
+    {
+      "notebook": "karnak_all_task_description",
+      "category": "task_description_taxonomy",
+      "useful_use": "all-task description analysisをrule family/lane分類に使う",
+      "next_action": "family taxonomy / task description prompts / rule-search target queue",
+      "total_text_chars": 26630,
+      "keyword_counts": "{\"Conv\": 3, \"submission\": 13, \"onnx\": 17, \"description\": 4, \"score\": 2, \"Compress\": 1, \"Where\": 2, \"Resize\": 1}"
+    },
+    {
+      "notebook": "konbu17_blended_till_4_27",
+      "category": "blend_source_inventory",
+      "useful_use": "blend構成とsource採用順をstrict seed / LB calibration観点で読む",
+      "next_action": "source reliability / task-level delta / duplicate-source audit",
+      "total_text_chars": 9107,
+      "keyword_counts": "{\"Conv\": 1, \"blend\": 12, \"submission\": 12, \"onnx\": 21, \"cost\": 1, \"score\": 14, \"Where\": 2}"
+    },
+    {
+      "notebook": "magmacot_new_blending",
+      "category": "blend_source_inventory",
+      "useful_use": "new blendingのsource構成をstrict seedと比較して信頼できるdelta候補を探す",
+      "next_action": "blend source audit / micro-delta candidate selection",
+      "total_text_chars": 12566,
+      "keyword_counts": "{\"Conv\": 3, \"initializer\": 2, \"blend\": 7, \"submission\": 7, \"onnx\": 26, \"cost\": 12, \"Pad\": 1, \"parameter\": 2}"
+    },
+    {
+      "notebook": "massimilianoghiotto_convolution_series_part_3",
+      "category": "conv_lowering_patterns",
+      "useful_use": "Convolution seriesからsmall Conv/Pad/Slice loweringのbest practiceを抽出する",
+      "next_action": "small Conv kernels / padding discipline / local predicate lowering",
+      "total_text_chars": 14307,
+      "keyword_counts": "{\"Conv\": 26, \"Slice\": 5, \"initializer\": 1, \"submission\": 2, \"onnx\": 11, \"rule\": 1, \"score\": 4, \"Where\": 2, \"Pad\": 12, \"parameter\": 1}"
+    },
+    {
+      "notebook": "needless090_4250",
+      "category": "baseline_source_inventory",
+      "useful_use": "低スコアだが単純・低riskなsourceとして、strict seed差分や初期taskを確認する",
+      "next_action": "low-risk source audit / baseline duplicate check",
+      "total_text_chars": 1469,
+      "keyword_counts": "{\"submission\": 2, \"onnx\": 2}"
+    },
+    {
+      "notebook": "seddiktrk_surgical_precision",
+      "category": "onnx_surgery_precision",
+      "useful_use": "surgical precision/parameter reductionから安全なgraph surgery候補を抽出する",
+      "next_action": "initializer pruning / dtype or parameter reduction / static safety guardrails",
+      "total_text_chars": 36628,
+      "keyword_counts": "{\"Conv\": 4, \"Gather\": 1, \"precision\": 4, \"initializer\": 62, \"submission\": 20, \"onnx\": 54, \"cost\": 5, \"score\": 50, \"Compress\": 20, \"Where\": 5, \"Pad\": 14, \"parameter\": 13}"
+    },
+    {
+      "notebook": "vyanktesh_multi_source",
+      "category": "multi_source_solver_patterns",
+      "useful_use": "multi-source ONNX solverのtask選択・Slice/Gather/Pad実装を読む",
+      "next_action": "source reliability plus cheap Slice/Gather/Pad lowering patterns",
+      "total_text_chars": 51384,
+      "keyword_counts": "{\"Conv\": 49, \"Slice\": 46, \"Gather\": 46, \"MatMul\": 2, \"initializer\": 1, \"blend\": 7, \"submission\": 3, \"onnx\": 40, \"rule\": 2, \"cost\": 13, \"score\": 6, \"Where\": 1, \"Pad\": 59, \"Resize\": 2}"
+    }
+  ],
+  "decision": "Use these notebooks as structured intelligence: blend notebooks for source reliability, Conv/surgery notebooks for lowering, description analysis for rule taxonomy.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit: intelligence gathering only",
+  "leakage_risk": "medium: public notebooks may contain leaderboard-tuned artifacts; use as hints and validate with strict/full-arc/LB delta.",
+  "overfitting_risk": "medium-high if copied blindly; low if used only for rule/lowering ideas with independent validation."
+}

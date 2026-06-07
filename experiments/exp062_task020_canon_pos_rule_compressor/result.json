@@ -1,0 +1,77 @@
+{
+  "exp_id": "exp062_task020_canon_pos_rule_compressor",
+  "date": "2026-06-06",
+  "status": "rule_found",
+  "target_task": 20,
+  "case_count": 24,
+  "example_count": 266,
+  "rule_count": 4,
+  "full_pass_nonlookup_hit_count": 1,
+  "best_rule": {
+    "rule_name": "raw_24_case_table_diagnostic",
+    "status": "full_pass",
+    "class_accuracy": 266,
+    "output_pass": 266,
+    "total_examples": 266,
+    "case_accuracy": 24,
+    "total_cases": 24,
+    "fail_reasons": "{}",
+    "rule_spec": "{\"kind\": \"case_table\", \"table\": {\"((0, 0), (2, 2))\": \"corners\", \"((0, 0),)\": \"corners\", \"((1, 1),)\": \"inner_diag\", \"((0, 2),)\": \"edge_mid\", \"((0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 4), (3, 1), (3, 3), (4, 2))\": \"corners\", \"((0, 0), (0, 4), (1, 1), (4, 0), (4, 4))\": \"inner_diag\", \"((0, 2), (1, 1), (2, 0), (2, 4), (4, 2))\": \"inner_diag\", \"((0, 0), (0, 2), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4))\": \"edge_mid\", \"((0, 2), (1, 1), (2, 0), (2, 2), (2, 4), (4, 2))\": \"inner_diag\", \"((1, 1), (2, 2))\": \"inner_diag\", \"((0, 0), (1, 1), (1, 3), (3, 1), (3, 3))\": \"corners\", \"((0, 2), (2, 2))\": \"edge_mid\", \"((0, 2), (1, 1), (1, 3), (3, 1), (3, 3))\": \"edge_mid\", \"((0, 0), (0, 2), (0, 4), (4, 0), (4, 4))\": \"edge_mid\", \"((0, 0), (0, 4), (1, 1), (2, 2), (4, 0), (4, 4))\": \"inner_diag\", \"((0, 0), (0, 2), (2, 0), (2, 4), (4, 2))\": \"corners\", \"((0, 2), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3))\": \"edge_mid\", \"((0, 0), (0, 2), (0, 4), (2, 2), (4, 0), (4, 4))\": \"edge_mid\", \"((0, 0), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3))\": \"corners\", \"((0, 0), (0, 2), (2, 0), (2, 2), (2, 4), (4, 2))\": \"corners\", \"((0, 0), (0, 2), (0, 4), (1, 1), (1, 3), (3, 1), (3, 3), (4, 0), (4, 4))\": \"edge_mid\", \"((0, 0), (0, 2), (0, 4), (1, 1), (2, 0), (2, 2), (2, 4), (4, 0), (4, 2), (4, 4))\": \"inner_diag\", \"((0, 0), (0, 2), (0, 4), (1, 1), (2, 0), (2, 4), (4, 0), (4, 2), (4, 4))\": \"inner_diag\", \"((0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 2), (2, 4), (3, 1), (3, 3), (4, 2))\": \"corners\"}}"
+  },
+  "rules": [
+    {
+      "rule_name": "raw_24_case_table_diagnostic",
+      "status": "full_pass",
+      "class_accuracy": 266,
+      "output_pass": 266,
+      "total_examples": 266,
+      "case_accuracy": 24,
+      "total_cases": 24,
+      "fail_reasons": "{}",
+      "rule_spec": "{\"kind\": \"case_table\", \"table\": {\"((0, 0), (2, 2))\": \"corners\", \"((0, 0),)\": \"corners\", \"((1, 1),)\": \"inner_diag\", \"((0, 2),)\": \"edge_mid\", \"((0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 4), (3, 1), (3, 3), (4, 2))\": \"corners\", \"((0, 0), (0, 4), (1, 1), (4, 0), (4, 4))\": \"inner_diag\", \"((0, 2), (1, 1), (2, 0), (2, 4), (4, 2))\": \"inner_diag\", \"((0, 0), (0, 2), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4))\": \"edge_mid\", \"((0, 2), (1, 1), (2, 0), (2, 2), (2, 4), (4, 2))\": \"inner_diag\", \"((1, 1), (2, 2))\": \"inner_diag\", \"((0, 0), (1, 1), (1, 3), (3, 1), (3, 3))\": \"corners\", \"((0, 2), (2, 2))\": \"edge_mid\", \"((0, 2), (1, 1), (1, 3), (3, 1), (3, 3))\": \"edge_mid\", \"((0, 0), (0, 2), (0, 4), (4, 0), (4, 4))\": \"edge_mid\", \"((0, 0), (0, 4), (1, 1), (2, 2), (4, 0), (4, 4))\": \"inner_diag\", \"((0, 0), (0, 2), (2, 0), (2, 4), (4, 2))\": \"corners\", \"((0, 2), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3))\": \"edge_mid\", \"((0, 0), (0, 2), (0, 4), (2, 2), (4, 0), (4, 4))\": \"edge_mid\", \"((0, 0), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3))\": \"corners\", \"((0, 0), (0, 2), (2, 0), (2, 2), (2, 4), (4, 2))\": \"corners\", \"((0, 0), (0, 2), (0, 4), (1, 1), (1, 3), (3, 1), (3, 3), (4, 0), (4, 4))\": \"edge_mid\", \"((0, 0), (0, 2), (0, 4), (1, 1), (2, 0), (2, 2), (2, 4), (4, 0), (4, 2), (4, 4))\": \"inner_diag\", \"((0, 0), (0, 2), (0, 4), (1, 1), (2, 0), (2, 4), (4, 0), (4, 2), (4, 4))\": \"inner_diag\", \"((0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 2), (2, 4), (3, 1), (3, 3), (4, 2))\": \"corners\"}}"
+    },
+    {
+      "rule_name": "greedy_pure_bit_branches",
+      "status": "full_pass",
+      "class_accuracy": 266,
+      "output_pass": 266,
+      "total_examples": 266,
+      "case_accuracy": 24,
+      "total_cases": 24,
+      "fail_reasons": "{}",
+      "rule_spec": "{\"kind\": \"decision\", \"branches\": [[[\"corners_eq1\"], \"corners\"], [[\"edge_mid_eq1\"], \"edge_mid\"], [[\"has_inner\"], \"inner_diag\"]], \"default\": \"corners\"}"
+    },
+    {
+      "rule_name": "orbit_presence_priority",
+      "status": "partial",
+      "class_accuracy": 160,
+      "output_pass": 160,
+      "total_examples": 266,
+      "case_accuracy": 6,
+      "total_cases": 24,
+      "fail_reasons": "{\"output_mismatch\": 106, \"class:inner_diag->corners\": 20, \"class:inner_diag->edge_mid\": 19, \"class:edge_mid->corners\": 18, \"class:corners->inner_diag\": 17, \"class:corners->edge_mid\": 17, \"class:edge_mid->inner_diag\": 15}",
+      "rule_spec": "{\"kind\": \"decision\", \"branches\": [[[\"only_inner\"], \"inner_diag\"], [[\"only_edge_mid\"], \"edge_mid\"], [[\"only_corners\"], \"corners\"], [[\"inner_ge2\"], \"inner_diag\"], [[\"edge_mid_ge2\"], \"edge_mid\"], [[\"corners_ge2\"], \"corners\"], [[\"has_inner\"], \"inner_diag\"], [[\"has_edge_mid\"], \"edge_mid\"]], \"default\": \"corners\"}"
+    },
+    {
+      "rule_name": "missing_orbit_priority",
+      "status": "partial",
+      "class_accuracy": 13,
+      "output_pass": 13,
+      "total_examples": 266,
+      "case_accuracy": 6,
+      "total_cases": 24,
+      "fail_reasons": "{\"output_mismatch\": 253, \"class:corners->edge_mid\": 70, \"class:corners->inner_diag\": 68, \"class:edge_mid->corners\": 63, \"class:inner_diag->corners\": 18, \"class:edge_mid->inner_diag\": 17, \"class:inner_diag->edge_mid\": 17}",
+      "rule_spec": "{\"kind\": \"decision\", \"branches\": [[[\"corners_eq0\"], \"corners\"], [[\"edge_mid_eq0\"], \"edge_mid\"], [[\"inner_eq0\"], \"inner_diag\"], [[\"corners_eq1\", \"edge_mid_ge2\"], \"corners\"], [[\"edge_mid_eq1\", \"inner_ge2\"], \"edge_mid\"], [[\"inner_eq1\", \"corners_ge2\"], \"inner_diag\"]], \"default\": \"corners\"}"
+    }
+  ],
+  "decision": "Raw case table is diagnostic only. Lower only a nonlookup full-pass rule; otherwise continue rule compression.",
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit unless nonlookup full-pass rule is found",
+  "leakage_risk": "high for raw case table; medium for bit-branch rules induced from all examples.",
+  "overfitting_risk": "high unless the rule is simple and family-consistent.",
+  "outputs": {
+    "case_summary": "case_summary.csv",
+    "rule_eval": "rule_eval.csv",
+    "notes": "notes.md"
+  }
+}

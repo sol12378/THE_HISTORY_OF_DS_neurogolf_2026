@@ -1,0 +1,2 @@
+candidate,status,train_pass,train_examples,test_pass,test_examples,arc_pass,arc_examples,total_pass,total_examples,avg_changed_cells,max_changed_cells,fail_examples,lowering_plan
+horizontal_3row_bar_middle_alternate_erase,full_pass,2,2,1,1,262,262,265,265,19.558490566037737,55,[],"Detect solid same-color 3-row horizontal components, then zero middle-row cells with odd offset from component left edge. ONNX lowering needs run-relative parity; fixed checkerboard parity is insufficient."

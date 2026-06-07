@@ -1,0 +1,5 @@
+stage,source,purpose,submit,expected_lb,risk
+calib_001_strict_seed_resubmit,exp005_top_cost_rewrite_strict,local/LBの基準線を作る。exp041崩壊後、strict seedがKaggleでどこまで通用するか確認する。,yes_when_user_confirms_or_next_submission_slot_available,near strict public-safe score if local utility matches Kaggle; otherwise environment gap investigation,low
+calib_002_single_family_delta,first accepted exp_b rule-lowering candidate,1 task or 1 small familyだけ差し替え、local deltaとLB deltaの対応を見る。,yes_after_official_validation,delta should be small but directionally consistent,low-medium
+calib_003_p0_lookup_replacement_bundle,P0 lookup-compressed rules only,signature lookupを説明可能ruleに置換したbundleがLB collapseを起こさないか確認する。,yes_after_family_holdout,local/LB gap materially smaller than exp041,medium
+calib_004_mixed_family_growth,trusted calibrated families,crop/sparse/line/regionを段階追加し、7700に向けてLB対応を維持する。,cadenced_threshold_submissions,monotonic or explainable movement,medium

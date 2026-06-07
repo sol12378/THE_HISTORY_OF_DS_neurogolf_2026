@@ -1,0 +1,2 @@
+task_id,variant,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+31,small_bbox_nonzero_7x8,18616,50589,15.168223295017873,14.168510559661705,5395,266_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,1c60d7c08c41daa75e7ae10b6ee59e353bef6fbcb3597db14434569a889b09f9

@@ -1,0 +1,15 @@
+{
+  "exp_id": "exp014_sparse_object_template_bank",
+  "date": "2026-06-05",
+  "status": "bank_complete",
+  "top_k": 100,
+  "arc_gen_sample": 20,
+  "target_task_count": 71,
+  "improved_task_count": 62,
+  "candidate_status_counts": {
+    "no_cost_gain": 8,
+    "skipped": 6470,
+    "improved": 62
+  },
+  "runtime_seconds": 44.75739502906799
+}

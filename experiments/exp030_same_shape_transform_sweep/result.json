@@ -1,0 +1,21 @@
+{
+  "exp_id": "exp030_same_shape_transform_sweep",
+  "date": "2026-06-06",
+  "status": "no_gain",
+  "base_exp": "experiments\\exp023_graph_surgery_exp016",
+  "base_local_estimate": 6479.3988246178,
+  "target_task_count": 140,
+  "candidate_rows": 420,
+  "generated_candidate_count": 0,
+  "skipped_candidate_count": 420,
+  "improved_task_count": 0,
+  "local_estimate_delta": 0,
+  "local_estimate": 6479.3988246178,
+  "gap_to_6500": 20.60117538220038,
+  "submission_decision": "no_submit: below 6500 threshold",
+  "selected_tasks": [],
+  "top_selected": [],
+  "zip_sanity": {},
+  "leakage_risk": "low-medium: train-fitted global transforms are interpretable, but base includes high-risk lookup artifacts.",
+  "overfitting_risk": "medium: sample20 validation is not private-like family holdout."
+}

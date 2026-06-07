@@ -1,0 +1,46 @@
+{
+  "exp_id": "exp032_task187_component_lowering",
+  "date": "2026-06-06",
+  "status": "improved",
+  "base_exp": "experiments\\exp023_graph_surgery_exp016",
+  "base_local_estimate": 6479.3988246178,
+  "task_id": 187,
+  "arc_gen_sample": 20,
+  "evaluation": {
+    "task_id": 187,
+    "route": "same_shape_global_transform",
+    "template_name": "task187_surgery_remove_redundant_and",
+    "baseline_cost": 105313,
+    "candidate_cost": 104413,
+    "baseline_points": 13.435307852707972,
+    "candidate_points": 13.443890532248632,
+    "file_bytes": 7853,
+    "validation_status": "24_pass_0_fail",
+    "status": "improved",
+    "reason": "ok",
+    "sha256": "29793674d1349bedab035988b4d8c8c20bd9db1dbb4ee0d0590a2cfc8f0bc1e0"
+  },
+  "improved_task_count": 1,
+  "local_estimate_delta": 0.00858267954066072,
+  "local_estimate": 6479.40740729734,
+  "gap_to_6500": 20.592592702660113,
+  "submission_decision": "no_submit: below 6500 threshold",
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 838088,
+    "sha256": "47237d2f70bee5a9933320b7b6124ddabf3ce0cc909c2fef03a0adeb516ba3d3"
+  },
+  "leakage_risk": "medium: graph surgery preserves an existing public artifact's semantics; task187 rule was validated separately, but base still includes high-risk lookup artifacts.",
+  "overfitting_risk": "medium: candidate is validated on train/test/arc-gen sample20, not full private-like holdout."
+}

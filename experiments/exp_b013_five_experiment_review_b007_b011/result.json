@@ -1,0 +1,28 @@
+{
+  "exp_id": "exp_b013_five_experiment_review_b007_b011",
+  "date": "2026-06-06",
+  "status": "review_complete",
+  "reviewed_experiments": [
+    "exp_b007_bbox_local_role_miner",
+    "exp_b008_shape_conditioned_sparse_fill",
+    "exp_b009_bbox_affine_formula_miner",
+    "exp_b010_component_object_role_sparse_fill_miner",
+    "exp_b011_task037_diag_ray_lowering"
+  ],
+  "question": "これまでの5実験はcost<=250 / 7700 / LB最大化に本当に有意義だったか",
+  "verdict": "meaningful_but_not_score_producing",
+  "positive_evidence": [
+    "b007-b009でcoordinate-first sparse fill grammarを明確に棄却した",
+    "b010でtask037の説明可能rule opposite_ray_diag_same_color が266/266 full passした",
+    "b011でfull-grid Conv visibility loweringが正しくても高costになることを実測し、guardrailへ追加できた"
+  ],
+  "negative_evidence": [
+    "local score deltaは0.0のまま",
+    "task037 ruleは正しいが、ONNX loweringがstrict baselineに負けた",
+    "cost<=250へ直接近づくloweringはまだ作れていない"
+  ],
+  "decision": "次PDCAはrule探索よりもlow-cost lowering専用へ寄せる。task037はteacher/Convではなく、diagonal-specific small maskまたは既存artifact surgeryで<=600、理想<=250を狙う。同時にb010のpartial/full rule bankを他taskへ拡張する。",
+  "submission_decision": "no_submit: b011 has no cost gain and b012 teacher delta failed full arc-gen validation",
+  "leakage_risk": "review only",
+  "overfitting_risk": "review only"
+}
