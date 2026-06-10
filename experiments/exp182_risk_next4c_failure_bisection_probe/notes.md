@@ -6,10 +6,13 @@ Prepare next high-risk-inventory fail-stub probe for task313/370/234/303 while e
 
 ## 結果
 
-- status: `probe_zip_ready`
+- status: `submitted_complete`
+- Kaggle ref: `53526782`
+- public LB: `5951.46`
 - targets: `[313, 370, 234, 303]`
 - expected_drop_if_all_alive: `54.46450433043683`
 - expected_lb_if_all_alive: `5951.465495669563`
+- observed_drop_from_base: `54.47`
 - zip sha256: `c04d5ebc62db5ca4e323b718c8d791118053bf43c9124239e9eb7b04558c72c8`
 
 ## Target Validation
@@ -21,7 +24,9 @@ Prepare next high-risk-inventory fail-stub probe for task313/370/234/303 while e
 
 ## 判断
 
-hold_until_exp181_result
+submitted_after_exp181_all_alive。
+
+public LB `5951.46` は all-alive expected `5951.4655` とscoreboard丸め範囲で一致した。task313/370/234/303 はpublic-scoring aliveと判断し、短期public-zero suspectから除外する。
 
 ## リスク
 

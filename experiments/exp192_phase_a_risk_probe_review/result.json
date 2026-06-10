@@ -1,0 +1,152 @@
+{
+  "exp_id": "exp192_phase_a_risk_probe_review",
+  "date": "2026-06-10",
+  "status": "review_complete",
+  "purpose": "Review recent Phase A risk-inventory fail-stub probes against docs/experiment_plan_2026-06-10.md review gate.",
+  "probe_count": 8,
+  "probed_task_count": 32,
+  "all_alive_probe_count": 7,
+  "partial_zero_probe_count": 1,
+  "successful_repair_count": 0,
+  "failed_repair_count": 1,
+  "excluded_public_zero_suspects": [
+    109,
+    112,
+    126,
+    159,
+    177,
+    202,
+    203,
+    205,
+    234,
+    238,
+    239,
+    251,
+    281,
+    284,
+    300,
+    301,
+    303,
+    306,
+    313,
+    328,
+    340,
+    358,
+    370,
+    377,
+    379,
+    382,
+    383,
+    387
+  ],
+  "unresolved_public_zero_repair_queue": [
+    187
+  ],
+  "probes": [
+    {
+      "exp": "exp176",
+      "targets": [
+        202,
+        382,
+        205,
+        383
+      ],
+      "interpretation": "all_alive",
+      "public_lb": 5952.64
+    },
+    {
+      "exp": "exp179",
+      "targets": [
+        251,
+        109,
+        239,
+        358
+      ],
+      "interpretation": "all_alive",
+      "public_lb": 5952.01
+    },
+    {
+      "exp": "exp181",
+      "targets": [
+        281,
+        203,
+        126,
+        159
+      ],
+      "interpretation": "all_alive",
+      "public_lb": 5951.48
+    },
+    {
+      "exp": "exp182",
+      "targets": [
+        313,
+        370,
+        234,
+        303
+      ],
+      "interpretation": "all_alive",
+      "public_lb": 5951.46
+    },
+    {
+      "exp": "exp183",
+      "targets": [
+        187,
+        204,
+        198,
+        364
+      ],
+      "interpretation": "partial_zero_task187_suspect",
+      "public_lb": 5965.28
+    },
+    {
+      "exp": "exp184",
+      "targets": [
+        284,
+        300,
+        379,
+        340
+      ],
+      "interpretation": "all_alive",
+      "public_lb": 5951.06
+    },
+    {
+      "exp": "exp188",
+      "targets": [
+        328,
+        301,
+        306,
+        387
+      ],
+      "interpretation": "all_alive",
+      "public_lb": 5950.27
+    },
+    {
+      "exp": "exp190",
+      "targets": [
+        238,
+        112,
+        377,
+        177
+      ],
+      "interpretation": "all_alive",
+      "public_lb": 5950.05
+    }
+  ],
+  "repairs": [
+    {
+      "exp": "exp186",
+      "task_id": 187,
+      "status": "no_public_gain",
+      "public_lb": 6005.9,
+      "note": "massimilianoghiotto full-local-valid raw did not repair public score"
+    }
+  ],
+  "decision": "Do not keep spending primary submission budget on lower-ranked Phase A risk probes. Keep task187 in a focused repair queue, but shift main PDCA to Phase C cost-band compression from the experiment plan.",
+  "next_actions": [
+    "Start Phase C review with dtype/cost evidence from exp158-161.",
+    "Pick one solved-rule task with realistic low-cost lowering surface and build a 20-minute single-task cost probe.",
+    "Keep any official-valid low-risk delta submission-ready, but avoid broad public-source swaps without LB evidence."
+  ],
+  "leakage_risk": "low: review only; no new model adopted.",
+  "overfitting_risk": "low: review only, but conclusion depends on recent public probe evidence."
+}

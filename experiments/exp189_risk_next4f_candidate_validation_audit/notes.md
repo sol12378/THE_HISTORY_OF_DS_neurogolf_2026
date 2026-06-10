@@ -1,0 +1,179 @@
+# exp189_risk_next4f_candidate_validation_audit
+
+## 目的
+
+exp188対象 `328/301/306/387` について、既存source候補のfull validation / costを事前監査する。
+
+## 結果
+
+- targets: `[328, 301, 306, 387]`
+- full_ok_total: `5`
+
+```json
+[
+  {
+    "task_id": 328,
+    "source_rows": 33,
+    "unique_raw_candidates": 3,
+    "full_ok_candidates": 2,
+    "best_candidates": [
+      {
+        "task_id": "328",
+        "filename": "task328.onnx",
+        "source_label": "massimilianoghiotto_6254",
+        "source_ref": "massimilianoghiotto/neurogolf2026-6254",
+        "relative_path": "submission\\task328.onnx",
+        "sha256": "23de6b8cd14e063823c82a96e8174490f3e0906e01523668c5c1dc12428bd825",
+        "file_bytes": "10607",
+        "normalized_bytes": "12645",
+        "params": "1126",
+        "memory_bytes": "66927",
+        "cost": "68053",
+        "simple_cost": "13771",
+        "local_points": "13.871957907660665",
+        "validation_status": "267_pass_0_fail",
+        "validation_pass": "7",
+        "validation_fail": "0",
+        "exp": "exp002_public_blend_6500_fast",
+        "manifest": "experiments\\exp002_public_blend_6500_fast\\selected_manifest.csv",
+        "raw_sha256": "d6e4b5407cdc421a41dca58ff35ce57ab66262f73533231d6aaa036dd23da65f",
+        "raw_path": "experiments\\exp189_risk_next4f_candidate_validation_audit\\task328_01_exp002_public_blend_6500_fast.onnx",
+        "audit_status": "full_ok",
+        "audit_reason": "ok",
+        "official_cost": 68053,
+        "score_reason": "ok",
+        "submit_candidate": true
+      },
+      {
+        "task_id": "328",
+        "cost": "68053",
+        "points": "13.871958",
+        "exp": "exp_b035_new_source_full_arc_blend",
+        "manifest": "experiments\\exp_b035_new_source_full_arc_blend\\selected_manifest.csv",
+        "raw_sha256": "23de6b8cd14e063823c82a96e8174490f3e0906e01523668c5c1dc12428bd825",
+        "raw_path": "experiments\\exp189_risk_next4f_candidate_validation_audit\\task328_03_exp_b035_new_source_full_arc_blend.onnx",
+        "audit_status": "full_ok",
+        "audit_reason": "ok",
+        "validation_status": "267_pass_0_fail",
+        "official_cost": 68053,
+        "score_reason": "ok",
+        "submit_candidate": true
+      }
+    ]
+  },
+  {
+    "task_id": 301,
+    "source_rows": 34,
+    "unique_raw_candidates": 4,
+    "full_ok_candidates": 1,
+    "best_candidates": [
+      {
+        "task_id": "301",
+        "filename": "task301.onnx",
+        "source_label": "massimilianoghiotto_6254",
+        "source_ref": "massimilianoghiotto/neurogolf2026-6254",
+        "relative_path": "submission\\task301.onnx",
+        "sha256": "a9794e11d05e2a30078d5571b3c25490850073d0966e896233ad9e29ea534801",
+        "file_bytes": "19261",
+        "normalized_bytes": "20021",
+        "params": "1848",
+        "memory_bytes": "63140",
+        "cost": "64988",
+        "simple_cost": "21869",
+        "local_points": "13.91804208355036",
+        "validation_status": "266_pass_0_fail",
+        "validation_pass": "6",
+        "validation_fail": "0",
+        "exp": "exp002_public_blend_6500_fast",
+        "manifest": "experiments\\exp002_public_blend_6500_fast\\selected_manifest.csv",
+        "raw_sha256": "7a492045bbf14b9998d40ec5f3fa6f3a6c0cd5876d66de5c6c105cff0b888f2c",
+        "raw_path": "experiments\\exp189_risk_next4f_candidate_validation_audit\\task301_01_exp002_public_blend_6500_fast.onnx",
+        "audit_status": "full_ok",
+        "audit_reason": "ok",
+        "official_cost": 64988,
+        "score_reason": "ok",
+        "submit_candidate": true
+      }
+    ]
+  },
+  {
+    "task_id": 306,
+    "source_rows": 34,
+    "unique_raw_candidates": 4,
+    "full_ok_candidates": 1,
+    "best_candidates": [
+      {
+        "task_id": "306",
+        "filename": "task306.onnx",
+        "source_label": "massimilianoghiotto_6254",
+        "source_ref": "massimilianoghiotto/neurogolf2026-6254",
+        "relative_path": "submission\\task306.onnx",
+        "sha256": "7b49df67bd4c3733ab36737bab5b236e6f62b7b3928698f735fa95db0f9366f5",
+        "file_bytes": "4155",
+        "normalized_bytes": "5273",
+        "params": "70",
+        "memory_bytes": "64374",
+        "cost": "64444",
+        "simple_cost": "5343",
+        "local_points": "13.926448091389123",
+        "validation_status": "265_pass_0_fail",
+        "validation_pass": "5",
+        "validation_fail": "0",
+        "exp": "exp002_public_blend_6500_fast",
+        "manifest": "experiments\\exp002_public_blend_6500_fast\\selected_manifest.csv",
+        "raw_sha256": "d67ea9041caa5f8f0af1345360248ebde69a9c08933b2265e5247a5ec6446c78",
+        "raw_path": "experiments\\exp189_risk_next4f_candidate_validation_audit\\task306_01_exp002_public_blend_6500_fast.onnx",
+        "audit_status": "full_ok",
+        "audit_reason": "ok",
+        "official_cost": 64444,
+        "score_reason": "ok",
+        "submit_candidate": true
+      }
+    ]
+  },
+  {
+    "task_id": 387,
+    "source_rows": 34,
+    "unique_raw_candidates": 4,
+    "full_ok_candidates": 1,
+    "best_candidates": [
+      {
+        "task_id": "387",
+        "filename": "task387.onnx",
+        "source_label": "massimilianoghiotto_6254",
+        "source_ref": "massimilianoghiotto/neurogolf2026-6254",
+        "relative_path": "submission\\task387.onnx",
+        "sha256": "922ce5bde5319cc313a3bd536efe5ad0870456361b80db7b5e806f0adc4a9188",
+        "file_bytes": "12388",
+        "normalized_bytes": "15157",
+        "params": "88",
+        "memory_bytes": "63470",
+        "cost": "63558",
+        "simple_cost": "15245",
+        "local_points": "13.940291846175448",
+        "validation_status": "266_pass_0_fail",
+        "validation_pass": "7",
+        "validation_fail": "0",
+        "exp": "exp002_public_blend_6500_fast",
+        "manifest": "experiments\\exp002_public_blend_6500_fast\\selected_manifest.csv",
+        "raw_sha256": "8821792abccd5004e5dc28b5137f9bfd55e56f05125b322fb7369aa65f87a612",
+        "raw_path": "experiments\\exp189_risk_next4f_candidate_validation_audit\\task387_01_exp002_public_blend_6500_fast.onnx",
+        "audit_status": "full_ok",
+        "audit_reason": "ok",
+        "official_cost": 63558,
+        "score_reason": "ok",
+        "submit_candidate": true
+      }
+    ]
+  }
+]
+```
+
+## 判断
+
+Use this audit if exp188 identifies a public-zero target among task328/301/306/387.
+
+## リスク
+
+medium-to-high: existing public/teacher candidates may be lookup-like.
+medium-to-high: full local validation is not sufficient for public/private robustness.

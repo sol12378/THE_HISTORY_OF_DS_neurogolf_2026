@@ -1,0 +1,57 @@
+# exp193_final_bool_output_dtype_probe
+
+## 目的
+
+task206/328の最終FLOAT Castを外し、BOOL outputをそのまま出せるかローカル検証する。
+
+## 結果
+
+- accepted_count: `0`
+
+```json
+[
+  {
+    "task_id": 206,
+    "status": "not_accepted",
+    "validation": {
+      "ok": false,
+      "reason": "runtime example 0: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Invalid output name:output",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    "base_cost": 61386,
+    "candidate_cost": null,
+    "cost_delta": null,
+    "base_score_reason": "ok",
+    "candidate_score_reason": "score failed: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Invalid output name:output",
+    "candidate_path": "experiments\\exp193_final_bool_output_dtype_probe\\task206_final_bool_output.onnx"
+  },
+  {
+    "task_id": 328,
+    "status": "not_accepted",
+    "validation": {
+      "ok": false,
+      "reason": "runtime example 0: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Invalid output name:output",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    "base_cost": 68053,
+    "candidate_cost": null,
+    "cost_delta": null,
+    "base_score_reason": "ok",
+    "candidate_score_reason": "score failed: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Invalid output name:output",
+    "candidate_path": "experiments\\exp193_final_bool_output_dtype_probe\\task328_final_bool_output.onnx"
+  }
+]
+```
+
+## 判断
+
+Adopt only if validate_examples and official score accept BOOL output with lower cost.
+
+## リスク
+
+low: graph dtype/cost probe only; no labels beyond validation.
+low-to-medium: output dtype acceptance may differ from Kaggle packaging expectations.

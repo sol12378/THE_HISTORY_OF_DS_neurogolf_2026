@@ -31,6 +31,7 @@ experiments/*/*.parquet
 experiments/*/score_cache.jsonl
 experiments/*/*_2026-*.json
 *.log
+neurogolf_kaggle_obsidian.zip
 
 !data/raw/.gitkeep
 !data/external/.gitkeep

@@ -210,3 +210,24 @@
 | exp176_risk_top4_failure_bisection_probe | probe_zip_ready_held | risk top4 202/382/205/383; all-alive expected 5940.53 | - | hold as next probe candidate |
 | exp177_risk_top4_candidate_validation_audit | candidate_audit_complete | full_ok_total 8 for 202/382/205/383 | - | task383 has best distinct repair surface |
 | exp178_task285_b035_repair_probe | public_lb_improved | ref 53524248; expected 6005.93 | 6005.93 | new current public LB best; high source/private risk |
+| exp179_risk_next4_failure_bisection_probe | probe_complete_all_alive | ref 53526669; all-alive expected 5952.01 | 5952.01 | exclude 251/109/239/358 from public-zero suspects |
+| exp180_risk_next4_candidate_validation_audit | candidate_audit_complete | full_ok_total available for 251/109/239/358 | - | held; exp179 all-alive |
+| exp181_risk_next4b_failure_bisection_probe | probe_complete_all_alive | ref 53526726; all-alive expected 5951.48 | 5951.48 | exclude 281/203/126/159 from public-zero suspects |
+| exp182_risk_next4c_failure_bisection_probe | probe_complete_all_alive | ref 53526782; all-alive expected 5951.46 | 5951.46 | exclude 313/370/234/303 from public-zero suspects |
+| exp183_risk_next4d_failure_bisection_probe | probe_complete_partial_zero | ref 53526873; missing drop matches task187 | 5965.28 | task187 public-zero suspect; 204/198/364 likely alive |
+| exp184_risk_next4e_failure_bisection_probe | probe_submitted_pending | ref 53527058; all-alive expected 5951.07 | - | tasks 284/300/379/340; waiting for score |
+| exp185_risk_next4d_candidate_validation_audit | candidate_audit_complete | full_ok_total 4 for 187/204/198/364 | - | task187 massimiliano candidate found but later rejected by exp186 |
+| exp186_task187_massimiliano_repair_probe | no_public_gain | ref 53526998; expected 6019.37, observed 6005.90 | 6005.90 | reject candidate; current best remains exp178 |
+| exp187_risk_next4e_candidate_validation_audit | candidate_audit_complete | full_ok_total 6 for 284/300/379/340 | - | repair candidates ready if exp184 identifies public-zero target |
+| exp188_risk_next4f_failure_bisection_probe | probe_complete_all_alive | ref 53527133; all-alive expected 5950.27 | 5950.27 | exclude 328/301/306/387 from public-zero suspects |
+| exp189_risk_next4f_candidate_validation_audit | candidate_audit_complete | full_ok_total 5 for 328/301/306/387 | - | held; exp188 all-alive |
+| exp190_risk_next4g_failure_bisection_probe | probe_complete_all_alive | ref 53527204; all-alive expected 5950.05 | 5950.05 | exclude 238/112/377/177 from public-zero suspects |
+| exp191_risk_next4g_candidate_validation_audit | candidate_audit_complete | full_ok_total 6 for 238/112/377/177 | - | held; exp190 all-alive |
+| exp192_phase_a_risk_probe_review | review_complete | 8 probes / 32 tasks; 7 all-alive, 1 unresolved task187 suspect | - | shift main PDCA from lower-ranked Phase A bisection to Phase C |
+| exp193_final_bool_output_dtype_probe | no_gain | output rename broke runtime | - | retry with output name preserved |
+| exp194_final_bool_output_keep_name_probe | no_gain | validation pass but cost unchanged for task206/328 | - | final output Cast removal alone is not useful |
+| exp195_channel_gather_colormap_miner | no_gain | mapping_ok 2; improved 0 | - | generic channel Gather color-map is already covered or not applicable |
+| exp196_static_shift_slice_pad_miner | no_gain | shift_ok 1; improved 0 | - | fixed shift Slice+Pad is already covered or not applicable |
+| exp197_one_conv_kernel_miner | stopped_timeout | generic Conv fit too slow in pixel-loop implementation | - | replace with bounded/vectorized miner before retrying |
+| exp198_conv1x1_colormap_miner | no_gain | mapping_ok 4; improved 0 | - | generic 1x1 Conv colormap is already covered or not applicable |
+| exp199_task085_parity_lowering_audit | audit_complete | relative rule 265/265; global parity 33/265 or 40/265 | - | fixed checkerboard is insufficient; needs run-left parity detection |

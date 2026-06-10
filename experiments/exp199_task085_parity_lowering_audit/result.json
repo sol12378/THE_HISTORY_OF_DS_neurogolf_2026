@@ -1,0 +1,42 @@
+{
+  "exp_id": "exp199_task085_parity_lowering_audit",
+  "date": "2026-06-10",
+  "status": "audit_complete",
+  "task_id": 85,
+  "example_count": 265,
+  "relative_rule_pass": 265,
+  "global_parity_pass": {
+    "0": 33,
+    "1": 40
+  },
+  "left_parity_hist": {
+    "0": 435,
+    "1": 375
+  },
+  "width_hist": {
+    "29": 34,
+    "13": 91,
+    "9": 66,
+    "11": 59,
+    "7": 65,
+    "5": 92,
+    "19": 68,
+    "17": 69,
+    "15": 89,
+    "25": 33,
+    "27": 35,
+    "3": 59,
+    "23": 26,
+    "21": 24
+  },
+  "bar_count_hist": {
+    "2": 80,
+    "3": 94,
+    "4": 87,
+    "5": 4
+  },
+  "decision": "If one global parity passes all examples, lower with fixed checkerboard; otherwise run-left parity detection is required.",
+  "elapsed_s": 0.722,
+  "leakage_risk": "low: structural audit only.",
+  "overfitting_risk": "low: no model emitted."
+}
