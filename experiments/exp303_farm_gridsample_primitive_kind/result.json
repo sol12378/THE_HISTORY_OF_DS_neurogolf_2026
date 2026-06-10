@@ -1,0 +1,26 @@
+{
+  "exp_id": "exp303_farm_gridsample_primitive_kind",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "GridSample should have a dedicated primitive kind for supplier/ledger analysis while keeping the same cost proxy",
+  "expected_cost_reduction": "no direct score change; improves lane attribution before real task emission",
+  "primitive_kinds": [
+    "grid_sample"
+  ],
+  "signal": {
+    "subject": "smoke_gridsample_kind",
+    "predicted_cost_band": "250-600_plausible",
+    "hard_reject": false,
+    "reasons": [],
+    "risk_tags": [],
+    "node_count": 1,
+    "full_grid_intermediate_count": 0,
+    "param_count": 8,
+    "param_bytes": 8,
+    "memory_bytes_proxy": 1,
+    "cost_proxy": 9
+  },
+  "submission_decision": "no_submit_tooling_only",
+  "leakage_risk": "low: IR labeling only",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}

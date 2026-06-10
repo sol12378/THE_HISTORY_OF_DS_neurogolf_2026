@@ -14,6 +14,7 @@ from typing import Any
 class PrimitiveKind(str, Enum):
     ONE_NODE_DATA_MOVEMENT = "one_node_data_movement"
     CHANNEL_GATHER = "channel_gather"
+    GRID_SAMPLE = "grid_sample"
     RECOLOR_DIRECT = "recolor_direct"
     RECOLOR_CAST = "recolor_cast"
     STATIC_SLICE_PAD = "static_slice_pad"
@@ -148,7 +149,7 @@ def gridsample_program(
         nodes=(
             IRNode(
                 name="grid_sample",
-                kind=PrimitiveKind.ONE_NODE_DATA_MOVEMENT,
+                kind=PrimitiveKind.GRID_SAMPLE,
                 op_type="GridSample",
                 output=TensorSpec("output", output_shape, output_dtype),
                 attrs={"param_count": param_count},
