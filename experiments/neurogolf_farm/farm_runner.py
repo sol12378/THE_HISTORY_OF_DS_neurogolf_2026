@@ -62,6 +62,15 @@ class FarmRunner:
         ledger.write_csv(ledger_path)
         accepted_candidates = ledger.accepted_candidates()
         best_candidates_by_task = ledger.best_candidates_by_task()
+        low_cost_min_by_primitive: dict[str, int] = {}
+        for row in guardrail_rows:
+            if row["predicted_cost_band"] != "250-600_plausible" or row["cost_proxy"] is None:
+                continue
+            for primitive_kind in row.get("primitive_kinds", ()):
+                current = low_cost_min_by_primitive.get(str(primitive_kind))
+                cost_proxy = int(row["cost_proxy"])
+                if current is None or cost_proxy < current:
+                    low_cost_min_by_primitive[str(primitive_kind)] = cost_proxy
 
         result = {
             "exp_id": self.config.experiment_dir.name,
@@ -71,6 +80,7 @@ class FarmRunner:
             "low_cost_guardrail_subjects": [
                 row["subject"] for row in guardrail_rows if row["predicted_cost_band"] == "250-600_plausible"
             ],
+            "low_cost_guardrail_min_cost_by_primitive": low_cost_min_by_primitive,
             "outputs": {
                 "public_code_registry": str(registry_path),
                 "bundle_ledger_smoke": str(ledger_path),

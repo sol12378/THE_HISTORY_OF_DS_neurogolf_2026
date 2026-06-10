@@ -1,0 +1,16 @@
+{
+  "exp_id": "exp306_farm_low_cost_primitive_min_summary",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "farm smoke should expose min cost_proxy by primitive kind for quick supplier prioritization",
+  "expected_cost_reduction": "no direct score change; enables lane comparison before real task emission",
+  "low_cost_guardrail_min_cost_by_primitive": {
+    "recolor_direct": 45,
+    "recolor_cast": 141,
+    "grid_sample": 9
+  },
+  "grid_sample_min_cost": 9,
+  "submission_decision": "no_submit_smoke_only",
+  "leakage_risk": "low: smoke-only summary",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}
