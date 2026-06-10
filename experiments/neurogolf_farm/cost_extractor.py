@@ -19,7 +19,7 @@ from .ir import IRProgram, PrimitiveKind
 FULL_GRID_ELEMENTS = 1 * 10 * 30 * 30
 HARD_BAD_OPS = {"Loop", "Scan", "NonZero", "Unique", "Compress"}
 HIGH_RISK_OPS = {"MatMul", "Conv", "Tile", "Resize"}
-LOW_COST_OPS = {"Identity", "Transpose", "Slice", "Gather", "Pad", "Cast", "Reshape", "Squeeze", "Unsqueeze"}
+LOW_COST_OPS = {"Identity", "Transpose", "Slice", "Gather", "GridSample", "Pad", "Cast", "Reshape", "Squeeze", "Unsqueeze"}
 CONDITIONAL_HIGH_RISK_OPS = {"ScatterND", "GatherND", "ScatterElements"}
 DTYPE_BYTES = {
     "float16": 2,

@@ -1,0 +1,23 @@
+{
+  "exp_id": "exp300_farm_gridsample_low_cost_gate",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "one-node GridSample should be treated as a low-cost data movement primitive when proxy cost is params + uint8 output bytes",
+  "expected_cost_reduction": "enables cost_proxy 9 candidate lane instead of high_cost_probe_only for GridSample suppliers",
+  "signal": {
+    "subject": "smoke_one_node_gridsample",
+    "predicted_cost_band": "250-600_plausible",
+    "hard_reject": false,
+    "reasons": [],
+    "risk_tags": [],
+    "node_count": 1,
+    "full_grid_intermediate_count": 0,
+    "param_count": 8,
+    "param_bytes": 8,
+    "memory_bytes_proxy": 1,
+    "cost_proxy": 9
+  },
+  "submission_decision": "no_submit_tooling_only",
+  "leakage_risk": "low: tooling gate only",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}
