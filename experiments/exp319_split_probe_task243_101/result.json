@@ -1,7 +1,7 @@
 {
   "exp_id": "exp319_split_probe_task243_101",
   "date": "2026-06-11",
-  "status": "probe_zip_ready",
+  "status": "completed",
   "purpose": "Split follow-up for exp315 after exp318 proved task193/task275 alive: fail-stub task243 and task101 only. If the LB drop is near 27.7790 they are alive; if the drop is near 0 or partial, this pair contains public-zero task(s).",
   "base_exp": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates",
   "base_public_lb": 6008.96,
@@ -53,9 +53,12 @@
     "submission_zip": "experiments\\exp319_split_probe_task243_101\\submission.zip"
   },
   "elapsed_s": 1.053,
-  "submission_decision": "submitted_probe_pending; do not submit another bisection probe until this score completes",
+  "submission_decision": "submitted_probe_complete; task243/task101 are treated as public-zero repair targets because fail-stubbing them caused no public LB drop.",
   "kaggle_ref": 53550517,
-  "kaggle_status": "PENDING",
+  "kaggle_status": "COMPLETE",
+  "public_lb": 6008.96,
+  "observed_drop_vs_base": 0.0,
+  "missing_drop_vs_all_alive": 27.779018459001815,
   "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
   "overfitting_risk": "medium: public diagnostic split of exp315 ambiguity; any repair must use full validation and correctness-first candidates, not public-score-only adoption.",
   "exp315_context": {
@@ -66,6 +69,6 @@
     ],
     "pair_points_sum": 27.779018459001815,
     "prior_split_exp318": "task193/task275 matched all-alive and are excluded",
-    "interpretation": "Observed LB near 5981.18 means task243/task101 are alive and another collision explains exp315. Observed LB near 6008.96 means both are public-zero. Intermediate drop identifies a single zero."
+    "interpretation": "Observed LB was 6008.96, matching the base and far from the all-alive expectation 5981.18, so task243/task101 are both treated as public-zero in the current-best lineage."
   }
 }

@@ -6,7 +6,7 @@ Split follow-up for exp315 after exp318 proved task193/task275 alive: fail-stub 
 
 ## 結果
 
-- status: `probe_zip_ready`
+- status: `completed`
 - targets: `[243, 101]`
 - expected_drop_if_all_alive: `27.779018459001815`
 - expected_lb_if_all_alive: `5981.180981540998`
@@ -19,7 +19,9 @@ Split follow-up for exp315 after exp318 proved task193/task275 alive: fail-stub 
 
 ## 判断
 
-submit_probe_after_sanity; do not submit another bisection probe until this score completes
+Kaggle ref `53550517` は COMPLETE、Public LB は `6008.96`。base exp297 と同点で、all-alive 期待 `5981.180982` から大きく外れた。
+
+fail-stub しても落ちなかったため、task243/task101 は current-best lineage 上の public-zero repair target と扱う。次は既存 full-local-valid source の監査と repair zip 構築。
 
 ## リスク
 
