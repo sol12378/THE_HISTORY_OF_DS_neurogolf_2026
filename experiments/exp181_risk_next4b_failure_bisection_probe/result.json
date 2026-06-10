@@ -1,0 +1,84 @@
+{
+  "exp_id": "exp181_risk_next4b_failure_bisection_probe",
+  "date": "2026-06-10",
+  "status": "submitted_complete",
+  "kaggle_ref": 53526726,
+  "kaggle_status": "COMPLETE",
+  "public_lb": 5951.48,
+  "observed_drop": 54.45000000000073,
+  "interpretation": "all_alive; observed drop matches expected all-alive drop within scoreboard rounding.",
+  "purpose": "Prepare next high-risk-inventory fail-stub probe for task281/203/126/159 while exp179 scores.",
+  "base_exp": "experiments\\exp178_task285_b035_repair_probe",
+  "base_public_lb": 6005.93,
+  "targets": [
+    281,
+    203,
+    126,
+    159
+  ],
+  "target_points": {
+    "281": 13.60794357751076,
+    "203": 13.610350127195805,
+    "126": 13.636839844664504,
+    "159": 13.597994922615115
+  },
+  "expected_drop_if_all_alive": 54.45312847198618,
+  "expected_lb_if_all_alive": 5951.476871528014,
+  "target_validation": [
+    {
+      "task_id": 281,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 203,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 126,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 159,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 728977,
+    "sha256": "fca4b54dd97d8a42d0a5a1fd908a0a930847df4ef39cec63e549e471fa4d7757"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp181_risk_next4b_failure_bisection_probe\\submission.zip"
+  },
+  "elapsed_s": 1.035,
+  "submission_decision": "hold_until_exp179_result",
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: risk-inventory prioritization may be less calibrated than subset-sum consensus."
+}

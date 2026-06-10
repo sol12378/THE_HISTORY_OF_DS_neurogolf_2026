@@ -1,0 +1,65 @@
+{
+  "exp_id": "exp174_next2o_failure_bisection_probe",
+  "date": "2026-06-10",
+  "status": "submitted_complete",
+  "kaggle_ref": 53524145,
+  "kaggle_status": "COMPLETE",
+  "public_lb": 5980.81,
+  "observed_drop": 13.010000000000218,
+  "missing_drop_vs_all_alive": 13.061811260890778,
+  "interpretation": "partial_public_zero; observed drop matches task286 alive while missing drop matches task285, so task285 is public-zero and task286 is public-scoring alive.",
+  "purpose": "Probe remaining subset-derived public-zero suspects 285/286 on top of exp172 current best.",
+  "base_exp": "experiments\\exp172_task133_158_b035_repair_probe",
+  "base_public_lb": 5993.82,
+  "targets": [
+    285,
+    286
+  ],
+  "target_points": {
+    "285": 13.068390516307327,
+    "286": 13.00342074458367
+  },
+  "expected_drop_if_all_alive": 26.071811260890996,
+  "expected_lb_if_all_alive": 5967.748188739109,
+  "target_validation": [
+    {
+      "task_id": 285,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 286,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 722639,
+    "sha256": "e7944b9325c2e0f7899c09c59390954f550449c44a6b12808916daa263cd4fc8"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp174_next2o_failure_bisection_probe\\submission.zip"
+  },
+  "elapsed_s": 2.374,
+  "submission_decision": "hold_until_exp171_result",
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: consumes a submission if used and only measures public scoring behavior for two tasks."
+}

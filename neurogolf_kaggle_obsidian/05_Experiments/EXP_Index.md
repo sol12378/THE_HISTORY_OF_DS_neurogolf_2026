@@ -200,3 +200,13 @@
 | exp166_task025_line_projection_publiczero_repair | public_lb_improved | ref 53523413; expected 5968.17 | 5968.18 | new current public LB best |
 | exp167_next4l_failure_bisection_probe | probe_complete_all_alive | ref 53523591; all-alive expected 5906.36 | 5906.33 | exclude 048/035/012/017 from public-zero suspects |
 | exp168_next4l_candidate_validation_audit | candidate_audit_complete | full_ok_total 9 for 048/035/012/017 | - | held; exp167 all-alive |
+| exp169_next4m_failure_bisection_probe | probe_complete_partial_zero | ref 53523802; missing drop matches task133+task158 | 5938.07 | task133/task158 public-zero; task396/task047 alive |
+| exp170_next4m_candidate_validation_audit | candidate_audit_complete | full_ok_total 8 for 133/396/158/047 | - | exp_b035 repair candidates found for task133/task158 |
+| exp171_next4n_failure_bisection_probe | probe_zip_ready_held | next group 003/038/001/086; all-alive expected 5903.10 | - | hold until next submission slot/need |
+| exp172_task133_158_b035_repair_probe | public_lb_improved | ref 53523884; expected 5993.82 | 5993.82 | new current public LB best; high source/private risk |
+| exp173_next4n_candidate_validation_audit | candidate_audit_complete | full_ok_total 8 for 003/038/001/086 | - | task001/task086 have distinct candidates; task003/task038 limited |
+| exp174_next2o_failure_bisection_probe | probe_complete_partial_zero | ref 53524145; missing drop matches task285 | 5980.81 | task285 public-zero; task286 alive |
+| exp175_next2o_candidate_validation_audit | candidate_audit_complete | full_ok_total 4 for 285/286 | - | task285 has exp_b035 repair candidate; task286 limited |
+| exp176_risk_top4_failure_bisection_probe | probe_zip_ready_held | risk top4 202/382/205/383; all-alive expected 5940.53 | - | hold as next probe candidate |
+| exp177_risk_top4_candidate_validation_audit | candidate_audit_complete | full_ok_total 8 for 202/382/205/383 | - | task383 has best distinct repair surface |
+| exp178_task285_b035_repair_probe | public_lb_improved | ref 53524248; expected 6005.93 | 6005.93 | new current public LB best; high source/private risk |

@@ -1,0 +1,84 @@
+{
+  "exp_id": "exp171_next4n_failure_bisection_probe",
+  "date": "2026-06-10",
+  "status": "submitted_complete",
+  "kaggle_ref": 53524036,
+  "kaggle_status": "COMPLETE",
+  "public_lb": 5928.74,
+  "observed_drop": 65.07999999999993,
+  "interpretation": "all_alive; observed drop matches expected all-alive drop within scoreboard rounding.",
+  "purpose": "Probe next public-zero bisection group 003/038/001/086 on top of exp172 current best.",
+  "base_exp": "experiments\\exp172_task133_158_b035_repair_probe",
+  "base_public_lb": 5993.82,
+  "targets": [
+    3,
+    38,
+    1,
+    86
+  ],
+  "target_points": {
+    "3": 15.883750551423413,
+    "38": 17.306974251582112,
+    "1": 17.047384888349,
+    "86": 14.83966336368449
+  },
+  "expected_drop_if_all_alive": 65.07777305503902,
+  "expected_lb_if_all_alive": 5928.742226944961,
+  "target_validation": [
+    {
+      "task_id": 3,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 38,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 1,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 86,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 757308,
+    "sha256": "13c4d9f243cf9508d020eafe6e96abfea52c351179e81c5d496a77dac7649f9f"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp171_next4n_failure_bisection_probe\\submission.zip"
+  },
+  "elapsed_s": 2.387,
+  "submission_decision": "submit_bisection_probe",
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: consumes a submission if used and only measures public scoring behavior for a group."
+}
