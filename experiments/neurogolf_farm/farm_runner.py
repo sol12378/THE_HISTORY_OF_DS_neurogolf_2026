@@ -79,6 +79,12 @@ class FarmRunner:
         next_low_cost_primitive_cost = (
             low_cost_min_by_primitive[next_low_cost_primitive] if next_low_cost_primitive is not None else None
         )
+        next_low_cost_subjects = [
+            row["subject"]
+            for row in guardrail_rows
+            if next_low_cost_primitive in row.get("primitive_kinds", ())
+            and row["cost_proxy"] == next_low_cost_primitive_cost
+        ]
 
         result = {
             "exp_id": self.config.experiment_dir.name,
@@ -91,6 +97,7 @@ class FarmRunner:
             "low_cost_guardrail_min_cost_by_primitive": low_cost_min_by_primitive,
             "next_low_cost_primitive": next_low_cost_primitive,
             "next_low_cost_primitive_cost": next_low_cost_primitive_cost,
+            "next_low_cost_subjects": next_low_cost_subjects,
             "outputs": {
                 "public_code_registry": str(registry_path),
                 "bundle_ledger_smoke": str(ledger_path),

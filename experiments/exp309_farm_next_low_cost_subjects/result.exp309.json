@@ -1,0 +1,15 @@
+{
+  "exp_id": "exp309_farm_next_low_cost_subjects",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "farm smoke should report concrete subjects for the recommended low-cost primitive lane",
+  "expected_cost_reduction": "no direct score change; points the next grid_sample supplier step at smoke_gridsample",
+  "next_low_cost_primitive": "grid_sample",
+  "next_low_cost_primitive_cost": 9,
+  "next_low_cost_subjects": [
+    "smoke_gridsample"
+  ],
+  "submission_decision": "no_submit_smoke_only",
+  "leakage_risk": "low: smoke-only planner metadata",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}
