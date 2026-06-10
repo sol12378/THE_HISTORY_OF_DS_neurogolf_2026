@@ -1,0 +1,23 @@
+{
+  "exp_id": "exp301_farm_gridsample_ir_factory",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "standard GridSample IR factory lets suppliers emit cost-aware one-node sampling candidates",
+  "expected_cost_reduction": "factory emits param_count=8 + uint8 output bytes; 1-cell smoke cost_proxy=9",
+  "signal": {
+    "subject": "smoke_gridsample_factory",
+    "predicted_cost_band": "250-600_plausible",
+    "hard_reject": false,
+    "reasons": [],
+    "risk_tags": [],
+    "node_count": 1,
+    "full_grid_intermediate_count": 0,
+    "param_count": 8,
+    "param_bytes": 8,
+    "memory_bytes_proxy": 1,
+    "cost_proxy": 9
+  },
+  "submission_decision": "no_submit_tooling_only",
+  "leakage_risk": "low: tooling factory only",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}

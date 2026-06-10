@@ -130,3 +130,28 @@ def recolor_cast_program(
             ),
         ),
     )
+
+
+def gridsample_program(
+    task_id: str,
+    *,
+    output_shape: tuple[int | str | None, ...],
+    output_dtype: str = "uint8",
+    param_count: int = 8,
+    source: str = "gridsample_supplier",
+) -> IRProgram:
+    return IRProgram(
+        task_id=task_id,
+        family="one_node_gridsample",
+        intent="fused coordinate sampling with uint8 output",
+        source=source,
+        nodes=(
+            IRNode(
+                name="grid_sample",
+                kind=PrimitiveKind.ONE_NODE_DATA_MOVEMENT,
+                op_type="GridSample",
+                output=TensorSpec("output", output_shape, output_dtype),
+                attrs={"param_count": param_count},
+            ),
+        ),
+    )
