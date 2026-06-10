@@ -1,0 +1,39 @@
+{
+  "exp_id": "exp314_grid_sample_priority_targets",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "farm result should surface the first real grid_sample target queue with expected floor deltas",
+  "expected_cost_reduction": "task251 +5.121876, task037 +4.665371, task185 +4.598086, task048 +2.212843 if reduced to cost 600",
+  "next_low_cost_primitive": "grid_sample",
+  "next_low_cost_primitive_cost": 9,
+  "grid_sample_priority_targets": [
+    {
+      "task_id": "251",
+      "current_cost": 100580,
+      "floor_cost": 600,
+      "expected_delta": 5.121876
+    },
+    {
+      "task_id": "037",
+      "current_cost": 63726,
+      "floor_cost": 600,
+      "expected_delta": 4.665371
+    },
+    {
+      "task_id": "185",
+      "current_cost": 59584,
+      "floor_cost": 600,
+      "expected_delta": 4.598086
+    },
+    {
+      "task_id": "048",
+      "current_cost": 5481,
+      "floor_cost": 600,
+      "expected_delta": 2.212843
+    }
+  ],
+  "target_count": 4,
+  "submission_decision": "no_submit_smoke_only",
+  "leakage_risk": "low: roadmap-derived target queue only",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}

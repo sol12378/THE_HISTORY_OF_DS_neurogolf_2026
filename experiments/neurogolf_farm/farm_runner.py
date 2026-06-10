@@ -85,6 +85,12 @@ class FarmRunner:
             if next_low_cost_primitive in row.get("primitive_kinds", ())
             and row["cost_proxy"] == next_low_cost_primitive_cost
         ]
+        grid_sample_priority_targets = [
+            {"task_id": "251", "current_cost": 100580, "floor_cost": 600, "expected_delta": 5.121876},
+            {"task_id": "037", "current_cost": 63726, "floor_cost": 600, "expected_delta": 4.665371},
+            {"task_id": "185", "current_cost": 59584, "floor_cost": 600, "expected_delta": 4.598086},
+            {"task_id": "048", "current_cost": 5481, "floor_cost": 600, "expected_delta": 2.212843},
+        ]
 
         result = {
             "exp_id": self.config.experiment_dir.name,
@@ -98,6 +104,7 @@ class FarmRunner:
             "next_low_cost_primitive": next_low_cost_primitive,
             "next_low_cost_primitive_cost": next_low_cost_primitive_cost,
             "next_low_cost_subjects": next_low_cost_subjects,
+            "grid_sample_priority_targets": grid_sample_priority_targets,
             "outputs": {
                 "public_code_registry": str(registry_path),
                 "bundle_ledger_smoke": str(ledger_path),
@@ -204,6 +211,7 @@ class FarmRunner:
                     f"- next low-cost primitive: `{result.get('next_low_cost_primitive')}`",
                     f"- next low-cost primitive cost: `{result.get('next_low_cost_primitive_cost')}`",
                     f"- next low-cost subjects: `{result.get('next_low_cost_subjects')}`",
+                    f"- grid_sample priority targets: `{result.get('grid_sample_priority_targets')}`",
                     f"- submitted best estimate: `{submission_decision.get('submitted_best_estimate')}`",
                     f"- candidate estimate: `{submission_decision.get('candidate_estimate')}`",
                     f"- should submit: `{submission_decision.get('should_submit')}`",
