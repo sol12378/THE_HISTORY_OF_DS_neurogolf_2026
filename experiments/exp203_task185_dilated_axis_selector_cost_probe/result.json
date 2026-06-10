@@ -1,0 +1,61 @@
+{
+  "exp_id": "exp203_task185_dilated_axis_selector_cost_probe",
+  "date": "2026-06-10",
+  "status": "cost_probe_ready",
+  "task_id": 185,
+  "hypothesis": "task185 realistic spacing-3/4/5 axis selector can still fit under baseline when combined with selected-lattice extraction.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "current_public_best_lb": 6005.93,
+  "rows": [
+    {
+      "variant": "dilated_axis_scores_only",
+      "status": "scored",
+      "node_count": 18,
+      "memory": 5136,
+      "params": 72,
+      "cost": 5208,
+      "file_bytes": 1750,
+      "sha256": "634d007ff7d72fdc74788eaa4d6f30a1a46097fe51ab88611e95f733cc6d0221",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Spacing 3/4/5 dilated row/col window scores, no ArgMax."
+    },
+    {
+      "variant": "dilated_axis_selector_argmax",
+      "status": "scored",
+      "node_count": 23,
+      "memory": 5164,
+      "params": 72,
+      "cost": 5236,
+      "file_bytes": 1995,
+      "sha256": "422bf1958e808f32115293cf3664f19efdeaa2cb2c8808e3ff9d06874febcb88",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Spacing 3/4/5 dilated row/col window scores plus ArgMax selector ids."
+    }
+  ],
+  "best_scored": {
+    "variant": "dilated_axis_scores_only",
+    "status": "scored",
+    "node_count": 18,
+    "memory": 5136,
+    "params": 72,
+    "cost": 5208,
+    "file_bytes": 1750,
+    "sha256": "634d007ff7d72fdc74788eaa4d6f30a1a46097fe51ab88611e95f733cc6d0221",
+    "static_reason": "ok",
+    "score_reason": "ok",
+    "runtime_reason": "ok",
+    "notes": "Spacing 3/4/5 dilated row/col window scores, no ArgMax."
+  },
+  "extraction_core_cost_from_exp202": 7660,
+  "projected_with_extraction": 12868,
+  "projected_under_baseline": true,
+  "decision": "If under baseline, continue to correctness-first dynamic-index ONNX; otherwise selector realism erases the cost lane.",
+  "submission_decision": "no_submit: cost probe only",
+  "leakage_risk": "low: cost proxy only.",
+  "overfitting_risk": "medium-low: spacing-specific selector mirrors known input geometry but emits no candidate."
+}

@@ -1,0 +1,61 @@
+{
+  "exp_id": "exp201_task185_axis_selector_cost_probe",
+  "date": "2026-06-10",
+  "status": "cost_probe_ready",
+  "task_id": 185,
+  "hypothesis": "exp200で成立したaxis-separable selectorのONNX cost floorはpairwise proxyより低い。",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "current_public_best_lb": 6005.93,
+  "rows": [
+    {
+      "variant": "axis_conv_score_proxy",
+      "status": "scored",
+      "node_count": 11,
+      "memory": 4084,
+      "params": 72,
+      "cost": 4156,
+      "file_bytes": 1229,
+      "sha256": "cfb282f1d317600b005090bee360f9da3928d9527b314da0d394c356c50778f9",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Fused Conv proxy for independent row/col 4-window scores."
+    },
+    {
+      "variant": "axis_static_slice_score_proxy",
+      "status": "scored",
+      "node_count": 49,
+      "memory": 105792,
+      "params": 272,
+      "cost": 106064,
+      "file_bytes": 6965,
+      "sha256": "6524ece82c8d1e57ed372675515c050aa9d48dc788b44fbc95d810cb3e489fbe",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Static Slice+ReduceSum proxy for independent row/col 4-window scores."
+    }
+  ],
+  "best_scored": {
+    "variant": "axis_conv_score_proxy",
+    "status": "scored",
+    "node_count": 11,
+    "memory": 4084,
+    "params": 72,
+    "cost": 4156,
+    "file_bytes": 1229,
+    "sha256": "cfb282f1d317600b005090bee360f9da3928d9527b314da0d394c356c50778f9",
+    "static_reason": "ok",
+    "score_reason": "ok",
+    "runtime_reason": "ok",
+    "notes": "Fused Conv proxy for independent row/col 4-window scores."
+  },
+  "pairwise_static_proxy_cost_from_exp117": 76194,
+  "line_mask_proxy_cost_from_exp117": 4204,
+  "core_stack_proxy_cost_from_exp117": 5160,
+  "decision": "If axis selector cost is below pairwise proxy and leaves room under baseline, attempt a correctness-first task185 ONNX lowering; otherwise pivot.",
+  "submission_decision": "no_submit: cost probe only",
+  "leakage_risk": "low: cost proxy only.",
+  "overfitting_risk": "medium-low: selector is structural, but this is not a candidate artifact."
+}

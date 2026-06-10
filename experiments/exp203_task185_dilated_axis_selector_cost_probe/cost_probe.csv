@@ -1,0 +1,3 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,notes
+dilated_axis_scores_only,scored,18,5136,72,5208,1750,634d007ff7d72fdc74788eaa4d6f30a1a46097fe51ab88611e95f733cc6d0221,ok,ok,ok,"Spacing 3/4/5 dilated row/col window scores, no ArgMax."
+dilated_axis_selector_argmax,scored,23,5164,72,5236,1995,422bf1958e808f32115293cf3664f19efdeaa2cb2c8808e3ff9d06874febcb88,ok,ok,ok,Spacing 3/4/5 dilated row/col window scores plus ArgMax selector ids.

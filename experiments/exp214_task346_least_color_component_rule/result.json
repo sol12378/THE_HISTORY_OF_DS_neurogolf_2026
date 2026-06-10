@@ -1,0 +1,21 @@
+{
+  "exp_id": "exp214_task346_least_color_component_rule",
+  "date": "2026-06-10",
+  "status": "rule_found",
+  "task_id": 346,
+  "baseline_cost": 9178,
+  "baseline_points": 15.875435405045222,
+  "example_count": 267,
+  "pass_count": 267,
+  "fail_count": 0,
+  "branch_hist": {
+    "rank0": 263,
+    "rank1": 4
+  },
+  "fails": [],
+  "rule": "choose least nonzero color by count; if that color's largest 4-connected component has size >= 8, choose second-least color.",
+  "decision": "Rule is full-pass but ONNX lowering needs color counts and connected-component largest-size proxy; likely not immediate tiny lowering.",
+  "submission_decision": "no_submit: Python rule only",
+  "leakage_risk": "low: input-only structural rule.",
+  "overfitting_risk": "medium: threshold 8 inferred from four switch cases; all-arc pass but hidden robustness uncertain."
+}

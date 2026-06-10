@@ -1,0 +1,126 @@
+{
+  "exp_id": "exp209_task365_bbox_branch_inventory",
+  "date": "2026-06-10",
+  "status": "inventory_ready",
+  "task_id": 365,
+  "baseline_cost": 58814,
+  "baseline_points": 14.01786479921536,
+  "example_count": 266,
+  "fail_count": 0,
+  "unique_selected_bbox_count": 186,
+  "top_selected_bboxes": [
+    [
+      "(7, 0, 10, 3)",
+      5
+    ],
+    [
+      "(0, 7, 3, 10)",
+      4
+    ],
+    [
+      "(1, 0, 6, 3)",
+      4
+    ],
+    [
+      "(0, 6, 3, 10)",
+      3
+    ],
+    [
+      "(0, 0, 5, 4)",
+      3
+    ],
+    [
+      "(0, 0, 5, 5)",
+      3
+    ],
+    [
+      "(0, 1, 4, 4)",
+      3
+    ],
+    [
+      "(0, 3, 3, 9)",
+      3
+    ],
+    [
+      "(7, 7, 10, 10)",
+      3
+    ],
+    [
+      "(0, 6, 3, 9)",
+      3
+    ],
+    [
+      "(1, 0, 7, 4)",
+      3
+    ],
+    [
+      "(6, 2, 10, 5)",
+      3
+    ],
+    [
+      "(7, 0, 10, 4)",
+      3
+    ],
+    [
+      "(0, 0, 4, 3)",
+      3
+    ],
+    [
+      "(0, 6, 5, 10)",
+      2
+    ],
+    [
+      "(7, 1, 10, 4)",
+      2
+    ],
+    [
+      "(0, 0, 6, 4)",
+      2
+    ],
+    [
+      "(0, 4, 3, 9)",
+      2
+    ],
+    [
+      "(1, 6, 4, 10)",
+      2
+    ],
+    [
+      "(6, 0, 9, 3)",
+      2
+    ]
+  ],
+  "selected_shape_hist": {
+    "(3, 3)": 47,
+    "(4, 3)": 34,
+    "(3, 4)": 27,
+    "(5, 3)": 25,
+    "(4, 4)": 21,
+    "(5, 4)": 19,
+    "(3, 6)": 19,
+    "(3, 5)": 17,
+    "(6, 3)": 13,
+    "(4, 6)": 12,
+    "(5, 5)": 9,
+    "(4, 5)": 8,
+    "(6, 4)": 7,
+    "(6, 5)": 4,
+    "(5, 6)": 3,
+    "(6, 6)": 1
+  },
+  "selected_rank_hist": {
+    "0": 106,
+    "1": 99,
+    "2": 61
+  },
+  "count2_margin_hist": {
+    "1": 174,
+    "2": 72,
+    "3": 20
+  },
+  "unique_object_signature_count": 266,
+  "decision": "If selected bbox/shape space is too broad, do not spend ONNX effort on task365 dynamic object selection; pivot to smaller cropish tasks.",
+  "submission_decision": "no_submit: inventory only",
+  "leakage_risk": "low: structural inventory only.",
+  "overfitting_risk": "medium: bbox branch tables can overfit if emitted directly."
+}

@@ -1,0 +1,240 @@
+{
+  "exp_id": "exp210_task355_onecell_rule_miner",
+  "date": "2026-06-10",
+  "status": "partial",
+  "task_id": 355,
+  "baseline_cost": 11795,
+  "baseline_points": 15.624569008158225,
+  "example_count": 267,
+  "shape_hist": {
+    "10x13": 4,
+    "10x14": 1,
+    "10x15": 3,
+    "10x17": 2,
+    "10x19": 2,
+    "11x11": 2,
+    "11x12": 1,
+    "11x13": 2,
+    "11x15": 1,
+    "11x16": 2,
+    "11x17": 1,
+    "11x19": 1,
+    "11x20": 1,
+    "12x10": 1,
+    "12x13": 4,
+    "12x14": 5,
+    "12x15": 6,
+    "12x16": 2,
+    "12x17": 1,
+    "12x19": 1,
+    "12x20": 2,
+    "13x10": 2,
+    "13x11": 2,
+    "13x12": 2,
+    "13x13": 3,
+    "13x14": 4,
+    "13x15": 6,
+    "13x16": 1,
+    "13x17": 1,
+    "13x20": 2,
+    "14x10": 1,
+    "14x13": 4,
+    "14x14": 4,
+    "14x15": 4,
+    "14x16": 8,
+    "14x17": 5,
+    "14x18": 6,
+    "14x19": 1,
+    "15x10": 2,
+    "15x11": 3,
+    "15x12": 3,
+    "15x13": 5,
+    "15x14": 3,
+    "15x15": 6,
+    "15x16": 8,
+    "15x17": 7,
+    "15x18": 1,
+    "15x19": 2,
+    "15x20": 1,
+    "16x10": 1,
+    "16x11": 1,
+    "16x12": 4,
+    "16x13": 5,
+    "16x14": 10,
+    "16x15": 9,
+    "16x16": 5,
+    "16x17": 10,
+    "16x18": 3,
+    "16x19": 3,
+    "16x20": 1,
+    "17x11": 3,
+    "17x12": 2,
+    "17x13": 4,
+    "17x14": 5,
+    "17x15": 6,
+    "17x16": 5,
+    "17x17": 6,
+    "17x18": 3,
+    "17x20": 1,
+    "18x10": 1,
+    "18x11": 2,
+    "18x12": 2,
+    "18x13": 1,
+    "18x14": 3,
+    "18x15": 2,
+    "18x16": 3,
+    "18x17": 2,
+    "18x18": 2,
+    "18x19": 3,
+    "18x20": 2,
+    "19x11": 1,
+    "19x12": 1,
+    "19x13": 2,
+    "19x14": 1,
+    "19x15": 3,
+    "19x17": 2,
+    "19x18": 1,
+    "20x10": 1,
+    "20x11": 1,
+    "20x14": 1,
+    "20x17": 1
+  },
+  "output_hist": {
+    "0": 17,
+    "1": 24,
+    "2": 42,
+    "3": 29,
+    "4": 20,
+    "5": 17,
+    "6": 31,
+    "7": 34,
+    "8": 28,
+    "9": 25
+  },
+  "ranked_rules": [
+    {
+      "rule": "corner_br",
+      "pass_count": 70,
+      "fail_count": 197
+    },
+    {
+      "rule": "corner_bl",
+      "pass_count": 67,
+      "fail_count": 200
+    },
+    {
+      "rule": "bbox_center",
+      "pass_count": 59,
+      "fail_count": 208
+    },
+    {
+      "rule": "center_color",
+      "pass_count": 59,
+      "fail_count": 208
+    },
+    {
+      "rule": "corner_tr",
+      "pass_count": 56,
+      "fail_count": 211
+    },
+    {
+      "rule": "inner_mode",
+      "pass_count": 53,
+      "fail_count": 214
+    },
+    {
+      "rule": "corner_tl",
+      "pass_count": 52,
+      "fail_count": 215
+    },
+    {
+      "rule": "bbox_mode",
+      "pass_count": 49,
+      "fail_count": 218
+    },
+    {
+      "rule": "border_mode",
+      "pass_count": 49,
+      "fail_count": 218
+    },
+    {
+      "rule": "mode_color",
+      "pass_count": 49,
+      "fail_count": 218
+    },
+    {
+      "rule": "unique_color",
+      "pass_count": 17,
+      "fail_count": 250
+    },
+    {
+      "rule": "bbox_least",
+      "pass_count": 0,
+      "fail_count": 267
+    },
+    {
+      "rule": "least_color",
+      "pass_count": 0,
+      "fail_count": 267
+    }
+  ],
+  "best_rule": {
+    "rule": "corner_br",
+    "pass_count": 70,
+    "fail_count": 197
+  },
+  "best_fail_examples": [
+    {
+      "idx": 0,
+      "shape": "17x13",
+      "pred": 1,
+      "expected": 8
+    },
+    {
+      "idx": 1,
+      "shape": "16x15",
+      "pred": 8,
+      "expected": 2
+    },
+    {
+      "idx": 4,
+      "shape": "18x19",
+      "pred": 8,
+      "expected": 2
+    },
+    {
+      "idx": 6,
+      "shape": "18x12",
+      "pred": 7,
+      "expected": 6
+    },
+    {
+      "idx": 7,
+      "shape": "10x13",
+      "pred": 3,
+      "expected": 6
+    },
+    {
+      "idx": 8,
+      "shape": "15x13",
+      "pred": 1,
+      "expected": 4
+    },
+    {
+      "idx": 9,
+      "shape": "14x18",
+      "pred": 7,
+      "expected": 2
+    },
+    {
+      "idx": 10,
+      "shape": "16x15",
+      "pred": 3,
+      "expected": 7
+    }
+  ],
+  "decision": "If a simple 1-cell rule is full-pass, lower it with a tiny ONNX reducer; otherwise inspect near-miss features or pivot.",
+  "submission_decision": "no_submit: Python rule mining only",
+  "leakage_risk": "low: input-only aggregate rules.",
+  "overfitting_risk": "medium-low for simple aggregates, higher if adding branch tables."
+}

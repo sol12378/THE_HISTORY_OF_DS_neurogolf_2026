@@ -1,0 +1,20 @@
+{
+  "exp_id": "exp205_task185_arbitrary_dilated_selector_audit",
+  "date": "2026-06-10",
+  "status": "audit_complete",
+  "task_id": 185,
+  "hypothesis": "exp204 mismatch is caused by scoring arbitrary dilated starts rather than detected grid-line windows.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "current_public_best_lb": 6005.93,
+  "example_count": 267,
+  "valid_selector_pass": 267,
+  "arbitrary_selector_pass": 267,
+  "arbitrary_match_valid": 267,
+  "fail_examples": [],
+  "decision": "If arbitrary_selector_pass is low, dynamic ONNX must mask candidate starts by detected grid lines or use compact valid-window templates.",
+  "submission_decision": "no_submit: selector audit only",
+  "elapsed_s": 0.405,
+  "leakage_risk": "low: input-only audit.",
+  "overfitting_risk": "medium-low: diagnoses selector mechanics, no candidate emitted."
+}

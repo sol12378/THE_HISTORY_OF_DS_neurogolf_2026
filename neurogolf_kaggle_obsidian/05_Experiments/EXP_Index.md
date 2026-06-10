@@ -231,3 +231,19 @@
 | exp197_one_conv_kernel_miner | stopped_timeout | generic Conv fit too slow in pixel-loop implementation | - | replace with bounded/vectorized miner before retrying |
 | exp198_conv1x1_colormap_miner | no_gain | mapping_ok 4; improved 0 | - | generic 1x1 Conv colormap is already covered or not applicable |
 | exp199_task085_parity_lowering_audit | audit_complete | relative rule 265/265; global parity 33/265 or 40/265 | - | fixed checkerboard is insufficient; needs run-left parity detection |
+| exp200_task185_axis_separable_selector_audit | audit_complete | axis selector 267/267; matches pairwise 267/267 | - | task185 selector can avoid pairwise window scoring |
+| exp201_task185_axis_selector_cost_probe | cost_probe_ready | fused axis selector proxy cost 4156 vs pairwise 76194 | - | attempt correctness-first task185 ONNX lowering next |
+| exp202_task185_selected_lattice_extract_cost_probe | cost_probe_ready | GatherElements extraction/core cost 7660; selector+core projected 11816 | - | dynamic-index correctness candidate is worth attempting |
+| exp203_task185_dilated_axis_selector_cost_probe | cost_probe_ready | spacing 3/4/5 selector cost 5236; projected with extraction 12868 | - | selector realism still leaves task185 under baseline |
+| exp204_task185_dynamic_axis_candidate_probe | no_valid_candidate | dynamic candidate runs but fails 0_pass_1_fail; cost 106720+ | - | fix index/template cost and output alignment/bg handling |
+| exp205_task185_arbitrary_dilated_selector_audit | audit_complete | arbitrary selector 267/267 and matches valid selector | - | exp204 mismatch is not arbitrary-start scoring alone |
+| exp206_task185_dynamic_output_diagnostic | diagnostic_complete | basic outputs all c0; nonzero variants shifted/missing colors | - | next fix: compact index derivation + selector/core alignment |
+| exp207_task185_dynamic_intermediate_diagnostic | diagnostic_complete | ONNX indices choose [0,3,6,9]/[2,5,8,11] vs Python [5,8,11,14] | - | selector score must exclude dynamic bg, not just color0 |
+| exp208_task185_bg_distribution_audit | audit_complete | bg colors spread across 1-9 | - | fixed bg mask impossible; dynamic bg detector required |
+| exp209_task365_bbox_branch_inventory | inventory_ready | selected bbox 186 unique; object signature 266 unique | - | task365 branch-table lowering not promising |
+| exp210_task355_onecell_rule_miner | partial | best corner_br 70/267 | - | simple aggregate rules do not solve task355 |
+| exp211_onecell_cropish_rule_sweep | no_full_hit | task346 least_nz 263/267, others weak | - | focus task346 near-miss |
+| exp212_task346_least_color_failure_audit | audit_complete | least_nz 263/267; four failures are output rank1 | - | inspect rank-switch features |
+| exp213_task346_rank_switch_feature_audit | audit_complete | rank0 largest component >=8 covers 4 switches with 0 FP | - | validate component-corrected rule |
+| exp214_task346_least_color_component_rule | rule_found | 267/267 | - | new solved rule; lowering needs count + component proxy |
+| exp215_task346_count_component_cost_probe | cost_probe_ready | count ArgMin cost 111; component step cost 117135 | - | task346 direct lowering not viable with full-grid component proxy |

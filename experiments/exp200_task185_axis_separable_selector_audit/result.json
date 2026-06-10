@@ -1,0 +1,38 @@
+{
+  "exp_id": "exp200_task185_axis_separable_selector_audit",
+  "date": "2026-06-10",
+  "status": "audit_complete",
+  "task_id": 185,
+  "hypothesis": "task185の4x4 lattice selectorはrow/col windowを独立scoreで選べれば、pairwise window scoringを避けられる。",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "current_public_best_lb": 6005.93,
+  "example_count": 267,
+  "pairwise_reference_pass": 267,
+  "mode_pass": {
+    "score": 267,
+    "score_active": 267,
+    "active_score": 267,
+    "rightmost_score": 267
+  },
+  "mode_match_pair": {
+    "score": 267,
+    "score_active": 267,
+    "active_score": 267,
+    "rightmost_score": 267
+  },
+  "best_axis_mode": "score",
+  "best_axis_pass": 267,
+  "row_target_rank_hist": {
+    "0": 267
+  },
+  "col_target_rank_hist": {
+    "0": 267
+  },
+  "fail_examples": [],
+  "decision": "If best_axis_pass is full, implement cheaper axis-separable ONNX selector; otherwise task185 still needs pairwise window interaction or another target.",
+  "submission_decision": "no_submit: selector audit only",
+  "elapsed_s": 0.322,
+  "leakage_risk": "low: input-only geometry audit.",
+  "overfitting_risk": "medium-low: independent scoring is a structural simplification; no raw coordinate table emitted."
+}

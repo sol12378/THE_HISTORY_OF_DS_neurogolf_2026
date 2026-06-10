@@ -1,0 +1,61 @@
+{
+  "exp_id": "exp202_task185_selected_lattice_extract_cost_probe",
+  "date": "2026-06-10",
+  "status": "cost_probe_ready",
+  "task_id": 185,
+  "hypothesis": "If selected row/col indices are available, task185 lattice extraction + homogeneous core can fit under the baseline cost budget.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "current_public_best_lb": 6005.93,
+  "rows": [
+    {
+      "variant": "gatherelements_lattice_core_pad",
+      "status": "scored",
+      "node_count": 6,
+      "memory": 6250,
+      "params": 1410,
+      "cost": 7660,
+      "file_bytes": 11761,
+      "sha256": "edb9b52d8bf2e7a9687071746ffbfa532d8f2001a3d1c91b188029aaa4f53d94",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Selected 4x4 lattice extraction via two GatherElements ops, then homogeneous 2x2 core."
+    },
+    {
+      "variant": "gathernd_16_cells_core_pad",
+      "status": "scored",
+      "node_count": 8,
+      "memory": 38730,
+      "params": 102,
+      "cost": 38832,
+      "file_bytes": 1332,
+      "sha256": "84b158359c3987a608055b40939ee82d3e3c899bd84d13b43cc578e69ec45ed8",
+      "static_reason": "ok",
+      "score_reason": "ok",
+      "runtime_reason": "ok",
+      "notes": "Selected 16-cell sparse GatherND extraction, then homogeneous 2x2 core."
+    }
+  ],
+  "best_scored": {
+    "variant": "gatherelements_lattice_core_pad",
+    "status": "scored",
+    "node_count": 6,
+    "memory": 6250,
+    "params": 1410,
+    "cost": 7660,
+    "file_bytes": 11761,
+    "sha256": "edb9b52d8bf2e7a9687071746ffbfa532d8f2001a3d1c91b188029aaa4f53d94",
+    "static_reason": "ok",
+    "score_reason": "ok",
+    "runtime_reason": "ok",
+    "notes": "Selected 4x4 lattice extraction via two GatherElements ops, then homogeneous 2x2 core."
+  },
+  "axis_selector_proxy_cost_from_exp201": 4156,
+  "projected_best_with_axis_selector": 11816,
+  "projected_under_baseline": true,
+  "decision": "If projected_under_baseline is true, proceed to a correctness-first dynamic-index task185 lowering. Prefer the lower extraction primitive and avoid enumerating all window pairs.",
+  "submission_decision": "no_submit: cost probe only",
+  "leakage_risk": "low: cost proxy only, no output lookup.",
+  "overfitting_risk": "medium-low: static indices are a proxy for dynamic selected indices, not a candidate."
+}

@@ -1,0 +1,139 @@
+{
+  "exp_id": "exp212_task346_least_color_failure_audit",
+  "date": "2026-06-10",
+  "status": "audit_complete",
+  "task_id": 346,
+  "baseline_cost": 9178,
+  "baseline_points": 15.875435405045222,
+  "example_count": 267,
+  "least_nz_pass": 263,
+  "fail_count": 4,
+  "fails": [
+    {
+      "idx": 1,
+      "shape": "7x9",
+      "expected": 8,
+      "least_pred": 3,
+      "ranked_counts": [
+        [
+          3,
+          10
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "tied_min_colors": [
+        3,
+        8
+      ],
+      "output_rank": 1,
+      "output_count": 10,
+      "corners": [
+        8,
+        8,
+        3,
+        0
+      ],
+      "center": 0
+    },
+    {
+      "idx": 61,
+      "shape": "8x12",
+      "expected": 1,
+      "least_pred": 8,
+      "ranked_counts": [
+        [
+          8,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "tied_min_colors": [
+        8
+      ],
+      "output_rank": 1,
+      "output_count": 12,
+      "corners": [
+        8,
+        0,
+        1,
+        0
+      ],
+      "center": 0
+    },
+    {
+      "idx": 75,
+      "shape": "12x9",
+      "expected": 3,
+      "least_pred": 4,
+      "ranked_counts": [
+        [
+          4,
+          11
+        ],
+        [
+          3,
+          13
+        ]
+      ],
+      "tied_min_colors": [
+        4
+      ],
+      "output_rank": 1,
+      "output_count": 13,
+      "corners": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "center": 0
+    },
+    {
+      "idx": 89,
+      "shape": "11x11",
+      "expected": 6,
+      "least_pred": 1,
+      "ranked_counts": [
+        [
+          1,
+          17
+        ],
+        [
+          6,
+          17
+        ]
+      ],
+      "tied_min_colors": [
+        1,
+        6
+      ],
+      "output_rank": 1,
+      "output_count": 17,
+      "corners": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "center": 0
+    }
+  ],
+  "tie_hist": {
+    "1": 261,
+    "2": 6
+  },
+  "output_rank_hist": {
+    "0": 263,
+    "1": 4
+  },
+  "decision": "If failures are all count ties, add a non-lookup tie-breaker; otherwise pivot.",
+  "submission_decision": "no_submit: audit only",
+  "leakage_risk": "low: input count audit.",
+  "overfitting_risk": "medium: adding failure-specific branches can overfit."
+}

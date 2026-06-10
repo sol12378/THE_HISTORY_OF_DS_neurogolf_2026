@@ -166,3 +166,52 @@
 | 2026-06-10 | 最終output Cast除去だけのdtype post-passを採用しない。 | exp194でtask206/328のBOOL output版はfull validation passしたが、official costは変わらなかった。 | Phase C dtype圧縮は最終Castではなく、内部full-grid中間またはfresh lowering設計を対象にする。 |
 | 2026-06-10 | C-2の汎用channel gather / fixed shift slice-padを主力から下げる。 | exp195はmapping_ok_count 2 / improved 0、exp196はshift_ok_count 1 / improved 0。どちらも提出可能なcost改善を出さなかった。 | 次のPhase C supplierは `one_node_conv_kernel`、またはtask085/185/048など解決済みruleの専用loweringへ移す。 |
 | 2026-06-10 | 汎用1x1 Conv colormapを主力から下げる。 | exp198は非injective color mapも許した1x1 Convを全taskへ適用したが、mapping_ok_count 4 / improved 0だった。exp197の汎用3x3 fitは現実装が重すぎた。 | Phase Cはtask-specific solved-rule loweringへ移す。3x3 Convを続ける場合はvectorized minerとして別途作り直す。 |
+# 2026-06-10 exp200/201: task185 axis-separable selectorを次のPhase C候補に戻す
+
+- 背景: exp117のpairwise selector proxyはcost `76194` でbaseline `59584` を超え、task185 dynamic loweringを一度deprioritizeしていた。
+- 新証拠: exp200でrow/col独立score selectorが `267/267` passし、pairwise selectorと完全一致。exp201でfused axis selector proxy cost `4156` を確認。
+- 決定: task185はPhase C C-3の有望候補として復帰。次はcorrectness-first ONNX loweringを試す。
+- リスク: selector proxyは正解artifactではない。spacing/core selectionと最終3x3出力の動的接続でcostが増える可能性がある。
+
+# 2026-06-10 exp202: task185はdynamic-index candidateへ進める
+
+- 背景: selectorが安くても、選択後の4x4 lattice extractionが高ければbaselineを超える懸念があった。
+- 新証拠: `GatherElements` 2段 extraction + homogeneous core + Pad はcost `7660`。exp201 selector proxy `4156` と合わせたprojected costは `11816` でbaseline `59584` より十分低い。
+- 決定: task185の次実験はdynamic selected row/col indexを作るcorrectness-first ONNX candidateにする。all-pair window列挙とstatic Slice分岐爆発は避ける。
+- リスク: exp202はstatic index proxyであり、dynamic index生成とcolor/bg handlingをつなぐと追加costやruntime制約が出る可能性がある。
+
+# 2026-06-10 exp203: task185 selector realism後も継続
+
+- 背景: exp201 selector proxyはspacing 3/4/5の実構造より単純で、過小見積もりの可能性があった。
+- 新証拠: spacing 3/4/5 dilated axis selector + ArgMax のcostは `5236`。exp202 extraction/core `7660` と合わせても `12868`。
+- 決定: task185 loweringを継続し、次はdynamic index生成を実装する。cost budget上はbaseline `59584` に十分余裕がある。
+- リスク: bg色検出、special-cell mask、ArgMax indexからGatherElements index tensorへの変換が未実装。
+
+# 2026-06-10 exp204-206: task185初回dynamic candidateは不採用、debug継続
+
+- 背景: exp203まででselector/extractionのcost proxyはbaseline内と見えたため、exp204で実際にdynamic candidateを接続した。
+- 結果: runtime/staticは通るがvalidationは `0_pass_1_fail`。さらにfull index template initializerによりcostが `106720` 以上となりbaseline超過。
+- 診断: exp205ではPython arbitrary selectorが `267/267` なので、任意start選択だけが原因ではない。exp206ではbasicがchannel0のみ、nonzero score variantが位置ズレ・色欠落を起こす。
+- 決定: exp204 candidateは提出しない。次に進むなら、compact start/spacing tableでindex paramsを削減しつつ、selector indexとoutput 3x3位置の対応を小さなdebug graphで確認する。
+- リスク: task185に時間を使いすぎる可能性がある。次の1-2実験でfull passの兆しが出なければ別C-3 taskへpivotする。
+
+# 2026-06-10 exp207/208: task185にはdynamic bg detectorが必要
+
+- 背景: exp204の位置ズレがselector index由来かcore由来か不明だった。
+- 新証拠: exp207でONNX中間を確認すると、example 0でPython selector `[5,8,11,14]` に対し、ONNX nonzero-score variantは `[2,5,8,11]` を選んでいた。exp208で背景色は1-9全てに分散していると判明。
+- 決定: 固定bg maskによるtask185修正は不可。継続するなら動的にmost-common nonzero/bg色を推定してselector/coreから除外する必要がある。
+- リスク: dynamic bg detectorはcostと実装複雑度を増やす。task185は有望性を残すが、次は別C-3 taskへpivotして機会費用を下げる判断も妥当。
+
+# 2026-06-10 exp209-214: task346をsolved-rule assetに追加
+
+- 背景: task185/task365はdynamic selectionが重くなったため、1x1 cropish候補へpivotした。
+- 新証拠: exp211でtask346 `least_nz` が `263/267`。exp213で4 switchを説明する構造特徴 `rank0_largest_component >= 8` を発見し、exp214で `267/267` full-pass。
+- 決定: task346をC-3 solved-rule assetとして追加する。ただしONNX loweringはcount + component largest-size proxyが必要なので、提出候補ではない。
+- リスク: threshold 8 は4例から導出されておりhidden過学習リスクがある。ONNX化前にcost proxyとより構造的な解釈が必要。
+
+# 2026-06-10 exp215: task346 direct loweringは保留
+
+- 背景: task346のfull-pass ruleはcountは簡単だがcomponent-size補正を含む。
+- 新証拠: color count + ArgMinはcost `111` と十分安い一方、component growth proxyは1 stepでも `117135` とbaseline `9178` を大きく超える。
+- 決定: task346は提出candidate化しない。component-freeな小出力taskやcount-only ruleの探索へ戻る。
+- リスク: task346のcomponent補正を別表現で安く出せる可能性は残るが、標準full-grid reachabilityでは不可。

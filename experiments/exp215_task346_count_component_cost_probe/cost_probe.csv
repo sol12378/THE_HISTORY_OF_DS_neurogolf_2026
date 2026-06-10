@@ -1,0 +1,6 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,notes
+onecell_output_floor,scored,2,40,19,59,461,46738a85c3c0150753d3a1eb1d16aaede473024f7ffb7209bde64ece879ad6db,ok,ok,ok,1x1 output floor with Pad to official 30x30 tensor.
+color_counts_argmin_proxy,scored,6,96,15,111,708,65d96b1e4ff97e16c9a114500a92ed37c891e4a20eb4ed74db451c5acf324b82,ok,ok,ok,Count color channels and ArgMin nonzero color.
+component_growth_1,scored,6,117040,95,117135,944,67aa5990650fb49140b740e6102db35acfbb38e4305dc8a049f02d73f81d67c7,ok,ok,ok,One 4-neighbor dilation/reachability proxy across channels.
+component_growth_4,scored,18,468040,95,468135,1382,4042957c7b1c74d3e5a4aaa90cd98d06c160252057bf2cedaa3d5ca0f31910a6,ok,ok,ok,Four-step component proxy across channels.
+component_growth_8,scored,34,936040,95,936135,1966,c917a86c000fce044a4b12bf15c574a94d788902b29afd44579d469f38199f26,ok,ok,ok,Eight-step component proxy across channels.

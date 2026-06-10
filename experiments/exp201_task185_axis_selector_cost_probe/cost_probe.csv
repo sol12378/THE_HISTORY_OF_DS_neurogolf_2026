@@ -1,0 +1,3 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,notes
+axis_conv_score_proxy,scored,11,4084,72,4156,1229,cfb282f1d317600b005090bee360f9da3928d9527b314da0d394c356c50778f9,ok,ok,ok,Fused Conv proxy for independent row/col 4-window scores.
+axis_static_slice_score_proxy,scored,49,105792,272,106064,6965,6524ece82c8d1e57ed372675515c050aa9d48dc788b44fbc95d810cb3e489fbe,ok,ok,ok,Static Slice+ReduceSum proxy for independent row/col 4-window scores.
