@@ -1,0 +1,23 @@
+{
+  "exp_id": "exp302_farm_gridsample_smoke_visibility",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "farm smoke should expose GridSample factory cost in every guardrail run",
+  "expected_cost_reduction": "keeps one-node GridSample supplier visible as cost_proxy 9 / 250-600_plausible before real task emission",
+  "grid_sample_row": {
+    "subject": "smoke_gridsample",
+    "predicted_cost_band": "250-600_plausible",
+    "hard_reject": false,
+    "reasons": [],
+    "risk_tags": [],
+    "node_count": 1,
+    "full_grid_intermediate_count": 0,
+    "param_count": 8,
+    "param_bytes": 8,
+    "memory_bytes_proxy": 1,
+    "cost_proxy": 9
+  },
+  "submission_decision": "no_submit_smoke_only",
+  "leakage_risk": "low: smoke-only tooling visibility",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}

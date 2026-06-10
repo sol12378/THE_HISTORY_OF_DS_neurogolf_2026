@@ -8,7 +8,7 @@ from pathlib import Path
 
 from .cost_extractor import CostExtractor
 from .bundle_manager import BundleCandidate, BundleLedger
-from .ir import IRNode, IRProgram, PrimitiveKind, TensorSpec, recolor_cast_program, recolor_direct_program
+from .ir import IRNode, IRProgram, PrimitiveKind, TensorSpec, gridsample_program, recolor_cast_program, recolor_direct_program
 from .public_code import PublicCodeRegistry
 
 
@@ -100,6 +100,7 @@ class FarmRunner:
         return [
             recolor_direct_program("smoke_recolor_direct", output_shape=(1, 1, 1, 1), source="exp285 factory"),
             recolor_cast_program("smoke_recolor_cast", output_shape=(1, 1, 1, 1), source="exp285 factory"),
+            gridsample_program("smoke_gridsample", output_shape=(1, 1, 1, 1), source="exp301 factory"),
             IRProgram(
                 task_id="smoke_channel_gather",
                 family="one_node_colormap",
