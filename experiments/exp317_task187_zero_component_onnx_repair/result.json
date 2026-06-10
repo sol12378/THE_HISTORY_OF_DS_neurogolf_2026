@@ -1,0 +1,101 @@
+{
+  "exp_id": "exp317_task187_zero_component_onnx_repair",
+  "date": "2026-06-11",
+  "status": "repair_zip_ready",
+  "hypothesis": "task187 zero-component rule can be repaired with correctness-first boundary flood-fill ONNX even if cost is high",
+  "base_exp": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates",
+  "base_public_lb": 6008.96,
+  "task_id": 187,
+  "candidate_rows": [
+    {
+      "steps": 30,
+      "template_name": "boundary_flood_fill_bg0_30",
+      "generated_status": "generated",
+      "generated_reason": "bg=0,exterior=3,interior=2,steps=30",
+      "raw_bytes": 10019,
+      "static_ok": true,
+      "static_reason": "ok",
+      "validation_status": "266_pass_0_fail",
+      "validation_reason": "ok",
+      "memory": 355500,
+      "params": 931,
+      "cost": 356431,
+      "points_if_public_alive": 12.216104048283515,
+      "sha256": "2663cf676d4b2ca4656f8f90f0614ceeb980c96d640f859359950013601a8077"
+    },
+    {
+      "steps": 45,
+      "template_name": "boundary_flood_fill_bg0_45",
+      "generated_status": "generated",
+      "generated_reason": "bg=0,exterior=3,interior=2,steps=45",
+      "raw_bytes": 14084,
+      "static_ok": true,
+      "static_reason": "ok",
+      "validation_status": "266_pass_0_fail",
+      "validation_reason": "ok",
+      "memory": 504000,
+      "params": 931,
+      "cost": 504931,
+      "points_if_public_alive": 11.867822934741099,
+      "sha256": "e05537d0b673b4aaf3d965a1e535d04317509d0640d5732e3d2e9da66e1147fb"
+    },
+    {
+      "steps": 60,
+      "template_name": "boundary_flood_fill_bg0_60",
+      "generated_status": "generated",
+      "generated_reason": "bg=0,exterior=3,interior=2,steps=60",
+      "raw_bytes": 18150,
+      "static_ok": true,
+      "static_reason": "ok",
+      "validation_status": "266_pass_0_fail",
+      "validation_reason": "ok",
+      "memory": 652500,
+      "params": 931,
+      "cost": 653431,
+      "points_if_public_alive": 11.610007778837977,
+      "sha256": "b0df782206d0030776c71c4c27f1cb2912e4fb71eca5f76b12cc6f4e0042af23"
+    }
+  ],
+  "best_candidate": {
+    "steps": 30,
+    "template_name": "boundary_flood_fill_bg0_30",
+    "generated_status": "generated",
+    "generated_reason": "bg=0,exterior=3,interior=2,steps=30",
+    "raw_bytes": 10019,
+    "static_ok": true,
+    "static_reason": "ok",
+    "validation_status": "266_pass_0_fail",
+    "validation_reason": "ok",
+    "memory": 355500,
+    "params": 931,
+    "cost": 356431,
+    "points_if_public_alive": 12.216104048283515,
+    "sha256": "2663cf676d4b2ca4656f8f90f0614ceeb980c96d640f859359950013601a8077"
+  },
+  "expected_public_lb_if_pass": 6021.176104048283,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 731373,
+    "sha256": "8d15aa24e2a88e66a803f4852937c4d0eee10143b7d6ff99a378c584956cbdae"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp317_task187_zero_component_onnx_repair\\submission.zip"
+  },
+  "elapsed_s": 3.056,
+  "submission_decision": "submitted_publiczero_repair_probe_pending",
+  "kaggle_ref": 53550409,
+  "kaggle_status": "PENDING",
+  "leakage_risk": "low-medium: task187 was selected via public-zero probe, but the candidate is an input-derived zero-component rule inferred from train and full-arc validated.",
+  "overfitting_risk": "medium: correctness-first unrolled flood-fill is task-specific and still needs LB probe to verify public repair."
+}

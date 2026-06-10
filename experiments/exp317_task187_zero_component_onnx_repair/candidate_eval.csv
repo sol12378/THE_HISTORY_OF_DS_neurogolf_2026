@@ -1,0 +1,4 @@
+steps,template_name,generated_status,generated_reason,raw_bytes,static_ok,static_reason,validation_status,validation_reason,memory,params,cost,points_if_public_alive,sha256
+30,boundary_flood_fill_bg0_30,generated,"bg=0,exterior=3,interior=2,steps=30",10019,True,ok,266_pass_0_fail,ok,355500,931,356431,12.216104048283515,2663cf676d4b2ca4656f8f90f0614ceeb980c96d640f859359950013601a8077
+45,boundary_flood_fill_bg0_45,generated,"bg=0,exterior=3,interior=2,steps=45",14084,True,ok,266_pass_0_fail,ok,504000,931,504931,11.867822934741099,e05537d0b673b4aaf3d965a1e535d04317509d0640d5732e3d2e9da66e1147fb
+60,boundary_flood_fill_bg0_60,generated,"bg=0,exterior=3,interior=2,steps=60",18150,True,ok,266_pass_0_fail,ok,652500,931,653431,11.610007778837977,b0df782206d0030776c71c4c27f1cb2912e4fb71eca5f76b12cc6f4e0042af23
