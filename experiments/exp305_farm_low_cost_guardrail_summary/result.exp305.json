@@ -1,0 +1,16 @@
+{
+  "exp_id": "exp305_farm_low_cost_guardrail_summary",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "farm smoke should summarize low-cost guardrail subjects for quick supplier lane review",
+  "expected_cost_reduction": "no direct score change; lowers review friction before real task emission",
+  "low_cost_guardrail_subjects": [
+    "smoke_recolor_direct",
+    "smoke_recolor_cast",
+    "smoke_gridsample"
+  ],
+  "grid_sample_visible": true,
+  "submission_decision": "no_submit_smoke_only",
+  "leakage_risk": "low: smoke-only summary",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}

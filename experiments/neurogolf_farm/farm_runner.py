@@ -68,6 +68,9 @@ class FarmRunner:
             "status": "pipeline_core_ready",
             "floor_status": registry.floor_status(self.config.floor_target_lb),
             "guardrail_rows": guardrail_rows,
+            "low_cost_guardrail_subjects": [
+                row["subject"] for row in guardrail_rows if row["predicted_cost_band"] == "250-600_plausible"
+            ],
             "outputs": {
                 "public_code_registry": str(registry_path),
                 "bundle_ledger_smoke": str(ledger_path),
