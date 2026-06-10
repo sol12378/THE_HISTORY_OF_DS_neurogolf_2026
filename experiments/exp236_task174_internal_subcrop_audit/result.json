@@ -1,0 +1,283 @@
+{
+  "exp_id": "exp236_task174_internal_subcrop_audit",
+  "date": "2026-06-10",
+  "task_id": 174,
+  "baseline_cost": 52019,
+  "example_count": 266,
+  "best_rules": [
+    {
+      "rule": "bbox_bottom_center",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_bottom_center_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_bottom_left",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_bottom_left_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_bottom_right",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_bottom_right_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_center",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_center_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_center_left",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_center_left_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_center_right",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_center_right_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_top_center",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_top_center_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_top_left",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_top_left_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_top_right",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "bbox_top_right_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "trim_bottom_center",
+      "pass_count": 138,
+      "fail_count": 128
+    },
+    {
+      "rule": "trim_bottom_center_fliplr",
+      "pass_count": 138,
+      "fail_count": 128
+    }
+  ],
+  "full_hits": [],
+  "near_hits": [],
+  "examples_without_hit": [
+    {
+      "idx": 1,
+      "output_shape": "2x2",
+      "max_color": 2,
+      "mask_shape": "2x5",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 2,
+      "output_shape": "2x4",
+      "max_color": 8,
+      "mask_shape": "2x7",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 3,
+      "output_shape": "3x4",
+      "max_color": 4,
+      "mask_shape": "2x5",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 4,
+      "output_shape": "1x2",
+      "max_color": 7,
+      "mask_shape": "2x3",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 5,
+      "output_shape": "3x2",
+      "max_color": 6,
+      "mask_shape": "3x4",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 6,
+      "output_shape": "1x2",
+      "max_color": 4,
+      "mask_shape": "2x5",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 10,
+      "output_shape": "2x2",
+      "max_color": 1,
+      "mask_shape": "3x4",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 12,
+      "output_shape": "2x4",
+      "max_color": 8,
+      "mask_shape": "4x3",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 13,
+      "output_shape": "2x2",
+      "max_color": 7,
+      "mask_shape": "3x4",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 15,
+      "output_shape": "3x1",
+      "max_color": 1,
+      "mask_shape": "5x2",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 16,
+      "output_shape": "3x2",
+      "max_color": 9,
+      "mask_shape": "2x4",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 17,
+      "output_shape": "2x2",
+      "max_color": 8,
+      "mask_shape": "2x5",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 20,
+      "output_shape": "3x2",
+      "max_color": 5,
+      "mask_shape": "2x5",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 23,
+      "output_shape": "4x2",
+      "max_color": 6,
+      "mask_shape": "3x4",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 25,
+      "output_shape": "2x4",
+      "max_color": 2,
+      "mask_shape": "2x5",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 27,
+      "output_shape": "2x3",
+      "max_color": 1,
+      "mask_shape": "2x4",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 30,
+      "output_shape": "2x2",
+      "max_color": 2,
+      "mask_shape": "2x4",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 31,
+      "output_shape": "2x2",
+      "max_color": 6,
+      "mask_shape": "2x4",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 32,
+      "output_shape": "2x3",
+      "max_color": 8,
+      "mask_shape": "2x4",
+      "hit_count": 0,
+      "hits": []
+    },
+    {
+      "idx": 34,
+      "output_shape": "2x2",
+      "max_color": 6,
+      "mask_shape": "2x5",
+      "hit_count": 0,
+      "hits": []
+    }
+  ],
+  "example_hit_hist": {
+    "36": 1,
+    "0": 128,
+    "54": 123,
+    "108": 14
+  },
+  "decision": "Full hit -> cost probe. Near hit -> failure audit. No hit -> task174 needs richer internal selection.",
+  "submission_decision": "no_submit: audit only",
+  "leakage_risk": "low",
+  "overfitting_risk": "medium-low"
+}

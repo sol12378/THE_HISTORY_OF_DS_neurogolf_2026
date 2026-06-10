@@ -1,0 +1,518 @@
+{
+  "exp_id": "exp216_onecell_cropish_wide_rule_sweep",
+  "date": "2026-06-10",
+  "status": "near_hit",
+  "candidate_task_ids": [
+    48,
+    56,
+    103,
+    291,
+    346,
+    355
+  ],
+  "evaluated_task_ids": [
+    48,
+    56,
+    103,
+    291,
+    346,
+    355
+  ],
+  "skipped": [],
+  "rule_count": 42,
+  "rows": [
+    {
+      "task_id": 48,
+      "baseline_cost": 5609,
+      "baseline_points": 16.367872270491663,
+      "example_count": 270,
+      "output_hist": {
+        "0": 84,
+        "8": 186
+      },
+      "best_rule": "all_second_least_nz",
+      "best_pass_count": 172,
+      "best_fail_count": 98,
+      "top_rules": [
+        {
+          "rule": "all_second_least_nz",
+          "pass_count": 172,
+          "fail_count": 98
+        },
+        {
+          "rule": "bbox_second_least_nz",
+          "pass_count": 172,
+          "fail_count": 98
+        },
+        {
+          "rule": "edge_second_least_nz",
+          "pass_count": 164,
+          "fail_count": 106
+        },
+        {
+          "rule": "corners_second_least_nz",
+          "pass_count": 163,
+          "fail_count": 107
+        },
+        {
+          "rule": "all_mode_nz",
+          "pass_count": 161,
+          "fail_count": 109
+        },
+        {
+          "rule": "bbox_mode_nz",
+          "pass_count": 161,
+          "fail_count": 109
+        },
+        {
+          "rule": "edge_mode_nz",
+          "pass_count": 154,
+          "fail_count": 116
+        },
+        {
+          "rule": "interior_second_least_nz",
+          "pass_count": 147,
+          "fail_count": 123
+        },
+        {
+          "rule": "middle_col_second_least_nz",
+          "pass_count": 147,
+          "fail_count": 123
+        },
+        {
+          "rule": "middle_col_least_nz",
+          "pass_count": 135,
+          "fail_count": 135
+        }
+      ]
+    },
+    {
+      "task_id": 56,
+      "baseline_cost": 213,
+      "baseline_points": 19.638707834290575,
+      "example_count": 46,
+      "output_hist": {
+        "1": 12,
+        "2": 12,
+        "3": 11,
+        "6": 11
+      },
+      "best_rule": "all_least_nz",
+      "best_pass_count": 5,
+      "best_fail_count": 41,
+      "top_rules": [
+        {
+          "rule": "all_least_nz",
+          "pass_count": 5,
+          "fail_count": 41
+        },
+        {
+          "rule": "all_mode_all",
+          "pass_count": 5,
+          "fail_count": 41
+        },
+        {
+          "rule": "all_mode_nz",
+          "pass_count": 5,
+          "fail_count": 41
+        },
+        {
+          "rule": "all_second_least_nz",
+          "pass_count": 5,
+          "fail_count": 41
+        },
+        {
+          "rule": "bbox_least_nz",
+          "pass_count": 5,
+          "fail_count": 41
+        },
+        {
+          "rule": "bbox_mode_all",
+          "pass_count": 5,
+          "fail_count": 41
+        },
+        {
+          "rule": "bbox_mode_nz",
+          "pass_count": 5,
+          "fail_count": 41
+        },
+        {
+          "rule": "bbox_second_least_nz",
+          "pass_count": 5,
+          "fail_count": 41
+        },
+        {
+          "rule": "edge_least_nz",
+          "pass_count": 5,
+          "fail_count": 41
+        },
+        {
+          "rule": "edge_mode_nz",
+          "pass_count": 5,
+          "fail_count": 41
+        }
+      ]
+    },
+    {
+      "task_id": 103,
+      "baseline_cost": 193,
+      "baseline_points": 19.737309811095116,
+      "example_count": 223,
+      "output_hist": {
+        "1": 19,
+        "7": 204
+      },
+      "best_rule": "all_least_all",
+      "best_pass_count": 0,
+      "best_fail_count": 223,
+      "top_rules": [
+        {
+          "rule": "all_least_all",
+          "pass_count": 0,
+          "fail_count": 223
+        },
+        {
+          "rule": "all_least_nz",
+          "pass_count": 0,
+          "fail_count": 223
+        },
+        {
+          "rule": "all_mode_all",
+          "pass_count": 0,
+          "fail_count": 223
+        },
+        {
+          "rule": "all_mode_nz",
+          "pass_count": 0,
+          "fail_count": 223
+        },
+        {
+          "rule": "all_second_least_nz",
+          "pass_count": 0,
+          "fail_count": 223
+        },
+        {
+          "rule": "bbox_center",
+          "pass_count": 0,
+          "fail_count": 223
+        },
+        {
+          "rule": "bbox_least_all",
+          "pass_count": 0,
+          "fail_count": 223
+        },
+        {
+          "rule": "bbox_least_nz",
+          "pass_count": 0,
+          "fail_count": 223
+        },
+        {
+          "rule": "bbox_mode_all",
+          "pass_count": 0,
+          "fail_count": 223
+        },
+        {
+          "rule": "bbox_mode_nz",
+          "pass_count": 0,
+          "fail_count": 223
+        }
+      ]
+    },
+    {
+      "task_id": 291,
+      "baseline_cost": 4327,
+      "baseline_points": 16.627370259775116,
+      "example_count": 265,
+      "output_hist": {
+        "1": 29,
+        "2": 33,
+        "3": 31,
+        "4": 28,
+        "5": 26,
+        "6": 24,
+        "7": 31,
+        "8": 26,
+        "9": 37
+      },
+      "best_rule": "middle_col_least_nz",
+      "best_pass_count": 61,
+      "best_fail_count": 204,
+      "top_rules": [
+        {
+          "rule": "middle_col_least_nz",
+          "pass_count": 61,
+          "fail_count": 204
+        },
+        {
+          "rule": "all_second_least_nz",
+          "pass_count": 60,
+          "fail_count": 205
+        },
+        {
+          "rule": "bbox_second_least_nz",
+          "pass_count": 60,
+          "fail_count": 205
+        },
+        {
+          "rule": "middle_col_least_all",
+          "pass_count": 59,
+          "fail_count": 206
+        },
+        {
+          "rule": "middle_row_least_nz",
+          "pass_count": 56,
+          "fail_count": 209
+        },
+        {
+          "rule": "interior_second_least_nz",
+          "pass_count": 55,
+          "fail_count": 210
+        },
+        {
+          "rule": "middle_col_second_least_nz",
+          "pass_count": 55,
+          "fail_count": 210
+        },
+        {
+          "rule": "edge_second_least_nz",
+          "pass_count": 54,
+          "fail_count": 211
+        },
+        {
+          "rule": "middle_col_mode_nz",
+          "pass_count": 54,
+          "fail_count": 211
+        },
+        {
+          "rule": "middle_row_mode_nz",
+          "pass_count": 54,
+          "fail_count": 211
+        }
+      ]
+    },
+    {
+      "task_id": 346,
+      "baseline_cost": 9178,
+      "baseline_points": 15.875435405045222,
+      "example_count": 267,
+      "output_hist": {
+        "1": 31,
+        "2": 30,
+        "3": 29,
+        "4": 25,
+        "5": 25,
+        "6": 30,
+        "7": 36,
+        "8": 29,
+        "9": 32
+      },
+      "best_rule": "interior_least_nz",
+      "best_pass_count": 265,
+      "best_fail_count": 2,
+      "top_rules": [
+        {
+          "rule": "interior_least_nz",
+          "pass_count": 265,
+          "fail_count": 2
+        },
+        {
+          "rule": "all_least_all",
+          "pass_count": 263,
+          "fail_count": 4
+        },
+        {
+          "rule": "all_least_nz",
+          "pass_count": 263,
+          "fail_count": 4
+        },
+        {
+          "rule": "bbox_least_nz",
+          "pass_count": 263,
+          "fail_count": 4
+        },
+        {
+          "rule": "interior_least_all",
+          "pass_count": 263,
+          "fail_count": 4
+        },
+        {
+          "rule": "bbox_least_all",
+          "pass_count": 262,
+          "fail_count": 5
+        },
+        {
+          "rule": "middle_col_least_nz",
+          "pass_count": 148,
+          "fail_count": 119
+        },
+        {
+          "rule": "middle_col_least_all",
+          "pass_count": 142,
+          "fail_count": 125
+        },
+        {
+          "rule": "middle_row_least_nz",
+          "pass_count": 142,
+          "fail_count": 125
+        },
+        {
+          "rule": "edge_second_least_nz",
+          "pass_count": 141,
+          "fail_count": 126
+        }
+      ]
+    },
+    {
+      "task_id": 355,
+      "baseline_cost": 11795,
+      "baseline_points": 15.624569008158225,
+      "example_count": 267,
+      "output_hist": {
+        "0": 17,
+        "1": 24,
+        "2": 42,
+        "3": 29,
+        "4": 20,
+        "5": 17,
+        "6": 31,
+        "7": 34,
+        "8": 28,
+        "9": 25
+      },
+      "best_rule": "all_second_least_nz",
+      "best_pass_count": 100,
+      "best_fail_count": 167,
+      "top_rules": [
+        {
+          "rule": "all_second_least_nz",
+          "pass_count": 100,
+          "fail_count": 167
+        },
+        {
+          "rule": "bbox_second_least_nz",
+          "pass_count": 100,
+          "fail_count": 167
+        },
+        {
+          "rule": "edge_second_least_nz",
+          "pass_count": 99,
+          "fail_count": 168
+        },
+        {
+          "rule": "interior_second_least_nz",
+          "pass_count": 91,
+          "fail_count": 176
+        },
+        {
+          "rule": "middle_row_second_least_nz",
+          "pass_count": 78,
+          "fail_count": 189
+        },
+        {
+          "rule": "br",
+          "pass_count": 70,
+          "fail_count": 197
+        },
+        {
+          "rule": "bl",
+          "pass_count": 67,
+          "fail_count": 200
+        },
+        {
+          "rule": "corners_least_nz",
+          "pass_count": 67,
+          "fail_count": 200
+        },
+        {
+          "rule": "middle_row_mode_nz",
+          "pass_count": 65,
+          "fail_count": 202
+        },
+        {
+          "rule": "corners_mode_nz",
+          "pass_count": 63,
+          "fail_count": 204
+        }
+      ]
+    }
+  ],
+  "full_hits": [],
+  "near_hits": [
+    {
+      "task_id": 346,
+      "baseline_cost": 9178,
+      "baseline_points": 15.875435405045222,
+      "example_count": 267,
+      "output_hist": {
+        "1": 31,
+        "2": 30,
+        "3": 29,
+        "4": 25,
+        "5": 25,
+        "6": 30,
+        "7": 36,
+        "8": 29,
+        "9": 32
+      },
+      "best_rule": "interior_least_nz",
+      "best_pass_count": 265,
+      "best_fail_count": 2,
+      "top_rules": [
+        {
+          "rule": "interior_least_nz",
+          "pass_count": 265,
+          "fail_count": 2
+        },
+        {
+          "rule": "all_least_all",
+          "pass_count": 263,
+          "fail_count": 4
+        },
+        {
+          "rule": "all_least_nz",
+          "pass_count": 263,
+          "fail_count": 4
+        },
+        {
+          "rule": "bbox_least_nz",
+          "pass_count": 263,
+          "fail_count": 4
+        },
+        {
+          "rule": "interior_least_all",
+          "pass_count": 263,
+          "fail_count": 4
+        },
+        {
+          "rule": "bbox_least_all",
+          "pass_count": 262,
+          "fail_count": 5
+        },
+        {
+          "rule": "middle_col_least_nz",
+          "pass_count": 148,
+          "fail_count": 119
+        },
+        {
+          "rule": "middle_col_least_all",
+          "pass_count": 142,
+          "fail_count": 125
+        },
+        {
+          "rule": "middle_row_least_nz",
+          "pass_count": 142,
+          "fail_count": 125
+        },
+        {
+          "rule": "edge_second_least_nz",
+          "pass_count": 141,
+          "fail_count": 126
+        }
+      ]
+    }
+  ],
+  "decision": "Full hitはtiny ONNX cost probeへ進める。near hitは失敗監査。全滅なら1x1単純集約laneを縮小し、別familyへpivotする。",
+  "submission_decision": "no_submit: rule sweep only",
+  "leakage_risk": "low: input-only aggregate rules, no train-output lookup.",
+  "overfitting_risk": "medium-low: simple hand-written aggregators only; near-hit branch追加時は再評価が必要。"
+}

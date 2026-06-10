@@ -215,3 +215,52 @@
 - 新証拠: color count + ArgMinはcost `111` と十分安い一方、component growth proxyは1 stepでも `117135` とbaseline `9178` を大きく超える。
 - 決定: task346は提出candidate化しない。component-freeな小出力taskやcount-only ruleの探索へ戻る。
 - リスク: task346のcomponent補正を別表現で安く出せる可能性は残るが、標準full-grid reachabilityでは不可。
+
+# 2026-06-10 exp216/217: 1x1単純aggregate laneを縮小する
+
+- 背景: task346が `least_nz` で近かったため、exp087の全1x1 cropish候補へ単純aggregate ruleを広げた。
+- 新証拠: exp216でfull hitはなく、task346のみ `interior_least_nz 265/267`。exp217で残り2 failはsimple count/edge/corner条件ではTP2/FP0に分離できなかった。
+- 決定: 1x1単純aggregate laneは主力から下げる。task346はcomponent-like補正を安く表現できるまで保留。
+- リスク: 2例補正を無理に足すとhidden過学習になりやすい。
+
+# 2026-06-10 exp218-220: task039 bbox crop ruleは正しいが現行loweringでは不採用
+
+- 背景: 3x3固定cropish候補の安いSlice/transform ruleを探索した。
+- 新証拠: exp218でtask039が `bbox_top_left 3x3` により `264/264` full pass。exp219の`GatherElements` loweringはvalidation passだがcost `48219` でbaseline `7772` を超過。exp220のdynamic `Slice` はstatic checkerで `dynamic shape crop` reject。
+- 決定: task039はsolved-rule assetとして保持するが、提出candidateにはしない。dynamic bbox cropはstatic-shape-preservingな低cost表現が見つかるまで保留。
+- リスク: 正しいruleを高cost loweringで提出するとscoreが下がる。task135 full hitもbaseline `360` のため優先度は低い。
+
+# 2026-06-10 exp221/222: fixed small-shape crop/colormap supplierを主力から下げる
+
+- 背景: 3x3 cropではtask039が当たったがdynamic bbox cropが高costだったため、固定anchorの小shape hitを探した。
+- 新証拠: exp221のfull hitはtask039/135/326のみ。fixed-anchor hitのtask135/326はbaseline costが `360` / `160` と低すぎる。exp222のglobal color-map追加でも新規有用hitはなく、full hitはidentity mapだけ。
+- 決定: fixed small-shape crop/colormap supplierは高cost taskの主力から下げる。
+- リスク: shape branchやmask抽出を含むfamilyは未探索なので、crop laneの失敗をsmall-output全体の失敗とは見なさない。
+
+# 2026-06-10 exp223/224: task300をsolved-rule assetに追加する
+
+- 背景: fixed crop/colormapでは高cost候補が出なかったため、小出力taskのshape/mask familyを棚卸しした。
+- 新証拠: exp223でtask300が高costshape full-hit候補。exp224で出力が全例「最大size 4-connected same-color componentのbbox crop」と一致した。`rank_size_desc=267/267`、`crop_exact=267/267`。
+- 決定: task300をsolved-rule assetへ追加し、次にONNX cost proxyを試す。
+- リスク: 最大component選択とdynamic bbox cropは既存guardrail上高cost化しやすい。正しいruleでもcost wallを確認するまで提出候補にしない。
+
+# 2026-06-10 exp225-234: task300 max-color ruleを採用しcurrent bestを更新する
+
+- 背景: exp224の最大component crop ruleは正しいが、component growthは高cost化が懸念だった。
+- 新証拠: exp225で最大nonzero色countが最大componentと全例一致し、component growth不要と分かった。exp233でchannel GatherElements版ONNXが `267_pass_0_fail`、cost `77546 -> 52653` を達成。
+- 決定: exp234としてexp178 current bestにtask300だけ差し替え、Kaggleへsingle-task delta提出する。ref `53530035` はpublic LB `6006.32` で期待値と一致したため、current public bestをexp234へ更新する。
+- リスク: ruleは全available examples由来なのでhidden edgeは残るが、入力のみ構造ruleでpublic source rawではない。現base exp178自体のprivate riskは継続。
+
+# 2026-06-10 exp235: task174はtask300型の単純max-color cropでは解けない
+
+- 背景: exp223でtask174も高cost shape-full-hit候補だったため、task300と同じmax-color crop laneを試した。
+- 新証拠: max_colorはlargest componentと `266/266` 一致するが、max_color cropは `138/266` のみ。
+- 決定: task174は即ONNX loweringしない。component内部のsub-crop/shape ruleを先に監査する。
+- リスク: 高cost候補だが、無理にtask300 loweringを流用するとvalidation/costの両方で失敗する。
+
+# 2026-06-10 exp236/237: task174/task253を一旦保留する
+
+- 背景: task174はtask300に続く高costshape候補、task253は固定binary template候補だった。
+- 新証拠: exp236でtask174の単純内部sub-cropはbest `138/266` のまま。exp237でtask253の出力templateは固定だが、色selectorはbest `76/265` と弱い。
+- 決定: 両taskとも直ちにloweringしない。より説明力のあるrule minerを後で設計し、短期PDCAは別の高cost候補へ移る。
+- リスク: 有望候補を保留する機会損失はあるが、現時点でONNX化しても提出候補にならない。

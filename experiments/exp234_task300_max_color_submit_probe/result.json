@@ -1,0 +1,56 @@
+{
+  "exp_id": "exp234_task300_max_color_submit_probe",
+  "date": "2026-06-10",
+  "status": "submitted_complete",
+  "kaggle_ref": 53530035,
+  "kaggle_status": "COMPLETE",
+  "public_lb": 6006.32,
+  "observed_gain_vs_base": 0.3900000000003274,
+  "interpretation": "rule_delta_success; public LB matches expected task300 cost reduction within rounding and creates a new current public best.",
+  "purpose": "Submit-safe probe for task300 max-color mask4x3 cost improvement on top of exp178 current public best.",
+  "base_exp": "experiments\\exp178_task285_b035_repair_probe",
+  "base_public_lb": 6005.93,
+  "candidate_eval": {
+    "task_id": 300,
+    "route": "crop_or_resize",
+    "template_name": "max_color_channel_gather_mask4x3",
+    "baseline_cost": 77546,
+    "candidate_cost": 52653,
+    "baseline_points": 13.741373412351637,
+    "candidate_points": 14.1285215040042,
+    "file_bytes": 3020,
+    "validation_status": "267_pass_0_fail",
+    "status": "improved",
+    "reason": "ok",
+    "sha256": "dfa26579df17464ca8a5ad440df034b95e21a4d70b2a1442c64af506c1f32545"
+  },
+  "expected_local_delta": 0.3871480916525627,
+  "expected_lb_if_public_pass": 6006.317148091653,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 732764,
+    "sha256": "799b71d7f9ee7cbc375e5a7703f27544e937dd421a37b369069847b0f9b9a18f"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp234_task300_max_color_submit_probe\\submission.zip"
+  },
+  "elapsed_s": 1.319,
+  "submission_decision": "submitted_single_task_delta",
+  "leakage_risk": "low: input-only structural rule validated on all local examples; no public source raw.",
+  "overfitting_risk": "medium-low: rule derived from all available examples; hidden shape/color edge should be calibrated by this single-task submission.",
+  "private_risk": "medium: current base exp178 contains high-risk source repairs; this delta itself is rule-based.",
+  "sha256_task300": "dfa26579df17464ca8a5ad440df034b95e21a4d70b2a1442c64af506c1f32545",
+  "task300_old_points": 13.741373412351637,
+  "task300_new_points": 14.1285215040042
+}

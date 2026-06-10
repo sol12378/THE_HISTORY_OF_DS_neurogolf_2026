@@ -1,0 +1,2 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+300,crop_or_resize,max_color_channel_gather_mask4x3,77546,52653,13.741373412351637,14.1285215040042,3020,267_pass_0_fail,improved,ok,dfa26579df17464ca8a5ad440df034b95e21a4d70b2a1442c64af506c1f32545

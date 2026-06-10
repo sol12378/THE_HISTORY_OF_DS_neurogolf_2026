@@ -1,0 +1,1654 @@
+{
+  "exp_id": "exp218_crop3x3_wide_rule_sweep",
+  "date": "2026-06-10",
+  "status": "rule_found",
+  "candidate_task_ids": [
+    6,
+    22,
+    39,
+    79,
+    111,
+    121,
+    130,
+    134,
+    135,
+    146,
+    149,
+    153,
+    185,
+    235,
+    242,
+    263,
+    271,
+    274,
+    296,
+    316,
+    334,
+    347,
+    395,
+    399
+  ],
+  "evaluated_task_ids": [
+    6,
+    22,
+    39,
+    79,
+    111,
+    121,
+    130,
+    134,
+    135,
+    146,
+    149,
+    153,
+    185,
+    235,
+    242,
+    263,
+    271,
+    274,
+    296,
+    316,
+    334,
+    347,
+    395,
+    399
+  ],
+  "skipped": [],
+  "rule_count": 720,
+  "rows": [
+    {
+      "task_id": 6,
+      "baseline_cost": 1631,
+      "baseline_points": 17.603051397378987,
+      "example_count": 266,
+      "best_rule": "bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 8,
+      "best_fail_count": 258,
+      "top_rules": [
+        {
+          "rule": "bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "bottom_left_dr-1_dc-1_id",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "top_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "top_left_dr-1_dc-1_fliplr",
+          "pass_count": 8,
+          "fail_count": 258
+        }
+      ]
+    },
+    {
+      "task_id": 22,
+      "baseline_cost": 34821,
+      "baseline_points": 14.542024067963268,
+      "example_count": 266,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 266,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 266
+        }
+      ]
+    },
+    {
+      "task_id": 39,
+      "baseline_cost": 7772,
+      "baseline_points": 16.04171718950267,
+      "example_count": 264,
+      "best_rule": "bbox_bottom_left_dr0_dc0_rot270",
+      "best_pass_count": 264,
+      "best_fail_count": 0,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_rot270",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc0_rot180",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_center_dr-1_dc-1_id",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_top_left_dr0_dc0_id",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_rot90",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "center_dr-1_dc0_id",
+          "pass_count": 38,
+          "fail_count": 226
+        },
+        {
+          "rule": "center_dr1_dc-1_rot270",
+          "pass_count": 35,
+          "fail_count": 229
+        },
+        {
+          "rule": "center_dr1_dc0_rot270",
+          "pass_count": 32,
+          "fail_count": 232
+        },
+        {
+          "rule": "top_right_dr1_dc-1_rot90",
+          "pass_count": 32,
+          "fail_count": 232
+        },
+        {
+          "rule": "bottom_left_dr-1_dc1_rot270",
+          "pass_count": 31,
+          "fail_count": 233
+        }
+      ]
+    },
+    {
+      "task_id": 79,
+      "baseline_cost": 21383,
+      "baseline_points": 15.029648507210364,
+      "example_count": 266,
+      "best_rule": "bbox_top_left_dr0_dc0_id",
+      "best_pass_count": 47,
+      "best_fail_count": 219,
+      "top_rules": [
+        {
+          "rule": "bbox_top_left_dr0_dc0_id",
+          "pass_count": 47,
+          "fail_count": 219
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_id",
+          "pass_count": 47,
+          "fail_count": 219
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_id",
+          "pass_count": 42,
+          "fail_count": 224
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc0_id",
+          "pass_count": 38,
+          "fail_count": 228
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc-1_id",
+          "pass_count": 19,
+          "fail_count": 247
+        },
+        {
+          "rule": "bbox_bottom_right_dr-1_dc0_id",
+          "pass_count": 17,
+          "fail_count": 249
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc-1_id",
+          "pass_count": 15,
+          "fail_count": 251
+        },
+        {
+          "rule": "bbox_top_left_dr0_dc1_id",
+          "pass_count": 13,
+          "fail_count": 253
+        },
+        {
+          "rule": "bbox_top_left_dr1_dc0_id",
+          "pass_count": 13,
+          "fail_count": 253
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_id",
+          "pass_count": 12,
+          "fail_count": 254
+        }
+      ]
+    },
+    {
+      "task_id": 111,
+      "baseline_cost": 797,
+      "baseline_points": 18.319145321209785,
+      "example_count": 265,
+      "best_rule": "bbox_top_left_dr1_dc0_id",
+      "best_pass_count": 160,
+      "best_fail_count": 105,
+      "top_rules": [
+        {
+          "rule": "bbox_top_left_dr1_dc0_id",
+          "pass_count": 160,
+          "fail_count": 105
+        },
+        {
+          "rule": "bbox_top_right_dr1_dc0_id",
+          "pass_count": 156,
+          "fail_count": 109
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_id",
+          "pass_count": 147,
+          "fail_count": 118
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc0_id",
+          "pass_count": 147,
+          "fail_count": 118
+        },
+        {
+          "rule": "bbox_center_dr1_dc0_id",
+          "pass_count": 106,
+          "fail_count": 159
+        },
+        {
+          "rule": "bbox_top_left_dr1_dc0_transpose",
+          "pass_count": 22,
+          "fail_count": 243
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_flipud",
+          "pass_count": 20,
+          "fail_count": 245
+        },
+        {
+          "rule": "bbox_top_left_dr1_dc0_anti_transpose",
+          "pass_count": 19,
+          "fail_count": 246
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_anti_transpose",
+          "pass_count": 18,
+          "fail_count": 247
+        },
+        {
+          "rule": "bbox_top_left_dr1_dc0_flipud",
+          "pass_count": 18,
+          "fail_count": 247
+        }
+      ]
+    },
+    {
+      "task_id": 121,
+      "baseline_cost": 6530,
+      "baseline_points": 16.215837777729526,
+      "example_count": 266,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 266,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 266
+        }
+      ]
+    },
+    {
+      "task_id": 130,
+      "baseline_cost": 15948,
+      "baseline_points": 15.322911291498754,
+      "example_count": 265,
+      "best_rule": "center_dr-1_dc-1_id",
+      "best_pass_count": 2,
+      "best_fail_count": 263,
+      "top_rules": [
+        {
+          "rule": "center_dr-1_dc-1_id",
+          "pass_count": 2,
+          "fail_count": 263
+        },
+        {
+          "rule": "center_dr-1_dc-1_transpose",
+          "pass_count": 2,
+          "fail_count": 263
+        },
+        {
+          "rule": "center_dr-1_dc1_anti_transpose",
+          "pass_count": 2,
+          "fail_count": 263
+        },
+        {
+          "rule": "center_dr-1_dc1_id",
+          "pass_count": 2,
+          "fail_count": 263
+        },
+        {
+          "rule": "bbox_center_dr-1_dc-1_id",
+          "pass_count": 1,
+          "fail_count": 264
+        },
+        {
+          "rule": "bbox_center_dr-1_dc-1_transpose",
+          "pass_count": 1,
+          "fail_count": 264
+        },
+        {
+          "rule": "bbox_center_dr-1_dc0_id",
+          "pass_count": 1,
+          "fail_count": 264
+        },
+        {
+          "rule": "bbox_center_dr-1_dc0_transpose",
+          "pass_count": 1,
+          "fail_count": 264
+        },
+        {
+          "rule": "bbox_center_dr-1_dc1_anti_transpose",
+          "pass_count": 1,
+          "fail_count": 264
+        },
+        {
+          "rule": "bbox_center_dr-1_dc1_id",
+          "pass_count": 1,
+          "fail_count": 264
+        }
+      ]
+    },
+    {
+      "task_id": 134,
+      "baseline_cost": 12388,
+      "baseline_points": 15.575516458906906,
+      "example_count": 266,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 266,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 266
+        }
+      ]
+    },
+    {
+      "task_id": 135,
+      "baseline_cost": 360,
+      "baseline_points": 19.113895968549844,
+      "example_count": 266,
+      "best_rule": "top_right_dr0_dc0_id",
+      "best_pass_count": 266,
+      "best_fail_count": 0,
+      "top_rules": [
+        {
+          "rule": "top_right_dr0_dc0_id",
+          "pass_count": 266,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_id",
+          "pass_count": 264,
+          "fail_count": 2
+        },
+        {
+          "rule": "top_right_dr0_dc0_fliplr",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_fliplr",
+          "pass_count": 7,
+          "fail_count": 259
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_transpose",
+          "pass_count": 6,
+          "fail_count": 260
+        },
+        {
+          "rule": "top_right_dr0_dc0_transpose",
+          "pass_count": 6,
+          "fail_count": 260
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_anti_transpose",
+          "pass_count": 5,
+          "fail_count": 261
+        },
+        {
+          "rule": "top_right_dr0_dc0_anti_transpose",
+          "pass_count": 5,
+          "fail_count": 261
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_flipud",
+          "pass_count": 3,
+          "fail_count": 263
+        },
+        {
+          "rule": "top_right_dr0_dc0_flipud",
+          "pass_count": 3,
+          "fail_count": 263
+        }
+      ]
+    },
+    {
+      "task_id": 146,
+      "baseline_cost": 2256,
+      "baseline_points": 17.27865138738205,
+      "example_count": 267,
+      "best_rule": "bbox_top_left_dr0_dc0_id",
+      "best_pass_count": 96,
+      "best_fail_count": 171,
+      "top_rules": [
+        {
+          "rule": "bbox_top_left_dr0_dc0_id",
+          "pass_count": 96,
+          "fail_count": 171
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_id",
+          "pass_count": 96,
+          "fail_count": 171
+        },
+        {
+          "rule": "top_left_dr0_dc0_id",
+          "pass_count": 96,
+          "fail_count": 171
+        },
+        {
+          "rule": "top_right_dr0_dc0_id",
+          "pass_count": 96,
+          "fail_count": 171
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_id",
+          "pass_count": 89,
+          "fail_count": 178
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc0_id",
+          "pass_count": 89,
+          "fail_count": 178
+        },
+        {
+          "rule": "bottom_left_dr0_dc0_id",
+          "pass_count": 89,
+          "fail_count": 178
+        },
+        {
+          "rule": "bottom_right_dr0_dc0_id",
+          "pass_count": 89,
+          "fail_count": 178
+        },
+        {
+          "rule": "bbox_center_dr0_dc0_id",
+          "pass_count": 82,
+          "fail_count": 185
+        },
+        {
+          "rule": "center_dr0_dc0_id",
+          "pass_count": 82,
+          "fail_count": 185
+        }
+      ]
+    },
+    {
+      "task_id": 149,
+      "baseline_cost": 437,
+      "baseline_points": 18.92006680490441,
+      "example_count": 267,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 267,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 267
+        }
+      ]
+    },
+    {
+      "task_id": 153,
+      "baseline_cost": 11212,
+      "baseline_points": 15.675260087715321,
+      "example_count": 265,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 265,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 265
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 265
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 265
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 265
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 265
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 265
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 265
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 265
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 265
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 265
+        }
+      ]
+    },
+    {
+      "task_id": 185,
+      "baseline_cost": 59584,
+      "baseline_points": 14.00485763936326,
+      "example_count": 267,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 267,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 267
+        }
+      ]
+    },
+    {
+      "task_id": 235,
+      "baseline_cost": 1338,
+      "baseline_points": 17.801068759311825,
+      "example_count": 69,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 69,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 69
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 69
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 69
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 69
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 69
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 69
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 69
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 69
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 69
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 69
+        }
+      ]
+    },
+    {
+      "task_id": 242,
+      "baseline_cost": 20119,
+      "baseline_points": 15.090580078810763,
+      "example_count": 266,
+      "best_rule": "bbox_bottom_left_dr-1_dc0_rot270",
+      "best_pass_count": 9,
+      "best_fail_count": 257,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_rot270",
+          "pass_count": 9,
+          "fail_count": 257
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_flipud",
+          "pass_count": 9,
+          "fail_count": 257
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_rot270",
+          "pass_count": 9,
+          "fail_count": 257
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc1_flipud",
+          "pass_count": 9,
+          "fail_count": 257
+        },
+        {
+          "rule": "bbox_bottom_right_dr-1_dc0_anti_transpose",
+          "pass_count": 9,
+          "fail_count": 257
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc-1_rot180",
+          "pass_count": 9,
+          "fail_count": 257
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc0_anti_transpose",
+          "pass_count": 9,
+          "fail_count": 257
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc0_rot180",
+          "pass_count": 9,
+          "fail_count": 257
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc-1_fliplr",
+          "pass_count": 9,
+          "fail_count": 257
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_fliplr",
+          "pass_count": 9,
+          "fail_count": 257
+        }
+      ]
+    },
+    {
+      "task_id": 263,
+      "baseline_cost": 8054,
+      "baseline_points": 16.006075858588602,
+      "example_count": 267,
+      "best_rule": "bbox_bottom_right_dr0_dc0_id",
+      "best_pass_count": 72,
+      "best_fail_count": 195,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_right_dr0_dc0_id",
+          "pass_count": 72,
+          "fail_count": 195
+        },
+        {
+          "rule": "bottom_right_dr0_dc0_id",
+          "pass_count": 72,
+          "fail_count": 195
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_id",
+          "pass_count": 66,
+          "fail_count": 201
+        },
+        {
+          "rule": "bottom_left_dr0_dc0_id",
+          "pass_count": 66,
+          "fail_count": 201
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_id",
+          "pass_count": 60,
+          "fail_count": 207
+        },
+        {
+          "rule": "top_right_dr0_dc0_id",
+          "pass_count": 60,
+          "fail_count": 207
+        },
+        {
+          "rule": "bbox_center_dr0_dc0_id",
+          "pass_count": 57,
+          "fail_count": 210
+        },
+        {
+          "rule": "center_dr0_dc0_id",
+          "pass_count": 57,
+          "fail_count": 210
+        },
+        {
+          "rule": "bbox_top_left_dr0_dc0_id",
+          "pass_count": 54,
+          "fail_count": 213
+        },
+        {
+          "rule": "top_left_dr0_dc0_id",
+          "pass_count": 54,
+          "fail_count": 213
+        }
+      ]
+    },
+    {
+      "task_id": 271,
+      "baseline_cost": 28991,
+      "baseline_points": 14.725259284025897,
+      "example_count": 267,
+      "best_rule": "bbox_bottom_left_dr0_dc0_id",
+      "best_pass_count": 31,
+      "best_fail_count": 236,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_id",
+          "pass_count": 31,
+          "fail_count": 236
+        },
+        {
+          "rule": "bbox_top_left_dr0_dc0_id",
+          "pass_count": 31,
+          "fail_count": 236
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_id",
+          "pass_count": 31,
+          "fail_count": 236
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc0_id",
+          "pass_count": 28,
+          "fail_count": 239
+        },
+        {
+          "rule": "bottom_right_dr0_dc0_id",
+          "pass_count": 20,
+          "fail_count": 247
+        },
+        {
+          "rule": "bbox_top_left_dr0_dc1_id",
+          "pass_count": 19,
+          "fail_count": 248
+        },
+        {
+          "rule": "top_left_dr0_dc1_id",
+          "pass_count": 17,
+          "fail_count": 250
+        },
+        {
+          "rule": "top_left_dr0_dc0_id",
+          "pass_count": 16,
+          "fail_count": 251
+        },
+        {
+          "rule": "top_right_dr0_dc0_id",
+          "pass_count": 16,
+          "fail_count": 251
+        },
+        {
+          "rule": "top_right_dr1_dc0_id",
+          "pass_count": 15,
+          "fail_count": 252
+        }
+      ]
+    },
+    {
+      "task_id": 274,
+      "baseline_cost": 8581,
+      "baseline_points": 15.942694264192879,
+      "example_count": 269,
+      "best_rule": "bbox_top_left_dr1_dc1_flipud",
+      "best_pass_count": 54,
+      "best_fail_count": 215,
+      "top_rules": [
+        {
+          "rule": "bbox_top_left_dr1_dc1_flipud",
+          "pass_count": 54,
+          "fail_count": 215
+        },
+        {
+          "rule": "bbox_top_left_dr1_dc1_rot180",
+          "pass_count": 54,
+          "fail_count": 215
+        },
+        {
+          "rule": "bbox_top_right_dr1_dc-1_flipud",
+          "pass_count": 54,
+          "fail_count": 215
+        },
+        {
+          "rule": "bbox_top_right_dr1_dc-1_rot180",
+          "pass_count": 54,
+          "fail_count": 215
+        },
+        {
+          "rule": "center_dr-1_dc0_flipud",
+          "pass_count": 20,
+          "fail_count": 249
+        },
+        {
+          "rule": "center_dr-1_dc0_rot180",
+          "pass_count": 20,
+          "fail_count": 249
+        },
+        {
+          "rule": "center_dr0_dc0_flipud",
+          "pass_count": 19,
+          "fail_count": 250
+        },
+        {
+          "rule": "center_dr0_dc0_rot180",
+          "pass_count": 19,
+          "fail_count": 250
+        },
+        {
+          "rule": "bbox_center_dr-1_dc0_flipud",
+          "pass_count": 17,
+          "fail_count": 252
+        },
+        {
+          "rule": "bbox_center_dr-1_dc0_rot180",
+          "pass_count": 17,
+          "fail_count": 252
+        }
+      ]
+    },
+    {
+      "task_id": 296,
+      "baseline_cost": 4115,
+      "baseline_points": 16.67760588688883,
+      "example_count": 268,
+      "best_rule": "bbox_bottom_left_dr0_dc-1_fliplr",
+      "best_pass_count": 1,
+      "best_fail_count": 267,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr0_dc-1_fliplr",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc-1_rot270",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_anti_transpose",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_id",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr1_dc-1_rot180",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr1_dc-1_transpose",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr1_dc0_flipud",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_bottom_left_dr1_dc0_rot90",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_center_dr1_dc-1_anti_transpose",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_center_dr1_dc-1_id",
+          "pass_count": 1,
+          "fail_count": 267
+        }
+      ]
+    },
+    {
+      "task_id": 316,
+      "baseline_cost": 3903,
+      "baseline_points": 16.730499232819383,
+      "example_count": 266,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 266,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 266
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 266
+        }
+      ]
+    },
+    {
+      "task_id": 334,
+      "baseline_cost": 609,
+      "baseline_points": 18.588181732290103,
+      "example_count": 271,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 271,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 271
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 271
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 271
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 271
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 271
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 271
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 271
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 271
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 271
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 271
+        }
+      ]
+    },
+    {
+      "task_id": 347,
+      "baseline_cost": 1607,
+      "baseline_points": 17.61787563426249,
+      "example_count": 269,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 269,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 269
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 269
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 269
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 269
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 269
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 269
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 269
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 269
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 269
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 269
+        }
+      ]
+    },
+    {
+      "task_id": 395,
+      "baseline_cost": 1667,
+      "baseline_points": 17.581219117249205,
+      "example_count": 268,
+      "best_rule": "bbox_top_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 1,
+      "best_fail_count": 267,
+      "top_rules": [
+        {
+          "rule": "bbox_top_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_top_left_dr-1_dc-1_fliplr",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_top_left_dr-1_dc-1_flipud",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_top_left_dr-1_dc-1_id",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_top_left_dr-1_dc-1_rot180",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_top_left_dr-1_dc-1_rot270",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_top_left_dr-1_dc-1_rot90",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_top_left_dr-1_dc-1_transpose",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_top_right_dr-1_dc-1_anti_transpose",
+          "pass_count": 1,
+          "fail_count": 267
+        },
+        {
+          "rule": "bbox_top_right_dr-1_dc-1_fliplr",
+          "pass_count": 1,
+          "fail_count": 267
+        }
+      ]
+    },
+    {
+      "task_id": 399,
+      "baseline_cost": 1839,
+      "baseline_points": 17.48302277539568,
+      "example_count": 273,
+      "best_rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+      "best_pass_count": 0,
+      "best_fail_count": 273,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 273
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_fliplr",
+          "pass_count": 0,
+          "fail_count": 273
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_flipud",
+          "pass_count": 0,
+          "fail_count": 273
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_id",
+          "pass_count": 0,
+          "fail_count": 273
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot180",
+          "pass_count": 0,
+          "fail_count": 273
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot270",
+          "pass_count": 0,
+          "fail_count": 273
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_rot90",
+          "pass_count": 0,
+          "fail_count": 273
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc-1_transpose",
+          "pass_count": 0,
+          "fail_count": 273
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_anti_transpose",
+          "pass_count": 0,
+          "fail_count": 273
+        },
+        {
+          "rule": "bbox_bottom_left_dr-1_dc0_fliplr",
+          "pass_count": 0,
+          "fail_count": 273
+        }
+      ]
+    }
+  ],
+  "full_hits": [
+    {
+      "task_id": 39,
+      "baseline_cost": 7772,
+      "baseline_points": 16.04171718950267,
+      "example_count": 264,
+      "best_rule": "bbox_bottom_left_dr0_dc0_rot270",
+      "best_pass_count": 264,
+      "best_fail_count": 0,
+      "top_rules": [
+        {
+          "rule": "bbox_bottom_left_dr0_dc0_rot270",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_bottom_right_dr0_dc0_rot180",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_center_dr-1_dc-1_id",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_top_left_dr0_dc0_id",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_rot90",
+          "pass_count": 264,
+          "fail_count": 0
+        },
+        {
+          "rule": "center_dr-1_dc0_id",
+          "pass_count": 38,
+          "fail_count": 226
+        },
+        {
+          "rule": "center_dr1_dc-1_rot270",
+          "pass_count": 35,
+          "fail_count": 229
+        },
+        {
+          "rule": "center_dr1_dc0_rot270",
+          "pass_count": 32,
+          "fail_count": 232
+        },
+        {
+          "rule": "top_right_dr1_dc-1_rot90",
+          "pass_count": 32,
+          "fail_count": 232
+        },
+        {
+          "rule": "bottom_left_dr-1_dc1_rot270",
+          "pass_count": 31,
+          "fail_count": 233
+        }
+      ]
+    },
+    {
+      "task_id": 135,
+      "baseline_cost": 360,
+      "baseline_points": 19.113895968549844,
+      "example_count": 266,
+      "best_rule": "top_right_dr0_dc0_id",
+      "best_pass_count": 266,
+      "best_fail_count": 0,
+      "top_rules": [
+        {
+          "rule": "top_right_dr0_dc0_id",
+          "pass_count": 266,
+          "fail_count": 0
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_id",
+          "pass_count": 264,
+          "fail_count": 2
+        },
+        {
+          "rule": "top_right_dr0_dc0_fliplr",
+          "pass_count": 8,
+          "fail_count": 258
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_fliplr",
+          "pass_count": 7,
+          "fail_count": 259
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_transpose",
+          "pass_count": 6,
+          "fail_count": 260
+        },
+        {
+          "rule": "top_right_dr0_dc0_transpose",
+          "pass_count": 6,
+          "fail_count": 260
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_anti_transpose",
+          "pass_count": 5,
+          "fail_count": 261
+        },
+        {
+          "rule": "top_right_dr0_dc0_anti_transpose",
+          "pass_count": 5,
+          "fail_count": 261
+        },
+        {
+          "rule": "bbox_top_right_dr0_dc0_flipud",
+          "pass_count": 3,
+          "fail_count": 263
+        },
+        {
+          "rule": "top_right_dr0_dc0_flipud",
+          "pass_count": 3,
+          "fail_count": 263
+        }
+      ]
+    }
+  ],
+  "near_hits": [],
+  "decision": "Full hitはSlice/transform loweringへ。near hitは失敗監査。なければ単純3x3 crop laneは優先度を下げる。",
+  "submission_decision": "no_submit: rule sweep only",
+  "leakage_risk": "low: input-only fixed/bbox crop rules.",
+  "overfitting_risk": "medium-low: hand-written crop anchors; offset sweepは広いのでhidden edgeに注意。"
+}

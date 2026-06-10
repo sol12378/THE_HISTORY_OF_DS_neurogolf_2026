@@ -1,0 +1,477 @@
+{
+  "exp_id": "exp237_task253_static_template_color_audit",
+  "date": "2026-06-10",
+  "task_id": 253,
+  "baseline_cost": 48269,
+  "example_count": 265,
+  "output_shape": [
+    4,
+    4
+  ],
+  "binary_signature_count": 1,
+  "most_common_mask_count": 265,
+  "output_color_hist": {
+    "1": 35,
+    "2": 37,
+    "3": 33,
+    "4": 19,
+    "5": 37,
+    "6": 30,
+    "7": 26,
+    "8": 22,
+    "9": 26
+  },
+  "best_color_rules": [
+    {
+      "rule": "least_nz",
+      "pass_count": 76,
+      "fail_count": 189
+    },
+    {
+      "rule": "mode_nz",
+      "pass_count": 76,
+      "fail_count": 189
+    },
+    {
+      "rule": "bbox_tl",
+      "pass_count": 29,
+      "fail_count": 236
+    },
+    {
+      "rule": "bbox_bl",
+      "pass_count": 28,
+      "fail_count": 237
+    },
+    {
+      "rule": "bbox_tr",
+      "pass_count": 22,
+      "fail_count": 243
+    },
+    {
+      "rule": "bl",
+      "pass_count": 6,
+      "fail_count": 259
+    },
+    {
+      "rule": "bbox_center",
+      "pass_count": 4,
+      "fail_count": 261
+    },
+    {
+      "rule": "tl",
+      "pass_count": 4,
+      "fail_count": 261
+    },
+    {
+      "rule": "center",
+      "pass_count": 3,
+      "fail_count": 262
+    },
+    {
+      "rule": "tr",
+      "pass_count": 2,
+      "fail_count": 263
+    },
+    {
+      "rule": "bbox_br",
+      "pass_count": 0,
+      "fail_count": 265
+    },
+    {
+      "rule": "br",
+      "pass_count": 0,
+      "fail_count": 265
+    },
+    {
+      "rule": "mode_all",
+      "pass_count": 0,
+      "fail_count": 265
+    }
+  ],
+  "sample_rows": [
+    {
+      "idx": 0,
+      "output_color": 8,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 1,
+      "output_color": 1,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 8,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 2,
+      "output_color": 3,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 1,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 8,
+        "bbox_bl": 3,
+        "bbox_br": 0,
+        "bbox_center": 1
+      }
+    },
+    {
+      "idx": 3,
+      "output_color": 9,
+      "features": {
+        "mode_nz": 2,
+        "least_nz": 2,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 2,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 4,
+      "output_color": 2,
+      "features": {
+        "mode_nz": 2,
+        "least_nz": 2,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 5,
+      "output_color": 2,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 8,
+        "bbox_bl": 2,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 6,
+      "output_color": 6,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 3,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 3,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 7,
+      "output_color": 8,
+      "features": {
+        "mode_nz": 2,
+        "least_nz": 2,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 9,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 8,
+      "output_color": 5,
+      "features": {
+        "mode_nz": 3,
+        "least_nz": 3,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 3,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 9,
+      "output_color": 3,
+      "features": {
+        "mode_nz": 3,
+        "least_nz": 3,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 3,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 10,
+      "output_color": 1,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 11,
+      "output_color": 7,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 7,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 12,
+      "output_color": 2,
+      "features": {
+        "mode_nz": 2,
+        "least_nz": 2,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 13,
+      "output_color": 5,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 1,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 3,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 14,
+      "output_color": 1,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 1
+      }
+    },
+    {
+      "idx": 15,
+      "output_color": 5,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 3,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 16,
+      "output_color": 2,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 17,
+      "output_color": 9,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 18,
+      "output_color": 7,
+      "features": {
+        "mode_nz": 4,
+        "least_nz": 4,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 7,
+        "bbox_tr": 0,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    },
+    {
+      "idx": 19,
+      "output_color": 1,
+      "features": {
+        "mode_nz": 1,
+        "least_nz": 1,
+        "mode_all": 0,
+        "center": 0,
+        "tl": 0,
+        "tr": 0,
+        "bl": 0,
+        "br": 0,
+        "bbox_tl": 0,
+        "bbox_tr": 8,
+        "bbox_bl": 0,
+        "bbox_br": 0,
+        "bbox_center": 0
+      }
+    }
+  ],
+  "decision": "If a simple color rule is full, build static 4x4 template ONNX. Otherwise inspect color selector.",
+  "submission_decision": "no_submit: audit only",
+  "leakage_risk": "low",
+  "overfitting_risk": "medium-low"
+}

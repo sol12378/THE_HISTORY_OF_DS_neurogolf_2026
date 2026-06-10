@@ -1,0 +1,2 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+39,crop_or_resize,bbox_top_left_3x3_dynamic_slice,7772,,16.04171718950267,,1350,not_run,rejected,dynamic shape crop,96b599204cf0e469bdf1f03d0b2411d7d3aafa3b8332fef4998775c447d3e469

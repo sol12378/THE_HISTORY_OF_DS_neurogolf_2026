@@ -1,0 +1,24 @@
+{
+  "exp_id": "exp230_task300_max_color_mask4x3_padfix_cost_probe",
+  "date": "2026-06-10",
+  "task_id": 300,
+  "candidate": {
+    "task_id": 300,
+    "route": "crop_or_resize",
+    "template_name": "max_color_bbox_mask4x3_padfix",
+    "baseline_cost": 77546,
+    "candidate_cost": "",
+    "baseline_points": 13.741373412351637,
+    "candidate_points": "",
+    "file_bytes": 2922,
+    "validation_status": "1_pass_1_fail",
+    "status": "rejected",
+    "reason": "mismatch example 1",
+    "sha256": "36bbff4c01be69c866fb863f42d84748b04e428cb3995966ea9cb3ab06e69a65"
+  },
+  "improved": false,
+  "decision": "improvedならbundle/submission候補。no_cost_gainなら正しいruleでもこのloweringはcost wall。",
+  "submission_decision": "no_submit: cost probe only",
+  "leakage_risk": "low: input-only rule, exp225 validates 267/267.",
+  "overfitting_risk": "medium-low."
+}

@@ -1,0 +1,24 @@
+{
+  "exp_id": "exp226_task300_max_color_mask4x3_cost_probe",
+  "date": "2026-06-10",
+  "task_id": 300,
+  "candidate": {
+    "task_id": 300,
+    "route": "crop_or_resize",
+    "template_name": "max_color_bbox_mask4x3",
+    "baseline_cost": 77546,
+    "candidate_cost": "",
+    "baseline_points": 13.741373412351637,
+    "candidate_points": "",
+    "file_bytes": 2304,
+    "validation_status": "0_pass_1_fail",
+    "status": "rejected",
+    "reason": "mismatch example 0",
+    "sha256": "cc1d3eb7519f5724b7d4e0c47eb20c9793203dc5c27afd6f4e378643840cefc0"
+  },
+  "improved": false,
+  "decision": "improvedならbundle/submission候補。no_cost_gainならmax-color proxyは正しいがGatherElements/full-grid mask cost wall。",
+  "submission_decision": "no_submit: cost probe only",
+  "leakage_risk": "low: input-only rule, exp225 validates 267/267.",
+  "overfitting_risk": "medium-low: rule is structural, hidden edge should be probed by single-task submission if cost improves."
+}

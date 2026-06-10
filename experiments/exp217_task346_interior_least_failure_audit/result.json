@@ -1,0 +1,304 @@
+{
+  "exp_id": "exp217_task346_interior_least_failure_audit",
+  "date": "2026-06-10",
+  "task_id": 346,
+  "base_rule": "interior_least_nz",
+  "pass_count": 265,
+  "fail_count": 2,
+  "failures": [
+    {
+      "idx": 89,
+      "expected": 6,
+      "pred": 1,
+      "ok": false,
+      "shape": [
+        11,
+        11
+      ],
+      "corners": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "inner_rank": [
+        [
+          1,
+          14
+        ],
+        [
+          6,
+          14
+        ]
+      ],
+      "all_rank": [
+        [
+          1,
+          17
+        ],
+        [
+          6,
+          17
+        ]
+      ],
+      "edge_rank": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "color_features": [
+        {
+          "color": 1,
+          "all_count": 17,
+          "interior_count": 14,
+          "edge_count": 3,
+          "corner_count": 1,
+          "largest_component": 11
+        },
+        {
+          "color": 6,
+          "all_count": 17,
+          "interior_count": 14,
+          "edge_count": 3,
+          "corner_count": 0,
+          "largest_component": 3
+        }
+      ]
+    },
+    {
+      "idx": 95,
+      "expected": 8,
+      "pred": 4,
+      "ok": false,
+      "shape": [
+        10,
+        10
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inner_rank": [
+        [
+          4,
+          10
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "all_rank": [
+        [
+          8,
+          13
+        ],
+        [
+          4,
+          19
+        ]
+      ],
+      "edge_rank": [
+        [
+          8,
+          2
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "color_features": [
+        {
+          "color": 4,
+          "all_count": 19,
+          "interior_count": 10,
+          "edge_count": 9,
+          "corner_count": 0,
+          "largest_component": 14
+        },
+        {
+          "color": 8,
+          "all_count": 13,
+          "interior_count": 11,
+          "edge_count": 2,
+          "corner_count": 0,
+          "largest_component": 4
+        }
+      ]
+    }
+  ],
+  "best_simple_branch_tests": [
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 17,
+      "tp": 2,
+      "fp": 4,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 16,
+      "tp": 2,
+      "fp": 6,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 15,
+      "tp": 2,
+      "fp": 9,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 14,
+      "tp": 2,
+      "fp": 13,
+      "fn": 0
+    },
+    {
+      "feature": "interior_count",
+      "op": ">=",
+      "threshold": 10,
+      "tp": 2,
+      "fp": 13,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 13,
+      "tp": 2,
+      "fp": 19,
+      "fn": 0
+    },
+    {
+      "feature": "interior_count",
+      "op": ">=",
+      "threshold": 9,
+      "tp": 2,
+      "fp": 19,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 12,
+      "tp": 2,
+      "fp": 30,
+      "fn": 0
+    },
+    {
+      "feature": "interior_count",
+      "op": ">=",
+      "threshold": 8,
+      "tp": 2,
+      "fp": 31,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 11,
+      "tp": 2,
+      "fp": 44,
+      "fn": 0
+    },
+    {
+      "feature": "interior_count",
+      "op": ">=",
+      "threshold": 7,
+      "tp": 2,
+      "fp": 47,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 10,
+      "tp": 2,
+      "fp": 59,
+      "fn": 0
+    },
+    {
+      "feature": "interior_count",
+      "op": ">=",
+      "threshold": 6,
+      "tp": 2,
+      "fp": 65,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 9,
+      "tp": 2,
+      "fp": 81,
+      "fn": 0
+    },
+    {
+      "feature": "interior_count",
+      "op": ">=",
+      "threshold": 5,
+      "tp": 2,
+      "fp": 93,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 8,
+      "tp": 2,
+      "fp": 105,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 7,
+      "tp": 2,
+      "fp": 136,
+      "fn": 0
+    },
+    {
+      "feature": "interior_count",
+      "op": ">=",
+      "threshold": 4,
+      "tp": 2,
+      "fp": 137,
+      "fn": 0
+    },
+    {
+      "feature": "edge_count",
+      "op": ">=",
+      "threshold": 3,
+      "tp": 2,
+      "fp": 159,
+      "fn": 0
+    },
+    {
+      "feature": "all_count",
+      "op": ">=",
+      "threshold": 6,
+      "tp": 2,
+      "fp": 169,
+      "fn": 0
+    }
+  ],
+  "decision": "2 failのみ。count/edge/cornerだけでTP2 FP0の補正があればcost probeへ、なければcomponent proxy依存で保留。",
+  "submission_decision": "no_submit: diagnostic only",
+  "leakage_risk": "low: input-only diagnostic.",
+  "overfitting_risk": "medium: 2例補正はarc-gen全体に対する分岐でもhidden generalization注意。"
+}

@@ -1,0 +1,2 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+300,crop_or_resize,max_color_bbox_mask4x3,77546,,13.741373412351637,,2304,0_pass_1_fail,rejected,mismatch example 0,cc1d3eb7519f5724b7d4e0c47eb20c9793203dc5c27afd6f4e378643840cefc0

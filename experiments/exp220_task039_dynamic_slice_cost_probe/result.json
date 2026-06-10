@@ -1,0 +1,24 @@
+{
+  "exp_id": "exp220_task039_dynamic_slice_cost_probe",
+  "date": "2026-06-10",
+  "task_id": 39,
+  "candidate": {
+    "task_id": 39,
+    "route": "crop_or_resize",
+    "template_name": "bbox_top_left_3x3_dynamic_slice",
+    "baseline_cost": 7772,
+    "candidate_cost": "",
+    "baseline_points": 16.04171718950267,
+    "candidate_points": "",
+    "file_bytes": 1350,
+    "validation_status": "not_run",
+    "status": "rejected",
+    "reason": "dynamic shape crop",
+    "sha256": "96b599204cf0e469bdf1f03d0b2411d7d3aafa3b8332fef4998775c447d3e469"
+  },
+  "improved": false,
+  "decision": "static checkとcostが通れば提出候補。dynamic shape rejectならこのlaneは現状保留。",
+  "submission_decision": "no_submit: cost probe only",
+  "leakage_risk": "low",
+  "overfitting_risk": "medium-low"
+}

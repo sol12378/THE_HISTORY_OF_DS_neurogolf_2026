@@ -1,0 +1,554 @@
+{
+  "exp_id": "exp223_small_output_mask_shape_inventory",
+  "date": "2026-06-10",
+  "status": "inventory_ready",
+  "task_count": 58,
+  "shape_full_hits": [
+    {
+      "task_id": 300,
+      "baseline_cost": 77546,
+      "baseline_points": 13.741373412351637,
+      "example_count": 267,
+      "output_shape_count": 4,
+      "output_shapes": "2x3:12;3x2:7;3x3:161;4x3:87",
+      "binary_signature_count": 79,
+      "most_common_binary_signature_count": 26,
+      "output_color_count_hist": {
+        "1": 18,
+        "2": 249
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 267,
+        "largest_component_bbox_shape": 265
+      },
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 267,
+      "best_shape_rule_fail_count": 0
+    },
+    {
+      "task_id": 174,
+      "baseline_cost": 52019,
+      "baseline_points": 14.140635684557754,
+      "example_count": 266,
+      "output_shape_count": 16,
+      "output_shapes": "1x2:4;1x5:1;2x1:6;2x2:31;2x3:42;2x4:28;2x5:34;3x1:3;3x2:28;3x3:19;3x4:30;4x1:1;4x2:13;4x3:14;5x1:1;5x2:11",
+      "binary_signature_count": 22,
+      "most_common_binary_signature_count": 42,
+      "output_color_count_hist": {
+        "1": 259,
+        "2": 7
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 266,
+        "largest_component_bbox_shape": 93,
+        "num_colors_by_1": 3
+      },
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 266,
+      "best_shape_rule_fail_count": 0
+    },
+    {
+      "task_id": 130,
+      "baseline_cost": 15948,
+      "baseline_points": 15.322911291498754,
+      "example_count": 265,
+      "output_shape_count": 1,
+      "output_shapes": "3x3:265",
+      "binary_signature_count": 168,
+      "most_common_binary_signature_count": 8,
+      "output_color_count_hist": {
+        "2": 37,
+        "3": 44,
+        "4": 35,
+        "5": 22,
+        "6": 43,
+        "7": 31,
+        "8": 29,
+        "9": 24
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 265,
+        "largest_component_bbox_shape": 265
+      },
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 265,
+      "best_shape_rule_fail_count": 0
+    },
+    {
+      "task_id": 355,
+      "baseline_cost": 11795,
+      "baseline_points": 15.624569008158225,
+      "example_count": 267,
+      "output_shape_count": 1,
+      "output_shapes": "1x1:267",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 267,
+      "output_color_count_hist": {
+        "1": 267
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 267
+      },
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 267,
+      "best_shape_rule_fail_count": 0
+    },
+    {
+      "task_id": 346,
+      "baseline_cost": 9178,
+      "baseline_points": 15.875435405045222,
+      "example_count": 267,
+      "output_shape_count": 1,
+      "output_shapes": "1x1:267",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 267,
+      "output_color_count_hist": {
+        "1": 267
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 267
+      },
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 267,
+      "best_shape_rule_fail_count": 0
+    },
+    {
+      "task_id": 393,
+      "baseline_cost": 459,
+      "baseline_points": 18.870949789939456,
+      "example_count": 265,
+      "output_shape_count": 1,
+      "output_shapes": "3x1:265",
+      "binary_signature_count": 3,
+      "most_common_binary_signature_count": 110,
+      "output_color_count_hist": {
+        "3": 265
+      },
+      "shape_rule_hits": {
+        "num_colors_by_1": 265,
+        "one_component_shape": 14
+      },
+      "best_shape_rule": "num_colors_by_1",
+      "best_shape_rule_pass_count": 265,
+      "best_shape_rule_fail_count": 0
+    },
+    {
+      "task_id": 56,
+      "baseline_cost": 213,
+      "baseline_points": 19.638707834290575,
+      "example_count": 46,
+      "output_shape_count": 1,
+      "output_shapes": "1x1:46",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 46,
+      "output_color_count_hist": {
+        "1": 46
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 35,
+        "num_colors_by_1": 46,
+        "1_by_num_colors": 46,
+        "largest_component_bbox_shape": 12
+      },
+      "best_shape_rule": "num_colors_by_1",
+      "best_shape_rule_pass_count": 46,
+      "best_shape_rule_fail_count": 0
+    },
+    {
+      "task_id": 103,
+      "baseline_cost": 193,
+      "baseline_points": 19.737309811095116,
+      "example_count": 223,
+      "output_shape_count": 1,
+      "output_shapes": "1x1:223",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 223,
+      "output_color_count_hist": {
+        "1": 223
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 149,
+        "largest_component_bbox_shape": 44,
+        "num_colors_by_1": 223,
+        "1_by_num_colors": 223,
+        "bbox_shape": 5
+      },
+      "best_shape_rule": "num_colors_by_1",
+      "best_shape_rule_pass_count": 223,
+      "best_shape_rule_fail_count": 0
+    }
+  ],
+  "stable_binary_high_cost": [
+    {
+      "task_id": 253,
+      "baseline_cost": 48269,
+      "baseline_points": 14.215455188361384,
+      "example_count": 265,
+      "output_shape_count": 1,
+      "output_shapes": "4x4:265",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 265,
+      "output_color_count_hist": {
+        "5": 265
+      },
+      "shape_rule_hits": {},
+      "best_shape_rule": "",
+      "best_shape_rule_pass_count": 0,
+      "best_shape_rule_fail_count": 265
+    },
+    {
+      "task_id": 355,
+      "baseline_cost": 11795,
+      "baseline_points": 15.624569008158225,
+      "example_count": 267,
+      "output_shape_count": 1,
+      "output_shapes": "1x1:267",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 267,
+      "output_color_count_hist": {
+        "1": 267
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 267
+      },
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 267,
+      "best_shape_rule_fail_count": 0
+    },
+    {
+      "task_id": 391,
+      "baseline_cost": 10021,
+      "baseline_points": 15.787561829941671,
+      "example_count": 267,
+      "output_shape_count": 1,
+      "output_shapes": "3x1:267",
+      "binary_signature_count": 3,
+      "most_common_binary_signature_count": 93,
+      "output_color_count_hist": {
+        "3": 267
+      },
+      "shape_rule_hits": {},
+      "best_shape_rule": "",
+      "best_shape_rule_pass_count": 0,
+      "best_shape_rule_fail_count": 267
+    },
+    {
+      "task_id": 346,
+      "baseline_cost": 9178,
+      "baseline_points": 15.875435405045222,
+      "example_count": 267,
+      "output_shape_count": 1,
+      "output_shapes": "1x1:267",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 267,
+      "output_color_count_hist": {
+        "1": 267
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 267
+      },
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 267,
+      "best_shape_rule_fail_count": 0
+    },
+    {
+      "task_id": 100,
+      "baseline_cost": 6536,
+      "baseline_points": 16.21491936346016,
+      "example_count": 266,
+      "output_shape_count": 1,
+      "output_shapes": "2x2:266",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 266,
+      "output_color_count_hist": {
+        "1": 266
+      },
+      "shape_rule_hits": {},
+      "best_shape_rule": "",
+      "best_shape_rule_pass_count": 0,
+      "best_shape_rule_fail_count": 266
+    },
+    {
+      "task_id": 48,
+      "baseline_cost": 5609,
+      "baseline_points": 16.367872270491663,
+      "example_count": 270,
+      "output_shape_count": 1,
+      "output_shapes": "1x1:270",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 270,
+      "output_color_count_hist": {
+        "1": 270
+      },
+      "shape_rule_hits": {
+        "one_component_shape": 254
+      },
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 254,
+      "best_shape_rule_fail_count": 16
+    },
+    {
+      "task_id": 291,
+      "baseline_cost": 4327,
+      "baseline_points": 16.627370259775116,
+      "example_count": 265,
+      "output_shape_count": 1,
+      "output_shapes": "1x1:265",
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 265,
+      "output_color_count_hist": {
+        "1": 265
+      },
+      "shape_rule_hits": {},
+      "best_shape_rule": "",
+      "best_shape_rule_pass_count": 0,
+      "best_shape_rule_fail_count": 265
+    }
+  ],
+  "top_rows": [
+    {
+      "task_id": 300,
+      "baseline_cost": 77546,
+      "example_count": 267,
+      "output_shape_count": 4,
+      "binary_signature_count": 79,
+      "most_common_binary_signature_count": 26,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 267,
+      "best_shape_rule_fail_count": 0,
+      "output_shapes": "2x3:12;3x2:7;3x3:161;4x3:87"
+    },
+    {
+      "task_id": 174,
+      "baseline_cost": 52019,
+      "example_count": 266,
+      "output_shape_count": 16,
+      "binary_signature_count": 22,
+      "most_common_binary_signature_count": 42,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 266,
+      "best_shape_rule_fail_count": 0,
+      "output_shapes": "1x2:4;1x5:1;2x1:6;2x2:31;2x3:42;2x4:28;2x5:34;3x1:3;3x2:28;3x3:19;3x4:30;4x1:1;4x2:13;4x3:14;5x1:1;5x2:11"
+    },
+    {
+      "task_id": 130,
+      "baseline_cost": 15948,
+      "example_count": 265,
+      "output_shape_count": 1,
+      "binary_signature_count": 168,
+      "most_common_binary_signature_count": 8,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 265,
+      "best_shape_rule_fail_count": 0,
+      "output_shapes": "3x3:265"
+    },
+    {
+      "task_id": 355,
+      "baseline_cost": 11795,
+      "example_count": 267,
+      "output_shape_count": 1,
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 267,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 267,
+      "best_shape_rule_fail_count": 0,
+      "output_shapes": "1x1:267"
+    },
+    {
+      "task_id": 346,
+      "baseline_cost": 9178,
+      "example_count": 267,
+      "output_shape_count": 1,
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 267,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 267,
+      "best_shape_rule_fail_count": 0,
+      "output_shapes": "1x1:267"
+    },
+    {
+      "task_id": 393,
+      "baseline_cost": 459,
+      "example_count": 265,
+      "output_shape_count": 1,
+      "binary_signature_count": 3,
+      "most_common_binary_signature_count": 110,
+      "best_shape_rule": "num_colors_by_1",
+      "best_shape_rule_pass_count": 265,
+      "best_shape_rule_fail_count": 0,
+      "output_shapes": "3x1:265"
+    },
+    {
+      "task_id": 56,
+      "baseline_cost": 213,
+      "example_count": 46,
+      "output_shape_count": 1,
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 46,
+      "best_shape_rule": "num_colors_by_1",
+      "best_shape_rule_pass_count": 46,
+      "best_shape_rule_fail_count": 0,
+      "output_shapes": "1x1:46"
+    },
+    {
+      "task_id": 103,
+      "baseline_cost": 193,
+      "example_count": 223,
+      "output_shape_count": 1,
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 223,
+      "best_shape_rule": "num_colors_by_1",
+      "best_shape_rule_pass_count": 223,
+      "best_shape_rule_fail_count": 0,
+      "output_shapes": "1x1:223"
+    },
+    {
+      "task_id": 271,
+      "baseline_cost": 28991,
+      "example_count": 267,
+      "output_shape_count": 1,
+      "binary_signature_count": 106,
+      "most_common_binary_signature_count": 17,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 266,
+      "best_shape_rule_fail_count": 1,
+      "output_shapes": "3x3:267"
+    },
+    {
+      "task_id": 146,
+      "baseline_cost": 2256,
+      "example_count": 267,
+      "output_shape_count": 1,
+      "binary_signature_count": 162,
+      "most_common_binary_signature_count": 4,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 252,
+      "best_shape_rule_fail_count": 15,
+      "output_shapes": "3x3:267"
+    },
+    {
+      "task_id": 48,
+      "baseline_cost": 5609,
+      "example_count": 270,
+      "output_shape_count": 1,
+      "binary_signature_count": 1,
+      "most_common_binary_signature_count": 270,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 254,
+      "best_shape_rule_fail_count": 16,
+      "output_shapes": "1x1:270"
+    },
+    {
+      "task_id": 207,
+      "baseline_cost": 1875,
+      "example_count": 265,
+      "output_shape_count": 1,
+      "binary_signature_count": 10,
+      "most_common_binary_signature_count": 37,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 202,
+      "best_shape_rule_fail_count": 63,
+      "output_shapes": "2x2:265"
+    },
+    {
+      "task_id": 326,
+      "baseline_cost": 160,
+      "example_count": 266,
+      "output_shape_count": 1,
+      "binary_signature_count": 15,
+      "most_common_binary_signature_count": 40,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 202,
+      "best_shape_rule_fail_count": 64,
+      "output_shapes": "2x2:266"
+    },
+    {
+      "task_id": 235,
+      "baseline_cost": 1338,
+      "example_count": 69,
+      "output_shape_count": 1,
+      "binary_signature_count": 7,
+      "most_common_binary_signature_count": 13,
+      "best_shape_rule": "",
+      "best_shape_rule_pass_count": 0,
+      "best_shape_rule_fail_count": 69,
+      "output_shapes": "3x3:69"
+    },
+    {
+      "task_id": 111,
+      "baseline_cost": 797,
+      "example_count": 265,
+      "output_shape_count": 1,
+      "binary_signature_count": 71,
+      "most_common_binary_signature_count": 10,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 159,
+      "best_shape_rule_fail_count": 106,
+      "output_shapes": "3x3:265"
+    },
+    {
+      "task_id": 257,
+      "baseline_cost": 1077,
+      "example_count": 269,
+      "output_shape_count": 1,
+      "binary_signature_count": 269,
+      "most_common_binary_signature_count": 1,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 161,
+      "best_shape_rule_fail_count": 108,
+      "output_shapes": "4x4:269"
+    },
+    {
+      "task_id": 180,
+      "baseline_cost": 7450,
+      "example_count": 268,
+      "output_shape_count": 1,
+      "binary_signature_count": 268,
+      "most_common_binary_signature_count": 1,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 159,
+      "best_shape_rule_fail_count": 109,
+      "output_shapes": "4x4:268"
+    },
+    {
+      "task_id": 115,
+      "baseline_cost": 4122,
+      "example_count": 266,
+      "output_shape_count": 4,
+      "binary_signature_count": 14,
+      "most_common_binary_signature_count": 29,
+      "best_shape_rule": "1_by_num_colors",
+      "best_shape_rule_pass_count": 141,
+      "best_shape_rule_fail_count": 125,
+      "output_shapes": "1x3:75;1x4:66;3x1:63;4x1:62"
+    },
+    {
+      "task_id": 153,
+      "baseline_cost": 11212,
+      "example_count": 265,
+      "output_shape_count": 1,
+      "binary_signature_count": 26,
+      "most_common_binary_signature_count": 35,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 136,
+      "best_shape_rule_fail_count": 129,
+      "output_shapes": "3x3:265"
+    },
+    {
+      "task_id": 395,
+      "baseline_cost": 1667,
+      "example_count": 268,
+      "output_shape_count": 1,
+      "binary_signature_count": 100,
+      "most_common_binary_signature_count": 20,
+      "best_shape_rule": "one_component_shape",
+      "best_shape_rule_pass_count": 128,
+      "best_shape_rule_fail_count": 140,
+      "output_shapes": "3x3:268"
+    }
+  ],
+  "decision": "shape_full_hitsはshape-branch supplier候補。stable_binary_high_costはmask/template supplier候補として個別監査する。",
+  "submission_decision": "no_submit: inventory only",
+  "leakage_risk": "low: input/output structural inventory only.",
+  "overfitting_risk": "low: no candidate selected yet."
+}

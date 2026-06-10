@@ -1,0 +1,15 @@
+{
+  "exp_id": "exp225_task300_max_color_proxy_audit",
+  "date": "2026-06-10",
+  "task_id": 300,
+  "baseline_cost": 77546,
+  "example_count": 267,
+  "max_color_matches_component": 267,
+  "max_color_mask4x3_pass_count": 267,
+  "max_color_mask4x3_fail_count": 0,
+  "fail_examples": [],
+  "decision": "If 267/267, implement ONNX max-color ArgMax + bbox mask4x3 cost probe. Otherwise component selection is genuinely needed.",
+  "submission_decision": "no_submit: audit only",
+  "leakage_risk": "low: input-only proxy audit.",
+  "overfitting_risk": "low: no fitted thresholds."
+}

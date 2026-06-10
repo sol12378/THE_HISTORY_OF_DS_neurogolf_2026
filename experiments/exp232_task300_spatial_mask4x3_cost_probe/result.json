@@ -1,0 +1,24 @@
+{
+  "exp_id": "exp232_task300_spatial_mask4x3_cost_probe",
+  "date": "2026-06-10",
+  "task_id": 300,
+  "candidate": {
+    "task_id": 300,
+    "route": "crop_or_resize",
+    "template_name": "max_color_spatial_mask4x3",
+    "baseline_cost": 77546,
+    "candidate_cost": 81541,
+    "baseline_points": 13.741373412351637,
+    "candidate_points": 13.691138759782408,
+    "file_bytes": 3179,
+    "validation_status": "267_pass_0_fail",
+    "status": "no_cost_gain",
+    "reason": "candidate cost is not lower than baseline",
+    "sha256": "d6c62befdd14a601825f9600fe178f7103a811fefd7e762044875121fc515172"
+  },
+  "improved": false,
+  "decision": "improvedならbundle/submission候補。no_cost_gainならtask300は更なるdtype/graph optimizationが必要。",
+  "submission_decision": "no_submit: cost probe only",
+  "leakage_risk": "low",
+  "overfitting_risk": "medium-low"
+}

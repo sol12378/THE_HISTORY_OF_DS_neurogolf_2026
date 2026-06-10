@@ -247,3 +247,25 @@
 | exp213_task346_rank_switch_feature_audit | audit_complete | rank0 largest component >=8 covers 4 switches with 0 FP | - | validate component-corrected rule |
 | exp214_task346_least_color_component_rule | rule_found | 267/267 | - | new solved rule; lowering needs count + component proxy |
 | exp215_task346_count_component_cost_probe | cost_probe_ready | count ArgMin cost 111; component step cost 117135 | - | task346 direct lowering not viable with full-grid component proxy |
+| exp216_onecell_cropish_wide_rule_sweep | near_hit | task346 interior_least_nz 265/267; no full hit | - | 1x1 aggregate lane still lacks component-free full hit |
+| exp217_task346_interior_least_failure_audit | audit_complete | 2 failures remain; no TP2/FP0 simple count branch | - | task346 still needs component-like condition |
+| exp218_crop3x3_wide_rule_sweep | rule_found | task039 264/264; task135 266/266 | - | task039 dynamic bbox crop worth cost probe |
+| exp219_task039_bbox3x3_cost_probe | no_cost_gain | validation 264_pass_0_fail; cost 48219 vs 7772 | - | GatherElements bbox crop too expensive |
+| exp220_task039_dynamic_slice_cost_probe | rejected_static | dynamic shape crop rejected | - | dynamic Slice lane not accepted by static checker |
+| exp221_fixed_smallshape_crop_sweep | rule_found_no_useful_gain | full hits task039/135/326; useful fixed-anchor hit none | - | fixed crop supplier exhausted for high-cost tasks |
+| exp222_fixed_smallshape_crop_colormap_sweep | rule_found_no_useful_gain | same hits as exp221; all identity maps; useful_fixed_hits 0 | - | global colormap adds no supplier gain |
+| exp223_small_output_mask_shape_inventory | inventory_ready | task300/174 high-cost shape full hits | - | inspect component-output family |
+| exp224_task300_component_output_audit | rule_found | task300 largest component crop 267/267 | - | strong solved-rule asset; needs cost proxy |
+| exp225_task300_max_color_proxy_audit | audit_complete | max color count proxy 267/267 | - | component growth avoidable |
+| exp226_task300_max_color_mask4x3_cost_probe | rejected_validation | 0_pass_1_fail | - | missing channel0 background inside crop |
+| exp227_task300_exp226_output_diagnostic | diagnostic_complete | argmax grid matched; one-hot mismatch suspected | - | debug background channel |
+| exp228_task300_max_color_mask4x3_bgfix_cost_probe | rejected_validation | 0_pass_1_fail | - | padding outside output got channel0=1 |
+| exp229_task300_exp228_onehot_diagnostic | diagnostic_complete | 888 extra channel0 cells outside output | - | pad outside must stay all-zero |
+| exp230_task300_max_color_mask4x3_padfix_cost_probe | rejected_validation | 1_pass_1_fail | - | variable bbox outside 4x3 needs shape mask |
+| exp231_task300_max_color_mask4x3_shapemask_cost_probe | no_cost_gain | 267_pass_0_fail; cost 92595 vs 77546 | - | correct but too expensive |
+| exp232_task300_spatial_mask4x3_cost_probe | no_cost_gain | 267_pass_0_fail; cost 81541 vs 77546 | - | close but still above baseline |
+| exp233_task300_channel_gather_mask4x3_cost_probe | improved | 267_pass_0_fail; cost 52653 vs 77546 | - | submit candidate |
+| exp234_task300_max_color_submit_probe | public_lb_improved | ref 53530035; expected 6006.32 | 6006.32 | new current public LB best |
+| exp235_task174_component_output_audit | partial | largest/max-color crop 138/266 | - | needs internal sub-crop rule |
+| exp236_task174_internal_subcrop_audit | no_hit | best internal subcrop 138/266 | - | task174 needs richer internal selection |
+| exp237_task253_static_template_color_audit | audit_complete | fixed binary template; best color selector 76/265 | - | color selector unresolved |

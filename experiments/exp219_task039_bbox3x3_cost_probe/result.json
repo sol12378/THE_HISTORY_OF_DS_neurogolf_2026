@@ -1,0 +1,24 @@
+{
+  "exp_id": "exp219_task039_bbox3x3_cost_probe",
+  "date": "2026-06-10",
+  "task_id": 39,
+  "candidate": {
+    "task_id": 39,
+    "route": "crop_or_resize",
+    "template_name": "bbox_top_left_3x3_gatherelements",
+    "baseline_cost": 7772,
+    "candidate_cost": 48219,
+    "baseline_points": 16.04171718950267,
+    "candidate_points": 14.21649158676275,
+    "file_bytes": 1653,
+    "validation_status": "264_pass_0_fail",
+    "status": "no_cost_gain",
+    "reason": "candidate cost is not lower than baseline",
+    "sha256": "8bf2aeafa55b396288d3e77d35774aac398cb1de7a4919b83b4910d07e3cd5df"
+  },
+  "improved": false,
+  "decision": "improvedならbundle化して提出候補。no_cost_gainならdynamic bbox cropのGatherElements loweringは保留。",
+  "submission_decision": "no_submit: cost probe only",
+  "leakage_risk": "low: input-only bbox crop rule, exp218で全264例pass。",
+  "overfitting_risk": "medium-low: bbox crop rule is simple, but hidden shape/color edgeはsingle-task submissionで較正する。"
+}

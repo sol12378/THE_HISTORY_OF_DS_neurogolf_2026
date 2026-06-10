@@ -1,0 +1,14 @@
+rule,pass_count,fail_count
+least_nz,76,189
+mode_nz,76,189
+bbox_tl,29,236
+bbox_bl,28,237
+bbox_tr,22,243
+bl,6,259
+bbox_center,4,261
+tl,4,261
+center,3,262
+tr,2,263
+bbox_br,0,265
+br,0,265
+mode_all,0,265
