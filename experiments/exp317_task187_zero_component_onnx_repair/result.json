@@ -1,7 +1,7 @@
 {
   "exp_id": "exp317_task187_zero_component_onnx_repair",
   "date": "2026-06-11",
-  "status": "repair_zip_ready",
+  "status": "submitted_complete_no_adopt",
   "hypothesis": "task187 zero-component rule can be repaired with correctness-first boundary flood-fill ONNX even if cost is high",
   "base_exp": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates",
   "base_public_lb": 6008.96,
@@ -93,9 +93,12 @@
     "submission_zip": "experiments\\exp317_task187_zero_component_onnx_repair\\submission.zip"
   },
   "elapsed_s": 3.056,
-  "submission_decision": "submitted_publiczero_repair_probe_pending",
+  "submission_decision": "do_not_adopt_public_lb_worse_than_exp297",
   "kaggle_ref": 53550409,
-  "kaggle_status": "PENDING",
+  "kaggle_status": "COMPLETE",
+  "public_lb": 6007.71,
+  "observed_delta_vs_exp297": -1.25,
+  "interpretation": "The repair did not recover a public-zero task on the exp297 base. The observed LB is lower than exp297 by about the cost penalty, indicating task187 is already public-scoring alive in the current best lineage; do not adopt this high-cost replacement.",
   "leakage_risk": "low-medium: task187 was selected via public-zero probe, but the candidate is an input-derived zero-component rule inferred from train and full-arc validated.",
   "overfitting_risk": "medium: correctness-first unrolled flood-fill is task-specific and still needs LB probe to verify public repair."
 }

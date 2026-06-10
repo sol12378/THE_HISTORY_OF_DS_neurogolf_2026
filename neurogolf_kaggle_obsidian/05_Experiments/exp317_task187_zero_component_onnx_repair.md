@@ -17,11 +17,13 @@ task187 は border-connected zero component を color `3`、enclosed zero compon
 - expected_public_lb_if_pass: `6021.176104048283`
 - zip sanity: `400` files / `names_ok=true`
 - Kaggle ref: `53550409`
-- Kaggle status: `PENDING`
+- Kaggle status: `COMPLETE`
+- public LB: `6007.71`
+- observed delta vs exp297: `-1.25`
 
 ## 判断
 
-public-zero repair なので cost は高いが、0 点からの回収が期待できるため提出した。採点完了後、LB が `6021.18` 付近なら current best を更新する。
+public LB は期待 `6021.18` ではなく `6007.71` だったため採用しない。現 best exp297 では task187 がすでに public-scoring alive になっており、今回の高 cost replacement の cost penalty だけが見えた可能性が高い。
 
 ## リスク
 
