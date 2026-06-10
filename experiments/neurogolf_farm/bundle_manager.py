@@ -122,11 +122,18 @@ class BundleLedger:
         for candidate in accepted:
             primitive_kind = candidate.primitive_kind or "unknown"
             accepted_count_by_primitive[primitive_kind] = accepted_count_by_primitive.get(primitive_kind, 0) + 1
+        best_delta_by_primitive: dict[str, float] = {}
+        for candidate in best_by_task:
+            primitive_kind = candidate.primitive_kind or "unknown"
+            best_delta_by_primitive[primitive_kind] = (
+                best_delta_by_primitive.get(primitive_kind, 0.0) + candidate.computed_local_delta
+            )
         return {
             "submitted_best_estimate": submitted_best_estimate,
             "accepted_count": len(accepted),
             "best_by_task_count": len(best_by_task),
             "accepted_count_by_primitive": accepted_count_by_primitive,
+            "best_delta_by_primitive": best_delta_by_primitive,
             "best_total_local_delta": best_delta,
             "candidate_estimate": candidate_estimate,
             "should_submit": candidate_estimate > submitted_best_estimate,

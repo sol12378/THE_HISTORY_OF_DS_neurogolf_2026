@@ -1,0 +1,25 @@
+{
+  "exp_id": "exp312_submission_decision_primitive_delta",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "submission_decision should expose best local delta by primitive kind for future grid_sample candidate reviews",
+  "expected_cost_reduction": "no direct score change; keeps grid_sample delta visible in submit decision",
+  "decision": {
+    "submitted_best_estimate": 6008.96,
+    "accepted_count": 1,
+    "best_by_task_count": 1,
+    "accepted_count_by_primitive": {
+      "grid_sample": 1
+    },
+    "best_delta_by_primitive": {
+      "grid_sample": 4.710530701645918
+    },
+    "best_total_local_delta": 4.710530701645918,
+    "candidate_estimate": 6013.670530701646,
+    "should_submit": true
+  },
+  "grid_sample_delta": 4.710530701645918,
+  "submission_decision": "no_submit_synthetic_only",
+  "leakage_risk": "low: synthetic ledger only",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}
