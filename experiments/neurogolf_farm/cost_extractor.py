@@ -59,6 +59,7 @@ class CostSignal:
     hard_reject: bool
     reasons: list[str] = field(default_factory=list)
     risk_tags: list[str] = field(default_factory=list)
+    primitive_kinds: tuple[str, ...] = ()
     node_count: int | None = None
     full_grid_intermediate_count: int | None = None
     param_count: int | None = None
@@ -73,6 +74,7 @@ class CostSignal:
             "hard_reject": self.hard_reject,
             "reasons": self.reasons,
             "risk_tags": self.risk_tags,
+            "primitive_kinds": self.primitive_kinds,
             "node_count": self.node_count,
             "full_grid_intermediate_count": self.full_grid_intermediate_count,
             "param_count": self.param_count,
@@ -142,6 +144,7 @@ class CostExtractor:
             hard_reject=hard_reject,
             reasons=reasons,
             risk_tags=sorted(set(risk_tags)),
+            primitive_kinds=program.primitive_kinds,
             node_count=len(program.nodes),
             full_grid_intermediate_count=full_grid_intermediates,
             param_count=param_count_proxy,

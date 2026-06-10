@@ -1,0 +1,26 @@
+{
+  "exp_id": "exp304_cost_signal_primitive_kinds",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "CostSignal should expose primitive_kinds so grid_sample lane remains visible in farm guardrail rows",
+  "expected_cost_reduction": "no direct score change; improves lane attribution for future supplier decisions",
+  "signal": {
+    "subject": "smoke_gridsample_signal",
+    "predicted_cost_band": "250-600_plausible",
+    "hard_reject": false,
+    "reasons": [],
+    "risk_tags": [],
+    "primitive_kinds": [
+      "grid_sample"
+    ],
+    "node_count": 1,
+    "full_grid_intermediate_count": 0,
+    "param_count": 8,
+    "param_bytes": 8,
+    "memory_bytes_proxy": 1,
+    "cost_proxy": 9
+  },
+  "submission_decision": "no_submit_tooling_only",
+  "leakage_risk": "low: signal metadata only",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}
