@@ -1,0 +1,14 @@
+{
+  "exp_id": "exp313_farm_notes_next_low_cost",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "farm notes should include the next low-cost primitive and cost for PDCA handoff",
+  "expected_cost_reduction": "no direct score change; preserves grid_sample cost 9 rationale in notes",
+  "next_low_cost_primitive": "grid_sample",
+  "next_low_cost_primitive_cost": 9,
+  "notes_has_grid_sample": true,
+  "notes_has_cost": true,
+  "submission_decision": "no_submit_smoke_only",
+  "leakage_risk": "low: notes-only visibility",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}
