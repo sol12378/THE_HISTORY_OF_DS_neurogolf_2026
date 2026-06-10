@@ -1,0 +1,168 @@
+{
+  "exp_id": "exp307_farm_next_low_cost_primitive",
+  "status": "pipeline_core_ready",
+  "floor_status": {
+    "target_lb_floor": 6285.0,
+    "submit_floor_ready": false,
+    "ready_source_count": 0,
+    "current_best_public_lb": 6008.96,
+    "max_observed_kaggle_lb": 6008.96,
+    "policy": "public CODE is a floor only after full-arc validation plus Kaggle LB evidence; otherwise teacher/intelligence"
+  },
+  "guardrail_rows": [
+    {
+      "subject": "smoke_recolor_direct",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "primitive_kinds": [
+        "recolor_direct"
+      ],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 44,
+      "param_bytes": 44,
+      "memory_bytes_proxy": 1,
+      "cost_proxy": 45
+    },
+    {
+      "subject": "smoke_recolor_cast",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "primitive_kinds": [
+        "recolor_cast",
+        "recolor_cast"
+      ],
+      "node_count": 2,
+      "full_grid_intermediate_count": 0,
+      "param_count": 140,
+      "param_bytes": 140,
+      "memory_bytes_proxy": 1,
+      "cost_proxy": 141
+    },
+    {
+      "subject": "smoke_gridsample",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "primitive_kinds": [
+        "grid_sample"
+      ],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 8,
+      "param_bytes": 8,
+      "memory_bytes_proxy": 1,
+      "cost_proxy": 9
+    },
+    {
+      "subject": "smoke_channel_gather",
+      "predicted_cost_band": "high_cost_probe_only",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "primitive_kinds": [
+        "channel_gather"
+      ],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 0,
+      "param_bytes": 0,
+      "memory_bytes_proxy": 36000,
+      "cost_proxy": 36000
+    },
+    {
+      "subject": "smoke_slice_pad",
+      "predicted_cost_band": "high_cost_probe_only",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "primitive_kinds": [
+        "static_slice_pad",
+        "static_slice_pad"
+      ],
+      "node_count": 2,
+      "full_grid_intermediate_count": 0,
+      "param_count": 0,
+      "param_bytes": 0,
+      "memory_bytes_proxy": 36000,
+      "cost_proxy": 36000
+    },
+    {
+      "subject": "smoke_full_grid_where",
+      "predicted_cost_band": "reject",
+      "hard_reject": true,
+      "reasons": [
+        "mask: full_grid_composition is a known high-cost lane",
+        "overlay: full_grid_composition is a known high-cost lane"
+      ],
+      "risk_tags": [],
+      "primitive_kinds": [
+        "full_grid_composition",
+        "full_grid_composition"
+      ],
+      "node_count": 2,
+      "full_grid_intermediate_count": 0,
+      "param_count": 0,
+      "param_bytes": 0,
+      "memory_bytes_proxy": 72000,
+      "cost_proxy": 72000
+    },
+    {
+      "subject": "smoke_scatter_writeback",
+      "predicted_cost_band": "reject",
+      "hard_reject": true,
+      "reasons": [
+        "scatter: sparse_writeback is a known high-cost lane",
+        "scatter: ScatterND over full-grid output is pre-rejected"
+      ],
+      "risk_tags": [],
+      "primitive_kinds": [
+        "sparse_writeback"
+      ],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 0,
+      "param_bytes": 0,
+      "memory_bytes_proxy": 36000,
+      "cost_proxy": 36000
+    }
+  ],
+  "low_cost_guardrail_subjects": [
+    "smoke_recolor_direct",
+    "smoke_recolor_cast",
+    "smoke_gridsample"
+  ],
+  "low_cost_guardrail_min_cost_by_primitive": {
+    "recolor_direct": 45,
+    "recolor_cast": 141,
+    "grid_sample": 9
+  },
+  "next_low_cost_primitive": "grid_sample",
+  "outputs": {
+    "public_code_registry": "E:\\kaggle\\neurogolf-2026\\experiments\\exp307_farm_next_low_cost_primitive\\public_code_registry.csv",
+    "bundle_ledger_smoke": "E:\\kaggle\\neurogolf-2026\\experiments\\exp307_farm_next_low_cost_primitive\\bundle_ledger_smoke.csv"
+  },
+  "bundle_smoke": {
+    "accepted_count": 1,
+    "best_by_task_count": 1,
+    "duplicate_task_count": 0,
+    "total_local_delta": 0.6931471805599453,
+    "best_total_local_delta": 0.6931471805599453,
+    "submission_decision": {
+      "submitted_best_estimate": 6008.96,
+      "accepted_count": 1,
+      "best_by_task_count": 1,
+      "best_total_local_delta": 0.6931471805599453,
+      "candidate_estimate": 6009.65314718056,
+      "should_submit": true
+    },
+    "submission_decision_scope": "smoke_dummy_not_kaggle_candidate",
+    "submission_decision_reason": "run_smoke uses synthetic ledger rows only; do not submit from this decision"
+  },
+  "decision": "ONNX farm should accept only low-cost primitive IR or full-arc-safe graph surgery. Public CODE is imported as teacher/intelligence until it has full validation and LB evidence."
+}
