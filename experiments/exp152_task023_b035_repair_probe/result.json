@@ -1,0 +1,51 @@
+{
+  "exp_id": "exp152_task023_b035_repair_probe",
+  "date": "2026-06-10",
+  "status": "public_lb_improved",
+  "purpose": "Repair task023 public-zero by replacing current raw with exp_b035 full-validation candidate on top of exp144 public-best bundle.",
+  "base_exp": "experiments\\exp144_task018_b035_repair_probe",
+  "base_public_lb": 5942.48,
+  "task_id": 23,
+  "candidate_source": "exp_b035_new_source_full_arc_blend",
+  "candidate_path": "experiments\\exp151_task023_candidate_validation_audit\\task023_05_exp_b035_new_source_full_arc_blend.onnx",
+  "candidate_sha256": "381d1261e875c1cddec3fdc4fdca4eff331d3edad2677ad6ba7a97a0d16be814",
+  "candidate_validation": {
+    "ok": true,
+    "reason": "ok",
+    "passed": 266,
+    "failed": 0,
+    "status": "266_pass_0_fail"
+  },
+  "candidate_cost": 72612,
+  "candidate_score_reason": "ok",
+  "candidate_points_if_public_alive": 13.807115,
+  "expected_public_lb_if_pass": 5956.287114999999,
+  "kaggle_ref": 53521952,
+  "public_lb": 5956.28,
+  "delta_vs_base_public_lb": 13.799999999999272,
+  "delta_vs_exp127_public_lb": 25.729999999999563,
+  "interpretation": "task023 exp_b035 repair recovered public score on top of exp144; this is the new public LB best, but remains high risk because both task018 and task023 repairs are public/source blend derived.",
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820141,
+    "sha256": "6e36d2b7eaddeeea91466c9042c2bbb9f9e77e74cfa7498a0f271d9030ae25a4"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp152_task023_b035_repair_probe\\submission.zip"
+  },
+  "elapsed_s": 6.372,
+  "submission_decision": "adopt_as_current_public_lb_best_with_high_risk_flag",
+  "leakage_risk": "high: candidate is from an existing public/source blend and may be public-overfit.",
+  "overfitting_risk": "high: task023 was identified through public bisection; repair must be LB-probed and not assumed private-safe."
+}

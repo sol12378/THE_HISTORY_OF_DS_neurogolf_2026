@@ -21,6 +21,7 @@ You are working in the NeuroGolf Kaggle competition workspace.
 - Prefer fast experiments that can finish in about 20 minutes before scaling up.
 - Do not optimize only for public LB.
 - Explicitly document leakage risk and overfitting risk.
+- After submitting to Kaggle, do not idle while waiting for scoring. Use the pending time to advance independent work such as selecting the next candidate group, auditing repair sources, preparing validation scripts, drafting notes/log updates, or running non-conflicting local checks. Avoid actions that depend on the pending score until the result is known.
 
 ## Multi-Agent PDCA Workflow
 

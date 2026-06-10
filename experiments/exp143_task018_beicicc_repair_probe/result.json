@@ -1,0 +1,49 @@
+{
+  "exp_id": "exp143_task018_beicicc_repair_probe",
+  "date": "2026-06-10",
+  "status": "no_public_gain",
+  "purpose": "Replace public-zero task018 in exp127 with beicicc/public-code candidate that passes full local validation.",
+  "base_exp": "experiments\\exp127_focused_surgery_seventh_pass_limited",
+  "base_public_lb": 5930.55,
+  "base_local_estimate": 6282.965235594199,
+  "task_id": 18,
+  "candidate_raw": "experiments\\exp142_task018_candidate_validation_audit\\task018_05_exp130_public_code_6285_floor.onnx",
+  "candidate_cost_from_manifest": 33897,
+  "candidate_points_from_manifest": 14.568918206122644,
+  "expected_lb_if_public_pass": 5945.1189182061225,
+  "candidate_validation": {
+    "ok": true,
+    "reason": "ok",
+    "passed": 266,
+    "failed": 0,
+    "status": "266_pass_0_fail"
+  },
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 820191,
+    "sha256": "1337db064a098bbea27e5386e86f1dee3eef23102a4042c4aa9ff08b2ba1aff2"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp143_task018_beicicc_repair_probe\\submission.zip"
+  },
+  "elapsed_s": 17.381,
+  "submission_decision": "submit_single_task_repair_probe",
+  "kaggle_submission_ref": 53520866,
+  "kaggle_status": "COMPLETE",
+  "kaggle_public_lb": 5930.55,
+  "observed_delta_vs_exp127": 0.0,
+  "probe_interpretation": "The beicicc task018 candidate also scores zero on public despite full local validation; do not adopt.",
+  "leakage_risk": "high: beicicc public-code source collapsed in exp130; this is a single-task calibration probe, not a final private-safe repair yet.",
+  "overfitting_risk": "high: public pass would not prove private robustness."
+}

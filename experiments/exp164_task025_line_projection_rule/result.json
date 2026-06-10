@@ -1,0 +1,16 @@
+{
+  "exp_id": "exp164_task025_line_projection_rule",
+  "date": "2026-06-10",
+  "status": "rule_probe_complete",
+  "task_id": 25,
+  "pass_count": 266,
+  "total": 266,
+  "first_fail": null,
+  "outputs": {
+    "eval_csv": "experiments\\exp164_task025_line_projection_rule\\task025_line_projection_eval.csv"
+  },
+  "elapsed_s": 0.228,
+  "decision": "rule_found_lower_next",
+  "leakage_risk": "low: input-only geometric rule over provided train/test/arc-gen examples.",
+  "overfitting_risk": "medium: full-line assumption may fail if hidden variants use broken or partial guide lines."
+}

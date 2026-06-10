@@ -1,0 +1,8 @@
+rule,passed,total,note
+identity,0,266,mismatch 0
+fill_zero_with_most_common_nonzero,0,266,mismatch 0
+row_col_intersection_fill,0,266,mismatch 0
+bbox_hole_fill,0,266,mismatch 0
+mirror_horizontal,0,266,mismatch 0
+mirror_vertical,0,266,mismatch 0
+rot180,0,266,mismatch 0

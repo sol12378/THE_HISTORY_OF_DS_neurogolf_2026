@@ -1,0 +1,49 @@
+{
+  "exp_id": "exp166_task025_line_projection_publiczero_repair",
+  "date": "2026-06-10",
+  "status": "submitted_complete",
+  "kaggle_ref": 53523413,
+  "kaggle_status": "COMPLETE",
+  "public_lb": 5968.18,
+  "purpose": "Repair task025 public-zero using exp164 input-only guide-line projection rule lowered by exp165.",
+  "base_exp": "experiments\\exp152_task023_b035_repair_probe",
+  "base_public_lb": 5956.28,
+  "task_id": 25,
+  "candidate_source": "exp165_task025_line_projection_onnx_probe",
+  "candidate_path": "experiments\\exp165_task025_line_projection_onnx_probe\\candidate_sanitized.onnx",
+  "candidate_sha256": "4f0df14f0df76292ace6781a959118511b5bd3637d31a758b7de96e49997925a",
+  "candidate_validation": {
+    "ok": true,
+    "reason": "ok",
+    "passed": 266,
+    "failed": 0,
+    "status": "266_pass_0_fail"
+  },
+  "candidate_cost": 491600,
+  "candidate_score_reason": "ok",
+  "candidate_points_if_public_alive": 11.894579343325983,
+  "expected_public_lb_if_pass": 5968.174579343326,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 810661,
+    "sha256": "8468ede68913b54bfd3a75a953ac64c122dd5e4b13017aa4b83447387e720193"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp166_task025_line_projection_publiczero_repair\\submission.zip"
+  },
+  "elapsed_s": 1.783,
+  "submission_decision": "submit_publiczero_repair_probe",
+  "leakage_risk": "low-to-medium: candidate is an input-only geometric rule, but task025 was selected via public-zero bisection.",
+  "overfitting_risk": "medium: full-line guide assumption passes all local generated examples but still needs LB probe."
+}

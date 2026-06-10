@@ -1,0 +1,401 @@
+audit_status,boolish_full_grid,cast_from_boolish_to_float_full_grid,cast_to_float_full_grid,float_full_grid_from_boolish,full_grid_bool,full_grid_float,full_grid_int32,full_grid_uint8,heuristic_saving,node_count,op_counts,reason,task_id,top_full_grid_producers,where_full_grid
+ok,129,2,2,0,129,3,0,0,4275000,723,Where:145 And:111 Equal:77 Cast:61 ReduceSum:44 Greater:25 Tile:25 Or:22 MaxPool:22 Reshape:21 Gather:18 Sub:16,ok,366,Where:82 And:72 Cast:51 Equal:36 MaxPool:22 Gather:18 Or:10 Tile:6 Greater:5 Not:5,82
+ok,69,0,0,0,69,4,0,4,1899000,125,And:27 Equal:13 Add:11 GreaterOrEqual:10 LessOrEqual:10 Or:10 Where:8 Sub:7 Reshape:7 ArgMax:5 ReduceSum:3 Gather:3,ok,284,And:27 Equal:11 GreaterOrEqual:10 LessOrEqual:10 Or:10 Where:4 input_or_initializer:3 ReduceSum:1 Gather:1 Sub:1,4
+ok,37,18,18,0,37,21,0,0,1494000,374,Slice:91 Reshape:91 And:72 Greater:55 Less:37 Cast:19 MatMul:2 Flatten:1 Unsqueeze:1 Sub:1 Mul:1 ReduceSum:1,ok,158,And:36 Cast:18 input_or_initializer:1 Where:1 Sum:1 Greater:1,1
+ok,51,0,0,0,51,1,0,0,1449000,239,Slice:45 Pad:36 Where:30 And:29 Equal:28 Greater:23 Or:20 ReduceMax:8 ReduceMin:4 Sub:4 CumSum:4 Cast:3,ok,382,And:26 Or:20 Slice:9 Where:8 Cast:3 Greater:3 Not:2 input_or_initializer:1 Concat:1 ReduceSum:1,8
+ok,45,0,0,0,45,1,0,28,1215000,84,Greater:24 And:16 Cast:15 MaxPool:14 Gather:10 ReduceSum:1 LessOrEqual:1 Or:1 Not:1 Concat:1,ok,187,Greater:24 And:16 Cast:15 MaxPool:14 Gather:10 input_or_initializer:2 Concat:1 ReduceSum:1 LessOrEqual:1 Or:1,0
+ok,37,1,1,0,37,4,0,0,1098000,102,And:21 Or:12 Cast:10 Greater:10 Where:8 Less:5 Equal:4 GatherND:4 Not:4 Sub:3 Concat:3 Unsqueeze:3,ok,328,And:21 Where:8 Greater:4 Or:4 GreaterOrEqual:3 Less:3 input_or_initializer:2 Conv:2 Cast:1 Add:1,8
+ok,30,0,0,0,30,1,0,2,855000,79,And:21 Less:12 ReduceSum:8 Where:7 Sum:5 Sub:5 Equal:4 Or:4 Cast:3 Gather:2 Abs:2 Conv:1,ok,34,And:19 Where:5 input_or_initializer:4 Or:4 Less:3 Cast:2 ReduceSum:2 Sub:2 Abs:2 Gather:1,5
+ok,16,0,0,0,16,2,0,0,603000,107,Where:23 Gather:14 Mul:14 Greater:9 Max:9 Equal:7 Sub:6 Conv:5 Cast:4 ReduceMax:4 CumSum:4 MaxPool:4,ok,54,Where:19 Mul:14 Gather:12 Greater:9 Max:8 Sub:6 Conv:5 Equal:4 CumSum:4 MaxPool:4,19
+ok,21,0,0,0,21,1,0,0,576000,57,Greater:9 And:9 Cast:6 ReduceSum:6 Conv:5 Or:5 Where:4 Mul:3 Slice:2 Sub:2 Not:2 Equal:2,ok,383,And:8 Cast:5 Conv:5 Greater:5 Or:5 Equal:2 input_or_initializer:1 Concat:1 Slice:1 Where:1,1
+ok,18,1,1,0,18,9,1,4,531000,197,Cast:28 Reshape:23 Less:22 Where:20 Not:20 ReduceMax:18 And:17 Min:13 ReduceMin:10 Concat:6 GatherND:5 Equal:5,ok,377,And:9 Cast:6 Equal:5 Not:4 Min:3 Where:2 input_or_initializer:1 Conv:1 Gather:1,2
+ok,17,0,0,0,17,2,0,1,486000,99,Cast:14 Squeeze:10 Gather:10 And:9 Greater:7 Equal:7 Where:7 ReduceMax:5 Or:5 ReduceSum:4 Less:4 Add:4,ok,138,And:6 Or:5 Cast:4 Greater:3 Where:3 CumSum:2 Less:2 Gather:2 input_or_initializer:1 Conv:1,3
+ok,15,0,0,0,15,1,0,0,405000,168,Equal:60 And:45 Cast:14 Or:12 Slice:11 Greater:6 ReduceSum:6 ReduceMax:4 Conv:2 ConvTranspose:2 Concat:2 Clip:1,ok,182,Slice:6 And:3 Or:2 input_or_initializer:1 Concat:1 Greater:1 Pad:1 Not:1,0
+ok,13,0,0,0,13,3,0,6,351000,25,And:6 Cast:5 Greater:4 Not:3 ConvTranspose:2 Slice:1 Conv:1 Relu:1 ReduceSum:1 Concat:1,ok,349,And:6 Cast:5 Greater:4 Not:3 input_or_initializer:2 ConvTranspose:2 Concat:1 Slice:1 ReduceSum:1,0
+ok,9,1,1,0,9,3,0,0,342000,39,Where:8 Cast:4 Sub:4 Equal:3 Add:3 Greater:2 Not:2 ReduceMin:2 ReduceMax:2 Reshape:2 ArgMax:1 ReduceSum:1,ok,206,Where:8 Equal:3 Cast:2 Greater:2 Not:2 input_or_initializer:1 ArgMax:1 ReduceSum:1 And:1 Slice:1,8
+ok,12,0,0,0,12,3,0,0,333000,214,Cast:52 ReduceMax:33 Equal:27 ReduceSum:20 Greater:19 Add:15 And:10 Not:9 Where:9 Sub:4 Mul:4 ReduceMin:2,ok,21,Equal:9 Cast:9 Less:2 input_or_initializer:1 Where:1 Conv:1 And:1,1
+ok,12,0,0,0,12,1,0,0,333000,61,Cast:7 Reshape:6 And:6 ArgMax:4 Equal:4 Or:4 Greater:4 ReduceMax:3 Sub:3 Add:3 Less:3 ReduceSum:3,ok,281,Cast:3 And:3 input_or_initializer:2 Or:2 Greater:2 ReduceMax:1 Mul:1 Add:1 Where:1 Sub:1,1
+ok,9,0,0,0,9,3,0,10,324000,67,ReduceMax:11 And:9 Where:9 Cast:6 Equal:6 Concat:5 Greater:4 Reshape:4 Slice:2 Pad:2 Not:2 MatMul:2,ok,184,And:9 Where:9 input_or_initializer:2 Cast:2 ScatterND:1 ArgMax:1,9
+ok,6,1,1,0,6,7,0,27,315000,37,Where:14 MaxPool:12 Greater:2 Cast:2 ReduceSum:1 Slice:1 Or:1 Not:1 And:1 Sub:1 Concat:1,ok,338,Where:14 MaxPool:12 input_or_initializer:3 Greater:2 Cast:2 Concat:1 ReduceSum:1 Slice:1 Or:1 Not:1,14
+ok,11,0,0,0,11,1,0,0,306000,58,And:10 ReduceMax:7 Unsqueeze:7 Equal:7 ArgMax:6 Slice:4 Greater:4 Or:3 Cast:2 Sub:2 Less:2 ReduceSum:1,ok,51,And:6 ReduceMax:3 Or:3 Greater:2 input_or_initializer:1 Where:1 Cast:1 Slice:1,1
+ok,8,1,1,0,8,7,0,0,270000,30,Equal:9 Where:5 Cast:4 ReduceSum:3 ReduceMax:2 Not:2 And:2 CumSum:2 Einsum:1,ok,92,Equal:5 Cast:4 Where:3 And:2 CumSum:2 input_or_initializer:1 Einsum:1 ReduceSum:1,3
+ok,8,1,1,0,8,2,2,0,261000,41,Equal:6 Or:6 And:6 Sub:5 Cast:3 Add:3 ReduceMax:2 ReduceSum:2 Where:2 Greater:1 Slice:1 ArgMax:1,ok,376,And:5 Or:2 Where:2 input_or_initializer:1 Cast:1 Equal:1,2
+ok,9,0,0,0,9,4,0,5,252000,17,Cast:5 MaxPool:4 And:3 Slice:2 Greater:1 Or:1 Where:1,ok,350,Cast:5 MaxPool:4 And:3 Slice:2 input_or_initializer:1 Where:1 Greater:1 Or:1,1
+ok,9,0,0,0,9,2,0,2,252000,108,Gather:21 Less:21 Reshape:17 And:15 Sub:11 Add:10 Or:4 ReduceSum:2 MatMul:2 Cast:2 Flatten:1 Mul:1,ok,255,And:5 Or:4 input_or_initializer:1 Where:1 ReduceSum:1 Cast:1,1
+ok,9,0,0,0,9,3,0,0,243000,36,Cast:7 ReduceSum:5 Sub:4 Mul:4 Div:4 And:3 Equal:2 Abs:2 Slice:1 Max:1 Not:1 Concat:1,ok,137,Cast:4 Mul:4 And:3 input_or_initializer:2 Sub:2 Or:1 ReduceSum:1 Slice:1 Max:1 Div:1,0
+ok,9,0,0,0,9,1,0,1,243000,192,Mul:31 Cast:17 Slice:17 Add:14 MaxPool:13 Greater:11 ReduceSum:9 Sub:8 Gather:8 ReduceMax:7 And:6 Equal:4,ok,18,Mul:21 MaxPool:13 Cast:4 Sub:4 input_or_initializer:2 Greater:2 And:2 Equal:2 ConvTranspose:2 Add:2,0
+ok,7,1,1,0,7,4,0,0,234000,71,Cast:12 Mul:10 MaxPool:7 Where:5 Add:5 Gather:5 ArgMax:4 And:4 ScatterND:4 Equal:3 Greater:3 Sub:2,ok,396,Mul:9 Cast:7 MaxPool:7 input_or_initializer:4 Add:3 Equal:2 Less:2 And:2 Where:2 ArgMax:1,2
+ok,5,2,3,0,5,10,0,0,198000,416,Where:124 Cast:32 ReduceMax:28 Mul:27 Greater:27 ArgMax:26 Conv:26 Sub:26 Reshape:25 Div:25 Floor:25 And:5,ok,205,Cast:4 And:3 Mul:2 input_or_initializer:1 Unsqueeze:1 Sub:1 Conv:1 Or:1 Where:1 Equal:1,1
+ok,5,0,0,0,5,2,0,10,198000,37,Where:7 Cast:5 ReduceMin:4 Sub:4 Add:4 Equal:3 Reshape:2 Pad:2 Slice:2 ArgMax:1 ReduceSum:1 Greater:1,ok,245,Where:7 Equal:3 Slice:2 input_or_initializer:1 ArgMax:1 Cast:1 ReduceSum:1 Greater:1 Not:1,7
+ok,7,0,0,0,7,2,0,0,189000,39,Equal:7 And:6 Slice:5 Cast:5 ReduceSum:4 Conv:2 Add:2 Less:2 Or:1 Sub:1 Mul:1 Div:1,ok,325,input_or_initializer:3 And:3 Concat:1 Slice:1 Cast:1 Not:1,0
+ok,6,0,0,0,6,1,0,2,171000,39,Cast:5 Reshape:5 Gather:5 Sub:4 ReduceSum:3 Mul:3 ReduceMax:2 Less:2 Where:2 Greater:2 Div:1 Slice:1,ok,109,Mul:3 Gather:3 input_or_initializer:2 Cast:2 ReduceSum:2 Greater:2 Where:1 ReduceMax:1 Sub:1 Max:1,1
+ok,6,0,0,0,6,2,0,0,162000,33,ReduceSum:4 Sub:4 Cast:3 Clip:3 Reshape:3 MaxPool:2 Abs:2 Less:2 MatMul:2 Conv:1 Transpose:1 Mul:1,ok,195,input_or_initializer:3 Concat:1 Conv:1 Cast:1 Pad:1 Greater:1 Not:1 And:1,0
+ok,1,0,0,0,1,1,0,0,162000,52,Where:19 Gather:9 Less:7 Sub:4 Mul:4 Squeeze:4 ReduceSum:2 Cast:1 ReduceMax:1 Pad:1,ok,107,input_or_initializer:16 Where:15 Gather:1 Less:1,15
+ok,6,0,0,0,6,1,0,0,162000,39,Greater:7 And:7 Cast:5 ReduceMax:5 Slice:3 ArgMax:2 Expand:2 GatherElements:2 Or:2 ReduceSum:1 Equal:1 Not:1,ok,161,And:2 input_or_initializer:1 Concat:1 Cast:1 ReduceMax:1 Greater:1 Or:1 Not:1,0
+ok,5,0,0,0,5,3,0,0,153000,48,Cast:10 ReduceSum:4 Greater:4 Less:4 ReduceMax:3 Unsqueeze:3 And:3 Not:2 Mul:2 Add:2 Squeeze:2 Gather:2,ok,301,Where:2 Cast:2 And:2 input_or_initializer:1 Conv:1 Greater:1 Less:1 Not:1 OneHot:1,2
+ok,5,0,0,0,5,3,0,0,144000,70,Gather:13 Less:13 Reshape:12 And:9 Sub:7 Add:6 MatMul:2 Or:2 Flatten:1 Unsqueeze:1 Mul:1 ReduceSum:1,ok,66,And:3 Or:2 input_or_initializer:1 Where:1 Gather:1,1
+ok,5,0,0,0,5,3,0,0,144000,320,Sum:120 Mul:117 Gather:62 Concat:5 Cast:4 Sub:4 Equal:2 Not:2 ReduceMax:1 ReduceMin:1 And:1 Where:1,ok,145,Concat:5 Cast:4 Sum:4 Sub:4 input_or_initializer:2 Gather:2 Mul:2 Equal:2 Not:2 And:1,1
+ok,5,0,0,0,5,1,0,2,144000,31,ReduceMax:10 Mul:7 Cast:2 Slice:2 ReduceSum:2 Greater:2 And:2 Less:1 Not:1 Or:1 Where:1,ok,202,Mul:3 Cast:2 ReduceMax:2 Greater:2 And:2 input_or_initializer:1 Where:1 Slice:1 Or:1,1
+ok,5,0,0,0,5,2,0,0,135000,24,Cast:5 Slice:2 Flatten:2 MatMul:1 Unsqueeze:1 Sub:1 Mul:1 ReduceSum:1 Less:1 ArgMax:1 Gather:1 ScatterElements:1,ok,285,input_or_initializer:1 Concat:1 Slice:1 ReduceMax:1 Greater:1 Not:1 Cast:1 And:1,0
+ok,2,0,0,0,2,8,0,0,117000,21,Where:7 MaxPool:4 Slice:2 Greater:1 Neg:1 Cast:1 Unsqueeze:1 ScatterND:1 Gather:1 Equal:1 Concat:1,ok,330,Where:7 MaxPool:4 input_or_initializer:3 Slice:2 Concat:1 Greater:1 Neg:1 Cast:1 Gather:1 Equal:1,7
+ok,3,1,1,0,3,4,0,0,117000,21,Mul:7 ReduceMax:5 Cast:4 Conv:1 Greater:1 Sum:1 Where:1 Equal:1,ok,215,Mul:7 Cast:4 input_or_initializer:1 ReduceMax:1 Conv:1 Greater:1 Sum:1 Where:1 Equal:1,1
+ok,3,0,0,0,3,2,0,6,108000,32,Cast:5 Reshape:4 ReduceMax:3 Equal:3 Where:3 Greater:2 Mul:2 ArgMax:2 Add:2 Clip:2 Gather:2 Conv:1,ok,290,Equal:3 Where:3 Gather:2 input_or_initializer:1 Conv:1 Cast:1,3
+ok,3,0,0,0,3,5,0,0,81000,36,Cast:5 Mul:5 ReduceSum:4 And:4 Slice:3 Min:2 Max:2 GreaterOrEqual:2 LessOrEqual:2 Equal:2 Or:1 Sub:1,ok,335,Mul:5 Cast:4 Slice:3 And:2 input_or_initializer:1 ScatterND:1 Or:1 Sub:1,0
+ok,3,0,0,0,3,1,0,0,81000,32,Cast:4 ReduceSum:4 Add:3 ReduceMax:2 Mod:2 Less:2 Where:2 Gather:2 Slice:2 Sub:2 Greater:2 Conv:1,ok,19,Cast:2 ReduceSum:2 Gather:2 Slice:2 Sub:2 Greater:2 input_or_initializer:1 ScatterND:1 Conv:1 And:1,0
+ok,2,0,0,0,2,1,0,0,81000,31,Slice:8 Less:6 Where:5 Cast:2 Mul:2 ReduceSum:2 Div:2 Floor:2 And:1 Equal:1,ok,269,Where:3 input_or_initializer:1 Equal:1 And:1,3
+ok,2,0,0,0,2,1,0,0,72000,19,Conv:5 Sub:3 Cast:2 Greater:2 Where:2 Mul:2 Pad:1 Slice:1 Sum:1,ok,162,Conv:5 Sub:3 Cast:2 Greater:2 Where:2 Mul:2 input_or_initializer:1 Sum:1 Slice:1,2
+ok,1,1,1,0,1,12,0,0,63000,100,Slice:18 Reshape:16 Cast:10 Sub:9 Less:9 Greater:9 Add:8 And:8 Mul:5 MatMul:2 Flatten:1 Unsqueeze:1,ok,367,Mul:4 input_or_initializer:2 Slice:2 Concat:1 Sum:1 Greater:1 Cast:1 Where:1,1
+ok,2,0,0,0,2,3,0,0,63000,14,Cast:4 Sub:2 Greater:2 ReduceSum:1 Slice:1 Conv:1 Constant:1 Concat:1 Where:1,ok,97,Cast:4 Sub:2 Greater:2 input_or_initializer:1 Where:1 ReduceSum:1 Slice:1 Conv:1 Concat:1,1
+ok,2,0,0,0,2,1,0,2,63000,25,Cast:5 Conv:3 Reshape:3 Mul:3 Slice:2 Greater:2 ReduceMax:2 Sub:2 MatMul:1 MaxPool:1 Where:1,ok,165,Conv:3 Mul:3 input_or_initializer:2 Cast:2 Greater:2 Where:1 MaxPool:1,1
+ok,0,2,2,0,0,6,0,2,54000,52,Where:16 MaxPool:15 Cast:12 Slice:2 Or:2 Pad:2 Greater:1 Less:1 Concat:1,ok,279,input_or_initializer:2 Pad:2 Cast:2 Concat:1 Slice:1,0
+ok,1,1,1,0,1,3,0,0,54000,123,And:24 Slice:16 Where:15 Greater:12 ReduceMax:12 Pad:12 Equal:10 Conv:7 Cast:5 ReduceMin:3 MaxPool:3 ConvTranspose:3,ok,80,ConvTranspose:3 Cast:2 input_or_initializer:1 Conv:1 Max:1 Equal:1,0
+ok,2,0,0,0,2,1,0,0,54000,169,MaxPool:59 Min:59 Gather:10 Or:9 Mul:8 Cast:7 And:3 Not:2 ReduceMax:2 Constant:2 Slice:1 Conv:1,ok,286,input_or_initializer:1 Pad:1 Cast:1,0
+ok,2,0,0,0,2,1,0,0,54000,33,Slice:14 Or:5 Concat:3 Greater:2 Tile:2 Pad:2 And:2 Cast:1 ReduceSum:1 Not:1,ok,306,input_or_initializer:1 Pad:1 Greater:1,0
+ok,0,0,0,0,0,1,0,0,45000,28,Where:10 Equal:5 Slice:3 Cast:3 ReduceSum:2 Sum:2 ConvTranspose:1 Sub:1 Concat:1,ok,221,input_or_initializer:6 Where:5 Concat:1 ConvTranspose:1 Sum:1 ReduceSum:1 Sub:1,5
+ok,0,0,0,0,0,4,0,0,36000,103,Where:20 Sub:16 Cast:13 ArgMax:6 Less:6 Slice:5 Greater:5 Sum:5 ReduceMax:4 Or:4 Not:4 Gather:4,ok,131,Gather:4 Where:4 Slice:3 Cast:3 input_or_initializer:2 Sub:2 Concat:1 Sum:1 Relu:1 Min:1,4
+ok,1,0,0,0,1,3,0,1,36000,29,Cast:5 Reshape:5 ReduceSum:3 Where:3 Greater:2 Add:2 Gather:2 ReduceMax:2 Less:2 Slice:1 Neg:1 ArgMax:1,ok,49,input_or_initializer:1 Where:1 Cast:1 Reshape:1 Greater:1,1
+ok,1,0,0,0,1,3,0,0,36000,39,Mul:11 MaxPool:8 Sub:7 Cast:6 Conv:2 Equal:1 Where:1 Sum:1 Div:1 Concat:1,ok,204,Mul:11 MaxPool:8 Sub:7 Cast:6 input_or_initializer:2 Conv:2 Concat:1 Equal:1 Where:1 Sum:1,1
+ok,1,0,0,0,1,2,0,0,36000,76,ReduceSum:9 Where:9 Equal:8 Add:7 Cast:6 Squeeze:6 Greater:5 Gather:5 Unsqueeze:5 Mul:4 And:4 ArgMax:3,ok,20,input_or_initializer:1 Where:1 Unsqueeze:1,1
+ok,1,0,0,0,1,2,0,0,36000,19,Cast:4 Equal:4 Reshape:2 Unsqueeze:2 Where:2 GatherND:1 ReduceMin:1 ReduceSum:1 Gather:1 ReduceMax:1,ok,118,input_or_initializer:1 Where:1 Reshape:1,1
+ok,1,0,0,0,1,1,0,2,36000,16,Gather:5 Cast:3 Mul:2 ReduceSum:1 Pad:1 Sub:1 ReduceMax:1 Greater:1 Where:1,ok,33,Cast:2 Mul:2 input_or_initializer:1 Where:1 ReduceSum:1 Gather:1 Sub:1 Greater:1,1
+ok,1,0,0,0,1,1,0,2,36000,29,Slice:7 Mul:7 Pad:6 Cast:2 ReduceSum:2 Sub:2 ReduceMax:1 Greater:1 Where:1,ok,126,Mul:7 Slice:6 Cast:2 ReduceSum:2 Sub:2 input_or_initializer:1 Where:1 Greater:1,1
+ok,1,0,0,0,1,1,0,0,36000,15,Cast:3 ReduceSum:3 ArgMax:2 ReduceMax:2 Equal:2 Greater:1 Where:1 Mul:1,ok,359,input_or_initializer:1 Mul:1 Cast:1 ReduceSum:1 Greater:1 Where:1,1
+ok,1,0,1,0,1,3,0,0,27000,17,Cast:5 ReduceSum:2 Greater:2 Conv:1 ConvTranspose:1 Slice:1 ArgMax:1 Equal:1 Sub:1 Mul:1 Concat:1,ok,192,Cast:3 input_or_initializer:1 ReduceSum:1 ConvTranspose:1 Greater:1 Sub:1 Concat:1,0
+ok,1,0,0,0,1,2,0,0,27000,23,And:4 Where:4 Less:3 Equal:3 Sub:2 Conv:1 Slice:1 ReduceMax:1 Sign:1 ReduceSum:1 Greater:1 Pad:1,ok,84,input_or_initializer:1 Pad:1 Conv:1,0
+ok,1,0,0,0,1,2,0,0,27000,21,ReduceSum:4 Cast:2 Mul:2 Sub:2 Abs:2 Equal:2 Conv:1 Slice:1 Greater:1 ReduceMax:1 And:1 Where:1,ok,141,input_or_initializer:1 Pad:1 Conv:1,0
+ok,1,0,0,0,1,2,0,0,27000,24,Sub:5 And:4 ReduceSum:2 Greater:2 Mul:2 Slice:1 ReduceMax:1 Div:1 Floor:1 Abs:1 Less:1 Not:1,ok,248,input_or_initializer:1 Pad:1 ReduceSum:1,0
+ok,1,0,0,0,1,2,0,0,27000,92,Cast:16 Gather:15 Mul:12 Where:9 Greater:8 Sub:6 And:6 ReduceSum:6 Less:6 Conv:2 Not:2 Sum:1,ok,343,input_or_initializer:1 Pad:1 Conv:1 Greater:1,0
+ok,1,0,0,0,1,2,0,1,27000,41,Cast:9 ArgMax:6 Where:4 Greater:3 Equal:2 ReduceMax:2 Add:2 Sub:2 Less:2 And:2 MatMulInteger:2 ReduceSum:1,ok,355,input_or_initializer:1 Pad:1 Gather:1 Cast:1,0
+ok,1,0,0,0,1,2,0,0,27000,24,Sub:5 And:4 ReduceSum:2 Greater:2 Mul:2 Slice:1 ReduceMax:1 Div:1 Floor:1 Abs:1 Less:1 Not:1,ok,357,input_or_initializer:1 Pad:1 ReduceSum:1,0
+ok,1,0,0,0,1,1,0,0,27000,78,Sub:12 ReduceMax:8 Mul:8 Sum:8 Less:8 Where:5 And:5 ReduceMin:4 Slice:3 Greater:3 Clip:2 Cast:2,ok,8,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,15,Conv:5 Mul:2 Slice:1 Constant:1 ReduceSum:1 Greater:1 Where:1 Max:1 Equal:1 Pad:1,ok,12,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,2,27000,71,Equal:11 Gather:10 Cast:6 ReduceMax:6 Slice:5 Reshape:5 And:5 Constant:5 ReduceSum:5 Where:5 Sum:4 ArgMax:1,ok,17,input_or_initializer:1 Pad:1 ArgMax:1 Cast:1 Slice:1,0
+ok,1,0,0,0,1,1,0,0,27000,27,Cast:7 And:5 Slice:4 Or:4 ReduceMax:3 Not:2 Concat:1 Pad:1,ok,24,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,19,Sub:3 ReduceSum:2 Cast:2 Slice:1 Conv:1 Sign:1 Sqrt:1 Greater:1 CumSum:1 Sum:1 Mul:1 Where:1,ok,32,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,38,Slice:8 And:7 ReduceMax:4 ArgMax:4 Equal:4 Or:4 Not:2 Greater:1 Cast:1 Gather:1 Concat:1 Pad:1,ok,35,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,36,Slice:8 Where:5 ReduceMax:4 ReduceMin:4 Sub:4 Less:4 And:2 Equal:2 ArgMax:1 Cast:1 Pad:1,ok,40,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,20,Cast:4 Unsqueeze:3 ArgMax:2 ReduceMax:2 And:2 Slice:1 Greater:1 GreaterOrEqual:1 LessOrEqual:1 Not:1 Concat:1 Pad:1,ok,41,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,52,Greater:12 Cast:8 Pad:8 Conv:6 ConvTranspose:6 Or:6 Not:2 And:2 Slice:1 Concat:1,ok,42,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,30,Cast:6 Or:5 And:5 ReduceMax:4 Tile:4 Slice:2 Not:2 Concat:1 Pad:1,ok,47,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,21,Cast:8 CumSum:4 And:3 Slice:2 Or:1 Xor:1 Concat:1 Pad:1,ok,50,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,16,And:3 Cast:2 Greater:2 Slice:1 ReduceMax:1 ReduceSum:1 Sub:1 Reshape:1 Gather:1 Not:1 Concat:1 Pad:1,ok,58,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,13,27000,18,Slice:6 Transpose:4 Pad:3 ArgMax:1 Cast:1 Mod:1 Max:1 Equal:1,ok,74,Slice:6 Transpose:4 input_or_initializer:1 Equal:1 ArgMax:1 Cast:1 Mod:1 Max:1,0
+ok,1,0,0,0,1,1,0,0,27000,35,Slice:9 Pad:9 And:9 Or:4 Not:2 Greater:1 Concat:1,ok,81,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,56,Cast:15 And:14 MaxPool:4 ReduceSum:4 Conv:4 LessOrEqual:4 Or:4 Not:3 Slice:2 Concat:1 Pad:1,ok,93,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,25,Cast:6 Slice:2 Concat:2 Greater:2 ReduceMax:2 Tile:2 Or:2 Not:2 And:2 Conv:1 ConvTranspose:1 Pad:1,ok,94,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,48,Greater:12 Cast:9 Conv:6 ConvTranspose:6 Or:6 Slice:2 Concat:2 Pad:2 And:2 Not:1,ok,102,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,63,And:17 Cast:11 Not:8 Slice:6 Pad:5 Or:5 MaxPool:4 ReduceMax:2 ReduceSum:2 Greater:2 Concat:1,ok,105,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,13,Reshape:3 Slice:2 Equal:2 ArgMax:1 Cast:1 Concat:1 Where:1 GatherElements:1 Pad:1,ok,106,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,1,27000,176,Equal:29 Gather:21 Cast:15 ReduceMax:15 Reshape:14 And:14 Constant:14 ReduceSum:14 Where:14 Sum:13 Slice:9 ArgMax:1,ok,110,input_or_initializer:1 Pad:1 ArgMax:1 Cast:1,0
+ok,1,0,0,0,1,1,0,0,27000,26,Cast:5 Reshape:4 Slice:3 Equal:3 Where:3 Not:2 ReduceMax:2 ArgMax:1 Concat:1 GatherElements:1 Pad:1,ok,114,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,34,Cast:5 Slice:3 Where:3 Reshape:3 Equal:3 ReduceMax:2 ReduceSum:2 Greater:2 ArgMax:2 Max:2 Concat:1 Not:1,ok,115,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,74,Slice:12 Equal:12 And:10 Cast:8 Where:8 Not:6 Mul:4 Gather:3 ReduceSum:2 Sub:2 Less:2 Reshape:2,ok,117,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,28,And:7 Greater:6 Sub:4 Not:3 CumSum:2 ReduceSum:2 Slice:1 MaxPool:1 Concat:1 Pad:1,ok,125,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,25,Cast:6 Conv:4 Greater:4 And:3 Or:3 Slice:2 Not:1 Concat:1 Pad:1,ok,136,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,33,Slice:9 Pad:9 Or:9 And:2 Not:2 Greater:1 Concat:1,ok,139,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,375,Max:101 Greater:65 Or:40 And:32 Cast:27 Conv:25 ConvTranspose:25 GlobalMaxPool:24 Not:17 Tile:15 Pad:2 Slice:1,ok,156,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,19,Cast:3 Greater:3 Slice:2 Concat:2 ConvTranspose:2 Not:2 And:2 Conv:1 Or:1 Pad:1,ok,160,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,168,Greater:54 Cast:28 Conv:27 ConvTranspose:27 Or:26 Pad:2 Slice:1 Not:1 And:1 Concat:1,ok,169,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,1,27000,68,QLinearMatMul:15 Cast:12 Reshape:10 Transpose:7 Conv:7 Greater:6 Where:3 Slice:2 Max:1 Less:1 And:1 Equal:1,ok,173,input_or_initializer:1 Pad:1 Cast:1,0
+ok,1,0,0,0,1,1,0,0,27000,21,Slice:5 Greater:4 Pad:3 And:2 Or:2 Where:2 Gather:1 Concat:1 Equal:1,ok,181,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,63,Pad:18 Slice:17 Or:16 And:4 Conv:2 Equal:2 Greater:1 ReduceMax:1 Mul:1 Where:1,ok,190,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,22,Cast:3 ReduceSum:3 Slice:2 ReduceMax:2 Equal:2 And:2 Pad:2 Where:2 Conv:1 Greater:1 CumSum:1 Mul:1,ok,199,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,38,Less:9 And:7 Mul:3 Div:3 Sub:3 Floor:2 Where:2 Slice:1 ArgMax:1 Cast:1 ReduceMax:1 ReduceSum:1,ok,200,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,1,27000,21,Gather:4 ArgMax:2 Cast:2 Equal:2 Add:2 Less:2 GatherND:1 Unsqueeze:1 MatMul:1 Mul:1 And:1 Where:1,ok,209,input_or_initializer:1 Equal:1 Reshape:1,0
+ok,1,0,0,0,1,1,0,0,27000,31,Cast:9 And:5 ReduceMax:4 CumSum:4 Slice:3 Sum:2 Or:1 Xor:1 Concat:1 Pad:1,ok,246,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,129,And:48 Greater:16 Cast:14 ReduceSum:14 Or:11 Equal:9 Sum:5 Where:3 Slice:2 Sub:2 Less:2 Conv:1,ok,250,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,11,Mul:3 Slice:2 Cast:2 Sub:1 ReduceSum:1 Equal:1 Pad:1,ok,267,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,21,CumSum:6 Greater:4 And:4 Slice:1 LessOrEqual:1 Mul:1 Where:1 Sum:1 Equal:1 Pad:1,ok,273,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,60,Where:11 Equal:8 Pad:6 Cast:5 MaxPool:5 Slice:3 ReduceMin:3 ReduceSum:3 Not:3 And:3 Expand:3 Mul:3,ok,277,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,22,Slice:7 Or:3 Equal:2 And:2 ArgMax:1 Cast:1 Where:1 ReduceMax:1 Greater:1 Not:1 Max:1 Pad:1,ok,287,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,24,Where:4 Slice:3 ReduceSum:3 Cast:2 Mul:2 Equal:2 And:2 Greater:1 Div:1 Floor:1 Sub:1 Sum:1,ok,297,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,43,Cast:13 And:10 MaxPool:8 Not:7 Or:2 Slice:1 Concat:1 Pad:1,ok,302,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,6,ReduceMax:2 Mul:1 Mod:1 Equal:1 Pad:1,ok,305,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,19,And:3 Slice:2 Greater:2 CumSum:2 Gather:2 Not:2 Or:1 Cast:1 Sub:1 GreaterOrEqual:1 Concat:1 Pad:1,ok,320,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,10,Cast:2 Slice:1 Conv:1 Greater:1 Or:1 Not:1 And:1 Concat:1 Pad:1,ok,323,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,54,And:10 Equal:8 Greater:7 ReduceMax:6 Cast:5 Or:5 CumSum:4 Gather:4 Not:2 Slice:1 Concat:1 Pad:1,ok,336,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,40,Where:7 ReduceSum:6 Conv:5 And:4 Cast:3 Greater:3 Sum:3 Mul:3 Slice:2 Less:2 Equal:1 Pad:1,ok,342,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,28,And:4 ReduceMax:3 Mul:3 Sub:3 Slice:2 ReduceSum:2 Not:2 Greater:1 Abs:1 GreaterOrEqual:1 Div:1 Floor:1,ok,348,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,11,Slice:3 Cast:3 MaxPool:1 And:1 Xor:1 Concat:1 Pad:1,ok,352,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,31,ReduceSum:8 Mul:4 Slice:3 Cast:3 Sub:2 Sign:2 Sum:2 Equal:2 Xor:2 And:1 Concat:1 Pad:1,ok,353,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,22,Mul:5 Slice:4 MaxPool:4 Greater:2 Cast:2 Gather:1 Or:1 Split:1 Concat:1 Pad:1,ok,354,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,21,Greater:5 Sub:4 CumSum:2 ReduceSum:2 And:2 Or:2 Slice:1 Not:1 Concat:1 Pad:1,ok,356,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,60,Cast:10 Mul:10 ReduceSum:5 Equal:5 Add:4 Reshape:4 MatMul:4 Greater:3 AveragePool:2 Pad:2 Sub:2 Where:2,ok,361,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,63,Where:12 MaxPool:10 And:7 Slice:6 Pad:5 Greater:4 Sum:3 Equal:3 Cast:3 ScatterND:2 Gather:2 Not:2,ok,364,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,19,ReduceSum:4 Slice:2 Mul:2 Sub:2 Abs:2 Equal:2 Conv:1 Cast:1 And:1 Where:1 Pad:1,ok,375,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,0,27000,31,Cast:8 And:8 Not:4 Slice:3 Pad:3 MaxPool:2 ReduceMax:2 Concat:1,ok,381,input_or_initializer:1 Pad:1,0
+ok,1,0,0,0,1,1,0,1,27000,52,Pad:19 Where:13 Equal:6 Cast:3 Add:3 GreaterOrEqual:2 Slice:1 Conv:1 ReduceMax:1 Greater:1 And:1 ReduceSum:1,ok,388,input_or_initializer:1 Equal:1 Pad:1,0
+ok,0,0,0,0,0,3,0,0,9000,22,ArgMax:5 Sub:3 ReduceMax:2 Add:2 Reshape:2 Where:2 ReduceSum:1 Mul:1 Cast:1 Greater:1 Sum:1 Equal:1,ok,291,input_or_initializer:2 Where:1,1
+ok,0,0,0,0,0,3,0,0,9000,43,Add:6 Where:5 Sub:5 ArgMax:4 Gather:4 Reshape:3 Greater:3 Slice:2 Cast:2 ReduceMax:2 Mul:2 Less:2,ok,390,Sub:3 input_or_initializer:2 Slice:2 Cast:2 Gather:2 Concat:1 Where:1,1
+ok,0,0,0,0,0,2,0,0,9000,25,Slice:6 Mul:4 Sub:4 Cast:3 Pad:2 ReduceSum:2 Greater:1 Where:1 Sum:1 Concat:1,ok,27,Mul:4 Sub:4 input_or_initializer:2 Pad:2 Concat:1 Slice:1 Cast:1 Where:1 Sum:1,1
+ok,0,0,0,0,0,2,0,0,9000,7,ReduceMax:1 Conv:1 ReduceSum:1 Div:1 Sum:1 Greater:1 Where:1,ok,67,input_or_initializer:1 Where:1,1
+ok,0,0,0,0,0,1,0,0,9000,18,ReduceSum:2 Sub:2 Transpose:2 MatMul:2 Cast:1 Conv:1 ReduceMax:1 Abs:1 Less:1 Where:1 MaxPool:1 Pad:1,ok,197,MatMul:2 input_or_initializer:1 Cast:1 Conv:1 Where:1 MaxPool:1 Slice:1 Sub:1 Mul:1,1
+ok,0,0,0,0,0,1,0,0,9000,34,Add:5 Cast:4 ReduceMax:4 Sub:4 Mul:4 Greater:2 ReduceMin:2 Where:2 Less:2 Conv:1 Squeeze:1 Reshape:1,ok,313,input_or_initializer:1 Where:1 Cast:1 Conv:1 Gather:1,1
+ok,0,0,0,0,0,10,0,0,0,31,Cast:6 Slice:3 Concat:2 Unsqueeze:2 Equal:2 Reshape:2 ArgMax:2 Gather:2 ScatterElements:2 Mul:2 Add:2 Flatten:1,ok,101,Slice:3 input_or_initializer:2 Concat:1 Reshape:1 Sub:1 Mul:1 Add:1,0
+ok,0,0,0,0,0,10,0,0,0,26,Concat:4 Slice:3 Sub:3 Mul:3 MatMul:2 Div:2 Floor:2 Flatten:1 Unsqueeze:1 ReduceSum:1 Less:1 Cast:1,ok,363,Slice:3 input_or_initializer:2 Concat:2 Sub:1 Mul:1 Add:1,0
+ok,0,0,0,0,0,9,0,0,0,44,Mul:8 Sub:8 ReduceMax:4 Where:4 Slice:2 Squeeze:2 Cast:2 Add:2 ReduceMin:2 Less:2 Greater:2 OneHot:2,ok,154,input_or_initializer:2 Slice:2 MatMul:2 Sub:2 Conv:1,0
+ok,0,0,0,0,0,9,0,0,0,36,Gather:7 Cast:6 Equal:3 ArgMax:3 ScatterElements:3 Unsqueeze:2 Reshape:2 ReduceMax:2 Mul:2 Flatten:1 MatMul:1 Sum:1,ok,191,Gather:3 input_or_initializer:2 Concat:1 Reshape:1 Sub:1 Add:1,0
+ok,0,0,0,0,0,8,0,0,0,681,Concat:135 Mul:112 Where:93 Slice:66 Add:58 Sum:46 Sub:37 Cast:32 Greater:30 And:16 Less:11 ReduceMax:10,ok,170,Pad:4 input_or_initializer:1 Gather:1 ReduceSum:1 Sub:1,0
+ok,0,0,0,0,0,7,0,0,0,19,Gather:3 Cast:3 MatMul:3 Reshape:2 Sub:2 Slice:1 Mul:1 Less:1 Greater:1 Pad:1 Concat:1,ok,219,input_or_initializer:2 Gather:2 Concat:1 Pad:1 Sub:1,0
+ok,0,0,0,0,0,5,0,0,0,17,MatMul:2 Sub:2 ReduceSum:2 Cast:2 Slice:1 Flatten:1 Unsqueeze:1 Mul:1 Less:1 ScatterElements:1 Reshape:1 ReduceMax:1,ok,133,input_or_initializer:1 Concat:1 ReduceMax:1 ReduceSum:1 Sub:1,0
+ok,0,0,0,0,0,5,0,0,0,53,Max:9 Mul:9 Slice:7 Sub:7 MaxPool:7 Cast:4 Pad:4 Relu:4 ReduceSum:1 Concat:1,ok,251,Max:9 Mul:9 Sub:7 MaxPool:7 Cast:4 Pad:4 Relu:4 Slice:3 input_or_initializer:1 Concat:1,0
+ok,0,0,0,0,0,5,0,0,0,8,Conv:3 ReduceMax:3 Sum:1 Mul:1,ok,303,input_or_initializer:1 Mul:1 Conv:1 Sum:1 ReduceMax:1,0
+ok,0,0,0,0,0,4,0,0,0,22,Gather:6 Conv:4 Where:2 Squeeze:2 Greater:1 Sum:1 Reshape:1 ArgMax:1 Div:1 Mul:1 Sub:1 Pad:1,ok,271,Conv:2 input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,4,0,0,0,16,Slice:2 ReduceSum:2 Squeeze:2 Greater:2 Cast:2 ArgMax:2 Sub:2 Gather:1 Pad:1,ok,274,Slice:2 input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,3,0,0,0,166,Gather:62 Sum:59 Mul:11 Equal:10 Cast:6 Where:6 Not:4 Concat:3 Sub:3 Conv:2,ok,55,Mul:5 input_or_initializer:2 Gather:2 Cast:2 Concat:1 Sum:1 Sub:1,0
+ok,0,0,0,0,0,3,0,1,0,28,Mul:5 Cast:4 Gather:3 Less:3 ReduceSum:2 Reshape:2 MatMul:2 Pad:2 Sub:2 Sum:1 Where:1 Add:1,ok,157,input_or_initializer:1 Pad:1 Mul:1 ReduceSum:1,0
+ok,0,0,0,0,0,3,0,0,0,137,Mul:20 Concat:15 Reshape:15 Cast:13 ReduceSum:10 Unsqueeze:9 GatherND:9 OneHot:9 Where:8 Slice:7 Equal:6 ArgMax:6,ok,218,input_or_initializer:1 Pad:1 Conv:1,0
+ok,0,0,0,0,0,3,0,0,0,11,Cast:2 Mul:2 ReduceMax:2 Slice:1 Conv:1 Equal:1 Reshape:1 ScatterND:1,ok,240,input_or_initializer:2 ScatterND:1,0
+ok,0,0,0,0,0,2,0,2,0,42,Reshape:7 Add:7 Cast:5 ArgMax:5 Where:3 Gather:2 ReduceMax:2 Sub:2 Less:2 ReduceSum:1 Slice:1 LessOrEqual:1,ok,14,input_or_initializer:1 Pad:1 Cast:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,15,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,16,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,67,Mul:17 ReduceMax:16 Slice:10 Sub:8 Add:8 Concat:4 Cast:2 Conv:1 Pad:1,ok,22,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,10,Cast:2 ReduceSum:1 MatMul:1 Equal:1 ArgMax:1 Gather:1 Flatten:1 ScatterElements:1 Reshape:1,ok,25,input_or_initializer:1 Reshape:1,0
+ok,0,0,0,0,0,2,0,0,0,26,ArgMax:4 Where:3 ReduceSum:2 Greater:2 Cast:2 Sub:2 Add:2 Gather:2 LessOrEqual:2 Unsqueeze:2 Slice:1 And:1,ok,31,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,16,Slice:4 Mul:3 Sub:2 Relu:2 ReduceSum:1 Resize:1 Sum:1 Concat:1 Pad:1,ok,38,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,14,ReduceSum:2 Greater:2 Cast:2 ArgMax:2 Add:2 Gather:2 Slice:1 Pad:1,ok,39,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,14,Cast:2 Slice:1 Flatten:1 MatMul:1 Equal:1 ArgMax:1 Gather:1 ScatterElements:1 Reshape:1 ReduceMax:1 Sub:1 Concat:1,ok,44,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,53,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,34,Slice:5 Sub:5 ReduceMax:4 Sum:4 Relu:4 ReduceSum:3 Clip:3 Mul:3 Max:1 Concat:1 Pad:1,ok,63,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,73,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,22,Slice:3 Flatten:2 Sub:2 Mul:2 Cast:2 MatMul:1 Unsqueeze:1 ReduceSum:1 Less:1 ArgMax:1 Gather:1 ScatterElements:1,ok,76,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,20,Gather:4 ArgMax:3 Squeeze:3 Add:2 Slice:1 Conv:1 Greater:1 Cast:1 ReduceSum:1 Unsqueeze:1 ReduceMax:1 Pad:1,ok,79,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,GridSample:1,ok,83,input_or_initializer:1 GridSample:1,0
+ok,0,0,0,0,0,2,0,0,0,2,Slice:1 Pad:1,ok,87,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,95,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,98,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,99,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,28,ArgMax:5 ReduceSum:3 Greater:3 Cast:3 Add:3 Where:2 Sub:2 Mul:2 Slice:1 OneHot:1 Unsqueeze:1 Expand:1,ok,100,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,GridSample:1,ok,108,input_or_initializer:1 GridSample:1,0
+ok,0,0,0,0,0,2,0,0,0,15,Add:3 Slice:2 ReduceSum:2 ArgMax:2 Reshape:2 Concat:2 Sub:1 Pad:1,ok,111,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,113,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,116,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,120,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,24,Gather:5 Add:4 Slice:3 ReduceSum:3 ArgMax:3 Sub:1 OneHot:1 Unsqueeze:1 Mul:1 Concat:1 Pad:1,ok,121,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,122,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,127,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,10,Gather:3 MaxPool:1 ReduceMax:1 Sub:1 Conv:1 Mul:1 Sum:1 Pad:1,ok,130,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,2,0,75,Where:8 Add:8 Slice:6 Reshape:6 Sub:6 Equal:6 Gather:6 ArgMax:5 Cast:5 MaxPool:5 ReduceMax:3 Less:3,ok,134,input_or_initializer:1 Pad:1 Gather:1 Cast:1,0
+ok,0,0,0,0,0,2,0,0,0,2,Slice:1 Pad:1,ok,135,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,2,Slice:1 Pad:1,ok,140,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,GridSample:1,ok,142,input_or_initializer:1 GridSample:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,147,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,5,Conv:1 Slice:1 Neg:1 Concat:1 Pad:1,ok,149,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,11,ReduceSum:2 Cast:2 Sub:2 Greater:1 Less:1 Where:1 Squeeze:1 Gather:1,ok,150,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,151,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,GridSample:1,ok,152,input_or_initializer:1 GridSample:1,0
+ok,0,0,0,0,0,2,0,0,0,11,ReduceSum:2 Cast:2 Sub:2 Greater:1 Less:1 Where:1 Squeeze:1 Gather:1,ok,155,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,164,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,171,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,172,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,790,Gather:100 Sub:74 Mul:73 Less:64 Unsqueeze:54 Where:54 Cast:46 Equal:45 Greater:36 ArgMax:36 Squeeze:36 ReduceSum:36,ok,174,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Transpose:1,ok,179,input_or_initializer:1 Transpose:1,0
+ok,0,0,0,0,0,2,0,1,0,55,Cast:12 Gather:12 Mul:12 ReduceSum:6 Sub:3 Less:2 Add:2 Unsqueeze:2 Where:2 Sum:1 Pad:1,ok,183,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,2,0,0,0,242,Equal:64 And:45 Gather:23 Cast:20 Not:20 ReduceSum:19 Unsqueeze:19 Where:9 Mul:8 Concat:4 ArgMax:2 Greater:2,ok,185,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,GridSample:1,ok,194,input_or_initializer:1 GridSample:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,210,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,GridSample:1,ok,211,input_or_initializer:1 GridSample:1,0
+ok,0,0,0,0,0,2,0,0,0,1,GridSample:1,ok,214,input_or_initializer:1 GridSample:1,0
+ok,0,0,0,0,0,2,0,0,0,18,Cast:4 Reshape:4 Slice:2 ReduceMax:2 Greater:2 And:1 Not:1 Concat:1 Pad:1,ok,217,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,220,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,GridSample:1,ok,223,input_or_initializer:1 GridSample:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,230,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Transpose:1,ok,241,input_or_initializer:1 Transpose:1,0
+ok,0,0,0,0,0,2,0,0,0,27,Gather:5 Cast:3 Reshape:2 Div:2 Floor:2 Mul:2 Sub:2 ReduceSum:1 MatMul:1 Unsqueeze:1 Equal:1 ArgMax:1,ok,243,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,1,0,66,Gather:23 Cast:15 Equal:9 Where:8 ReduceSum:3 ReduceMax:2 And:2 Sum:2 Pad:2,ok,244,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,2,0,0,0,26,Less:4 Cast:4 Gather:3 ReduceSum:2 ReduceMax:2 Sub:2 Mul:2 Transpose:2 And:2 ArgMax:1 Where:1 Pad:1,ok,247,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,1,0,17,Gather:6 Where:4 Cast:2 Conv:1 ReduceMax:1 Greater:1 Sum:1 Pad:1,ok,253,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,258,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,30,ArgMax:4 Where:4 Gather:3 Slice:2 ReduceSum:2 Greater:2 Cast:2 Sub:2 Add:2 LessOrEqual:2 Unsqueeze:2 And:1,ok,259,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,261,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,266,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,96,Mul:28 Reshape:20 MatMul:16 ReduceSum:12 Cast:6 Slice:4 ReduceMax:4 Sum:3 Sub:1 Concat:1 Pad:1,ok,270,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,272,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,276,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,282,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,283,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,294,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,10,Reshape:2 Slice:1 MatMul:1 Greater:1 Cast:1 ReduceSum:1 Sub:1 Concat:1 Pad:1,ok,296,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,17,Slice:3 ReduceMax:3 Sub:2 Mul:2 ReduceSum:1 Sum:1 Relu:1 Resize:1 Tile:1 Concat:1 Pad:1,ok,304,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,GridSample:1,ok,307,input_or_initializer:1 GridSample:1,0
+ok,0,0,0,0,0,2,0,0,0,59,And:9 Where:7 Equal:6 Greater:5 ReduceSum:4 ReduceMax:4 Sub:4 Not:3 Mul:3 Or:3 ReduceMin:2 Abs:2,ok,308,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,309,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,2,0,42,Reshape:7 Add:7 Cast:5 ArgMax:5 Where:3 Gather:2 ReduceMax:2 Sub:2 Less:2 ReduceSum:1 Slice:1 LessOrEqual:1,ok,310,input_or_initializer:1 Pad:1 Cast:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,311,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,15,Slice:3 Cast:3 Reshape:3 And:1 ReduceMax:1 Greater:1 Not:1 Concat:1 Pad:1,ok,315,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,39,Equal:10 Where:9 ReduceSum:9 Conv:2 Cast:2 And:2 Slice:1 Greater:1 Concat:1 Reshape:1 Pad:1,ok,316,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,317,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,1,0,19,Cast:5 MatMul:2 Reshape:2 Conv:1 Slice:1 Flatten:1 Unsqueeze:1 Equal:1 Gather:1 Sub:1 Abs:1 Less:1,ok,319,input_or_initializer:1 Pad:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,2,Slice:1 Pad:1,ok,326,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,331,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,55,Gather:9 CumSum:8 Equal:8 Cast:8 Less:4 Where:4 Sub:3 Mul:3 ReduceMax:2 Sum:2 Slice:1 Conv:1,ok,333,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,337,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Conv:1,ok,344,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,13,Add:2 Slice:1 Conv:1 ReduceMax:1 ReduceSum:1 Greater:1 Where:1 Sub:1 ArgMax:1 OneHot:1 Unsqueeze:1 Pad:1,ok,346,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,47,Where:12 MaxPool:9 Cast:5 And:3 Slice:2 Mul:2 Equal:2 Greater:1 Neg:1 Unsqueeze:1 ConstantOfShape:1 ScatterND:1,ok,374,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,3,Slice:1 Transpose:1 Pad:1,ok,380,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,2,0,0,0,1,Gather:1,ok,385,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,2,0,0,0,13,Reshape:5 Mul:3 ReduceMax:1 ArgMax:1 OneHot:1 Sum:1 Conv:1,ok,389,input_or_initializer:1 Conv:1,0
+ok,0,0,0,0,0,2,0,0,0,26,OneHot:6 ArgMax:4 Mul:3 Sub:3 Add:3 Unsqueeze:3 Slice:1 ReduceSum:1 Concat:1 Pad:1,ok,391,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,13,Slice:3 Cast:2 Gather:2 ReduceMax:1 Concat:1 Tile:1 Or:1 Where:1 Pad:1,ok,1,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,95,Conv:24 Greater:23 Where:21 Slice:11 Sub:6 Cast:3 Sum:2 ReduceSum:1 And:1 Mul:1 Concat:1 Pad:1,ok,2,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,44,Mul:10 Slice:7 Cast:7 Sub:5 Concat:4 Sum:3 ReduceSum:2 Less:2 Not:2 Where:1 Pad:1,ok,3,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,4,Conv:2 Cast:1 Relu:1,ok,4,Conv:2 input_or_initializer:1 Cast:1 Relu:1,0
+ok,0,0,0,0,0,1,0,0,0,106,Conv:19 Greater:18 Where:16 Mul:9 ReduceMax:8 And:8 Or:7 Relu:6 Cast:5 Sub:4 Slice:1 Sum:1,ok,5,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,12,Mul:3 Slice:2 Cast:2 ReduceMax:2 Sub:1 Sum:1 Pad:1,ok,6,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,13,Reshape:4 Slice:2 ArgMax:1 Concat:1 ReduceMax:1 Tile:1 OneHot:1 Unsqueeze:1 Pad:1,ok,7,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,22,MatMul:4 Greater:4 Cast:2 And:2 Transpose:2 GatherND:1 Reshape:1 Or:1 ConvTranspose:1 ReduceMax:1 Neg:1 Concat:1,ok,9,input_or_initializer:1 Sum:1 Cast:1 ReduceMax:1 Neg:1 Concat:1,0
+ok,0,0,0,0,0,1,0,0,0,60,Cast:19 Greater:17 Slice:6 Sum:5 Mul:5 Sub:5 ReduceSum:1 Concat:1 Pad:1,ok,10,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,52,Mul:18 Slice:10 Conv:10 ReduceMax:9 Cast:1 Sub:1 Relu:1 Sum:1 Pad:1,ok,11,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,2,0,91,Conv:20 ReduceMax:18 Greater:14 Where:13 Mul:10 Cast:9 ReduceSum:2 Sum:2 Slice:1 Sub:1 Concat:1,ok,13,Cast:2 ReduceMax:2 input_or_initializer:1 Concat:1 Sub:1,0
+ok,0,0,0,0,0,1,0,0,0,374,Cast:75 Conv:72 Mul:72 Greater:67 Add:41 Sub:36 Less:6 Slice:3 Concat:1 Pad:1,ok,23,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,13,Sub:5 Slice:2 Cast:2 Mul:1 Sum:1 Concat:1 Pad:1,ok,26,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,13,Slice:4 Cast:2 ReduceMax:2 Mul:2 Add:1 Concat:1 Pad:1,ok,28,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,88,Cast:12 Sub:12 Greater:9 Add:9 ArgMax:8 Mul:7 Gather:6 ReduceMax:5 Where:5 Squeeze:4 Less:4 Equal:2,ok,29,Mul:2 Gather:2 input_or_initializer:1 Cast:1 ReduceMax:1,0
+ok,0,0,0,0,0,1,0,0,0,64,Cast:10 Where:6 Add:6 Slice:4 Sub:4 ReduceMax:3 ReduceMin:3 GreaterOrEqual:3 Less:3 And:3 Max:3 Min:3,ok,30,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,56,Gather:8 Add:8 Sub:7 Reshape:6 Cast:5 ArgMax:5 Mul:4 Less:4 Where:3 ReduceMax:2 ReduceSum:1 Div:1,ok,36,Mul:3 Gather:2 input_or_initializer:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,27,Relu:7 Conv:6 Mul:5 Slice:2 Cast:1 Sum:1 ReduceMax:1 Sub:1 ReduceSum:1 Concat:1 Pad:1,ok,37,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,1,0,9,Slice:3 Mul:2 Greater:1 Cast:1 Where:1 Pad:1,ok,43,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,1,0,14,Cast:6 Slice:4 And:1 ReduceMax:1 Where:1 Pad:1,ok,45,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,73,Slice:9 Mul:9 Sub:9 Pad:7 Abs:6 Less:6 Where:6 MatMul:4 Cast:3 Sum:3 Gather:2 ReduceMax:2,ok,46,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,51,Greater:13 Conv:12 Where:12 Cast:3 Slice:2 Reshape:2 Sum:1 ArgMax:1 OneHot:1 Mul:1 ReduceSum:1 Gather:1,ok,48,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,11,Mul:2 Slice:1 Cast:1 ReduceSum:1 ReduceMax:1 Equal:1 Where:1 Sub:1 Sum:1 Pad:1,ok,52,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,9,Slice:1 Cast:1 Sub:1 Conv:1 ArgMax:1 Squeeze:1 Gather:1 Unsqueeze:1 Pad:1,ok,56,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,2,0,16,ReduceMax:3 Transpose:3 Gather:3 ArgMax:2 Add:2 Cast:1 Slice:1 Pad:1,ok,57,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,20,Cast:2 Conv:2 Sub:2 Greater:2 Reshape:2 MatMul:2 Mul:2 Slice:1 ReduceMax:1 ReduceSum:1 Where:1 Sum:1,ok,59,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,20,Mul:7 Slice:4 Cast:4 Sub:3 Sum:1 Pad:1,ok,60,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,9,ReduceSum:2 Slice:1 Greater:1 Cast:1 Sub:1 Gather:1 OneHot:1 Pad:1,ok,61,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,211,Mul:52 Slice:46 ReduceMax:38 Cast:23 Sum:20 MatMul:18 Transpose:8 Concat:2 Relu:2 Sub:1 Pad:1,ok,62,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,1,0,68,And:10 Greater:9 Cast:8 CumSum:8 Equal:6 Slice:5 Pad:5 Or:5 Tile:3 Conv:2 ReduceSum:2 ReduceMax:2,ok,64,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,37,ReduceSum:6 Cast:5 Greater:4 Mul:4 Add:3 Where:3 Less:2 Pad:2 Gather:2 Slice:1 ReduceMax:1 Squeeze:1,ok,65,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,24,Sub:5 Slice:4 Relu:4 Sum:3 ReduceSum:2 Mul:2 Cast:1 Conv:1 Concat:1 Pad:1,ok,68,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,380,Mul:176 Gather:74 ReduceSum:28 Where:25 Sub:23 Less:19 Sum:12 And:11 Cast:5 Greater:3 Conv:1 Squeeze:1,ok,69,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,71,Conv:20 Greater:20 Cast:19 Mul:3 Slice:2 ReduceMax:2 And:2 Pad:2 Sum:1,ok,70,Mul:3 Slice:2 Pad:2 input_or_initializer:1 Sum:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,49,Mul:8 Sub:8 ArgMax:6 Cast:5 ReduceMax:5 Add:4 ReduceSum:3 Slice:3 Equal:2 Greater:1 And:1 Reshape:1,ok,71,Mul:7 ReduceSum:2 input_or_initializer:1 Add:1 Cast:1 MatMul:1 Max:1 ReduceMax:1 Sub:1,0
+ok,0,0,0,0,0,1,0,0,0,11,Sub:4 Slice:2 Cast:2 Abs:1 Concat:1 Pad:1,ok,72,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,57,Slice:21 Cast:11 Pad:9 Mul:9 Sum:2 Concat:2 ReduceSum:1 Sub:1 Relu:1,ok,75,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,2,0,68,Mul:15 Sub:9 MaxPool:8 Cast:7 Reshape:6 And:5 Gather:4 Sum:2 GreaterOrEqual:2 LessOrEqual:2 Greater:2 Where:1,ok,77,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,25,Sub:8 Relu:5 Slice:3 Cast:3 ReduceSum:2 Sum:1 Mul:1 Concat:1 Pad:1,ok,78,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,20,Mul:5 ReduceSum:3 Slice:2 Cast:2 Conv:2 Sub:2 Sum:2 Concat:1 Pad:1,ok,82,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,20,Mul:8 Conv:3 Sub:3 Cast:1 Slice:1 ReduceSum:1 Floor:1 Sum:1 Pad:1,ok,85,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,42,Cast:7 Conv:6 ConvTranspose:6 Where:4 Sum:4 Greater:3 Less:3 And:2 Slice:1 ReduceSum:1 Div:1 Squeeze:1,ok,86,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,48,Sub:7 ReduceMax:6 Add:6 Mul:5 Where:5 Reshape:4 Cast:3 Greater:2 ReduceMin:2 LessOrEqual:2 ReduceSum:1 Equal:1,ok,88,input_or_initializer:1 Pad:1 Cast:1 Mul:1 ReduceMax:1,0
+ok,0,0,0,0,0,1,0,0,0,180,Mul:29 Conv:28 Cast:25 Gather:21 Sum:15 ReduceSum:14 Sub:14 Greater:14 Slice:10 MaxPool:7 LessOrEqual:1 Concat:1,ok,89,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,246,Relu:50 Mul:46 ConvTranspose:46 Conv:28 Sum:25 ReduceMax:23 Sub:23 Cast:1 Gather:1 Slice:1 Max:1 Pad:1,ok,90,input_or_initializer:1 Sum:1 Cast:1 Gather:1 Pad:1,0
+ok,0,0,0,0,0,1,0,4,0,43,Cast:5 Sub:5 Reshape:4 ArgMax:4 Gather:4 Add:4 Less:4 And:4 ReduceMax:2 Greater:2 Where:2 Mul:2,ok,91,Cast:3 Mul:2 Gather:2 input_or_initializer:1 Slice:1,0
+ok,0,0,0,0,0,1,0,0,0,23,Cast:4 Unsqueeze:3 Reshape:3 Gather:2 ReduceSum:1 MatMul:1 Equal:1 ArgMax:1 Div:1 Floor:1 Mul:1 Sub:1,ok,96,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,11,Slice:2 Cast:2 Sub:1 Abs:1 ReduceSum:1 Greater:1 Gather:1 Unsqueeze:1 Pad:1,ok,103,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,21,Mul:8 Sub:4 Slice:3 ReduceMax:2 Cast:1 Sum:1 Concat:1 Pad:1,ok,104,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,44,Mul:6 Sub:6 Cast:5 Slice:5 Less:4 Max:3 Gather:3 ReduceMax:2 ReduceSum:2 Where:2 Min:2 Reshape:2,ok,112,Slice:4 Mul:4 Gather:3 Sub:2 input_or_initializer:1 Concat:1 Cast:1 Max:1 Sum:1,0
+ok,0,0,0,0,0,1,0,0,0,140,Mul:21 Where:20 And:14 Cast:13 Greater:9 Sub:9 ReduceMax:8 Equal:8 Add:8 Slice:7 ReduceSum:6 Or:5,ok,119,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,17,Cast:4 Slice:3 Gather:3 ReduceSum:2 Max:1 Greater:1 Where:1 Concat:1 Squeeze:1,ok,123,input_or_initializer:1 Gather:1,0
+ok,0,0,0,0,0,1,0,0,0,52,Slice:7 Gather:6 Sub:6 Mul:6 ReduceSum:6 Less:6 Where:6 Cast:2 Conv:1 Reshape:1 Concat:1 Max:1,ok,124,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,28,Reshape:4 Cast:3 ReduceMax:3 Sub:3 Mul:3 ArgMax:2 Add:2 Gather:1 Less:1 Equal:1 Where:1 MatMul:1,ok,128,input_or_initializer:1 Concat:1 Cast:1 MatMul:1 ReduceMax:1 ReduceSum:1 Sub:1 Mul:1,0
+ok,0,0,0,0,0,1,0,0,0,8,Cast:2 Slice:1 ReduceSum:1 ArgMax:1 Equal:1 Expand:1 Pad:1,ok,129,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,38,Mul:7 Sub:7 ReduceMax:4 Cast:3 Sum:3 ReduceSum:3 Slice:2 ReduceMin:2 Less:2 Greater:1 And:1 Where:1,ok,132,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,24,ReduceSum:5 Cast:4 Slice:3 Equal:2 Greater:2 Where:2 Gather:1 Tile:1 Conv:1 Sub:1 And:1 Pad:1,ok,143,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,13,Sub:5 Slice:2 Cast:2 Mul:1 Sum:1 Concat:1 Pad:1,ok,144,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,1,0,29,Cast:6 Slice:3 ArgMax:3 Transpose:3 Equal:3 ReduceSum:3 Less:3 Where:3 Max:1 Pad:1,ok,146,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,110,Where:28 Greater:18 Slice:15 ReduceSum:15 Pad:13 Cast:8 Mul:3 Less:2 And:2 Conv:2 Sum:2 Sub:1,ok,148,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,1,0,18,Cast:4 Reshape:2 Slice:1 Conv:1 Flatten:1 MatMul:1 Unsqueeze:1 Equal:1 ArgMax:1 Gather:1 Sub:1 Abs:1,ok,153,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,2,0,57,Gather:12 Pad:8 Cast:7 Add:6 Sub:4 Mul:4 Less:4 Where:4 ReduceMax:3 ReduceSum:2 ArgMax:2 Sum:1,ok,159,Cast:2 input_or_initializer:1 Pad:1 Gather:1 ReduceSum:1,0
+ok,0,0,0,0,0,1,0,0,0,68,Reshape:14 Sub:9 Cast:7 Mul:7 And:6 Add:4 Greater:4 Less:4 Slice:2 ReduceSum:2 Div:2 Equal:2,ok,163,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,11,ReduceMax:3 Mul:2 Slice:1 Cast:1 Split:1 Conv:1 Sum:1 Pad:1,ok,166,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,9,Cast:2 ReduceSum:2 Slice:1 Greater:1 Sub:1 Gather:1 Pad:1,ok,167,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,45,Mul:13 Conv:12 Greater:5 ReduceMax:3 Or:3 Cast:2 Sub:2 Slice:1 Where:1 Sum:1 Concat:1 Pad:1,ok,168,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,28,Slice:9 Conv:9 Cast:2 Add:2 Max:1 Sub:1 Mod:1 Reshape:1 OneHot:1 Pad:1,ok,175,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,7,Mul:2 Slice:1 Cast:1 Conv:1 Sum:1 Pad:1,ok,176,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,33,ReduceMax:5 Where:5 Reshape:4 Sub:3 Cast:2 Greater:2 ReduceMin:2 Add:2 Mul:2 LessOrEqual:2 Slice:1 And:1,ok,177,input_or_initializer:1 Pad:1 Cast:1 ReduceMax:1,0
+ok,0,0,0,0,0,1,0,0,0,126,Mul:36 Where:14 Sub:12 ReduceSum:12 Less:12 Reshape:12 Gather:8 Cast:5 Sum:5 Greater:4 Conv:2 MatMul:2,ok,178,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,6,Slice:1 Cast:1 Conv:1 ReduceMax:1 Mul:1 Pad:1,ok,180,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,11,Sub:3 Cast:2 Slice:1 ReduceSum:1 Gather:1 Unsqueeze:1 Concat:1 Pad:1,ok,186,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,46,Cast:7 Where:6 Slice:5 ReduceSum:4 Less:4 Sub:4 Sum:4 ReduceMax:3 Div:2 Greater:2 Abs:2 Mul:2,ok,188,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,110,Mul:36 Slice:24 Cast:24 Sum:9 ReduceSum:4 Greater:4 Sub:4 Where:4 Pad:1,ok,189,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,14,Conv:4 Cast:2 Greater:2 Where:2 Slice:1 Mul:1 Sum:1 Pad:1,ok,193,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,31,Conv:8 Greater:7 Where:7 Mul:2 Slice:1 Cast:1 Less:1 Or:1 Sub:1 Sum:1 Pad:1,ok,196,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,51,Mul:16 Slice:10 MaxPool:5 ReduceSum:4 Sub:4 Cast:3 Max:3 ReduceMax:2 Greater:2 Sum:1 Concat:1,ok,198,Mul:14 Slice:9 MaxPool:5 Sub:4 Max:3 input_or_initializer:2 ReduceSum:2 Concat:1 Cast:1 Sum:1,0
+ok,0,0,0,0,0,1,0,0,0,135,Squeeze:16 Mul:15 Gather:13 Cast:12 Less:12 Where:11 Sub:9 ArgMax:8 ReduceMax:7 Unsqueeze:7 Greater:6 Add:6,ok,201,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,36,Unsqueeze:5 Cast:4 ReduceSum:3 Squeeze:3 Where:3 And:3 ReduceMax:2 Gather:2 Less:2 Slice:1 Greater:1 Conv:1,ok,203,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,24,Slice:4 Cast:4 ReduceSum:4 Where:3 Concat:2 Sum:1 Greater:1 Neg:1 Reshape:1 ArgMax:1 Gather:1 Pad:1,ok,207,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,196,And:60 Equal:22 Cast:18 Greater:18 ReduceMax:17 Where:17 AveragePool:15 ConvTranspose:15 ReduceSum:6 Slice:3 Sum:2 Mul:1,ok,208,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,53,Cast:13 Where:5 Sum:5 Greater:5 ReduceSum:4 Slice:3 Equal:3 CumSum:3 Sub:3 Mul:2 MaxPool:2 And:2,ok,212,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,1,0,392,Mul:96 Cast:93 Less:59 ReduceSum:40 Where:24 Unsqueeze:18 ReduceMax:16 Equal:16 Sum:12 Slice:9 Greater:8 Pad:1,ok,213,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,268,Cast:58 Less:30 Gather:22 Add:18 Unsqueeze:18 ReduceMax:15 Squeeze:14 ReduceSum:14 Mul:14 ArgMax:10 Pad:10 CumSum:10,ok,216,Mul:14 Gather:4 Sub:3 Sum:2 input_or_initializer:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,21,Cast:3 Greater:3 ReduceSum:3 Mul:3 Conv:2 Sum:2 Slice:1 ReduceMax:1 Where:1 Sub:1 Pad:1,ok,222,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,55,Greater:10 Conv:9 Cast:8 Where:7 Mul:5 Not:4 Sum:4 ReduceMax:3 ReduceSum:2 Slice:1 Sub:1 Pad:1,ok,224,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,1,0,40,Mul:10 Cast:9 Slice:6 Pad:5 Conv:4 ReduceSum:2 Sum:2 Sub:1 Concat:1,ok,225,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,39,Cast:8 Equal:8 ReduceSum:6 Where:5 Mul:3 Slice:2 CumSum:2 Sum:1 Greater:1 Sub:1 Concat:1 Pad:1,ok,226,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,14,Sub:3 Mul:3 Slice:2 Cast:2 ReduceMax:2 Sum:1 Pad:1,ok,227,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,61,Mul:19 Gather:12 Conv:9 Sub:4 Cast:3 ReduceSum:3 Slice:2 Max:2 Sum:2 Abs:1 Clip:1 Equal:1,ok,228,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,14,ReduceSum:2 Reshape:2 Where:2 Slice:1 Cast:1 ArgMax:1 Equal:1 Sub:1 Mul:1 Sum:1 Pad:1,ok,229,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,50,Cast:10 Gather:9 Less:5 Sub:5 Abs:4 ReduceMax:4 Where:3 And:2 Mul:2 Conv:1 ReduceSum:1 Add:1,ok,231,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,29,Mul:9 ReduceSum:5 Slice:4 Sub:4 Cast:2 Greater:1 Where:1 Sum:1 Concat:1 Pad:1,ok,232,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,1,0,25,Cast:5 Gather:4 Less:3 Reshape:2 ReduceSum:1 MatMul:1 Unsqueeze:1 Equal:1 ArgMax:1 And:1 Where:1 ScatterElements:1,ok,233,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,58,Where:12 Greater:7 ReduceSum:6 Sub:5 Cast:4 ReduceMin:4 ReduceMax:4 Add:4 And:4 Less:2 GreaterOrEqual:2 LessOrEqual:2,ok,234,ReduceSum:2 input_or_initializer:1 Concat:1 Cast:1 Sub:1,0
+ok,0,0,0,0,0,1,0,0,0,35,Slice:3 Reshape:3 Cast:3 Mul:3 Sub:3 MatMul:3 ArgMax:3 Gather:3 OneHot:3 Unsqueeze:3 Expand:3 Concat:1,ok,235,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,11,Sub:3 Slice:2 Cast:2 Abs:1 Constant:1 Concat:1 Pad:1,ok,236,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,25,Mul:4 ReduceMax:3 Slice:2 Cast:2 Sub:2 MaxPool:2 ReduceSum:1 Sum:1 Conv:1 Equal:1 Greater:1 And:1,ok,237,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,102,Where:29 Mul:19 Sum:12 ReduceMax:9 Gather:8 ArgMax:4 Add:4 ReduceSum:3 Greater:3 Less:3 And:3 Cast:2,ok,238,input_or_initializer:1 Pad:1 Cast:1 ReduceSum:1 Gather:1,0
+ok,0,0,0,0,0,1,0,0,0,32,Reshape:8 Cast:3 Less:3 ReduceSum:2 Slice:2 Add:2 And:2 TopK:1 OneHot:1 Unsqueeze:1 Where:1 Transpose:1,ok,239,Reshape:2 input_or_initializer:1 Add:1 Mul:1,0
+ok,0,0,0,0,0,1,0,4,0,14,Gather:3 ReduceMax:2 Reshape:2 ArgMax:2 Add:2 Cast:1 Slice:1 Pad:1,ok,242,input_or_initializer:1 Pad:1 Cast:1 Slice:1 Gather:1,0
+ok,0,0,0,0,0,1,0,0,0,19,Slice:5 Cast:3 Concat:3 ReduceSum:2 Greater:2 Where:2 ReduceMax:1 Pad:1,ok,249,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,38,Slice:11 Cast:11 Mul:10 Sub:2 ReduceSum:1 Sum:1 Concat:1 Pad:1,ok,252,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,49,Slice:10 Cast:10 Sub:7 Mul:6 Sum:5 Relu:3 Min:3 ReduceSum:1 ReduceMax:1 ReduceMin:1 Concat:1 Pad:1,ok,254,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,40,Mul:10 Sub:7 Relu:5 ReduceSum:4 Min:4 Slice:2 Cast:2 Sum:2 ReduceMax:1 Max:1 Concat:1 Pad:1,ok,256,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,20,Mul:6 Slice:4 Cast:4 Sub:4 Concat:1 Pad:1,ok,257,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,28,ReduceMax:4 Where:4 Greater:3 Equal:3 Slice:2 Cast:2 And:2 Or:2 Mul:1 ReduceMin:1 Less:1 Sum:1,ok,260,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,8,Slice:1 ArgMax:1 Squeeze:1 Gather:1 Unsqueeze:1 Expand:1 Pad:1 OneHot:1,ok,262,input_or_initializer:1 OneHot:1,0
+ok,0,0,0,0,0,1,0,0,0,151,Cast:34 Slice:19 ReduceSum:19 Mul:17 Sub:16 Less:15 Where:13 Greater:6 Sum:6 And:5 Pad:1,ok,263,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,47,Cast:10 Equal:10 Mul:10 ReduceSum:9 Conv:2 Where:1 ReduceMax:1 Sum:1 Sub:1 Concat:1 Pad:1,ok,264,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,1,0,32,Cast:6 Gather:4 Sub:4 Mul:4 Conv:3 Less:3 Concat:2 ConvTranspose:1 Greater:1 Or:1 Not:1 And:1,ok,265,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,172,And:32 Greater:17 Cast:16 Sub:15 Not:13 Equal:12 Or:12 Slice:11 Where:10 Sum:7 ReduceMin:6 ReduceMax:6,ok,268,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,253,Gather:63 Reshape:52 Sum:28 Mul:24 MatMul:16 Transpose:16 Pad:13 ReduceSum:10 And:8 Sub:7 Less:6 Cast:5,ok,275,Gather:5 Pad:5 input_or_initializer:4 Mul:2 Concat:1 Cast:1 ReduceSum:1 Sum:1 Sub:1,0
+ok,0,0,0,0,0,1,0,0,0,16,Sub:3 Slice:2 Cast:2 Mul:2 Conv:1 Greater:1 Where:1 MaxPool:1 ReduceMax:1 Concat:1 Pad:1,ok,278,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,144,Where:32 And:22 MaxPool:15 Or:10 Not:7 Cast:6 Equal:6 Sub:6 ReduceSum:5 Greater:5 Mul:5 ReduceMin:5,ok,280,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,0,0,54,Conv:16 ReduceMax:7 Mul:5 Slice:4 Sub:4 Cast:3 Pad:3 Where:3 Equal:2 Sum:2 Greater:2 CumSum:1,ok,288,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,24,Cast:5 Slice:2 ReduceSum:2 Where:2 Div:2 Floor:2 Less:2 Equal:2 MatMul:2 Greater:1 Mul:1 Pad:1,ok,289,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,7,Conv:2 Slice:1 Cast:1 Mul:1 Sum:1 Pad:1,ok,292,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,1,0,52,Cast:13 Equal:11 And:11 ReduceSum:3 ReduceMax:2 Gather:2 Less:2 Slice:1 Greater:1 Conv:1 Sub:1 Sum:1,ok,293,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,22,Mul:4 Cast:3 ReduceSum:3 Less:3 Where:2 Sum:2 Slice:1 Conv:1 Greater:1 Sub:1 Pad:1,ok,295,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,35,Gather:6 Where:6 Cast:5 Sum:4 Mul:3 Conv:2 ReduceMax:2 Equal:2 Slice:1 ReduceSum:1 Sub:1 Concat:1,ok,298,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,21,Cast:8 And:3 Slice:2 ReduceMax:2 Not:2 Or:2 Concat:1 Pad:1,ok,299,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,43,Reshape:6 Sub:5 ArgMax:5 Gather:5 Add:5 Cast:4 Less:4 Mul:3 ReduceMax:2 Where:2 ReduceSum:1 Equal:1,ok,300,Mul:3 Gather:3 input_or_initializer:1 Cast:1,0
+ok,0,0,0,0,0,1,0,1,0,8,Slice:3 Cast:3 Where:1 Pad:1,ok,312,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,282,Mul:76 Slice:64 Cast:64 ReduceSum:24 Sub:24 Sum:20 Concat:9 Pad:1,ok,314,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,14,Sub:5 Slice:2 Cast:2 Constant:1 Mul:1 Sum:1 Concat:1 Pad:1,ok,318,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,22,Conv:6 Mul:5 Slice:3 Cast:3 Sub:3 Sum:1 Pad:1,ok,321,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,8,Slice:1 Cast:1 MaxPool:1 ReduceMax:1 Constant:1 Sub:1 Concat:1 Pad:1,ok,322,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,52,Cast:7 Reshape:7 Greater:6 And:4 ReduceMax:4 Mul:4 ReduceSum:3 Add:3 Einsum:3 Slice:1 LessOrEqual:1 ArgMax:1,ok,324,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,18,Pad:7 Slice:3 Mul:3 Sum:3 Cast:1 ReduceMax:1,ok,327,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,21,Sub:4 Mul:3 ReduceSum:2 Relu:2 Sum:2 Slice:1 Cast:1 ReduceMax:1 Div:1 Floor:1 Neg:1 Min:1,ok,329,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,29,Cast:5 ReduceSum:3 Greater:3 Where:3 ReduceMax:2 Sub:2 And:2 Less:2 Slice:1 Conv:1 Mod:1 Equal:1,ok,332,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,9,Sub:2 Slice:1 ReduceSum:1 ArgMax:1 Gather:1 Unsqueeze:1 Concat:1 Pad:1,ok,334,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,13,Cast:2 ReduceSum:2 Slice:1 Sub:1 ArgMax:1 Add:1 OneHot:1 Unsqueeze:1 Gather:1 Mul:1 Pad:1,ok,339,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,1,0,72,Where:11 Cast:10 ReduceSum:8 Equal:8 Sub:7 Greater:6 Mul:6 Slice:4 And:3 Sum:3 ReduceMax:2 ArgMax:1,ok,340,Cast:2 input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,101,Slice:26 Pad:25 Max:24 Mul:9 Sub:5 ReduceMax:4 ReduceSum:3 Cast:2 Min:2 Sum:1,ok,341,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,89,Slice:22 Add:19 Cast:12 Sub:12 Pad:12 Mul:10 Concat:2,ok,345,input_or_initializer:3 Pad:2 Sub:2 Concat:1,0
+ok,0,0,0,0,0,1,0,0,0,13,Slice:2 Cast:2 ReduceMax:2 Mul:2 Constant:1 Max:1 Sub:1 Sum:1 Pad:1,ok,347,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,4,0,25,Gather:6 Cast:5 Slice:2 ReduceMax:2 Reshape:2 ArgMax:2 Add:2 ReduceSum:1 Greater:1 Where:1 Pad:1,ok,351,Cast:2 Gather:2 input_or_initializer:1 Pad:1 Slice:1,0
+ok,0,0,0,0,0,1,0,0,0,132,Mul:60 ReduceSum:17 Cast:14 Where:14 Equal:9 Sub:5 Less:4 Greater:2 Slice:1 Conv:1 Or:1 Not:1,ok,358,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,13,Slice:4 Cast:3 Mul:2 ReduceMax:1 Sub:1 Add:1 Pad:1,ok,360,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,28,Cast:6 ReduceSum:3 ReduceMax:3 Greater:2 ArgMax:2 Sum:2 Equal:2 Where:2 Sub:2 Slice:1 Gather:1 Concat:1,ok,362,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,6,0,234,Cast:51 Less:30 Gather:25 Add:16 Unsqueeze:14 ReduceMax:12 Squeeze:11 ReduceSum:11 Mul:11 Greater:8 ArgMax:8 Pad:8,ok,365,Gather:5 Mul:2 Cast:2 input_or_initializer:1,0
+ok,0,0,0,0,0,1,0,0,0,186,Mul:36 Sub:28 ReduceSum:21 Where:20 Abs:18 Less:18 Cast:15 Slice:11 Sum:11 Pad:3 ReduceMax:2 ArgMax:2,ok,368,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,26,Mul:6 Sub:6 Relu:3 Slice:2 Cast:2 Conv:2 Min:2 Sum:1 Concat:1 Pad:1,ok,369,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,155,Mul:23 Cast:22 Add:19 Sub:15 Clip:12 Reshape:12 Gather:12 Where:10 ReduceSum:5 ReduceMax:5 Max:5 Greater:4,ok,370,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,23,ReduceSum:3 Mul:3 Sub:3 Slice:2 Cast:2 Div:2 Abs:2 Sum:1 Less:1 Where:1 Concat:1 Conv:1,ok,371,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,9,Slice:3 Cast:2 Constant:1 Greater:1 Where:1 Pad:1,ok,372,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,9,Concat:3 Slice:2 Cast:2 Tile:1 Pad:1,ok,373,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,96,And:22 Where:14 ReduceMax:9 Greater:7 Sub:7 Sum:7 ReduceMin:6 Mul:5 Equal:5 Cast:3 Or:3 LessOrEqual:2,ok,378,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,107,Greater:16 Where:16 Sub:13 Mul:11 ReduceSum:9 Cast:7 MaxPool:6 Sum:6 And:6 Less:4 Slice:3 Add:3,ok,379,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,3,0,39,Cast:5 Reshape:4 ArgMax:4 Gather:4 Sub:4 Add:4 Less:4 Mul:4 ReduceMax:3 Where:2 Slice:1,ok,384,Mul:2 Cast:2 Gather:2 input_or_initializer:1 ReduceMax:1,0
+ok,0,0,0,0,0,1,0,0,0,15,Sub:3 Mul:3 Slice:2 Cast:2 ReduceMax:2 Constant:1 Sum:1 Pad:1,ok,386,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,125,Where:34 Equal:28 Add:13 Sub:9 Greater:5 Cast:4 ReduceMax:4 Tile:4 Or:4 ReduceSum:3 And:3 Slice:2,ok,387,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,51,Slice:11 Mul:10 Concat:5 Cast:4 Sub:4 Div:3 Unsqueeze:2 Reshape:2 Floor:2 Flatten:1 MatMul:1 ReduceSum:1,ok,392,Mul:8 Concat:3 input_or_initializer:2,0
+ok,0,0,0,0,0,1,0,0,0,25,OneHot:5 ArgMax:3 Add:3 Unsqueeze:3 Mul:2 Squeeze:2 Sub:2 ReduceSum:1 Cast:1 Slice:1 Concat:1 Pad:1,ok,393,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,75,Cast:15 Unsqueeze:8 Mod:7 Add:7 Reshape:4 Mul:4 Sub:4 ReduceSum:3 Greater:3 Less:3 Clip:3 Concat:3,ok,394,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,14,Sub:3 Mul:3 Slice:2 Cast:2 ReduceMax:2 Sum:1 Pad:1,ok,395,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,0,0,86,Cast:25 Conv:18 Greater:16 Gather:9 Pad:5 Sum:4 And:4 Slice:1 Equal:1 Add:1 Not:1 Concat:1,ok,397,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,2,0,44,And:7 Slice:6 Where:6 Equal:5 Add:4 Or:4 Cast:3 Less:2 Conv:1 ReduceSum:1 Mul:1 Sub:1,ok,398,input_or_initializer:1 Pad:1 Cast:1,0
+ok,0,0,0,0,0,1,0,1,0,8,ReduceSum:2 Sub:1 Abs:1 Neg:1 ArgMax:1 Gather:1 Pad:1,ok,399,input_or_initializer:1 Pad:1,0
+ok,0,0,0,0,0,1,0,4,0,25,Gather:6 Cast:5 Slice:2 ReduceMax:2 Reshape:2 ArgMax:2 Add:2 ReduceSum:1 Greater:1 Where:1 Pad:1,ok,400,Cast:2 Gather:2 input_or_initializer:1 Pad:1 Slice:1,0

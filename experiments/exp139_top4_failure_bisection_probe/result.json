@@ -1,0 +1,87 @@
+{
+  "exp_id": "exp139_top4_failure_bisection_probe",
+  "date": "2026-06-10",
+  "status": "probe_complete",
+  "purpose": "A-3 bisection probe: intentionally fail top4 private-failure consensus tasks to measure whether they currently contribute to public LB.",
+  "base_exp": "experiments\\exp127_focused_surgery_seventh_pass_limited",
+  "base_public_lb": 5930.55,
+  "base_local_estimate": 6282.965235594199,
+  "targets": [
+    13,
+    2,
+    29,
+    9
+  ],
+  "target_points": {
+    "13": 13.3310798421544,
+    "2": 13.514517676859928,
+    "29": 13.516328283804857,
+    "9": 13.69482467517415
+  },
+  "expected_drop_if_all_alive": 54.05675047799333,
+  "expected_lb_if_all_alive": 5876.493249522006,
+  "interpretation_rule": "observed_drop close to target point sum means tasks were public-scoring alive; near-zero drop means tasks are already failing public scoring; partial drop identifies live/failing mix.",
+  "target_validation": [
+    {
+      "task_id": 13,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 2,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 29,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 9,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 812171,
+    "sha256": "3256750319f1402b292faa6e56029717bd5d6e144056ea605101e62c7690353f"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp139_top4_failure_bisection_probe\\submission.zip"
+  },
+  "elapsed_s": 9.119,
+  "submission_decision": "submit_probe_after_sanity",
+  "kaggle_submission_ref": 53520609,
+  "kaggle_status": "COMPLETE",
+  "kaggle_public_lb": 5876.49,
+  "observed_drop_vs_exp127": 54.05999999999949,
+  "drop_error_vs_expected_all_alive": 0.003249522006160924,
+  "probe_interpretation": "The top4 tasks 013/002/029/009 were public-scoring alive in exp127. They are not already-zero public failure tasks; exclude them from the immediate private-failure repair suspect set and probe the next consensus group.",
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: consumes a submission and only measures public scoring behavior for a group."
+}

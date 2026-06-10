@@ -1,0 +1,19 @@
+node_index,input,input_type,input_dims,input_producer,output,output_type,output_dims,user_count,users,rewrite_hint
+30,safe_name_132,BOOL,"(1, 1, 30, 30)",And,safe_name_133,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+50,safe_name_152,BOOL,"(1, 1, 30, 30)",And,safe_name_153,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+70,safe_name_172,BOOL,"(1, 1, 30, 30)",And,safe_name_173,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+90,safe_name_192,BOOL,"(1, 1, 30, 30)",And,safe_name_193,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+110,safe_name_212,BOOL,"(1, 1, 30, 30)",And,safe_name_213,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+130,safe_name_232,BOOL,"(1, 1, 30, 30)",And,safe_name_233,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+150,safe_name_252,BOOL,"(1, 1, 30, 30)",And,safe_name_253,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+170,safe_name_272,BOOL,"(1, 1, 30, 30)",And,safe_name_273,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+190,safe_name_292,BOOL,"(1, 1, 30, 30)",And,safe_name_293,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+210,safe_name_312,BOOL,"(1, 1, 30, 30)",And,safe_name_313,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+230,safe_name_332,BOOL,"(1, 1, 30, 30)",And,safe_name_333,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+250,safe_name_352,BOOL,"(1, 1, 30, 30)",And,safe_name_353,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+270,safe_name_372,BOOL,"(1, 1, 30, 30)",And,safe_name_373,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+290,safe_name_392,BOOL,"(1, 1, 30, 30)",And,safe_name_393,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+310,safe_name_412,BOOL,"(1, 1, 30, 30)",And,safe_name_413,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+330,safe_name_432,BOOL,"(1, 1, 30, 30)",And,safe_name_433,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+350,safe_name_452,BOOL,"(1, 1, 30, 30)",And,safe_name_453,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float
+370,safe_name_472,BOOL,"(1, 1, 30, 30)",And,safe_name_473,FLOAT,"(1, 1, 30, 30)",1,Sum,numeric_consumers_need_float

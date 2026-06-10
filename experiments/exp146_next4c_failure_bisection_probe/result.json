@@ -1,0 +1,94 @@
+{
+  "exp_id": "exp146_next4c_failure_bisection_probe",
+  "date": "2026-06-10",
+  "status": "probe_complete_partial_zero",
+  "purpose": "Continue A-3 bisection after exp145: intentionally fail next consensus tasks 021/014/025/008.",
+  "base_exp": "experiments\\exp127_focused_surgery_seventh_pass_limited",
+  "base_public_lb": 5930.55,
+  "current_public_best_lb": 5942.48,
+  "targets": [
+    21,
+    14,
+    25,
+    8
+  ],
+  "target_points": {
+    "21": 14.156056071090937,
+    "14": 14.427427453254685,
+    "25": 13.600400020341894,
+    "8": 14.94426357492621
+  },
+  "expected_drop_if_all_alive": 57.12814711961373,
+  "expected_lb_if_all_alive_from_exp127": 5873.421852880387,
+  "target_validation": [
+    {
+      "task_id": 21,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 14,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 25,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 8,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 799636,
+    "sha256": "7e17c8a8c9972e49a31f131413353230855775a2f47e875b5798ae128f7ef551"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp146_next4c_failure_bisection_probe\\submission.zip"
+  },
+  "elapsed_s": 6.32,
+  "submission_decision": "submit_probe_after_sanity",
+  "kaggle_submission_ref": 53521220,
+  "kaggle_status": "COMPLETE",
+  "kaggle_public_lb": 5887.02,
+  "observed_drop_vs_exp127": 43.530000000000655,
+  "drop_error_vs_expected_all_alive": -13.598147119613077,
+  "inferred_public_zero_tasks": [
+    25
+  ],
+  "inferred_alive_tasks": [
+    21,
+    14,
+    8
+  ],
+  "probe_interpretation": "Observed drop matches task021+task014+task008 point mass, while missing task025's 13.6004 points. This strongly indicates task025 was already public-scoring zero in exp127.",
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: consumes a submission and only measures public scoring behavior for a group."
+}

@@ -1,0 +1,47 @@
+{
+  "exp": "exp134_known_good_supplier_farm_acceptance",
+  "status": "known_good_supplier_complete",
+  "source_exp": "E:\\kaggle\\neurogolf-2026\\experiments\\exp127_focused_surgery_seventh_pass_limited",
+  "n_candidates": 2,
+  "n_full_ok": 2,
+  "n_accepted": 2,
+  "total_local_delta": 0.002854250468491415,
+  "rows": [
+    {
+      "task_id": 263,
+      "template_name": "fourth_bypass_Where_114_in2",
+      "source_candidate_cost": 8040,
+      "official_cost": 8040,
+      "score_reason": "ok",
+      "full_validation_status": "267_pass_0_fail",
+      "full_reason": "ok",
+      "full_ok": true,
+      "onnx_band": "600-2000_probe",
+      "onnx_cost_proxy": 52,
+      "ledger_adoption_status": "accepted",
+      "ledger_accepted": true,
+      "local_delta": 0.0002487252842051646
+    },
+    {
+      "task_id": 316,
+      "template_name": "fourth_bypass_And_024_in0",
+      "source_candidate_cost": 3833,
+      "official_cost": 3833,
+      "score_reason": "ok",
+      "full_validation_status": "266_pass_0_fail",
+      "full_reason": "ok",
+      "full_ok": true,
+      "onnx_band": "600-2000_probe",
+      "onnx_cost_proxy": 155,
+      "ledger_adoption_status": "accepted",
+      "ledger_accepted": true,
+      "local_delta": 0.0026055251842862504
+    }
+  ],
+  "outputs": {
+    "rows": "E:\\kaggle\\neurogolf-2026\\experiments\\exp134_known_good_supplier_farm_acceptance\\known_good_rows.csv",
+    "bundle_ledger": "E:\\kaggle\\neurogolf-2026\\experiments\\exp134_known_good_supplier_farm_acceptance\\bundle_ledger.csv"
+  },
+  "elapsed_s": 2.218,
+  "decision": "Known-good supplier can drive full-arc valid cost-improving candidates into BundleLedger accepted rows."
+}

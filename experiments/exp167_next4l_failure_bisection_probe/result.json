@@ -1,0 +1,84 @@
+{
+  "exp_id": "exp167_next4l_failure_bisection_probe",
+  "date": "2026-06-10",
+  "status": "submitted_complete",
+  "kaggle_ref": 53523591,
+  "kaggle_status": "COMPLETE",
+  "public_lb": 5906.33,
+  "observed_drop": 61.850000000000364,
+  "interpretation": "all_alive; observed drop matches expected all-alive drop within scoreboard rounding",
+  "purpose": "Probe next remaining subset-frequency public-zero suspects 048/035/012/017 after exp166 current best.",
+  "base_exp": "experiments\\exp166_task025_line_projection_publiczero_repair",
+  "base_public_lb": 5968.18,
+  "targets": [
+    48,
+    35,
+    12,
+    17
+  ],
+  "target_points": {
+    "48": 16.367872270491663,
+    "35": 15.36028269986934,
+    "12": 15.555457449352874,
+    "17": 14.540073127737525
+  },
+  "expected_drop_if_all_alive": 61.823685547451404,
+  "expected_lb_if_all_alive": 5906.356314452549,
+  "target_validation": [
+    {
+      "task_id": 48,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 35,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 12,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 17,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 806668,
+    "sha256": "ce1c4148006ffb73aeaa67e651f40c2df476ab53dd3c081c0c5f4269a3f50c85"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp167_next4l_failure_bisection_probe\\submission.zip"
+  },
+  "elapsed_s": 1.184,
+  "submission_decision": "submit_bisection_probe",
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: consumes a submission and only measures public scoring behavior for a group."
+}

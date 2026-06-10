@@ -1,0 +1,7 @@
+case,purpose,official_cost,trace_status,subject,predicted_cost_band,hard_reject,reasons,risk_tags,node_count,full_grid_intermediate_count,param_count,param_bytes,memory_bytes_proxy,cost_proxy
+identity,cheap control,0,ok,E:\kaggle\neurogolf-2026\experiments\exp131_farm_os_cost_probe\identity.onnx,250-600_plausible,False,[],[],1,0,0,0,0,0
+channel_gather,cheap channel permutation control,0,ok,E:\kaggle\neurogolf-2026\experiments\exp131_farm_os_cost_probe\channel_gather.onnx,250-600_plausible,False,[],[],1,0,10,80,0,10
+conv1x1,small param local mask control,0,ok,E:\kaggle\neurogolf-2026\experiments\exp131_farm_os_cost_probe\conv1x1.onnx,250-600_plausible,False,[],['op:Conv'],1,0,100,400,0,100
+full_grid_where,conditional full-grid reject control,0,ok,E:\kaggle\neurogolf-2026\experiments\exp131_farm_os_cost_probe\full_grid_where.onnx,high_cost_probe_only,False,[],['conditional_op:Where'],1,0,18000,45000,0,18000
+small_where_expand,small Where but full-grid Expand risk control,36000,ok,E:\kaggle\neurogolf-2026\experiments\exp131_farm_os_cost_probe\small_where_expand.onnx,high_cost_probe_only,False,[],"['conditional_full_grid_data_movement', 'conditional_op:Where']",2,1,24,82,36000,36024
+static_slice_pad_3x3,crop floor control,360,ok,E:\kaggle\neurogolf-2026\experiments\exp131_farm_os_cost_probe\static_slice_pad_3x3.onnx,250-600_plausible,False,[],[],2,0,21,164,360,381

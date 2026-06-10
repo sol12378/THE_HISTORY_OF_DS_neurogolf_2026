@@ -1,0 +1,160 @@
+{
+  "exp_id": "exp136_private_failure_subset_inventory",
+  "date": "2026-06-10",
+  "status": "failure_subset_inventory_ready",
+  "plan_source": "docs\\experiment_plan_2026-06-10.md",
+  "base_exp": "exp_b025_submit_safe_delta_union",
+  "base_local_estimate": 6282.812217709089,
+  "base_lb": 5930.4,
+  "target_gap": 352.412218,
+  "target_gap_scaled": 35241,
+  "task_count": 400,
+  "subset_candidate_count": 50,
+  "best_subset_candidates": [
+    {
+      "k": 24,
+      "sum_points": 352.41,
+      "gap_error": 0.0,
+      "risk_score_sum": 51.29971,
+      "tasks": "002 004 008 009 013 014 016 018 019 021 023 024 025 029 031 032 034 036 046 047 049 050 051 366"
+    },
+    {
+      "k": 23,
+      "sum_points": 352.41,
+      "gap_error": 0.0,
+      "risk_score_sum": 50.1167,
+      "tasks": "002 004 009 013 016 018 019 021 024 025 029 031 032 049 050 051 053 056 063 064 067 077 173"
+    },
+    {
+      "k": 25,
+      "sum_points": 352.41,
+      "gap_error": 0.0,
+      "risk_score_sum": 49.15149,
+      "tasks": "002 003 004 005 008 009 011 013 014 018 019 021 022 023 024 025 027 029 031 033 034 035 036 037 366"
+    },
+    {
+      "k": 22,
+      "sum_points": 352.41,
+      "gap_error": 0.0,
+      "risk_score_sum": 45.12479,
+      "tasks": "002 004 009 013 014 016 018 024 029 032 050 053 056 064 067 077 084 085 087 088 092 276"
+    },
+    {
+      "k": 24,
+      "sum_points": 352.42,
+      "gap_error": 0.01,
+      "risk_score_sum": 51.39615,
+      "tasks": "002 004 005 008 009 013 014 016 018 019 021 023 024 025 029 030 031 032 034 046 049 050 051 396"
+    },
+    {
+      "k": 24,
+      "sum_points": 352.4,
+      "gap_error": -0.01,
+      "risk_score_sum": 51.17139,
+      "tasks": "002 004 005 008 009 013 014 016 018 019 021 023 024 025 028 029 031 032 034 046 049 050 051 133"
+    },
+    {
+      "k": 25,
+      "sum_points": 352.42,
+      "gap_error": 0.01,
+      "risk_score_sum": 50.27703,
+      "tasks": "002 004 005 008 009 011 013 014 018 019 020 021 022 024 025 027 029 030 031 032 033 034 036 037 366"
+    },
+    {
+      "k": 23,
+      "sum_points": 352.4,
+      "gap_error": -0.01,
+      "risk_score_sum": 50.13332,
+      "tasks": "002 004 008 009 013 016 018 019 024 029 032 049 050 053 056 063 064 067 077 082 084 085 366"
+    },
+    {
+      "k": 23,
+      "sum_points": 352.42,
+      "gap_error": 0.01,
+      "risk_score_sum": 50.10725,
+      "tasks": "002 008 009 013 016 018 019 024 025 029 031 032 050 053 056 063 064 067 077 082 084 085 366"
+    },
+    {
+      "k": 25,
+      "sum_points": 352.4,
+      "gap_error": -0.01,
+      "risk_score_sum": 49.5956,
+      "tasks": "002 004 005 008 009 011 013 014 018 019 020 021 022 023 024 025 027 028 029 030 031 034 036 037 366"
+    }
+  ],
+  "top_source_options": [
+    {
+      "source": "exp068_seddik_style_strict_scalarization_seddik_style_scalarize_dedup_prune",
+      "task_count": 34,
+      "points_sum": 507.307627,
+      "avg_risk": 1.512203,
+      "gap_error_if_all_failed": 154.897627,
+      "tasks": "017 020 026 036 044 045 051 058 065 077 080 110 114 115 117 128 133 134 144 157 161 178 182 206 212 245 248 267 284 296 357 358 370 383"
+    },
+    {
+      "source": "kojimar_5800_minimal_blend",
+      "task_count": 12,
+      "points_sum": 169.55678,
+      "avg_risk": 1.948015,
+      "gap_error_if_all_failed": -182.85322,
+      "tasks": "018 096 153 158 175 204 209 219 233 285 319 367"
+    },
+    {
+      "source": "afr1ste_5689_artifact",
+      "task_count": 36,
+      "points_sum": 554.550505,
+      "avg_risk": 1.306193,
+      "gap_error_if_all_failed": 202.140505,
+      "tasks": "003 006 034 050 055 059 089 123 129 167 180 188 208 216 224 231 239 247 249 254 263 265 273 275 281 289 330 339 340 342 343 348 360 394 395 397"
+    },
+    {
+      "source": "franksunp_blended_best",
+      "task_count": 7,
+      "points_sum": 99.220953,
+      "avg_risk": 1.956999,
+      "gap_error_if_all_failed": -253.189047,
+      "tasks": "023 025 066 101 118 191 243"
+    },
+    {
+      "source": "exp_b025_submit_safe_delta_union",
+      "task_count": 4,
+      "points_sum": 57.486558,
+      "avg_risk": 1.199933,
+      "gap_error_if_all_failed": -294.923442,
+      "tasks": "062 145 255 268"
+    },
+    {
+      "source": "vyanktesh_multi_source_output",
+      "task_count": 2,
+      "points_sum": 32.639014,
+      "avg_risk": 1.125165,
+      "gap_error_if_all_failed": -319.770986,
+      "tasks": "001 295"
+    },
+    {
+      "source": "needless090_4250_output",
+      "task_count": 2,
+      "points_sum": 28.602435,
+      "avg_risk": 1.377125,
+      "gap_error_if_all_failed": -323.807565,
+      "tasks": "076 363"
+    },
+    {
+      "source": "massimilianoghiotto_6254",
+      "task_count": 303,
+      "points_sum": 4833.448346,
+      "avg_risk": 1.353797,
+      "gap_error_if_all_failed": 4481.038346,
+      "tasks": "002 004 005 007 008 009 010 011 012 013 014 015 016 019 021 022 024 027 028 029 030 031 032 033 035 037 038 039 040 041 042 043 046 047 048 049 052 053 054 056 057 060 061 063 064 067 068 069 070 071 072 073 074 075 078 079 081 082 083 084 085 086 087 088 090 091 092 093 094 095 097 098 099 100 102 103 104 105 106 107 108 109 111 112 113 116 119 120 121 122 124 125 126 127 130 131 132 135 136 137 138 139 140 141 142 143 146 147 148 149 150 151 152 154 155 156 159 160 162 163 164 165 166 168 169 170 171 172 173 174 176 177 179 181 183 184 185 186 187 189 190 192 193 194 195 196 197 198 199 200 201 202 203 205 207 210 211 213 214 215 217 218 220 221 222 223 225 226 227 228 229 230 232 234 235 236 237 238 240 241 242 244 246 250 251 252 253 256 257 258 259 260 261 262 264 266 269 270 271 272 274 276 277 278 279 280 282 283 286 287 288 290 291 292 293 294 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 320 321 322 323 324 325 326 327 328 329 331 332 333 334 335 336 337 338 341 344 345 346 347 349 350 351 352 353 354 355 356 359 361 362 364 365 366 368 369 371 372 373 374 375 376 377 378 379 380 381 382 384 385 386 387 388 389 390 391 392 393 396 398 399 400"
+    }
+  ],
+  "outputs": {
+    "task_risk_inventory": "experiments\\exp136_private_failure_subset_inventory\\task_risk_inventory.csv",
+    "subset_candidates": "experiments\\exp136_private_failure_subset_inventory\\subset_candidates.csv",
+    "source_gap_options": "experiments\\exp136_private_failure_subset_inventory\\source_gap_options.csv"
+  },
+  "elapsed_s": 92.433,
+  "decision": "Use top subset candidates as the first private-failure audit queue before spending bisection submissions.",
+  "leakage_risk": "low: diagnostic only; no private labels or raw lookup adoption.",
+  "overfitting_risk": "medium: subset-sum evidence is indirect and must be confirmed by provenance/stress/probe before repair decisions."
+}

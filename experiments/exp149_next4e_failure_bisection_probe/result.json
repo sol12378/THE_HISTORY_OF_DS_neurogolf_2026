@@ -1,0 +1,85 @@
+{
+  "exp_id": "exp149_next4e_failure_bisection_probe",
+  "date": "2026-06-10",
+  "status": "probe_complete_all_alive",
+  "purpose": "Continue public-zero bisection after exp148: intentionally fail next remaining frequent subset tasks 053/056/067/005.",
+  "base_exp": "experiments\\exp127_focused_surgery_seventh_pass_limited",
+  "base_public_lb": 5930.55,
+  "current_public_best_lb": 5942.48,
+  "targets": [
+    53,
+    56,
+    67,
+    5
+  ],
+  "target_points": {
+    "53": 21.598802618337846,
+    "56": 19.638707834290575,
+    "67": 19.247427361174367,
+    "5": 13.328149556042213
+  },
+  "expected_drop_if_all_alive": 73.813087369845,
+  "expected_lb_if_all_alive_from_exp127": 5856.7369126301555,
+  "kaggle_ref": 53521652,
+  "public_lb": 5856.74,
+  "observed_drop_from_exp127": 73.80999999999949,
+  "drop_delta_vs_all_alive": -0.0030873698459655283,
+  "interpretation": "Observed LB matches all-alive expectation; no task among 053/056/067/005 is a clear public-zero suspect.",
+  "target_validation": [
+    {
+      "task_id": 53,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 56,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 67,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 5,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 817731,
+    "sha256": "83be660efa6afae1b4fe69635d82da7b001ecc7f3c0c18a4470e4aefd32ebb2f"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp149_next4e_failure_bisection_probe\\submission.zip"
+  },
+  "elapsed_s": 6.01,
+  "submission_decision": "diagnostic_complete_exclude_targets_from_public_zero_suspects",
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: consumes a submission and only measures public scoring behavior for a group."
+}

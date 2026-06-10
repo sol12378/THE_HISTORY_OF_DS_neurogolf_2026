@@ -1,0 +1,68 @@
+{
+  "exp_id": "exp163_task025_motion_predicate_mining",
+  "date": "2026-06-10",
+  "status": "diagnostic_complete",
+  "task_id": 25,
+  "summary": {
+    "example_count": 266,
+    "color_counts_preserved": 64,
+    "nonzero_count_preserved": 64,
+    "removed_added_recolor_counts": {
+      "(4, 3, 0)": 16,
+      "(2, 2, 0)": 16,
+      "(5, 3, 0)": 15,
+      "(3, 3, 0)": 14,
+      "(3, 2, 0)": 13,
+      "(5, 4, 0)": 12,
+      "(6, 5, 0)": 12,
+      "(4, 2, 0)": 12,
+      "(7, 5, 0)": 11,
+      "(4, 4, 0)": 10,
+      "(1, 1, 0)": 9,
+      "(6, 4, 0)": 9,
+      "(5, 2, 0)": 8,
+      "(7, 6, 0)": 8,
+      "(2, 1, 0)": 6,
+      "(8, 5, 0)": 6,
+      "(2, 0, 0)": 5,
+      "(8, 6, 0)": 5,
+      "(9, 7, 0)": 5,
+      "(10, 7, 0)": 5
+    },
+    "dominant_line_type_counts": {
+      "horizontal": 139,
+      "vertical": 117,
+      "": 10
+    },
+    "dominant_delta_counts": {
+      "0,1": 17,
+      "2,0": 15,
+      "1,0": 13,
+      "0,3": 13,
+      "3,0": 12,
+      "0,4": 11,
+      "0,2": 10,
+      "": 10,
+      "0,-1": 10,
+      "4,0": 9,
+      "-1,0": 8,
+      "0,-4": 7,
+      "-2,0": 7,
+      "-4,0": 6,
+      "0,-2": 5,
+      "9,0": 5,
+      "0,-3": 5,
+      "0,-8": 5,
+      "0,5": 5,
+      "10,0": 4
+    },
+    "balanced_all_changed_colors": 64
+  },
+  "outputs": {
+    "motion_features": "experiments\\exp163_task025_motion_predicate_mining\\task025_motion_features.csv"
+  },
+  "elapsed_s": 0.341,
+  "decision": "mixed_recolor_motion_task; split count-preserving and recolor cases before rule synthesis",
+  "leakage_risk": "low: diagnostic over provided train/test/arc-gen examples only.",
+  "overfitting_risk": "medium: mined motion signatures may overfit local generated examples unless converted to input-only rule."
+}

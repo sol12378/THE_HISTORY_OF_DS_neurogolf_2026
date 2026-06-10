@@ -1,0 +1,121 @@
+{
+  "exp": "exp131_farm_os_cost_probe",
+  "status": "cost_probe_complete",
+  "n_cases": 6,
+  "rows": [
+    {
+      "case": "identity",
+      "purpose": "cheap control",
+      "official_cost": 0,
+      "trace_status": "ok",
+      "subject": "E:\\kaggle\\neurogolf-2026\\experiments\\exp131_farm_os_cost_probe\\identity.onnx",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 0,
+      "param_bytes": 0,
+      "memory_bytes_proxy": 0,
+      "cost_proxy": 0
+    },
+    {
+      "case": "channel_gather",
+      "purpose": "cheap channel permutation control",
+      "official_cost": 0,
+      "trace_status": "ok",
+      "subject": "E:\\kaggle\\neurogolf-2026\\experiments\\exp131_farm_os_cost_probe\\channel_gather.onnx",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 10,
+      "param_bytes": 80,
+      "memory_bytes_proxy": 0,
+      "cost_proxy": 10
+    },
+    {
+      "case": "conv1x1",
+      "purpose": "small param local mask control",
+      "official_cost": 0,
+      "trace_status": "ok",
+      "subject": "E:\\kaggle\\neurogolf-2026\\experiments\\exp131_farm_os_cost_probe\\conv1x1.onnx",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [
+        "op:Conv"
+      ],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 100,
+      "param_bytes": 400,
+      "memory_bytes_proxy": 0,
+      "cost_proxy": 100
+    },
+    {
+      "case": "full_grid_where",
+      "purpose": "conditional full-grid reject control",
+      "official_cost": 0,
+      "trace_status": "ok",
+      "subject": "E:\\kaggle\\neurogolf-2026\\experiments\\exp131_farm_os_cost_probe\\full_grid_where.onnx",
+      "predicted_cost_band": "high_cost_probe_only",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [
+        "conditional_op:Where"
+      ],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 18000,
+      "param_bytes": 45000,
+      "memory_bytes_proxy": 0,
+      "cost_proxy": 18000
+    },
+    {
+      "case": "small_where_expand",
+      "purpose": "small Where but full-grid Expand risk control",
+      "official_cost": 36000,
+      "trace_status": "ok",
+      "subject": "E:\\kaggle\\neurogolf-2026\\experiments\\exp131_farm_os_cost_probe\\small_where_expand.onnx",
+      "predicted_cost_band": "high_cost_probe_only",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [
+        "conditional_full_grid_data_movement",
+        "conditional_op:Where"
+      ],
+      "node_count": 2,
+      "full_grid_intermediate_count": 1,
+      "param_count": 24,
+      "param_bytes": 82,
+      "memory_bytes_proxy": 36000,
+      "cost_proxy": 36024
+    },
+    {
+      "case": "static_slice_pad_3x3",
+      "purpose": "crop floor control",
+      "official_cost": 360,
+      "trace_status": "ok",
+      "subject": "E:\\kaggle\\neurogolf-2026\\experiments\\exp131_farm_os_cost_probe\\static_slice_pad_3x3.onnx",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "node_count": 2,
+      "full_grid_intermediate_count": 0,
+      "param_count": 21,
+      "param_bytes": 164,
+      "memory_bytes_proxy": 360,
+      "cost_proxy": 381
+    }
+  ],
+  "outputs": {
+    "cost_probe_rows": "E:\\kaggle\\neurogolf-2026\\experiments\\exp131_farm_os_cost_probe\\cost_probe_rows.csv"
+  },
+  "elapsed_s": 1.103,
+  "decision": "Numeric cost proxy is now recorded, but official score_network remains the acceptance source."
+}

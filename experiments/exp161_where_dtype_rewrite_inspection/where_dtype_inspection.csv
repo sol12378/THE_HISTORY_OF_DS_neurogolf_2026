@@ -1,0 +1,118 @@
+hint,input,input_dims,input_producer,input_type,kind,node_index,output,output_dims,output_type,task_id,user_count,users
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 1) y=FLOAT16()",safe_name_23,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,9,safe_name_24,"(1, 1, 30, 30)",FLOAT16,206,1,ReduceMin
+"where_cond=BOOL x=FLOAT16(1, 1, 1, 30) y=FLOAT16()",safe_name_23,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,10,safe_name_25,"(1, 1, 30, 30)",FLOAT16,206,1,ReduceMin
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 1) y=FLOAT16()",safe_name_20,"(1, 1, 30, 30)",Equal,BOOL,where_fullgrid,13,safe_name_28,"(1, 1, 30, 30)",FLOAT16,206,1,ReduceMax
+"where_cond=BOOL x=FLOAT16(1, 1, 1, 30) y=FLOAT16()",safe_name_20,"(1, 1, 30, 30)",Equal,BOOL,where_fullgrid,14,safe_name_29,"(1, 1, 30, 30)",FLOAT16,206,1,ReduceMax
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_23,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,29,safe_name_44,"(1, 1, 30, 30)",FLOAT16,206,1,Pad
+"where_cond=BOOL x=FLOAT16() y=FLOAT16(1, 1, 30, 30)",safe_name_20,"(1, 1, 30, 30)",Equal,BOOL,where_fullgrid,33,safe_name_48,"(1, 1, 30, 30)",FLOAT16,206,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_47,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,34,safe_name_49,"(1, 1, 30, 30)",FLOAT16,206,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_50,"(1, 1, 30, 30)",Or,BOOL,where_fullgrid,36,safe_name_51,"(1, 1, 30, 30)",FLOAT16,206,1,Equal
+possible_keep_bool_as_where_condition,safe_name_52,"(1, 10, 30, 30)",Equal,BOOL,cast_to_float_fullgrid,38,output,"(1, 10, 30, 30)",FLOAT,206,0,
+"where_cond=BOOL x=UINT8(1, 1, 30, 30) y=UINT8()",safe_name_11,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,4,safe_name_13,"(1, 1, 30, 30)",UINT8,338,1,Where
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,5,safe_name_14,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,7,safe_name_16,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,9,safe_name_18,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,11,safe_name_20,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,13,safe_name_22,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,15,safe_name_24,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,17,safe_name_26,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,19,safe_name_28,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,21,safe_name_30,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,23,safe_name_32,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,25,safe_name_34,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,27,safe_name_36,"(1, 1, 30, 30)",UINT8,338,1,MaxPool
+"where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)",safe_name_12,"(1, 1, 30, 30)",Greater,BOOL,where_fullgrid,29,safe_name_38,"(1, 1, 30, 30)",UINT8,338,1,Cast
+numeric_consumers_need_float,safe_name_42,"(1, 1, 30, 30)",And,BOOL,cast_to_float_fullgrid,34,safe_name_43,"(1, 1, 30, 30)",FLOAT,338,2,Sub Concat
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 1) y=FLOAT16(1, 1, 1, 30)",safe_name_58,"(1, 1, 30, 30)",GreaterOrEqual,BOOL,where_fullgrid,39,safe_name_59,"(1, 1, 30, 30)",FLOAT16,328,1,Greater
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 1) y=FLOAT16(1, 1, 1, 30)",safe_name_61,"(1, 1, 30, 30)",GreaterOrEqual,BOOL,where_fullgrid,42,safe_name_62,"(1, 1, 30, 30)",FLOAT16,328,1,Greater
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 1) y=FLOAT16(1, 1, 1, 30)",safe_name_64,"(1, 1, 30, 30)",GreaterOrEqual,BOOL,where_fullgrid,45,safe_name_65,"(1, 1, 30, 30)",FLOAT16,328,1,Greater
+"where_cond=BOOL x=FLOAT16(1,) y=FLOAT16()",safe_name_89,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,70,safe_name_90,"(1, 1, 30, 30)",FLOAT16,328,1,Max
+"where_cond=BOOL x=FLOAT16(1,) y=FLOAT16()",safe_name_98,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,79,safe_name_99,"(1, 1, 30, 30)",FLOAT16,328,1,Max
+"where_cond=BOOL x=FLOAT16(1,) y=FLOAT16()",safe_name_107,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,88,safe_name_108,"(1, 1, 30, 30)",FLOAT16,328,1,Max
+"where_cond=BOOL x=FLOAT16(1,) y=FLOAT16()",safe_name_116,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,97,safe_name_117,"(1, 1, 30, 30)",FLOAT16,328,1,Max
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_37,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,99,safe_name_119,"(1, 1, 30, 30)",FLOAT16,328,1,Equal
+possible_keep_bool_as_where_condition,safe_name_120,"(1, 10, 30, 30)",Equal,BOOL,cast_to_float_fullgrid,101,output,"(1, 10, 30, 30)",FLOAT,328,0,
+"where_cond=BOOL x=FLOAT16(1, 10, 30, 30) y=FLOAT16()",safe_name_81,"(1, 1, 30, 30)",Or,BOOL,where_fullgrid,40,safe_name_82,"(1, 10, 30, 30)",FLOAT16,366,2,ReduceSum ArgMax
+"where_cond=BOOL x=FLOAT16(1, 10, 30, 30) y=FLOAT16(1, 10, 30, 30)",safe_name_50,"(1, 1, 1, 1)",Greater,BOOL,where_fullgrid,41,safe_name_83,"(1, 10, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 10, 30, 30) y=FLOAT16()",safe_name_81,"(1, 1, 30, 30)",Or,BOOL,where_fullgrid,42,safe_name_84,"(1, 10, 30, 30)",FLOAT16,366,2,ReduceSum ArgMax
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,63,safe_name_105,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,65,safe_name_107,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,67,safe_name_109,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,69,safe_name_111,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,71,safe_name_113,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,73,safe_name_115,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,75,safe_name_117,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,77,safe_name_119,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,79,safe_name_121,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,81,safe_name_123,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,83,safe_name_125,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_101,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,85,safe_name_127,"(1, 1, 30, 30)",FLOAT16,366,1,Mul
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,87,safe_name_129,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,89,safe_name_131,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,91,safe_name_133,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,93,safe_name_135,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,95,safe_name_137,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,97,safe_name_139,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,99,safe_name_141,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,101,safe_name_143,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,103,safe_name_145,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,105,safe_name_147,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,107,safe_name_149,"(1, 1, 30, 30)",FLOAT16,366,1,MaxPool
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_102,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,109,safe_name_151,"(1, 1, 30, 30)",FLOAT16,366,1,Mul
+boolish_to_float_mixed_consumers,safe_name_101,"(1, 1, 30, 30)",And,BOOL,cast_to_float_fullgrid,111,safe_name_153,"(1, 1, 30, 30)",FLOAT,366,1,ScatterND
+boolish_to_float_mixed_consumers,safe_name_102,"(1, 1, 30, 30)",And,BOOL,cast_to_float_fullgrid,112,safe_name_154,"(1, 1, 30, 30)",FLOAT,366,1,ScatterND
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_168,(),Greater,BOOL,where_fullgrid,127,safe_name_169,"(1, 1, 30, 30)",FLOAT16,366,18,Equal Equal Equal Equal Equal Equal Equal Equal Equal Equal Where Equal Where Equal Where Gather Gather Gather
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_168,(),Greater,BOOL,where_fullgrid,128,safe_name_170,"(1, 1, 30, 30)",FLOAT16,366,9,Equal Equal Equal Equal Equal Equal Equal Equal Equal
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_168,(),Greater,BOOL,where_fullgrid,134,safe_name_176,"(1, 1, 30, 30)",FLOAT16,366,5,ReduceMin Equal Where Equal Equal
+"where_cond=BOOL x=FLOAT16() y=FLOAT16(1, 1, 30, 30)",safe_name_178,"(1, 1, 30, 30)",Equal,BOOL,where_fullgrid,137,safe_name_179,"(1, 1, 30, 30)",FLOAT16,366,2,ReduceMin Where
+"where_cond=BOOL x=FLOAT16() y=FLOAT16(1, 1, 30, 30)",safe_name_181,"(1, 1, 30, 30)",Equal,BOOL,where_fullgrid,140,safe_name_182,"(1, 1, 30, 30)",FLOAT16,366,1,ReduceMin
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_311,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,272,safe_name_314,"(1, 1, 30, 30)",FLOAT16,366,1,ReduceMax
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_367,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,328,safe_name_370,"(1, 1, 30, 30)",FLOAT16,366,1,ReduceMax
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_423,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,384,safe_name_426,"(1, 1, 30, 30)",FLOAT16,366,1,ReduceMax
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 1, 1)",safe_name_428,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,387,safe_name_429,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_430,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,389,safe_name_431,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_432,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,391,safe_name_433,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_434,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,393,safe_name_435,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_436,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,395,safe_name_437,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_438,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,397,safe_name_439,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_440,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,399,safe_name_441,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_442,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,401,safe_name_443,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_444,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,403,safe_name_445,"(1, 1, 30, 30)",FLOAT16,366,1,Conv
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 1, 1)",safe_name_452,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,411,safe_name_453,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_454,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,413,safe_name_455,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_456,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,415,safe_name_457,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_458,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,417,safe_name_459,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_460,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,419,safe_name_461,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_462,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,421,safe_name_463,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_464,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,423,safe_name_465,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_466,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,425,safe_name_467,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_468,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,427,safe_name_469,"(1, 1, 30, 30)",FLOAT16,366,1,Conv
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 1, 1)",safe_name_476,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,435,safe_name_477,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_478,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,437,safe_name_479,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_480,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,439,safe_name_481,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_482,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,441,safe_name_483,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_484,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,443,safe_name_485,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_486,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,445,safe_name_487,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_488,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,447,safe_name_489,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_490,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,449,safe_name_491,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_492,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,451,safe_name_493,"(1, 1, 30, 30)",FLOAT16,366,1,Conv
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_511,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,493,safe_name_535,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_510,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,494,safe_name_536,"(1, 1, 30, 30)",FLOAT16,366,1,Gather
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_562,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,523,safe_name_565,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 1, 1)",safe_name_541,(),Greater,BOOL,where_fullgrid,524,safe_name_566,"(1, 1, 30, 30)",FLOAT16,366,2,Conv Add
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_518,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,533,safe_name_575,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_517,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,534,safe_name_576,"(1, 1, 30, 30)",FLOAT16,366,2,Conv Gather
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_605,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,566,safe_name_608,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 1, 1)",safe_name_584,(),Greater,BOOL,where_fullgrid,567,safe_name_609,"(1, 1, 30, 30)",FLOAT16,366,1,Add
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_525,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,579,safe_name_621,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_524,"(1, 1, 1, 1)",Equal,BOOL,where_fullgrid,580,safe_name_622,"(1, 1, 30, 30)",FLOAT16,366,1,Conv
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_688,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,650,safe_name_692,"(1, 1, 30, 30)",FLOAT16,366,1,Greater
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_688,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,656,safe_name_698,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_695,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,657,safe_name_699,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_714,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,676,safe_name_718,"(1, 1, 30, 30)",FLOAT16,366,1,Greater
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_714,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,682,safe_name_724,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_721,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,683,safe_name_725,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_740,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,702,safe_name_744,"(1, 1, 30, 30)",FLOAT16,366,1,Greater
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_740,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,708,safe_name_750,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)",safe_name_747,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,709,safe_name_751,"(1, 1, 30, 30)",FLOAT16,366,1,Where
+"where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()",safe_name_673,"(1, 1, 30, 30)",And,BOOL,where_fullgrid,710,safe_name_752,"(1, 1, 30, 30)",FLOAT16,366,10,Equal Equal Equal Equal Equal Equal Equal Equal Equal Equal

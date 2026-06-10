@@ -1,0 +1,25 @@
+{
+  "exp_id": "exp165_task025_line_projection_onnx_probe",
+  "date": "2026-06-10",
+  "status": "complete",
+  "base_exp": "experiments\\exp152_task023_b035_repair_probe",
+  "task_id": 25,
+  "eval": {
+    "task_id": 25,
+    "route": "same_shape",
+    "template_name": "task025_line_projection_correctness_first",
+    "baseline_cost": 89286,
+    "candidate_cost": 491600,
+    "baseline_points": 13.600400020341894,
+    "candidate_points": 11.894579343325983,
+    "file_bytes": 46914,
+    "validation_status": "266_pass_0_fail",
+    "status": "no_cost_gain",
+    "reason": "candidate cost is not lower than baseline",
+    "sha256": "4f0df14f0df76292ace6781a959118511b5bd3637d31a758b7de96e49997925a"
+  },
+  "elapsed_s": 2.05,
+  "decision": "do_not_adopt_refine_lowering",
+  "leakage_risk": "low: input-only rule lowered to ONNX; no labels or raw data beyond provided validation examples are embedded.",
+  "overfitting_risk": "medium: rule assumes complete guide lines and may need hidden robustness review before final-safe classification."
+}

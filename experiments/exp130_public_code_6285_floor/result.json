@@ -1,0 +1,148 @@
+{
+  "exp": "exp130_public_code_6285_floor",
+  "status": "submission_floor_candidate_ready",
+  "floor_target_lb": 6285.0,
+  "floor_basis": "public CODE beicicc golf-domain reference LB 6645 plus exp_b025 fallback",
+  "source_exp": "exp_b037_beicicc_golf_blend",
+  "source_result": {
+    "exp": "exp_b037_beicicc_golf_blend",
+    "local_static_estimate": 7115.920621,
+    "prev_local": 6282.812218,
+    "delta_static": 833.108403,
+    "n_beicicc_tasks": 379,
+    "n_fallback_tasks": 21,
+    "source_counts": {
+      "beicicc_6645": 379,
+      "exp_b025_best": 21
+    },
+    "note": "golf domain models - LB cost unknown, local estimate uses static cost only",
+    "beicicc_lb_reference": 6645,
+    "elapsed_s": 18.5
+  },
+  "sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "zip_bytes": 1043430,
+    "sha256": "ee5379dc10d30fcfc21ff99a921e802c38221aea1cb1c51145a003f726187be3",
+    "parse_failures": [],
+    "parse_failure_count": 0,
+    "too_large_count": 0,
+    "banned_count": 0,
+    "banned_examples": [],
+    "golf_domain_node_count": 303,
+    "top_ops": [
+      [
+        "Constant",
+        1550
+      ],
+      [
+        "Mul",
+        931
+      ],
+      [
+        "Cast",
+        514
+      ],
+      [
+        "Slice",
+        391
+      ],
+      [
+        "Add",
+        384
+      ],
+      [
+        "Gather",
+        353
+      ],
+      [
+        "Equal",
+        308
+      ],
+      [
+        "Identity",
+        305
+      ],
+      [
+        "ReduceMin",
+        262
+      ],
+      [
+        "ScatterElements",
+        259
+      ],
+      [
+        "Sub",
+        233
+      ],
+      [
+        "Pad",
+        157
+      ],
+      [
+        "ReduceMax",
+        125
+      ],
+      [
+        "ReduceSum",
+        114
+      ],
+      [
+        "Greater",
+        96
+      ],
+      [
+        "Concat",
+        63
+      ],
+      [
+        "Max",
+        59
+      ],
+      [
+        "MaxPool",
+        57
+      ],
+      [
+        "ArgMax",
+        54
+      ],
+      [
+        "Less",
+        53
+      ]
+    ]
+  },
+  "manifest": {
+    "row_count": 400,
+    "source_counts": {
+      "beicicc_6645": 379,
+      "exp_b025_best": 21
+    }
+  },
+  "adoption": {
+    "submit_as_floor_candidate": true,
+    "floor_confirmed_by_this_workspace": false,
+    "confirmation_required": "Kaggle LB result for this exact zip",
+    "risk": "medium_high: golf domain static local estimate is not official cost; public-code overfit risk remains",
+    "kaggle_ref": 53450559,
+    "kaggle_status": "COMPLETE",
+    "kaggle_public_score": 1400.37,
+    "floor_result": "rejected_lb_below_6285"
+  },
+  "outputs": {
+    "submission_zip": "E:\\kaggle\\neurogolf-2026\\experiments\\exp130_public_code_6285_floor\\submission.zip",
+    "selected_manifest": "E:\\kaggle\\neurogolf-2026\\experiments\\exp130_public_code_6285_floor\\selected_manifest.csv"
+  },
+  "elapsed_s": 0.112
+}

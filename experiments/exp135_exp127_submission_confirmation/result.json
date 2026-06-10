@@ -1,0 +1,34 @@
+{
+  "exp_id": "exp135_exp127_submission_confirmation",
+  "date": "2026-06-10",
+  "status": "phase0_complete",
+  "plan_source": "docs/experiment_plan_2026-06-10.md",
+  "purpose": "Confirm the Phase 0 exp127 working bundle submission and record the calibration result without duplicate submission.",
+  "source_exp": "exp127_focused_surgery_seventh_pass_limited",
+  "source_zip": "experiments/exp127_focused_surgery_seventh_pass_limited/submission.zip",
+  "source_local_estimate": 6282.965235594199,
+  "source_zip_sha256": "6f49df20a6ca1888f13ab4ffa68356587ced69d00c60166dfc7babf156e0718c",
+  "kaggle_submission": {
+    "ref": 53480507,
+    "fileName": "submission.zip",
+    "date": "2026-06-08 14:29:45.220000",
+    "description": "exp127 focused surgery seventh pass micro calibration",
+    "status": "SubmissionStatus.COMPLETE",
+    "publicScore": 5930.55
+  },
+  "baseline_submission": {
+    "ref": 53418067,
+    "source_exp": "exp_b025_submit_safe_delta_union",
+    "local_estimate": 6282.812218,
+    "publicScore": 5930.40
+  },
+  "observed_delta_vs_exp_b025": {
+    "local_delta": 0.153018,
+    "lb_delta": 0.15,
+    "delta_transfer": "approximately 1:1"
+  },
+  "observed_gap": -352.4152355941986,
+  "decision": "Do not resubmit exp127. Treat Phase 0 as complete and move to Phase A private-failure identification plus Phase C dtype/cost probes.",
+  "leakage_risk": "low: exp127 is full-arc-gated graph surgery on existing submit-safe artifacts.",
+  "overfitting_risk": "low-to-medium: repeated same-task micro-surgery transferred to LB, but the constant -352 gap remains unsolved."
+}

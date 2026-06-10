@@ -1,0 +1,49 @@
+{
+  "exp_id": "exp144_task018_b035_repair_probe",
+  "date": "2026-06-10",
+  "status": "public_lb_improved",
+  "purpose": "Last existing-source task018 repair probe: replace public-zero task018 with exp_b035 full-local-valid candidate.",
+  "base_exp": "experiments\\exp127_focused_surgery_seventh_pass_limited",
+  "base_public_lb": 5930.55,
+  "task_id": 18,
+  "candidate_raw": "experiments\\exp142_task018_candidate_validation_audit\\task018_06_exp_b035_new_source_full_arc_blend.onnx",
+  "candidate_cost": 476184,
+  "candidate_points": 11.926440386857584,
+  "expected_lb_if_public_pass": 5942.476440386858,
+  "candidate_validation": {
+    "ok": true,
+    "reason": "ok",
+    "passed": 266,
+    "failed": 0,
+    "status": "266_pass_0_fail"
+  },
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 815875,
+    "sha256": "2836b97d300ae7ccc19079ff70d8a9354eeff3877385157719acf0609b76ae49"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp144_task018_b035_repair_probe\\submission.zip"
+  },
+  "elapsed_s": 15.308,
+  "submission_decision": "submit_single_task_repair_probe",
+  "kaggle_submission_ref": 53520958,
+  "kaggle_status": "COMPLETE",
+  "kaggle_public_lb": 5942.48,
+  "observed_delta_vs_exp127": 11.930000000000291,
+  "delta_error_vs_expected": 0.003559613142707385,
+  "probe_interpretation": "exp_b035 task018 candidate repaired the public-zero task018 and improved public LB by the expected +11.93. This is the new public LB best, but source risk remains high.",
+  "leakage_risk": "high: exp_b035 is a public/source blend candidate; this is a single-task calibration probe.",
+  "overfitting_risk": "high: public pass would not prove private robustness."
+}

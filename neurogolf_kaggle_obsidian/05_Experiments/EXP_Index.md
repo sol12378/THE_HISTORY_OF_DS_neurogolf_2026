@@ -161,3 +161,42 @@
 | exp126_focused_surgery_sixth_pass_limited | improved_bundle_candidate | local +0.002847; accepted 2 tasks | - | tail converges to task263/316 |
 | exp127_focused_surgery_seventh_pass_limited | improved_bundle_candidate | local +0.002854; accepted 2 tasks | - | final micro bundle candidate |
 | exp128_compiler_campaign_30_final_review | final_review_complete | final local 6282.965236; total +0.153018 | - | LB7500 not reached; campaign stopped at #30 |
+| exp129_compiler_farm_core | pipeline_core_ready | 6285 floor not proven; farm guardrails implemented | - | NeuroGolf IR/cost extractor/public CODE registry added; public CODE remains teacher/intelligence until LB evidence |
+| exp130_public_code_6285_floor | rejected_lb_collapse | publicScore 1400.37 ref 53450559 | 1400.37 | beicicc golf-domain public CODE floor failed; do not adopt |
+| exp131_farm_os_cost_probe | cost_probe_complete | 6 probes; proxy aligns on memory-heavy and Slice+Pad cases | - | cost extractor revised to numeric params+intermediate-memory proxy; official score_network remains source of truth |
+| exp132_farm_step1_ir_emit_score | step1_complete | 7 real-task IR->ONNX->evaluate rows; 0 accepted | - | staged farm integration Step 1 complete; all controls failed validation as expected |
+| exp133_farm_step2_step3_validation_ledger | pipeline_safe_operational | full-arc/ledger/safe bundle gate connected; accepted 0 | - | Step 2/3 complete; no submission.zip created because all controls failed sample validation |
+| exp135_exp127_submission_confirmation | phase0_complete | exp127 ref 53480507 LB 5930.55; local/LB micro delta transferred | 5930.55 | 2026-06-10 plan Phase 0 confirmed; no duplicate submission |
+| exp136_private_failure_subset_inventory | failure_subset_inventory_ready | 50 subset candidates; best 24 tasks sum to gap 352.41 exactly | - | Phase A private failure audit queue created; indirect evidence only |
+| exp137_private_failure_consensus_audit | consensus_audit_ready | top consensus tasks: 013/002/029/009 all freq 20/20 | - | Use as private failure provenance/repair queue before bisection probes |
+| exp138_priority_task_alternative_source_audit | alternative_audit_ready | 203 manifest rows, no improved alternative for 013/002/029/009/024/018 | - | Move to bisection probe for top4 consensus tasks |
+| exp139_top4_failure_bisection_probe | probe_complete | ref 53520609 LB 5876.49; drop 54.06 matches all-alive expectation | 5876.49 | top4 013/002/029/009 are public-scoring alive; exclude from immediate failure suspects |
+| exp140_next4_failure_bisection_probe | probe_complete | ref 53520700 LB 5886.89; missing drop identifies task018 public-zero | 5886.89 | task018 is first concrete +13.35 LB repair target |
+| exp141_task018_teacher_repair_probe | blocked_validation | exp023 task018 teacher cost 17467 but 24_pass_1_fail | - | do not submit |
+| exp142_task018_candidate_validation_audit | candidate_audit_complete | 6 unique raws; full-ok: strict, beicicc, exp_b035 | - | existing-source repair narrowed |
+| exp143_task018_beicicc_repair_probe | no_public_gain | ref 53520866 LB 5930.55; beicicc also public-zero | 5930.55 | do not adopt |
+| exp144_task018_b035_repair_probe | public_lb_improved | ref 53520958 LB 5942.48; task018 repair +11.93 | 5942.48 | new public LB best; high source/private robustness risk |
+| exp145_next4b_failure_bisection_probe | probe_complete_all_alive | ref 53521106 LB 5859.97; tasks 032/050/016/031 all alive | 5859.97 | exclude from public-zero suspects |
+| exp146_next4c_failure_bisection_probe | probe_complete_partial_zero | ref 53521220 LB 5887.02; missing drop identifies task025 public-zero | 5887.02 | task025 is next repair target |
+| exp147_task025_candidate_validation_audit | candidate_audit_complete | 5 unique raws; only current raw full-ok and it is public-zero | - | task025 needs rule repair, not source swap |
+| exp148_next4d_failure_bisection_probe | probe_complete_all_alive | ref 53521453 LB 5877.68; drop matches all-alive expectation for 366/077/064/084 | 5877.68 | exclude these tasks from immediate public-zero suspects |
+| exp149_next4e_failure_bisection_probe | probe_complete_all_alive | ref 53521652 LB 5856.74; drop matches all-alive expectation for 053/056/067/005 | 5856.74 | exclude these tasks from immediate public-zero suspects |
+| exp150_next4f_failure_bisection_probe | probe_complete_partial_zero | ref 53521805 LB 5890.05; missing drop identifies task023 public-zero | 5890.05 | task023 is next repair target |
+| exp151_task023_candidate_validation_audit | candidate_audit_complete | 5 unique raws; current full-ok plus exp_b035 alternate full-ok | - | use exp_b035 task023 raw for repair probe |
+| exp152_task023_b035_repair_probe | public_lb_improved | ref 53521952 LB 5956.28; task023 repair +13.80 over exp144 | 5956.28 | new current public LB best; high source/private risk |
+| exp153_next4g_failure_bisection_probe | probe_complete_all_alive | ref 53522084 LB 5873.53; drop matches all-alive expectation for 051/049/046/011 | 5873.53 | exclude these tasks from immediate public-zero suspects |
+| exp154_next4h_failure_bisection_probe | probe_complete_all_alive | ref 53522207 LB 5859.07; drop matches all-alive expectation for 033/087/276/030 | 5859.07 | exclude these tasks from immediate public-zero suspects |
+| exp155_next4i_failure_bisection_probe | probe_complete_all_alive | ref 53522390 LB 5873.60; drop matches all-alive expectation for 063/022/037/020 | 5873.60 | exclude these tasks from immediate public-zero suspects |
+| exp156_next4j_failure_bisection_probe | probe_complete_all_alive | ref 53522565 LB 5873.06; drop matches all-alive expectation for 027/082/088/092 | 5873.06 | exclude these tasks; exp157 prepared while pending |
+| exp157_next4k_failure_bisection_probe | probe_complete_all_alive | ref 53522643 LB 5873.63; drop matches all-alive expectation for 090/173/028/091 | 5873.63 | exclude these tasks; consider task025 repair or dtype/cost lane |
+| exp158_dtype_memory_cost_probe | cost_probe_complete | fp32 full-grid 36000, fp16 18000, bool/uint8 9000 | - | dtype width reflected; pursue targeted mask/dtype post-pass |
+| exp159_dtype_postpass_candidate_audit | candidate_audit_complete | top dtype candidates: task366/284/158/382/187 | - | inspect task158 Cast/consumer pattern first |
+| exp160_task158_dtype_rewrite_inspection | inspection_complete | 18 boolish-to-FLOAT casts all feed Sum | - | task158 direct dtype rewrite not safe; inspect Where/mask candidates next |
+| exp161_where_dtype_rewrite_inspection | inspection_complete | Where-heavy candidates mostly already narrow dtype; removable-looking casts are final output casts | - | use dtype lane in new lowering design, not broad existing post-pass |
+| exp162_task025_rule_diagnostic | diagnostic_complete | 266 examples; simple rules 0/266 | - | mine task025 changed-cell predicate next |
+| exp163_task025_motion_predicate_mining | diagnostic_complete | axis-aligned motion; count preserved 64/266 | - | guide-line projection hypothesis |
+| exp164_task025_line_projection_rule | rule_found | Python rule 266/266 | - | lower task025 guide-line projection to ONNX next |
+| exp165_task025_line_projection_onnx_probe | no_cost_gain | 266/266 pass; cost 491600 vs 89286 | - | correctness confirmed; lower-cost representation needed |
+| exp166_task025_line_projection_publiczero_repair | public_lb_improved | ref 53523413; expected 5968.17 | 5968.18 | new current public LB best |
+| exp167_next4l_failure_bisection_probe | probe_complete_all_alive | ref 53523591; all-alive expected 5906.36 | 5906.33 | exclude 048/035/012/017 from public-zero suspects |
+| exp168_next4l_candidate_validation_audit | candidate_audit_complete | full_ok_total 9 for 048/035/012/017 | - | held; exp167 all-alive |

@@ -1,0 +1,2 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+25,same_shape,task025_line_projection_correctness_first,89286,491600,13.600400020341894,11.894579343325983,46914,266_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,4f0df14f0df76292ace6781a959118511b5bd3637d31a758b7de96e49997925a

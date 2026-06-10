@@ -1,0 +1,62 @@
+{
+  "exp_id": "exp151_task023_candidate_validation_audit",
+  "date": "2026-06-10",
+  "status": "candidate_audit_complete",
+  "task_id": 23,
+  "source_rows": 33,
+  "unique_raw_candidates": 5,
+  "full_ok_candidates": 2,
+  "best_candidates": [
+    {
+      "task_id": "23",
+      "filename": "task023.onnx",
+      "source_label": "franksunp_blended_best",
+      "source_ref": "franksunp/neurogolf-blended-best-models",
+      "relative_path": "task023.onnx",
+      "sha256": "a1bee796124fe076749eedf5b868a09397d4c89815da9bb6866ea225d62f678e",
+      "file_bytes": "2838",
+      "normalized_bytes": "3518",
+      "params": "490",
+      "memory_bytes": "20943",
+      "cost": "21433",
+      "simple_cost": "4008",
+      "local_points": "15.027312930662868",
+      "validation_status": "266_pass_0_fail",
+      "validation_pass": "6",
+      "validation_fail": "0",
+      "exp": "exp002_public_blend_6500_fast",
+      "manifest": "experiments\\exp002_public_blend_6500_fast\\selected_manifest.csv",
+      "manifest_cost": "21433",
+      "raw_sha256": "28e232e6ced5220f2426f9f805c049e0556f69e037dd2dbcfe8efa62c735edb5",
+      "raw_path": "experiments\\exp151_task023_candidate_validation_audit\\task023_01_exp002_public_blend_6500_fast.onnx",
+      "audit_status": "full_ok",
+      "audit_reason": "ok",
+      "official_cost": 21433,
+      "score_reason": "ok",
+      "submit_candidate": true
+    },
+    {
+      "task_id": "23",
+      "cost": "72612",
+      "points": "13.807115",
+      "exp": "exp_b035_new_source_full_arc_blend",
+      "manifest": "experiments\\exp_b035_new_source_full_arc_blend\\selected_manifest.csv",
+      "manifest_cost": "72612",
+      "raw_sha256": "381d1261e875c1cddec3fdc4fdca4eff331d3edad2677ad6ba7a97a0d16be814",
+      "raw_path": "experiments\\exp151_task023_candidate_validation_audit\\task023_05_exp_b035_new_source_full_arc_blend.onnx",
+      "audit_status": "full_ok",
+      "audit_reason": "ok",
+      "validation_status": "266_pass_0_fail",
+      "official_cost": 72612,
+      "score_reason": "ok",
+      "submit_candidate": true
+    }
+  ],
+  "outputs": {
+    "candidate_audit": "experiments\\exp151_task023_candidate_validation_audit\\task023_candidate_audit.csv"
+  },
+  "elapsed_s": 5.831,
+  "decision": "Use a public-distinct full_ok candidate for a single-task repair probe if any candidate is not the current public-zero raw.",
+  "leakage_risk": "medium-to-high: existing public/teacher candidates may be lookup-like.",
+  "overfitting_risk": "medium-to-high: full local validation is not sufficient for public/private robustness."
+}

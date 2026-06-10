@@ -1,0 +1,8 @@
+task_id,source_exp,candidate_path,base_cost,candidate_cost,validation_status,local_delta,risk,adoption_status
+001,exp133_farm_step2_step3_validation_ledger,E:\kaggle\neurogolf-2026\experiments\exp133_farm_step2_step3_validation_ledger\task001_farm_identity_one_node_data_movement.onnx,2843.0,0.0,not_run,0.0,high,rejected
+002,exp133_farm_step2_step3_validation_ledger,E:\kaggle\neurogolf-2026\experiments\exp133_farm_step2_step3_validation_ledger\task002_farm_identity_one_node_data_movement.onnx,84626.0,0.0,not_run,0.0,high,rejected
+003,exp133_farm_step2_step3_validation_ledger,E:\kaggle\neurogolf-2026\experiments\exp133_farm_step2_step3_validation_ledger\task003_farm_identity_one_node_data_movement.onnx,9102.0,0.0,not_run,0.0,high,rejected
+004,exp133_farm_step2_step3_validation_ledger,E:\kaggle\neurogolf-2026\experiments\exp133_farm_step2_step3_validation_ledger\task004_farm_identity_one_node_data_movement.onnx,55020.0,0.0,not_run,0.0,high,rejected
+005,exp133_farm_step2_step3_validation_ledger,E:\kaggle\neurogolf-2026\experiments\exp133_farm_step2_step3_validation_ledger\task005_farm_identity_one_node_data_movement.onnx,79847.0,0.0,not_run,0.0,high,rejected
+001,exp133_farm_step2_step3_validation_ledger,E:\kaggle\neurogolf-2026\experiments\exp133_farm_step2_step3_validation_ledger\task001_farm_channel_gather_channel_gather.onnx,2843.0,0.0,not_run,0.0,high,rejected
+001,exp133_farm_step2_step3_validation_ledger,E:\kaggle\neurogolf-2026\experiments\exp133_farm_step2_step3_validation_ledger\task001_farm_static_slice_pad_static_slice_pad.onnx,2843.0,0.0,not_run,0.0,high,rejected

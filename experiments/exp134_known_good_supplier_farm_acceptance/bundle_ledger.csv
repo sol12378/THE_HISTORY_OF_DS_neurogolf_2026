@@ -1,0 +1,3 @@
+task_id,source_exp,candidate_path,base_cost,candidate_cost,validation_status,local_delta,risk,adoption_status
+263,exp134_known_good_supplier_farm_acceptance,E:\kaggle\neurogolf-2026\experiments\exp134_known_good_supplier_farm_acceptance\task263_fourth_bypass_Where_114_in2.onnx,8042.0,8040.0,267_pass_0_fail,0.0002487252842051646,low,accepted
+316,exp134_known_good_supplier_farm_acceptance,E:\kaggle\neurogolf-2026\experiments\exp134_known_good_supplier_farm_acceptance\task316_fourth_bypass_And_024_in0.onnx,3843.0,3833.0,266_pass_0_fail,0.0026055251842862504,low,accepted

@@ -1,0 +1,46 @@
+{
+  "exp_id": "exp147_task025_candidate_validation_audit",
+  "date": "2026-06-10",
+  "status": "candidate_audit_complete",
+  "task_id": 25,
+  "source_rows": 34,
+  "unique_raw_candidates": 5,
+  "full_ok_candidates": 1,
+  "best_candidates": [
+    {
+      "task_id": "25",
+      "filename": "task025.onnx",
+      "source_label": "franksunp_blended_best",
+      "source_ref": "franksunp/neurogolf-blended-best-models",
+      "relative_path": "task025.onnx",
+      "sha256": "a0779740048817fb85b6ea49662a2e833055b21b3c01ef2fd208453ec74dfadc",
+      "file_bytes": "61508",
+      "normalized_bytes": "61869",
+      "params": "15232",
+      "memory_bytes": "74054",
+      "cost": "89286",
+      "simple_cost": "77101",
+      "local_points": "13.600400020341894",
+      "validation_status": "266_pass_0_fail",
+      "validation_pass": "6",
+      "validation_fail": "0",
+      "exp": "exp002_public_blend_6500_fast",
+      "manifest": "experiments\\exp002_public_blend_6500_fast\\selected_manifest.csv",
+      "manifest_cost": "89286",
+      "raw_sha256": "113496118d8b99e0ab5b8b6e4cd8558d098247f19dbf670c3c4c73356fba92ea",
+      "raw_path": "experiments\\exp147_task025_candidate_validation_audit\\task025_01_exp002_public_blend_6500_fast.onnx",
+      "audit_status": "full_ok",
+      "audit_reason": "ok",
+      "official_cost": 89286,
+      "score_reason": "ok",
+      "submit_candidate": true
+    }
+  ],
+  "outputs": {
+    "candidate_audit": "experiments\\exp147_task025_candidate_validation_audit\\task025_candidate_audit.csv"
+  },
+  "elapsed_s": 12.261,
+  "decision": "Use the cheapest/fullest public-distinct full_ok candidate for a single-task repair probe if any exist.",
+  "leakage_risk": "medium-to-high: existing public/teacher candidates may be lookup-like.",
+  "overfitting_risk": "medium-to-high: full local validation is not sufficient for public/private robustness."
+}

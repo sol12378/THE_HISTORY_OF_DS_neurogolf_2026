@@ -1,0 +1,80 @@
+{
+  "exp_id": "exp161_where_dtype_rewrite_inspection",
+  "date": "2026-06-10",
+  "status": "inspection_complete",
+  "tasks": [
+    206,
+    338,
+    328,
+    366
+  ],
+  "hint_counts_by_task": {
+    "206": {
+      "where_cond=BOOL x=FLOAT16(1, 1, 30, 1) y=FLOAT16()": 2,
+      "where_cond=BOOL x=FLOAT16(1, 1, 1, 30) y=FLOAT16()": 2,
+      "where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()": 2,
+      "where_cond=BOOL x=FLOAT16() y=FLOAT16(1, 1, 30, 30)": 1,
+      "where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)": 1,
+      "possible_keep_bool_as_where_condition": 1
+    },
+    "338": {
+      "where_cond=BOOL x=UINT8(1, 1, 30, 30) y=UINT8()": 1,
+      "where_cond=BOOL x=UINT8() y=UINT8(1, 1, 30, 30)": 13,
+      "numeric_consumers_need_float": 1
+    },
+    "328": {
+      "where_cond=BOOL x=FLOAT16(1, 1, 30, 1) y=FLOAT16(1, 1, 1, 30)": 3,
+      "where_cond=BOOL x=FLOAT16(1,) y=FLOAT16()": 4,
+      "where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()": 1,
+      "possible_keep_bool_as_where_condition": 1
+    },
+    "366": {
+      "where_cond=BOOL x=FLOAT16(1, 10, 30, 30) y=FLOAT16()": 2,
+      "where_cond=BOOL x=FLOAT16(1, 10, 30, 30) y=FLOAT16(1, 10, 30, 30)": 1,
+      "where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16()": 36,
+      "boolish_to_float_mixed_consumers": 2,
+      "where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 30, 30)": 36,
+      "where_cond=BOOL x=FLOAT16() y=FLOAT16(1, 1, 30, 30)": 2,
+      "where_cond=BOOL x=FLOAT16(1, 1, 30, 30) y=FLOAT16(1, 1, 1, 1)": 5
+    }
+  },
+  "promising_rows": [
+    {
+      "task_id": 206,
+      "kind": "cast_to_float_fullgrid",
+      "node_index": 38,
+      "input": "safe_name_52",
+      "input_type": "BOOL",
+      "input_dims": "(1, 10, 30, 30)",
+      "input_producer": "Equal",
+      "output": "output",
+      "output_type": "FLOAT",
+      "output_dims": "(1, 10, 30, 30)",
+      "users": "",
+      "user_count": 0,
+      "hint": "possible_keep_bool_as_where_condition"
+    },
+    {
+      "task_id": 328,
+      "kind": "cast_to_float_fullgrid",
+      "node_index": 101,
+      "input": "safe_name_120",
+      "input_type": "BOOL",
+      "input_dims": "(1, 10, 30, 30)",
+      "input_producer": "Equal",
+      "output": "output",
+      "output_type": "FLOAT",
+      "output_dims": "(1, 10, 30, 30)",
+      "users": "",
+      "user_count": 0,
+      "hint": "possible_keep_bool_as_where_condition"
+    }
+  ],
+  "outputs": {
+    "inspection": "experiments\\exp161_where_dtype_rewrite_inspection\\where_dtype_inspection.csv"
+  },
+  "elapsed_s": 0.092,
+  "decision": "inspect possible Where-condition cast rewrites for tasks 206 328",
+  "leakage_risk": "low: graph structure inspection only.",
+  "overfitting_risk": "low-to-medium: rewrite hints may not be valid transformations."
+}

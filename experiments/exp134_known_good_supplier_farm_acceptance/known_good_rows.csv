@@ -1,0 +1,3 @@
+task_id,template_name,source_candidate_cost,official_cost,score_reason,full_validation_status,full_reason,full_ok,onnx_band,onnx_cost_proxy,ledger_adoption_status,ledger_accepted,local_delta
+263,fourth_bypass_Where_114_in2,8040,8040,ok,267_pass_0_fail,ok,True,600-2000_probe,52,accepted,True,0.0002487252842051646
+316,fourth_bypass_And_024_in0,3833,3833,ok,266_pass_0_fail,ok,True,600-2000_probe,155,accepted,True,0.0026055251842862504

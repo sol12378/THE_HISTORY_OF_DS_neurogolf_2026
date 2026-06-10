@@ -1,0 +1,116 @@
+{
+  "exp_id": "exp158_dtype_memory_cost_probe",
+  "date": "2026-06-10",
+  "status": "cost_probe_complete",
+  "purpose": "Measure whether fp16/bool/uint8/int32 full-grid intermediates reduce official memory cost compared with fp32.",
+  "task_id_for_trace": 87,
+  "rows": [
+    {
+      "case": "identity",
+      "memory": 0,
+      "params": 0,
+      "cost": 0,
+      "score_reason": "ok",
+      "bytes": 153,
+      "sha256": "225dc3251adfb4ef4b40d5aa48c0ad4137f75e4187a94c1e2597bd2ca8a53627",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\identity.onnx"
+    },
+    {
+      "case": "fp32_add_zero",
+      "memory": 0,
+      "params": 1,
+      "cost": 1,
+      "score_reason": "ok",
+      "bytes": 178,
+      "sha256": "895283d4cf7182ffe62d6d93efa5d6de2352054dffac1eeeca9084c5171e2829",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\fp32_add_zero.onnx"
+    },
+    {
+      "case": "fp32_add_zero_then_identity",
+      "memory": 36000,
+      "params": 1,
+      "cost": 36001,
+      "score_reason": "ok",
+      "bytes": 224,
+      "sha256": "492873a5093c3a20839b8392652e0298f78b3dfaaac1123478d5814fe5622ae6",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\fp32_add_zero_then_identity.onnx"
+    },
+    {
+      "case": "fp32_mul_one_then_add_zero",
+      "memory": 36000,
+      "params": 2,
+      "cost": 36002,
+      "score_reason": "ok",
+      "bytes": 240,
+      "sha256": "d5403dd611118555e5fefdfb9386fe2293e88a45b183091ebd58f925826498db",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\fp32_mul_one_then_add_zero.onnx"
+    },
+    {
+      "case": "fp16_roundtrip",
+      "memory": 18000,
+      "params": 0,
+      "cost": 18000,
+      "score_reason": "ok",
+      "bytes": 206,
+      "sha256": "349d0cce4243e15e00d3e8cdac336038a501f976f9d440ff58bf5fed0ad5e1e4",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\fp16_roundtrip.onnx"
+    },
+    {
+      "case": "bool_roundtrip",
+      "memory": 9000,
+      "params": 0,
+      "cost": 9000,
+      "score_reason": "ok",
+      "bytes": 206,
+      "sha256": "5cd6dcc0122aac10b8d977cbe0206f0490b88b8953f0eb9c46dfaf4a36f6d0c6",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\bool_roundtrip.onnx"
+    },
+    {
+      "case": "uint8_roundtrip",
+      "memory": 9000,
+      "params": 0,
+      "cost": 9000,
+      "score_reason": "ok",
+      "bytes": 203,
+      "sha256": "7e920feca124b0cd47d9bd2d042228f75c00d72258d1425dae0eb06e08dfcc0d",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\uint8_roundtrip.onnx"
+    },
+    {
+      "case": "int32_roundtrip",
+      "memory": 36000,
+      "params": 0,
+      "cost": 36000,
+      "score_reason": "ok",
+      "bytes": 205,
+      "sha256": "45809fd4491f05d6863ace35ce0779fe91ce0c282449d89e837f980eca60605e",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\int32_roundtrip.onnx"
+    },
+    {
+      "case": "fp16_add_zero_roundtrip",
+      "memory": 36000,
+      "params": 1,
+      "cost": 36001,
+      "score_reason": "ok",
+      "bytes": 270,
+      "sha256": "bea6da8acdc306f366b39deed247aedabdf6234695c42b9cc0c3dce742e8090d",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\fp16_add_zero_roundtrip.onnx"
+    },
+    {
+      "case": "bool_where_roundtrip",
+      "memory": 9000,
+      "params": 9000,
+      "cost": 18000,
+      "score_reason": "ok",
+      "bytes": 36252,
+      "sha256": "4546b5b9808f9fb1095652513940360c9158ed15bcc38f959deefe5f38ed38c3",
+      "path": "experiments\\exp158_dtype_memory_cost_probe\\bool_where_roundtrip.onnx"
+    }
+  ],
+  "outputs": {
+    "dtype_cost_probe": "experiments\\exp158_dtype_memory_cost_probe\\dtype_cost_probe.csv"
+  },
+  "elapsed_s": 4.115,
+  "decision": "dtype_memory_reduction_observed; prioritize targeted post-pass probes: fp16:36002->18000, bool:36002->9000, uint8:36002->9000",
+  "leakage_risk": "low: synthetic cost-only probe; no task labels used.",
+  "overfitting_risk": "low: measures score_network cost physics, not public LB behavior."
+}

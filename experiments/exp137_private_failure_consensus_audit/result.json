@@ -1,0 +1,167 @@
+{
+  "exp_id": "exp137_private_failure_consensus_audit",
+  "date": "2026-06-10",
+  "status": "consensus_audit_ready",
+  "source_exp": "exp136_private_failure_subset_inventory",
+  "subset_rows_used": 20,
+  "unique_candidate_tasks": 56,
+  "priority_queue": [
+    {
+      "task_id": 13,
+      "top20_frequency": 20,
+      "exact_gap_frequency": 4,
+      "source": "massimilianoghiotto_6254",
+      "route": "sparse_edit_or_object_completion",
+      "points": 13.3310798421544,
+      "risk_score": 3.01882,
+      "top_ops": "Conv:20 ReduceMax:18 Greater:14 Where:13 Mul:10 Cast:9 ReduceSum:2 Sum:2"
+    },
+    {
+      "task_id": 2,
+      "top20_frequency": 20,
+      "exact_gap_frequency": 4,
+      "source": "massimilianoghiotto_6254",
+      "route": "sparse_edit_or_object_completion",
+      "points": 13.514517676859928,
+      "risk_score": 2.82293,
+      "top_ops": "Conv:24 Greater:23 Where:21 Slice:11 Sub:6 Cast:3 Sum:2 ReduceSum:1"
+    },
+    {
+      "task_id": 29,
+      "top20_frequency": 20,
+      "exact_gap_frequency": 4,
+      "source": "massimilianoghiotto_6254",
+      "route": "crop_or_resize",
+      "points": 13.516328283804857,
+      "risk_score": 2.77117,
+      "top_ops": "Cast:12 Sub:12 Greater:9 Add:9 ArgMax:8 Mul:7 Gather:6 ReduceMax:5"
+    },
+    {
+      "task_id": 9,
+      "top20_frequency": 20,
+      "exact_gap_frequency": 4,
+      "source": "massimilianoghiotto_6254",
+      "route": "sparse_edit_or_object_completion",
+      "points": 13.69482467517415,
+      "risk_score": 2.66241,
+      "top_ops": "MatMul:4 Greater:4 Cast:2 And:2 Transpose:2 GatherND:1 Reshape:1 Or:1"
+    },
+    {
+      "task_id": 24,
+      "top20_frequency": 19,
+      "exact_gap_frequency": 4,
+      "source": "massimilianoghiotto_6254",
+      "route": "sparse_edit_or_object_completion",
+      "points": 15.88617052840466,
+      "risk_score": 1.7908,
+      "top_ops": "Cast:7 And:5 Slice:4 Or:4 ReduceMax:3 Not:2 Concat:1 Pad:1"
+    },
+    {
+      "task_id": 18,
+      "top20_frequency": 18,
+      "exact_gap_frequency": 4,
+      "source": "kojimar_5800_minimal_blend",
+      "route": "sparse_edit_or_object_completion",
+      "points": 13.35098890724301,
+      "risk_score": 2.74578,
+      "top_ops": "ReduceSum:3 Slice:2 Mul:2 Concat:2 Sub:2 Unsqueeze:1 MatMul:1 Abs:1"
+    },
+    {
+      "task_id": 4,
+      "top20_frequency": 17,
+      "exact_gap_frequency": 4,
+      "source": "massimilianoghiotto_6254",
+      "route": "sparse_edit_or_object_completion",
+      "points": 14.084547965521434,
+      "risk_score": 2.4002,
+      "top_ops": "Conv:2 Cast:1 Relu:1"
+    },
+    {
+      "task_id": 19,
+      "top20_frequency": 19,
+      "exact_gap_frequency": 3,
+      "source": "massimilianoghiotto_6254",
+      "route": "crop_or_resize",
+      "points": 13.69353305881371,
+      "risk_score": 2.61346,
+      "top_ops": "Cast:4 ReduceSum:4 Add:3 ReduceMax:2 Mod:2 Less:2 Where:2 Gather:2"
+    },
+    {
+      "task_id": 32,
+      "top20_frequency": 17,
+      "exact_gap_frequency": 3,
+      "source": "massimilianoghiotto_6254",
+      "route": "sparse_edit_or_object_completion",
+      "points": 16.86699978141639,
+      "risk_score": 1.73405,
+      "top_ops": "Sub:3 ReduceSum:2 Cast:2 Slice:1 Conv:1 Sign:1 Sqrt:1 Greater:1"
+    },
+    {
+      "task_id": 50,
+      "top20_frequency": 15,
+      "exact_gap_frequency": 3,
+      "source": "afr1ste_5689_artifact",
+      "route": "sparse_edit_or_object_completion",
+      "points": 15.843587970049374,
+      "risk_score": 1.79475,
+      "top_ops": "Cast:8 CumSum:4 And:3 Slice:2 Or:1 Xor:1 Concat:1 Pad:1"
+    },
+    {
+      "task_id": 16,
+      "top20_frequency": 15,
+      "exact_gap_frequency": 3,
+      "source": "massimilianoghiotto_6254",
+      "route": "sparse_edit_or_object_completion",
+      "points": 22.697414907005953,
+      "risk_score": 0.5001,
+      "top_ops": "Gather:1"
+    },
+    {
+      "task_id": 31,
+      "top20_frequency": 13,
+      "exact_gap_frequency": 3,
+      "source": "massimilianoghiotto_6254",
+      "route": "crop_or_resize",
+      "points": 15.168223295017873,
+      "risk_score": 1.83616,
+      "top_ops": "ArgMax:4 Where:3 ReduceSum:2 Greater:2 Cast:2 Sub:2 Add:2 Gather:2"
+    },
+    {
+      "task_id": 21,
+      "top20_frequency": 13,
+      "exact_gap_frequency": 3,
+      "source": "massimilianoghiotto_6254",
+      "route": "crop_or_resize",
+      "points": 14.156056071090937,
+      "risk_score": 2.31223,
+      "top_ops": "Cast:52 ReduceMax:33 Equal:27 ReduceSum:20 Greater:19 Add:15 And:10 Not:9"
+    },
+    {
+      "task_id": 14,
+      "top20_frequency": 13,
+      "exact_gap_frequency": 3,
+      "source": "massimilianoghiotto_6254",
+      "route": "crop_or_resize",
+      "points": 14.427427453254685,
+      "risk_score": 2.19049,
+      "top_ops": "Reshape:7 Add:7 Cast:5 ArgMax:5 Where:3 Gather:2 ReduceMax:2 Sub:2"
+    },
+    {
+      "task_id": 25,
+      "top20_frequency": 12,
+      "exact_gap_frequency": 3,
+      "source": "franksunp_blended_best",
+      "route": "sparse_edit_or_object_completion",
+      "points": 13.600400020341894,
+      "risk_score": 2.49286,
+      "top_ops": "Cast:2 ReduceSum:1 MatMul:1 Equal:1 ArgMax:1 Gather:1 Flatten:1 ScatterElements:1"
+    }
+  ],
+  "outputs": {
+    "consensus_audit": "experiments\\exp137_private_failure_consensus_audit\\consensus_audit.csv"
+  },
+  "elapsed_s": 0.062,
+  "decision": "Audit the top consensus tasks first; prioritize alternatives or robust repairs for high-frequency sparse/object and crop tasks before spending Kaggle bisection probes.",
+  "leakage_risk": "low: model provenance and graph structure audit only.",
+  "overfitting_risk": "medium: consensus comes from subset-sum candidates and remains indirect."
+}

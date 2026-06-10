@@ -1,0 +1,57 @@
+task_id,top20_frequency,exact_gap_frequency,weighted_frequency,source,route,cost,points,risk_score,input_shape_count,output_shape_count,max_input_area,max_output_area,node_count,initializer_count,initializer_bytes,top_ops,has_matmul,has_scatternd,has_gathernd,has_where,has_conv
+13,20,4,3.59774,massimilianoghiotto_6254,sparse_edit_or_object_completion,116882,13.3310798421544,3.01882,129,129,360,360,91,16,4538,Conv:20 ReduceMax:18 Greater:14 Where:13 Mul:10 Cast:9 ReduceSum:2 Sum:2,0,0,0,1,1
+2,20,4,3.59774,massimilianoghiotto_6254,sparse_edit_or_object_completion,97293,13.514517676859928,2.82293,15,15,400,400,95,31,672,Conv:24 Greater:23 Where:21 Slice:11 Sub:6 Cast:3 Sum:2 ReduceSum:1,0,0,0,1,1
+29,20,4,3.59774,massimilianoghiotto_6254,crop_or_resize,97117,13.516328283804857,2.77117,167,182,625,396,88,15,808,Cast:12 Sub:12 Greater:9 Add:9 ArgMax:8 Mul:7 Gather:6 ReduceMax:5,0,0,0,1,1
+9,20,4,3.59774,massimilianoghiotto_6254,sparse_edit_or_object_completion,81241,13.69482467517415,2.66241,5,5,841,841,22,6,29306,MatMul:4 Greater:4 Cast:2 And:2 Transpose:2 GatherND:1 Reshape:1 Or:1,1,0,1,0,0
+24,19,4,3.53524,massimilianoghiotto_6254,sparse_edit_or_object_completion,9080,15.88617052840466,1.7908,92,92,225,225,27,11,505,Cast:7 And:5 Slice:4 Or:4 ReduceMax:3 Not:2 Concat:1 Pad:1,0,0,0,0,0
+18,18,4,3.475517,kojimar_5800_minimal_blend,sparse_edit_or_object_completion,114578,13.35098890724301,2.74578,109,109,576,576,22,16,47864,ReduceSum:3 Slice:2 Mul:2 Concat:2 Sub:2 Unsqueeze:1 MatMul:1 Abs:1,1,0,0,0,0
+4,17,4,3.312386,massimilianoghiotto_6254,sparse_edit_or_object_completion,55020,14.084547965521434,2.4002,78,78,256,256,4,4,2040,Conv:2 Cast:1 Relu:1,0,0,0,0,1
+19,19,3,3.34774,massimilianoghiotto_6254,crop_or_resize,81346,13.69353305881371,2.61346,25,25,36,144,32,13,500,Cast:4 ReduceSum:4 Add:3 ReduceMax:2 Mod:2 Less:2 Where:2 Gather:2,0,1,0,1,1
+32,17,3,3.105583,massimilianoghiotto_6254,sparse_edit_or_object_completion,3405,16.86699978141639,1.73405,3,3,36,36,19,10,340,Sub:3 ReduceSum:2 Cast:2 Slice:1 Conv:1 Sign:1 Sqrt:1 Greater:1,0,0,0,1,1
+50,15,3,2.900226,afr1ste_5689_artifact,sparse_edit_or_object_completion,9475,15.843587970049374,1.79475,132,132,210,210,21,9,425,Cast:8 CumSum:4 And:3 Slice:2 Or:1 Xor:1 Concat:1 Pad:1,0,0,0,0,0
+16,15,3,2.900226,massimilianoghiotto_6254,sparse_edit_or_object_completion,10,22.697414907005953,0.5001,1,1,9,9,1,1,80,Gather:1,0,0,0,0,0
+31,13,3,2.873643,massimilianoghiotto_6254,crop_or_resize,18616,15.168223295017873,1.83616,3,23,144,42,26,13,412,ArgMax:4 Where:3 ReduceSum:2 Greater:2 Cast:2 Sub:2 Add:2 Gather:2,0,0,0,1,0
+21,13,3,2.829199,massimilianoghiotto_6254,crop_or_resize,51223,14.156056071090937,2.31223,255,36,4340,49,214,21,14794,Cast:52 ReduceMax:33 Equal:27 ReduceSum:20 Greater:19 Add:15 And:10 Not:9,0,0,0,1,1
+14,13,3,2.563326,massimilianoghiotto_6254,crop_or_resize,39049,14.427427453254685,2.19049,104,87,625,168,42,17,2725,Reshape:7 Add:7 Cast:5 ArgMax:5 Where:3 Gather:2 ReduceMax:2 Sub:2,0,0,0,1,0
+25,12,3,2.802215,franksunp_blended_best,sparse_edit_or_object_completion,89286,13.600400020341894,2.49286,182,182,900,900,10,5,60944,Cast:2 ReduceSum:1 MatMul:1 Equal:1 ArgMax:1 Gather:1 Flatten:1 ScatterElements:1,1,0,0,0,0
+8,14,2,2.56531,massimilianoghiotto_6254,sparse_edit_or_object_completion,23289,14.94426357492621,1.93289,79,79,256,256,78,21,321,Sub:12 ReduceMax:8 Mul:8 Sum:8 Less:8 Where:5 And:5 ReduceMin:4,0,0,0,1,0
+366,10,2,2.062897,massimilianoghiotto_6254,crop_or_resize,836880,11.362564029982357,3.8,60,30,510,255,723,42,9452,Where:145 And:111 Equal:77 Cast:61 ReduceSum:44 Greater:25 Tile:25 Or:22,0,1,0,1,1
+77,10,2,1.406636,exp068_seddik_style_strict_scalarization_seddik_style_scalarize_dedup_prune,sparse_edit_or_object_completion,157494,13.032857358715912,3.17494,18,18,420,420,68,20,3921,Mul:15 Sub:9 MaxPool:8 Cast:7 Reshape:6 And:5 Gather:4 Sum:2,0,0,0,1,0
+64,10,2,1.406636,massimilianoghiotto_6254,sparse_edit_or_object_completion,114153,13.354705067178468,2.99153,168,168,552,552,68,20,692,And:10 Greater:9 Cast:8 CumSum:8 Equal:6 Slice:5 Pad:5 Or:5,0,0,0,1,1
+67,10,2,1.406636,massimilianoghiotto_6254,crop_or_resize,315,19.247427361174367,1.65315,4,4,75,25,7,4,132,ReduceMax:1 Conv:1 ReduceSum:1 Div:1 Sum:1 Greater:1 Where:1,0,0,0,1,1
+53,10,2,1.406636,massimilianoghiotto_6254,sparse_edit_or_object_completion,30,21.598802618337846,0.5003,1,1,9,9,1,1,240,Gather:1,0,0,0,0,0
+56,10,2,1.406636,massimilianoghiotto_6254,crop_or_resize,213,19.638707834290575,0.45213,1,1,9,1,9,3,154,Slice:1 Cast:1 Sub:1 Conv:1 ArgMax:1 Squeeze:1 Gather:1 Unsqueeze:1,0,0,0,0,1
+23,9,2,2.048247,franksunp_blended_best,sparse_edit_or_object_completion,21433,15.027312930662868,1.66433,6,6,99,99,14,13,2080,Gather:6 Conv:2 Relu:1 Greater:1 Where:1 Sub:1 Concat:1 Pad:1,0,0,0,1,1
+34,8,2,2.064181,afr1ste_5689_artifact,sparse_edit_or_object_completion,106316,13.425828929592994,1.71316,1,1,81,81,79,16,4854,And:21 Less:12 ReduceSum:8 Where:7 Sum:5 Sub:5 Equal:4 Or:4,0,0,0,1,1
+36,8,2,1.824437,exp068_seddik_style_strict_scalarization_seddik_style_scalarize_dedup_prune,crop_or_resize,79944,13.710918331458375,1.74944,1,11,900,25,56,17,764,Gather:8 Add:8 Sub:7 Reshape:6 Cast:5 ArgMax:5 Mul:4 Less:4,0,0,0,1,0
+49,7,2,2.11859,massimilianoghiotto_6254,crop_or_resize,30489,14.674878758194124,1.95489,104,57,400,84,29,12,792,Cast:5 Reshape:5 ReduceSum:3 Where:3 Greater:2 Add:2 Gather:2 ReduceMax:2,0,0,0,1,0
+51,6,2,1.99359,exp068_seddik_style_strict_scalarization_seddik_style_scalarize_dedup_prune,sparse_edit_or_object_completion,68429,13.866448009633856,2.28429,107,107,400,400,58,12,542,And:10 ReduceMax:7 Unsqueeze:7 Equal:7 ArgMax:6 Slice:4 Greater:4 Or:3,0,0,0,1,0
+85,9,1,0.906636,massimilianoghiotto_6254,sparse_edit_or_object_completion,113178,13.36328292042622,2.98178,18,18,480,480,20,14,420,Mul:8 Conv:3 Sub:3 Cast:1 Slice:1 ReduceSum:1 Floor:1 Sum:1,0,0,0,0,1
+5,8,1,1.141104,massimilianoghiotto_6254,sparse_edit_or_object_completion,117225,13.328149556042213,1.82225,1,1,441,441,106,19,708,Conv:19 Greater:18 Where:16 Mul:9 ReduceMax:8 And:8 Or:7 Relu:6,0,0,0,1,1
+84,8,1,0.839969,massimilianoghiotto_6254,sparse_edit_or_object_completion,19513,15.121163810905001,1.89513,19,19,441,441,23,14,386,And:4 Where:4 Less:3 Equal:3 Sub:2 Conv:1 Slice:1 ReduceMax:1,0,0,0,1,1
+46,6,1,1.560256,massimilianoghiotto_6254,crop_or_resize,33426,14.58291068075113,1.98426,13,11,60,48,73,26,1906,Slice:9 Mul:9 Sub:9 Pad:7 Abs:6 Less:6 Where:6 MatMul:4,1,0,0,1,1
+63,5,1,0.893687,massimilianoghiotto_6254,sparse_edit_or_object_completion,30732,14.666940264012474,2.00732,3,3,196,196,34,13,244,Slice:5 Sub:5 ReduceMax:4 Sum:4 Relu:4 ReduceSum:3 Clip:3 Mul:3,0,0,0,0,0
+11,5,1,0.697514,massimilianoghiotto_6254,sparse_edit_or_object_completion,66247,13.898854540195707,1.31247,1,1,121,121,52,22,4734,Mul:18 Slice:10 Conv:10 ReduceMax:9 Cast:1 Sub:1 Relu:1 Sum:1,0,0,0,0,1
+37,5,1,0.697514,massimilianoghiotto_6254,sparse_edit_or_object_completion,63726,13.937652078450405,1.28726,1,1,100,100,27,13,16760,Relu:7 Conv:6 Mul:5 Slice:2 Cast:1 Sum:1 ReduceMax:1 Sub:1,0,0,0,0,1
+22,5,1,0.697514,massimilianoghiotto_6254,crop_or_resize,34821,14.542024067963268,0.79821,1,1,121,9,67,25,868,Mul:17 ReduceMax:16 Slice:10 Sub:8 Add:8 Concat:4 Cast:2 Conv:1,0,0,0,0,1
+33,5,1,0.647514,massimilianoghiotto_6254,sparse_edit_or_object_completion,55161,14.081988539178049,1.20161,1,1,289,289,16,6,320,Gather:5 Cast:3 Mul:2 ReduceSum:1 Pad:1 Sub:1 ReduceMax:1 Greater:1,0,0,0,1,0
+276,5,1,0.53243,massimilianoghiotto_6254,sparse_edit_or_object_completion,10,22.697414907005953,1.7001,11,11,36,36,1,1,80,Gather:1,0,0,0,0,0
+87,5,1,0.53243,massimilianoghiotto_6254,sparse_edit_or_object_completion,368,19.09191706183107,0.50368,1,1,9,9,2,4,64,Slice:1 Pad:1,0,0,0,0,0
+27,4,1,0.635014,massimilianoghiotto_6254,sparse_edit_or_object_completion,36791,14.486991470971319,1.01791,1,1,100,100,25,13,14532,Slice:6 Mul:4 Sub:4 Cast:3 Pad:2 ReduceSum:2 Greater:1 Where:1,0,0,0,1,0
+88,3,1,0.388889,massimilianoghiotto_6254,crop_or_resize,72766,13.80499590787612,2.52766,158,63,528,100,48,20,888,Sub:7 ReduceMax:6 Add:6 Mul:5 Where:5 Reshape:4 Cast:3 Greater:2,0,0,0,1,0
+35,2,1,0.395833,massimilianoghiotto_6254,sparse_edit_or_object_completion,15363,15.36028269986934,0.65363,1,1,100,100,38,16,404,Slice:8 And:7 ReduceMax:4 ArgMax:4 Equal:4 Or:4 Not:2 Greater:1,0,0,0,0,0
+92,2,1,0.340909,massimilianoghiotto_6254,sparse_edit_or_object_completion,46289,14.25734036914603,2.31289,9,9,900,900,30,11,134,Equal:9 Where:5 Cast:4 ReduceSum:3 ReduceMax:2 Not:2 And:2 CumSum:2,0,0,0,1,0
+47,1,1,1.0,massimilianoghiotto_6254,sparse_edit_or_object_completion,3024,16.985664262700574,0.53024,1,1,81,81,30,8,288,Cast:6 Or:5 And:5 ReduceMax:4 Tile:4 Slice:2 Not:2 Concat:1,0,0,0,0,0
+173,1,1,0.5,massimilianoghiotto_6254,sparse_edit_or_object_completion,175243,12.926071138839562,3.60243,160,160,625,625,68,24,536,QLinearMatMul:15 Cast:12 Reshape:10 Transpose:7 Conv:7 Greater:6 Where:3 Slice:2,0,0,0,1,1
+3,1,1,0.333333,afr1ste_5689_artifact,crop_or_resize,9102,15.883750551423413,0.54102,1,1,18,27,44,10,56,Mul:10 Slice:7 Cast:7 Sub:5 Concat:4 Sum:3 ReduceSum:2 Less:2,0,0,0,1,0
+30,5,0,0.58228,massimilianoghiotto_6254,sparse_edit_or_object_completion,11998,15.607504751786962,1.11998,2,2,100,100,64,19,754,Cast:10 Where:6 Add:6 Slice:4 Sub:4 ReduceMax:3 ReduceMin:3 GreaterOrEqual:3,0,0,0,1,0
+82,5,0,0.45754,massimilianoghiotto_6254,sparse_edit_or_object_completion,23479,14.936138316402742,1.93479,11,11,90,90,20,10,230,Mul:5 ReduceSum:3 Slice:2 Cast:2 Conv:2 Sub:2 Sum:2 Concat:1,0,0,0,0,1
+20,4,0,0.364181,exp068_seddik_style_strict_scalarization_seddik_style_scalarize_dedup_prune,sparse_edit_or_object_completion,73049,13.801114272168789,1.13049,1,1,100,100,76,22,956,ReduceSum:9 Where:9 Equal:8 Add:7 Cast:6 Squeeze:6 Greater:5 Gather:5,0,0,0,1,0
+28,3,0,0.32549,massimilianoghiotto_6254,sparse_edit_or_object_completion,8990,15.896131872534333,0.5899,1,1,100,100,13,11,712,Slice:4 Cast:2 ReduceMax:2 Mul:2 Add:1 Concat:1 Pad:1,0,0,0,0,0
+90,3,0,0.199096,massimilianoghiotto_6254,sparse_edit_or_object_completion,63354,13.94350667496543,2.48354,44,44,150,150,246,41,334,Relu:50 Mul:46 ConvTranspose:46 Conv:28 Sum:25 ReduceMax:23 Sub:23 Cast:1,0,0,0,0,1
+133,2,0,0.24359,exp068_seddik_style_strict_scalarization_seddik_style_scalarize_dedup_prune,sparse_edit_or_object_completion,193921,12.824793861384533,3.53921,178,178,870,870,17,8,188960,MatMul:2 Sub:2 ReduceSum:2 Cast:2 Slice:1 Flatten:1 Unsqueeze:1 Mul:1,1,0,0,0,0
+396,1,0,0.2,massimilianoghiotto_6254,crop_or_resize,143389,13.126683504302262,3.23389,49,24,324,64,71,20,19996,Cast:12 Mul:10 MaxPool:7 Where:5 Add:5 Gather:5 ArgMax:4 And:4,0,1,0,1,0
+91,1,0,0.083333,massimilianoghiotto_6254,crop_or_resize,51466,14.151323325547068,2.31466,49,99,225,169,43,14,624,Cast:5 Sub:5 Reshape:4 ArgMax:4 Gather:4 Add:4 Less:4 And:4,0,0,0,1,0
+158,1,0,0.058824,kojimar_5800_minimal_blend,sparse_edit_or_object_completion,182776,12.883983361645681,3.42776,33,33,650,650,374,103,144752,Slice:91 Reshape:91 And:72 Greater:55 Less:37 Cast:19 MatMul:2 Flatten:1,1,0,0,1,0
+86,1,0,0.052632,massimilianoghiotto_6254,sparse_edit_or_object_completion,25857,14.83966336368449,1.95857,3,3,144,144,42,19,492,Cast:7 Conv:6 ConvTranspose:6 Where:4 Sum:4 Greater:3 Less:3 And:2,0,0,0,1,1
+48,1,0,0.05,massimilianoghiotto_6254,crop_or_resize,5609,16.367872270491663,1.10609,16,1,64,1,52,15,330,Greater:13 Conv:12 Where:12 Cast:4 Slice:2 Reshape:2 Sum:1 ArgMax:1,0,0,0,1,1

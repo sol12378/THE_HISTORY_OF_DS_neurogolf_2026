@@ -1,0 +1,48 @@
+{
+  "exp_id": "exp141_task018_teacher_repair_probe",
+  "date": "2026-06-10",
+  "status": "repair_probe_blocked",
+  "purpose": "Replace public-zero task018 in exp127 with exp023 teacher artifact to test whether single-task repair recovers LB.",
+  "base_exp": "experiments\\exp127_focused_surgery_seventh_pass_limited",
+  "base_public_lb": 5930.55,
+  "base_local_estimate": 6282.965235594199,
+  "teacher_exp": "experiments\\exp023_graph_surgery_exp016",
+  "task_id": 18,
+  "current_public_points_inferred": 0.0,
+  "strict_current_cost": 114578,
+  "strict_current_points": 13.35098890724301,
+  "teacher_cost": 17467,
+  "teacher_points": 15.231931334571607,
+  "expected_lb_if_public_pass": 5945.781931334572,
+  "teacher_validation": {
+    "ok": false,
+    "reason": "mismatch example 24",
+    "passed": 24,
+    "failed": 1,
+    "status": "24_pass_1_fail",
+    "score_reason": "ok"
+  },
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 813168,
+    "sha256": "a09db509c3bfa6d3ea0ad0cec402d549a0719b0dd92ae7e7a37e2deec0e0b6f9"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp141_task018_teacher_repair_probe\\submission.zip"
+  },
+  "elapsed_s": 19.717,
+  "submission_decision": "do_not_submit",
+  "leakage_risk": "high: exp023 teacher artifact is signature-lookup-derived and previously part of a collapsed high-risk bundle.",
+  "overfitting_risk": "high: public pass would not prove private robustness; use only as single-task calibration/repair evidence."
+}

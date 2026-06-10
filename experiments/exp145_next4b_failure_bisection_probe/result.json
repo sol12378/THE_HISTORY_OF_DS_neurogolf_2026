@@ -1,0 +1,95 @@
+{
+  "exp_id": "exp145_next4b_failure_bisection_probe",
+  "date": "2026-06-10",
+  "status": "probe_complete_all_alive",
+  "purpose": "A-3 bisection probe after exp140 repaired task018: intentionally fail next remaining consensus tasks 032/050/016/031.",
+  "base_exp": "experiments\\exp127_focused_surgery_seventh_pass_limited",
+  "base_public_lb": 5930.55,
+  "current_public_best_lb": 5942.48,
+  "base_local_estimate": 6282.965235594199,
+  "targets": [
+    32,
+    50,
+    16,
+    31
+  ],
+  "target_points": {
+    "32": 16.86699978141639,
+    "50": 15.843587970049374,
+    "16": 22.697414907005953,
+    "31": 15.168223295017873
+  },
+  "expected_drop_if_all_alive": 70.57622595348958,
+  "expected_lb_if_all_alive_from_exp127": 5859.973774046511,
+  "interpretation_rule": "observed_drop close to target point sum means tasks were public-scoring alive; missing point mass indicates already public-zero tasks.",
+  "target_validation": [
+    {
+      "task_id": 32,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 50,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 16,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 31,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 818573,
+    "sha256": "2cb9f429bb818d1f41678f94796595e9ff127b8d79e98d8ee1d740b83be48910"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp145_next4b_failure_bisection_probe\\submission.zip"
+  },
+  "elapsed_s": 28.247,
+  "submission_decision": "submit_probe_after_sanity",
+  "kaggle_submission_ref": 53521106,
+  "kaggle_status": "COMPLETE",
+  "kaggle_public_lb": 5859.97,
+  "observed_drop_vs_exp127": 70.58000000000038,
+  "drop_error_vs_expected_all_alive": 0.003774046510800719,
+  "inferred_public_zero_tasks": [],
+  "inferred_alive_tasks": [
+    32,
+    50,
+    16,
+    31
+  ],
+  "probe_interpretation": "Observed drop matches all-alive expected drop. Tasks 032/050/016/031 are public-scoring alive and should be excluded from immediate public-zero repair suspects.",
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: consumes a submission and only measures public scoring behavior for a group."
+}

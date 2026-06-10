@@ -1,0 +1,67 @@
+{
+  "exp_id": "exp129_compiler_farm_core",
+  "status": "pipeline_core_ready",
+  "floor_status": {
+    "target_lb_floor": 6285.0,
+    "submit_floor_ready": false,
+    "ready_source_count": 0,
+    "max_observed_kaggle_lb": 1400.37,
+    "policy": "public CODE is a floor only after full-arc validation plus Kaggle LB evidence; otherwise teacher/intelligence"
+  },
+  "guardrail_rows": [
+    {
+      "subject": "smoke_channel_gather",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "node_count": 1,
+      "full_grid_intermediate_count": 1
+    },
+    {
+      "subject": "smoke_slice_pad",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "node_count": 2,
+      "full_grid_intermediate_count": 1
+    },
+    {
+      "subject": "smoke_full_grid_where",
+      "predicted_cost_band": "reject",
+      "hard_reject": true,
+      "reasons": [
+        "mask: full_grid_composition is a known high-cost lane",
+        "mask: Where is pre-rejected",
+        "overlay: full_grid_composition is a known high-cost lane",
+        "overlay: Where is pre-rejected",
+        "2 full-grid intermediates before final output"
+      ],
+      "risk_tags": [],
+      "node_count": 2,
+      "full_grid_intermediate_count": 2
+    },
+    {
+      "subject": "smoke_scatter_writeback",
+      "predicted_cost_band": "reject",
+      "hard_reject": true,
+      "reasons": [
+        "scatter: sparse_writeback is a known high-cost lane",
+        "scatter: ScatterND is pre-rejected"
+      ],
+      "risk_tags": [],
+      "node_count": 1,
+      "full_grid_intermediate_count": 1
+    }
+  ],
+  "outputs": {
+    "public_code_registry": "E:\\kaggle\\neurogolf-2026\\experiments\\exp129_compiler_farm_core\\public_code_registry.csv",
+    "bundle_ledger_smoke": "E:\\kaggle\\neurogolf-2026\\experiments\\exp129_compiler_farm_core\\bundle_ledger_smoke.csv"
+  },
+  "bundle_smoke": {
+    "accepted_count": 1,
+    "total_local_delta": 0.1
+  },
+  "decision": "ONNX farm should accept only low-cost primitive IR or full-arc-safe graph surgery. Public CODE is imported as teacher/intelligence until it has full validation and LB evidence."
+}
