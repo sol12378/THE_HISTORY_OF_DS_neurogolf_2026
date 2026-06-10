@@ -24,6 +24,7 @@ class BundleCandidate:
     local_delta: float
     risk: str
     adoption_status: str
+    primitive_kind: str = ""
 
     @property
     def accepted(self) -> bool:
@@ -68,6 +69,7 @@ class BundleLedger:
                         local_delta=_float(row.get("local_delta")),
                         risk=row.get("risk") or "low",
                         adoption_status="accepted" if status in {"improved", "accepted"} else status,
+                        primitive_kind=row.get("primitive_kind", ""),
                     )
                 )
         return cls(candidates)
@@ -155,6 +157,7 @@ class BundleLedger:
             "computed_local_delta",
             "risk",
             "adoption_status",
+            "primitive_kind",
         ]
         with out.open("w", encoding="utf-8", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)

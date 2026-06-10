@@ -1,0 +1,2 @@
+task_id,source_exp,candidate_path,base_cost,candidate_cost,validation_status,local_delta,computed_local_delta,risk,adoption_status,primitive_kind
+smoke_grid_task,exp310,grid.onnx,1000,9,266_pass_0_fail,0.0,4.710530701645918,low,accepted,grid_sample

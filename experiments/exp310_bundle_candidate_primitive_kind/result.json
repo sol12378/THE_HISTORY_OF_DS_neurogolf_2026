@@ -1,0 +1,13 @@
+{
+  "exp_id": "exp310_bundle_candidate_primitive_kind",
+  "date": "2026-06-10",
+  "phase": "Phase C low-cost fused lowering",
+  "hypothesis": "BundleCandidate should preserve primitive_kind for future grid_sample supplier candidates",
+  "expected_cost_reduction": "no direct score change; keeps grid_sample lane visible through ledger acceptance/review",
+  "csv_primitive_kind": "grid_sample",
+  "accepted_count": 1,
+  "best_total_local_delta": 4.710530701645918,
+  "submission_decision": "no_submit_synthetic_only",
+  "leakage_risk": "low: synthetic ledger only",
+  "overfitting_risk": "low: no Kaggle candidate generated"
+}
