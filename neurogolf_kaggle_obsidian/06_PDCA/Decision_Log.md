@@ -321,4 +321,256 @@
 - 背景: fixed-template新規loweringは不発が続いたため、既存artifact surgeryへ戻した。
 - 新証拠: exp252でtask153 `Reshape_node7_to_input0` bypassがfull-arc passし、cost `11212 -> 10947`。
 - 決定: exp253としてexp234 current bestにtask153 bypassを載せてKaggle提出する。expected public LB `6006.34`。
-- リスク: 微小deltaなのでLB丸めに埋もれる可能性があるが、graph surgeryは入力source差替えより低risk。採点結果で較正する。
+- 採点結果: ref `53531156` は public LB `6006.32` でexp234と同点。微小deltaはLB表示上観測されず、best更新なし。
+- 決定更新: exp253は採用しない。best baseは引き続きexp234 `6006.32`。
+- リスク: 微小deltaは提出枠消費に対して情報量が小さい。以後は同種surgeryでも、複数taskを束ねられる候補か、単独で表示差分が見込めるlocal deltaを優先する。
+
+# 2026-06-10 exp254/255: top30 full-arc bypassを束ねて提出する
+
+- 背景: exp253単独deltaはLB同点で観測されなかったため、同種surgeryを束ねて表示差分が出る大きさにする必要があった。
+- 新証拠: exp254でcurrent exp234 top30 cost tasksから13件のfull-arc-pass bypass改善を発見。combined local delta `+0.090241`。
+- 決定: exp255として13件をexp234へbundleし、Kaggle ref `53531405` として提出する。expected public LB `6006.4102`。
+- 採点結果: public LB `6006.39`。期待値に近い改善を確認したため、current public bestをexp255へ更新する。
+- リスク: 13件はすべてfull-arc passだが、graph surgeryの同値性はavailable examples上の証拠。採点結果が出るまでbestはexp234のまま扱う。
+- 運用更新: 提出後の採点待ち時間を遊ばせないため、AGENTS.mdに「採点待ち中は次の実験・監査・記録整備を進める」ルールを明文化した。
+
+# 2026-06-10 exp256/257: rank31-80 bypass bundleをexp255へ積む
+
+- 背景: exp255でfull-arc graph-surgery bundleがpublic LBへ転写することを確認した。
+- 新証拠: exp256でrank31-80から16件のfull-arc-pass bypass改善を発見。combined local delta `+0.331473`。最大はtask340 `Cast_node0_to_input0`, cost `70342 -> 52342`。
+- 決定: exp257として16件をexp255 current bestへstackし、Kaggle ref `53531558` として提出する。expected public LB `6006.7215`。
+- 採点結果: public LB `6006.72`。期待値と一致したため、current public bestをexp257へ更新する。
+- リスク: exp255/257でレーンの妥当性は上がったが、各taskのhidden edgeは残る。private robustnessは引き続き最終評価まで未確認。
+
+# 2026-06-10 exp258/259: rank81-140 bypass bundleをexp257へ積む
+
+- 背景: exp255/257でfull-arc graph-surgery bundleのLB転写が2回確認された。
+- 新証拠: exp258でrank81-140から23件のfull-arc-pass bypass改善を発見。combined local delta `+0.219056`。
+- 決定: exp259として23件をexp257 current bestへstackし、Kaggle ref `53531729` として提出する。expected public LB `6006.9391`。
+- リスク: rankが下がるほど個別deltaは小さいが、bundle化により表示差分は十分。LB完了までbestはexp257 `6006.72` のまま扱う。
+
+# 2026-06-10 exp262/263: 提出はlocal estimate更新時に限定する
+
+- 背景: graph surgery bundleはpublic LBへよく転写しているが、毎回提出すると提出枠と待ち時間を消費する。
+- 新方針: 提出はlocal estimateを更新した時だけ行う。探索だけの結果、no-gain、微小/不確定なpartialは提出せず、bundle replayでfull-arc確認できたものを優先する。
+- 新証拠: exp262 partialでrank221-320から17件、local_delta `+0.549899` を回収。exp263で全件再生成・full-arc replay passし、expected public LB `6008.329899` になった。
+- 決定: exp263をref `53532720` として提出。採点待ち中は独立した次実験、監査、記録更新を進める。
+- 採点結果: public LB `6008.30`。exp261から `+0.52` 改善し、current bestを更新。
+- リスク: exp262は途中でtask048付近の評価不安定があったため、今後のrank window sweepはcheckpoint/replay方式を標準にする。
+
+# 2026-06-10 exp264/265: rank321-400 surgeryを提出し、次はdtypeへ戻る
+
+- 背景: exp263でrank221-320までのgraph surgery bundleがLBへ転写したため、残るrank321-400をcheckpoint/replay方式で一巡した。
+- 新証拠: exp264で8件、local_delta `+0.597660` を発見。低cost側ではcost差が小さくてもlog score差が大きい。
+- 決定: exp265として8件をreplay full-arc確認し、ref `53532884` として提出。expected public LB `6008.897660`。
+- リスク: graph surgery window sweepはこれで一巡。以後の主戦場はroadmap Phase B/C(dtype縮小・fused表現)へ戻す。
+
+# 2026-06-10 exp267: farm cost proxyをoutput tensor bytesへ較正する
+
+- 背景: 新しい提出方針では、候補を提出する前にlocal estimateを計算し、submitted best estimateを上回る場合だけ提出する。そのため farm tooling の cost proxy が公式較正とずれていると、Phase B/C候補の選別を誤る。
+- 新証拠: 既存 `cost_extractor.py` は中間tensor bytesを足し、最終 `output` を除外していた。exp267で `params + output tensor bytes` に修正し、dtype probeで `uint8=9000`, `float32=36000`, `int64=72000` を確認した。
+- 決定: 今後の farm estimate では output dtype を明示的に評価する。exp267自体は候補bundle改善ではないためKaggle提出しない。
+- リスク: band判定はまだ古く、低cost op 少数なら `cost_proxy=36000` でも `250-600_plausible` と出る。次の1施策で band threshold を cost proxy 優先に直す。
+
+# 2026-06-10 exp268: farm band判定をcost proxy閾値へ揃える
+
+- 背景: exp267で output bytes proxy は正しくなったが、IR band 判定に低cost op 少数なら `250-600_plausible` とする override が残っていた。
+- 新証拠: override削除後、dtype probeは `uint8=9000`, `float32=36000`, `int64=72000` のすべてが `high_cost_probe_only` になり、smokeの `cost_proxy=36000` 候補も high-cost 表示になった。
+- 決定: 提出前の farm gate では band 名より `cost_proxy` を優先し、band も閾値に揃える。exp268はtooling較正のみなのでKaggle提出しない。
+- リスク: `Where` / `ScatterND` の hard reject はまだ過去guardrailのまま。既知較正の `Where MAC=0` と矛盾する可能性があるため、次は公式cost実測可能なprobeで確認する。
+
+# 2026-06-10 exp269: `Where` をconditional hard rejectから外す
+
+- 背景: 既知較正では `Where` は MAC=0 であり、cost は output tensor bytes と params で見るべきである。従来farmは `Where over full-grid output` を hard reject していた。
+- 新証拠: `Where` を `CONDITIONAL_HIGH_RISK_OPS` から外すと、`ONE_NODE_DATA_MOVEMENT` lane の `Where` は `hard_reject=false`, `cost_proxy=9000` になった。一方 `FULL_GRID_COMPOSITION` lane は別理由で reject され続ける。
+- 決定: `Where` 自体は hard reject しない。full-grid composition などの構造リスクは別laneのguardで扱う。exp269はtooling較正のみなのでKaggle提出しない。
+- リスク: Whereを使う候補の精度/hidden robustness は別問題。実候補では full-arc gate と local estimate 更新を必須にする。
+
+# 2026-06-10 exp270: IR local estimateにparam_countを追加する
+
+- 背景: 既知較正の `recolor_direct(cost 44)` と `recolor_cast(cost 140)` は params 側の差であり、IR path が `param_count=0` 固定だと候補選別に使えない。
+- 新証拠: `IRNode.attrs["param_count"]` を加算すると、同じ1-byte outputで `recolor_direct=45`, `recolor_cast=141` と差が local estimate に現れた。
+- 決定: IR supplier は小さいparam差を `attrs["param_count"]` で明示する。今後の recolor candidate ranking では direct recolor を cast recolor より優先する。
+- リスク: `attrs["param_count"]` はsupplierが正しく付与する必要がある。実候補ではONNX pathの initializer count / official score と突合する。
+
+# 2026-06-10 exp271: accepted candidate rankingをcost-awareにする
+
+- 背景: `recolor_direct` と `recolor_cast` のcost差を計算できても、accepted候補の順序が元順だと同一delta候補で低cost側を優先できない。
+- 新証拠: `accepted_candidates()` を `local_delta desc`, `candidate_cost asc` にすると、入力順に関係なく `recolor_direct(cost 45)` が `recolor_cast(cost 141)` より先に来た。
+- 決定: bundle候補の基本採用順は local_delta を最優先し、同点では低costを優先する。
+- リスク: 同一taskの複数accepted候補を同時に返す点はまだ残る。実bundle化前にはtask単位のbest選択 helper が必要。
+
+# 2026-06-10 exp272: taskごとのbest accepted候補を選べるようにする
+
+- 背景: accepted候補をcost-awareに並べても、同一taskの複数候補をそのままbundleへ渡すと1 task 1 model制約に反する。
+- 新証拠: `best_candidates_by_task()` 追加後、accepted 3件のprobeはbest-by-task 2件へ縮約され、`task_recolor` では低costの `recolor_direct(cost 45)` が残った。
+- 決定: bundle構築時は `best_candidates_by_task()` を使い、task重複を避ける。`accepted_candidates()` は監査用に全acceptedを返す役割として残す。
+- リスク: best選択は local_delta/cost に依存するため、実候補ではlocal_delta計算とofficial scoreの整合確認が必要。
+
+# 2026-06-10 exp273: farm smokeでtask重複を可視化する
+
+- 背景: `best_candidates_by_task()` を追加しても、smoke/result が accepted count だけだと重複taskの有無が見えない。
+- 新証拠: `bundle_smoke` に `best_by_task_count` と `duplicate_task_count` を追加し、exp273 smokeで `1/1/0` を確認した。
+- 決定: farm result では accepted 全件数だけでなく、task単位のbest件数と重複件数を常に確認する。
+- リスク: 可視化だけでは実bundleの重複防止にならない。次はbundle export入口で `best_candidates_by_task()` を使う。
+
+# 2026-06-10 exp274: best-by-task delta合計を分離する
+
+- 背景: `total_local_delta()` がaccepted全件を合計すると、同一taskの複数候補を二重計上し、提出前 local estimate が過大になる。
+- 新証拠: duplicate probeでは accepted全件合計 `1.4` に対し、best-by-task合計は `0.9`。重複候補を除くと過大計上を防げる。
+- 決定: 提出判断には `best_total_local_delta()` を使う。`total_local_delta()` は全accepted監査用に残す。
+- リスク: farm smoke/result にはまだ best total が表示されないため、次に標準可視化へ接続する。
+
+# 2026-06-10 exp275: best_total_local_deltaをfarm resultへ出す
+
+- 背景: 提出判断には dedupe済みの `best_total_local_delta()` を使う方針だが、farm smoke/resultには表示されていなかった。
+- 新証拠: exp275 smokeで `best_total_local_delta=0.1` が `bundle_smoke` に出ることを確認した。
+- 決定: farm result の提出判断用deltaは `best_total_local_delta` とする。`total_local_delta` は監査用に併記する。
+- リスク: `write_notes()` の文面が古いままなので、次に説明を更新して運用ミスを減らす。
+
+# 2026-06-10 exp276: farm notes templateを現在の提出判断方針へ合わせる
+
+- 背景: 実装は output-bytes / Where MAC=0 / best-total-delta 方針へ更新済みだが、`write_notes()` が古い説明のままだと運用ミスを誘発する。
+- 新証拠: 更新後の generated notes には `params + output tensor bytes`, `Where` MAC=0, `best_total_local_delta` が明記された。
+- 決定: farm notes では accepted全件deltaではなく `best_total_local_delta` をsubmit-gate deltaとして説明する。
+- リスク: tooling整備だけではLBは伸びない。次はこのfarm基盤で実候補生成へ戻る。
+
+# 2026-06-10 exp277: 提出可否helperをledgerへ追加する
+
+- 背景: 提出はlocal estimate更新時のみという方針を、人手判断ではなくfarm helperで固定する必要がある。
+- 新証拠: `submission_decision(6008.90)` は delta `0.2` で `should_submit=true`、精度gate落ちでdelta `0` なら `false` を返した。
+- 決定: 今後の提出可否判断は `best_total_local_delta` ベースの `submission_decision()` を使う。
+- リスク: helperをresultへ出さないと運用時に見落とすため、次に farm smoke/result へ接続する。
+
+# 2026-06-10 exp278: farm resultにsubmission_decisionを表示する
+
+- 背景: `submission_decision()` は追加済みだが、実験resultに出なければ提出可否判断の根拠が残らない。
+- 新証拠: exp278 smoke resultでは submitted best `6008.90`, best delta `0.1`, candidate `6009.0`, `should_submit=true` が表示された。
+- 決定: farm result には提出判断の機械判定を残す。ただし smoke dummy の `should_submit` は実提出対象ではない。
+- リスク: smoke dummy と実候補 result を混同する可能性がある。次は smoke-only reason を明示する。
+
+# 2026-06-10 exp279: smoke-only submission decisionを明示する
+
+- 背景: smoke dummy ledgerは合成候補なので、`should_submit=true` でもKaggle提出してはいけない。
+- 新証拠: exp279 resultに `submission_decision_scope=smoke_dummy_not_kaggle_candidate` と reason を出せるようになった。
+- 決定: smoke result の submission decision は実提出判断ではないことを明示する。実候補では同じ形式を使いつつ scope/reason を実candidate用にする。
+- リスク: ここまでtooling整備が続いているため、次は実候補生成へ戻ってscore-producing候補を探す。
+
+# 2026-06-10 exp280: notesにもsubmission decision scopeを出す
+
+- 背景: resultだけでなくnotesにもscope/reasonが出ないと、後から読む時にsmoke dummyの `should_submit=true` を誤読し得る。
+- 新証拠: exp280 generated notesで `submission decision scope: smoke_dummy_not_kaggle_candidate` とreasonを確認した。
+- 決定: farm notesでも submission decision のscope/reasonを必ず記録する。
+- リスク: tooling整備はここで打ち止めに近い。次は実候補生成へ戻る。
+
+# 2026-06-10 exp281: notesにsubmission decision値を出す
+
+- 背景: scope/reasonだけでは、提出判断の数値根拠がnotesから見えない。
+- 新証拠: generated notesに submitted best `6008.9`, candidate `6009.0`, `should_submit=True` が表示された。
+- 決定: farm notesには submission decision の値とscope/reasonを両方残す。
+- リスク: smoke dummy の `True` は実提出対象ではない。scope/reasonとセットで読む。
+
+# 2026-06-10 exp282: IR band判定をcost_proxy基準へ修正する
+
+- 背景: IR `cost_proxy` に params は入っていたが、band判定がmemory bytesだけを見ていたため、params-heavy候補が低costに見えるリスクがあった。
+- 新証拠: 修正後、`param_count=5000` / output 1 byte は `cost_proxy=5001` で `high_cost_probe_only` になる。
+- 決定: IR band判定は `params + output tensor bytes` の `cost_proxy` に統一する。
+- リスク: tooling整備が長く続いた。次は実候補生成でこの判定を使う。
+
+# 2026-06-10 exp283: recolor direct/castをIR primitiveとして区別する
+
+- 背景: `recolor_direct` と `recolor_cast` はcost差が大きく、attrsだけでなくprimitive kindとしても見える方がsupplier/rankingで扱いやすい。
+- 新証拠: direct/cast primitiveのprobeで `cost_proxy=45/141` と primitive kind `recolor_direct/recolor_cast` を確認した。
+- 決定: recolor候補生成では `PrimitiveKind.RECOLOR_DIRECT` / `RECOLOR_CAST` を使い分ける。
+- リスク: primitive追加だけではscoreは伸びない。次は実候補supplierへ戻る。
+
+# 2026-06-10 exp284: farmのpublic-code floor表示に現行best LBを含める
+
+- 背景: `submitted_best_estimate=6008.90` は提出判断に入っているが、`PublicCodeRegistry.floor_status()` の表示が public-code source 由来の古い/空のLBだけになり得る。
+- 新証拠: 修正後のsmokeで `current_best_public_lb=6008.9` と `max_observed_kaggle_lb=6008.9` を確認した。
+- 決定: public-code floor表示には `EXP_SUMMARY.md` の `Best Public LB` を含め、現行bestと整合させる。
+- リスク: 表示整備のみ。`submit_floor_ready=false` なので提出根拠にはならない。
+
+# 2026-06-10 exp285: recolor supplierはdirect-first factoryを使う
+
+- 背景: recolor direct/cast は official cost proxy が `45` と `141` で大きく違うため、supplier入口で区別する必要がある。
+- 新証拠: `recolor_direct_program()` と `recolor_cast_program()` のprobeで direct `45`, cast `141` を確認した。
+- 決定: recolor候補生成では direct factory を優先し、cast factory は明示fallbackとして扱う。
+- リスク: toolingのみでscoreは伸びない。次は実taskに対するcandidate supplierへ進める。
+
+# 2026-06-10 exp286: recolor cost差をfarm smokeに常設する
+
+- 背景: direct-first方針は一度のprobeだけでは後続変更で崩れる可能性がある。
+- 新証拠: farm smokeのguardrailに direct `45`, cast `141` が出ることを確認した。
+- 決定: recolor supplier接続前に、smokeでdirect/cast cost差を常時監視する。
+- リスク: smoke visibilityのみ。score-producing候補生成へ戻る必要がある。
+
+# 2026-06-10 exp287: BundleLedgerのlocal deltaをcost比から計算する
+
+- 背景: `local_delta` 手入力のままだと、提出ポリシーの「params + output bytesからlocal estimateを計算」とズレる。
+- 新証拠: `1000 -> 500` probeで `ln(2)=0.693147` が `submission_decision` に反映され、validation fail候補は除外された。
+- 決定: ledgerの提出判断は `computed_local_delta=ln(base_cost/candidate_cost)` を使う。
+- リスク: CSV互換のため `local_delta` 列は残るが、提出判断では使わない。
+
+# 2026-06-10 exp288: CSV reviewもcomputed_local_deltaを見る
+
+- 背景: `write_csv()` が旧 `local_delta` だけを出すと、提出判定とreview表示がズレる。
+- 新証拠: smoke CSVに `computed_local_delta=0.6931471805599453` が出て、`best_total_local_delta` と一致した。
+- 決定: candidate reviewでは `computed_local_delta` を提出判断値として見る。
+- リスク: `local_delta` 列は互換のため残すが、判断根拠にはしない。
+
+# 2026-06-10 exp289: selected_manifestをBundleLedgerへ直接取り込む
+
+- 背景: real candidate を提出判定に流すには、既存 sweep が出す `selected_manifest.csv` を ledger 化する入口が必要。
+- 新証拠: exp264 manifest 8件をacceptedし、cost-derived delta `+0.5976596441240898` を再現した。
+- 決定: 今後の selected manifest review は `BundleLedger.from_selected_manifest()` で ledger 化し、提出判定へ接続する。
+- リスク: 既提出manifestを新規改善として扱わない。履歴deltaは現行bestに含まれるかを必ず確認する。
+
+# 2026-06-10 exp290: 複数selected_manifestをまとめてledger化する
+
+- 背景: real bundle reviewでは複数sweepのmanifestをまとめ、同一task重複をbest-by-taskで処理する必要がある。
+- 新証拠: exp260+exp264 manifestをまとめて35件acceptedし、`best_total_local_delta=1.4377463495672809` を計算できた。
+- 決定: 複数manifest reviewは `BundleLedger.from_selected_manifests()` を使う。
+- リスク: 履歴manifestの `should_submit=true` は新規提出根拠ではない。current-best lineage確認を必須にする。
+
+# 2026-06-10 exp291: current-best lineage sourceを除外して提出判定する
+
+- 背景: 履歴manifestをまとめると既に提出済みのdeltaで `should_submit=true` になり得る。
+- 新証拠: exp260+exp264 sourceを除外すると `candidate_count=0`, `should_submit=false` になった。
+- 決定: real manifest reviewでは現行best lineage の `source_exp` を `exclude_sources` に入れてから提出判定する。
+- リスク: 除外sourceの指定漏れ。current best lineageをEXP_SUMMARY/LB_Trackingと照合する。
+
+# 2026-06-10 exp292: submission decisionに候補件数を含める
+
+- 背景: `should_submit=false` の理由がfresh候補ゼロなのか、deltaゼロなのかをdecisionから直接読める必要がある。
+- 新証拠: lineage除外後のdecisionで `accepted_count=0`, `best_by_task_count=0`, `should_submit=false` を確認した。
+- 決定: 提出判定では `accepted_count` / `best_by_task_count` / `best_total_local_delta` をセットで確認する。
+- リスク: fresh候補ゼロが確認できたため、次はtoolingではなくscore-producing候補生成へ戻る。
+
+# 2026-06-10 exp293: fresh-only提出判定を1関数にまとめる
+
+- 背景: real candidate manifest生成後に、lineage除外と提出判定を別々に呼ぶと運用ミスが起き得る。
+- 新証拠: `fresh_submission_decision()` で履歴manifest6件を入力しても、lineage除外後は `accepted_count=0`, `should_submit=false` になった。
+- 決定: 新規manifest reviewでは `BundleLedger.fresh_submission_decision()` を使う。
+- リスク: helper整備はここで打ち止め。次はscore-producing候補生成に戻る。
+
+# 2026-06-10 exp294: full_arc_pass表記もaccuracy gate passにする
+
+- 背景: 既存manifestは `full_arc_pass`、ledger内部は `*_pass_0_fail` を主に使っており、direct supplierで表記揺れが起きる。
+- 新証拠: synthetic probeで `full_arc_pass` と `266_pass_0_fail` はaccepted、`24_pass_1_fail` はrejectedになった。
+- 決定: `BundleCandidate.accepted` は `full_arc_pass` と `*_pass_0_fail` をaccuracy passとして扱う。
+- リスク: `full_arc_pass` は本当にfull-arc validation済みの候補にのみ使う。
+
+# 2026-06-10 exp295: exp262の残りwindowはtask048で止まる
+
+- 背景: fresh manifest が0件だったため、score-producing候補生成へ戻る必要があった。exp262 rank221-320 はpartialで止まっており未消化余地がある。
+- 新証拠: 既存script再実行でも `after_task273` の17 selectedまでで、その後 task048 付近のONNXRuntime reshape/conv errorにより非ゼロ終了した。
+- 決定: exp262 partialの17件は現行best lineageに含まれるため再提出しない。次はtask048 bad candidatesをskip/quarantineして残りwindowを完走する。
+- リスク: script本体修正は今回のallowed-file制約外。次ループで制約を満たす実装経路を選ぶ。
+
+# 2026-06-10 exp296: task-level quarantineをfresh submit reviewに入れる
+
+- 背景: task048のような既知runtime-stopperを提出reviewからも明示除外できる必要がある。
+- 新証拠: synthetic manifestで `exclude_tasks={"48"}` が効き、全task除外時は `should_submit=false` になった。
+- 決定: fresh manifest reviewでは必要に応じて `exclude_tasks` を使い、既知危険taskを候補集合から落とす。
+- リスク: これはreview側の安全弁であり、exp262生成scriptがtask048で止まる問題自体は未解決。

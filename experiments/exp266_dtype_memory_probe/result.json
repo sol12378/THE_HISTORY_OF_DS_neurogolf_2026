@@ -1,0 +1,83 @@
+{
+  "exp_id": "exp266_dtype_memory_probe",
+  "date": "2026-06-10",
+  "task_id": 87,
+  "rows": [
+    {
+      "name": "cast_fp32",
+      "bytes": 183,
+      "memory": null,
+      "params": null,
+      "cost": null,
+      "reason": "score returned none"
+    },
+    {
+      "name": "cast_fp16",
+      "bytes": 183,
+      "memory": null,
+      "params": null,
+      "cost": null,
+      "reason": "score returned none"
+    },
+    {
+      "name": "cast_int64",
+      "bytes": 188,
+      "memory": null,
+      "params": null,
+      "cost": null,
+      "reason": "score returned none"
+    },
+    {
+      "name": "cast_uint8",
+      "bytes": 188,
+      "memory": null,
+      "params": null,
+      "cost": null,
+      "reason": "score returned none"
+    },
+    {
+      "name": "bool_notnot",
+      "bytes": 205,
+      "memory": null,
+      "params": null,
+      "cost": null,
+      "reason": "score returned none"
+    },
+    {
+      "name": "arith_fp32",
+      "bytes": 250,
+      "memory": null,
+      "params": null,
+      "cost": null,
+      "reason": "score returned none"
+    },
+    {
+      "name": "arith_fp16",
+      "bytes": 247,
+      "memory": null,
+      "params": null,
+      "cost": null,
+      "reason": "score returned none"
+    },
+    {
+      "name": "arith_int64",
+      "bytes": 256,
+      "memory": null,
+      "params": null,
+      "cost": null,
+      "reason": "score returned none"
+    },
+    {
+      "name": "arith_uint8",
+      "bytes": 256,
+      "memory": null,
+      "params": null,
+      "cost": null,
+      "reason": "score returned none"
+    }
+  ],
+  "interpretation": "dtype memory accounting probe; no submission.",
+  "submission_decision": "no_submit",
+  "leakage_risk": "none: synthetic score probe only.",
+  "overfitting_risk": "none."
+}

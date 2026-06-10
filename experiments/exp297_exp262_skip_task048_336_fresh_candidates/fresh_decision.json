@@ -1,0 +1,32 @@
+{
+  "fresh_selected_count": 3,
+  "fresh_tasks": [
+    60,
+    226,
+    123
+  ],
+  "fresh_local_delta": 0.05520869941921447,
+  "candidate_estimate": 6008.955208699419,
+  "should_submit": true,
+  "excluded_submitted_or_quarantine_tasks": [
+    3,
+    30,
+    45,
+    48,
+    50,
+    78,
+    124,
+    153,
+    180,
+    188,
+    212,
+    248,
+    254,
+    273,
+    329,
+    336,
+    345,
+    357,
+    369
+  ]
+}

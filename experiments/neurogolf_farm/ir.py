@@ -14,6 +14,8 @@ from typing import Any
 class PrimitiveKind(str, Enum):
     ONE_NODE_DATA_MOVEMENT = "one_node_data_movement"
     CHANNEL_GATHER = "channel_gather"
+    RECOLOR_DIRECT = "recolor_direct"
+    RECOLOR_CAST = "recolor_cast"
     STATIC_SLICE_PAD = "static_slice_pad"
     COMPUTED_SLICE_PAD = "computed_slice_pad"
     SMALL_LOCAL_MASK = "small_local_mask"
@@ -70,3 +72,61 @@ class IRProgram:
     @property
     def op_types(self) -> tuple[str, ...]:
         return tuple(node.op_type for node in self.nodes)
+
+
+def recolor_direct_program(
+    task_id: str,
+    *,
+    output_shape: tuple[int | str | None, ...],
+    output_dtype: str = "uint8",
+    param_count: int = 44,
+    source: str = "recolor_supplier",
+) -> IRProgram:
+    return IRProgram(
+        task_id=task_id,
+        family="recolor",
+        intent="direct channel gather recolor without dtype cast",
+        source=source,
+        nodes=(
+            IRNode(
+                name="recolor_direct",
+                kind=PrimitiveKind.RECOLOR_DIRECT,
+                op_type="Gather",
+                output=TensorSpec("output", output_shape, output_dtype),
+                attrs={"param_count": param_count},
+            ),
+        ),
+    )
+
+
+def recolor_cast_program(
+    task_id: str,
+    *,
+    output_shape: tuple[int | str | None, ...],
+    output_dtype: str = "uint8",
+    direct_param_count: int = 44,
+    cast_param_count: int = 96,
+    source: str = "recolor_supplier",
+) -> IRProgram:
+    return IRProgram(
+        task_id=task_id,
+        family="recolor",
+        intent="channel gather recolor with explicit cast fallback",
+        source=source,
+        nodes=(
+            IRNode(
+                name="recolor_gather",
+                kind=PrimitiveKind.RECOLOR_CAST,
+                op_type="Gather",
+                output=TensorSpec("recolor_tmp", output_shape, output_dtype),
+                attrs={"param_count": direct_param_count},
+            ),
+            IRNode(
+                name="recolor_cast",
+                kind=PrimitiveKind.RECOLOR_CAST,
+                op_type="Cast",
+                output=TensorSpec("output", output_shape, output_dtype),
+                attrs={"param_count": cast_param_count},
+            ),
+        ),
+    )

@@ -13,4 +13,11 @@ exp252で見つかったtask153 `Reshape_node7_to_input0` bypassを、current pu
 
 ## 判断
 
-`submit_ready`ならKaggleへ提出してmicro deltaを較正する。
+Kaggle ref `53531156` として提出し、`2026-06-10` に COMPLETE。public LB は `6006.32` で exp234 と同点だった。
+
+local では task153 cost `11212 -> 10947`、期待 public LB `6006.3439` だったが、LB 表示上は丸め/公開側差分なしとして best 更新なし。現 best は exp234 `6006.32` のまま。
+
+## リスク
+
+- leakage risk: low-medium。full-arc gated graph surgery だが、private 頑健性は LB 同点のため追加価値を確認できず。
+- overfitting risk: medium-low。検証全例は通るが、公開LBでは差分が観測されなかった。

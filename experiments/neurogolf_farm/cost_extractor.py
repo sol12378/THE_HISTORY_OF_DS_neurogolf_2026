@@ -1,8 +1,8 @@
 """Pre-emission cost guardrails for NeuroGolf ONNX candidates.
 
-The current competition objective is parameter count plus memory footprint
-bytes. The extractor therefore reports numeric proxy fields in addition to the
-coarse accept/reject band. The proxy is not a replacement for the official
+The current competition objective is parameter count plus output tensor bytes.
+The extractor therefore reports numeric proxy fields in addition to the coarse
+accept/reject band. The proxy is not a replacement for the official
 score_network path; it is a cheap pre-emission screen.
 """
 
@@ -20,7 +20,7 @@ FULL_GRID_ELEMENTS = 1 * 10 * 30 * 30
 HARD_BAD_OPS = {"Loop", "Scan", "NonZero", "Unique", "Compress"}
 HIGH_RISK_OPS = {"MatMul", "Conv", "Tile", "Resize"}
 LOW_COST_OPS = {"Identity", "Transpose", "Slice", "Gather", "Pad", "Cast", "Reshape", "Squeeze", "Unsqueeze"}
-CONDITIONAL_HIGH_RISK_OPS = {"ScatterND", "GatherND", "Where", "ScatterElements"}
+CONDITIONAL_HIGH_RISK_OPS = {"ScatterND", "GatherND", "ScatterElements"}
 DTYPE_BYTES = {
     "float16": 2,
     "float32": 4,
@@ -91,12 +91,14 @@ class CostExtractor:
         hard_reject = False
         full_grid_intermediates = 0
         memory_bytes_proxy = 0
+        param_count_proxy = 0
 
         for node in program.nodes:
+            param_count_proxy += int(node.attrs.get("param_count", 0) or 0)
             if node.output and node.output.known_elements is not None:
-                if node.output.name != "output":
+                if node.output.name == "output":
                     memory_bytes_proxy += node.output.known_elements * DTYPE_BYTES.get(node.output.dtype, 4)
-                if node.output.known_elements >= FULL_GRID_ELEMENTS:
+                elif node.output.known_elements >= FULL_GRID_ELEMENTS:
                     full_grid_intermediates += 1
             for tag in node.risk_tags:
                 if tag not in risk_tags:
@@ -124,13 +126,12 @@ class CostExtractor:
             hard_reject = True
             reasons.append(f"{full_grid_intermediates} full-grid intermediates before final output")
 
+        cost_proxy = param_count_proxy + memory_bytes_proxy
         if hard_reject:
             band = "reject"
-        elif memory_bytes_proxy <= 600 and all(node.op_type in LOW_COST_OPS for node in program.nodes):
+        elif cost_proxy <= 600 and all(node.op_type in LOW_COST_OPS for node in program.nodes):
             band = "250-600_plausible"
-        elif all(node.op_type in LOW_COST_OPS for node in program.nodes) and len(program.nodes) <= 3:
-            band = "250-600_plausible"
-        elif memory_bytes_proxy <= 2000:
+        elif cost_proxy <= 2000:
             band = "600-2000_probe"
         else:
             band = "high_cost_probe_only"
@@ -143,10 +144,10 @@ class CostExtractor:
             risk_tags=sorted(set(risk_tags)),
             node_count=len(program.nodes),
             full_grid_intermediate_count=full_grid_intermediates,
-            param_count=0,
-            param_bytes=0,
+            param_count=param_count_proxy,
+            param_bytes=param_count_proxy,
             memory_bytes_proxy=memory_bytes_proxy,
-            cost_proxy=memory_bytes_proxy,
+            cost_proxy=cost_proxy,
         )
 
     def assess_onnx_path(self, model_path: str | Path) -> CostSignal:
@@ -177,7 +178,8 @@ class CostExtractor:
                 risk_tags.append(f"op:{op_type}")
 
         param_count, param_bytes = self._initializer_stats(model.graph.initializer)
-        full_grid_intermediates, memory_bytes_proxy = self._value_info_stats(model.graph.value_info)
+        full_grid_intermediates, _ = self._value_info_stats(model.graph.value_info)
+        _, memory_bytes_proxy = self._value_info_stats(model.graph.output)
         if full_grid_intermediates >= 2:
             hard_reject = True
             reasons.append(f"{full_grid_intermediates} full-grid intermediates before final output")

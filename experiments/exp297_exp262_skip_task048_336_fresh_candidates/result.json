@@ -1,0 +1,79 @@
+{
+  "exp_id": "exp297_exp262_skip_task048_336_fresh_candidates",
+  "date": "2026-06-10",
+  "base_bundle": "experiments\\exp265_exp264_bypass_bundle_submit_probe\\submission.zip",
+  "source_manifest": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates\\selected_manifest_fresh.csv",
+  "selected_count": 3,
+  "failed_count": 0,
+  "failures": [],
+  "selected_tasks": [
+    60,
+    226,
+    123
+  ],
+  "selected_rows": [
+    {
+      "task_id": 60,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "greedy1_Mul_node12_to_input0",
+      "baseline_cost": 5581,
+      "candidate_cost": 5481,
+      "baseline_points": 16.372876749211567,
+      "candidate_points": 16.39095715495388,
+      "file_bytes": 2461,
+      "validation_status": "23_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "f4af3d9962eb193b0aa0b3e2730517a49bc33f887e52ce1261fd22904972467d"
+    },
+    {
+      "task_id": 226,
+      "route": "sparse_edit_or_object_completion",
+      "template_name": "greedy1_Mul_node22_to_input0",
+      "baseline_cost": 5559,
+      "candidate_cost": 5359,
+      "baseline_points": 16.37682648504653,
+      "candidate_points": 16.41346733050515,
+      "file_bytes": 3764,
+      "validation_status": "24_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "e7586fe334567978a98a566c2b952f7a2ad64eb9457cebe3f0ecd0ec25f89d80"
+    },
+    {
+      "task_id": 123,
+      "route": "crop_or_resize",
+      "template_name": "greedy1_Max_node6_to_input0",
+      "baseline_cost": 4104,
+      "candidate_cost": 4102,
+      "baseline_points": 16.680282613149394,
+      "candidate_points": 16.680770061367674,
+      "file_bytes": 9080,
+      "validation_status": "24_pass_0_fail",
+      "status": "improved",
+      "reason": "ok",
+      "sha256": "2487dbd44c5dd31f7f35b54dfdcc140b5b2e671a2a63a1017e27178f1afc4cb9"
+    }
+  ],
+  "local_delta": 0.05520869941921447,
+  "expected_public_lb_if_calibrated": 6008.955208699419,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 730812,
+    "sha256": "f08828ec01b436a87c72eeafc95b001c84c538771de7ed3d26312c7962a100ae"
+  },
+  "submission_decision": "submit",
+  "leakage_risk": "low-medium: full-arc gated graph surgery replay on current best bundle.",
+  "overfitting_risk": "medium-low."
+}

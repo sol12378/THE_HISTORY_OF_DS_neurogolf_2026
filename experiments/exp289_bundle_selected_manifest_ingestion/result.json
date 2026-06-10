@@ -1,0 +1,31 @@
+{
+  "exp_id": "exp289_bundle_selected_manifest_ingestion",
+  "status": "tooling_calibrated_no_submit",
+  "plan": "Ingest existing selected_manifest.csv into BundleLedger so real candidate manifests can use cost-derived submit decisions.",
+  "input_manifest": "experiments\\exp264_current_rank321_400_fullarc_bypass_sweep\\selected_manifest.csv",
+  "accepted_count": 8,
+  "candidate_count": 8,
+  "best_total_local_delta": 0.5976596441240898,
+  "submission_decision": {
+    "submitted_best_estimate": 6008.9,
+    "best_total_local_delta": 0.5976596441240898,
+    "candidate_estimate": 6009.497659644124,
+    "should_submit": true
+  },
+  "first_accepted": {
+    "task_id": "129",
+    "source_exp": "exp264_current_rank321_400_fullarc_bypass_sweep",
+    "candidate_path": "ab699c9365d61118099d6010c09e9ab298f7c5ef542b09c2f43e0b11f5911a54",
+    "base_cost": 807.0,
+    "candidate_cost": 647.0,
+    "validation_status": "266_pass_0_fail",
+    "local_delta": 0.0,
+    "risk": "low",
+    "adoption_status": "accepted",
+    "computed_local_delta": 0.2209773737690483
+  },
+  "outputs": {
+    "bundle_csv": "experiments\\exp289_bundle_selected_manifest_ingestion\\bundle_from_exp264_selected_manifest.csv"
+  },
+  "decision": "No submit: exp264/exp265 is already reflected in current best; this only validates real manifest ingestion."
+}

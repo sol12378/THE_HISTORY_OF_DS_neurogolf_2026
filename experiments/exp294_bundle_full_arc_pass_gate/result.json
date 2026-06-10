@@ -1,0 +1,25 @@
+{
+  "exp_id": "exp294_bundle_full_arc_pass_gate",
+  "status": "tooling_calibrated_no_submit",
+  "plan": "Accept both full_arc_pass and *_pass_0_fail validation labels in BundleCandidate.accepted for real candidate manifests.",
+  "accepted_task_ids": [
+    "pass0",
+    "full_arc"
+  ],
+  "best_total_local_delta": 0.3285040669720361,
+  "submission_decision": {
+    "submitted_best_estimate": 6008.9,
+    "accepted_count": 2,
+    "best_by_task_count": 2,
+    "best_total_local_delta": 0.3285040669720361,
+    "candidate_estimate": 6009.228504066971,
+    "should_submit": true
+  },
+  "accuracy_gate": {
+    "full_arc_pass_accepted": true,
+    "pass0_accepted": true,
+    "fail_accepted": false
+  },
+  "expected_delta": 0.3285040669720361,
+  "decision": "No submit: synthetic accuracy-gate probe only."
+}

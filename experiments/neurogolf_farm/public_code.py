@@ -26,8 +26,9 @@ class PublicCodeSource:
 
 
 class PublicCodeRegistry:
-    def __init__(self, sources: list[PublicCodeSource] | None = None) -> None:
+    def __init__(self, sources: list[PublicCodeSource] | None = None, current_best_public_lb: float | None = None) -> None:
         self.sources = sources or []
+        self.current_best_public_lb = current_best_public_lb
 
     @classmethod
     def from_experiment_results(cls, root: str | Path) -> "PublicCodeRegistry":
@@ -81,15 +82,19 @@ class PublicCodeRegistry:
                     notes=notes,
                 )
             )
-        return cls(sources)
+        return cls(sources, current_best_public_lb=_current_best_public_lb(root_path))
 
     def floor_status(self, target_lb: float = 6285.0) -> dict[str, object]:
         ready = [source for source in self.sources if source.submit_floor_ready]
-        max_lb = max((source.kaggle_lb or 0.0 for source in self.sources), default=0.0)
+        max_lb = max(
+            [source.kaggle_lb or 0.0 for source in self.sources] + [self.current_best_public_lb or 0.0],
+            default=0.0,
+        )
         return {
             "target_lb_floor": target_lb,
             "submit_floor_ready": bool(ready),
             "ready_source_count": len(ready),
+            "current_best_public_lb": self.current_best_public_lb,
             "max_observed_kaggle_lb": max_lb if max_lb else None,
             "policy": "public CODE is a floor only after full-arc validation plus Kaggle LB evidence; otherwise teacher/intelligence",
         }
@@ -138,6 +143,18 @@ def _float_or_none(value: object) -> float | None:
         return float(value)
     except Exception:
         return None
+
+
+def _current_best_public_lb(root_path: Path) -> float | None:
+    summary_path = root_path / "EXP_SUMMARY.md"
+    if not summary_path.exists():
+        return None
+    for line in summary_path.read_text(encoding="utf-8", errors="replace").splitlines():
+        if line.startswith("| Best Public LB |"):
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            if len(cells) >= 4:
+                return _float_or_none(cells[3])
+    return None
 
 
 def _gate_for(status: str, kaggle_lb: float | None) -> str:

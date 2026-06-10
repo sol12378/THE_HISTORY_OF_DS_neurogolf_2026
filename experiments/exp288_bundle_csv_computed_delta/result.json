@@ -1,0 +1,59 @@
+{
+  "exp_id": "exp288_bundle_csv_computed_delta",
+  "status": "tooling_calibrated_no_submit",
+  "plan": "Expose computed_local_delta in BundleLedger CSV so review uses the same cost-derived value as submission_decision.",
+  "csv_fieldnames": [
+    "task_id",
+    "source_exp",
+    "candidate_path",
+    "base_cost",
+    "candidate_cost",
+    "validation_status",
+    "local_delta",
+    "computed_local_delta",
+    "risk",
+    "adoption_status"
+  ],
+  "csv_rows": [
+    {
+      "task_id": "smoke_accept_low_cost",
+      "source_exp": "exp129",
+      "candidate_path": "",
+      "base_cost": "1000.0",
+      "candidate_cost": "500.0",
+      "validation_status": "266_pass_0_fail",
+      "local_delta": "0.1",
+      "computed_local_delta": "0.6931471805599453",
+      "risk": "low",
+      "adoption_status": "accepted"
+    },
+    {
+      "task_id": "smoke_reject_failed_validation",
+      "source_exp": "exp129",
+      "candidate_path": "",
+      "base_cost": "1000.0",
+      "candidate_cost": "100.0",
+      "validation_status": "24_pass_1_fail",
+      "local_delta": "0.5",
+      "computed_local_delta": "2.302585092994046",
+      "risk": "low",
+      "adoption_status": "accepted"
+    }
+  ],
+  "bundle_smoke": {
+    "accepted_count": 1,
+    "best_by_task_count": 1,
+    "duplicate_task_count": 0,
+    "total_local_delta": 0.6931471805599453,
+    "best_total_local_delta": 0.6931471805599453,
+    "submission_decision": {
+      "submitted_best_estimate": 6008.9,
+      "best_total_local_delta": 0.6931471805599453,
+      "candidate_estimate": 6009.59314718056,
+      "should_submit": true
+    },
+    "submission_decision_scope": "smoke_dummy_not_kaggle_candidate",
+    "submission_decision_reason": "run_smoke uses synthetic ledger rows only; do not submit from this decision"
+  },
+  "decision": "No submit: smoke dummy ledger only; export visibility for future real candidates."
+}

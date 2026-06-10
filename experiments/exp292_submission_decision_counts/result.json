@@ -1,0 +1,42 @@
+{
+  "exp_id": "exp292_submission_decision_counts",
+  "status": "tooling_calibrated_no_submit",
+  "plan": "Expose accepted_count and best_by_task_count in submission_decision, then verify current-best-lineage exclusion leaves no fresh candidates in recent bypass manifests.",
+  "input_manifests": [
+    "experiments\\exp254_current_top30_fullarc_bypass_sweep\\selected_manifest.csv",
+    "experiments\\exp256_current_rank31_80_fullarc_bypass_sweep\\selected_manifest.csv",
+    "experiments\\exp258_current_rank81_140_fullarc_bypass_sweep\\selected_manifest.csv",
+    "experiments\\exp260_current_rank141_220_fullarc_bypass_sweep\\selected_manifest.csv",
+    "experiments\\exp262_current_rank221_320_fullarc_bypass_sweep\\selected_manifest.partial.csv",
+    "experiments\\exp264_current_rank321_400_fullarc_bypass_sweep\\selected_manifest.csv"
+  ],
+  "excluded_sources": [
+    "exp254_current_top30_fullarc_bypass_sweep",
+    "exp256_current_rank31_80_fullarc_bypass_sweep",
+    "exp258_current_rank81_140_fullarc_bypass_sweep",
+    "exp260_current_rank141_220_fullarc_bypass_sweep",
+    "exp262_current_rank221_320_fullarc_bypass_sweep",
+    "exp264_current_rank321_400_fullarc_bypass_sweep"
+  ],
+  "all_recent_decision": {
+    "submitted_best_estimate": 6008.9,
+    "accepted_count": 104,
+    "best_by_task_count": 104,
+    "best_total_local_delta": 2.6284155220455716,
+    "candidate_estimate": 6011.528415522045,
+    "should_submit": true
+  },
+  "fresh_after_exclusion_decision": {
+    "submitted_best_estimate": 6008.9,
+    "accepted_count": 0,
+    "best_by_task_count": 0,
+    "best_total_local_delta": 0,
+    "candidate_estimate": 6008.9,
+    "should_submit": false
+  },
+  "outputs": {
+    "all_recent_csv": "experiments\\exp292_submission_decision_counts\\all_recent_lineage.csv",
+    "fresh_csv": "experiments\\exp292_submission_decision_counts\\fresh_after_lineage_exclusion.csv"
+  },
+  "decision": "No submit: after excluding current-best-lineage sources, accepted_count is zero and candidate_estimate does not exceed submitted best."
+}

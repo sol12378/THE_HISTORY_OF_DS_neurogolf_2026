@@ -284,4 +284,47 @@
 | exp250_task242_static_template_color_audit | no_hit | fixed 3x3 all-nonzero template; best color selector 64/266 | - | color selector unresolved |
 | exp251_small_output_prune_probe | no_gain | task100/242/253/271 removed_initializers 0; cost unchanged | - | no simple prune |
 | exp252_small_output_fullarc_bypass_sweep | improved | task153 full-arc bypass cost 11212->10947 | - | submit candidate |
-| exp253_task153_bypass_submit_probe | submitted_pending | exp234 + task153 bypass; expected LB 6006.34 | pending | ref pending |
+| exp253_task153_bypass_submit_probe | complete_no_gain | exp234 + task153 bypass; expected LB 6006.34 but observed 6006.32 tie | 6006.32 | ref 53531156; best unchanged |
+| exp254_current_top30_fullarc_bypass_sweep | improved | current exp234 top30 bypass sweep found 13 full-arc edits | +0.09024 local | feed exp255 bundle |
+| exp255_exp254_bypass_bundle_submit_probe | complete_improved | exp254 13 selected full-arc edits bundled over exp234 | 6006.39 | ref 53531405; current best |
+| exp256_current_rank31_80_fullarc_bypass_sweep | improved | rank31-80 bypass sweep found 16 full-arc edits | +0.33147 local | feed exp257 bundle |
+| exp257_exp256_bypass_bundle_submit_probe | complete_improved | exp256 16 selected full-arc edits stacked over exp255 | 6006.72 | ref 53531558; current best |
+| exp258_current_rank81_140_fullarc_bypass_sweep | improved | rank81-140 bypass sweep found 23 full-arc edits | +0.21906 local | feed exp259 bundle |
+| exp259_exp258_bypass_bundle_submit_probe | complete_improved | exp258 23 selected full-arc edits stacked over exp257 | 6006.94 | ref 53531729; current best |
+| exp260_current_rank141_220_fullarc_bypass_sweep | improved | rank141-220 bypass sweep found 27 full-arc edits | +0.84009 local | feed exp261 bundle |
+| exp261_exp260_bypass_bundle_submit_probe | complete_improved | exp260 27 selected full-arc edits stacked over exp259 | 6007.78 | ref 53532418; current best |
+| exp262_current_rank221_320_fullarc_bypass_sweep | partial_improved | rank221-320 checkpoint found 17 full-arc edits before task048 instability | +0.54990 local | feed exp263 replay bundle |
+| exp263_exp262_partial_bypass_bundle_submit_probe | complete_improved | exp262 partial 17 selected full-arc edits replayed over exp261 | 6008.30 | ref 53532720; current best |
+| exp264_current_rank321_400_fullarc_bypass_sweep | improved | rank321-400 bypass sweep found 8 full-arc edits | +0.59766 local | feed exp265 replay bundle |
+| exp265_exp264_bypass_bundle_submit_probe | complete_improved | exp264 8 selected full-arc edits stacked over exp263 | 6008.90 | ref 53532884; current best |
+| exp266_dtype_memory_probe | probe_incomplete | synthetic dtype Cast/Add models executed but official score returned none | no score | retry with existing-artifact or Conv/Where probe |
+| exp267_farm_output_bytes_cost_proxy | tooling_calibrated_no_submit | farm proxy now counts output tensor bytes; uint8/fp32/int64 = 9000/36000/72000 | - | no submit; next fix band thresholds |
+| exp268_farm_cost_band_threshold_proxy | tooling_calibrated_no_submit | farm band now follows cost proxy; uint8/fp32/int64 all high_cost_probe_only | - | no submit; next audit Where/recolor calibration |
+| exp269_farm_where_mac_zero_guardrail | tooling_calibrated_no_submit | Where no longer hard-rejected; uint8 output cost_proxy 9000 | - | no submit; full_grid_composition guard retained |
+| exp270_farm_ir_param_count_proxy | tooling_calibrated_no_submit | IR attrs.param_count now affects cost; recolor_direct 45 vs recolor_cast 141 | - | no submit; next connect candidate ranking |
+| exp271_farm_bundle_cost_tiebreak | tooling_calibrated_no_submit | accepted candidates sorted by delta desc then cost asc; direct beats cast | - | no submit; next dedupe same-task accepted candidates |
+| exp272_farm_best_candidate_by_task | tooling_calibrated_no_submit | best_candidates_by_task keeps one accepted candidate per task; direct retained | - | no submit; next expose best-by-task in smoke |
+| exp273_farm_bundle_smoke_best_by_task_visibility | tooling_calibrated_no_submit | smoke reports accepted/best_by_task/duplicate counts | - | no submit; next connect bundle export to best-by-task |
+| exp274_farm_best_total_delta | tooling_calibrated_no_submit | best_total_local_delta avoids duplicate-task overcount; 1.4 -> 0.9 in probe | - | no submit; next expose best total in smoke |
+| exp275_farm_best_total_delta_visibility | tooling_calibrated_no_submit | smoke reports best_total_local_delta for submit-gate estimate | - | no submit; next update write_notes text |
+| exp276_farm_write_notes_policy_refresh | tooling_calibrated_no_submit | write_notes now documents output bytes, Where MAC=0, and best-total delta | - | no submit; next return to candidate generation |
+| exp277_farm_submission_decision_helper | tooling_calibrated_no_submit | BundleLedger can return should_submit from best_total_local_delta | - | no submit; next expose decision in smoke |
+| exp278_farm_submission_decision_visibility | tooling_calibrated_no_submit | farm smoke reports submission_decision against submitted best 6008.90 | - | no submit; smoke dummy only |
+| exp279_farm_smoke_submission_scope | tooling_calibrated_no_submit | smoke submission_decision now marked smoke_dummy_not_kaggle_candidate | - | no submit; return to real candidate generation |
+| exp280_farm_write_notes_submission_scope | tooling_calibrated_no_submit | write_notes now includes submission decision scope/reason | - | no submit; return to real candidate generation |
+| exp281_farm_write_notes_submission_decision_values | tooling_calibrated_no_submit | write_notes now includes submitted/candidate estimate and should_submit | - | no submit; return to real candidate generation |
+| exp282_farm_ir_band_uses_cost_proxy | tooling_calibrated_no_submit | IR band now uses cost_proxy; params-heavy tiny-output candidates no longer look low-cost | - | no submit; return to real candidate generation |
+| exp283_farm_recolor_primitives | tooling_calibrated_no_submit | IR now distinguishes recolor_direct and recolor_cast primitives | - | no submit; return to real candidate generation |
+| exp284_farm_current_best_public_lb_visibility | tooling_calibrated_no_submit | public-code floor_status now shows current best public LB 6008.90 | - | no submit; return to real candidate generation |
+| exp285_farm_recolor_ir_factories | tooling_calibrated_no_submit | IR has direct/cast recolor factories; cost_proxy 45 vs 141 | - | no submit; use direct-first in supplier |
+| exp286_farm_recolor_smoke_visibility | tooling_calibrated_no_submit | farm smoke now includes recolor direct/cast probes; 45 vs 141 | - | no submit; next connect real supplier |
+| exp287_bundle_computed_local_delta | tooling_calibrated_no_submit | BundleLedger now derives local delta from ln(base/candidate) cost ratio | - | no submit; real candidates can use cost-derived estimate |
+| exp288_bundle_csv_computed_delta | tooling_calibrated_no_submit | BundleLedger CSV now exports computed_local_delta matching submit decision | - | no submit; review CSV is cost-derived |
+| exp289_bundle_selected_manifest_ingestion | tooling_calibrated_no_submit | BundleLedger can ingest selected_manifest.csv; exp264 delta +0.5976596 reproduced | - | no submit; already in current best |
+| exp290_bundle_multi_manifest_ingestion | tooling_calibrated_no_submit | BundleLedger can ingest multiple selected manifests; exp260+exp264 delta +1.4377463 | - | no submit; historical lineage |
+| exp291_bundle_exclude_submitted_sources | tooling_calibrated_no_submit | multi-manifest ingestion can exclude current-best-lineage sources before submit decision | - | no submit; fresh delta 0 after exclusion |
+| exp292_submission_decision_counts | tooling_calibrated_no_submit | submission_decision reports accepted/best-by-task counts; fresh count 0 after lineage exclusion | - | no submit; return to candidate generation |
+| exp293_bundle_fresh_submission_decision | tooling_calibrated_no_submit | one-call fresh-only submit decision excludes current-best-lineage sources | - | no submit; return to candidate generation |
+| exp294_bundle_full_arc_pass_gate | tooling_calibrated_no_submit | BundleCandidate accepts full_arc_pass and *_pass_0_fail labels | - | no submit; return to candidate generation |
+| exp295_exp262_resume_attempt | no_new_delta_no_submit | reran exp262 rank221-320; still stops after task273/task048 runtime errors | 0 fresh | no submit; skip/quarantine task048 bad candidates next |
+| exp296_bundle_exclude_tasks_quarantine | tooling_calibrated_no_submit | fresh submit decisions support task-level quarantine such as task048 | - | no submit; generation-side skip still needed |

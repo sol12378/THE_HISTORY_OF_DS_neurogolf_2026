@@ -1,0 +1,40 @@
+{
+  "exp_id": "exp291_bundle_exclude_submitted_sources",
+  "status": "tooling_calibrated_no_submit",
+  "plan": "Exclude current-best-lineage source_exp values before running submission_decision so historical manifests cannot trigger resubmission.",
+  "input_manifests": [
+    "experiments\\exp260_current_rank141_220_fullarc_bypass_sweep\\selected_manifest.csv",
+    "experiments\\exp264_current_rank321_400_fullarc_bypass_sweep\\selected_manifest.csv"
+  ],
+  "excluded_sources": [
+    "exp260_current_rank141_220_fullarc_bypass_sweep",
+    "exp264_current_rank321_400_fullarc_bypass_sweep"
+  ],
+  "all_sources": {
+    "candidate_count": 35,
+    "accepted_count": 35,
+    "best_total_local_delta": 1.4377463495672809,
+    "submission_decision": {
+      "submitted_best_estimate": 6008.9,
+      "best_total_local_delta": 1.4377463495672809,
+      "candidate_estimate": 6010.337746349567,
+      "should_submit": true
+    }
+  },
+  "after_exclusion": {
+    "candidate_count": 0,
+    "accepted_count": 0,
+    "best_total_local_delta": 0,
+    "submission_decision": {
+      "submitted_best_estimate": 6008.9,
+      "best_total_local_delta": 0,
+      "candidate_estimate": 6008.9,
+      "should_submit": false
+    }
+  },
+  "outputs": {
+    "all_sources_csv": "experiments\\exp291_bundle_exclude_submitted_sources\\all_history_sources.csv",
+    "excluded_sources_csv": "experiments\\exp291_bundle_exclude_submitted_sources\\excluded_history_sources.csv"
+  },
+  "decision": "No submit: after excluding submitted lineage sources, there is no fresh local estimate improvement."
+}

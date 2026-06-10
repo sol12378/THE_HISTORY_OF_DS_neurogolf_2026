@@ -1,0 +1,3 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+48,synthetic,task048_bad_runtime_candidate,1000,500,0,0,1,full_arc_pass,improved,synthetic quarantine probe,task048
+49,synthetic,task049_safe_candidate,1000,800,0,0,1,full_arc_pass,improved,synthetic control,task049

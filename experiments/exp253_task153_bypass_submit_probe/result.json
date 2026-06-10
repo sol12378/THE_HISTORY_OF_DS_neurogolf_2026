@@ -40,8 +40,14 @@
     "sha256": "003d03f3aa73f462863f34f36c55dde1db4cbfe69db3d7b7086bc84340fe4621"
   },
   "expected_public_lb_if_calibrated": 6006.343919187179,
-  "decision": "Submit if improved_and_fullarc and zip_sanity names_ok.",
-  "submission_decision": "submit_ready",
+  "decision": "Submitted to Kaggle as ref 53531156; public LB completed at 6006.32, tied with exp234 and below the expected 6006.3439 after rounding/no public gain.",
+  "submission_decision": "submitted_complete_no_public_gain",
+  "kaggle_submission": {
+    "ref": 53531156,
+    "status": "COMPLETE",
+    "public_lb": 6006.32,
+    "best_updated": false
+  },
   "leakage_risk": "low-medium: semantics-preserving full-arc-gated graph surgery on current best bundle.",
   "overfitting_risk": "medium-low: full available validation; private robustness still needs LB calibration."
 }

@@ -1,0 +1,106 @@
+{
+  "exp_id": "exp267_farm_output_bytes_cost_proxy",
+  "status": "pipeline_core_ready",
+  "floor_status": {
+    "target_lb_floor": 6285.0,
+    "submit_floor_ready": false,
+    "ready_source_count": 0,
+    "max_observed_kaggle_lb": 1400.37,
+    "policy": "public CODE is a floor only after full-arc validation plus Kaggle LB evidence; otherwise teacher/intelligence"
+  },
+  "guardrail_rows": [
+    {
+      "subject": "smoke_channel_gather",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 0,
+      "param_bytes": 0,
+      "memory_bytes_proxy": 36000,
+      "cost_proxy": 36000
+    },
+    {
+      "subject": "smoke_slice_pad",
+      "predicted_cost_band": "250-600_plausible",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "node_count": 2,
+      "full_grid_intermediate_count": 0,
+      "param_count": 0,
+      "param_bytes": 0,
+      "memory_bytes_proxy": 36000,
+      "cost_proxy": 36000
+    },
+    {
+      "subject": "smoke_full_grid_where",
+      "predicted_cost_band": "reject",
+      "hard_reject": true,
+      "reasons": [
+        "mask: full_grid_composition is a known high-cost lane",
+        "mask: Where over full-grid output is pre-rejected",
+        "overlay: full_grid_composition is a known high-cost lane",
+        "overlay: Where over full-grid output is pre-rejected"
+      ],
+      "risk_tags": [],
+      "node_count": 2,
+      "full_grid_intermediate_count": 0,
+      "param_count": 0,
+      "param_bytes": 0,
+      "memory_bytes_proxy": 72000,
+      "cost_proxy": 72000
+    },
+    {
+      "subject": "smoke_scatter_writeback",
+      "predicted_cost_band": "reject",
+      "hard_reject": true,
+      "reasons": [
+        "scatter: sparse_writeback is a known high-cost lane",
+        "scatter: ScatterND over full-grid output is pre-rejected"
+      ],
+      "risk_tags": [],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 0,
+      "param_bytes": 0,
+      "memory_bytes_proxy": 36000,
+      "cost_proxy": 36000
+    }
+  ],
+  "outputs": {
+    "public_code_registry": "experiments\\exp267_farm_output_bytes_cost_proxy\\public_code_registry.csv",
+    "bundle_ledger_smoke": "experiments\\exp267_farm_output_bytes_cost_proxy\\bundle_ledger_smoke.csv"
+  },
+  "bundle_smoke": {
+    "accepted_count": 1,
+    "total_local_delta": 0.1
+  },
+  "dtype_output_bytes_probe": [
+    {
+      "dtype": "uint8",
+      "output_elements": 9000,
+      "memory_bytes_proxy": 9000,
+      "cost_proxy": 9000
+    },
+    {
+      "dtype": "float32",
+      "output_elements": 9000,
+      "memory_bytes_proxy": 36000,
+      "cost_proxy": 36000
+    },
+    {
+      "dtype": "int64",
+      "output_elements": 9000,
+      "memory_bytes_proxy": 72000,
+      "cost_proxy": 72000
+    }
+  ],
+  "accuracy_gate": "not_applicable_tooling_smoke_only",
+  "submission_decision": "no_submit",
+  "submission_reason": "farm tooling calibration only; no candidate bundle/local estimate improvement over exp265 public LB 6008.90",
+  "known_followup_gap": "predicted_cost_band still marks low-op full-grid outputs as 250-600_plausible even when cost_proxy is 36000+; fix band thresholds in a separate one-action loop",
+  "decision": "Cost proxy now follows params + output tensor bytes. Public CODE is imported as teacher/intelligence until it has full validation and LB evidence."
+}

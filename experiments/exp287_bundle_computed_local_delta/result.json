@@ -1,0 +1,19 @@
+{
+  "exp_id": "exp287_bundle_computed_local_delta",
+  "status": "tooling_calibrated_no_submit",
+  "plan": "Use cost-derived ln(base_cost/candidate_cost) for accepted bundle local estimate instead of hand-entered local_delta.",
+  "expected_delta": 0.6931471805599453,
+  "computed_delta": 0.6931471805599453,
+  "best_total_local_delta": 0.6931471805599453,
+  "submission_decision": {
+    "submitted_best_estimate": 6008.9,
+    "best_total_local_delta": 0.6931471805599453,
+    "candidate_estimate": 6009.59314718056,
+    "should_submit": true
+  },
+  "accuracy_gate": {
+    "accepted_count": 1,
+    "failed_validation_accepted": false
+  },
+  "decision": "No submit: synthetic ledger probe only, but future real candidates now derive local estimate from costs."
+}

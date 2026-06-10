@@ -1,0 +1,63 @@
+{
+  "exp_id": "exp290_bundle_multi_manifest_ingestion",
+  "status": "tooling_calibrated_no_submit",
+  "plan": "Load multiple selected_manifest.csv files into one BundleLedger and rely on best-by-task de-dup for submit estimates.",
+  "input_manifests": [
+    "experiments\\exp260_current_rank141_220_fullarc_bypass_sweep\\selected_manifest.csv",
+    "experiments\\exp264_current_rank321_400_fullarc_bypass_sweep\\selected_manifest.csv"
+  ],
+  "candidate_count": 35,
+  "accepted_count": 35,
+  "best_by_task_count": 35,
+  "duplicate_task_count": 0,
+  "total_local_delta": 1.4377463495672809,
+  "best_total_local_delta": 1.4377463495672809,
+  "submission_decision": {
+    "submitted_best_estimate": 6008.9,
+    "best_total_local_delta": 1.4377463495672809,
+    "candidate_estimate": 6010.337746349567,
+    "should_submit": true
+  },
+  "top3": [
+    {
+      "task_id": "129",
+      "source_exp": "exp264_current_rank321_400_fullarc_bypass_sweep",
+      "candidate_path": "ab699c9365d61118099d6010c09e9ab298f7c5ef542b09c2f43e0b11f5911a54",
+      "base_cost": 807.0,
+      "candidate_cost": 647.0,
+      "validation_status": "266_pass_0_fail",
+      "local_delta": 0.0,
+      "risk": "low",
+      "adoption_status": "accepted",
+      "computed_local_delta": 0.2209773737690483
+    },
+    {
+      "task_id": "289",
+      "source_exp": "exp260_current_rank141_220_fullarc_bypass_sweep",
+      "candidate_path": "caba0d5ad9f2bf687898692abe86e3b80cab91814862554a54dc4958e58ce5b8",
+      "base_cost": 24972.0,
+      "candidate_cost": 20472.0,
+      "validation_status": "266_pass_0_fail",
+      "local_delta": 0.0,
+      "risk": "low",
+      "adoption_status": "accepted",
+      "computed_local_delta": 0.1986970983420099
+    },
+    {
+      "task_id": "339",
+      "source_exp": "exp264_current_rank321_400_fullarc_bypass_sweep",
+      "candidate_path": "dfe63e3ad49c105d9723d33b00b9c13fac7611299df1dd8971a55bf1698079c2",
+      "base_cost": 884.0,
+      "candidate_cost": 742.0,
+      "validation_status": "266_pass_0_fail",
+      "local_delta": 0.0,
+      "risk": "low",
+      "adoption_status": "accepted",
+      "computed_local_delta": 0.1751078194702629
+    }
+  ],
+  "outputs": {
+    "bundle_csv": "experiments\\exp290_bundle_multi_manifest_ingestion\\bundle_from_exp260_exp264_selected_manifests.csv"
+  },
+  "decision": "No submit: these historical manifests are already represented in submitted best lineage; this validates multi-manifest ingestion only."
+}

@@ -1,0 +1,32 @@
+{
+  "exp_id": "exp285_farm_recolor_ir_factories",
+  "status": "tooling_calibrated_no_submit",
+  "purpose": "standardize recolor_direct/recolor_cast IR factory programs for supplier use",
+  "direct": {
+    "subject": "probe_direct",
+    "predicted_cost_band": "250-600_plausible",
+    "hard_reject": false,
+    "reasons": [],
+    "risk_tags": [],
+    "node_count": 1,
+    "full_grid_intermediate_count": 0,
+    "param_count": 44,
+    "param_bytes": 44,
+    "memory_bytes_proxy": 1,
+    "cost_proxy": 45
+  },
+  "cast": {
+    "subject": "probe_cast",
+    "predicted_cost_band": "250-600_plausible",
+    "hard_reject": false,
+    "reasons": [],
+    "risk_tags": [],
+    "node_count": 2,
+    "full_grid_intermediate_count": 0,
+    "param_count": 140,
+    "param_bytes": 140,
+    "memory_bytes_proxy": 1,
+    "cost_proxy": 141
+  },
+  "decision": "Prefer recolor_direct factory for supplier candidates; recolor_cast remains an explicit fallback and is ranked higher cost. No Kaggle submit because this is IR tooling only."
+}

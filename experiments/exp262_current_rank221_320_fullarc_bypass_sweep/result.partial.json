@@ -1,0 +1,26 @@
+{
+  "exp_id": "exp262_current_rank221_320_fullarc_bypass_sweep",
+  "stage": "after_task273",
+  "generated_candidate_count": 1831,
+  "fullarc_selected_count": 17,
+  "selected_tasks": [
+    30,
+    345,
+    124,
+    78,
+    153,
+    188,
+    329,
+    212,
+    50,
+    3,
+    254,
+    369,
+    180,
+    45,
+    248,
+    357,
+    273
+  ],
+  "local_delta": 0.5498990065818337
+}

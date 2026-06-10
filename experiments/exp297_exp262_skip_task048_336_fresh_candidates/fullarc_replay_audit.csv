@@ -1,0 +1,4 @@
+task_id,template_name,full_arc_ok,passed,failed,reason,sha256
+60,greedy1_Mul_node12_to_input0,True,265,0,ok,f4af3d9962eb193b0aa0b3e2730517a49bc33f887e52ce1261fd22904972467d
+226,greedy1_Mul_node22_to_input0,True,133,0,ok,e7586fe334567978a98a566c2b952f7a2ad64eb9457cebe3f0ecd0ec25f89d80
+123,greedy1_Max_node6_to_input0,True,265,0,ok,2487dbd44c5dd31f7f35b54dfdcc140b5b2e671a2a63a1017e27178f1afc4cb9

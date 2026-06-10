@@ -1,0 +1,25 @@
+{
+  "exp_id": "exp297_exp262_skip_task048_resume",
+  "stage": "after_task292",
+  "generated_candidate_count": 1765,
+  "fullarc_selected_count": 16,
+  "selected_tasks": [
+    30,
+    345,
+    124,
+    78,
+    153,
+    188,
+    329,
+    212,
+    50,
+    3,
+    254,
+    369,
+    180,
+    45,
+    248,
+    357
+  ],
+  "local_delta": 0.5329120175149473
+}

@@ -1,0 +1,45 @@
+{
+  "exp_id": "exp296_bundle_exclude_tasks_quarantine",
+  "status": "tooling_calibrated_no_submit",
+  "plan": "Add task-level quarantine to fresh manifest submission decisions so known runtime-stopper tasks such as task048 can be excluded before submit review.",
+  "synthetic_manifest": "experiments\\exp296_bundle_exclude_tasks_quarantine\\selected_manifest.synthetic.csv",
+  "no_quarantine": {
+    "submitted_best_estimate": 6008.9,
+    "accepted_count": 2,
+    "best_by_task_count": 2,
+    "best_total_local_delta": 0.9162907318741551,
+    "candidate_estimate": 6009.816290731874,
+    "should_submit": true,
+    "excluded_sources": [],
+    "excluded_tasks": [],
+    "input_manifest_count": 1
+  },
+  "task048_quarantine": {
+    "submitted_best_estimate": 6008.9,
+    "accepted_count": 1,
+    "best_by_task_count": 1,
+    "best_total_local_delta": 0.22314355131420976,
+    "candidate_estimate": 6009.123143551314,
+    "should_submit": true,
+    "excluded_sources": [],
+    "excluded_tasks": [
+      "48"
+    ],
+    "input_manifest_count": 1
+  },
+  "all_tasks_quarantine": {
+    "submitted_best_estimate": 6008.9,
+    "accepted_count": 0,
+    "best_by_task_count": 0,
+    "best_total_local_delta": 0,
+    "candidate_estimate": 6008.9,
+    "should_submit": false,
+    "excluded_sources": [],
+    "excluded_tasks": [
+      "48",
+      "49"
+    ],
+    "input_manifest_count": 1
+  },
+  "decision": "No submit: synthetic quarantine probe only; task048 exclusion works and all-task exclusion yields no fresh candidates."
+}
