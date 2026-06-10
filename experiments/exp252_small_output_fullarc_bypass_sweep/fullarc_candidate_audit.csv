@@ -1,0 +1,3 @@
+task_id,template_name,sample20_cost,sample20_points,full_arc_ok,passed,failed,reason,sha256
+153,greedy1_Unsqueeze_node5_to_input0,11208,15.675616911983157,True,265,0,ok,45aff5451977d61716227baaa72550771d2cd2f3a8fc433ce25a56402032b007
+153,greedy1_Reshape_node7_to_input0,10947,15.699179274895442,True,265,0,ok,53c7fc47a0ee159835b0a7665d93be66fac049a1636353970aac412039790c2e

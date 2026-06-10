@@ -1,0 +1,2 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+153,crop_or_resize,greedy1_Reshape_node7_to_input0,11212,10947,15.675260087715321,15.699179274895442,5672,265_pass_0_fail,improved,ok,53c7fc47a0ee159835b0a7665d93be66fac049a1636353970aac412039790c2e

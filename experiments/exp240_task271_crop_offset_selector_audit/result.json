@@ -1,0 +1,240 @@
+{
+  "exp_id": "exp240_task271_crop_offset_selector_audit",
+  "date": "2026-06-10",
+  "task_id": 271,
+  "baseline_cost": 28991,
+  "example_count": 267,
+  "exact_offset_count_hist": {
+    "1": 267
+  },
+  "top_exact_offsets": [
+    [
+      "6,6",
+      20
+    ],
+    [
+      "0,1",
+      17
+    ],
+    [
+      "0,6",
+      16
+    ],
+    [
+      "0,0",
+      16
+    ],
+    [
+      "1,6",
+      15
+    ],
+    [
+      "6,0",
+      14
+    ],
+    [
+      "0,5",
+      13
+    ],
+    [
+      "6,1",
+      12
+    ],
+    [
+      "1,0",
+      11
+    ],
+    [
+      "0,2",
+      11
+    ],
+    [
+      "5,0",
+      10
+    ],
+    [
+      "4,6",
+      9
+    ],
+    [
+      "4,0",
+      9
+    ],
+    [
+      "6,5",
+      8
+    ],
+    [
+      "1,1",
+      8
+    ],
+    [
+      "2,6",
+      8
+    ],
+    [
+      "5,1",
+      7
+    ],
+    [
+      "4,1",
+      6
+    ],
+    [
+      "5,5",
+      6
+    ],
+    [
+      "6,2",
+      6
+    ],
+    [
+      "5,6",
+      5
+    ],
+    [
+      "1,2",
+      5
+    ],
+    [
+      "5,2",
+      4
+    ],
+    [
+      "1,5",
+      4
+    ],
+    [
+      "5,4",
+      4
+    ],
+    [
+      "6,4",
+      4
+    ],
+    [
+      "2,5",
+      4
+    ],
+    [
+      "2,0",
+      3
+    ],
+    [
+      "0,4",
+      3
+    ],
+    [
+      "4,2",
+      2
+    ]
+  ],
+  "best_selectors": [
+    {
+      "selector": "comp_area_desc_clamped",
+      "hit": 176,
+      "miss": 91,
+      "within1": 176
+    },
+    {
+      "selector": "comp_area_desc_tl",
+      "hit": 176,
+      "miss": 91,
+      "within1": 176
+    },
+    {
+      "selector": "comp_size_desc_clamped",
+      "hit": 106,
+      "miss": 161,
+      "within1": 106
+    },
+    {
+      "selector": "comp_size_desc_tl",
+      "hit": 106,
+      "miss": 161,
+      "within1": 106
+    },
+    {
+      "selector": "comp_color_asc_clamped",
+      "hit": 86,
+      "miss": 181,
+      "within1": 92
+    },
+    {
+      "selector": "comp_color_asc_tl",
+      "hit": 85,
+      "miss": 182,
+      "within1": 92
+    },
+    {
+      "selector": "comp_r0_asc_clamped",
+      "hit": 68,
+      "miss": 199,
+      "within1": 68
+    },
+    {
+      "selector": "comp_r0_asc_tl",
+      "hit": 68,
+      "miss": 199,
+      "within1": 68
+    },
+    {
+      "selector": "comp_c0_asc_clamped",
+      "hit": 63,
+      "miss": 204,
+      "within1": 63
+    },
+    {
+      "selector": "comp_c0_asc_tl",
+      "hit": 63,
+      "miss": 204,
+      "within1": 63
+    },
+    {
+      "selector": "nz_bbox_tl",
+      "hit": 31,
+      "miss": 236,
+      "within1": 60
+    },
+    {
+      "selector": "least_color_bbox_tl",
+      "hit": 31,
+      "miss": 236,
+      "within1": 57
+    },
+    {
+      "selector": "mode_color_bbox_tl",
+      "hit": 28,
+      "miss": 239,
+      "within1": 58
+    },
+    {
+      "selector": "color8_bbox_tl",
+      "hit": 16,
+      "miss": 251,
+      "within1": 54
+    },
+    {
+      "selector": "least_color_centered",
+      "hit": 1,
+      "miss": 266,
+      "within1": 6
+    },
+    {
+      "selector": "color8_centered",
+      "hit": 0,
+      "miss": 267,
+      "within1": 0
+    },
+    {
+      "selector": "mode_color_centered",
+      "hit": 0,
+      "miss": 267,
+      "within1": 0
+    }
+  ],
+  "decision": "If a selector is full or close with simple residual rule, build Python rule and cost probe. Otherwise task271 crop selector remains unresolved.",
+  "submission_decision": "no_submit: diagnostic only",
+  "leakage_risk": "low: input/output structural audit.",
+  "overfitting_risk": "medium: offset selector may overfit if expressed as table."
+}

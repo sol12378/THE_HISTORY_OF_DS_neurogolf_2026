@@ -269,3 +269,19 @@
 | exp235_task174_component_output_audit | partial | largest/max-color crop 138/266 | - | needs internal sub-crop rule |
 | exp236_task174_internal_subcrop_audit | no_hit | best internal subcrop 138/266 | - | task174 needs richer internal selection |
 | exp237_task253_static_template_color_audit | audit_complete | fixed binary template; best color selector 76/265 | - | color selector unresolved |
+| exp238_task130_component_output_audit | no_hit | component shape match 265/265 but content exactish only 8/265 | - | task130 needs separate content rule; no cost probe |
+| exp239_task271_component_output_audit | audit_complete | exact input 3x3 crop exists 267/267; component crop 218/267 | - | offset selector needed |
+| exp240_task271_crop_offset_selector_audit | audit_complete | unique exact crop offset 267/267; best simple offset selector 176/267 | - | inspect 4 full blocks |
+| exp241_task271_binary_template_window_audit | audit_complete | binary template is all-nonzero; exactly 4 candidates/example | - | choose among 4 blocks |
+| exp242_task271_block_color_selector_audit | rule_found | color8_count_min and sum_colors_min select target 267/267 | - | cost probe next |
+| exp243_task271_min_color8_block_cost_probe | no_cost_gain | validation 267_pass_0_fail; cost 70847 vs 28991 | - | solved asset; current lowering too expensive |
+| exp244_task391_static_template_audit | audit_complete | 3x1 all-same template fixed; best color selector 49/267 | - | color selector unresolved |
+| exp245_task100_static_template_audit | near_hit | 2x2 all-same template; mode_nz color 248/266 | - | inspect failures |
+| exp246_task100_mode_failure_audit | rule_found | bbox_area_max color selector 266/266 | - | cost probe next |
+| exp247_task100_bbox_area_color_cost_probe | no_cost_gain | validation 266_pass_0_fail; cost 74548 vs 6536 | - | solved asset; bbox lowering too expensive |
+| exp248_task291_onecell_selector_audit | no_hit | best count_rank2 76/265 | - | weak selector; hold |
+| exp249_task274_template_selector_audit | no_hit | output color fixed 8; best template selector 70/269 | - | template selector unresolved |
+| exp250_task242_static_template_color_audit | no_hit | fixed 3x3 all-nonzero template; best color selector 64/266 | - | color selector unresolved |
+| exp251_small_output_prune_probe | no_gain | task100/242/253/271 removed_initializers 0; cost unchanged | - | no simple prune |
+| exp252_small_output_fullarc_bypass_sweep | improved | task153 full-arc bypass cost 11212->10947 | - | submit candidate |
+| exp253_task153_bypass_submit_probe | submitted_pending | exp234 + task153 bypass; expected LB 6006.34 | pending | ref pending |

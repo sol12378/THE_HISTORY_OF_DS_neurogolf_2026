@@ -1,0 +1,13 @@
+selector,hit,eligible,miss
+binary_closest_tl,73,267,194
+binary_first_row_major,68,267,199
+binary_first_col_major,63,267,204
+binary_last_row_major,63,267,204
+binary_last_col_major,60,267,207
+binary_closest_br,58,267,209
+signature_closest_br,1,1,266
+signature_closest_tl,1,1,266
+signature_first_col_major,1,1,266
+signature_first_row_major,1,1,266
+signature_last_col_major,1,1,266
+signature_last_row_major,1,1,266

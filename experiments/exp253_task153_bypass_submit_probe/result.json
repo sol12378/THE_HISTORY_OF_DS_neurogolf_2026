@@ -1,0 +1,47 @@
+{
+  "exp_id": "exp253_task153_bypass_submit_probe",
+  "date": "2026-06-10",
+  "base_bundle": "experiments\\exp234_task300_max_color_submit_probe\\submission.zip",
+  "task_id": 153,
+  "target_template": "greedy1_Reshape_node7_to_input0",
+  "evaluation": {
+    "task_id": 153,
+    "route": "crop_or_resize",
+    "template_name": "greedy1_Reshape_node7_to_input0",
+    "baseline_cost": 11212,
+    "candidate_cost": 10947,
+    "baseline_points": 15.675260087715321,
+    "candidate_points": 15.699179274895442,
+    "file_bytes": 5672,
+    "validation_status": "265_pass_0_fail",
+    "status": "improved",
+    "reason": "ok",
+    "sha256": "53c7fc47a0ee159835b0a7665d93be66fac049a1636353970aac412039790c2e",
+    "full_arc_ok": true,
+    "full_arc_passed": 265,
+    "full_arc_failed": 0,
+    "full_arc_reason": "ok"
+  },
+  "improved_and_fullarc": true,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 732752,
+    "sha256": "003d03f3aa73f462863f34f36c55dde1db4cbfe69db3d7b7086bc84340fe4621"
+  },
+  "expected_public_lb_if_calibrated": 6006.343919187179,
+  "decision": "Submit if improved_and_fullarc and zip_sanity names_ok.",
+  "submission_decision": "submit_ready",
+  "leakage_risk": "low-medium: semantics-preserving full-arc-gated graph surgery on current best bundle.",
+  "overfitting_risk": "medium-low: full available validation; private robustness still needs LB calibration."
+}

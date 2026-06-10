@@ -1,0 +1,252 @@
+{
+  "exp_id": "exp250_task242_static_template_color_audit",
+  "date": "2026-06-10",
+  "task_id": 242,
+  "baseline_cost": 20119,
+  "example_count": 266,
+  "template_hist": [
+    [
+      "(1, 1, 1, 1, 1, 1, 1, 1, 1)",
+      266
+    ]
+  ],
+  "output_color_hist": {
+    "1": 32,
+    "2": 29,
+    "3": 30,
+    "4": 34,
+    "5": 30,
+    "6": 26,
+    "7": 23,
+    "8": 32,
+    "9": 30
+  },
+  "target_count_rank_hist": {
+    "0": 64,
+    "1": 52,
+    "2": 48,
+    "3": 37,
+    "4": 28,
+    "5": 18,
+    "6": 9,
+    "7": 8,
+    "8": 2
+  },
+  "target_area_rank_hist": {
+    "0": 37,
+    "1": 28,
+    "2": 27,
+    "3": 41,
+    "4": 31,
+    "5": 34,
+    "6": 29,
+    "7": 26,
+    "8": 13
+  },
+  "best_rules": [
+    {
+      "rule": "count_max_low",
+      "pass_count": 64,
+      "fail_count": 202
+    },
+    {
+      "rule": "count_rank0",
+      "pass_count": 64,
+      "fail_count": 202
+    },
+    {
+      "rule": "count_max_high",
+      "pass_count": 62,
+      "fail_count": 204
+    },
+    {
+      "rule": "largest_component_max_low",
+      "pass_count": 57,
+      "fail_count": 209
+    },
+    {
+      "rule": "largest_component_max_high",
+      "pass_count": 53,
+      "fail_count": 213
+    },
+    {
+      "rule": "count_rank1",
+      "pass_count": 52,
+      "fail_count": 214
+    },
+    {
+      "rule": "count_rank2",
+      "pass_count": 48,
+      "fail_count": 218
+    },
+    {
+      "rule": "area_rank3",
+      "pass_count": 41,
+      "fail_count": 225
+    },
+    {
+      "rule": "area_rank0",
+      "pass_count": 37,
+      "fail_count": 229
+    },
+    {
+      "rule": "bbox_area_max_low",
+      "pass_count": 37,
+      "fail_count": 229
+    },
+    {
+      "rule": "bbox_h_max_low",
+      "pass_count": 37,
+      "fail_count": 229
+    },
+    {
+      "rule": "bbox_w_max_low",
+      "pass_count": 37,
+      "fail_count": 229
+    },
+    {
+      "rule": "c0_min_low",
+      "pass_count": 37,
+      "fail_count": 229
+    },
+    {
+      "rule": "c1_max_low",
+      "pass_count": 37,
+      "fail_count": 229
+    },
+    {
+      "rule": "count_rank3",
+      "pass_count": 37,
+      "fail_count": 229
+    },
+    {
+      "rule": "r0_min_low",
+      "pass_count": 37,
+      "fail_count": 229
+    },
+    {
+      "rule": "r1_max_low",
+      "pass_count": 37,
+      "fail_count": 229
+    },
+    {
+      "rule": "bbox_area_max_high",
+      "pass_count": 34,
+      "fail_count": 232
+    },
+    {
+      "rule": "bbox_h_max_high",
+      "pass_count": 34,
+      "fail_count": 232
+    },
+    {
+      "rule": "bbox_w_max_high",
+      "pass_count": 34,
+      "fail_count": 232
+    },
+    {
+      "rule": "c0_min_high",
+      "pass_count": 34,
+      "fail_count": 232
+    },
+    {
+      "rule": "c1_max_high",
+      "pass_count": 34,
+      "fail_count": 232
+    },
+    {
+      "rule": "r0_min_high",
+      "pass_count": 34,
+      "fail_count": 232
+    },
+    {
+      "rule": "r1_max_high",
+      "pass_count": 34,
+      "fail_count": 232
+    },
+    {
+      "rule": "area_rank4",
+      "pass_count": 31,
+      "fail_count": 235
+    },
+    {
+      "rule": "area_rank1",
+      "pass_count": 28,
+      "fail_count": 238
+    },
+    {
+      "rule": "count_rank4",
+      "pass_count": 28,
+      "fail_count": 238
+    },
+    {
+      "rule": "area_rank2",
+      "pass_count": 27,
+      "fail_count": 239
+    },
+    {
+      "rule": "bbox_area_min_low",
+      "pass_count": 23,
+      "fail_count": 243
+    },
+    {
+      "rule": "bbox_h_min_low",
+      "pass_count": 23,
+      "fail_count": 243
+    },
+    {
+      "rule": "bbox_w_min_low",
+      "pass_count": 23,
+      "fail_count": 243
+    },
+    {
+      "rule": "c0_max_low",
+      "pass_count": 23,
+      "fail_count": 243
+    },
+    {
+      "rule": "c1_min_low",
+      "pass_count": 23,
+      "fail_count": 243
+    },
+    {
+      "rule": "r0_max_low",
+      "pass_count": 23,
+      "fail_count": 243
+    },
+    {
+      "rule": "r1_min_low",
+      "pass_count": 23,
+      "fail_count": 243
+    },
+    {
+      "rule": "bbox_area_min_high",
+      "pass_count": 16,
+      "fail_count": 250
+    },
+    {
+      "rule": "bbox_h_min_high",
+      "pass_count": 16,
+      "fail_count": 250
+    },
+    {
+      "rule": "bbox_w_min_high",
+      "pass_count": 16,
+      "fail_count": 250
+    },
+    {
+      "rule": "c0_max_high",
+      "pass_count": 16,
+      "fail_count": 250
+    },
+    {
+      "rule": "c1_min_high",
+      "pass_count": 16,
+      "fail_count": 250
+    }
+  ],
+  "decision": "If a simple color selector is full, build static 3x3 ONNX probe. Otherwise hold task242.",
+  "submission_decision": "no_submit: audit only",
+  "leakage_risk": "low.",
+  "overfitting_risk": "medium."
+}

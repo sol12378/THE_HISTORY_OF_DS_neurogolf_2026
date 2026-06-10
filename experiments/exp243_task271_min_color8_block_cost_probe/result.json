@@ -1,0 +1,24 @@
+{
+  "exp_id": "exp243_task271_min_color8_block_cost_probe",
+  "date": "2026-06-10",
+  "task_id": 271,
+  "candidate": {
+    "task_id": 271,
+    "route": "crop_or_resize",
+    "template_name": "min_color8_full_block_crop3x3",
+    "baseline_cost": 28991,
+    "candidate_cost": 70847,
+    "baseline_points": 14.725259284025897,
+    "candidate_points": 13.831722098755785,
+    "file_bytes": 2917,
+    "validation_status": "267_pass_0_fail",
+    "status": "no_cost_gain",
+    "reason": "candidate cost is not lower than baseline",
+    "sha256": "9474e4fe43886d77662a5ad08e88a7643dfd90e89b23c971436f6772bb0ef57f"
+  },
+  "improved": false,
+  "decision": "improvedならsingle-task delta提出候補。no_cost_gainならtask271 ruleはsolved assetとして保持し、別候補へpivot。",
+  "submission_decision": "no_submit: cost probe only",
+  "leakage_risk": "low: input-only structural rule.",
+  "overfitting_risk": "medium-low: exp242で267/267だがhiddenのtie-break edgeは提出較正が必要。"
+}

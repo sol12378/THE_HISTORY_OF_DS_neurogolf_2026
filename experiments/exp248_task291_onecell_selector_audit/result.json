@@ -1,0 +1,233 @@
+{
+  "exp_id": "exp248_task291_onecell_selector_audit",
+  "date": "2026-06-10",
+  "task_id": 291,
+  "baseline_cost": 4327,
+  "example_count": 265,
+  "output_color_hist": {
+    "1": 29,
+    "2": 33,
+    "3": 31,
+    "4": 28,
+    "5": 26,
+    "6": 24,
+    "7": 31,
+    "8": 26,
+    "9": 37
+  },
+  "target_count_rank_hist": {
+    "0": 37,
+    "1": 61,
+    "2": 76,
+    "3": 48,
+    "4": 27,
+    "5": 14,
+    "6": 2
+  },
+  "best_rules": [
+    {
+      "rule": "count_rank2",
+      "pass_count": 76,
+      "fail_count": 189
+    },
+    {
+      "rule": "r1_max_high",
+      "pass_count": 63,
+      "fail_count": 202
+    },
+    {
+      "rule": "edge_count_min_low",
+      "pass_count": 62,
+      "fail_count": 203
+    },
+    {
+      "rule": "count_rank1",
+      "pass_count": 61,
+      "fail_count": 204
+    },
+    {
+      "rule": "r0_max_low",
+      "pass_count": 58,
+      "fail_count": 207
+    },
+    {
+      "rule": "bbox_area_max_low",
+      "pass_count": 57,
+      "fail_count": 208
+    },
+    {
+      "rule": "bbox_area_max_high",
+      "pass_count": 56,
+      "fail_count": 209
+    },
+    {
+      "rule": "edge_count_min_high",
+      "pass_count": 56,
+      "fail_count": 209
+    },
+    {
+      "rule": "r1_max_low",
+      "pass_count": 56,
+      "fail_count": 209
+    },
+    {
+      "rule": "c1_max_low",
+      "pass_count": 54,
+      "fail_count": 211
+    },
+    {
+      "rule": "bbox_h_max_low",
+      "pass_count": 52,
+      "fail_count": 213
+    },
+    {
+      "rule": "bbox_w_max_high",
+      "pass_count": 52,
+      "fail_count": 213
+    },
+    {
+      "rule": "edge_count_max_low",
+      "pass_count": 52,
+      "fail_count": 213
+    },
+    {
+      "rule": "c0_min_high",
+      "pass_count": 51,
+      "fail_count": 214
+    },
+    {
+      "rule": "r0_max_high",
+      "pass_count": 51,
+      "fail_count": 214
+    },
+    {
+      "rule": "bbox_h_max_high",
+      "pass_count": 50,
+      "fail_count": 215
+    },
+    {
+      "rule": "bbox_w_max_low",
+      "pass_count": 50,
+      "fail_count": 215
+    },
+    {
+      "rule": "c1_max_high",
+      "pass_count": 50,
+      "fail_count": 215
+    },
+    {
+      "rule": "c1_min_high",
+      "pass_count": 50,
+      "fail_count": 215
+    },
+    {
+      "rule": "c0_min_low",
+      "pass_count": 49,
+      "fail_count": 216
+    },
+    {
+      "rule": "c1_min_low",
+      "pass_count": 49,
+      "fail_count": 216
+    },
+    {
+      "rule": "r0_min_low",
+      "pass_count": 49,
+      "fail_count": 216
+    },
+    {
+      "rule": "count_rank3",
+      "pass_count": 48,
+      "fail_count": 217
+    },
+    {
+      "rule": "r0_min_high",
+      "pass_count": 48,
+      "fail_count": 217
+    },
+    {
+      "rule": "c0_max_low",
+      "pass_count": 47,
+      "fail_count": 218
+    },
+    {
+      "rule": "c0_max_high",
+      "pass_count": 46,
+      "fail_count": 219
+    },
+    {
+      "rule": "r1_min_high",
+      "pass_count": 46,
+      "fail_count": 219
+    },
+    {
+      "rule": "r1_min_low",
+      "pass_count": 45,
+      "fail_count": 220
+    },
+    {
+      "rule": "edge_count_max_high",
+      "pass_count": 43,
+      "fail_count": 222
+    },
+    {
+      "rule": "count_max_high",
+      "pass_count": 38,
+      "fail_count": 227
+    },
+    {
+      "rule": "largest_component_max_high",
+      "pass_count": 38,
+      "fail_count": 227
+    },
+    {
+      "rule": "count_max_low",
+      "pass_count": 37,
+      "fail_count": 228
+    },
+    {
+      "rule": "count_rank0",
+      "pass_count": 37,
+      "fail_count": 228
+    },
+    {
+      "rule": "largest_component_max_low",
+      "pass_count": 37,
+      "fail_count": 228
+    },
+    {
+      "rule": "bbox_w_min_high",
+      "pass_count": 28,
+      "fail_count": 237
+    },
+    {
+      "rule": "count_min_high",
+      "pass_count": 27,
+      "fail_count": 238
+    },
+    {
+      "rule": "count_min_low",
+      "pass_count": 27,
+      "fail_count": 238
+    },
+    {
+      "rule": "largest_component_min_high",
+      "pass_count": 27,
+      "fail_count": 238
+    },
+    {
+      "rule": "largest_component_min_low",
+      "pass_count": 27,
+      "fail_count": 238
+    },
+    {
+      "rule": "bbox_h_min_high",
+      "pass_count": 21,
+      "fail_count": 244
+    }
+  ],
+  "decision": "If a simple selector is full, build 1x1 ONNX cost probe. Otherwise hold task291.",
+  "submission_decision": "no_submit: audit only",
+  "leakage_risk": "low.",
+  "overfitting_risk": "medium."
+}

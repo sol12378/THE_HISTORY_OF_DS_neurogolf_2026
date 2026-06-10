@@ -1,0 +1,2 @@
+task_id,route,template_name,baseline_cost,candidate_cost,baseline_points,candidate_points,file_bytes,validation_status,status,reason,sha256
+100,crop_or_resize,bbox_area_max_color_static_2x2,6536,74548,16.21491936346016,13.780801507799444,1880,266_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,2f1e600185179672db12f0e2179e625dfb17b9f93ded7923f4dfc556e7b07791

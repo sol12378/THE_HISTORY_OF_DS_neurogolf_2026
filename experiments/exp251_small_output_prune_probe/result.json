@@ -1,0 +1,97 @@
+{
+  "exp_id": "exp251_small_output_prune_probe",
+  "date": "2026-06-10",
+  "targets": [
+    100,
+    242,
+    253,
+    271
+  ],
+  "results": [
+    {
+      "task_id": 100,
+      "removed": 0,
+      "eval": {
+        "task_id": 100,
+        "route": "crop_or_resize",
+        "template_name": "unused_initializer_prune_removed_0",
+        "baseline_cost": 6536,
+        "candidate_cost": 6536,
+        "baseline_points": 16.21491936346016,
+        "candidate_points": 16.21491936346016,
+        "file_bytes": 3692,
+        "validation_status": "266_pass_0_fail",
+        "status": "no_cost_gain",
+        "reason": "candidate cost is not lower than baseline",
+        "sha256": "8c748402a0b5a6ada7e59e17f0aea9d0c659dd4d2b8e6cddc78f00dd7f07cb54",
+        "removed_initializers": 0
+      },
+      "improved": false
+    },
+    {
+      "task_id": 242,
+      "removed": 0,
+      "eval": {
+        "task_id": 242,
+        "route": "crop_or_resize",
+        "template_name": "unused_initializer_prune_removed_0",
+        "baseline_cost": 20119,
+        "candidate_cost": 20119,
+        "baseline_points": 15.090580078810763,
+        "candidate_points": 15.090580078810763,
+        "file_bytes": 2028,
+        "validation_status": "266_pass_0_fail",
+        "status": "no_cost_gain",
+        "reason": "candidate cost is not lower than baseline",
+        "sha256": "2ba62b3b20f2f14cbf34680c9241953e5c07367e80eb12f0b1a25585320471fc",
+        "removed_initializers": 0
+      },
+      "improved": false
+    },
+    {
+      "task_id": 253,
+      "removed": 0,
+      "eval": {
+        "task_id": 253,
+        "route": "crop_or_resize",
+        "template_name": "unused_initializer_prune_removed_0",
+        "baseline_cost": 48269,
+        "candidate_cost": 48269,
+        "baseline_points": 14.215455188361384,
+        "candidate_points": 14.215455188361384,
+        "file_bytes": 4035,
+        "validation_status": "265_pass_0_fail",
+        "status": "no_cost_gain",
+        "reason": "candidate cost is not lower than baseline",
+        "sha256": "cb4eb126bc44ca50c4db62c5ca46f210b30579e62f34b1645d48c86f034cf661",
+        "removed_initializers": 0
+      },
+      "improved": false
+    },
+    {
+      "task_id": 271,
+      "removed": 0,
+      "eval": {
+        "task_id": 271,
+        "route": "crop_or_resize",
+        "template_name": "unused_initializer_prune_removed_0",
+        "baseline_cost": 28991,
+        "candidate_cost": 28991,
+        "baseline_points": 14.725259284025897,
+        "candidate_points": 14.725259284025897,
+        "file_bytes": 2976,
+        "validation_status": "267_pass_0_fail",
+        "status": "no_cost_gain",
+        "reason": "candidate cost is not lower than baseline",
+        "sha256": "670f4af2ee5f33ca35a994d02fbcd4cbca4595cecf099f014d3c94ec8999efca",
+        "removed_initializers": 0
+      },
+      "improved": false
+    }
+  ],
+  "improved_tasks": [],
+  "decision": "If any improved, consider bundle/submission delta. Otherwise move to richer surgery or new candidate mining.",
+  "submission_decision": "no_submit: probe only",
+  "leakage_risk": "low: semantics-preserving graph cleanup.",
+  "overfitting_risk": "low."
+}

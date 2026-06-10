@@ -264,3 +264,61 @@
 - 新証拠: exp236でtask174の単純内部sub-cropはbest `138/266` のまま。exp237でtask253の出力templateは固定だが、色selectorはbest `76/265` と弱い。
 - 決定: 両taskとも直ちにloweringしない。より説明力のあるrule minerを後で設計し、短期PDCAは別の高cost候補へ移る。
 - リスク: 有望候補を保留する機会損失はあるが、現時点でONNX化しても提出候補にならない。
+
+# 2026-06-10 exp238: task130はshape一致のみで保留する
+
+- 背景: exp223でtask130は高costかつcomponent shape full-hit候補だった。
+- 新証拠: exp238でcomponent shape matchは `265/265` だが、内容一致は弱い。component exactish `8/265`、max-color/largest crop proxy `0/265`、同shape input crop exact `5/265`。
+- 決定: task130を短期のONNX cost probeへ進めない。shape一致だけでは提出候補にならないため、別の高cost mask/shape候補へpivotする。
+- リスク: 内容ruleが別に存在する可能性は残るが、現時点の単純proxyでは十分な証拠がない。
+
+# 2026-06-10 exp239-243: task271 ruleは発見、現loweringは不採用
+
+- 背景: exp223でtask271はbaseline `28991`、3x3固定、one_component_shape `266/267` の高cost候補だった。
+- 新証拠: exp239-242で、出力は入力内の3x3 full-nonzero block 4候補のうち `color8_count_min` (`sum_colors_min`) のblockであると分かった。Python監査では `267/267`。
+- cost証拠: exp243のONNX candidateは validation `267_pass_0_fail` だが cost `70847` でbaseline `28991` を超過。
+- 決定: task271をsolved-rule assetに追加するが、現行loweringでは提出しない。4候補だけを安くスコアリングする専用表現ができるまで保留。
+- リスク: rule自体はinput-onlyで低leakageだが、Conv+dynamic cropはmemory costが重い。tie-break hidden edgeは将来single-task deltaで確認する。
+
+# 2026-06-10 exp244: task391は色selector未解決で保留する
+
+- 背景: exp223でtask391は3x1固定・stable-binary候補だった。
+- 新証拠: exp244でtemplateは3x1全セル同色に固定と分かったが、出力色は単純特徴で説明できずbest `bbox_bl 49/267`。
+- 決定: task391をstatic-template loweringへ進めない。色selectorの構造特徴が見えるまで保留。
+- リスク: template固定だけで色をtable化するとhidden過学習になる。
+
+# 2026-06-10 exp245-247: task100 ruleは発見、現loweringは不採用
+
+- 背景: exp223でtask100は2x2固定・binary signature 1種類のstable-binary候補だった。
+- 新証拠: exp245/246で、出力はbbox_area最大の非zero色による2x2全同色templateと判明し、Python監査 `266/266`。
+- cost証拠: exp247のONNX candidateは validation `266_pass_0_fail` だが cost `74548` でbaseline `6536` を大きく超過。
+- 決定: task100をsolved-rule assetに追加するが、現行bbox-area loweringでは提出しない。
+- リスク: 安いbbox-area selectorが見つかれば再開余地あり。現状のrow/col span計算はmemory costが重すぎる。
+
+# 2026-06-10 exp248/249: task291/task274は短期候補から外す
+
+- 背景: selectorが安そうな低binary候補を継続監査した。
+- 新証拠: task291はbest `count_rank2 76/265`、task274は色固定8だがtemplate selector best `70/269`。
+- 決定: 両taskを短期のONNX probeへ進めない。次は色固定またはselectorが明確な別候補を探す。
+- リスク: task274は固定色なのでtemplate selectorを深掘りすれば解ける可能性はあるが、現時点では証拠が薄い。
+
+# 2026-06-10 exp250: task242は固定templateだが色selector未解決
+
+- 背景: task242はbaseline `20119`、3x3固定、binary template 1種類のため、色selectorだけでstatic loweringできる可能性があった。
+- 新証拠: 出力templateは3x3 all-nonzeroで固定だが、色selectorはbest `count_max_low 64/266` と弱い。
+- 決定: task242を短期probeへ進めない。次は新規template探索より、解決済みruleの低cost loweringまたは既存artifact surgeryへ戻る。
+- リスク: 色selectorはより複雑な構造に依存する可能性があるが、単純特徴では不足。
+
+# 2026-06-10 exp251: small-output単純pruneは効果なし
+
+- 背景: task100/271はrule自体は解けたが、replacement loweringが既存artifactより高costだった。既存artifact側に単純cleanup余地があるか確認した。
+- 新証拠: task100/242/253/271の未使用initializerはすべて `0`。costも変化なし。
+- 決定: 未使用initializer pruneはこの領域では打ち切り。次は別レーン、またはnode-level redundancyなどより深いsurgeryを体系的に行う。
+- リスク: task100の既存artifactは既にruleに近い名前/構造で最適化済みのため、replacementで上回るのは難しい。
+
+# 2026-06-10 exp252/253: task153 full-arc bypass micro deltaを提出する
+
+- 背景: fixed-template新規loweringは不発が続いたため、既存artifact surgeryへ戻した。
+- 新証拠: exp252でtask153 `Reshape_node7_to_input0` bypassがfull-arc passし、cost `11212 -> 10947`。
+- 決定: exp253としてexp234 current bestにtask153 bypassを載せてKaggle提出する。expected public LB `6006.34`。
+- リスク: 微小deltaなのでLB丸めに埋もれる可能性があるが、graph surgeryは入力source差替えより低risk。採点結果で較正する。
