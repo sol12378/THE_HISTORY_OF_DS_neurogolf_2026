@@ -1,0 +1,237 @@
+{
+  "exp_id": "exp315_wide_failure_bisection_probe_a",
+  "date": "2026-06-11",
+  "status": "probe_zip_ready",
+  "purpose": "A-3 wide bisection probe: intentionally fail 16 unprobed high-risk tasks on the current exp297 best bundle. If the observed drop is smaller than the all-alive drop, the missing mass identifies one or more remaining public-zero tasks; subset ambiguity is recorded for follow-up split probes.",
+  "base_exp": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates",
+  "base_public_lb": 6008.96,
+  "targets": [
+    97,
+    193,
+    192,
+    197,
+    324,
+    137,
+    335,
+    224,
+    213,
+    338,
+    131,
+    275,
+    138,
+    243,
+    359,
+    101
+  ],
+  "target_points": {
+    "97": 14.070255820987903,
+    "193": 14.109558240338645,
+    "192": 14.14161657647865,
+    "197": 14.166555524825903,
+    "324": 14.203081009735799,
+    "137": 13.809044440650876,
+    "335": 14.258204878914801,
+    "224": 14.275455898281896,
+    "213": 14.175731810316865,
+    "338": 14.285226738886886,
+    "131": 14.295632567101045,
+    "275": 13.662869436848247,
+    "138": 14.211361567031112,
+    "243": 13.874532744845478,
+    "359": 14.347150353576192,
+    "101": 13.904485714156337
+  },
+  "expected_drop_if_all_alive": 225.79076332297663,
+  "expected_lb_if_all_alive": 5783.169236677023,
+  "target_validation": [
+    {
+      "task_id": 97,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 193,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 192,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 197,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 324,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 137,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 335,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 224,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 213,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 338,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 131,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 275,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 138,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 243,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 359,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 101,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 691602,
+    "sha256": "15183cb0c00c3d66b3c6323acbd569dd591a81243e3cd24493e33fe51e80bf22"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp315_wide_failure_bisection_probe_a\\submission.zip"
+  },
+  "elapsed_s": 2.998,
+  "submission_decision": "submitted_probe_complete; do not submit a follow-up bisection until task187 repair work is advanced or a split probe is explicitly selected",
+  "kaggle_ref": 53550304,
+  "kaggle_status": "COMPLETE",
+  "public_lb": 5810.93,
+  "observed_drop_from_base": 198.02999999999975,
+  "missing_drop_vs_all_alive": 27.760763322976885,
+  "top_missing_drop_subsets": [
+    {
+      "tasks": [
+        193,
+        275
+      ],
+      "points_sum": 27.77242767718689,
+      "absolute_error": 0.011664354210005001
+    },
+    {
+      "tasks": [
+        243,
+        101
+      ],
+      "points_sum": 27.779018459001815,
+      "absolute_error": 0.018255136024929897
+    },
+    {
+      "tasks": [
+        97,
+        275
+      ],
+      "points_sum": 27.73312525783615,
+      "absolute_error": 0.02763806514073508
+    }
+  ],
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: this is a public diagnostic probe; target selection comes from public-zero risk inventory and must be followed by correctness-first repair, not public-score-only adoption.",
+  "interpretation_rule": "observed LB was 5810.93, which is 27.760763 above the all-alive expectation. This implies roughly two public-zero tasks in the 16-target group, but rounded subset sums are ambiguous; strongest pairs are 193+275 and 243+101. A split follow-up can resolve this, but known-zero task187 repair has higher immediate priority.",
+  "subset_sum_collision_audit": {
+    "target_count": 16,
+    "rounded_subset_sum_count": 2289,
+    "rounded_collision_count": 2008,
+    "collision_audit_path": "experiments\\exp315_wide_failure_bisection_probe_a\\subset_sum_collisions.csv"
+  }
+}

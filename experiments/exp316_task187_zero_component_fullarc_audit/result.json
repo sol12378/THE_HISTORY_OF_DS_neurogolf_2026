@@ -1,0 +1,41 @@
+{
+  "exp_id": "exp316_task187_zero_component_fullarc_audit",
+  "date": "2026-06-11",
+  "status": "fullarc_rule_pass",
+  "task_id": 187,
+  "hypothesis": "task187 public-zero can be repaired by the zero-component border/enclosed fill rule from exp031",
+  "inferred_rule": {
+    "border_zero_component_color": 3,
+    "enclosed_zero_component_color": 2
+  },
+  "splits": [
+    {
+      "split": "train",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "status": "3_pass_0_fail",
+      "first_failure": null
+    },
+    {
+      "split": "test",
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "status": "1_pass_0_fail",
+      "first_failure": null
+    },
+    {
+      "split": "arc-gen",
+      "total": 262,
+      "passed": 262,
+      "failed": 0,
+      "status": "262_pass_0_fail",
+      "first_failure": null
+    }
+  ],
+  "local_estimate_delta": 0.0,
+  "submission_decision": "no_submit_python_rule_audit_only; proceed to correctness-first ONNX lowering if fullarc_rule_pass",
+  "leakage_risk": "low-medium: colors inferred from train only; full arc-gen is used for validation, not fitting.",
+  "overfitting_risk": "medium: Python rule full-arc pass is necessary but public-zero repair still needs ONNX and LB probe."
+}
