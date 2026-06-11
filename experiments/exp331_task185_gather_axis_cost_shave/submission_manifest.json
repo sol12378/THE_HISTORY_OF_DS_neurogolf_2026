@@ -1,0 +1,16 @@
+{
+  "exp_id": "exp331_task185_gather_axis_cost_shave",
+  "base_zip": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates\\submission.zip",
+  "output_zip": "experiments\\exp331_task185_gather_axis_cost_shave\\submission.zip",
+  "file_count": 400,
+  "names_ok": true,
+  "replaced_task": "task185.onnx",
+  "old_task_sha256": "4b2e94698954985298780d91862b39976514533d04e0c2a9c65018472bf9ffcc",
+  "new_task_sha256": "dcd34b09c14159ea84f8459dede73bb8a52d07799910846059fb54758dbf5f89",
+  "new_task_matches_candidate": true,
+  "expected_public_lb_if_calibrated": 6009.157834659354,
+  "expected_local_delta": 0.19783465935382516,
+  "candidate_cost": 48889,
+  "baseline_cost": 59584,
+  "submission_decision": "submit"
+}

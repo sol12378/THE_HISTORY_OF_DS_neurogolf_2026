@@ -1,0 +1,2 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,validation_status,candidate_status,candidate_reason,local_delta_if_any,notes
+gather_axis_float,scored,48,48634,255,48889,4785,dcd34b09c14159ea84f8459dede73bb8a52d07799910846059fb54758dbf5f89,ok,ok,ok,267_pass_0_fail,improved,ok,0.19783465935382516,replace exp330 Tile+GatherElements index tensors with Gather(axis=2/3)
