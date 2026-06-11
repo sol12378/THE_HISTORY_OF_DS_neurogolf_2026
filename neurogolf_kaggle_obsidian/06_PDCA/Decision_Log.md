@@ -574,3 +574,10 @@
 - 新証拠: synthetic manifestで `exclude_tasks={"48"}` が効き、全task除外時は `should_submit=false` になった。
 - 決定: fresh manifest reviewでは必要に応じて `exclude_tasks` を使い、既知危険taskを候補集合から落とす。
 - リスク: これはreview側の安全弁であり、exp262生成scriptがtask048で止まる問題自体は未解決。
+
+# 2026-06-11 exp329: task185 full compact candidateを次の主軸にする
+
+- 背景: exp323/325 の fresh public-zero probe は連続 all-alive で、`franksunp_blended_best` 高 point 順の収率が落ちた。task037 は exp327 で correctness は通ったが dense lowering cost wall に当たった。
+- 新証拠: exp328 で task185 dynamic bg detector が cost `143`、exp329 で detector-connected axis selector が `267_pass_0_fail` かつ cost `41519` vs baseline `59584` で成立した。
+- 決定: 強い新 public-zero suspect source が出るまでは、次の score-direct 主軸を task185 full compact candidate に置く。
+- リスク: exp329 は selector subgraph probe であり、selected lattice extraction と homogeneous 2x2 core を接続した full candidate は未検証。exp204 の巨大 template 再発を避ける。

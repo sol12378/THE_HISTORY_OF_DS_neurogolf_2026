@@ -1,0 +1,34 @@
+{
+  "exp_id": "exp329_task185_dynamic_bg_axis_selector_probe",
+  "date": "2026-06-11",
+  "status": "selector_probe_complete",
+  "task_id": 185,
+  "hypothesis": "Connecting the dynamic bg detector to task185's dilated axis selector should reproduce the Python row/col windows while remaining far below baseline cost.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "static_ok": true,
+  "static_reason": "ok",
+  "score_static_ok": true,
+  "score_static_reason": "ok",
+  "selector_validation": {
+    "status": "267_pass_0_fail",
+    "pass": 267,
+    "total": 267,
+    "first_failures": []
+  },
+  "selector_onnx": {
+    "score_reason": "ok",
+    "memory": 41428,
+    "params": 91,
+    "cost": 41519,
+    "file_bytes": 2914,
+    "sha256": "233824f260e92621254fb93516ce2772288a9b7a351fb2861b7b4e6410a7c4c0",
+    "score_file_bytes": 2786,
+    "score_sha256": "3154745fe17c4c8c8eac14db5cdbeb1bf063e2567f7ef59aa56e416fbe2769f0"
+  },
+  "decision": "Selector is ready to connect to compact extraction/core.",
+  "submission_decision": "no_submit: selector subgraph probe only",
+  "leakage_risk": "low: input-only bg and geometry selector; no output lookup or public feedback.",
+  "overfitting_risk": "medium-low: selector rule is task-specific but checked across all local examples.",
+  "runtime_seconds": 1.7340433597564697
+}
