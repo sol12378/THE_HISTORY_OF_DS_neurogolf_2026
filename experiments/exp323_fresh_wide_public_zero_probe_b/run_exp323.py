@@ -1,0 +1,194 @@
+from __future__ import annotations
+
+import csv
+import itertools
+import json
+import re
+import sys
+import zipfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from experiments.phase1_rewrite_utils import load_neurogolf_utils, point, score_model  # noqa: E402
+from experiments.public_zero_probe_utils import build_probe  # noqa: E402
+
+
+EXP_ID = "exp323_fresh_wide_public_zero_probe_b"
+EXP_DIR = ROOT / "experiments" / EXP_ID
+BASE_EXP = ROOT / "experiments" / "exp297_exp262_skip_task048_336_fresh_candidates"
+BASE_PUBLIC_LB = 6008.96
+PUBLIC_BLEND_MANIFEST = ROOT / "experiments/exp002_public_blend_6500_fast/candidate_manifest.csv"
+EXP012_MANIFEST = ROOT / "experiments/exp012_template_factory_core/selected_manifest.csv"
+TARGET_COUNT = 16
+
+
+def load_json(path: Path) -> dict | None:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def probed_tasks() -> set[int]:
+    out: set[int] = set()
+    pattern = re.compile(r"(failure_bisection_probe|wide_failure_bisection_probe|split_probe)")
+    for result_path in (ROOT / "experiments").glob("exp*/result.json"):
+        if not pattern.search(str(result_path.parent.name)):
+            continue
+        data = load_json(result_path)
+        if not data or "targets" not in data:
+            continue
+        for task_id in data["targets"]:
+            out.add(int(task_id))
+    # Known repaired / attempted public-zero tasks should not be re-probed here.
+    out.update({18, 23, 25, 133, 158, 187, 285})
+    return out
+
+
+def exp012_points() -> dict[int, float]:
+    points = {}
+    with EXP012_MANIFEST.open(encoding="utf-8", newline="") as f:
+        for row in csv.DictReader(f):
+            points[int(row["task_id"])] = float(row["local_points"])
+    return points
+
+
+def public_risk_candidates(excluded: set[int]) -> list[dict]:
+    baseline_points = exp012_points()
+    rows = []
+    with PUBLIC_BLEND_MANIFEST.open(encoding="utf-8", newline="") as f:
+        for row in csv.DictReader(f):
+            if row["source_label"] != "franksunp_blended_best":
+                continue
+            if row["status"] != "accepted":
+                continue
+            task_id = int(row["task_id"])
+            if task_id in excluded:
+                continue
+            local_points = float(row["local_points"])
+            rows.append(
+                {
+                    "task_id": task_id,
+                    "public_source_points": local_points,
+                    "exp012_points": baseline_points.get(task_id, local_points),
+                    "risk_gap_vs_exp012": local_points - baseline_points.get(task_id, local_points),
+                    "source_ref": row["source_ref"],
+                    "sha256": row["sha256"],
+                }
+            )
+    # Prioritize large public-source point mass, then tasks whose public-code candidate beats exp012.
+    rows.sort(key=lambda row: (-row["public_source_points"], -row["risk_gap_vs_exp012"], row["task_id"]))
+    return rows
+
+
+def subset_gap_audit(points: dict[int, float]) -> dict:
+    values = sorted(points.items())
+    pair_sums = []
+    for (a, av), (b, bv) in itertools.combinations(values, 2):
+        pair_sums.append((abs((av + bv) - round(av + bv, 2)), a, b, av + bv))
+    pair_sums.sort(reverse=True)
+    rounded = {}
+    collisions = 0
+    for size in range(1, 4):
+        for combo in itertools.combinations(values, size):
+            key = round(sum(value for _, value in combo), 2)
+            rounded.setdefault(key, 0)
+            rounded[key] += 1
+    for count in rounded.values():
+        if count > 1:
+            collisions += count
+    return {
+        "rounded_subset_sum_count": len(rounded),
+        "rounded_collision_member_count": collisions,
+        "least_round_pair_margins": [
+            {"tasks": [a, b], "points_sum": total, "rounding_margin": margin}
+            for margin, a, b, total in pair_sums[:10]
+        ],
+    }
+
+
+def score_current_points(targets: list[int]) -> dict[int, float]:
+    utils = load_neurogolf_utils()
+    target_set = set(targets)
+    raws: dict[int, bytes] = {}
+    with zipfile.ZipFile(BASE_EXP / "submission.zip") as zf:
+        for name in zf.namelist():
+            task_id = int(Path(name).stem.replace("task", ""))
+            if task_id in target_set:
+                raws[task_id] = zf.read(name)
+    out = {}
+    for task_id in targets:
+        memory, params, reason = score_model(utils, raws[task_id], task_id, f"{EXP_ID}_base_score", EXP_DIR)
+        if memory is None or params is None:
+            raise RuntimeError(f"score failed for task{task_id:03d}: {reason}")
+        out[task_id] = point(int(memory) + int(params))
+    return out
+
+
+def main() -> None:
+    EXP_DIR.mkdir(parents=True, exist_ok=True)
+    excluded = probed_tasks()
+    candidates = public_risk_candidates(excluded)
+    selected = [row["task_id"] for row in candidates[:TARGET_COUNT]]
+    target_points = score_current_points(selected)
+    result = build_probe(
+        exp_dir=EXP_DIR,
+        exp_id=EXP_ID,
+        purpose=(
+            "Fresh wide public-zero bisection probe after exp322: fail-stub 16 unprobed "
+            "franksunp_blended_best accepted high-risk tasks over exp297."
+        ),
+        base_exp=BASE_EXP,
+        base_public_lb=BASE_PUBLIC_LB,
+        target_points=target_points,
+        submission_decision=(
+            "submit_probe_after_sanity; do not submit another bisection probe until this score completes"
+        ),
+        overfitting_risk=(
+            "medium: public diagnostic probe over public-code-risk tasks; any follow-up repair "
+            "must be full-arc validated and expected-LB checked."
+        ),
+    )
+    result["date"] = "2026-06-11"
+    result["selection"] = {
+        "source": "franksunp_blended_best accepted rows from exp002 manifest",
+        "excluded_probed_or_repaired_count": len(excluded),
+        "selected_candidates": [row for row in candidates[:TARGET_COUNT]],
+    }
+    result["subset_gap_audit"] = subset_gap_audit(target_points)
+    result["target_points_source"] = "rescored current exp297 submission.zip with score_network"
+    (EXP_DIR / "result.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    lines = [
+        f"# {EXP_ID}",
+        "",
+        "## 目的",
+        "",
+        "exp322 後の fresh wide public-zero probe。既存 probe 済み task を除外し、public-code 高リスク task を16件 fail-stub する。",
+        "",
+        "## 結果",
+        "",
+        f"- status: `{result['status']}`",
+        f"- targets: `{result['targets']}`",
+        f"- expected_drop_if_all_alive: `{result['expected_drop_if_all_alive']}`",
+        f"- expected_lb_if_all_alive: `{result['expected_lb_if_all_alive']}`",
+        f"- zip sha256: `{result['zip_sanity']['sha256']}`",
+        "",
+        "## 判断",
+        "",
+        result["submission_decision"],
+        "",
+        "## リスク",
+        "",
+        f"- leakage risk: {result['leakage_risk']}",
+        f"- overfitting risk: {result['overfitting_risk']}",
+    ]
+    (EXP_DIR / "notes.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()

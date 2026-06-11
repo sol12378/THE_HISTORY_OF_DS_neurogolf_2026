@@ -1,0 +1,422 @@
+{
+  "exp_id": "exp323_fresh_wide_public_zero_probe_b",
+  "date": "2026-06-11",
+  "status": "probe_zip_ready",
+  "purpose": "Fresh wide public-zero bisection probe after exp322: fail-stub 16 unprobed franksunp_blended_best accepted high-risk tasks over exp297.",
+  "base_exp": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates",
+  "base_public_lb": 6008.96,
+  "targets": [
+    179,
+    241,
+    309,
+    113,
+    116,
+    164,
+    172,
+    210,
+    311,
+    326,
+    103,
+    135,
+    140,
+    186,
+    167,
+    129
+  ],
+  "target_points": {
+    "179": 25.0,
+    "241": 25.0,
+    "309": 22.697414907005953,
+    "113": 21.598802618337846,
+    "116": 21.598802618337846,
+    "164": 21.598802618337846,
+    "172": 21.598802618337846,
+    "210": 21.598802618337846,
+    "311": 21.598802618337846,
+    "326": 19.924826184766175,
+    "103": 19.737309811095116,
+    "135": 19.113895968549844,
+    "140": 19.09191706183107,
+    "186": 19.10284613236326,
+    "167": 18.470581161737776,
+    "129": 18.527653705499098
+  },
+  "expected_drop_if_all_alive": 336.25926064287535,
+  "expected_lb_if_all_alive": 5672.700739357125,
+  "target_validation": [
+    {
+      "task_id": 179,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 241,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 309,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 113,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 116,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 164,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 172,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 210,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 311,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 326,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 103,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 135,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 140,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 186,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 167,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    },
+    {
+      "task_id": 129,
+      "ok": false,
+      "reason": "mismatch example 0",
+      "passed": 0,
+      "failed": 1,
+      "status": "0_pass_1_fail"
+    }
+  ],
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 729119,
+    "sha256": "9464fa1c79567a73b9949fc1b2567ae18e1afaa8a8158b0ad2dc8c503be34fd3"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp323_fresh_wide_public_zero_probe_b\\submission.zip"
+  },
+  "elapsed_s": 0.16,
+  "submission_decision": "submitted_probe_pending; do not submit another bisection probe until this score completes",
+  "kaggle_ref": 53551982,
+  "kaggle_status": "PENDING",
+  "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
+  "overfitting_risk": "medium: public diagnostic probe over public-code-risk tasks; any follow-up repair must be full-arc validated and expected-LB checked.",
+  "selection": {
+    "source": "franksunp_blended_best accepted rows from exp002 manifest",
+    "excluded_probed_or_repaired_count": 110,
+    "selected_candidates": [
+      {
+        "task_id": 179,
+        "public_source_points": 25.0,
+        "exp012_points": 25.0,
+        "risk_gap_vs_exp012": 0.0,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "2e9d2e73d5b7883597f25162d056757be55e4e167e7fd014bda0fbf2d7abe908"
+      },
+      {
+        "task_id": 241,
+        "public_source_points": 25.0,
+        "exp012_points": 25.0,
+        "risk_gap_vs_exp012": 0.0,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "2e9d2e73d5b7883597f25162d056757be55e4e167e7fd014bda0fbf2d7abe908"
+      },
+      {
+        "task_id": 309,
+        "public_source_points": 22.697414907005953,
+        "exp012_points": 22.697414907005953,
+        "risk_gap_vs_exp012": 0.0,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "c47b834e65872a11ec0cda3c8246948b8365f81f916610b49ed07267815733d9"
+      },
+      {
+        "task_id": 113,
+        "public_source_points": 21.598802618337846,
+        "exp012_points": 21.598802618337846,
+        "risk_gap_vs_exp012": 0.0,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "356a5f1e2200cf2560f6c836ce7d21eca6b6cad9e68015c2ae31639613ef9b09"
+      },
+      {
+        "task_id": 116,
+        "public_source_points": 21.598802618337846,
+        "exp012_points": 21.598802618337846,
+        "risk_gap_vs_exp012": 0.0,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "3f87aab73b8c538752ffb070a34dd07ef95ccba2d299bd7526da67fcf956e1e5"
+      },
+      {
+        "task_id": 164,
+        "public_source_points": 21.598802618337846,
+        "exp012_points": 21.598802618337846,
+        "risk_gap_vs_exp012": 0.0,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "250771b94d3db4658d4ac04e3bd9a0740f2af0f3aba0bb9b5df4d6181bb470d4"
+      },
+      {
+        "task_id": 172,
+        "public_source_points": 21.598802618337846,
+        "exp012_points": 21.598802618337846,
+        "risk_gap_vs_exp012": 0.0,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "aa923630b6479cf1a1f5e7b7bfe2e4947e1c8ba8edba4f31d250b0b2f0c98dde"
+      },
+      {
+        "task_id": 210,
+        "public_source_points": 21.598802618337846,
+        "exp012_points": 21.598802618337846,
+        "risk_gap_vs_exp012": 0.0,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "aa923630b6479cf1a1f5e7b7bfe2e4947e1c8ba8edba4f31d250b0b2f0c98dde"
+      },
+      {
+        "task_id": 311,
+        "public_source_points": 21.598802618337846,
+        "exp012_points": 21.598802618337846,
+        "risk_gap_vs_exp012": 0.0,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "250771b94d3db4658d4ac04e3bd9a0740f2af0f3aba0bb9b5df4d6181bb470d4"
+      },
+      {
+        "task_id": 326,
+        "public_source_points": 19.888012211643456,
+        "exp012_points": 19.924826184766175,
+        "risk_gap_vs_exp012": -0.036813973122718835,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "679e7cdd361ecf5440084b06fcebb0f9e1e8f1f9621b3df9a31d41b095815c07"
+      },
+      {
+        "task_id": 103,
+        "public_source_points": 19.372378886309363,
+        "exp012_points": 19.737309811095116,
+        "risk_gap_vs_exp012": -0.36493092478575306,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "b9c51e1f345db496253265b5b29cef7dd145dfa1ebd3fe0ece6a1bf997cbafa2"
+      },
+      {
+        "task_id": 135,
+        "public_source_points": 19.097366666598635,
+        "exp012_points": 19.113895968549844,
+        "risk_gap_vs_exp012": -0.016529301951209163,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "3d9bea2bde587509e06b69c0abb6742c540fd587c7d596a916a7a03c68e0ca36"
+      },
+      {
+        "task_id": 140,
+        "public_source_points": 19.070410856610106,
+        "exp012_points": 19.09191706183107,
+        "risk_gap_vs_exp012": -0.02150620522096247,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "382da0cff01add5ff7afad044b083c1460ed0b90047b0cd385acf2f9be218ae2"
+      },
+      {
+        "task_id": 186,
+        "public_source_points": 18.31789140255019,
+        "exp012_points": 19.10284613236326,
+        "risk_gap_vs_exp012": -0.7849547298130695,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "e08e25bcc7a87cfdcb14c47188efdde385ff6605c966217b934a67aa0589a797"
+      },
+      {
+        "task_id": 167,
+        "public_source_points": 18.294360905139996,
+        "exp012_points": 18.470581161737776,
+        "risk_gap_vs_exp012": -0.17622025659778018,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "7205b15363f53274f9987b481f736b594008071406a8a8644556e6d42336b88b"
+      },
+      {
+        "task_id": 129,
+        "public_source_points": 18.22235340636488,
+        "exp012_points": 18.306676331730053,
+        "risk_gap_vs_exp012": -0.08432292536517139,
+        "source_ref": "franksunp/neurogolf-blended-best-models",
+        "sha256": "b4bf8972683a55cdebeaeec284f506da67cdbf34f151d3dd78331b9294b9be0a"
+      }
+    ]
+  },
+  "subset_gap_audit": {
+    "rounded_subset_sum_count": 187,
+    "rounded_collision_member_count": 606,
+    "least_round_pair_margins": [
+      {
+        "tasks": [
+          103,
+          129
+        ],
+        "points_sum": 38.264963516594214,
+        "rounding_margin": 0.004963516594216344
+      },
+      {
+        "tasks": [
+          129,
+          309
+        ],
+        "points_sum": 41.225068612505055,
+        "rounding_margin": 0.00493138749494193
+      },
+      {
+        "tasks": [
+          241,
+          326
+        ],
+        "points_sum": 44.924826184766175,
+        "rounding_margin": 0.004826184766173469
+      },
+      {
+        "tasks": [
+          179,
+          326
+        ],
+        "points_sum": 44.924826184766175,
+        "rounding_margin": 0.004826184766173469
+      },
+      {
+        "tasks": [
+          140,
+          186
+        ],
+        "points_sum": 38.19476319419433,
+        "rounding_margin": 0.004763194194332243
+      },
+      {
+        "tasks": [
+          103,
+          309
+        ],
+        "points_sum": 42.434724718101066,
+        "rounding_margin": 0.0047247181010661166
+      },
+      {
+        "tasks": [
+          167,
+          326
+        ],
+        "points_sum": 38.39540734650395,
+        "rounding_margin": 0.004592653496047205
+      },
+      {
+        "tasks": [
+          135,
+          167
+        ],
+        "points_sum": 37.584477130287624,
+        "rounding_margin": 0.004477130287625641
+      },
+      {
+        "tasks": [
+          135,
+          140
+        ],
+        "points_sum": 38.20581303038091,
+        "rounding_margin": 0.004186969619091485
+      },
+      {
+        "tasks": [
+          135,
+          241
+        ],
+        "points_sum": 44.11389596854984,
+        "rounding_margin": 0.0038959685498412
+      }
+    ]
+  },
+  "target_points_source": "rescored current exp297 submission.zip with score_network"
+}
