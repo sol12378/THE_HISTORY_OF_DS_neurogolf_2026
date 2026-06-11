@@ -6,7 +6,7 @@ exp322 後の fresh wide public-zero probe。既存 probe 済み task を除外�
 
 ## 結果
 
-- status: `probe_zip_ready`
+- status: `completed`
 - targets: `[179, 241, 309, 113, 116, 164, 172, 210, 311, 326, 103, 135, 140, 186, 167, 129]`
 - expected_drop_if_all_alive: `336.25926064287535`
 - expected_lb_if_all_alive: `5672.700739357125`
@@ -14,7 +14,9 @@ exp322 後の fresh wide public-zero probe。既存 probe 済み task を除外�
 
 ## 判断
 
-Kaggle ref `53551982` として提出済み。現在 `PENDING`。採点完了まで次の bisection probe は出さない。
+Kaggle ref `53551982` は COMPLETE。Public LB `5672.70` は expected all-alive LB `5672.700739357125` と一致した。
+
+この16件は public-scoring alive として immediate public-zero repair suspect から除外する。次は fresh wide probe を続けるか、GridSample task251 に切り替える。
 
 ## リスク
 

@@ -1,7 +1,7 @@
 {
   "exp_id": "exp323_fresh_wide_public_zero_probe_b",
   "date": "2026-06-11",
-  "status": "probe_zip_ready",
+  "status": "completed",
   "purpose": "Fresh wide public-zero bisection probe after exp322: fail-stub 16 unprobed franksunp_blended_best accepted high-risk tasks over exp297.",
   "base_exp": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates",
   "base_public_lb": 6008.96,
@@ -193,9 +193,12 @@
     "submission_zip": "experiments\\exp323_fresh_wide_public_zero_probe_b\\submission.zip"
   },
   "elapsed_s": 0.16,
-  "submission_decision": "submitted_probe_pending; do not submit another bisection probe until this score completes",
+  "submission_decision": "submitted_probe_complete_all_alive",
   "kaggle_ref": 53551982,
-  "kaggle_status": "PENDING",
+  "kaggle_status": "COMPLETE",
+  "public_lb": 5672.7,
+  "observed_drop_from_base": 336.2600000000002,
+  "interpretation": "Observed public LB 5672.70 matches expected all-alive LB 5672.700739 within scoreboard rounding; all 16 targets are treated as public-scoring alive and excluded from immediate public-zero repair suspects.",
   "leakage_risk": "low: deliberate fail-stub probe; no private labels used.",
   "overfitting_risk": "medium: public diagnostic probe over public-code-risk tasks; any follow-up repair must be full-arc validated and expected-LB checked.",
   "selection": {
