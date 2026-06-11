@@ -1,0 +1,41 @@
+{
+  "exp_id": "exp328_task185_dynamic_bg_detector_probe",
+  "date": "2026-06-11",
+  "status": "detector_probe_complete",
+  "task_id": 185,
+  "hypothesis": "task185 dynamic background is the nonzero modal input color and can be detected with a small ReduceSum+ArgMax subgraph.",
+  "baseline_cost": 59584,
+  "baseline_points": 14.00485763936326,
+  "detector_validation": {
+    "status": "267_pass_0_fail",
+    "pass": 267,
+    "total": 267,
+    "bg_hist": {
+      "1": 32,
+      "2": 23,
+      "3": 30,
+      "4": 25,
+      "5": 26,
+      "6": 26,
+      "7": 34,
+      "8": 37,
+      "9": 34
+    },
+    "mismatches": []
+  },
+  "detector_onnx": {
+    "static_ok": true,
+    "static_reason": "ok",
+    "score_reason": "ok",
+    "memory": 132,
+    "params": 11,
+    "cost": 143,
+    "file_bytes": 678,
+    "sha256": "01a5ce08c045d23ec0dcdc57d6dacf2540235f3040090fde5f5f7ac0f15df60c"
+  },
+  "decision": "Dynamic bg detector is ready for the next task185 candidate.",
+  "submission_decision": "no_submit: detector subgraph probe only",
+  "leakage_risk": "low: input-only modal-color detector; no output lookup or public feedback.",
+  "overfitting_risk": "low-to-medium: modal-bg assumption is task-specific but validated over all local examples.",
+  "runtime_seconds": 1.2515661716461182
+}
