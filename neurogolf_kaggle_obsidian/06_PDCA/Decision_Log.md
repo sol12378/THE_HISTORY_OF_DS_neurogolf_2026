@@ -581,3 +581,10 @@
 - 新証拠: exp328 で task185 dynamic bg detector が cost `143`、exp329 で detector-connected axis selector が `267_pass_0_fail` かつ cost `41519` vs baseline `59584` で成立した。
 - 決定: 強い新 public-zero suspect source が出るまでは、次の score-direct 主軸を task185 full compact candidate に置く。
 - リスク: exp329 は selector subgraph probe であり、selected lattice extraction と homogeneous 2x2 core を接続した full candidate は未検証。exp204 の巨大 template 再発を避ける。
+
+# 2026-06-11 exp330: task185は次1本だけcost shaveしてからpivot判定
+
+- 背景: exp330 で task185 full candidate が `267_pass_0_fail` まで通ったが、best cost は `59784` で baseline `59584` より `200` 高かった。
+- 新証拠: compact start/spacing dynamic index は exp204 の巨大 template 問題を解消した。final `uint8` output variant は cost `95784` で悪化し、output dtype Cast は短期解ではない。
+- 決定: 次の1実験だけ task185 の narrow cost shave を試す。default-bg + Pad、Tile index shape、selector intermediate の削減で `200` 以上削れなければ task251/task037 へ pivot する。
+- リスク: task185 に長居しすぎると score-producing でない微調整が続く。次実験の中止条件を `cost < 59584` 未達に固定する。

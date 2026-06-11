@@ -1,0 +1,3 @@
+variant,status,node_count,memory,params,cost,file_bytes,sha256,static_reason,score_reason,runtime_reason,validation_status,candidate_status,candidate_reason,local_delta_if_any,notes
+compact_dynamic_float,scored,50,59514,270,59784,5101,96e2f39a47fa7cef50776a2f38a9666026625db31aae20f1558fc9b31381043b,ok,ok,ok,267_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,-0.0033509849733857067,compact start/spacing dynamic index candidate
+compact_dynamic_uint8,scored,51,95514,270,95784,5140,750c6405e1c6abbdb5e42eabdf30e6df3a961b299e073d4e183a1bb1328d042e,ok,ok,ok,267_pass_0_fail,no_cost_gain,candidate cost is not lower than baseline,-0.47470857475994066,compact start/spacing dynamic index candidate
