@@ -1,0 +1,29 @@
+{
+  "exp_id": "exp327_task037_bounded_diag_shift_lowering",
+  "date": "2026-06-11",
+  "status": "no_gain",
+  "task_id": 37,
+  "hypothesis": "A bounded diagonal shift stack can implement task037's opposite same-color ray fill cheaper than the current artifact and far cheaper than the previous full-grid Conv visibility lowering.",
+  "base": {
+    "exp": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates",
+    "cost": 63726,
+    "points": 13.937652078450405,
+    "sha256": "8faff6c42c2e15d27fd29d4ebeaf4a30cc8400305895d7fe67eb4a115afe711c"
+  },
+  "candidate": {
+    "template_name": "bounded_diag_shift_d5",
+    "validation_status": "266_pass_0_fail",
+    "status": "no_cost_gain",
+    "reason": "candidate cost is not lower than baseline",
+    "cost": 6633317,
+    "points": 9.292384461287979,
+    "file_bytes": 48108,
+    "sha256": "52679b158e071cf4e493025f45480de9a442994f0c44dca12c64cb6c8cf6f5a5"
+  },
+  "local_estimate_delta": 0.0,
+  "expected_public_lb_if_calibrated": 6008.96,
+  "submission_decision": "no_submit: validation failed or no cost gain",
+  "leakage_risk": "low: explicit task037 diagonal ray rule using input-only shifts; no public/private labels or output lookup.",
+  "overfitting_risk": "medium: task-specific full-arc rule; if improved, Kaggle single-task calibration is still needed.",
+  "runtime_seconds": 1.4025743007659912
+}
