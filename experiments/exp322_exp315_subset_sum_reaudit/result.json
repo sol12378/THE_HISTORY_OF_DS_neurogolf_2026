@@ -1,0 +1,599 @@
+{
+  "exp_id": "exp322_exp315_subset_sum_reaudit",
+  "date": "2026-06-11",
+  "status": "completed",
+  "purpose": "Re-audit exp315 missing-drop subset-sum after exp318 proved task193/task275 alive and exp321 showed task101/task243 franksunp repair had no public gain.",
+  "base_public_lb": 6008.96,
+  "exp315": {
+    "targets": [
+      97,
+      193,
+      192,
+      197,
+      324,
+      137,
+      335,
+      224,
+      213,
+      338,
+      131,
+      275,
+      138,
+      243,
+      359,
+      101
+    ],
+    "expected_drop_if_all_alive": 225.79076332297663,
+    "public_lb": 5810.93,
+    "observed_drop_from_base": 198.02999999999975,
+    "missing_drop_vs_all_alive": 27.760763322976885
+  },
+  "followup_evidence": {
+    "exp318_task193_275": {
+      "public_lb": 5981.18,
+      "interpretation": "all_alive",
+      "observed_drop_from_base": 27.779999999999745
+    },
+    "exp319_task243_101": {
+      "public_lb": 6008.96,
+      "interpretation": "fail_stub_no_drop",
+      "observed_drop_vs_base": 0.0
+    },
+    "exp321_task243_101_repair": {
+      "public_lb": 6008.96,
+      "interpretation": "repair_no_gain",
+      "observed_gain_vs_base": 0.0
+    }
+  },
+  "top_subsets_all_exp315_targets": [
+    {
+      "tasks": [
+        193,
+        275
+      ],
+      "points_sum": 27.77242767718689,
+      "absolute_error": 0.011664354210005001,
+      "size": 2
+    },
+    {
+      "tasks": [
+        101,
+        243
+      ],
+      "points_sum": 27.779018459001815,
+      "absolute_error": 0.018255136024929897,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        275
+      ],
+      "points_sum": 27.73312525783615,
+      "absolute_error": 0.02763806514073508,
+      "size": 2
+    },
+    {
+      "tasks": [
+        192,
+        275
+      ],
+      "points_sum": 27.804486013326898,
+      "absolute_error": 0.04372269035001253,
+      "size": 2
+    },
+    {
+      "tasks": [
+        101,
+        137
+      ],
+      "points_sum": 27.713530154807213,
+      "absolute_error": 0.04723316816967227,
+      "size": 2
+    },
+    {
+      "tasks": [
+        197,
+        275
+      ],
+      "points_sum": 27.82942496167415,
+      "absolute_error": 0.0686616386972645,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        243
+      ],
+      "points_sum": 27.683577185496354,
+      "absolute_error": 0.07718613748053116,
+      "size": 2
+    },
+    {
+      "tasks": [
+        213,
+        275
+      ],
+      "points_sum": 27.838601247165112,
+      "absolute_error": 0.07783792418822699,
+      "size": 2
+    },
+    {
+      "tasks": [
+        275,
+        324
+      ],
+      "points_sum": 27.865950446584044,
+      "absolute_error": 0.1051871236071591,
+      "size": 2
+    },
+    {
+      "tasks": [
+        138,
+        275
+      ],
+      "points_sum": 27.87423100387936,
+      "absolute_error": 0.11346768090247394,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        137
+      ],
+      "points_sum": 27.87930026163878,
+      "absolute_error": 0.11853693866189374,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        193
+      ],
+      "points_sum": 27.918602680989522,
+      "absolute_error": 0.15783935801263738,
+      "size": 2
+    },
+    {
+      "tasks": [
+        275,
+        335
+      ],
+      "points_sum": 27.92107431576305,
+      "absolute_error": 0.16031099278616523,
+      "size": 2
+    },
+    {
+      "tasks": [
+        224,
+        275
+      ],
+      "points_sum": 27.938325335130145,
+      "absolute_error": 0.17756201215325973,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        243
+      ],
+      "points_sum": 27.94478856583338,
+      "absolute_error": 0.1840252428564959,
+      "size": 2
+    },
+    {
+      "tasks": [
+        275,
+        338
+      ],
+      "points_sum": 27.94809617573513,
+      "absolute_error": 0.18733285275824585,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        192
+      ],
+      "points_sum": 27.950661017129526,
+      "absolute_error": 0.18989769415264135,
+      "size": 2
+    },
+    {
+      "tasks": [
+        101,
+        275
+      ],
+      "points_sum": 27.567355151004584,
+      "absolute_error": 0.1934081719723011,
+      "size": 2
+    },
+    {
+      "tasks": [
+        131,
+        275
+      ],
+      "points_sum": 27.95850200394929,
+      "absolute_error": 0.19773868097240666,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        101
+      ],
+      "points_sum": 27.97474153514424,
+      "absolute_error": 0.2139782121673548,
+      "size": 2
+    }
+  ],
+  "top_subsets_excluding_confirmed_alive_193_275": [
+    {
+      "tasks": [
+        101,
+        243
+      ],
+      "points_sum": 27.779018459001815,
+      "absolute_error": 0.018255136024929897,
+      "size": 2
+    },
+    {
+      "tasks": [
+        101,
+        137
+      ],
+      "points_sum": 27.713530154807213,
+      "absolute_error": 0.04723316816967227,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        243
+      ],
+      "points_sum": 27.683577185496354,
+      "absolute_error": 0.07718613748053116,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        137
+      ],
+      "points_sum": 27.87930026163878,
+      "absolute_error": 0.11853693866189374,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        243
+      ],
+      "points_sum": 27.94478856583338,
+      "absolute_error": 0.1840252428564959,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        192
+      ],
+      "points_sum": 27.950661017129526,
+      "absolute_error": 0.18989769415264135,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        101
+      ],
+      "points_sum": 27.97474153514424,
+      "absolute_error": 0.2139782121673548,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        197
+      ],
+      "points_sum": 27.97559996547678,
+      "absolute_error": 0.21483664249989332,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        213
+      ],
+      "points_sum": 27.98477625096774,
+      "absolute_error": 0.22401292799085581,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        324
+      ],
+      "points_sum": 28.012125450386677,
+      "absolute_error": 0.25136212740979147,
+      "size": 2
+    },
+    {
+      "tasks": [
+        192,
+        243
+      ],
+      "points_sum": 28.01614932132413,
+      "absolute_error": 0.2553859983472435,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        138
+      ],
+      "points_sum": 28.020406007681988,
+      "absolute_error": 0.25964268470510277,
+      "size": 2
+    },
+    {
+      "tasks": [
+        197,
+        243
+      ],
+      "points_sum": 28.04108826967138,
+      "absolute_error": 0.2803249466944955,
+      "size": 2
+    },
+    {
+      "tasks": [
+        101,
+        192
+      ],
+      "points_sum": 28.046102290634987,
+      "absolute_error": 0.2853389676581024,
+      "size": 2
+    },
+    {
+      "tasks": [
+        213,
+        243
+      ],
+      "points_sum": 28.050264555162343,
+      "absolute_error": 0.289501232185458,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        335
+      ],
+      "points_sum": 28.067249319565676,
+      "absolute_error": 0.3064859965887905,
+      "size": 2
+    },
+    {
+      "tasks": [
+        101,
+        197
+      ],
+      "points_sum": 28.07104123898224,
+      "absolute_error": 0.31027791600535437,
+      "size": 2
+    },
+    {
+      "tasks": [
+        243,
+        324
+      ],
+      "points_sum": 28.07761375458128,
+      "absolute_error": 0.31685043160439363,
+      "size": 2
+    },
+    {
+      "tasks": [
+        101,
+        213
+      ],
+      "points_sum": 28.080217524473202,
+      "absolute_error": 0.31945420149631687,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        224
+      ],
+      "points_sum": 28.08450033893277,
+      "absolute_error": 0.323737015955885,
+      "size": 2
+    }
+  ],
+  "top_subsets_excluding_alive_and_nonrecoverable_101_243": [
+    {
+      "tasks": [
+        97,
+        137
+      ],
+      "points_sum": 27.87930026163878,
+      "absolute_error": 0.11853693866189374,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        192
+      ],
+      "points_sum": 27.950661017129526,
+      "absolute_error": 0.18989769415264135,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        197
+      ],
+      "points_sum": 27.97559996547678,
+      "absolute_error": 0.21483664249989332,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        213
+      ],
+      "points_sum": 27.98477625096774,
+      "absolute_error": 0.22401292799085581,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        324
+      ],
+      "points_sum": 28.012125450386677,
+      "absolute_error": 0.25136212740979147,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        138
+      ],
+      "points_sum": 28.020406007681988,
+      "absolute_error": 0.25964268470510277,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        335
+      ],
+      "points_sum": 28.067249319565676,
+      "absolute_error": 0.3064859965887905,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        224
+      ],
+      "points_sum": 28.08450033893277,
+      "absolute_error": 0.323737015955885,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        338
+      ],
+      "points_sum": 28.094271179537763,
+      "absolute_error": 0.3335078565608782,
+      "size": 2
+    },
+    {
+      "tasks": [
+        131,
+        137
+      ],
+      "points_sum": 28.10467700775192,
+      "absolute_error": 0.3439136847750355,
+      "size": 2
+    },
+    {
+      "tasks": [
+        137,
+        359
+      ],
+      "points_sum": 28.15619479422707,
+      "absolute_error": 0.3954314712501841,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        192
+      ],
+      "points_sum": 28.211872397466554,
+      "absolute_error": 0.4511090744896684,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        197
+      ],
+      "points_sum": 28.236811345813805,
+      "absolute_error": 0.4760480228369204,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        213
+      ],
+      "points_sum": 28.245987631304768,
+      "absolute_error": 0.4852243083278829,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        324
+      ],
+      "points_sum": 28.2733368307237,
+      "absolute_error": 0.512573507746815,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        138
+      ],
+      "points_sum": 28.281617388019015,
+      "absolute_error": 0.5208540650421298,
+      "size": 2
+    },
+    {
+      "tasks": [
+        192,
+        197
+      ],
+      "points_sum": 28.308172101304553,
+      "absolute_error": 0.547408778327668,
+      "size": 2
+    },
+    {
+      "tasks": [
+        192,
+        213
+      ],
+      "points_sum": 28.317348386795516,
+      "absolute_error": 0.5565850638186305,
+      "size": 2
+    },
+    {
+      "tasks": [
+        97,
+        335
+      ],
+      "points_sum": 28.328460699902706,
+      "absolute_error": 0.5676973769258211,
+      "size": 2
+    },
+    {
+      "tasks": [
+        197,
+        213
+      ],
+      "points_sum": 28.342287335142768,
+      "absolute_error": 0.5815240121658825,
+      "size": 2
+    }
+  ],
+  "decision": "Do not spend another repair attempt on task101/task243 from public-code sources. The pair explains the no-drop probe arithmetically, but exp321 showed no recoverable public gain with the best full-arc source. Treat exp315 as diagnostic but not yet a reliable repair queue; resume fresh wide probing or move to GridSample queue.",
+  "next_recommended_experiment": "exp323 fresh wide bisection probe on a new unprobed high-risk group, with pair-wise subset-sum uniqueness checked before submission; alternatively start task251 GridSample if submission budget or probe confidence is constrained.",
+  "submission_decision": "no_submit_audit_only",
+  "leakage_risk": "low: analysis uses only prior public submission scores and local experiment metadata.",
+  "overfitting_risk": "medium: the audit reasons about public LB diagnostics, so it should guide probe design rather than direct final model selection."
+}
