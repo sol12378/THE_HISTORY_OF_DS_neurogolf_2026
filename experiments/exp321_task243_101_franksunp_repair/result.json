@@ -1,0 +1,78 @@
+{
+  "exp_id": "exp321_task243_101_franksunp_repair",
+  "date": "2026-06-11",
+  "status": "zip_ready",
+  "purpose": "Build a public-zero repair bundle for task101/task243 using exp320 top franksunp_blended_best candidates over exp297.",
+  "hypothesis": "If task101/task243 are public-zero in exp297, replacing them with full-arc-valid franksunp_blended_best candidates should recover about +27.779 public LB.",
+  "base_exp": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates",
+  "base_public_lb": 6008.96,
+  "targets": [
+    101,
+    243
+  ],
+  "candidate_results": [
+    {
+      "task_id": 101,
+      "source": "franksunp_blended_best",
+      "source_path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\franksunp_blended_best\\task101.onnx",
+      "source_sha256": "1097ccf2575df8ef91fdfbd7870a10cc2b4bdce67da9e625e16e66f5aeb89204",
+      "baseline_cost": "",
+      "baseline_points": "",
+      "target_points_if_public_fixed": 13.904485714156337,
+      "candidate_cost": 65875,
+      "candidate_points": 13.904485714156337,
+      "candidate_status": "accepted_for_publiczero_repair",
+      "validation_status": "266_pass_0_fail",
+      "reason": "ok",
+      "candidate_sha256": "fe4be1b44887740aaa563208737206a2384655af438e18e98e74d1c32498b5d2",
+      "accepted_for_repair": true
+    },
+    {
+      "task_id": 243,
+      "source": "franksunp_blended_best",
+      "source_path": "E:\\kaggle\\neurogolf-2026\\data\\cache\\public_artifacts\\franksunp_blended_best\\task243.onnx",
+      "source_sha256": "d82711ed6d973d2c76345cf69ab278ecb1b2999b9c2410e8227df32d34e4dbf7",
+      "baseline_cost": "",
+      "baseline_points": "",
+      "target_points_if_public_fixed": 13.874532744845478,
+      "candidate_cost": 67878,
+      "candidate_points": 13.874532744845478,
+      "candidate_status": "accepted_for_publiczero_repair",
+      "validation_status": "265_pass_0_fail",
+      "reason": "ok",
+      "candidate_sha256": "12525256f82e0dc377075d6bd9e7644ec716dfdd9898e1b8278272df3f3975f3",
+      "accepted_for_repair": true
+    }
+  ],
+  "accepted_targets": [
+    101,
+    243
+  ],
+  "expected_public_gain_if_all_fixed": 27.779018459001815,
+  "expected_public_lb_if_all_fixed": 6036.739018459002,
+  "zip_sanity": {
+    "count": 400,
+    "names_ok": true,
+    "first": [
+      "task001.onnx",
+      "task002.onnx",
+      "task003.onnx"
+    ],
+    "last": [
+      "task398.onnx",
+      "task399.onnx",
+      "task400.onnx"
+    ],
+    "bytes": 730858,
+    "sha256": "d8f9d3f5acc3702baee1d84f6a7453de8ce9324cefd5d81dda9eb2fd98a47056"
+  },
+  "outputs": {
+    "submission_zip": "experiments\\exp321_task243_101_franksunp_repair\\submission.zip"
+  },
+  "submission_decision": "submitted_repair_pending",
+  "kaggle_ref": 53550725,
+  "kaggle_status": "PENDING",
+  "leakage_risk": "medium-high: repair candidates come from public-code/raw blend artifacts. They are used only after full-arc validation, but private robustness remains uncertain.",
+  "overfitting_risk": "medium: target selection used public diagnostic probes; acceptance is gated by full-arc validation and expected-LB accounting, not by adopting arbitrary public-score noise.",
+  "elapsed_s": 1.238
+}
