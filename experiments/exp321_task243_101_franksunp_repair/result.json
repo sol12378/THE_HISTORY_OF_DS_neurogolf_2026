@@ -1,7 +1,7 @@
 {
   "exp_id": "exp321_task243_101_franksunp_repair",
   "date": "2026-06-11",
-  "status": "zip_ready",
+  "status": "completed",
   "purpose": "Build a public-zero repair bundle for task101/task243 using exp320 top franksunp_blended_best candidates over exp297.",
   "hypothesis": "If task101/task243 are public-zero in exp297, replacing them with full-arc-valid franksunp_blended_best candidates should recover about +27.779 public LB.",
   "base_exp": "experiments\\exp297_exp262_skip_task048_336_fresh_candidates",
@@ -69,9 +69,12 @@
   "outputs": {
     "submission_zip": "experiments\\exp321_task243_101_franksunp_repair\\submission.zip"
   },
-  "submission_decision": "submitted_repair_pending",
+  "submission_decision": "submitted_repair_complete_no_gain",
   "kaggle_ref": 53550725,
-  "kaggle_status": "PENDING",
+  "kaggle_status": "COMPLETE",
+  "public_lb": 6008.96,
+  "observed_gain_vs_base": 0.0,
+  "interpretation": "The full-arc franksunp repair bundle did not improve public LB. task101/task243 are not recoverable public-zero gains with this source; they may be non-public-scoring, already equivalent on public, or affected by a public/private mismatch not captured by local full-arc validation.",
   "leakage_risk": "medium-high: repair candidates come from public-code/raw blend artifacts. They are used only after full-arc validation, but private robustness remains uncertain.",
   "overfitting_risk": "medium: target selection used public diagnostic probes; acceptance is gated by full-arc validation and expected-LB accounting, not by adopting arbitrary public-score noise.",
   "elapsed_s": 1.238
