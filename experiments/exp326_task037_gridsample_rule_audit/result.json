@@ -1,0 +1,51 @@
+{
+  "exp_id": "exp326_task037_gridsample_rule_audit",
+  "date": "2026-06-11",
+  "status": "rule_audit_complete",
+  "task_id": 37,
+  "hypothesis": "task037 is a better GridSample/shift target than task251 because the fill color is copied from existing diagonal endpoints, not created as a new color.",
+  "validation": {
+    "status": "266_pass_0_fail",
+    "splits": {
+      "train": {
+        "pass": 3,
+        "total": 3
+      },
+      "test": {
+        "pass": 1,
+        "total": 1
+      },
+      "arc-gen": {
+        "pass": 262,
+        "total": 262
+      }
+    },
+    "mismatch_examples": []
+  },
+  "data_profile": {
+    "example_count": 266,
+    "shape": [
+      10,
+      10
+    ],
+    "changed_cells_min": 2,
+    "changed_cells_mean": 8.466165413533835,
+    "changed_cells_max": 21,
+    "output_new_color_examples": 0,
+    "generated_new_color_cells": 0,
+    "max_endpoint_distance_hist": {
+      "1": 255,
+      "2": 544,
+      "3": 697,
+      "4": 506,
+      "5": 250
+    },
+    "vote_count_hist": {
+      "1": 2252
+    }
+  },
+  "decision": "task037 remains a plausible GridSample/shift lowering target: the rule is full-arc valid, outputs introduce no new nonzero colors, and each changed cell copies an existing diagonal endpoint color. Next implementation should avoid full-grid Conv visibility and instead test a bounded diagonal shift stack or GridSample-generated diagonal samples with cheap equality masks.",
+  "submission_decision": "no_submit: audit only; no ONNX replacement generated.",
+  "leakage_risk": "low: revalidates an explanatory rule on local task examples only.",
+  "overfitting_risk": "low-to-medium: task-specific rule is full-arc validated, but a future ONNX candidate still needs cost and Kaggle calibration."
+}
