@@ -1,0 +1,30 @@
+{
+  "exp_id": "exp332_task037_cropped_diag_shift_lowering",
+  "date": "2026-06-12",
+  "status": "no_gain",
+  "task_id": 37,
+  "hypothesis": "Cropping task037 to its true 10x10 working area before the bounded diagonal shift rule will reduce full-grid intermediate memory enough to approach cost competitiveness.",
+  "base": {
+    "cost": 63726,
+    "points": 13.937652078450405,
+    "sha256": "8faff6c42c2e15d27fd29d4ebeaf4a30cc8400305895d7fe67eb4a115afe711c",
+    "source": "exp331_current_best"
+  },
+  "candidate": {
+    "template_name": "cropped_diag_shift_d5",
+    "validation_status": "266_pass_0_fail",
+    "status": "no_cost_gain",
+    "reason": "candidate cost is not lower than baseline",
+    "cost": 721329,
+    "points": 11.51114937713136,
+    "file_bytes": 48657,
+    "sha256": "264e895c897ce948e8cffeb721b7864f93f8a1ec64b2feb6ddb903ac8397d86a"
+  },
+  "local_estimate_delta": 0.0,
+  "expected_public_lb_if_calibrated": 6009.15,
+  "submission_decision": "no_submit: validation failed or no cost gain",
+  "decision": "No submit. Cropping reduced exp327 cost from 6633317 to 721329 but remains far above baseline 63726, so dense shift-stack is still too expensive; move to true per-diagonal sparse representation or task251.",
+  "leakage_risk": "low: explicit input-only diagonal ray rule; no output lookup or public feedback.",
+  "overfitting_risk": "medium: task-specific geometry is full-arc validated locally, but cost expression may not generalize beyond this task family.",
+  "runtime_seconds": 2.5910208225250244
+}
