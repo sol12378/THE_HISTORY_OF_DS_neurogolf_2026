@@ -1,0 +1,34 @@
+{
+  "spec": {
+    "lane": "status",
+    "runner": "status",
+    "target_tasks": [
+      251
+    ],
+    "hypothesis": "Record autonomous runner status when all first-release diagnostic runners have already run.",
+    "max_runtime_minutes": 5,
+    "submit_policy": "no_submit",
+    "validation_required": "diagnostic_only",
+    "stop_conditions": [],
+    "risk_notes": {
+      "leakage_risk": "low",
+      "overfitting_risk": "low"
+    }
+  },
+  "result": {
+    "exp_id": "_autonomous_status_heartbeat",
+    "status": "ok",
+    "decision": "diagnostic_only",
+    "result_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\_autonomous_status_heartbeat\\result.json",
+    "notes_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\_autonomous_status_heartbeat\\notes.md",
+    "candidate_eval_path": null,
+    "selected_manifest_path": null,
+    "submission_zip_path": null
+  },
+  "adoption": {
+    "decision": "diagnostic_only",
+    "should_bundle": false,
+    "should_submit": false,
+    "reason": "first autonomous release: diagnostic_only runner, no adoption probe emitted"
+  }
+}

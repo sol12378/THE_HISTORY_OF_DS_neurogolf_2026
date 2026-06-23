@@ -1,0 +1,52 @@
+﻿{
+    "languageNullable":  "python",
+    "kernelTypeNullable":  "notebook",
+    "isPrivateNullable":  false,
+    "enableGpuNullable":  false,
+    "enableTpuNullable":  false,
+    "enableInternetNullable":  true,
+    "currentVersionNumberNullable":  11,
+    "dockerImageNullable":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "machineShapeNullable":  "None",
+    "id":  121578972,
+    "ref":  "seddiktrk/neurogolf-2026-graph-surgeon",
+    "title":  "笵ｳ NeuroGolf 2026: Graph Surgeon",
+    "author":  "seddik turki",
+    "slug":  "neurogolf-2026-graph-surgeon",
+    "lastRunTime":  "2026-06-18T05:53:57.9628685Z",
+    "language":  "python",
+    "hasLanguage":  true,
+    "kernelType":  "notebook",
+    "hasKernelType":  true,
+    "isPrivate":  false,
+    "hasIsPrivate":  true,
+    "enableGpu":  false,
+    "hasEnableGpu":  true,
+    "enableTpu":  false,
+    "hasEnableTpu":  true,
+    "enableInternet":  true,
+    "hasEnableInternet":  true,
+    "categoryIds":  [
+
+                    ],
+    "datasetDataSources":  [
+
+                           ],
+    "kernelDataSources":  [
+                              "seddiktrk/neurogolf-2026-utils",
+                              "kojimar/7116-91-lb-audited-neurogolf-onnx-overrides"
+                          ],
+    "competitionDataSources":  [
+                                   "neurogolf-2026"
+                               ],
+    "modelDataSources":  [
+
+                         ],
+    "totalVotes":  144,
+    "currentVersionNumber":  11,
+    "hasCurrentVersionNumber":  true,
+    "dockerImage":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "hasDockerImage":  true,
+    "machineShape":  "None",
+    "hasMachineShape":  true
+}

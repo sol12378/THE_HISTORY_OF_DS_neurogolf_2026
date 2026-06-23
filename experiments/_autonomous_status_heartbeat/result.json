@@ -1,0 +1,51 @@
+{
+  "exp_id": "_autonomous_status_heartbeat",
+  "status": "ok",
+  "decision": "diagnostic_only",
+  "spec": {
+    "lane": "status",
+    "runner": "status",
+    "target_tasks": [
+      251
+    ],
+    "hypothesis": "Record autonomous runner status when all first-release diagnostic runners have already run.",
+    "max_runtime_minutes": 5,
+    "submit_policy": "no_submit",
+    "validation_required": "diagnostic_only",
+    "stop_conditions": [],
+    "risk_notes": {
+      "leakage_risk": "low",
+      "overfitting_risk": "low"
+    }
+  },
+  "context": {
+    "competition_id": "neurogolf-2026",
+    "current_best": {
+      "public_lb": 6009.15,
+      "experiment": "exp331_task185_gather_axis_cost_shave",
+      "kaggle_ref": "53553605",
+      "adopted": true
+    },
+    "latest_experiment": {
+      "id": "exp332_task037_cropped_diag_shift_lowering",
+      "result": "validated_but_too_expensive"
+    },
+    "priority_lanes": [
+      "task251_compact_mask_color1",
+      "task037_sparse_diagonal",
+      "task185_cost_shave"
+    ],
+    "banned_patterns": [
+      "dense_shift_stack",
+      "full_grid_where_chain",
+      "large_scatternd_table",
+      "public_zero_probe_without_uniqueness"
+    ],
+    "data_available": true,
+    "workspace": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace",
+    "experiments": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments"
+  },
+  "current_best_result_found": true,
+  "latest_result_found": true,
+  "submission_decision": "no_submit: status diagnostic only"
+}

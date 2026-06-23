@@ -30,6 +30,9 @@ experiments/*/*.joblib
 experiments/*/*.parquet
 experiments/*/score_cache.jsonl
 experiments/*/*_2026-*.json
+kaggle_notebooks/**/*.onnx
+kaggle_notebooks/**/*.zip
+kaggle_notebooks/**/dataset.zip
 *.log
 neurogolf_kaggle_obsidian.zip
 

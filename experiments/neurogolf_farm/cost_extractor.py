@@ -110,8 +110,16 @@ class CostExtractor:
                 PrimitiveKind.CONNECTIVITY_UNROLL,
                 PrimitiveKind.SPARSE_WRITEBACK,
             }:
-                hard_reject = True
-                reasons.append(f"{node.name}: {node.kind.value} is a known high-cost lane")
+                # P2-1: size-conditional. These lanes only explode cost when they
+                # materialize a full-grid output/intermediate. A small/bounded-region
+                # version (e.g. sparse write into a small patch) is allowed; the
+                # official score_network + full-arc gate still has the final say.
+                out_elems = node.output.known_elements if node.output else None
+                if out_elems is not None and out_elems >= FULL_GRID_ELEMENTS:
+                    hard_reject = True
+                    reasons.append(f"{node.name}: {node.kind.value} over full-grid output is pre-rejected")
+                else:
+                    risk_tags.append(f"conditional_kind:{node.kind.value}")
             if node.op_type in HARD_BAD_OPS:
                 hard_reject = True
                 reasons.append(f"{node.name}: {node.op_type} is pre-rejected")

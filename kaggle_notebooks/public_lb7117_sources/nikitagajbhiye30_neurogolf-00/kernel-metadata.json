@@ -1,0 +1,52 @@
+﻿{
+    "languageNullable":  "python",
+    "kernelTypeNullable":  "notebook",
+    "isPrivateNullable":  false,
+    "enableGpuNullable":  false,
+    "enableTpuNullable":  false,
+    "enableInternetNullable":  false,
+    "currentVersionNumberNullable":  3,
+    "dockerImageNullable":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "machineShapeNullable":  "None",
+    "id":  123078103,
+    "ref":  "nikitagajbhiye30/neurogolf-00",
+    "title":  "NeuroGolf 00",
+    "author":  "Nikita",
+    "slug":  "neurogolf-00",
+    "lastRunTime":  "2026-06-18T05:53:59.212546Z",
+    "language":  "python",
+    "hasLanguage":  true,
+    "kernelType":  "notebook",
+    "hasKernelType":  true,
+    "isPrivate":  false,
+    "hasIsPrivate":  true,
+    "enableGpu":  false,
+    "hasEnableGpu":  true,
+    "enableTpu":  false,
+    "hasEnableTpu":  true,
+    "enableInternet":  false,
+    "hasEnableInternet":  true,
+    "categoryIds":  [
+
+                    ],
+    "datasetDataSources":  [
+                               "kojimar/neurogolf-7116-91-minimal-onnx-assets-v1",
+                               "qinghchen/zero-pad-tail-surgery-assets"
+                           ],
+    "kernelDataSources":  [
+
+                          ],
+    "competitionDataSources":  [
+                                   "neurogolf-2026"
+                               ],
+    "modelDataSources":  [
+
+                         ],
+    "totalVotes":  9,
+    "currentVersionNumber":  3,
+    "hasCurrentVersionNumber":  true,
+    "dockerImage":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "hasDockerImage":  true,
+    "machineShape":  "None",
+    "hasMachineShape":  true
+}

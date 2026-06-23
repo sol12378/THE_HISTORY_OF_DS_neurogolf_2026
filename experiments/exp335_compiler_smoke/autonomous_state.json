@@ -1,0 +1,38 @@
+{
+  "spec": {
+    "lane": "compiler_smoke",
+    "runner": "compiler_smoke",
+    "target_tasks": [
+      251
+    ],
+    "hypothesis": "Prove IR -> ONNX -> static -> cost works as one registered runner before trusting task-specific emitters.",
+    "max_runtime_minutes": 10,
+    "submit_policy": "no_submit",
+    "validation_required": "cost_probe",
+    "stop_conditions": [
+      "IR hard_reject",
+      "static gate fails",
+      "emitter cannot lower the smoke primitive"
+    ],
+    "risk_notes": {
+      "leakage_risk": "low",
+      "overfitting_risk": "low"
+    }
+  },
+  "result": {
+    "exp_id": "exp335_compiler_smoke",
+    "status": "ok",
+    "decision": "diagnostic_only",
+    "result_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp335_compiler_smoke\\result.json",
+    "notes_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp335_compiler_smoke\\notes.md",
+    "candidate_eval_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp335_compiler_smoke\\candidate_eval.csv",
+    "selected_manifest_path": null,
+    "submission_zip_path": null
+  },
+  "adoption": {
+    "decision": "diagnostic_only",
+    "should_bundle": false,
+    "should_submit": false,
+    "reason": "diagnostic/probe only: compiler smoke has no task baseline and no arc validation; never bundle-worthy"
+  }
+}

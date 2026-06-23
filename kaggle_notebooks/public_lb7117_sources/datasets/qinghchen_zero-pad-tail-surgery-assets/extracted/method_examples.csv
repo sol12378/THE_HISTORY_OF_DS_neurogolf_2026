@@ -1,0 +1,10 @@
+task_id,method,before_cost,after_cost,score_gain,cost_reduction_pct,rationale
+077,Zero-Concat to Pad,75438,64647,0.154369426410,14.3045,A smaller 20x21 boolean canvas was expanded with two all-false tensors. A single Pad encodes the same bottom/right extension with a tiny pads vector and one scalar false value.
+165,Zero-Concat to Pad,61512,56521,0.084620027218,8.1139,A 20x20 uint8 canvas used nested zero concatenation for the right and bottom margins. Input-style Pad keeps the spatial contract while removing the serialized zero margins.
+157,Typed final Concat,55587,51538,0.075629961309,7.2841,The final channel stack is logically boolean. Keeping the tail boolean until the output boundary avoids larger numeric intermediates.
+280,Typed final Concat,66507,62508,0.062012656729,6.0129,Boolean channel concatenation is cheaper than carrying numeric one-hot planes through the final tail.
+299,Typed final Concat,1706,1058,0.477771115633,37.9836,"For small graphs, a few tail tensors dominate cost; removing the numeric tail gives a large relative gain."
+061,Boolean one-hot tail,18914,15681,0.187452600194,17.0932,An equality-style one-hot tail can be represented with boolean masks before the final output conversion.
+175,Boolean one-hot tail,60196,55793,0.075957491435,7.3144,The one-hot construction is cheaper when the logical mask stays in a compact type.
+124,Compact artifact selection,10873,9357,0.150157925722,13.9428,The selected artifact preserves validation behavior with fewer profiled memory-plus-parameter units.
+219,Compact artifact selection,59373,57114,0.038790307080,3.8048,A cost-aware artifact choice gives a small but stable task-level reduction.

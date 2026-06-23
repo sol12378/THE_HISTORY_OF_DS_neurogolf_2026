@@ -1,0 +1,5 @@
+graph_family,task_count,share
+compact artifact selection,293,0.7325
+optimizer and simplifier passes,59,0.1475
+typed tail and graph surgery,44,0.1100
+compact templates,4,0.0100

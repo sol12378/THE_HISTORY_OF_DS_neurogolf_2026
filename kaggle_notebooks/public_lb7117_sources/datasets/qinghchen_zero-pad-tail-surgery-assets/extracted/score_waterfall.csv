@@ -1,0 +1,4 @@
+stage,delta,score
+Selection before zero-pad tail surgery,0.000000000000,6421.592483309564
+task077 zero-Concat to Pad,0.154369426410,6421.746852735974
+task165 zero-Concat to Pad,0.084620027218,6421.831472763192

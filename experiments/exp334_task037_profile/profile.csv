@@ -1,0 +1,13 @@
+metric,value
+example_count,266
+shape,"[10, 10]"
+changed_cells_min,2
+changed_cells_mean,8.466165413533835
+changed_cells_max,21
+output_new_color_examples,0
+generated_new_color_cells,0
+max_endpoint_distance_hist,"{""1"": 255, ""2"": 544, ""3"": 697, ""4"": 506, ""5"": 250}"
+vote_count_hist,"{""1"": 2252}"
+baseline_cost,63726
+cropped_candidate_cost,721329
+dense_candidate_status,no_gain

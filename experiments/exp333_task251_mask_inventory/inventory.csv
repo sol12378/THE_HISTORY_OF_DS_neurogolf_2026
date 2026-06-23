@@ -1,0 +1,3 @@
+source,signal,status,validation,avg_changed_cells,max_changed_cells,decision
+exp_b027_task251_closed_zero_component_rule,closed_zero_component_neighbor2_to_1,full_pass,266/266,10.180451127819548,28,no_submit: reference rule only; ONNX lowering pending
+exp324_task251_gridsample_feasibility_probe,gridsample_feasibility,feasibility_probe_complete,,,,"GridSample is official-scoreable with best observed identity cost 1800, but pure sampling is insufficient for task251 because many inputs lack color1 while outputs create color1 fills. Next candidate must generate a closed-component mask and combine it with a cheap color1/recolor primitive, or pivot to another GridSample target."

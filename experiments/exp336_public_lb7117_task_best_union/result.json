@@ -1,0 +1,16 @@
+{
+  "exp_id": "exp336_public_lb7117_task_best_union",
+  "candidate_public_lb_estimate": 7117.01,
+  "known_baseline_lb": 7117.01,
+  "positive_local_delta_over_baseline": 0.0,
+  "minimum_submit_lb": 7117.0,
+  "should_submit": true,
+  "submission_zip": "autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp336_public_lb7117_task_best_union\\submission_public_union.zip",
+  "zip_bytes": 554944,
+  "zip_sha256": "632480abdbb5ba07823d3f3db20acdfda23c62cdba25ff500a7c8794f4151819",
+  "source_counts": {
+    "kokinnwakashuu/7117-01-lb-override-audit-frank-delta": 400
+  },
+  "candidate_count": 6,
+  "unique_task_artifact_count": 828
+}

@@ -1,0 +1,62 @@
+{
+  "exp_id": "exp335_compiler_smoke",
+  "status": "ok",
+  "decision": "diagnostic_only",
+  "spec": {
+    "lane": "compiler_smoke",
+    "runner": "compiler_smoke",
+    "target_tasks": [
+      251
+    ],
+    "hypothesis": "Prove IR -> ONNX -> static -> cost works as one registered runner before trusting task-specific emitters.",
+    "max_runtime_minutes": 10,
+    "submit_policy": "no_submit",
+    "validation_required": "cost_probe",
+    "stop_conditions": [
+      "IR hard_reject",
+      "static gate fails",
+      "emitter cannot lower the smoke primitive"
+    ],
+    "risk_notes": {
+      "leakage_risk": "low",
+      "overfitting_risk": "low"
+    }
+  },
+  "smoke": {
+    "ir_signal": {
+      "subject": "0",
+      "predicted_cost_band": "high_cost_probe_only",
+      "hard_reject": false,
+      "reasons": [],
+      "risk_tags": [],
+      "primitive_kinds": [
+        "channel_gather"
+      ],
+      "node_count": 1,
+      "full_grid_intermediate_count": 0,
+      "param_count": 10,
+      "param_bytes": 10,
+      "memory_bytes_proxy": 36000,
+      "cost_proxy": 36010
+    },
+    "onnx_available": true,
+    "static_ok": true,
+    "static_reason": "ok",
+    "candidate_sha256": "2fe86edd1a36ac8e9704e83cc5237b964d83bb22e353d79445a4e479e2bd5af8",
+    "candidate_bytes": 274,
+    "onnx_cost_proxy": 36010,
+    "onnx_cost_band": "high_cost_probe_only"
+  },
+  "adoption_probe": {
+    "validation_status": "smoke_static_only",
+    "validation_full_pass": false,
+    "cost_gain": false,
+    "risk": "low",
+    "reason": "compiler smoke has no task baseline and no arc validation; never bundle-worthy"
+  },
+  "outputs": {
+    "candidate_eval": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp335_compiler_smoke\\candidate_eval.csv"
+  },
+  "next_action": "Once onnx is installed and a real task baseline + full-arc validation are wired, promote this into task251_mask_cost_probe / task037_sparse_writeback_probe.",
+  "submission_decision": "no_submit: compiler smoke is a bridge gate only"
+}

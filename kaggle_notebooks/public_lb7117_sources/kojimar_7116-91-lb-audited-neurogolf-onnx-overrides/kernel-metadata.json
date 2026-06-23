@@ -1,0 +1,51 @@
+﻿{
+    "languageNullable":  "python",
+    "kernelTypeNullable":  "notebook",
+    "isPrivateNullable":  false,
+    "enableGpuNullable":  false,
+    "enableTpuNullable":  false,
+    "enableInternetNullable":  false,
+    "currentVersionNumberNullable":  8,
+    "dockerImageNullable":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "machineShapeNullable":  "None",
+    "id":  122047606,
+    "ref":  "kojimar/7116-91-lb-audited-neurogolf-onnx-overrides",
+    "title":  "[7116.91 LB] Audited NeuroGolf ONNX Overrides",
+    "author":  "islet",
+    "slug":  "7116-91-lb-audited-neurogolf-onnx-overrides",
+    "lastRunTime":  "2026-06-18T05:53:58.6567029Z",
+    "language":  "python",
+    "hasLanguage":  true,
+    "kernelType":  "notebook",
+    "hasKernelType":  true,
+    "isPrivate":  false,
+    "hasIsPrivate":  true,
+    "enableGpu":  false,
+    "hasEnableGpu":  true,
+    "enableTpu":  false,
+    "hasEnableTpu":  true,
+    "enableInternet":  false,
+    "hasEnableInternet":  true,
+    "categoryIds":  [
+
+                    ],
+    "datasetDataSources":  [
+                               "kojimar/neurogolf-7116-91-minimal-onnx-assets-v1"
+                           ],
+    "kernelDataSources":  [
+
+                          ],
+    "competitionDataSources":  [
+                                   "neurogolf-2026"
+                               ],
+    "modelDataSources":  [
+
+                         ],
+    "totalVotes":  110,
+    "currentVersionNumber":  8,
+    "hasCurrentVersionNumber":  true,
+    "dockerImage":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "hasDockerImage":  true,
+    "machineShape":  "None",
+    "hasMachineShape":  true
+}

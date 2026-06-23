@@ -1,0 +1,20 @@
+[21:15:45] start local total = 7147.94 over 400 tasks (floor 7117.0)
+[21:15:45] === sweep 1 (arc_sample=12) ===
+[21:16:33] sweep 1: 0 improvements, local total = 7147.94 (+0.00 vs start)
+[21:16:33] no improvement this sweep; stopping
+[21:16:33] done
+[21:24:05] start local total = 7147.94 over 400 tasks (floor 7117.0)
+[21:24:05] === sweep 1 (arc_sample=12) ===
+[21:25:05] sweep 1: 0 improvements, local total = 7147.94 (+0.00 vs start)
+[21:25:05] no improvement this sweep; stopping
+[21:25:05] done
+[21:25:28] start local total = 7147.94 over 400 tasks (floor 7117.0)
+[21:25:28] === sweep 1 (arc_sample=12) ===
+[21:26:27] sweep 1: 0 improvements, local total = 7147.94 (+0.00 vs start)
+[21:26:27] no improvement this sweep; stopping
+[21:26:27] done
+[21:28:13] start local total = 7147.94 over 400 tasks (floor 7117.0)
+[21:28:13] === sweep 1 (arc_sample=12) ===
+[21:29:46] sweep 1: 0 improvements, local total = 7147.94 (+0.00 vs start)
+[21:29:46] no improvement this sweep; stopping
+[21:29:46] done

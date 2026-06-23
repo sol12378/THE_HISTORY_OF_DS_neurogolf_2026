@@ -1,0 +1,77 @@
+{
+  "exp_id": "exp334_task037_profile",
+  "status": "ok",
+  "decision": "diagnostic_only",
+  "task_id": 37,
+  "spec": {
+    "lane": "task037_sparse_diagonal",
+    "runner": "task037_profile",
+    "target_tasks": [
+      37
+    ],
+    "hypothesis": "Profile task037 changed-cell and cost evidence before designing sparse per-diagonal IR.",
+    "max_runtime_minutes": 10,
+    "submit_policy": "no_submit",
+    "validation_required": "diagnostic_only",
+    "stop_conditions": [
+      "historical profile missing",
+      "dense shift-stack pattern reappears"
+    ],
+    "risk_notes": {
+      "leakage_risk": "low",
+      "overfitting_risk": "low-to-medium"
+    }
+  },
+  "data_available": false,
+  "validation": {
+    "status": "266_pass_0_fail",
+    "splits": {
+      "train": {
+        "pass": 3,
+        "total": 3
+      },
+      "test": {
+        "pass": 1,
+        "total": 1
+      },
+      "arc-gen": {
+        "pass": 262,
+        "total": 262
+      }
+    },
+    "mismatch_examples": []
+  },
+  "data_profile": {
+    "example_count": 266,
+    "shape": [
+      10,
+      10
+    ],
+    "changed_cells_min": 2,
+    "changed_cells_mean": 8.466165413533835,
+    "changed_cells_max": 21,
+    "output_new_color_examples": 0,
+    "generated_new_color_cells": 0,
+    "max_endpoint_distance_hist": {
+      "1": 255,
+      "2": 544,
+      "3": 697,
+      "4": 506,
+      "5": 250
+    },
+    "vote_count_hist": {
+      "1": 2252
+    }
+  },
+  "negative_evidence": {
+    "dense_shift_stack": null,
+    "cropped_shift_stack": "No submit. Cropping reduced exp327 cost from 6633317 to 721329 but remains far above baseline 63726, so dense shift-stack is still too expensive; move to true per-diagonal sparse representation or task251."
+  },
+  "outputs": {
+    "profile": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp334_task037_profile\\profile.csv"
+  },
+  "next_action": "Design a sparse per-diagonal IR and reject dense shift-stack lowerings before emission.",
+  "submission_decision": "no_submit: diagnostic profile only",
+  "leakage_risk": "low",
+  "overfitting_risk": "low-to-medium"
+}

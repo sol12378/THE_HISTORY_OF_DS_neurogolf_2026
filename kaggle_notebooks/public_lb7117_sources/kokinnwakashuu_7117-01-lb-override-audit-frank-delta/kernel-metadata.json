@@ -1,0 +1,52 @@
+﻿{
+    "languageNullable":  "python",
+    "kernelTypeNullable":  "notebook",
+    "isPrivateNullable":  false,
+    "enableGpuNullable":  false,
+    "enableTpuNullable":  false,
+    "enableInternetNullable":  false,
+    "currentVersionNumberNullable":  12,
+    "dockerImageNullable":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "machineShapeNullable":  "None",
+    "id":  123740203,
+    "ref":  "kokinnwakashuu/7117-01-lb-override-audit-frank-delta",
+    "title":  "[7117.01 LB] Override Audit + Frank Delta",
+    "author":  "kokinnwakashuu",
+    "slug":  "7117-01-lb-override-audit-frank-delta",
+    "lastRunTime":  "2026-06-18T05:53:36.7649886Z",
+    "language":  "python",
+    "hasLanguage":  true,
+    "kernelType":  "notebook",
+    "hasKernelType":  true,
+    "isPrivate":  false,
+    "hasIsPrivate":  true,
+    "enableGpu":  false,
+    "hasEnableGpu":  true,
+    "enableTpu":  false,
+    "hasEnableTpu":  true,
+    "enableInternet":  false,
+    "hasEnableInternet":  true,
+    "categoryIds":  [
+
+                    ],
+    "datasetDataSources":  [
+
+                           ],
+    "kernelDataSources":  [
+                              "kojimar/7116-91-lb-audited-neurogolf-onnx-overrides",
+                              "seddiktrk/neurogolf-2026-graph-surgeon"
+                          ],
+    "competitionDataSources":  [
+                                   "neurogolf-2026"
+                               ],
+    "modelDataSources":  [
+
+                         ],
+    "totalVotes":  47,
+    "currentVersionNumber":  12,
+    "hasCurrentVersionNumber":  true,
+    "dockerImage":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "hasDockerImage":  true,
+    "machineShape":  "None",
+    "hasMachineShape":  true
+}

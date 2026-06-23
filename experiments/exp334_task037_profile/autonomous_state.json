@@ -1,0 +1,37 @@
+{
+  "spec": {
+    "lane": "task037_sparse_diagonal",
+    "runner": "task037_profile",
+    "target_tasks": [
+      37
+    ],
+    "hypothesis": "Profile task037 changed-cell and cost evidence before designing sparse per-diagonal IR.",
+    "max_runtime_minutes": 10,
+    "submit_policy": "no_submit",
+    "validation_required": "diagnostic_only",
+    "stop_conditions": [
+      "historical profile missing",
+      "dense shift-stack pattern reappears"
+    ],
+    "risk_notes": {
+      "leakage_risk": "low",
+      "overfitting_risk": "low-to-medium"
+    }
+  },
+  "result": {
+    "exp_id": "exp334_task037_profile",
+    "status": "ok",
+    "decision": "diagnostic_only",
+    "result_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp334_task037_profile\\result.json",
+    "notes_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp334_task037_profile\\notes.md",
+    "candidate_eval_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp334_task037_profile\\profile.csv",
+    "selected_manifest_path": null,
+    "submission_zip_path": null
+  },
+  "adoption": {
+    "decision": "diagnostic_only",
+    "should_bundle": false,
+    "should_submit": false,
+    "reason": "first autonomous release supports diagnostic_only runners; bundle/submit gates are disabled"
+  }
+}

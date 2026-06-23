@@ -1,0 +1,2 @@
+subject,primitive_kinds,ir_cost_band,ir_cost_proxy,ir_hard_reject,onnx_available,onnx_cost_band,onnx_cost_proxy,static_ok,static_reason,candidate_bytes,sha256,validation_status,adoption_status
+compiler_smoke,channel_gather,high_cost_probe_only,36010,False,True,high_cost_probe_only,36010,True,ok,274,2fe86edd1a36ac8e9704e83cc5237b964d83bb22e353d79445a4e479e2bd5af8,smoke_static_only,rejected

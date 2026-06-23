@@ -1,0 +1,10 @@
+{
+  "title": "Zero-Pad Tail Surgery for Compact ONNX",
+  "public_score": 6421.83,
+  "archive_score_sum": 6421.831472763192,
+  "score_formula": "sum(max(1, 25 - log(cost))) over 400 task graphs",
+  "submission_file": "submission.zip",
+  "submission_sha256": "1A6C684604B2DEDD519D31640C37A8F571B79E297302256746B0515120EB7C30",
+  "task_count": 400,
+  "zip_bytes": 639672
+}

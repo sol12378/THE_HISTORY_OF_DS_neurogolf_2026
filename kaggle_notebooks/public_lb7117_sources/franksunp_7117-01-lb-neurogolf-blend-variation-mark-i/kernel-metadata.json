@@ -1,0 +1,51 @@
+﻿{
+    "languageNullable":  "python",
+    "kernelTypeNullable":  "notebook",
+    "isPrivateNullable":  false,
+    "enableGpuNullable":  false,
+    "enableTpuNullable":  false,
+    "enableInternetNullable":  true,
+    "currentVersionNumberNullable":  34,
+    "dockerImageNullable":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "machineShapeNullable":  "None",
+    "id":  123832316,
+    "ref":  "franksunp/7117-01-lb-neurogolf-blend-variation-mark-i",
+    "title":  "[7117.01 LB] NeuroGolf Blend Variation Mark I",
+    "author":  "fsun",
+    "slug":  "7117-01-lb-neurogolf-blend-variation-mark-i",
+    "lastRunTime":  "2026-06-18T05:53:57.3299473Z",
+    "language":  "python",
+    "hasLanguage":  true,
+    "kernelType":  "notebook",
+    "hasKernelType":  true,
+    "isPrivate":  false,
+    "hasIsPrivate":  true,
+    "enableGpu":  false,
+    "hasEnableGpu":  true,
+    "enableTpu":  false,
+    "hasEnableTpu":  true,
+    "enableInternet":  true,
+    "hasEnableInternet":  true,
+    "categoryIds":  [
+
+                    ],
+    "datasetDataSources":  [
+
+                           ],
+    "kernelDataSources":  [
+                              "kokinnwakashuu/7117-01-lb-override-audit-frank-delta"
+                          ],
+    "competitionDataSources":  [
+                                   "neurogolf-2026"
+                               ],
+    "modelDataSources":  [
+
+                         ],
+    "totalVotes":  54,
+    "currentVersionNumber":  34,
+    "hasCurrentVersionNumber":  true,
+    "dockerImage":  "gcr.io/kaggle-images/python@sha256:e5452ce6268c2e8345cfe5141f31ca7ff47032aca46a7ea532bbb87481281d0c",
+    "hasDockerImage":  true,
+    "machineShape":  "None",
+    "hasMachineShape":  true
+}

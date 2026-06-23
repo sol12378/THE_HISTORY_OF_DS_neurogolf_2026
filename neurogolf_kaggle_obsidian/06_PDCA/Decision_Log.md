@@ -588,3 +588,43 @@
 - 新証拠: compact start/spacing dynamic index は exp204 の巨大 template 問題を解消した。final `uint8` output variant は cost `95784` で悪化し、output dtype Cast は短期解ではない。
 - 決定: 次の1実験だけ task185 の narrow cost shave を試す。default-bg + Pad、Tile index shape、selector intermediate の削減で `200` 以上削れなければ task251/task037 へ pivot する。
 - リスク: task185 に長居しすぎると score-producing でない微調整が続く。次実験の中止条件を `cost < 59584` 未達に固定する。
+
+# 2026-06-21 exp338(P0-1): 採点校正はORT実行ベース採用＋7件freeze、絶対校正はP1-2へ
+
+- 背景: union zip のローカル公式再採点 7023.58 が Kaggle 7117.01 を93点下回る。原因は7 artifact の
+  負pads(Conv/ConvTranspose)が local onnx==1.22.0 の check_model(full_check=True)/
+  infer_shapes(strict_mode=True) で ShapeInferenceError → sentinel 化。ORT 実行と strict=False は成功。
+- 新証拠: 7件は安価(cost 100〜1993, pts 17.4〜20.4 ≈計125点)で高コストではない。3案のうち
+  負pads正規化は artifact cost を変え校正破壊、strict迂回は memory 過小計上＋task149 未復旧。
+  ORT実行(trace)ベース採点のみが全件復旧かつ堅牢。
+- 決定: (1) neurogolf_calib.score_model_calibrated(公式優先＋負pads時のみtraceフォールバック)採用、
+  公式 neurogolf_utils.py 無改変、393件 byte 一致。(2) baseline=7147.94/sentinel0 を採用(旧版.bak退避)。
+  (3) climb sweep で7件 freeze(trace法 baseline と公式法 candidate 非整合＋Kaggle真コスト未校正)。
+  (4) auto-submit は P1-2 まで OFF。
+- 重大(前提崩れ): baseline 7147.94 は Kaggle 7117.01 を +31 上回り §8 [7116,7118] 到達不能。
+  残差は onnx 版差の広域僅差で絶対校正は提出観測でしか確定不能 → 完了条件再定義を提案、要協議。
+- リスク: leakage なし(採点器のみ)。overfit は7件 freeze で遮断。
+
+# 2026-06-21 exp339(P1-1/P-Ops): phase1 builderは union未満→Phase2が本丸、自律統合はall-green
+
+- 背景: P0-1完了後、16 builder全投入で1 sweep。
+- 新証拠: 393 improvable で **0改善**。builderは full-arc pass 候補を生成するが全て union より高コスト
+  (task187 237631>78309 等)。→ **公開7117 union が phase1 builder を全タスクで支配**。
+- 決定:
+  1. Phase1(既存builder再合成)は点にならないと確定。実利得は **Phase2 桁落とし** に集約。
+     次の最速候補は **P2-3 dtype最小化を層Cに追加し union artifact 自体を桁削り**。
+  2. P-Ops: climb を `run_climb()` 化し `autonomous_runner --mode climb` / `monitor -Mode climb` へ統合。
+     crash-resilience=monitor再起動+ledger永続resume、sweep内gc、heartbeat、lb_tracking。
+  3. auto-submit は ON(ユーザー選択)。但し単調ゲートにより無改善時は提出されない(検証済)。
+- リスク: 無し(提出は真の局所改善時のみ。floor 7117 を割らない単調設計を維持)。overfit は full-arc(-1)で排除。
+
+---
+
+## 2026-06-21 【撤退判断確定】neurogolf-2026 自前研究を終了
+
+- **決定**: 自前のスコア改善研究を終了する。**floor 7117.01（提出済・順位確定・安全）を最終成果**とする。
+- **根拠（実測）**: 安全な一般手段を全て試し全0win（exp338 P0校正 / exp339 P1 16builder / exp340 P2 dtype・const-fold・prune / exp341 P2 emitter+GridSample全393scan / exp342 P3 enumerative solver 2.8%・LLM proposer）。**公開7117 union は per-task で十分 golf 済**で、安全な汎用変換では超えられないと確定。
+- **残る前進路と却下理由**: bespoke per-task 再lowering（豊かなDSL×安価static lowering）のみ。これは**ARC Prize 級の大型研究**で、過去 exp317/327/332 も union 未達・工数数週間・成功確率低・deadline 7/16 迫る。**限界ROIが低く、他コンペ（rogii / signate-nir / PTGC）の機会費用に劣る**と判断。
+- **今後の運用**: 自前研究・自律climb常駐は停止。**唯一の高ROI行動として「公開Notebook/データで 7117 超が出たら即コピー採用」する薄い監視のみ**を残す（コピー支配の field であり、7117 到達も本質これ）。
+- **資産**: 5層フレーム（calibrated scorer / monotone gate / emitter拡張 / solver / LLM proposer / 規則化計測）は安全に整備済。再開時は `docs/ARCHITECTURE_TO_RANK1.md` と本ログを参照。
+- **不変条件は維持**: floor 非回帰・full-arc gate・union/baseline 無変更・提出ゼロ（自前研究中）。

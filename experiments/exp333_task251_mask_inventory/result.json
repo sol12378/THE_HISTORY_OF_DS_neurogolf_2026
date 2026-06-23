@@ -1,0 +1,57 @@
+{
+  "exp_id": "exp333_task251_mask_inventory",
+  "status": "ok",
+  "decision": "diagnostic_only",
+  "task_id": 251,
+  "spec": {
+    "lane": "task251_mask_color1",
+    "runner": "task251_inventory",
+    "target_tasks": [
+      251
+    ],
+    "hypothesis": "Build a diagnostic inventory for task251 closed zero-component mask and color1 insertion evidence.",
+    "max_runtime_minutes": 10,
+    "submit_policy": "no_submit",
+    "validation_required": "diagnostic_only",
+    "stop_conditions": [
+      "historical evidence missing",
+      "raw task data unavailable"
+    ],
+    "risk_notes": {
+      "leakage_risk": "low",
+      "overfitting_risk": "low"
+    }
+  },
+  "data_available": false,
+  "historical_rule": {
+    "status": "rule_found",
+    "rule_summary": "Fill every 0-component that does not touch the grid border and whose 4-neighbor boundary colors are exactly {2}; write color 1.",
+    "full_pass_hit": {
+      "candidate": "closed_zero_component_neighbor2_to_1",
+      "status": "full_pass",
+      "train_pass": 3,
+      "train_examples": 3,
+      "test_pass": 1,
+      "test_examples": 1,
+      "arc_pass": 262,
+      "arc_examples": 262,
+      "total_pass": 266,
+      "total_examples": 266,
+      "avg_changed_cells": 10.180451127819548,
+      "max_changed_cells": 28,
+      "fail_examples": "[]",
+      "lowering_plan": "Do not lower by naive flood-fill unroll. Candidate lowering should compute outside-zero reachability from border using closed-form masks, row/column reductions, or small iterative kernels with strict cost gate."
+    }
+  },
+  "gridsample_probe": {
+    "status": "feasibility_probe_complete",
+    "decision": "GridSample is official-scoreable with best observed identity cost 1800, but pure sampling is insufficient for task251 because many inputs lack color1 while outputs create color1 fills. Next candidate must generate a closed-component mask and combine it with a cheap color1/recolor primitive, or pivot to another GridSample target."
+  },
+  "outputs": {
+    "inventory": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp333_task251_mask_inventory\\inventory.csv"
+  },
+  "next_action": "Implement task251_rule_reconfirm or task251_mask_cost_probe once raw task data and ONNX dependencies are available.",
+  "submission_decision": "no_submit: diagnostic inventory only",
+  "leakage_risk": "low",
+  "overfitting_risk": "low"
+}

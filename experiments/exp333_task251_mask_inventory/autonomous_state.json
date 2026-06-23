@@ -1,0 +1,37 @@
+{
+  "spec": {
+    "lane": "task251_mask_color1",
+    "runner": "task251_inventory",
+    "target_tasks": [
+      251
+    ],
+    "hypothesis": "Build a diagnostic inventory for task251 closed zero-component mask and color1 insertion evidence.",
+    "max_runtime_minutes": 10,
+    "submit_policy": "no_submit",
+    "validation_required": "diagnostic_only",
+    "stop_conditions": [
+      "historical evidence missing",
+      "raw task data unavailable"
+    ],
+    "risk_notes": {
+      "leakage_risk": "low",
+      "overfitting_risk": "low"
+    }
+  },
+  "result": {
+    "exp_id": "exp333_task251_mask_inventory",
+    "status": "ok",
+    "decision": "diagnostic_only",
+    "result_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp333_task251_mask_inventory\\result.json",
+    "notes_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp333_task251_mask_inventory\\notes.md",
+    "candidate_eval_path": "D:\\Data_Science\\autoresearch\\competitions\\neurogolf-2026\\workspace\\experiments\\exp333_task251_mask_inventory\\inventory.csv",
+    "selected_manifest_path": null,
+    "submission_zip_path": null
+  },
+  "adoption": {
+    "decision": "diagnostic_only",
+    "should_bundle": false,
+    "should_submit": false,
+    "reason": "first autonomous release supports diagnostic_only runners; bundle/submit gates are disabled"
+  }
+}
